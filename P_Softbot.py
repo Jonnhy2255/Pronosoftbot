@@ -14,7 +14,7 @@ api_headers = {
 # Mapping API <-> ESPN
 team_name_mapping = {
     "Bournemouth": "AFC Bournemouth",
-    
+    "Rep. Of Ireland": "Republic Of Ireland",
 }
 
 # URLs ESPN par nom ESPN
@@ -30,7 +30,6 @@ teams_urls = {
     "Scotland": {"results": "https://www.espn.com/soccer/team/results/_/id/580/scotland"},
     "Serbia": {"results": "https://www.espn.com/soccer/team/results/_/id/6757/serbia"},
     "Romania": {"results": "https://www.espn.com/soccer/team/results/_/id/473/romania"},
-    "Rep. Of Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/476/republic-of-ireland"},
     "Norway": {"results": "https://www.espn.com/soccer/team/results/_/id/464/norway"},
     "Poland": {"results": "https://www.espn.com/soccer/team/results/_/id/471/poland"},
     "Northern Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/586/northern-ireland"},
