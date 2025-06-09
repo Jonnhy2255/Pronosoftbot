@@ -3,7 +3,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import json
 import locale
-import subprocess  # AJOUT pour GitHub Actions
+import subprocess
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
 
@@ -11,178 +11,198 @@ api_headers = {
     'x-apisports-key': API_KEY
 }
 
-teams_urls = {
-  "AFC Bournemouth": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/349/afc-bournemouth"
-  },
-  "Arsenal": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/359/arsenal"
-  },
-  "France": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/478/france"
-  },
-  "Portugal": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/482/portugal"
-  },
-  "Germany": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/481/germany"
-  },
-  "Spain": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/164/spain"
-  },
-  "Wales": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/578/wales"
-  },
-  "Turkey": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/465/turkey"
-  },
-  "Ukraine": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/457/ukraine"
-  },
-  "Sweden": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/466/sweden"
-  },
-  "Switzerland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/475/switzerland"
-  },
-  "Slovenia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/472/slovenia"
-  },
-  "Slovakia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/468/slovakia"
-  },
-  "Scotland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/580/scotland"
-  },
-  "Serbia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/6757/serbia"
-  },
-  "Romania": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/473/romania"
-  },
-  "Rep. Of Ireland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/476/republic-of-ireland"
-  },
-  "Norway": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/464/norway"
-  },
-  "Poland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/471/poland"
-  },
-  "Northern Ireland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/586/northern-ireland"
-  },
-  "Netherlands": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/449/netherlands"
-  },
-  "North Macedonia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/463/north-macedonia"
-  },
-  "Montenegro": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/6775/montenegro"
-  },
-  "Moldova": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/483/moldova"
-  },
-  "Latvia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/456/latvia"
-  },
-  "Kazakhstan": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/2619/kazakhstan"
-  },
-  "Kosovo": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/18272/kosovo"
-  },
-  "Italy": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/162/italy"
-  },
-  "Israel": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/461/israel"
-  },
-  "Malta": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/453/malta"
-  },
-  "Luxembourg": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/582/luxembourg"
-  },
-  "Lithuania": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/460/lithuania"
-  },
-  "Iceland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/470/iceland"
-  },
-  "Hungary": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/480/hungary"
-  },
-  "Greece": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/455/greece"
-  },
-  "Gibraltar": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/16721/gibraltar"
-  },
-  "Finland": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/458/finland"
-  },
-  "Faroe Islands": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/447/faroe-islands"
-  },
-  "Estonia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/444/estonia"
-  },
-  "England": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/448/england"
-  },
-  "Denmark": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/479/denmark"
-  },
-  "Czechia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/450/czechia"
-  },
-  "Cyprus": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/445/cyprus"
-  },
-  "Croatia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/477/croatia"
-  },
-  "Bulgaria": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/462/bulgaria"
-  },
-  "Bosnia and Herzegovina": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/452/bosnia-and-herzegovina"
-  },
-  "Belgium": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/459/belgium"
-  },
-  "Belarus": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/583/belarus"
-  },
-  "Austria": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/474/austria"
-  },
-  "Azerbaijan": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/581/azerbaijan"
-  },
-  "Armenia": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/579/armenia"
-  },
-  "Andorra": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/587/andorra"
-  },
-  "Albania": {
-    "results": "https://www.espn.com/soccer/team/results/_/id/585/albania"
-  }
+# Mapping API <-> ESPN
+team_name_mapping = {
+    "Bournemouth": "AFC Bournemouth",
+    
 }
+
+# URLs ESPN par nom ESPN
+teams_urls = {
+    # Bloc Europe du dernier JSON
+    "Wales": {"results": "https://www.espn.com/soccer/team/results/_/id/578/wales"},
+    "Turkey": {"results": "https://www.espn.com/soccer/team/results/_/id/465/turkey"},
+    "Ukraine": {"results": "https://www.espn.com/soccer/team/results/_/id/457/ukraine"},
+    "Sweden": {"results": "https://www.espn.com/soccer/team/results/_/id/466/sweden"},
+    "Switzerland": {"results": "https://www.espn.com/soccer/team/results/_/id/475/switzerland"},
+    "Slovenia": {"results": "https://www.espn.com/soccer/team/results/_/id/472/slovenia"},
+    "Slovakia": {"results": "https://www.espn.com/soccer/team/results/_/id/468/slovakia"},
+    "Scotland": {"results": "https://www.espn.com/soccer/team/results/_/id/580/scotland"},
+    "Serbia": {"results": "https://www.espn.com/soccer/team/results/_/id/6757/serbia"},
+    "Romania": {"results": "https://www.espn.com/soccer/team/results/_/id/473/romania"},
+    "Rep. Of Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/476/republic-of-ireland"},
+    "Norway": {"results": "https://www.espn.com/soccer/team/results/_/id/464/norway"},
+    "Poland": {"results": "https://www.espn.com/soccer/team/results/_/id/471/poland"},
+    "Northern Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/586/northern-ireland"},
+    "Netherlands": {"results": "https://www.espn.com/soccer/team/results/_/id/449/netherlands"},
+    "North Macedonia": {"results": "https://www.espn.com/soccer/team/results/_/id/463/north-macedonia"},
+    "Montenegro": {"results": "https://www.espn.com/soccer/team/results/_/id/6775/montenegro"},
+    "Moldova": {"results": "https://www.espn.com/soccer/team/results/_/id/483/moldova"},
+    "Latvia": {"results": "https://www.espn.com/soccer/team/results/_/id/456/latvia"},
+    "Kazakhstan": {"results": "https://www.espn.com/soccer/team/results/_/id/2619/kazakhstan"},
+    "Kosovo": {"results": "https://www.espn.com/soccer/team/results/_/id/18272/kosovo"},
+    "Italy": {"results": "https://www.espn.com/soccer/team/results/_/id/162/italy"},
+    "Israel": {"results": "https://www.espn.com/soccer/team/results/_/id/461/israel"},
+    "Malta": {"results": "https://www.espn.com/soccer/team/results/_/id/453/malta"},
+    "Luxembourg": {"results": "https://www.espn.com/soccer/team/results/_/id/582/luxembourg"},
+    "Lithuania": {"results": "https://www.espn.com/soccer/team/results/_/id/460/lithuania"},
+    "Iceland": {"results": "https://www.espn.com/soccer/team/results/_/id/470/iceland"},
+    "Hungary": {"results": "https://www.espn.com/soccer/team/results/_/id/480/hungary"},
+    "Greece": {"results": "https://www.espn.com/soccer/team/results/_/id/455/greece"},
+    "Gibraltar": {"results": "https://www.espn.com/soccer/team/results/_/id/16721/gibraltar"},
+    "Finland": {"results": "https://www.espn.com/soccer/team/results/_/id/458/finland"},
+    "Faroe Islands": {"results": "https://www.espn.com/soccer/team/results/_/id/447/faroe-islands"},
+    "Estonia": {"results": "https://www.espn.com/soccer/team/results/_/id/444/estonia"},
+    "England": {"results": "https://www.espn.com/soccer/team/results/_/id/448/england"},
+    "Denmark": {"results": "https://www.espn.com/soccer/team/results/_/id/479/denmark"},
+    "Czechia": {"results": "https://www.espn.com/soccer/team/results/_/id/450/czechia"},
+    "Cyprus": {"results": "https://www.espn.com/soccer/team/results/_/id/445/cyprus"},
+    "Croatia": {"results": "https://www.espn.com/soccer/team/results/_/id/477/croatia"},
+    "Bulgaria": {"results": "https://www.espn.com/soccer/team/results/_/id/462/bulgaria"},
+    "Bosnia and Herzegovina": {"results": "https://www.espn.com/soccer/team/results/_/id/452/bosnia-and-herzegovina"},
+    "Belgium": {"results": "https://www.espn.com/soccer/team/results/_/id/459/belgium"},
+    "Belarus": {"results": "https://www.espn.com/soccer/team/results/_/id/583/belarus"},
+    "Austria": {"results": "https://www.espn.com/soccer/team/results/_/id/474/austria"},
+    "Azerbaijan": {"results": "https://www.espn.com/soccer/team/results/_/id/581/azerbaijan"},
+    "Armenia": {"results": "https://www.espn.com/soccer/team/results/_/id/579/armenia"},
+    "Andorra": {"results": "https://www.espn.com/soccer/team/results/_/id/587/andorra"},
+    "Albania": {"results": "https://www.espn.com/soccer/team/results/_/id/585/albania"},
+    # Bloc Afrique, Asie, Caraïbes, etc. (et quelques doublons pour sécurité)
+    "Angola": {"results": "https://www.espn.com/soccer/team/results/_/id/653/angola"},
+    "Botswana": {"results": "https://www.espn.com/soccer/team/results/_/id/4245/botswana"},
+    "Comoros": {"results": "https://www.espn.com/soccer/team/results/_/id/8601/comoros"},
+    "Eswatini": {"results": "https://www.espn.com/soccer/team/results/_/id/6686/eswatini"},
+    "Lesotho": {"results": "https://www.espn.com/soccer/team/results/_/id/6640/lesotho"},
+    "Madagascar": {"results": "https://www.espn.com/soccer/team/results/_/id/5533/madagascar"},
+    "Malawi": {"results": "https://www.espn.com/soccer/team/results/_/id/4325/malawi"},
+    "Mauritius": {"results": "https://www.espn.com/soccer/team/results/_/id/5534/mauritius"},
+    "Mozambique": {"results": "https://www.espn.com/soccer/team/results/_/id/8939/mozambique"},
+    "Namibia": {"results": "https://www.espn.com/soccer/team/results/_/id/6725/namibia"},
+    "South Africa": {"results": "https://www.espn.com/soccer/team/results/_/id/467/south-africa"},
+    "Tanzania": {"results": "https://www.espn.com/soccer/team/results/_/id/5778/tanzania"},
+    "Zimbabwe": {"results": "https://www.espn.com/soccer/team/results/_/id/4214/zimbabwe"},
+    "Afghanistan": {"results": "https://www.espn.com/soccer/team/results/_/id/5780/afghanistan"},
+    "Algeria": {"results": "https://www.espn.com/soccer/team/results/_/id/624/algeria"},
+    "Anguilla": {"results": "https://www.espn.com/soccer/team/results/_/id/8942/anguilla"},
+    "Aruba": {"results": "https://www.espn.com/soccer/team/results/_/id/2642/aruba"},
+    "Barbados": {"results": "https://www.espn.com/soccer/team/results/_/id/2637/barbados"},
+    "Benin": {"results": "https://www.espn.com/soccer/team/results/_/id/2844/benin"},
+    "Bonaire": {"results": "https://www.espn.com/soccer/team/results/_/id/19314/bonaire"},
+    "British Virgin Islands": {"results": "https://www.espn.com/soccer/team/results/_/id/2644/british-virgin-islands"},
+    "Brunei Darussalam": {"results": "https://www.espn.com/soccer/team/results/_/id/10525/brunei-darussalam"},
+    "Burkina Faso": {"results": "https://www.espn.com/soccer/team/results/_/id/2845/burkina-faso"},
+    "Burundi": {"results": "https://www.espn.com/soccer/team/results/_/id/5779/burundi"},
+    "Cambodia": {"results": "https://www.espn.com/soccer/team/results/_/id/5518/cambodia"},
+    "Cameroon": {"results": "https://www.espn.com/soccer/team/results/_/id/656/cameroon"},
+    "Canada": {"results": "https://www.espn.com/soccer/team/results/_/id/206/canada"},
+    "Cape Verde Islands": {"results": "https://www.espn.com/soccer/team/results/_/id/2597/cape-verde-islands"},
+    "Central African Republic": {"results": "https://www.espn.com/soccer/team/results/_/id/10528/central-african-republic"},
+    "Chad": {"results": "https://www.espn.com/soccer/team/results/_/id/8941/chad"},
+    "Chile": {"results": "https://www.espn.com/soccer/team/results/_/id/207/chile"},
+    "Congo DR": {"results": "https://www.espn.com/soccer/team/results/_/id/2850/congo-dr"},
+    "Costa Rica": {"results": "https://www.espn.com/soccer/team/results/_/id/214/costa-rica"},
+    "Curacao": {"results": "https://www.espn.com/soccer/team/results/_/id/11678/curacao"},
+    "Dominica": {"results": "https://www.espn.com/soccer/team/results/_/id/13582/dominica"},
+    "Dominican Republic": {"results": "https://www.espn.com/soccer/team/results/_/id/2649/dominican-republic"},
+    "El Salvador": {"results": "https://www.espn.com/soccer/team/results/_/id/2650/el-salvador"},
+    "Equatorial Guinea": {"results": "https://www.espn.com/soccer/team/results/_/id/8938/equatorial-guinea"},
+    "Gabon": {"results": "https://www.espn.com/soccer/team/results/_/id/4231/gabon"},
+    "Gambia": {"results": "https://www.espn.com/soccer/team/results/_/id/7368/gambia"},
+    "Georgia": {"results": "https://www.espn.com/soccer/team/results/_/id/584/georgia"},
+    "Ghana": {"results": "https://www.espn.com/soccer/team/results/_/id/4469/ghana"},
+    "Guatemala": {"results": "https://www.espn.com/soccer/team/results/_/id/2652/guatemala"},
+    "Guinea-Bissau": {"results": "https://www.espn.com/soccer/team/results/_/id/8602/guinea-bissau"},
+    "Haiti": {"results": "https://www.espn.com/soccer/team/results/_/id/2654/haiti"},
+    "Honduras": {"results": "https://www.espn.com/soccer/team/results/_/id/215/honduras"},
+    "Hong Kong": {"results": "https://www.espn.com/soccer/team/results/_/id/1928/hong-kong"},
+    "India": {"results": "https://www.espn.com/soccer/team/results/_/id/4385/india"},
+    "Iran": {"results": "https://www.espn.com/soccer/team/results/_/id/469/iran"},
+    "Ivory Coast": {"results": "https://www.espn.com/soccer/team/results/_/id/4789/ivory-coast"},
+    "Jamaica": {"results": "https://www.espn.com/soccer/team/results/_/id/1038/jamaica"},
+    "Japan": {"results": "https://www.espn.com/soccer/team/results/_/id/627/japan"},
+    "Jordan": {"results": "https://www.espn.com/soccer/team/results/_/id/2917/jordan"},
+    "Kenya": {"results": "https://www.espn.com/soccer/team/results/_/id/2848/kenya"},
+    "Laos": {"results": "https://www.espn.com/soccer/team/results/_/id/7348/laos"},
+    "Lebanon": {"results": "https://www.espn.com/soccer/team/results/_/id/4388/lebanon"},
+    "Liberia": {"results": "https://www.espn.com/soccer/team/results/_/id/4205/liberia"},
+    "Liechtenstein": {"results": "https://www.espn.com/soccer/team/results/_/id/589/liechtenstein"},
+    "Lithuania": {"results": "https://www.espn.com/soccer/team/results/_/id/460/lithuania"},
+    "Luxembourg": {"results": "https://www.espn.com/soccer/team/results/_/id/582/luxembourg"},
+    "Macau": {"results": "https://www.espn.com/soccer/team/results/_/id/6722/macau"},
+    "Malaysia": {"results": "https://www.espn.com/soccer/team/results/_/id/2405/malaysia"},
+    "Maldives": {"results": "https://www.espn.com/soccer/team/results/_/id/4390/maldives"},
+    "Mali": {"results": "https://www.espn.com/soccer/team/results/_/id/2849/mali"},
+    "Malta": {"results": "https://www.espn.com/soccer/team/results/_/id/453/malta"},
+    "Mauritania": {"results": "https://www.espn.com/soccer/team/results/_/id/8940/mauritania"},
+    "Mexico": {"results": "https://www.espn.com/soccer/team/results/_/id/203/mexico"},
+    "Moldova": {"results": "https://www.espn.com/soccer/team/results/_/id/483/moldova"},
+    "Montenegro": {"results": "https://www.espn.com/soccer/team/results/_/id/6775/montenegro"},
+    "Morocco": {"results": "https://www.espn.com/soccer/team/results/_/id/2869/morocco"},
+    "Mozambique": {"results": "https://www.espn.com/soccer/team/results/_/id/8939/mozambique"},
+    "Nepal": {"results": "https://www.espn.com/soccer/team/results/_/id/5785/nepal"},
+    "New Zealand": {"results": "https://www.espn.com/soccer/team/results/_/id/2666/new-zealand"},
+    "Nicaragua": {"results": "https://www.espn.com/soccer/team/results/_/id/2658/nicaragua"},
+    "Niger": {"results": "https://www.espn.com/soccer/team/results/_/id/8937/niger"},
+    "Nigeria": {"results": "https://www.espn.com/soccer/team/results/_/id/657/nigeria"},
+    "North Korea": {"results": "https://www.espn.com/soccer/team/results/_/id/4860/north-korea"},
+    "Northern Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/586/northern-ireland"},
+    "Norway": {"results": "https://www.espn.com/soccer/team/results/_/id/464/norway"},
+    "Oman": {"results": "https://www.espn.com/soccer/team/results/_/id/2841/oman"},
+    "Poland": {"results": "https://www.espn.com/soccer/team/results/_/id/471/poland"},
+    "Panama": {"results": "https://www.espn.com/soccer/team/results/_/id/2659/panama"},
+    "Puerto Rico": {"results": "https://www.espn.com/soccer/team/results/_/id/11766/puerto-rico"},
+    "Republic Of Ireland": {"results": "https://www.espn.com/soccer/team/results/_/id/476/republic-of-ireland"},
+    "Russia": {"results": "https://www.espn.com/soccer/team/results/_/id/454/russia"},
+    "Rwanda": {"results": "https://www.espn.com/soccer/team/results/_/id/2851/rwanda"},
+    "Saudi Arabia": {"results": "https://www.espn.com/soccer/team/results/_/id/655/saudi-arabia"},
+    "Scotland": {"results": "https://www.espn.com/soccer/team/results/_/id/580/scotland"},
+    "Senegal": {"results": "https://www.espn.com/soccer/team/results/_/id/654/senegal"},
+    "Singapore": {"results": "https://www.espn.com/soccer/team/results/_/id/4384/singapore"},
+    "Slovakia": {"results": "https://www.espn.com/soccer/team/results/_/id/468/slovakia"},
+    "Slovenia": {"results": "https://www.espn.com/soccer/team/results/_/id/472/slovenia"},
+    "South Africa": {"results": "https://www.espn.com/soccer/team/results/_/id/467/south-africa"},
+    "South Korea": {"results": "https://www.espn.com/soccer/team/results/_/id/451/south-korea"},
+    "Sri Lanka": {"results": "https://www.espn.com/soccer/team/results/_/id/5782/sri-lanka"},
+    "St Kitts and Nevis": {"results": "https://www.espn.com/soccer/team/results/_/id/2662/st-kitts-and-nevis"},
+    "St Martin": {"results": "https://www.espn.com/soccer/team/results/_/id/10596/st-martin"},
+    "St Vincent and the Grenadines": {"results": "https://www.espn.com/soccer/team/results/_/id/13584/st-vincent-and-the-grenadines"},
+    "Sudan": {"results": "https://www.espn.com/soccer/team/results/_/id/4319/sudan"},
+    "Sweden": {"results": "https://www.espn.com/soccer/team/results/_/id/466/sweden"},
+    "Switzerland": {"results": "https://www.espn.com/soccer/team/results/_/id/475/switzerland"},
+    "Tajikistan": {"results": "https://www.espn.com/soccer/team/results/_/id/6723/tajikistan"},
+    "Tanzania": {"results": "https://www.espn.com/soccer/team/results/_/id/5778/tanzania"},
+    "Thailand": {"results": "https://www.espn.com/soccer/team/results/_/id/4396/thailand"},
+    "Timor-Leste": {"results": "https://www.espn.com/soccer/team/results/_/id/8664/timor-leste"},
+    "Trinidad and Tobago": {"results": "https://www.espn.com/soccer/team/results/_/id/2627/trinidad-and-tobago"},
+    "Tunisia": {"results": "https://www.espn.com/soccer/team/results/_/id/659/tunisia"},
+    "Turkey": {"results": "https://www.espn.com/soccer/team/results/_/id/465/turkey"},
+    "Uganda": {"results": "https://www.espn.com/soccer/team/results/_/id/4211/uganda"},
+    "Ukraine": {"results": "https://www.espn.com/soccer/team/results/_/id/457/ukraine"},
+    "United States": {"results": "https://www.espn.com/soccer/team/results/_/id/660/united-states"},
+    "Venezuela": {"results": "https://www.espn.com/soccer/team/results/_/id/213/venezuela"},
+    "Vietnam": {"results": "https://www.espn.com/soccer/team/results/_/id/7349/vietnam"},
+    "Wales": {"results": "https://www.espn.com/soccer/team/results/_/id/578/wales"},
+    "Zambia": {"results": "https://www.espn.com/soccer/team/results/_/id/4277/zambia"},
+    "Zanzibar": {"results": "https://www.espn.com/soccer/team/results/_/id/5815/zanzibar"},
+    "Zimbabwe": {"results": "https://www.espn.com/soccer/team/results/_/id/4214/zimbabwe"},
+    # Ajoutez d'autres équipes si besoin
+}
+
 
 headers = {'User-Agent': 'Mozilla/5.0'}
 
-# Liste globale pour stocker les prédictions du jour
 PREDICTIONS = []
 
+def get_espn_name(api_team_name):
+    mapped = team_name_mapping.get(api_team_name)
+    if not mapped:
+        print(f"⚠️ Pas de correspondance trouvée pour '{api_team_name}' ! Utilisation du nom API.")
+        return api_team_name
+    return mapped
+
 def format_date_fr(date_str, time_str):
-    # date_str au format 'YYYY-MM-DD'
     try:
         dt = datetime.strptime(date_str + " " + time_str, "%Y-%m-%d %H:%M")
-        # Pour forcer l'affichage en français même si la locale n'est pas dispo, on formate à la main
         mois_fr = [
             "", "janvier", "février", "mars", "avril", "mai", "juin",
             "juillet", "août", "septembre", "octobre", "novembre", "décembre"
@@ -195,55 +215,47 @@ def format_date_fr(date_str, time_str):
 def get_today_matches_filtered():
     today = datetime.now().strftime('%Y-%m-%d')
     url = "https://v3.football.api-sports.io/fixtures"
-
     params = {
         "date": today,
         "timezone": "Africa/Abidjan"
     }
-
     allowed_league_ids = [5, 10, 71, 253, 78, 135]
-
-    résultats = []  # AJOUT pour stocker les prédictions du jour
-
+    résultats = []
     try:
         response = requests.get(url, headers=api_headers, params=params)
         response.raise_for_status()
         data = response.json()
-
         print(f"\n📅 Matchs du jour ({today}) :\n")
-
         for match in data.get("response", []):
             league_id = match['league']['id']
             league = match['league']['name']
             country = match['league']['country']
-            home = match['teams']['home']['name']
-            away = match['teams']['away']['name']
+            home_api = match['teams']['home']['name']
+            away_api = match['teams']['away']['name']
             time = match['fixture']['date'][11:16]
             date = match['fixture']['date'][:10]
-
             if league_id in allowed_league_ids:
-                print(f"🏆 [{country}] {league} : {home} vs {away} à {time}")
-
-                # Analyse automatique si les 2 équipes sont connues
-                if home in teams_urls and away in teams_urls:
-                    print(f"\n🔎 Analyse automatique pour : {home} & {away}")
-                    team1_stats = process_team(home, return_data=True)
-                    team2_stats = process_team(away, return_data=True)
+                print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time}")
+                # Utiliser le mapping pour obtenir les noms ESPN
+                home_espn = get_espn_name(home_api)
+                away_espn = get_espn_name(away_api)
+                # Analyse automatique si les 2 équipes sont connues d'ESPN
+                if home_espn in teams_urls and away_espn in teams_urls:
+                    print(f"\n🔎 Analyse automatique pour : {home_espn} & {away_espn}")
+                    team1_stats = process_team(home_api, return_data=True)
+                    team2_stats = process_team(away_api, return_data=True)
                     compare_teams_and_predict_score(
-                        team1_stats, team2_stats, home, away, date, time, league, country, résultats=résultats
+                        team1_stats, team2_stats, home_api, away_api, date, time, league, country, résultats=résultats
                     )
                 else:
-                    if home in teams_urls:
-                        process_team(home)
-                    if away in teams_urls:
-                        process_team(away)
-
-        # AJOUT : Sauvegarde et push des résultats s'il y en a eu
+                    if home_espn in teams_urls:
+                        process_team(home_api)
+                    if away_espn in teams_urls:
+                        process_team(away_api)
         if 'résultats' in locals() and résultats:
             sauvegarder_prediction_json(résultats, today)
             fichier = f"prédiction-{today}-analyse-ia.json"
             git_commit_and_push(fichier)
-
     except Exception as e:
         print(f"❌ Erreur lors de la récupération des matchs : {e}")
 
@@ -275,10 +287,8 @@ def analyze_trends(match_data, team_name, return_values=False):
         if return_values:
             return 0.0, 0.0
         return
-
     first_3 = match_data[-3:]
     last_3 = match_data[:3]
-
     def compute_avg(data):
         scored = conceded = 0
         count = 0
@@ -289,19 +299,15 @@ def analyze_trends(match_data, team_name, return_values=False):
                 conceded += b_e
                 count += 1
         return (scored / count if count else 0), (conceded / count if count else 0)
-
     avg_first = compute_avg(first_3)
     avg_last = compute_avg(last_3)
-
     def format_diff(v1, v2):
         delta = v2 - v1
         trend = "↗️" if delta > 0 else "↘️" if delta < 0 else "➡️"
         return f"{v1:.2f} → {v2:.2f} {trend}"
-
     print("\n📊 Tendances (3 premiers vs 3 derniers matchs) :")
     print(f"   ⚽ Moyenne buts marqués   : {format_diff(avg_first[0], avg_last[0])}")
     print(f"   🛡️ Moyenne buts encaissés : {format_diff(avg_first[1], avg_last[1])}")
-
     if return_values:
         delta_scored = avg_last[0] - avg_first[0]
         delta_conceded = avg_last[1] - avg_first[1]
@@ -314,45 +320,38 @@ def get_form_points(recent_form):
     return total, ratio
 
 def scrape_team_data(team_name, action):
-    url = teams_urls.get(team_name, {}).get(action)
+    # On veut le nom ESPN ici
+    espn_team_name = get_espn_name(team_name)
+    url = teams_urls.get(espn_team_name, {}).get(action)
     if not url:
-        print(f"URL non trouvée pour {team_name} et action {action}.")
+        print(f"URL non trouvée pour {espn_team_name} et action {action}.")
         return []
-
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
-
         matches = soup.find_all('tr', class_='Table__TR')
         valid_results = []
         recent_form = []
-
         buts_dom_marques = 0
         buts_dom_encaisses = 0
         buts_ext_marques = 0
         buts_ext_encaisses = 0
-
         for match in matches:
             date = match.find('div', class_='matchTeams')
             date_text = date.text.strip() if date else "N/A"
-
             teams = match.find_all('a', class_='AnchorLink Table__Team')
             team1 = teams[0].text.strip() if len(teams) > 0 else "N/A"
             team2 = teams[1].text.strip() if len(teams) > 1 else "N/A"
-
             competition = match.find_all('a', class_='AnchorLink')[1].text.strip() if len(match.find_all('a', 'AnchorLink')) > 1 else "N/A"
             score = match.find('span').text.strip() if match.find('span') else "N/A"
             status = match.find_all('a', class_='AnchorLink')[-1].text.strip() if match.find_all('a', 'AnchorLink') else "N/A"
-
             if all(val != "N/A" for val in [date_text, team1, team2, score]):
                 valid_results.append((date_text, team1, team2, competition, score, status))
-
-                result = get_match_result_for_team(team_name, score, team1, team2)
+                result = get_match_result_for_team(espn_team_name, score, team1, team2)
                 if result:
                     recent_form.append(result)
-
-                buts_m, buts_e, domicile = extract_goals(team_name, score, team1, team2)
+                buts_m, buts_e, domicile = extract_goals(espn_team_name, score, team1, team2)
                 if buts_m is not None and buts_e is not None:
                     if domicile:
                         buts_dom_marques += buts_m
@@ -360,25 +359,19 @@ def scrape_team_data(team_name, action):
                     else:
                         buts_ext_marques += buts_m
                         buts_ext_encaisses += buts_e
-
             if len(valid_results) >= 6:
                 break
-
         nb_matchs = len(valid_results)
         if nb_matchs == 0:
             print("Aucun match trouvé.")
             return []
-
         total_marques = buts_dom_marques + buts_ext_marques
         total_encaisses = buts_dom_encaisses + buts_ext_encaisses
-
-        print(f"\n🗓️ {action.capitalize()} pour {team_name} :")
+        print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} :")
         for result in valid_results:
             print(" | ".join(result))
-
         points_map = {'W': 3, 'D': 1, 'L': 0}
         total_points = sum(points_map.get(r, 0) for r in recent_form)
-
         print(f"\n📊 Forme récente (6 derniers matchs) : {' '.join(recent_form)} (Total points : {total_points})")
         print(f"⚽ Buts marqués à domicile : {buts_dom_marques}")
         print(f"⚽ Buts encaissés à domicile : {buts_dom_encaisses}")
@@ -388,9 +381,7 @@ def scrape_team_data(team_name, action):
         print(f"🛡️ Total buts encaissés : {total_encaisses}")
         print(f"\n📈 Moyenne buts marqués par match : {total_marques / nb_matchs:.2f}")
         print(f"📉 Moyenne buts encaissés par match : {total_encaisses / nb_matchs:.2f}")
-
-        delta_scored, delta_conceded = analyze_trends(valid_results, team_name, return_values=True)
-
+        delta_scored, delta_conceded = analyze_trends(valid_results, espn_team_name, return_values=True)
         return {
             "matches": valid_results,
             "moyenne_marques": total_marques / nb_matchs,
@@ -399,9 +390,8 @@ def scrape_team_data(team_name, action):
             "trend_scored": delta_scored,
             "trend_conceded": delta_conceded
         }
-
     except Exception as e:
-        print(f"Erreur scraping {team_name} ({action}) : {e}")
+        print(f"Erreur scraping {espn_team_name} ({action}) : {e}")
         return []
 
 def confidence_total(total_pred):
@@ -460,48 +450,34 @@ def compare_teams_and_predict_score(
     if not t1 or not t2:
         print("⚠️ Données insuffisantes pour la comparaison.")
         return
-
     print(f"\n📅 Match prévu le {match_date} à {match_time}")
     print(f"🏆 Compétition : [{country}] {league}")
     print(f"⚔️ {name1} vs {name2}")
-
     print(f"\n🤝 Comparaison directe :")
     print(f"{name1} ➤ Moy. buts marqués : {t1['moyenne_marques']:.2f} | Moy. encaissés : {t1['moyenne_encaisses']:.2f}")
     print(f"{name2} ➤ Moy. buts marqués : {t2['moyenne_marques']:.2f} | Moy. encaissés : {t2['moyenne_encaisses']:.2f}")
-
     adj1 = t1['trend_scored'] - t1['trend_conceded']
     adj2 = t2['trend_scored'] - t2['trend_conceded']
-
     points1, ratio1 = get_form_points(t1.get('recent_form', []))
     points2, ratio2 = get_form_points(t2.get('recent_form', []))
     forme_adj1 = (ratio1 - 0.5) * 0.5
     forme_adj2 = (ratio2 - 0.5) * 0.5
-
     pred_t1 = (t1['moyenne_marques'] + t2['moyenne_encaisses']) / 2
     pred_t2 = (t2['moyenne_marques'] + t1['moyenne_encaisses']) / 2
-
     pred_t1 += adj1*0.5 + forme_adj1
     pred_t2 += adj2*0.5 + forme_adj2
-
     pred_t1 = max(pred_t1, 0.1)
     pred_t2 = max(pred_t2, 0.1)
-
     print(f"\n🛠️ Ajustements appliqués :")
     print(f"{name1} ➤ Tendance:{adj1:+.2f} | Forme:{forme_adj1:+.2f}")
     print(f"{name2} ➤ Tendance:{adj2:+.2f} | Forme:{forme_adj2:+.2f}")
-
     print(f"\n🔮 **Score estimé final** :")
     print(f"{name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
-
     total_pred = pred_t1 + pred_t2
-
     print("\n🔎 Prédictions détaillées :")
-
     conf_total = confidence_total(total_pred)
     pred_safe = None
     conf_safe = 0
-
-    # On stocke la meilleure prédiction dans pred_safe/conf_safe
     if total_pred >= 3.0:
         print(f"👉 Prédiction total : **+2.5 buts** (Confiance : {conf_total}%)")
         pred_safe = "+2.5 buts"
@@ -510,20 +486,16 @@ def compare_teams_and_predict_score(
         print(f"👉 Prédiction total : **-3.5 buts** (Confiance : {conf_total}%)")
         pred_safe = "-3.5 buts"
         conf_safe = conf_total
-
     conf_btts = confidence_btts(pred_t1, pred_t2, t1, t2)
     if conf_btts:
         print(f"👉 Prédiction : **Les deux équipes marquent** (Confiance : {conf_btts}%)")
         if conf_btts > conf_safe:
             pred_safe = "Les deux équipes marquent"
             conf_safe = conf_btts
-
     diff = abs(pred_t1 - pred_t2)
-
     defeats_t1 = count_defeats(t1.get('recent_form', []))
     defeats_t2 = count_defeats(t2.get('recent_form', []))
     both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
-
     if pred_t1 > pred_t2:
         conf_draw = confidence_win_or_draw(diff, adj1, forme_adj1)
         conf_vic = confidence_victory(diff, adj1, forme_adj1)
@@ -560,11 +532,7 @@ def compare_teams_and_predict_score(
             if conf_draw > conf_safe:
                 pred_safe = f"Victoire ou nul {name2}"
                 conf_safe = conf_draw
-
     print("\n📚 Note : Prédictions issues de la tendance, forme récente et stats offensives/défensives. La fiabilité (%) est une estimation statistique, non une certitude.")
-
-    # Ajout de la prédiction dans la liste globale PREDICTIONS
-    # On ne stocke que les matchs où les deux équipes sont connues et la prédiction la plus sûre existe
     if pred_safe and conf_safe:
         prediction_obj = {
             "HomeTeam": name1,
@@ -580,19 +548,17 @@ def compare_teams_and_predict_score(
             résultats.append(prediction_obj)
 
 def process_team(team_name, return_data=False):
-    print(f"\n🧠 Analyse pour l'équipe : {team_name}")
+    print(f"\n🧠 Analyse pour l'équipe : {get_espn_name(team_name)}")
     data = scrape_team_data(team_name, 'results')
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
-# Fonction pour sauvegarder les prédictions dans un fichier JSON custom
 def sauvegarder_prediction_json(predictions, date_str):
     chemin = f"prédiction-{date_str}-analyse-ia.json"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(predictions, f, ensure_ascii=False, indent=2)
     print(f"✅ Prédictions sauvegardées dans : {chemin}")
 
-# Fonction pour git add/commit/push
 def git_commit_and_push(filepath):
     try:
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
@@ -605,7 +571,7 @@ def git_commit_and_push(filepath):
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA pour tous les matchs du jour (sans saisie manuelle).\n")
+    print("⚽️ Bienvenue dans l'analyse IA pour tous les matchs du jour (avec correspondance des noms d'équipes).\n")
     get_today_matches_filtered()
     print("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
 
