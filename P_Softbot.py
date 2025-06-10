@@ -16,6 +16,17 @@ team_name_mapping = {
     "Rep. Of Ireland": "Republic Of Ireland",
 }
 
+
+
+API_KEY = '1933761904aae9724ca6497102b2e094'
+
+api_headers = {
+    'x-apisports-key': API_KEY
+}
+
+team_name_mapping = {
+    "Bournemouth": "AFC Bournemouth",
+    "Rep. Of Ireland": "Republic Of Ireland",
 }
 
 teams_urls = {
@@ -637,10 +648,6 @@ def main():
     print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, prudence sur matchs équilibrés, etc).\n")
     get_today_matches_filtered()
     print("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
-
-if __name__ == "__main__":
-    main()
-t("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
 
 if __name__ == "__main__":
     main()
