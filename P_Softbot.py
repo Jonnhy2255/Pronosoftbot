@@ -14,6 +14,7 @@ api_headers = {
 team_name_mapping = {
     "Bournemouth": "AFC Bournemouth",
     "Rep. Of Ireland": "Republic Of Ireland",
+    "Sport Recife": "Sport",
 }
 teams_urls = {
     # Bloc Europe du dernier JSON
@@ -181,6 +182,66 @@ teams_urls = {
     "Zambia": {"results": "https://www.espn.com/soccer/team/results/_/id/4277/zambia"},
     "Zanzibar": {"results": "https://www.espn.com/soccer/team/results/_/id/5815/zanzibar"},
     "Zimbabwe": {"results": "https://www.espn.com/soccer/team/results/_/id/4214/zimbabwe"},
+    "Atlético-MG": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/7632/atletico-mg"
+  },
+  "Bahia": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/9967/bahia"
+  },
+  "Botafogo": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/6086/botafogo"
+  },
+  "Ceará": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/9969/ceara"
+  },
+  "Corinthians": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/874/corinthians"
+  },
+  "Cruzeiro": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/2022/cruzeiro"
+  },
+  "Flamengo": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/819/flamengo"
+  },
+  "Fluminense": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/3445/fluminense"
+  },
+  "Fortaleza EC": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/6272/fortaleza"
+  },
+  "Grêmio": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/6273/gremio"
+  },
+  "Internacional": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/1936/internacional"
+  },
+  "Juventude": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/6270/juventude"
+  },
+  "Mirassol": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/9169/mirassol"
+  },
+  "Palmeiras": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/2029/palmeiras"
+  },
+  "RB Bragantino": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/6079/red-bull-bragantino"
+  },
+  "Santos": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/2674/santos"
+  },
+  "São Paulo": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/2026/sao-paulo"
+  },
+  "Vasco DA Gama": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/3454/vasco-da-gama"
+  },
+  "Vitória": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/3457/vitoria"
+  },
+  "Sport": {
+    "results": "https://www.espn.com/soccer/team/results/_/id/7635/sport"
+  }
     # Ajoutez d'autres équipes si besoin
 }
 
