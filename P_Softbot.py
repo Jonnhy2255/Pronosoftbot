@@ -2,8 +2,8 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 import json
-import locale
 import subprocess
+import math
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
 
@@ -245,10 +245,44 @@ teams_urls = {
     # Ajoutez d'autres équipes si besoin
 }
 
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
+
+# -------------------------------
+#  Modèle POISSON
+# -------------------------------
+
+def poisson_pmf(k, lmbda):
+    return math.exp(-lmbda) * (lmbda ** k) / math.factorial(k)
+
+def poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=5):
+    probabilities = {}
+    for home_goals in range(0, max_goals + 1):
+        for away_goals in range(0, max_goals + 1):
+            prob = poisson_pmf(home_goals, lmbda_home) * poisson_pmf(away_goals, lmbda_away)
+            probabilities[(home_goals, away_goals)] = prob
+    return probabilities
+
+def print_poisson_probabilities(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
+    probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=max_goals)
+    sorted_probs = sorted(probabilities.items(), key=lambda x: x[1], reverse=True)[:n_top]
+    print("\n📊 Scores les plus probables (modèle Poisson):")
+    for (h, a), p in sorted_probs:
+        print(f"Score {name1} {h}-{a} {name2} : {p*100:.2f}%")
+    # Probabilités cumulées
+    win1 = sum(p for (h, a), p in probabilities.items() if h > a)
+    win2 = sum(p for (h, a), p in probabilities.items() if h < a)
+    draw = sum(p for (h, a), p in probabilities.items() if h == a)
+    print(f"\n✅ Probabilités Poisson cumulées :")
+    print(f"Victoire {name1}: {win1*100:.2f}%")
+    print(f"Match nul   : {draw*100:.2f}%")
+    print(f"Victoire {name2}: {win2*100:.2f}%")
+    return sorted_probs, win1, draw, win2
+
+# -------------------------------
+#  Fonctions principales script
+# -------------------------------
 
 def get_espn_name(api_team_name):
     mapped = team_name_mapping.get(api_team_name)
@@ -299,6 +333,8 @@ def get_today_matches_filtered():
                     print(f"\n🔎 Analyse automatique pour : {home_espn} & {away_espn}")
                     team1_stats = process_team(home_api, return_data=True)
                     team2_stats = process_team(away_api, return_data=True)
+                    if team1_stats: team1_stats['nom'] = home_espn
+                    if team2_stats: team2_stats['nom'] = away_espn
                     compare_teams_and_predict_score(
                         team1_stats, team2_stats, home_api, away_api, date, time, league, country, résultats=résultats
                     )
@@ -322,7 +358,7 @@ def get_match_result_for_team(team_name, score, team1, team2):
     if team_name == team1:
         return 'W' if home_score > away_score else 'D' if home_score == away_score else 'L'
     elif team_name == team2:
-        return 'W' if away_score > home_score else 'D' if home_score == away_score else 'L'
+        return 'W' if away_score > home_score else 'D' if away_score == home_score else 'L'
     return None
 
 def extract_goals(team_name, score, team1, team2):
@@ -342,11 +378,9 @@ def analyze_weighted_trends(match_data, team_name, return_values=False):
         if return_values:
             return 0.0, 0.0
         return
-    # pondération croissante
     poids = [0.5, 0.6, 0.7, 1.0, 1.2, 1.5]
     scored, conceded = 0.0, 0.0
     total_poids = 0.0
-    # On prend les 6 derniers matchs, le plus ancien d'abord
     data = match_data[-6:]
     for idx, (_, team1, team2, _, score, _) in enumerate(data):
         buts_m, buts_e, _ = extract_goals(team_name, score, team1, team2)
@@ -366,7 +400,6 @@ def analyze_weighted_trends(match_data, team_name, return_values=False):
         return avg_scored, avg_conceded
 
 def get_streak_bonus(recent_form):
-    # Bonus pour victoires consécutives, malus pour défaites consécutives
     streak_bonus = 0
     streak_malus = 0
     count_win = 0
@@ -389,7 +422,6 @@ def get_streak_bonus(recent_form):
                 streak_malus -= (count_lose - 1)
             count_win = 0
             count_lose = 0
-    # Fin de série
     if count_win >= 2:
         streak_bonus += (count_win - 1)
     if count_lose >= 2:
@@ -400,7 +432,6 @@ def get_form_points(recent_form):
     points_map = {'W': 3, 'D': 1, 'L': 0}
     total = sum(points_map.get(r, 0) for r in recent_form)
     ratio = total / (len(recent_form)*3) if recent_form else 0
-    # Momentum bonus/malus
     momentum = get_streak_bonus(recent_form)
     return total, ratio, momentum
 
@@ -465,7 +496,6 @@ def scrape_team_data(team_name, action):
         print(f"🛡️ Total buts encaissés : {total_encaisses}")
         print(f"\n📈 Moyenne buts marqués par match : {total_marques / nb_matchs:.2f}")
         print(f"📉 Moyenne buts encaissés par match : {total_encaisses / nb_matchs:.2f}")
-        # Tendance pondérée améliorée
         avg_trend_scored, avg_trend_conceded = analyze_weighted_trends(valid_results, espn_team_name, return_values=True)
         return {
             "matches": valid_results,
@@ -493,7 +523,6 @@ def confidence_total(total_pred):
         return 55
 
 def confidence_btts(pred_t1, pred_t2, t1, t2):
-    # Amélioré : prend aussi en compte la capacité défensive
     if (
         pred_t1 >= 1.2 and pred_t2 >= 1.2 and
         t1['moyenne_encaisses'] >= 1.0 and
@@ -534,12 +563,54 @@ def count_defeats(recent_form):
     return sum(1 for r in recent_form if r == 'L')
 
 def compute_indice_forme(t, forme_adj, adj):
-    # 0.4 * (buts marqués - encaissés) + 0.3 * forme + 0.3 * tendance
     return (
         0.4 * (t['moyenne_marques'] - t['moyenne_encaisses']) +
         0.3 * forme_adj +
         0.3 * (adj)
     )
+
+def apply_weak_defense_bonus(pred_t1, pred_t2, t1, t2):
+    SEUIL_DEFENSE_FAIBLE = 1.5
+    nom1 = t1.get('nom', 'Équipe 1')
+    nom2 = t2.get('nom', 'Équipe 2')
+    defense_faible_t1 = t1['moyenne_encaisses'] >= SEUIL_DEFENSE_FAIBLE
+    defense_faible_t2 = t2['moyenne_encaisses'] >= SEUIL_DEFENSE_FAIBLE
+    bonus_applied = 0
+
+    if defense_faible_t1 and defense_faible_t2:
+        bonus = 0.3
+        pred_t1 += bonus
+        pred_t2 += bonus
+        bonus_applied = bonus
+        print(f"🚨 Bonus défenses faibles appliqué : +{bonus} but pour chaque équipe ({nom1}, {nom2})")
+    elif defense_faible_t1:
+        bonus = 0.2
+        pred_t2 += bonus
+        bonus_applied = bonus
+        print(f"🚨 Bonus défense faible {nom1} : +{bonus} but pour {nom2}")
+    elif defense_faible_t2:
+        bonus = 0.2
+        pred_t1 += bonus
+        bonus_applied = bonus
+        print(f"🚨 Bonus défense faible {nom2} : +{bonus} but pour {nom1}")
+
+    return pred_t1, pred_t2, bonus_applied
+
+def calculate_match_offensive_factor(t1, t2):
+    moyenne_encaisse_combinee = (t1['moyenne_encaisses'] + t2['moyenne_encaisses']) / 2
+    if moyenne_encaisse_combinee >= 2.0:
+        facteur = 1.4
+        print(f"🔥 Match à fort potentiel offensif (facteur: {facteur})")
+    elif moyenne_encaisse_combinee >= 1.5:
+        facteur = 1.2
+        print(f"⚡ Match avec potentiel offensif modéré (facteur: {facteur})")
+    elif moyenne_encaisse_combinee >= 1.0:
+        facteur = 1.1
+        print(f"📈 Match équilibré offensivement (facteur: {facteur})")
+    else:
+        facteur = 1.0
+        print(f"🛡️ Match défensif attendu (facteur: {facteur})")
+    return facteur
 
 def compare_teams_and_predict_score(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
@@ -561,25 +632,30 @@ def compare_teams_and_predict_score(
     forme_adj1 = (ratio1 - 0.5) * 0.5 + 0.1 * momentum1
     forme_adj2 = (ratio2 - 0.5) * 0.5 + 0.1 * momentum2
 
-    # Prédiction initiale
     pred_t1 = (t1['moyenne_marques'] + t2['moyenne_encaisses']) / 2
     pred_t2 = (t2['moyenne_marques'] + t1['moyenne_encaisses']) / 2
     pred_t1 += adj1*0.5 + forme_adj1
     pred_t2 += adj2*0.5 + forme_adj2
+
+    pred_t1, pred_t2, bonus_defense = apply_weak_defense_bonus(pred_t1, pred_t2, t1, t2)
+    facteur_offensif = calculate_match_offensive_factor(t1, t2)
+    pred_t1 *= facteur_offensif
+    pred_t2 *= facteur_offensif
+
     pred_t1 = max(pred_t1, 0.1)
     pred_t2 = max(pred_t2, 0.1)
-    # Normalisation offensive
-    global_moyenne = (pred_t1 + pred_t2) / 2
-    pred_t1 = (pred_t1 + global_moyenne) / 2
-    pred_t2 = (pred_t2 + global_moyenne) / 2
 
     print(f"\n🛠️ Ajustements appliqués :")
     print(f"{name1} ➤ Tendance:{adj1:+.2f} | Forme:{forme_adj1:+.2f}")
     print(f"{name2} ➤ Tendance:{adj2:+.2f} | Forme:{forme_adj2:+.2f}")
+    print(f"Facteur offensif appliqué : x{facteur_offensif:.2f}")
     print(f"\n🔮 **Score estimé final** :")
     print(f"{name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
 
-    # Calcul de l'indice de forme combiné
+    # ----- AJOUT POISSON -----
+    print_poisson_probabilities(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
+    # -------------------------
+
     indice_forme_t1 = compute_indice_forme(t1, forme_adj1, adj1)
     indice_forme_t2 = compute_indice_forme(t2, forme_adj2, adj2)
     diff_indice_forme = abs(indice_forme_t1 - indice_forme_t2)
@@ -593,20 +669,24 @@ def compare_teams_and_predict_score(
 
     defeats_t1 = count_defeats(t1.get('recent_form', []))
     defeats_t2 = count_defeats(t2.get('recent_form', []))
-    # Règle prudence matchs équilibrés
     if diff_indice_forme < 0.3 and defeats_t1 >= 2 and defeats_t2 >= 2:
         print(f"👉 Prédiction : **⚠️ Match très équilibré, à éviter**")
         pred_safe = "⚠️ Match très équilibré, à éviter"
         conf_safe = 60
     else:
-        if total_pred >= 3.0:
-            print(f"👉 Prédiction total : **+2.5 buts** (Confiance : {conf_total}%)")
-            pred_safe = "+2.5 buts"
+        if total_pred >= 2.8:
+            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
+            pred_safe = "+1.5 buts"
             conf_safe = conf_total
-        else:
+        elif total_pred <= 2.3:
             print(f"👉 Prédiction total : **-3.5 buts** (Confiance : {conf_total}%)")
             pred_safe = "-3.5 buts"
             conf_safe = conf_total
+        else:
+            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
+            pred_safe = "+1.5 buts"
+            conf_safe = conf_total
+
         conf_btts = confidence_btts(pred_t1, pred_t2, t1, t2)
         if conf_btts:
             print(f"👉 Prédiction : **Les deux équipes marquent** (Confiance : {conf_btts}%)")
@@ -614,46 +694,45 @@ def compare_teams_and_predict_score(
                 pred_safe = "Les deux équipes marquent"
                 conf_safe = conf_btts
 
-        diff = abs(indice_forme_t1 - indice_forme_t2)
         both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
         if indice_forme_t1 > indice_forme_t2:
-            conf_draw = confidence_win_or_draw(diff, adj1, forme_adj1)
-            conf_vic = confidence_victory(diff, adj1, forme_adj1)
-            if 0.1 < diff < 0.7:
+            conf_draw = confidence_win_or_draw(diff_indice_forme, adj1, forme_adj1)
+            conf_vic = confidence_victory(diff_indice_forme, adj1, forme_adj1)
+            if 0.1 < diff_indice_forme < 0.7:
                 print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name1}"
                     conf_safe = conf_draw
-            elif diff >= 1.0 and not both_at_least_3_defeats:
+            elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
                 print(f"👉 Prédiction : **Victoire {name1}** (Confiance : {conf_vic}%)")
                 if conf_vic > conf_safe:
                     pred_safe = f"Victoire {name1}"
                     conf_safe = conf_vic
-            elif diff >= 1.0 and both_at_least_3_defeats:
+            elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
                 print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name1}"
                     conf_safe = conf_draw
         elif indice_forme_t2 > indice_forme_t1:
-            conf_draw = confidence_win_or_draw(diff, adj2, forme_adj2)
-            conf_vic = confidence_victory(diff, adj2, forme_adj2)
-            if 0.1 < diff < 0.7:
+            conf_draw = confidence_win_or_draw(diff_indice_forme, adj2, forme_adj2)
+            conf_vic = confidence_victory(diff_indice_forme, adj2, forme_adj2)
+            if 0.1 < diff_indice_forme < 0.7:
                 print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name2}"
                     conf_safe = conf_draw
-            elif diff >= 1.0 and not both_at_least_3_defeats:
+            elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
                 print(f"👉 Prédiction : **Victoire {name2}** (Confiance : {conf_vic}%)")
                 if conf_vic > conf_safe:
                     pred_safe = f"Victoire {name2}"
                     conf_safe = conf_vic
-            elif diff >= 1.0 and both_at_least_3_defeats:
+            elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
                 print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name2}"
                     conf_safe = conf_draw
 
-    print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives et indice de forme combiné. La fiabilité (%) est une estimation statistique, non une certitude.")
+    print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives, indice de forme combiné, bonus défenses faibles et facteur offensif. La fiabilité (%) est une estimation statistique, non une certitude.")
     if pred_safe and conf_safe:
         prediction_obj = {
             "HomeTeam": name1,
@@ -692,7 +771,7 @@ def git_commit_and_push(filepath):
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, prudence sur matchs équilibrés, etc).\n")
+    print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, bonus défenses faibles, facteur offensif, prudence sur matchs équilibrés, etc).\n")
     get_today_matches_filtered()
     print("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
 
