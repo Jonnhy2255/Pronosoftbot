@@ -253,10 +253,7 @@ headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
 
-# -------------------------------
-#  Modèle POISSON
-# -------------------------------
-
+# ----- Modèle Poisson -----
 def poisson_pmf(k, lmbda):
     return math.exp(-lmbda) * (lmbda ** k) / math.factorial(k)
 
@@ -266,7 +263,30 @@ def poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=5):
         for away_goals in range(0, max_goals + 1):
             prob = poisson_pmf(home_goals, lmbda_home) * poisson_pmf(away_goals, lmbda_away)
             probabilities[(home_goals, away_goals)] = prob
+    # queue pour les scores élevés non calculés
+    residual_home = 1 - sum(poisson_pmf(i, lmbda_home) for i in range(0, max_goals + 1))
+    residual_away = 1 - sum(poisson_pmf(i, lmbda_away) for i in range(0, max_goals + 1))
+    if residual_home > 0 or residual_away > 0:
+        probabilities[(max_goals, max_goals)] += residual_home * residual_away
     return probabilities
+
+def poisson_issues(probabilities):
+    win1 = sum(p for (h, a), p in probabilities.items() if h > a)
+    win2 = sum(p for (h, a), p in probabilities.items() if h < a)
+    draw = sum(p for (h, a), p in probabilities.items() if h == a)
+    over15 = sum(p for (h, a), p in probabilities.items() if h + a > 1)
+    over25 = sum(p for (h, a), p in probabilities.items() if h + a > 2)
+    under35 = sum(p for (h, a), p in probabilities.items() if h + a < 4)
+    btts = sum(p for (h, a), p in probabilities.items() if h > 0 and a > 0)
+    return {
+        "win1": win1,
+        "draw": draw,
+        "win2": win2,
+        "over15": over15,
+        "over25": over25,
+        "under35": under35,
+        "btts": btts
+    }
 
 def print_poisson_probabilities(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
     probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=max_goals)
@@ -274,20 +294,18 @@ def print_poisson_probabilities(lmbda_home, lmbda_away, name1, name2, max_goals=
     print("\n📊 Scores les plus probables (modèle Poisson):")
     for (h, a), p in sorted_probs:
         print(f"Score {name1} {h}-{a} {name2} : {p*100:.2f}%")
-    # Probabilités cumulées
-    win1 = sum(p for (h, a), p in probabilities.items() if h > a)
-    win2 = sum(p for (h, a), p in probabilities.items() if h < a)
-    draw = sum(p for (h, a), p in probabilities.items() if h == a)
+    issues = poisson_issues(probabilities)
     print(f"\n✅ Probabilités Poisson cumulées :")
-    print(f"Victoire {name1}: {win1*100:.2f}%")
-    print(f"Match nul   : {draw*100:.2f}%")
-    print(f"Victoire {name2}: {win2*100:.2f}%")
-    return sorted_probs, win1, draw, win2
+    print(f"Victoire {name1}: {issues['win1']*100:.2f}%")
+    print(f"Match nul   : {issues['draw']*100:.2f}%")
+    print(f"Victoire {name2}: {issues['win2']*100:.2f}%")
+    print(f"+1.5 buts : {issues['over15']*100:.2f}%")
+    print(f"+2.5 buts : {issues['over25']*100:.2f}%")
+    print(f"-3.5 buts : {issues['under35']*100:.2f}%")
+    print(f"Les deux équipes marquent : {issues['btts']*100:.2f}%")
+    return probabilities, issues
 
-# -------------------------------
-#  Fonctions principales script
-# -------------------------------
-
+# ----- Fonctions principales -----
 def get_espn_name(api_team_name):
     mapped = team_name_mapping.get(api_team_name)
     if not mapped:
@@ -657,7 +675,7 @@ def compare_teams_and_predict_score(
     print(f"{name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
 
     # ----- AJOUT POISSON -----
-    print_poisson_probabilities(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
+    poisson_probs, poisson_issues_dict = print_poisson_probabilities(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
     # -------------------------
 
     indice_forme_t1 = compute_indice_forme(t1, forme_adj1, adj1)
@@ -736,7 +754,43 @@ def compare_teams_and_predict_score(
                     pred_safe = f"Victoire ou nul {name2}"
                     conf_safe = conf_draw
 
-    print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives, indice de forme combiné, bonus défenses faibles et facteur offensif. La fiabilité (%) est une estimation statistique, non une certitude.")
+    # ------ AJUSTEMENT POISSON DU %
+    if pred_safe == "+1.5 buts":
+        poisson_conf = int(poisson_issues_dict["over15"] * 100)
+        print(f"🔁 Ajustement Poisson : confiance over1.5 = {poisson_conf}%")
+        conf_safe = (conf_safe + poisson_conf) // 2
+    elif pred_safe == "+2.5 buts":
+        poisson_conf = int(poisson_issues_dict["over25"] * 100)
+        print(f"🔁 Ajustement Poisson : confiance over2.5 = {poisson_conf}%")
+        conf_safe = (conf_safe + poisson_conf) // 2
+    elif pred_safe == "-3.5 buts":
+        poisson_conf = int(poisson_issues_dict["under35"] * 100)
+        print(f"🔁 Ajustement Poisson : confiance under3.5 = {poisson_conf}%")
+        conf_safe = (conf_safe + poisson_conf) // 2
+    elif pred_safe == "Les deux équipes marquent":
+        poisson_conf = int(poisson_issues_dict["btts"] * 100)
+        print(f"🔁 Ajustement Poisson : confiance BTTS = {poisson_conf}%")
+        conf_safe = (conf_safe + poisson_conf) // 2
+    elif pred_safe.startswith("Victoire ") and not pred_safe.endswith("nul"):
+        if name1 in pred_safe:
+            poisson_conf = int(poisson_issues_dict["win1"] * 100)
+            print(f"🔁 Ajustement Poisson : confiance victoire {name1} = {poisson_conf}%")
+            conf_safe = (conf_safe + poisson_conf) // 2
+        elif name2 in pred_safe:
+            poisson_conf = int(poisson_issues_dict["win2"] * 100)
+            print(f"🔁 Ajustement Poisson : confiance victoire {name2} = {poisson_conf}%")
+            conf_safe = (conf_safe + poisson_conf) // 2
+    elif pred_safe.startswith("Victoire ou nul "):
+        if name1 in pred_safe:
+            poisson_conf = int((poisson_issues_dict["win1"] + poisson_issues_dict["draw"]) * 100)
+            print(f"🔁 Ajustement Poisson : confiance 1X = {poisson_conf}%")
+            conf_safe = (conf_safe + poisson_conf) // 2
+        elif name2 in pred_safe:
+            poisson_conf = int((poisson_issues_dict["win2"] + poisson_issues_dict["draw"]) * 100)
+            print(f"🔁 Ajustement Poisson : confiance X2 = {poisson_conf}%")
+            conf_safe = (conf_safe + poisson_conf) // 2
+
+    print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives, indice de forme combiné, bonus défenses faibles, facteur offensif et **ajustement probabilités Poisson**. La fiabilité (%) est une estimation statistique, non une certitude.")
     if pred_safe and conf_safe:
         prediction_obj = {
             "HomeTeam": name1,
@@ -775,7 +829,7 @@ def git_commit_and_push(filepath):
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, bonus défenses faibles, facteur offensif, prudence sur matchs équilibrés, etc).\n")
+    print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, bonus défenses faibles, facteur offensif, prudence sur matchs équilibrés, ajustement Poisson, etc).\n")
     get_today_matches_filtered()
     print("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
 
