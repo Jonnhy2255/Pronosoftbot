@@ -15,6 +15,10 @@ team_name_mapping = {
     "Bournemouth": "AFC Bournemouth",
     "Rep. Of Ireland": "Republic Of Ireland",
     "Sport Recife": "Sport",
+    "RB Bragantino": "Red Bull Bragantino",
+    "Fortaleza EC": "Fortaleza",
+    "Gremio":"Grêmio",
+    "Vitoria": "Vitória",
 }
 teams_urls = {
     # Bloc Europe du dernier JSON
@@ -206,7 +210,7 @@ teams_urls = {
   "Fluminense": {
     "results": "https://www.espn.com/soccer/team/results/_/id/3445/fluminense"
   },
-  "Fortaleza EC": {
+  "Fortaleza": {
     "results": "https://www.espn.com/soccer/team/results/_/id/6272/fortaleza"
   },
   "Grêmio": {
@@ -224,7 +228,7 @@ teams_urls = {
   "Palmeiras": {
     "results": "https://www.espn.com/soccer/team/results/_/id/2029/palmeiras"
   },
-  "RB Bragantino": {
+  "Red Bull Bragantino": {
     "results": "https://www.espn.com/soccer/team/results/_/id/6079/red-bull-bragantino"
   },
   "Santos": {
