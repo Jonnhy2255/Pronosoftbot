@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import json
 import subprocess
 import math
+import itertools
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
 
@@ -19,7 +20,11 @@ team_name_mapping = {
     "Fortaleza EC": "Fortaleza",
     "Gremio":"Grêmio",
     "Vitoria": "Vitória",
+    "Vasco DA Gama": "Vasco da Gama",
+    "Sao Paulo": "São Paulo",
+    "Atletico-MG": "Atlético-MG",
 }
+
 teams_urls = {
     # Bloc Europe du dernier JSON
     "Wales": {"results": "https://www.espn.com/soccer/team/results/_/id/578/wales"},
@@ -237,7 +242,7 @@ teams_urls = {
   "São Paulo": {
     "results": "https://www.espn.com/soccer/team/results/_/id/2026/sao-paulo"
   },
-  "Vasco DA Gama": {
+  "Vasco da Gama": {
     "results": "https://www.espn.com/soccer/team/results/_/id/3454/vasco-da-gama"
   },
   "Vitória": {
@@ -252,6 +257,7 @@ teams_urls = {
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
+COMBINED_PREDICTIONS = []
 
 # ----- Modèle Poisson -----
 def poisson_pmf(k, lmbda):
@@ -365,8 +371,12 @@ def get_today_matches_filtered():
                         process_team(home_api)
                     if away_espn in teams_urls:
                         process_team(away_api)
-        if 'résultats' in locals() and résultats:
-            sauvegarder_prediction_json(résultats, today)
+        
+        if résultats:
+            # Générer les prédictions combinées
+            generate_combined_predictions(résultats)
+            # Sauvegarder avec structure complète
+            sauvegarder_prediction_json_complete(résultats, COMBINED_PREDICTIONS, today)
             fichier = f"prédiction-{today}-analyse-ia.json"
             git_commit_and_push(fichier)
     except Exception as e:
@@ -692,26 +702,26 @@ def compare_teams_and_predict_score(
     defeats_t1 = count_defeats(t1.get('recent_form', []))
     defeats_t2 = count_defeats(t2.get('recent_form', []))
     if diff_indice_forme < 0.3 and defeats_t1 >= 2 and defeats_t2 >= 2:
-        print(f"👉 Prédiction : **⚠️ Match très équilibré, à éviter**")
+        print(f"👉 Prédiction : **⚠️ Match très équilibré, à éviter**")
         pred_safe = "⚠️ Match très équilibré, à éviter"
         conf_safe = 60
     else:
         if total_pred >= 2.8:
-            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
+            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
             pred_safe = "+1.5 buts"
             conf_safe = conf_total
         elif total_pred <= 2.3:
-            print(f"👉 Prédiction total : **-3.5 buts** (Confiance : {conf_total}%)")
+            print(f"👉 Prédiction total : **-3.5 buts** (Confiance : {conf_total}%)")
             pred_safe = "-3.5 buts"
             conf_safe = conf_total
         else:
-            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
+            print(f"👉 Prédiction total : **+1.5 buts** (Confiance : {conf_total}%)")
             pred_safe = "+1.5 buts"
             conf_safe = conf_total
 
         conf_btts = confidence_btts(pred_t1, pred_t2, t1, t2)
         if conf_btts:
-            print(f"👉 Prédiction : **Les deux équipes marquent** (Confiance : {conf_btts}%)")
+            print(f"👉 Prédiction : **Les deux équipes marquent** (Confiance : {conf_btts}%)")
             if conf_btts > conf_safe:
                 pred_safe = "Les deux équipes marquent"
                 conf_safe = conf_btts
@@ -721,17 +731,17 @@ def compare_teams_and_predict_score(
             conf_draw = confidence_win_or_draw(diff_indice_forme, adj1, forme_adj1)
             conf_vic = confidence_victory(diff_indice_forme, adj1, forme_adj1)
             if 0.1 < diff_indice_forme < 0.7:
-                print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
+                print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name1}"
                     conf_safe = conf_draw
             elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
-                print(f"👉 Prédiction : **Victoire {name1}** (Confiance : {conf_vic}%)")
+                print(f"👉 Prédiction : **Victoire {name1}** (Confiance : {conf_vic}%)")
                 if conf_vic > conf_safe:
                     pred_safe = f"Victoire {name1}"
                     conf_safe = conf_vic
             elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
-                print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
+                print(f"👉 Prédiction : **Victoire ou nul {name1}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name1}"
                     conf_safe = conf_draw
@@ -739,17 +749,17 @@ def compare_teams_and_predict_score(
             conf_draw = confidence_win_or_draw(diff_indice_forme, adj2, forme_adj2)
             conf_vic = confidence_victory(diff_indice_forme, adj2, forme_adj2)
             if 0.1 < diff_indice_forme < 0.7:
-                print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
+                print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name2}"
                     conf_safe = conf_draw
             elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
-                print(f"👉 Prédiction : **Victoire {name2}** (Confiance : {conf_vic}%)")
+                print(f"👉 Prédiction : **Victoire {name2}** (Confiance : {conf_vic}%)")
                 if conf_vic > conf_safe:
                     pred_safe = f"Victoire {name2}"
                     conf_safe = conf_vic
             elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
-                print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
+                print(f"👉 Prédiction : **Victoire ou nul {name2}** (Confiance : {conf_draw}%)")
                 if conf_draw > conf_safe:
                     pred_safe = f"Victoire ou nul {name2}"
                     conf_safe = conf_draw
@@ -757,49 +767,61 @@ def compare_teams_and_predict_score(
     # ------ AJUSTEMENT POISSON DU %
     if pred_safe == "+1.5 buts":
         poisson_conf = int(poisson_issues_dict["over15"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance over1.5 = {poisson_conf}%")
+        print(f"🔁 Ajustement Poisson : confiance over1.5 = {poisson_conf}%")
         conf_safe = (conf_safe + poisson_conf) // 2
     elif pred_safe == "+2.5 buts":
         poisson_conf = int(poisson_issues_dict["over25"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance over2.5 = {poisson_conf}%")
+        print(f"🔁 Ajustement Poisson : confiance over2.5 = {poisson_conf}%")
         conf_safe = (conf_safe + poisson_conf) // 2
     elif pred_safe == "-3.5 buts":
         poisson_conf = int(poisson_issues_dict["under35"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance under3.5 = {poisson_conf}%")
+        print(f"🔁 Ajustement Poisson : confiance under3.5 = {poisson_conf}%")
         conf_safe = (conf_safe + poisson_conf) // 2
     elif pred_safe == "Les deux équipes marquent":
         poisson_conf = int(poisson_issues_dict["btts"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance BTTS = {poisson_conf}%")
+        print(f"🔁 Ajustement Poisson : confiance BTTS = {poisson_conf}%")
         conf_safe = (conf_safe + poisson_conf) // 2
     elif pred_safe.startswith("Victoire ") and not pred_safe.endswith("nul"):
         if name1 in pred_safe:
             poisson_conf = int(poisson_issues_dict["win1"] * 100)
-            print(f"🔁 Ajustement Poisson : confiance victoire {name1} = {poisson_conf}%")
+            print(f"🔁 Ajustement Poisson : confiance victoire {name1} = {poisson_conf}%")
             conf_safe = (conf_safe + poisson_conf) // 2
         elif name2 in pred_safe:
             poisson_conf = int(poisson_issues_dict["win2"] * 100)
-            print(f"🔁 Ajustement Poisson : confiance victoire {name2} = {poisson_conf}%")
+            print(f"🔁 Ajustement Poisson : confiance victoire {name2} = {poisson_conf}%")
             conf_safe = (conf_safe + poisson_conf) // 2
     elif pred_safe.startswith("Victoire ou nul "):
         if name1 in pred_safe:
             poisson_conf = int((poisson_issues_dict["win1"] + poisson_issues_dict["draw"]) * 100)
-            print(f"🔁 Ajustement Poisson : confiance 1X = {poisson_conf}%")
+            print(f"🔁 Ajustement Poisson : confiance 1X = {poisson_conf}%")
             conf_safe = (conf_safe + poisson_conf) // 2
         elif name2 in pred_safe:
             poisson_conf = int((poisson_issues_dict["win2"] + poisson_issues_dict["draw"]) * 100)
-            print(f"🔁 Ajustement Poisson : confiance X2 = {poisson_conf}%")
+            print(f"🔁 Ajustement Poisson : confiance X2 = {poisson_conf}%")
             conf_safe = (conf_safe + poisson_conf) // 2
 
     print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives, indice de forme combiné, bonus défenses faibles, facteur offensif et **ajustement probabilités Poisson**. La fiabilité (%) est une estimation statistique, non une certitude.")
     if pred_safe and conf_safe:
         prediction_obj = {
+            "id": len(PREDICTIONS) + 1,
             "HomeTeam": name1,
             "AwayTeam": name2,
             "confidence": conf_safe,
             "date": format_date_fr(match_date, match_time),
             "league": league,
+            "country": country,
             "prediction": pred_safe,
-            "type": "safes"
+            "type": "single",
+            "score_prediction": f"{pred_t1:.1f} - {pred_t2:.1f}",
+            "poisson_probabilities": {
+                "win1": round(poisson_issues_dict["win1"] * 100, 2),
+                "draw": round(poisson_issues_dict["draw"] * 100, 2),
+                "win2": round(poisson_issues_dict["win2"] * 100, 2),
+                "over15": round(poisson_issues_dict["over15"] * 100, 2),
+                "over25": round(poisson_issues_dict["over25"] * 100, 2),
+                "under35": round(poisson_issues_dict["under35"] * 100, 2),
+                "btts": round(poisson_issues_dict["btts"] * 100, 2)
+            }
         }
         PREDICTIONS.append(prediction_obj)
         if résultats is not None:
@@ -811,27 +833,156 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
-def sauvegarder_prediction_json(predictions, date_str):
+def generate_combined_predictions(predictions):
+    """Génère des prédictions combinées à partir des prédictions individuelles"""
+    print("\n🔗 Génération des prédictions combinées...")
+    
+    # Filtrer les prédictions avec une confiance élevée (>= 70%)
+    high_confidence_predictions = [p for p in predictions if p['confidence'] >= 70 and p['prediction'] != "⚠️ Match très équilibré, à éviter"]
+    
+    if len(high_confidence_predictions) < 2:
+        print("⚠️ Pas assez de prédictions avec confiance élevée pour générer des combinés.")
+        return
+    
+    # Générer des combinaisons de 2, 3 et 4 matchs maximum
+    for combo_size in range(2, min(5, len(high_confidence_predictions) + 1)):
+        combinations = list(itertools.combinations(high_confidence_predictions, combo_size))
+        
+        # Limiter le nombre de combinaisons pour éviter l'explosion
+        max_combos = 10 if combo_size == 2 else 5 if combo_size == 3 else 3
+        combinations = combinations[:max_combos]
+        
+        for combo in combinations:
+            # Calculer la confiance combinée (produit des probabilités)
+            combined_confidence = 1.0
+            for pred in combo:
+                combined_confidence *= (pred['confidence'] / 100.0)
+            
+            combined_confidence_percent = round(combined_confidence * 100, 2)
+            
+            # Ne garder que les combinés avec une confiance >= 30%
+            if combined_confidence_percent >= 30:
+                combo_name = f"Combiné {combo_size} matchs"
+                combo_description = " + ".join([f"{p['HomeTeam']} vs {p['AwayTeam']} ({p['prediction']})" for p in combo])
+                
+                combined_pred = {
+                    "id": len(COMBINED_PREDICTIONS) + 1,
+                    "name": combo_name,
+                    "description": combo_description,
+                    "matches": [
+                        {
+                            "match": f"{p['HomeTeam']} vs {p['AwayTeam']}",
+                            "prediction": p['prediction'],
+                            "individual_confidence": p['confidence']
+                        } for p in combo
+                    ],
+                    "combined_confidence": combined_confidence_percent,
+                    "type": "combined",
+                    "size": combo_size,
+                    "estimated_odds": round(1 / combined_confidence, 2) if combined_confidence > 0 else 0
+                }
+                
+                COMBINED_PREDICTIONS.append(combined_pred)
+    
+    # Trier par confiance décroissante
+    COMBINED_PREDICTIONS.sort(key=lambda x: x['combined_confidence'], reverse=True)
+    
+    print(f"✅ {len(COMBINED_PREDICTIONS)} prédictions combinées générées.")
+    
+    # Afficher les meilleures combinaisons
+    print("\n🏆 Top 5 des meilleures prédictions combinées :")
+    for i, combo in enumerate(COMBINED_PREDICTIONS[:5], 1):
+        print(f"{i}. {combo['name']} - Confiance: {combo['combined_confidence']}% - Cote estimée: {combo['estimated_odds']}")
+        print(f"   {combo['description'][:100]}{'...' if len(combo['description']) > 100 else ''}")
+
+def sauvegarder_prediction_json_complete(predictions_simples, predictions_combinees, date_str):
+    """Sauvegarde les prédictions dans un JSON structuré complet"""
+    
+    # Calculer les statistiques
+    total_predictions = len(predictions_simples)
+    high_confidence_count = len([p for p in predictions_simples if p['confidence'] >= 80])
+    medium_confidence_count = len([p for p in predictions_simples if 60 <= p['confidence'] < 80])
+    low_confidence_count = len([p for p in predictions_simples if p['confidence'] < 60])
+    
+    avg_confidence = round(sum(p['confidence'] for p in predictions_simples) / total_predictions, 2) if total_predictions > 0 else 0
+    
+    # Grouper les prédictions par type
+    prediction_types = {}
+    for pred in predictions_simples:
+        pred_type = pred['prediction']
+        if pred_type not in prediction_types:
+            prediction_types[pred_type] = []
+        prediction_types[pred_type].append(pred)
+    
+    # Structure complète du JSON
+    data_complete = {
+        "metadata": {
+            "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            "date_matchs": date_str,
+            "version_algorithme": "2.0 - Poisson + Combinés",
+            "total_predictions_simples": total_predictions,
+            "total_predictions_combinees": len(predictions_combinees),
+            "statistiques": {
+                "confiance_moyenne": avg_confidence,
+                "haute_confiance_80plus": high_confidence_count,
+                "moyenne_confiance_60_79": medium_confidence_count,
+                "faible_confiance_moins_60": low_confidence_count
+            }
+        },
+        "predictions_simples": {
+            "count": total_predictions,
+            "details": predictions_simples,
+            "par_type": prediction_types
+        },
+        "predictions_combinees": {
+            "count": len(predictions_combinees),
+            "details": predictions_combinees,
+            "meilleures_5": predictions_combinees[:5] if predictions_combinees else []
+        },
+        "recommandations": {
+            "safest_bets": [p for p in predictions_simples if p['confidence'] >= 85],
+            "value_bets": [p for p in predictions_simples if 70 <= p['confidence'] < 85],
+            "best_combined": predictions_combinees[:3] if predictions_combinees else []
+        }
+    }
+    
     chemin = f"prédiction-{date_str}-analyse-ia.json"
     with open(chemin, "w", encoding="utf-8") as f:
-        json.dump(predictions, f, ensure_ascii=False, indent=2)
-    print(f"✅ Prédictions sauvegardées dans : {chemin}")
+        json.dump(data_complete, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ Prédictions complètes sauvegardées dans : {chemin}")
+    print(f"📊 Total: {total_predictions} prédictions simples + {len(predictions_combinees)} combinés")
+    print(f"📈 Confiance moyenne: {avg_confidence}%")
 
 def git_commit_and_push(filepath):
     try:
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')}"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 2.0 avec combinés"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("✅ Prédictions poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA améliorée pour tous les matchs du jour (tendance pondérée, série dynamique, bonus défenses faibles, facteur offensif, prudence sur matchs équilibrés, ajustement Poisson, etc).\n")
+    print("⚽️ Bienvenue dans l'analyse IA améliorée v2.0 avec prédictions combinées!")
+    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, prédictions combinées, JSON structuré")
+    print("📊 Analyse complète des matchs du jour avec recommandations...\n")
+    
     get_today_matches_filtered()
-    print("\nMerci d'avoir utilisé le script IA ⚽️📊. À bientôt !")
+    
+    print(f"\n📋 Résumé de la session:")
+    print(f"   🎯 {len(PREDICTIONS)} prédictions simples générées")
+    print(f"   🔗 {len(COMBINED_PREDICTIONS)} prédictions combinées créées")
+    
+    if COMBINED_PREDICTIONS:
+        print(f"\n🏆 Meilleure prédiction combinée:")
+        best = COMBINED_PREDICTIONS[0]
+        print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
+        print(f"   Cote estimée: {best['estimated_odds']}")
+    
+    print("\n✨ Merci d'avoir utilisé le script IA v2.0 ⚽️📊. Bonne chance avec vos paris ! 🍀")
 
 if __name__ == "__main__":
     main()
