@@ -338,7 +338,7 @@ def get_today_matches_filtered():
         "date": today,
         "timezone": "Africa/Abidjan"
     }
-    allowed_league_ids = [5, 10, 71, 253, 78, 135]
+    allowed_league_ids = [61, 144, 39, 88, 94, 140, 197, 203, 98, 383, 207, 169, 235, 262, 307, 5, 10, 71, 253, 78, 135]
     résultats = []
     try:
         response = requests.get(url, headers=api_headers, params=params)
