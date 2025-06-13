@@ -250,7 +250,982 @@ teams_urls = {
   },
   "Sport": {
     "results": "https://www.espn.com/soccer/team/results/_/id/7635/sport"
-  }
+  },
+  "AFC Bournemouth": {
+        "results": "https://www.espn.com/football/team/results/_/id/349/afc-bournemouth"
+    },
+    "Arsenal": {
+        "results": "https://www.espn.com/football/team/results/_/id/359/arsenal"
+    },
+    "Aston Villa": {
+        "results": "https://www.espn.com/football/team/results/_/id/362/aston-villa"
+    },
+    "Brentford": {
+        "results": "https://www.espn.com/football/team/results/_/id/337/brentford"
+    },
+    "Brighton & Hove Albion": {
+        "results": "https://www.espn.com/football/team/results/_/id/331/brighton-hove-albion"
+    },
+    "Chelsea": {
+        "results": "https://www.espn.com/football/team/results/_/id/363/chelsea"
+    },
+    "Crystal Palace": {
+        "results": "https://www.espn.com/football/team/results/_/id/384/crystal-palace"
+    },
+    "Everton": {
+        "results": "https://www.espn.com/football/team/results/_/id/368/everton"
+    },
+    "Fulham": {
+        "results": "https://www.espn.com/football/team/results/_/id/370/fulham"
+    },
+    "Ipswich Town": {
+        "results": "https://www.espn.com/football/team/results/_/id/373/ipswich-town"
+    },
+    "Leicester City": {
+        "results": "https://www.espn.com/football/team/results/_/id/375/leicester-city"
+    },
+    "Liverpool": {
+        "results": "https://www.espn.com/football/team/results/_/id/364/liverpool"
+    },
+    "Manchester City": {
+        "results": "https://www.espn.com/football/team/results/_/id/382/manchester-city"
+    },
+    "Manchester United": {
+        "results": "https://www.espn.com/football/team/results/_/id/360/manchester-united"
+    },
+    "Newcastle United": {
+        "results": "https://www.espn.com/football/team/results/_/id/361/newcastle-united"
+    },
+    "Nottingham Forest": {
+        "results": "https://www.espn.com/football/team/results/_/id/393/nottingham-forest"
+    },
+    "Southampton": {
+        "results": "https://www.espn.com/football/team/results/_/id/376/southampton"
+    },
+    "Tottenham Hotspur": {
+        "results": "https://www.espn.com/football/team/results/_/id/367/tottenham-hotspur"
+    },
+    "West Ham United": {
+        "results": "https://www.espn.com/football/team/results/_/id/371/west-ham-united"
+    },
+    "Wolverhampton Wanderers": {
+        "results": "https://www.espn.com/football/team/results/_/id/380/wolverhampton-wanderers"
+    },
+    "Alavés": {
+        "results": "https://www.espn.com/football/team/results/_/id/96/alaves"
+    },
+    "Athletic Club": {
+        "results": "https://www.espn.com/football/team/results/_/id/93/athletic-club"
+    },
+    "Atlético Madrid": {
+        "results": "https://www.espn.com/football/team/results/_/id/1068/atletico-madrid"
+    },
+    "Barcelona": {
+        "results": "https://www.espn.com/football/team/results/_/id/83/barcelona"
+    },
+    "Celta Vigo": {
+        "results": "https://www.espn.com/football/team/results/_/id/85/celta-vigo"
+    },
+    "Espanyol": {
+        "results": "https://www.espn.com/football/team/results/_/id/88/espanyol"
+    },
+    "Getafe": {
+        "results": "https://www.espn.com/football/team/results/_/id/2922/getafe"
+    },
+    "Girona": {
+        "results": "https://www.espn.com/football/team/results/_/id/9812/girona"
+    },
+    "Las Palmas": {
+        "results": "https://www.espn.com/football/team/results/_/id/98/las-palmas"
+    },
+    "Leganés": {
+        "results": "https://www.espn.com/football/team/results/_/id/17534/leganes"
+    },
+    "Mallorca": {
+        "results": "https://www.espn.com/football/team/results/_/id/84/mallorca"
+    },
+    "Osasuna": {
+        "results": "https://www.espn.com/football/team/results/_/id/97/osasuna"
+    },
+    "Rayo Vallecano": {
+        "results": "https://www.espn.com/football/team/results/_/id/101/rayo-vallecano"
+    },
+    "Real Betis": {
+        "results": "https://www.espn.com/football/team/results/_/id/244/real-betis"
+    },
+    "Real Madrid": {
+        "results": "https://www.espn.com/football/team/results/_/id/86/real-madrid"
+    },
+    "Real Sociedad": {
+        "results": "https://www.espn.com/football/team/results/_/id/89/real-sociedad"
+    },
+    "Real Valladolid": {
+        "results": "https://www.espn.com/football/team/results/_/id/95/real-valladolid"
+    },
+    "Sevilla": {
+        "results": "https://www.espn.com/football/team/results/_/id/243/sevilla"
+    },
+    "Valencia": {
+        "results": "https://www.espn.com/football/team/results/_/id/94/valencia"
+    },
+    "Villarreal": {
+        "results": "https://www.espn.com/football/team/results/_/id/102/villarreal"
+    },
+    "AC Milan": {
+        "results": "https://www.espn.com/football/team/results/_/id/103/ac-milan"
+    },
+    "AS Roma": {
+        "results": "https://www.espn.com/football/team/results/_/id/104/as-roma"
+    },
+    "Atalanta": {
+        "results": "https://www.espn.com/football/team/results/_/id/105/atalanta"
+    },
+    "Bologna": {
+        "results": "https://www.espn.com/football/team/results/_/id/107/bologna"
+    },
+    "Cagliari": {
+        "results": "https://www.espn.com/football/team/results/_/id/2925/cagliari"
+    },
+    "Como": {
+        "results": "https://www.espn.com/football/team/results/_/id/2572/como"
+    },
+    "Cremonese": {
+        "results": "https://www.espn.com/football/team/results/_/id/4050/cremonese"
+    },
+    "Fiorentina": {
+        "results": "https://www.espn.com/football/team/results/_/id/109/fiorentina"
+    },
+    "Genoa": {
+        "results": "https://www.espn.com/football/team/results/_/id/3263/genoa"
+    },
+    "Hellas Verona": {
+        "results": "https://www.espn.com/football/team/results/_/id/119/hellas-verona"
+    },
+    "Internazionale": {
+        "results": "https://www.espn.com/football/team/results/_/id/110/internazionale"
+    },
+    "Juventus": {
+        "results": "https://www.espn.com/football/team/results/_/id/111/juventus"
+    },
+    "Lazio": {
+        "results": "https://www.espn.com/football/team/results/_/id/112/lazio"
+    },
+    "Lecce": {
+        "results": "https://www.espn.com/football/team/results/_/id/113/lecce"
+    },
+    "Napoli": {
+        "results": "https://www.espn.com/football/team/results/_/id/114/napoli"
+    },
+    "Parma": {
+        "results": "https://www.espn.com/football/team/results/_/id/115/parma"
+    },
+    "Pisa": {
+        "results": "https://www.espn.com/football/team/results/_/id/3956/pisa"
+    },
+    "Sassuolo": {
+        "results": "https://www.espn.com/football/team/results/_/id/3997/sassuolo"
+    },
+    "Torino": {
+        "results": "https://www.espn.com/football/team/results/_/id/239/torino"
+    },
+    "Udinese": {
+        "results": "https://www.espn.com/football/team/results/_/id/118/udinese"
+    },
+    "1. FC Heidenheim 1846": {
+        "results": "https://www.espn.com/football/team/results/_/id/6418/1-fc-heidenheim-1846"
+    },
+    "1. FC Union Berlin": {
+        "results": "https://www.espn.com/football/team/results/_/id/598/1-fc-union-berlin"
+    },
+    "Bayer Leverkusen": {
+        "results": "https://www.espn.com/football/team/results/_/id/131/bayer-leverkusen"
+    },
+    "Bayern Munich": {
+        "results": "https://www.espn.com/football/team/results/_/id/132/bayern-munich"
+    },
+    "Borussia Dortmund": {
+        "results": "https://www.espn.com/football/team/results/_/id/124/borussia-dortmund"
+    },
+    "Borussia Mönchengladbach": {
+        "results": "https://www.espn.com/football/team/results/_/id/268/borussia-monchengladbach"
+    },
+    "Eintracht Frankfurt": {
+        "results": "https://www.espn.com/football/team/results/_/id/125/eintracht-frankfurt"
+    },
+    "FC Augsburg": {
+        "results": "https://www.espn.com/football/team/results/_/id/3841/fc-augsburg"
+    },
+    "Holstein Kiel": {
+        "results": "https://www.espn.com/football/team/results/_/id/7884/holstein-kiel"
+    },
+    "Mainz": {
+        "results": "https://www.espn.com/football/team/results/_/id/2950/mainz"
+    },
+    "RB Leipzig": {
+        "results": "https://www.espn.com/football/team/results/_/id/11420/rb-leipzig"
+    },
+    "SC Freiburg": {
+        "results": "https://www.espn.com/football/team/results/_/id/126/sc-freiburg"
+    },
+    "St. Pauli": {
+        "results": "https://www.espn.com/football/team/results/_/id/270/st-pauli"
+    },
+    "TSG Hoffenheim": {
+        "results": "https://www.espn.com/football/team/results/_/id/7911/tsg-hoffenheim"
+    },
+    "VfB Stuttgart": {
+        "results": "https://www.espn.com/football/team/results/_/id/134/vfb-stuttgart"
+    },
+    "VfL Bochum": {
+        "results": "https://www.espn.com/football/team/results/_/id/121/vfl-bochum"
+    },
+    "VfL Wolfsburg": {
+        "results": "https://www.espn.com/football/team/results/_/id/138/vfl-wolfsburg"
+    },
+    "Werder Bremen": {
+        "results": "https://www.espn.com/football/team/results/_/id/137/werder-bremen"
+    },
+    "AJ Auxerre": {
+        "results": "https://www.espn.com/football/team/results/_/id/172/aj-auxerre"
+    },
+    "AS Monaco": {
+        "results": "https://www.espn.com/football/team/results/_/id/174/as-monaco"
+    },
+    "Angers": {
+        "results": "https://www.espn.com/football/team/results/_/id/7868/angers"
+    },
+    "Brest": {
+        "results": "https://www.espn.com/football/team/results/_/id/6997/brest"
+    },
+    "Le Havre AC": {
+        "results": "https://www.espn.com/football/team/results/_/id/3236/le-havre-ac"
+    },
+    "Lens": {
+        "results": "https://www.espn.com/football/team/results/_/id/175/lens"
+    },
+    "Lille": {
+        "results": "https://www.espn.com/football/team/results/_/id/166/lille"
+    },
+    "Lyon": {
+        "results": "https://www.espn.com/football/team/results/_/id/167/lyon"
+    },
+    "Marseille": {
+        "results": "https://www.espn.com/football/team/results/_/id/176/marseille"
+    },
+    "Montpellier": {
+        "results": "https://www.espn.com/football/team/results/_/id/274/montpellier"
+    },
+    "Nantes": {
+        "results": "https://www.espn.com/football/team/results/_/id/165/nantes"
+    },
+    "Nice": {
+        "results": "https://www.espn.com/football/team/results/_/id/2502/nice"
+    },
+    "Paris Saint-Germain": {
+        "results": "https://www.espn.com/football/team/results/_/id/160/paris-saint-germain"
+    },
+    "Saint-Étienne": {
+        "results": "https://www.espn.com/football/team/results/_/id/178/saint-etienne"
+    },
+    "Stade Rennais": {
+        "results": "https://www.espn.com/football/team/results/_/id/169/stade-rennais"
+    },
+    "Stade de Reims": {
+        "results": "https://www.espn.com/football/team/results/_/id/3243/stade-de-reims"
+    },
+    "Strasbourg": {
+        "results": "https://www.espn.com/football/team/results/_/id/180/strasbourg"
+    },
+    "Toulouse": {
+        "results": "https://www.espn.com/football/team/results/_/id/179/toulouse"
+    },
+    "Atlanta United FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/18418/atlanta-united-fc"
+    },
+    "Austin FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/20906/austin-fc"
+    },
+    "CF Montréal": {
+        "results": "https://www.espn.com/football/team/results/_/id/9720/cf-montreal"
+    },
+    "Charlotte FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/21300/charlotte-fc"
+    },
+    "Chicago Fire FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/182/chicago-fire-fc"
+    },
+    "Colorado Rapids": {
+        "results": "https://www.espn.com/football/team/results/_/id/184/colorado-rapids"
+    },
+    "Columbus Crew": {
+        "results": "https://www.espn.com/football/team/results/_/id/183/columbus-crew"
+    },
+    "D.C. United": {
+        "results": "https://www.espn.com/football/team/results/_/id/193/dc-united"
+    },
+    "FC Cincinnati": {
+        "results": "https://www.espn.com/football/team/results/_/id/18267/fc-cincinnati"
+    },
+    "FC Dallas": {
+        "results": "https://www.espn.com/football/team/results/_/id/185/fc-dallas"
+    },
+    "Houston Dynamo FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/6077/houston-dynamo-fc"
+    },
+    "Inter Miami CF": {
+        "results": "https://www.espn.com/football/team/results/_/id/20232/inter-miami-cf"
+    },
+    "LA Galaxy": {
+        "results": "https://www.espn.com/football/team/results/_/id/187/la-galaxy"
+    },
+    "LAFC": {
+        "results": "https://www.espn.com/football/team/results/_/id/18966/lafc"
+    },
+    "Minnesota United FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/17362/minnesota-united-fc"
+    },
+    "Nashville SC": {
+        "results": "https://www.espn.com/football/team/results/_/id/18986/nashville-sc"
+    },
+    "New England Revolution": {
+        "results": "https://www.espn.com/football/team/results/_/id/189/new-england-revolution"
+    },
+    "New York City FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/17606/new-york-city-fc"
+    },
+    "New York Red Bulls": {
+        "results": "https://www.espn.com/football/team/results/_/id/190/new-york-red-bulls"
+    },
+    "Orlando City SC": {
+        "results": "https://www.espn.com/football/team/results/_/id/12011/orlando-city-sc"
+    },
+    "Philadelphia Union": {
+        "results": "https://www.espn.com/football/team/results/_/id/10739/philadelphia-union"
+    },
+    "Portland Timbers": {
+        "results": "https://www.espn.com/football/team/results/_/id/9723/portland-timbers"
+    },
+    "Real Salt Lake": {
+        "results": "https://www.espn.com/football/team/results/_/id/4771/real-salt-lake"
+    },
+    "San Diego FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/22529/san-diego-fc"
+    },
+    "San Jose Earthquakes": {
+        "results": "https://www.espn.com/football/team/results/_/id/191/san-jose-earthquakes"
+    },
+    "Seattle Sounders FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/9726/seattle-sounders-fc"
+    },
+    "Sporting Kansas City": {
+        "results": "https://www.espn.com/football/team/results/_/id/186/sporting-kansas-city"
+    },
+    "St. Louis CITY SC": {
+        "results": "https://www.espn.com/football/team/results/_/id/21812/st-louis-city-sc"
+    },
+    "Toronto FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/7318/toronto-fc"
+    },
+    "Vancouver Whitecaps": {
+        "results": "https://www.espn.com/football/team/results/_/id/9727/vancouver-whitecaps"
+    },
+    "América": {
+        "results": "https://www.espn.com/football/team/results/_/id/227/america"
+    },
+    "Atlas": {
+        "results": "https://www.espn.com/football/team/results/_/id/216/atlas"
+    },
+    "Atlético de San Luis": {
+        "results": "https://www.espn.com/football/team/results/_/id/15720/atletico-de-san-luis"
+    },
+    "Cruz Azul": {
+        "results": "https://www.espn.com/football/team/results/_/id/218/cruz-azul"
+    },
+    "FC Juarez": {
+        "results": "https://www.espn.com/football/team/results/_/id/17851/fc-juarez"
+    },
+    "Guadalajara": {
+        "results": "https://www.espn.com/football/team/results/_/id/219/guadalajara"
+    },
+    "León": {
+        "results": "https://www.espn.com/football/team/results/_/id/228/leon"
+    },
+    "Mazatlán FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/20702/mazatlan-fc"
+    },
+    "Monterrey": {
+        "results": "https://www.espn.com/football/team/results/_/id/220/monterrey"
+    },
+    "Necaxa": {
+        "results": "https://www.espn.com/football/team/results/_/id/229/necaxa"
+    },
+    "Pachuca": {
+        "results": "https://www.espn.com/football/team/results/_/id/234/pachuca"
+    },
+    "Puebla": {
+        "results": "https://www.espn.com/football/team/results/_/id/231/puebla"
+    },
+    "Pumas UNAM": {
+        "results": "https://www.espn.com/football/team/results/_/id/233/pumas-unam"
+    },
+    "Querétaro": {
+        "results": "https://www.espn.com/football/team/results/_/id/222/queretaro"
+    },
+    "Santos": {
+        "results": "https://www.espn.com/football/team/results/_/id/225/santos"
+    },
+    "Tigres UANL": {
+        "results": "https://www.espn.com/football/team/results/_/id/232/tigres-uanl"
+    },
+    "Tijuana": {
+        "results": "https://www.espn.com/football/team/results/_/id/10125/tijuana"
+    },
+    "Toluca": {
+        "results": "https://www.espn.com/football/team/results/_/id/223/toluca"
+    },
+    "AZ Alkmaar": {
+        "results": "https://www.espn.com/football/team/results/_/id/140/az-alkmaar"
+    },
+    "Ajax Amsterdam": {
+        "results": "https://www.espn.com/football/team/results/_/id/139/ajax-amsterdam"
+    },
+    "Almere City": {
+        "results": "https://www.espn.com/football/team/results/_/id/5291/almere-city"
+    },
+    "FC Groningen": {
+        "results": "https://www.espn.com/football/team/results/_/id/145/fc-groningen"
+    },
+    "FC Twente": {
+        "results": "https://www.espn.com/football/team/results/_/id/152/fc-twente"
+    },
+    "FC Utrecht": {
+        "results": "https://www.espn.com/football/team/results/_/id/153/fc-utrecht"
+    },
+    "Feyenoord Rotterdam": {
+        "results": "https://www.espn.com/football/team/results/_/id/142/feyenoord-rotterdam"
+    },
+    "Fortuna Sittard": {
+        "results": "https://www.espn.com/football/team/results/_/id/143/fortuna-sittard"
+    },
+    "Go Ahead Eagles": {
+        "results": "https://www.espn.com/football/team/results/_/id/3706/go-ahead-eagles"
+    },
+    "Heerenveen": {
+        "results": "https://www.espn.com/football/team/results/_/id/146/heerenveen"
+    },
+    "Heracles Almelo": {
+        "results": "https://www.espn.com/football/team/results/_/id/3708/heracles-almelo"
+    },
+    "NAC Breda": {
+        "results": "https://www.espn.com/football/team/results/_/id/141/nac-breda"
+    },
+    "NEC Nijmegen": {
+        "results": "https://www.espn.com/football/team/results/_/id/147/nec-nijmegen"
+    },
+    "PEC Zwolle": {
+        "results": "https://www.espn.com/football/team/results/_/id/2565/pec-zwolle"
+    },
+    "PSV Eindhoven": {
+        "results": "https://www.espn.com/football/team/results/_/id/148/psv-eindhoven"
+    },
+    "RKC Waalwijk": {
+        "results": "https://www.espn.com/football/team/results/_/id/155/rkc-waalwijk"
+    },
+    "Sparta Rotterdam": {
+        "results": "https://www.espn.com/football/team/results/_/id/151/sparta-rotterdam"
+    },
+    "Willem II": {
+        "results": "https://www.espn.com/football/team/results/_/id/156/willem-ii"
+    },
+    "AVS": {
+        "results": "https://www.espn.com/football/team/results/_/id/22064/avs"
+    },
+    "Arouca": {
+        "results": "https://www.espn.com/football/team/results/_/id/15784/arouca"
+    },
+    "Benfica": {
+        "results": "https://www.espn.com/football/team/results/_/id/1929/benfica"
+    },
+    "Boavista": {
+        "results": "https://www.espn.com/football/team/results/_/id/2256/boavista"
+    },
+    "Braga": {
+        "results": "https://www.espn.com/football/team/results/_/id/2994/braga"
+    },
+    "C.D. Nacional": {
+        "results": "https://www.espn.com/football/team/results/_/id/3472/cd-nacional"
+    },
+    "Casa Pia": {
+        "results": "https://www.espn.com/football/team/results/_/id/21581/casa-pia"
+    },
+    "Estoril": {
+        "results": "https://www.espn.com/football/team/results/_/id/12216/estoril"
+    },
+    "Estrela": {
+        "results": "https://www.espn.com/football/team/results/_/id/21610/estrela"
+    },
+    "FC Famalicao": {
+        "results": "https://www.espn.com/football/team/results/_/id/12698/fc-famalicao"
+    },
+    "FC Porto": {
+        "results": "https://www.espn.com/football/team/results/_/id/437/fc-porto"
+    },
+    "Gil Vicente": {
+        "results": "https://www.espn.com/football/team/results/_/id/3699/gil-vicente"
+    },
+    "Guimaraes": {
+        "results": "https://www.espn.com/football/team/results/_/id/5309/guimaraes"
+    },
+    "Moreirense": {
+        "results": "https://www.espn.com/football/team/results/_/id/3696/moreirense"
+    },
+    "Rio Ave": {
+        "results": "https://www.espn.com/football/team/results/_/id/3822/rio-ave"
+    },
+    "SC Farense": {
+        "results": "https://www.espn.com/football/team/results/_/id/20740/sc-farense"
+    },
+    "Santa Clara": {
+        "results": "https://www.espn.com/football/team/results/_/id/12215/santa-clara"
+    },
+    "Sporting CP": {
+        "results": "https://www.espn.com/football/team/results/_/id/2250/sporting-cp"
+    },
+    "Al Ahli": {
+        "results": "https://www.espn.com/football/team/results/_/id/8346/al-ahli"
+    },
+    "Al Ettifaq": {
+        "results": "https://www.espn.com/football/team/results/_/id/8363/al-ettifaq"
+    },
+    "Al Fateh": {
+        "results": "https://www.espn.com/football/team/results/_/id/13033/al-fateh"
+    },
+    "Al Fayha": {
+        "results": "https://www.espn.com/football/team/results/_/id/21827/al-fayha"
+    },
+    "Al Hilal": {
+        "results": "https://www.espn.com/football/team/results/_/id/929/al-hilal"
+    },
+    "Al Ittihad": {
+        "results": "https://www.espn.com/football/team/results/_/id/2276/al-ittihad"
+    },
+    "Al Khaleej": {
+        "results": "https://www.espn.com/football/team/results/_/id/21829/al-khaleej"
+    },
+    "Al Kholood": {
+        "results": "https://www.espn.com/football/team/results/_/id/22028/al-kholood"
+    },
+    "Al Nassr": {
+        "results": "https://www.espn.com/football/team/results/_/id/817/al-nassr"
+    },
+    "Al Okhdood": {
+        "results": "https://www.espn.com/football/team/results/_/id/21966/al-okhdood"
+    },
+    "Al Orobah": {
+        "results": "https://www.espn.com/football/team/results/_/id/22029/al-orobah"
+    },
+    "Al Qadsiah": {
+        "results": "https://www.espn.com/football/team/results/_/id/22022/al-qadsiah"
+    },
+    "Al Raed": {
+        "results": "https://www.espn.com/football/team/results/_/id/21834/al-raed"
+    },
+    "Al Riyadh": {
+        "results": "https://www.espn.com/football/team/results/_/id/21965/al-riyadh"
+    },
+    "Al Shabab": {
+        "results": "https://www.espn.com/football/team/results/_/id/793/al-shabab"
+    },
+    "Al Taawoun": {
+        "results": "https://www.espn.com/football/team/results/_/id/18459/al-taawoun"
+    },
+    "Al Wehda": {
+        "results": "https://www.espn.com/football/team/results/_/id/21835/al-wehda"
+    },
+    "Damac": {
+        "results": "https://www.espn.com/football/team/results/_/id/21828/damac"
+    },
+    "Beijing Guoan": {
+        "results": "https://www.espn.com/football/team/results/_/id/2052/beijing-guoan"
+    },
+    "Changchun Yatai": {
+        "results": "https://www.espn.com/football/team/results/_/id/8225/changchun-yatai"
+    },
+    "Chengdu Rongcheng": {
+        "results": "https://www.espn.com/football/team/results/_/id/21355/chengdu-rongcheng"
+    },
+    "Dalian Yingbo": {
+        "results": "https://www.espn.com/football/team/results/_/id/22537/dalian-yingbo"
+    },
+    "Henan Songshan Longmen": {
+        "results": "https://www.espn.com/football/team/results/_/id/8240/henan-songshan-longmen"
+    },
+    "Meizhou Hakka": {
+        "results": "https://www.espn.com/football/team/results/_/id/21507/meizhou-hakka"
+    },
+    "Qingdao Hainiu": {
+        "results": "https://www.espn.com/football/team/results/_/id/21910/qingdao-hainiu"
+    },
+    "Qingdao West Coast": {
+        "results": "https://www.espn.com/football/team/results/_/id/22198/qingdao-west-coast"
+    },
+    "Shandong Taishan": {
+        "results": "https://www.espn.com/football/team/results/_/id/7521/shandong-taishan"
+    },
+    "Shanghai Port": {
+        "results": "https://www.espn.com/football/team/results/_/id/15515/shanghai-port"
+    },
+    "Shanghai Shenhua": {
+        "results": "https://www.espn.com/football/team/results/_/id/977/shanghai-shenhua"
+    },
+    "Shenzhen Xinpengcheng": {
+        "results": "https://www.espn.com/football/team/results/_/id/22199/shenzhen-xinpengcheng"
+    },
+    "Tianjin Jinmen Tiger": {
+        "results": "https://www.espn.com/football/team/results/_/id/8239/tianjin-jinmen-tiger"
+    },
+    "Wuhan Three Towns": {
+        "results": "https://www.espn.com/football/team/results/_/id/21506/wuhan-three-towns"
+    },
+    "Yunnan Yukun": {
+        "results": "https://www.espn.com/football/team/results/_/id/22536/yunnan-yukun"
+    },
+    "Zhejiang Professional FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/18203/zhejiang-professional-fc"
+    },
+    "Albirex Niigata": {
+        "results": "https://www.espn.com/football/team/results/_/id/7113/albirex-niigata"
+    },
+    "Avispa Fukuoka": {
+        "results": "https://www.espn.com/football/team/results/_/id/7107/avispa-fukuoka"
+    },
+    "Cerezo Osaka": {
+        "results": "https://www.espn.com/football/team/results/_/id/7109/cerezo-osaka"
+    },
+    "FC Tokyo": {
+        "results": "https://www.espn.com/football/team/results/_/id/3384/fc-tokyo"
+    },
+    "Fagiano Okayama": {
+        "results": "https://www.espn.com/football/team/results/_/id/22522/fagiano-okayama"
+    },
+    "Gamba Osaka": {
+        "results": "https://www.espn.com/football/team/results/_/id/7102/gamba-osaka"
+    },
+    "Kashima Antlers": {
+        "results": "https://www.espn.com/football/team/results/_/id/7115/kashima-antlers"
+    },
+    "Kashiwa Reysol": {
+        "results": "https://www.espn.com/football/team/results/_/id/7476/kashiwa-reysol"
+    },
+    "Kawasaki Frontale": {
+        "results": "https://www.espn.com/football/team/results/_/id/7112/kawasaki-frontale"
+    },
+    "Kyoto Sanga": {
+        "results": "https://www.espn.com/football/team/results/_/id/21361/kyoto-sanga"
+    },
+    "Machida Zelvia": {
+        "results": "https://www.espn.com/football/team/results/_/id/22167/machida-zelvia"
+    },
+    "Nagoya Grampus": {
+        "results": "https://www.espn.com/football/team/results/_/id/7108/nagoya-grampus"
+    },
+    "Sanfrecce Hiroshima": {
+        "results": "https://www.espn.com/football/team/results/_/id/7114/sanfrecce-hiroshima"
+    },
+    "Shimizu S-Pulse": {
+        "results": "https://www.espn.com/football/team/results/_/id/7104/shimizu-s-pulse"
+    },
+    "Shonan Bellmare": {
+        "results": "https://www.espn.com/football/team/results/_/id/6902/shonan-bellmare"
+    },
+    "Tokyo Verdy 1969": {
+        "results": "https://www.espn.com/football/team/results/_/id/3393/tokyo-verdy-1969"
+    },
+    "Urawa Red Diamonds": {
+        "results": "https://www.espn.com/football/team/results/_/id/3385/urawa-red-diamonds"
+    },
+    "Vissel Kobe": {
+        "results": "https://www.espn.com/football/team/results/_/id/7477/vissel-kobe"
+    },
+    "Yokohama F. Marinos": {
+        "results": "https://www.espn.com/football/team/results/_/id/7116/yokohama-f-marinos"
+    },
+    "Yokohama FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/7145/yokohama-fc"
+    },
+    "Beitar Jerusalem": {
+        "results": "https://www.espn.com/football/team/results/_/id/5218/beitar-jerusalem"
+    },
+    "Bnei Sakhnin": {
+        "results": "https://www.espn.com/football/team/results/_/id/8329/bnei-sakhnin"
+    },
+    "Hapoel Be'er": {
+        "results": "https://www.espn.com/football/team/results/_/id/13083/hapoel-beer"
+    },
+    "Hapoel Hadera": {
+        "results": "https://www.espn.com/football/team/results/_/id/19255/hapoel-hadera"
+    },
+    "Hapoel Haifa": {
+        "results": "https://www.espn.com/football/team/results/_/id/9577/hapoel-haifa"
+    },
+    "Hapoel Jerusalem": {
+        "results": "https://www.espn.com/football/team/results/_/id/20970/hapoel-jerusalem"
+    },
+    "Hapoel Kiryat Shmona": {
+        "results": "https://www.espn.com/football/team/results/_/id/8327/hapoel-kiryat-shmona"
+    },
+    "Ironi Tiberias": {
+        "results": "https://www.espn.com/football/team/results/_/id/22311/ironi-tiberias"
+    },
+    "Maccabi Haifa": {
+        "results": "https://www.espn.com/football/team/results/_/id/611/maccabi-haifa"
+    },
+    "Maccabi Netanya": {
+        "results": "https://www.espn.com/football/team/results/_/id/5945/maccabi-netanya"
+    },
+    "Maccabi Petah-Tikva": {
+        "results": "https://www.espn.com/football/team/results/_/id/2983/maccabi-petah-tikva"
+    },
+    "Maccabi Raina": {
+        "results": "https://www.espn.com/football/team/results/_/id/21517/maccabi-raina"
+    },
+    "Maccabi Tel-Aviv": {
+        "results": "https://www.espn.com/football/team/results/_/id/524/maccabi-tel-aviv"
+    },
+    "Moadon Sport Ashdod": {
+        "results": "https://www.espn.com/football/team/results/_/id/5269/moadon-sport-ashdod"
+    },
+    "AEK Athens": {
+        "results": "https://www.espn.com/football/team/results/_/id/887/aek-athens"
+    },
+    "Aris": {
+        "results": "https://www.espn.com/football/team/results/_/id/11553/aris"
+    },
+    "Asteras Tripoli": {
+        "results": "https://www.espn.com/football/team/results/_/id/8354/asteras-tripoli"
+    },
+    "Athens Kallithea": {
+        "results": "https://www.espn.com/football/team/results/_/id/22325/athens-kallithea"
+    },
+    "Atromitos": {
+        "results": "https://www.espn.com/football/team/results/_/id/6790/atromitos"
+    },
+    "Lamia": {
+        "results": "https://www.espn.com/football/team/results/_/id/18814/lamia"
+    },
+    "Levadiakos": {
+        "results": "https://www.espn.com/football/team/results/_/id/5276/levadiakos"
+    },
+    "OFI Crete": {
+        "results": "https://www.espn.com/football/team/results/_/id/1010/ofi-crete"
+    },
+    "Olympiacos": {
+        "results": "https://www.espn.com/football/team/results/_/id/435/olympiacos"
+    },
+    "PAOK Salonika": {
+        "results": "https://www.espn.com/football/team/results/_/id/605/paok-salonika"
+    },
+    "Panathinaikos": {
+        "results": "https://www.espn.com/football/team/results/_/id/443/panathinaikos"
+    },
+    "Panetolikos": {
+        "results": "https://www.espn.com/football/team/results/_/id/11431/panetolikos"
+    },
+    "Panserraikos FC": {
+        "results": "https://www.espn.com/football/team/results/_/id/21970/panserraikos-fc"
+    },
+    "Volos NFC": {
+        "results": "https://www.espn.com/football/team/results/_/id/20043/volos-nfc"
+    },
+    "Anderlecht": {
+        "results": "https://www.espn.com/football/team/results/_/id/441/anderlecht"
+    },
+    "Antwerp": {
+        "results": "https://www.espn.com/football/team/results/_/id/17544/antwerp"
+    },
+    "Beerschot": {
+        "results": "https://www.espn.com/football/team/results/_/id/991/beerschot"
+    },
+    "Cercle Brugge KSV": {
+        "results": "https://www.espn.com/football/team/results/_/id/3610/cercle-brugge-ksv"
+    },
+    "Club Brugge": {
+        "results": "https://www.espn.com/football/team/results/_/id/570/club-brugge"
+    },
+    "Dender": {
+        "results": "https://www.espn.com/football/team/results/_/id/7878/dender"
+    },
+    "KAA Gent": {
+        "results": "https://www.espn.com/football/team/results/_/id/3611/kaa-gent"
+    },
+    "KV Kortrijk": {
+        "results": "https://www.espn.com/football/team/results/_/id/5786/kv-kortrijk"
+    },
+    "KV Mechelen": {
+        "results": "https://www.espn.com/football/team/results/_/id/7879/kv-mechelen"
+    },
+    "KVC Westerlo": {
+        "results": "https://www.espn.com/football/team/results/_/id/606/kvc-westerlo"
+    },
+    "Oud-Heverlee Leuven": {
+        "results": "https://www.espn.com/football/team/results/_/id/5579/oud-heverlee-leuven"
+    },
+    "Racing Genk": {
+        "results": "https://www.espn.com/football/team/results/_/id/938/racing-genk"
+    },
+    "Royal Charleroi SC": {
+        "results": "https://www.espn.com/football/team/results/_/id/3616/royal-charleroi-sc"
+    },
+    "Sint-Truidense": {
+        "results": "https://www.espn.com/football/team/results/_/id/936/sint-truidense"
+    },
+    "Standard Liege": {
+        "results": "https://www.espn.com/football/team/results/_/id/559/standard-liege"
+    },
+    "Union St.-Gilloise": {
+        "results": "https://www.espn.com/football/team/results/_/id/5807/union-st-gilloise"
+    },
+    "Akhmat Grozny": {
+        "results": "https://www.espn.com/football/team/results/_/id/2991/akhmat-grozny"
+    },
+    "Akron Tolyatti": {
+        "results": "https://www.espn.com/football/team/results/_/id/22271/akron-tolyatti"
+    },
+    "CSKA Moscow": {
+        "results": "https://www.espn.com/football/team/results/_/id/1963/cska-moscow"
+    },
+    "Dinamo Moscow": {
+        "results": "https://www.espn.com/football/team/results/_/id/596/dinamo-moscow"
+    },
+    "Dynamo Makhachkala": {
+        "results": "https://www.espn.com/football/team/results/_/id/22300/dynamo-makhachkala"
+    },
+    "FC Khimki": {
+        "results": "https://www.espn.com/football/team/results/_/id/7424/fc-khimki"
+    },
+    "Fakel Voronezh": {
+        "results": "https://www.espn.com/football/team/results/_/id/21539/fakel-voronezh"
+    },
+    "Gazovik Orenburg": {
+        "results": "https://www.espn.com/football/team/results/_/id/18285/gazovik-orenburg"
+    },
+    "Krasnodar": {
+        "results": "https://www.espn.com/football/team/results/_/id/11336/krasnodar"
+    },
+    "Krylia Sovetov": {
+        "results": "https://www.espn.com/football/team/results/_/id/3850/krylia-sovetov"
+    },
+    "Lokomotiv Moscow": {
+        "results": "https://www.espn.com/football/team/results/_/id/442/lokomotiv-moscow"
+    },
+    "Nizhny Novgorod": {
+        "results": "https://www.espn.com/football/team/results/_/id/13150/nizhny-novgorod"
+    },
+    "Rostov": {
+        "results": "https://www.espn.com/football/team/results/_/id/3852/rostov"
+    },
+    "Rubin Kazan": {
+        "results": "https://www.espn.com/football/team/results/_/id/3851/rubin-kazan"
+    },
+    "Spartak Moscow": {
+        "results": "https://www.espn.com/football/team/results/_/id/1941/spartak-moscow"
+    },
+    "Zenit St Petersburg": {
+        "results": "https://www.espn.com/football/team/results/_/id/2533/zenit-st-petersburg"
+    },
+    "FC Basel": {
+        "results": "https://www.espn.com/football/team/results/_/id/989/fc-basel"
+    },
+    "FC Lugano": {
+        "results": "https://www.espn.com/football/team/results/_/id/7672/fc-lugano"
+    },
+    "FC Luzern": {
+        "results": "https://www.espn.com/football/team/results/_/id/7640/fc-luzern"
+    },
+    "FC Sion": {
+        "results": "https://www.espn.com/football/team/results/_/id/3076/fc-sion"
+    },
+    "FC Zürich": {
+        "results": "https://www.espn.com/football/team/results/_/id/3019/fc-zurich"
+    },
+    "Grasshoppers": {
+        "results": "https://www.espn.com/football/team/results/_/id/492/grasshoppers"
+    },
+    "Lausanne Sports": {
+        "results": "https://www.espn.com/football/team/results/_/id/11551/lausanne-sports"
+    },
+    "Servette": {
+        "results": "https://www.espn.com/football/team/results/_/id/20032/servette"
+    },
+    "St. Gallen": {
+        "results": "https://www.espn.com/football/team/results/_/id/557/st-gallen"
+    },
+    "Winterthur": {
+        "results": "https://www.espn.com/football/team/results/_/id/20996/winterthur"
+    },
+    "Young Boys": {
+        "results": "https://www.espn.com/football/team/results/_/id/2722/young-boys"
+    },
+    "Yverdon": {
+        "results": "https://www.espn.com/football/team/results/_/id/21538/yverdon"
+    },
+    "Adana Demirspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/20765/adana-demirspor"
+    },
+    "Alanyaspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/9078/alanyaspor"
+    },
+    "Antalyaspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/3794/antalyaspor"
+    },
+    "Besiktas": {
+        "results": "https://www.espn.com/football/team/results/_/id/1895/besiktas"
+    },
+    "Bodrum FK": {
+        "results": "https://www.espn.com/football/team/results/_/id/22321/bodrum-fk"
+    },
+    "Caykur Rizespor": {
+        "results": "https://www.espn.com/football/team/results/_/id/7656/caykur-rizespor"
+    },
+    "Eyupspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/20729/eyupspor"
+    },
+    "Fenerbahce": {
+        "results": "https://www.espn.com/football/team/results/_/id/436/fenerbahce"
+    },
+    "Galatasaray": {
+        "results": "https://www.espn.com/football/team/results/_/id/432/galatasaray"
+    },
+    "Gaziantep FK": {
+        "results": "https://www.espn.com/football/team/results/_/id/20070/gaziantep-fk"
+    },
+    "Goztepe": {
+        "results": "https://www.espn.com/football/team/results/_/id/789/goztepe"
+    },
+    "Hatayspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/20737/hatayspor"
+    },
+    "Istanbul Basaksehir": {
+        "results": "https://www.espn.com/football/team/results/_/id/7914/istanbul-basaksehir"
+    },
+    "Kasimpasa": {
+        "results": "https://www.espn.com/football/team/results/_/id/6870/kasimpasa"
+    },
+    "Kayserispor": {
+        "results": "https://www.espn.com/football/team/results/_/id/3643/kayserispor"
+    },
+    "Konyaspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/7648/konyaspor"
+    },
+    "Samsunspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/11429/samsunspor"
+    },
+    "Sivasspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/3691/sivasspor"
+    },
+    "Trabzonspor": {
+        "results": "https://www.espn.com/football/team/results/_/id/997/trabzonspor"
+    }
     # Ajoutez d'autres équipes si besoin
 }
 
