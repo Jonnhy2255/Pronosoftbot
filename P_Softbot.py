@@ -23,6 +23,12 @@ team_name_mapping = {
     "Vasco DA Gama": "Vasco da Gama",
     "Sao Paulo": "São Paulo",
     "Atletico-MG": "Atlético-MG",
+    "Paris Saint Germain": "Paris Saint-Germain",
+    "Atletico Madrid": "Atlético Madrid",
+    "San Diego": "San Diego FC",
+    "Austin": "Austin FC",
+    "Seattle Sounders": "Seattle Sounders FC",
+    "Los Angeles FC": "LAFC",
 }
 
 teams_urls = {
@@ -1225,7 +1231,67 @@ teams_urls = {
     },
     "Trabzonspor": {
         "results": "https://www.espn.com/football/team/results/_/id/997/trabzonspor"
-    }
+    },
+    "Alianza FC": {
+            "results": "https://www.espn.com/football/team/results/_/id/9761/alianza-fc"
+        },
+        "América de Cali": {
+            "results": "https://www.espn.com/football/team/results/_/id/8109/america-de-cali"
+        },
+        "Atlético Junior": {
+            "results": "https://www.espn.com/football/team/results/_/id/4815/atletico-junior"
+        },
+        "Atlético Nacional": {
+            "results": "https://www.espn.com/football/team/results/_/id/5264/atletico-nacional"
+        },
+        "Boyacá Chicó": {
+            "results": "https://www.espn.com/football/team/results/_/id/5480/boyaca-chico"
+        },
+        "Bucaramanga": {
+            "results": "https://www.espn.com/football/team/results/_/id/6137/bucaramanga"
+        },
+        "Deportes Tolima": {
+            "results": "https://www.espn.com/football/team/results/_/id/5489/deportes-tolima"
+        },
+        "Deportivo Cali": {
+            "results": "https://www.espn.com/football/team/results/_/id/2672/deportivo-cali"
+        },
+        "Deportivo Pasto": {
+            "results": "https://www.espn.com/football/team/results/_/id/5485/deportivo-pasto"
+        },
+        "Deportivo Pereira": {
+            "results": "https://www.espn.com/football/team/results/_/id/5486/deportivo-pereira"
+        },
+        "Envigado": {
+            "results": "https://www.espn.com/football/team/results/_/id/5481/envigado"
+        },
+        "Fortaleza CEIF": {
+            "results": "https://www.espn.com/football/team/results/_/id/4928/fortaleza-ceif"
+        },
+        "Independiente Medellín": {
+            "results": "https://www.espn.com/football/team/results/_/id/2690/independiente-medellin"
+        },
+        "Independiente Santa Fe": {
+            "results": "https://www.espn.com/football/team/results/_/id/5488/independiente-santa-fe"
+        },
+        "La Equidad": {
+            "results": "https://www.espn.com/football/team/results/_/id/7445/la-equidad"
+        },
+        "Llaneros": {
+            "results": "https://www.espn.com/football/team/results/_/id/7915/llaneros"
+        },
+        "Millonarios": {
+            "results": "https://www.espn.com/football/team/results/_/id/5484/millonarios"
+        },
+        "Once Caldas": {
+            "results": "https://www.espn.com/football/team/results/_/id/2919/once-caldas"
+        },
+        "Unión Magdalena": {
+            "results": "https://www.espn.com/football/team/results/_/id/17374/union-magdalena"
+        },
+        "Águilas Doradas": {
+            "results": "https://www.espn.com/football/team/results/_/id/9762/aguilas-doradas"
+        }
     # Ajoutez d'autres équipes si besoin
 }
 
