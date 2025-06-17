@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-17 12:50:29",
+    "date_matchs": "2025-06-17",
+    "version_algorithme": "2.0 - Poisson + Combinés",
+    "total_predictions_simples": 3,
+    "total_predictions_combinees": 4,
+    "statistiques": {
+      "confiance_moyenne": 81.33,
+      "haute_confiance_80plus": 2,
+      "moyenne_confiance_60_79": 1,
+      "faible_confiance_moins_60": 0
+    }
+  },
+  "predictions_simples": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Atletico Nacional",
+        "AwayTeam": "Millonarios",
+        "confidence": 83,
+        "date": "17 juin 2025 à 01:20:00 UTC",
+        "league": "Primera A",
+        "country": "Colombia",
+        "prediction": "-3.5 buts",
+        "type": "single",
+        "score_prediction": "0.3 - 1.7",
+        "poisson_probabilities": {
+          "win1": 5.61,
+          "draw": 21.31,
+          "win2": 72.29,
+          "over15": 57.94,
+          "over25": 30.88,
+          "under35": 86.16,
+          "btts": 19.82
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Beijing Guoan",
+        "AwayTeam": "Qingdao Youth Island",
+        "confidence": 78,
+        "date": "17 juin 2025 à 11:35:00 UTC",
+        "league": "Super League",
+        "country": "China",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.9 - 1.0",
+        "poisson_probabilities": {
+          "win1": 69.38,
+          "draw": 13.35,
+          "win2": 9.38,
+          "over15": 82.36,
+          "over25": 67.13,
+          "under35": 44.88,
+          "btts": 54.13
+        }
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Fluminense",
+        "AwayTeam": "Borussia Dortmund",
+        "confidence": 83,
+        "date": "17 juin 2025 à 16:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "3.0 - 3.6",
+        "poisson_probabilities": {
+          "win1": 25.12,
+          "draw": 16.14,
+          "win2": 37.13,
+          "over15": 77.36,
+          "over25": 74.41,
+          "under35": 10.45,
+          "btts": 71.8
+        }
+      }
+    ],
+    "par_type": {
+      "-3.5 buts": [
+        {
+          "id": 1,
+          "HomeTeam": "Atletico Nacional",
+          "AwayTeam": "Millonarios",
+          "confidence": 83,
+          "date": "17 juin 2025 à 01:20:00 UTC",
+          "league": "Primera A",
+          "country": "Colombia",
+          "prediction": "-3.5 buts",
+          "type": "single",
+          "score_prediction": "0.3 - 1.7",
+          "poisson_probabilities": {
+            "win1": 5.61,
+            "draw": 21.31,
+            "win2": 72.29,
+            "over15": 57.94,
+            "over25": 30.88,
+            "under35": 86.16,
+            "btts": 19.82
+          }
+        }
+      ],
+      "+1.5 buts": [
+        {
+          "id": 2,
+          "HomeTeam": "Beijing Guoan",
+          "AwayTeam": "Qingdao Youth Island",
+          "confidence": 78,
+          "date": "17 juin 2025 à 11:35:00 UTC",
+          "league": "Super League",
+          "country": "China",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.9 - 1.0",
+          "poisson_probabilities": {
+            "win1": 69.38,
+            "draw": 13.35,
+            "win2": 9.38,
+            "over15": 82.36,
+            "over25": 67.13,
+            "under35": 44.88,
+            "btts": 54.13
+          }
+        },
+        {
+          "id": 3,
+          "HomeTeam": "Fluminense",
+          "AwayTeam": "Borussia Dortmund",
+          "confidence": 83,
+          "date": "17 juin 2025 à 16:00:00 UTC",
+          "league": "FIFA Club World Cup",
+          "country": "World",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "3.0 - 3.6",
+          "poisson_probabilities": {
+            "win1": 25.12,
+            "draw": 16.14,
+            "win2": 37.13,
+            "over15": 77.36,
+            "over25": 74.41,
+            "under35": 10.45,
+            "btts": 71.8
+          }
+        }
+      ]
+    }
+  },
+  "predictions_combinees": {
+    "count": 4,
+    "details": [
+      {
+        "id": 2,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 68.89,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.45
+      },
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Beijing Guoan vs Qingdao Youth Island (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      },
+      {
+        "id": 3,
+        "name": "Combiné 2 matchs",
+        "description": "Beijing Guoan vs Qingdao Youth Island (+1.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      },
+      {
+        "id": 4,
+        "name": "Combiné 3 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Beijing Guoan vs Qingdao Youth Island (+1.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 53.73,
+        "type": "combined",
+        "size": 3,
+        "estimated_odds": 1.86
+      }
+    ],
+    "meilleures_5": [
+      {
+        "id": 2,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 68.89,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.45
+      },
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Beijing Guoan vs Qingdao Youth Island (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      },
+      {
+        "id": 3,
+        "name": "Combiné 2 matchs",
+        "description": "Beijing Guoan vs Qingdao Youth Island (+1.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      },
+      {
+        "id": 4,
+        "name": "Combiné 3 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Beijing Guoan vs Qingdao Youth Island (+1.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 53.73,
+        "type": "combined",
+        "size": 3,
+        "estimated_odds": 1.86
+      }
+    ]
+  },
+  "recommandations": {
+    "safest_bets": [],
+    "value_bets": [
+      {
+        "id": 1,
+        "HomeTeam": "Atletico Nacional",
+        "AwayTeam": "Millonarios",
+        "confidence": 83,
+        "date": "17 juin 2025 à 01:20:00 UTC",
+        "league": "Primera A",
+        "country": "Colombia",
+        "prediction": "-3.5 buts",
+        "type": "single",
+        "score_prediction": "0.3 - 1.7",
+        "poisson_probabilities": {
+          "win1": 5.61,
+          "draw": 21.31,
+          "win2": 72.29,
+          "over15": 57.94,
+          "over25": 30.88,
+          "under35": 86.16,
+          "btts": 19.82
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Beijing Guoan",
+        "AwayTeam": "Qingdao Youth Island",
+        "confidence": 78,
+        "date": "17 juin 2025 à 11:35:00 UTC",
+        "league": "Super League",
+        "country": "China",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.9 - 1.0",
+        "poisson_probabilities": {
+          "win1": 69.38,
+          "draw": 13.35,
+          "win2": 9.38,
+          "over15": 82.36,
+          "over25": 67.13,
+          "under35": 44.88,
+          "btts": 54.13
+        }
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Fluminense",
+        "AwayTeam": "Borussia Dortmund",
+        "confidence": 83,
+        "date": "17 juin 2025 à 16:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "3.0 - 3.6",
+        "poisson_probabilities": {
+          "win1": 25.12,
+          "draw": 16.14,
+          "win2": 37.13,
+          "over15": 77.36,
+          "over25": 74.41,
+          "under35": 10.45,
+          "btts": 71.8
+        }
+      }
+    ],
+    "best_combined": [
+      {
+        "id": 2,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 68.89,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.45
+      },
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Atletico Nacional vs Millonarios (-3.5 buts) + Beijing Guoan vs Qingdao Youth Island (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Atletico Nacional vs Millonarios",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      },
+      {
+        "id": 3,
+        "name": "Combiné 2 matchs",
+        "description": "Beijing Guoan vs Qingdao Youth Island (+1.5 buts) + Fluminense vs Borussia Dortmund (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Beijing Guoan vs Qingdao Youth Island",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 78
+          },
+          {
+            "match": "Fluminense vs Borussia Dortmund",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          }
+        ],
+        "combined_confidence": 64.74,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.54
+      }
+    ]
+  }
+}
