@@ -30,6 +30,8 @@ team_name_mapping = {
     "Seattle Sounders": "Seattle Sounders FC",
     "Los Angeles FC": "LAFC",
     "Santa Fe": "Independiente Santa Fe",
+    "Qingdao Youth Island": "Qingdao Hainiu",
+    "Atletico Nacional": "Atlético Nacional",
 }
 
 teams_urls = {
