@@ -33,6 +33,7 @@ team_name_mapping = {
     "Atletico Nacional": "Atlético Nacional",
     "Henan Jianye": "Henan Songshan Longmen",
     "SHANGHAI SIPG": "Shanghai Port",
+    "Al-Hilal Saudi FC": "Al Hilal",
 }
 
 teams_urls = {
