@@ -31,6 +31,8 @@ team_name_mapping = {
     "Santa Fe": "Independiente Santa Fe",
     "Qingdao Youth Island": "Qingdao Hainiu",
     "Atletico Nacional": "Atlético Nacional",
+    "Henan Jianye": "Henan Songshan Longmen",
+    "SHANGHAI SIPG": "Shanghai Port",
 }
 
 teams_urls = {
