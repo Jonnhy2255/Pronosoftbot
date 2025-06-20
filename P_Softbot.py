@@ -1397,6 +1397,12 @@ def get_today_matches_filtered():
             away_api = match['teams']['away']['name']
             time = match['fixture']['date'][11:16]
             date = match['fixture']['date'][:10]
+            
+            # Nouveau filtrage : on ne garde que les matchs à partir de 08:00
+            heure, minute = map(int, time.split(":"))
+            if heure < 8:
+                continue
+
             if league_id in allowed_league_ids:
                 print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time}")
                 home_espn = get_espn_name(home_api)
@@ -1752,13 +1758,10 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
     diff_indice_forme = abs(indice_forme_t1 - indice_forme_t2)
     both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
 
-    # --- RÈGLE SPÉCIALE "1X DOMICILE" ---
     pred_diff = pred_t1 - pred_t2
     home_no_defeat = has_no_home_defeat(t1, name1)
     away_win_count = away_wins_count(t2, name2)
-    if 1.4 <= pred_diff <= 2.1 and home_no_defeat and away_win_count < 2:
-        print(f"⭐ Règle spéciale : {name1} favorisé pour 'Victoire ou nul' (différence score {pred_diff:.2f}, aucune défaite à domicile, {away_win_count} victoire(s) à l'extérieur pour {name2})")
-        return f"Victoire ou nul {name1}", 87
+    # RÈGLE SPÉCIALE 1X SUPPRIMÉE
 
     predictions_candidates = []
 
@@ -2106,7 +2109,7 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "2.2 - Poisson + Combinés + Règle spéciale home 1X + JSON erreurs",
+            "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
             "total_predictions_simples": total_predictions,
             "total_predictions_combinees": len(predictions_combinees),
             "statistiques": {
@@ -2151,15 +2154,15 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 2.2 avec règle spéciale home 1X et JSON erreurs"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 2.2 sans règle spéciale 1X et JSON erreurs"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("✅ Prédictions poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v2.2 : Poisson, combinés, sécurité, ajustement défensif, JSON erreurs, et RÈGLE SPÉCIALE 1X domicile !")
-    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, prédictions combinées, sécurité, home 1X boostée, sauvegarde erreurs JSON")
+    print("⚽️ Bienvenue dans l'analyse IA v2.2 : Poisson, combinés, sécurité, ajustement défensif, JSON erreurs !")
+    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, prédictions combinées, sécurité, sauvegarde erreurs JSON")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
