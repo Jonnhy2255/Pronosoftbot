@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-20 15:35:09",
+    "date_matchs": "2025-06-20",
+    "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
+    "total_predictions_simples": 1,
+    "total_predictions_combinees": 0,
+    "statistiques": {
+      "confiance_moyenne": 73.0,
+      "haute_confiance_80plus": 0,
+      "moyenne_confiance_60_79": 1,
+      "faible_confiance_moins_60": 0
+    }
+  },
+  "predictions_simples": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Flamengo",
+        "AwayTeam": "Chelsea",
+        "confidence": 73,
+        "date": "20 juin 2025 à 18:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "Victoire ou nul Flamengo",
+        "type": "single",
+        "score_prediction": "2.1 - 1.1",
+        "defensive_reduction_applied": true,
+        "score_before_reduction": "2.6 - 1.4",
+        "poisson_probabilities": {
+          "win1": 57.01,
+          "draw": 20.87,
+          "win2": 20.08,
+          "over15": 80.9,
+          "over25": 60.06,
+          "under35": 60.16,
+          "btts": 57.85
+        }
+      }
+    ],
+    "par_type": {
+      "Victoire ou nul Flamengo": [
+        {
+          "id": 1,
+          "HomeTeam": "Flamengo",
+          "AwayTeam": "Chelsea",
+          "confidence": 73,
+          "date": "20 juin 2025 à 18:00:00 UTC",
+          "league": "FIFA Club World Cup",
+          "country": "World",
+          "prediction": "Victoire ou nul Flamengo",
+          "type": "single",
+          "score_prediction": "2.1 - 1.1",
+          "defensive_reduction_applied": true,
+          "score_before_reduction": "2.6 - 1.4",
+          "poisson_probabilities": {
+            "win1": 57.01,
+            "draw": 20.87,
+            "win2": 20.08,
+            "over15": 80.9,
+            "over25": 60.06,
+            "under35": 60.16,
+            "btts": 57.85
+          }
+        }
+      ]
+    }
+  },
+  "predictions_combinees": {
+    "count": 0,
+    "details": [],
+    "meilleures_5": []
+  },
+  "recommandations": {
+    "safest_bets": [],
+    "value_bets": [
+      {
+        "id": 1,
+        "HomeTeam": "Flamengo",
+        "AwayTeam": "Chelsea",
+        "confidence": 73,
+        "date": "20 juin 2025 à 18:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "Victoire ou nul Flamengo",
+        "type": "single",
+        "score_prediction": "2.1 - 1.1",
+        "defensive_reduction_applied": true,
+        "score_before_reduction": "2.6 - 1.4",
+        "poisson_probabilities": {
+          "win1": 57.01,
+          "draw": 20.87,
+          "win2": 20.08,
+          "over15": 80.9,
+          "over25": 60.06,
+          "under35": 60.16,
+          "btts": 57.85
+        }
+      }
+    ],
+    "best_combined": []
+  }
+}
