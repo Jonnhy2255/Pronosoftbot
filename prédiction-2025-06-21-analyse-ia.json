@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-21 02:41:20",
+    "date_matchs": "2025-06-21",
+    "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
+    "total_predictions_simples": 3,
+    "total_predictions_combinees": 1,
+    "statistiques": {
+      "confiance_moyenne": 83.0,
+      "haute_confiance_80plus": 2,
+      "moyenne_confiance_60_79": 1,
+      "faible_confiance_moins_60": 0
+    }
+  },
+  "predictions_simples": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Kashiwa Reysol",
+        "AwayTeam": "Kyoto Sanga",
+        "confidence": 77,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "Les deux équipes marquent",
+        "type": "single",
+        "score_prediction": "1.8 - 2.0",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 35.02,
+          "draw": 21.43,
+          "win2": 41.1,
+          "over15": 86.25,
+          "over25": 69.61,
+          "under35": 48.66,
+          "btts": 69.33
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Kawasaki Frontale",
+        "AwayTeam": "Vissel Kobe",
+        "confidence": 88,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.9 - 2.1",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 47.33,
+          "draw": 17.33,
+          "win2": 25.83,
+          "over15": 86.64,
+          "over25": 78.5,
+          "under35": 25.7,
+          "btts": 74.93
+        }
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Yokohama F. Marinos",
+        "AwayTeam": "Fagiano Okayama",
+        "confidence": 84,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "-3.5 buts",
+        "type": "single",
+        "score_prediction": "0.6 - 1.2",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 17.97,
+          "draw": 30.41,
+          "win2": 51.45,
+          "over15": 53.94,
+          "over25": 27.13,
+          "under35": 88.91,
+          "btts": 31.42
+        }
+      }
+    ],
+    "par_type": {
+      "Les deux équipes marquent": [
+        {
+          "id": 1,
+          "HomeTeam": "Kashiwa Reysol",
+          "AwayTeam": "Kyoto Sanga",
+          "confidence": 77,
+          "date": "21 juin 2025 à 10:00:00 UTC",
+          "league": "J1 League",
+          "country": "Japan",
+          "prediction": "Les deux équipes marquent",
+          "type": "single",
+          "score_prediction": "1.8 - 2.0",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 35.02,
+            "draw": 21.43,
+            "win2": 41.1,
+            "over15": 86.25,
+            "over25": 69.61,
+            "under35": 48.66,
+            "btts": 69.33
+          }
+        }
+      ],
+      "+1.5 buts": [
+        {
+          "id": 2,
+          "HomeTeam": "Kawasaki Frontale",
+          "AwayTeam": "Vissel Kobe",
+          "confidence": 88,
+          "date": "21 juin 2025 à 10:00:00 UTC",
+          "league": "J1 League",
+          "country": "Japan",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.9 - 2.1",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 47.33,
+            "draw": 17.33,
+            "win2": 25.83,
+            "over15": 86.64,
+            "over25": 78.5,
+            "under35": 25.7,
+            "btts": 74.93
+          }
+        }
+      ],
+      "-3.5 buts": [
+        {
+          "id": 3,
+          "HomeTeam": "Yokohama F. Marinos",
+          "AwayTeam": "Fagiano Okayama",
+          "confidence": 84,
+          "date": "21 juin 2025 à 10:00:00 UTC",
+          "league": "J1 League",
+          "country": "Japan",
+          "prediction": "-3.5 buts",
+          "type": "single",
+          "score_prediction": "0.6 - 1.2",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 17.97,
+            "draw": 30.41,
+            "win2": 51.45,
+            "over15": 53.94,
+            "over25": 27.13,
+            "under35": 88.91,
+            "btts": 31.42
+          }
+        }
+      ]
+    }
+  },
+  "predictions_combinees": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Kawasaki Frontale vs Vissel Kobe (+1.5 buts) + Yokohama F. Marinos vs Fagiano Okayama (-3.5 buts)",
+        "matches": [
+          {
+            "match": "Kawasaki Frontale vs Vissel Kobe",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          },
+          {
+            "match": "Yokohama F. Marinos vs Fagiano Okayama",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 73.92,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.35
+      }
+    ],
+    "meilleures_5": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Kawasaki Frontale vs Vissel Kobe (+1.5 buts) + Yokohama F. Marinos vs Fagiano Okayama (-3.5 buts)",
+        "matches": [
+          {
+            "match": "Kawasaki Frontale vs Vissel Kobe",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          },
+          {
+            "match": "Yokohama F. Marinos vs Fagiano Okayama",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 73.92,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.35
+      }
+    ]
+  },
+  "recommandations": {
+    "safest_bets": [
+      {
+        "id": 2,
+        "HomeTeam": "Kawasaki Frontale",
+        "AwayTeam": "Vissel Kobe",
+        "confidence": 88,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.9 - 2.1",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 47.33,
+          "draw": 17.33,
+          "win2": 25.83,
+          "over15": 86.64,
+          "over25": 78.5,
+          "under35": 25.7,
+          "btts": 74.93
+        }
+      }
+    ],
+    "value_bets": [
+      {
+        "id": 1,
+        "HomeTeam": "Kashiwa Reysol",
+        "AwayTeam": "Kyoto Sanga",
+        "confidence": 77,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "Les deux équipes marquent",
+        "type": "single",
+        "score_prediction": "1.8 - 2.0",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 35.02,
+          "draw": 21.43,
+          "win2": 41.1,
+          "over15": 86.25,
+          "over25": 69.61,
+          "under35": 48.66,
+          "btts": 69.33
+        }
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Yokohama F. Marinos",
+        "AwayTeam": "Fagiano Okayama",
+        "confidence": 84,
+        "date": "21 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "-3.5 buts",
+        "type": "single",
+        "score_prediction": "0.6 - 1.2",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 17.97,
+          "draw": 30.41,
+          "win2": 51.45,
+          "over15": 53.94,
+          "over25": 27.13,
+          "under35": 88.91,
+          "btts": 31.42
+        }
+      }
+    ],
+    "best_combined": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Kawasaki Frontale vs Vissel Kobe (+1.5 buts) + Yokohama F. Marinos vs Fagiano Okayama (-3.5 buts)",
+        "matches": [
+          {
+            "match": "Kawasaki Frontale vs Vissel Kobe",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          },
+          {
+            "match": "Yokohama F. Marinos vs Fagiano Okayama",
+            "prediction": "-3.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 73.92,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.35
+      }
+    ]
+  }
+}
