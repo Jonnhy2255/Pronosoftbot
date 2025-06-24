@@ -34,6 +34,7 @@ team_name_mapping = {
     "Henan Jianye": "Henan Songshan Longmen",
     "SHANGHAI SIPG": "Shanghai Port",
     "Al-Hilal Saudi FC": "Al Hilal",
+    "Bayern München": "Bayern Munich",
 }
 
 teams_urls = {
