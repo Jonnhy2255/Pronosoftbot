@@ -1,0 +1,499 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-25 02:48:21",
+    "date_matchs": "2025-06-25",
+    "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
+    "total_predictions_simples": 6,
+    "total_predictions_combinees": 1,
+    "statistiques": {
+      "confiance_moyenne": 76.33,
+      "haute_confiance_80plus": 2,
+      "moyenne_confiance_60_79": 4,
+      "faible_confiance_moins_60": 0
+    }
+  },
+  "predictions_simples": {
+    "count": 6,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Kawasaki Frontale",
+        "AwayTeam": "Albirex Niigata",
+        "confidence": 73,
+        "date": "25 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.6 - 1.0",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 66.78,
+          "draw": 16.01,
+          "win2": 12.22,
+          "over15": 82.51,
+          "over25": 64.85,
+          "under35": 51.38,
+          "btts": 55.44
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Yokohama F. Marinos",
+        "AwayTeam": "FC Tokyo",
+        "confidence": 81,
+        "date": "25 juin 2025 à 10:30:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "Victoire ou nul Yokohama F. Marinos",
+        "type": "single",
+        "score_prediction": "1.7 - 0.3",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 73.49,
+          "draw": 20.62,
+          "win2": 5.03,
+          "over15": 58.16,
+          "over25": 31.1,
+          "under35": 85.96,
+          "btts": 18.66
+        }
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Changchun Yatai",
+        "AwayTeam": "Qingdao Youth Island",
+        "confidence": 65,
+        "date": "25 juin 2025 à 11:35:00 UTC",
+        "league": "Super League",
+        "country": "China",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "0.1 - 2.3",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 1.06,
+          "draw": 11.23,
+          "win2": 84.69,
+          "over15": 66.25,
+          "over25": 40.14,
+          "under35": 77.76,
+          "btts": 8.28
+        }
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Columbus Crew",
+        "AwayTeam": "Atlanta United FC",
+        "confidence": 88,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.4 - 2.6",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 34.13,
+          "draw": 18.45,
+          "win2": 39.55,
+          "over15": 87.95,
+          "over25": 79.32,
+          "under35": 27.07,
+          "btts": 76.7
+        }
+      },
+      {
+        "id": 5,
+        "HomeTeam": "New England Revolution",
+        "AwayTeam": "Nashville SC",
+        "confidence": 74,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "Victoire ou nul Nashville SC",
+        "type": "single",
+        "score_prediction": "1.2 - 2.3",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 18.55,
+          "draw": 19.42,
+          "win2": 59.11,
+          "over15": 82.8,
+          "over25": 63.8,
+          "under35": 55.04,
+          "btts": 59.83
+        }
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Toronto FC",
+        "AwayTeam": "New York Red Bulls",
+        "confidence": 77,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "Les deux équipes marquent",
+        "type": "single",
+        "score_prediction": "1.8 - 2.1",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 32.5,
+          "draw": 20.8,
+          "win2": 43.68,
+          "over15": 86.99,
+          "over25": 71.52,
+          "under35": 45.51,
+          "btts": 70.55
+        }
+      }
+    ],
+    "par_type": {
+      "+1.5 buts": [
+        {
+          "id": 1,
+          "HomeTeam": "Kawasaki Frontale",
+          "AwayTeam": "Albirex Niigata",
+          "confidence": 73,
+          "date": "25 juin 2025 à 10:00:00 UTC",
+          "league": "J1 League",
+          "country": "Japan",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.6 - 1.0",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 66.78,
+            "draw": 16.01,
+            "win2": 12.22,
+            "over15": 82.51,
+            "over25": 64.85,
+            "under35": 51.38,
+            "btts": 55.44
+          }
+        },
+        {
+          "id": 3,
+          "HomeTeam": "Changchun Yatai",
+          "AwayTeam": "Qingdao Youth Island",
+          "confidence": 65,
+          "date": "25 juin 2025 à 11:35:00 UTC",
+          "league": "Super League",
+          "country": "China",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "0.1 - 2.3",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 1.06,
+            "draw": 11.23,
+            "win2": 84.69,
+            "over15": 66.25,
+            "over25": 40.14,
+            "under35": 77.76,
+            "btts": 8.28
+          }
+        },
+        {
+          "id": 4,
+          "HomeTeam": "Columbus Crew",
+          "AwayTeam": "Atlanta United FC",
+          "confidence": 88,
+          "date": "25 juin 2025 à 23:30:00 UTC",
+          "league": "Major League Soccer",
+          "country": "USA",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.4 - 2.6",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 34.13,
+            "draw": 18.45,
+            "win2": 39.55,
+            "over15": 87.95,
+            "over25": 79.32,
+            "under35": 27.07,
+            "btts": 76.7
+          }
+        }
+      ],
+      "Victoire ou nul Yokohama F. Marinos": [
+        {
+          "id": 2,
+          "HomeTeam": "Yokohama F. Marinos",
+          "AwayTeam": "FC Tokyo",
+          "confidence": 81,
+          "date": "25 juin 2025 à 10:30:00 UTC",
+          "league": "J1 League",
+          "country": "Japan",
+          "prediction": "Victoire ou nul Yokohama F. Marinos",
+          "type": "single",
+          "score_prediction": "1.7 - 0.3",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 73.49,
+            "draw": 20.62,
+            "win2": 5.03,
+            "over15": 58.16,
+            "over25": 31.1,
+            "under35": 85.96,
+            "btts": 18.66
+          }
+        }
+      ],
+      "Victoire ou nul Nashville SC": [
+        {
+          "id": 5,
+          "HomeTeam": "New England Revolution",
+          "AwayTeam": "Nashville SC",
+          "confidence": 74,
+          "date": "25 juin 2025 à 23:30:00 UTC",
+          "league": "Major League Soccer",
+          "country": "USA",
+          "prediction": "Victoire ou nul Nashville SC",
+          "type": "single",
+          "score_prediction": "1.2 - 2.3",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 18.55,
+            "draw": 19.42,
+            "win2": 59.11,
+            "over15": 82.8,
+            "over25": 63.8,
+            "under35": 55.04,
+            "btts": 59.83
+          }
+        }
+      ],
+      "Les deux équipes marquent": [
+        {
+          "id": 6,
+          "HomeTeam": "Toronto FC",
+          "AwayTeam": "New York Red Bulls",
+          "confidence": 77,
+          "date": "25 juin 2025 à 23:30:00 UTC",
+          "league": "Major League Soccer",
+          "country": "USA",
+          "prediction": "Les deux équipes marquent",
+          "type": "single",
+          "score_prediction": "1.8 - 2.1",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 32.5,
+            "draw": 20.8,
+            "win2": 43.68,
+            "over15": 86.99,
+            "over25": 71.52,
+            "under35": 45.51,
+            "btts": 70.55
+          }
+        }
+      ]
+    }
+  },
+  "predictions_combinees": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yokohama F. Marinos vs FC Tokyo (Victoire ou nul Yokohama F. Marinos) + Columbus Crew vs Atlanta United FC (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yokohama F. Marinos vs FC Tokyo",
+            "prediction": "Victoire ou nul Yokohama F. Marinos",
+            "individual_confidence": 81
+          },
+          {
+            "match": "Columbus Crew vs Atlanta United FC",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          }
+        ],
+        "combined_confidence": 71.28,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.4
+      }
+    ],
+    "meilleures_5": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yokohama F. Marinos vs FC Tokyo (Victoire ou nul Yokohama F. Marinos) + Columbus Crew vs Atlanta United FC (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yokohama F. Marinos vs FC Tokyo",
+            "prediction": "Victoire ou nul Yokohama F. Marinos",
+            "individual_confidence": 81
+          },
+          {
+            "match": "Columbus Crew vs Atlanta United FC",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          }
+        ],
+        "combined_confidence": 71.28,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.4
+      }
+    ]
+  },
+  "recommandations": {
+    "safest_bets": [
+      {
+        "id": 4,
+        "HomeTeam": "Columbus Crew",
+        "AwayTeam": "Atlanta United FC",
+        "confidence": 88,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.4 - 2.6",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 34.13,
+          "draw": 18.45,
+          "win2": 39.55,
+          "over15": 87.95,
+          "over25": 79.32,
+          "under35": 27.07,
+          "btts": 76.7
+        }
+      }
+    ],
+    "value_bets": [
+      {
+        "id": 1,
+        "HomeTeam": "Kawasaki Frontale",
+        "AwayTeam": "Albirex Niigata",
+        "confidence": 73,
+        "date": "25 juin 2025 à 10:00:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.6 - 1.0",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 66.78,
+          "draw": 16.01,
+          "win2": 12.22,
+          "over15": 82.51,
+          "over25": 64.85,
+          "under35": 51.38,
+          "btts": 55.44
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Yokohama F. Marinos",
+        "AwayTeam": "FC Tokyo",
+        "confidence": 81,
+        "date": "25 juin 2025 à 10:30:00 UTC",
+        "league": "J1 League",
+        "country": "Japan",
+        "prediction": "Victoire ou nul Yokohama F. Marinos",
+        "type": "single",
+        "score_prediction": "1.7 - 0.3",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 73.49,
+          "draw": 20.62,
+          "win2": 5.03,
+          "over15": 58.16,
+          "over25": 31.1,
+          "under35": 85.96,
+          "btts": 18.66
+        }
+      },
+      {
+        "id": 5,
+        "HomeTeam": "New England Revolution",
+        "AwayTeam": "Nashville SC",
+        "confidence": 74,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "Victoire ou nul Nashville SC",
+        "type": "single",
+        "score_prediction": "1.2 - 2.3",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 18.55,
+          "draw": 19.42,
+          "win2": 59.11,
+          "over15": 82.8,
+          "over25": 63.8,
+          "under35": 55.04,
+          "btts": 59.83
+        }
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Toronto FC",
+        "AwayTeam": "New York Red Bulls",
+        "confidence": 77,
+        "date": "25 juin 2025 à 23:30:00 UTC",
+        "league": "Major League Soccer",
+        "country": "USA",
+        "prediction": "Les deux équipes marquent",
+        "type": "single",
+        "score_prediction": "1.8 - 2.1",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 32.5,
+          "draw": 20.8,
+          "win2": 43.68,
+          "over15": 86.99,
+          "over25": 71.52,
+          "under35": 45.51,
+          "btts": 70.55
+        }
+      }
+    ],
+    "best_combined": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yokohama F. Marinos vs FC Tokyo (Victoire ou nul Yokohama F. Marinos) + Columbus Crew vs Atlanta United FC (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yokohama F. Marinos vs FC Tokyo",
+            "prediction": "Victoire ou nul Yokohama F. Marinos",
+            "individual_confidence": 81
+          },
+          {
+            "match": "Columbus Crew vs Atlanta United FC",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 88
+          }
+        ],
+        "combined_confidence": 71.28,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.4
+      }
+    ]
+  }
+}
