@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "date_generation": "2025-06-26 02:46:57",
+    "date_matchs": "2025-06-26",
+    "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
+    "total_predictions_simples": 2,
+    "total_predictions_combinees": 1,
+    "statistiques": {
+      "confiance_moyenne": 83.5,
+      "haute_confiance_80plus": 2,
+      "moyenne_confiance_60_79": 0,
+      "faible_confiance_moins_60": 0
+    }
+  },
+  "predictions_simples": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Yunnan Yukun",
+        "AwayTeam": "Henan Jianye",
+        "confidence": 83,
+        "date": "26 juin 2025 à 12:00:00 UTC",
+        "league": "Super League",
+        "country": "China",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.7 - 1.5",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 57.79,
+          "draw": 17.19,
+          "win2": 18.85,
+          "over15": 86.03,
+          "over25": 72.8,
+          "under35": 39.55,
+          "btts": 67.39
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Juventus",
+        "AwayTeam": "Manchester City",
+        "confidence": 84,
+        "date": "26 juin 2025 à 19:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.1 - 2.1",
+        "defensive_reduction_applied": true,
+        "score_before_reduction": "2.6 - 2.6",
+        "poisson_probabilities": {
+          "win1": 37.94,
+          "draw": 20.28,
+          "win2": 37.94,
+          "over15": 88.1,
+          "over25": 74.59,
+          "under35": 40.29,
+          "btts": 73.22
+        }
+      }
+    ],
+    "par_type": {
+      "+1.5 buts": [
+        {
+          "id": 1,
+          "HomeTeam": "Yunnan Yukun",
+          "AwayTeam": "Henan Jianye",
+          "confidence": 83,
+          "date": "26 juin 2025 à 12:00:00 UTC",
+          "league": "Super League",
+          "country": "China",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.7 - 1.5",
+          "defensive_reduction_applied": false,
+          "score_before_reduction": null,
+          "poisson_probabilities": {
+            "win1": 57.79,
+            "draw": 17.19,
+            "win2": 18.85,
+            "over15": 86.03,
+            "over25": 72.8,
+            "under35": 39.55,
+            "btts": 67.39
+          }
+        },
+        {
+          "id": 2,
+          "HomeTeam": "Juventus",
+          "AwayTeam": "Manchester City",
+          "confidence": 84,
+          "date": "26 juin 2025 à 19:00:00 UTC",
+          "league": "FIFA Club World Cup",
+          "country": "World",
+          "prediction": "+1.5 buts",
+          "type": "single",
+          "score_prediction": "2.1 - 2.1",
+          "defensive_reduction_applied": true,
+          "score_before_reduction": "2.6 - 2.6",
+          "poisson_probabilities": {
+            "win1": 37.94,
+            "draw": 20.28,
+            "win2": 37.94,
+            "over15": 88.1,
+            "over25": 74.59,
+            "under35": 40.29,
+            "btts": 73.22
+          }
+        }
+      ]
+    }
+  },
+  "predictions_combinees": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yunnan Yukun vs Henan Jianye (+1.5 buts) + Juventus vs Manchester City (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yunnan Yukun vs Henan Jianye",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Juventus vs Manchester City",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 69.72,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.43
+      }
+    ],
+    "meilleures_5": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yunnan Yukun vs Henan Jianye (+1.5 buts) + Juventus vs Manchester City (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yunnan Yukun vs Henan Jianye",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Juventus vs Manchester City",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 69.72,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.43
+      }
+    ]
+  },
+  "recommandations": {
+    "safest_bets": [],
+    "value_bets": [
+      {
+        "id": 1,
+        "HomeTeam": "Yunnan Yukun",
+        "AwayTeam": "Henan Jianye",
+        "confidence": 83,
+        "date": "26 juin 2025 à 12:00:00 UTC",
+        "league": "Super League",
+        "country": "China",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.7 - 1.5",
+        "defensive_reduction_applied": false,
+        "score_before_reduction": null,
+        "poisson_probabilities": {
+          "win1": 57.79,
+          "draw": 17.19,
+          "win2": 18.85,
+          "over15": 86.03,
+          "over25": 72.8,
+          "under35": 39.55,
+          "btts": 67.39
+        }
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Juventus",
+        "AwayTeam": "Manchester City",
+        "confidence": 84,
+        "date": "26 juin 2025 à 19:00:00 UTC",
+        "league": "FIFA Club World Cup",
+        "country": "World",
+        "prediction": "+1.5 buts",
+        "type": "single",
+        "score_prediction": "2.1 - 2.1",
+        "defensive_reduction_applied": true,
+        "score_before_reduction": "2.6 - 2.6",
+        "poisson_probabilities": {
+          "win1": 37.94,
+          "draw": 20.28,
+          "win2": 37.94,
+          "over15": 88.1,
+          "over25": 74.59,
+          "under35": 40.29,
+          "btts": 73.22
+        }
+      }
+    ],
+    "best_combined": [
+      {
+        "id": 1,
+        "name": "Combiné 2 matchs",
+        "description": "Yunnan Yukun vs Henan Jianye (+1.5 buts) + Juventus vs Manchester City (+1.5 buts)",
+        "matches": [
+          {
+            "match": "Yunnan Yukun vs Henan Jianye",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 83
+          },
+          {
+            "match": "Juventus vs Manchester City",
+            "prediction": "+1.5 buts",
+            "individual_confidence": 84
+          }
+        ],
+        "combined_confidence": 69.72,
+        "type": "combined",
+        "size": 2,
+        "estimated_odds": 1.43
+      }
+    ]
+  }
+}
