@@ -5,6 +5,7 @@ import json
 import subprocess
 import math
 import itertools
+from deep_translator import GoogleTranslator
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
 api_headers = {
@@ -29,12 +30,20 @@ team_name_mapping = {
     "Seattle Sounders": "Seattle Sounders FC",
     "Los Angeles FC": "LAFC",
     "Santa Fe": "Independiente Santa Fe",
-    "Qingdao Youth Island": "Qingdao Hainiu",
+    "Qingdao Jonoon": "Qingdao Hainiu",
     "Atletico Nacional": "Atlético Nacional",
     "Henan Jianye": "Henan Songshan Longmen",
     "SHANGHAI SIPG": "Shanghai Port",
     "Al-Hilal Saudi FC": "Al Hilal",
     "Bayern München": "Bayern Munich",
+    "CF Montreal": "CF Montréal",
+    "Chengdu Better City": "Chengdu Rongcheng",
+    "Hangzhou Greentown": "Zhejiang Professional FC",
+    "Meizhou Kejia": "Meizhou Hakka",
+    "Qingdao Youth Island": "Qingdao West Coast",
+    "Shandong Luneng": "Shandong Taishan",
+    "Sichuan Jiuniu": "Shenzhen Xinpengcheng",
+    "Tianjin Teda": "Tianjin Jinmen Tiger",
 }
 
 teams_urls = {
@@ -1301,11 +1310,35 @@ teams_urls = {
     # Ajoutez d'autres équipes si besoin
 }
 
+
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
 COMBINED_PREDICTIONS = []
 FAILED_TEAMS = set()
+COUNTRY_TRANSLATION_CACHE = {}
+
+DEFENSE_ADJUST_METHOD = "asym"
+
+def choisir_methode_ajustement(t1, t2):
+    ecart_def = abs(t1['moyenne_encaisses'] - t2['moyenne_encaisses'])
+    if ecart_def >= 0.6:
+        return "asym"
+    else:
+        return "continuous"
+
+def translate_country_to_french(country):
+    if not country:
+        return ""
+    if country in COUNTRY_TRANSLATION_CACHE:
+        return COUNTRY_TRANSLATION_CACHE[country]
+    try:
+        fr = GoogleTranslator(source='auto', target='fr').translate(country)
+        COUNTRY_TRANSLATION_CACHE[country] = fr
+        return fr
+    except Exception as e:
+        print(f"Erreur de traduction pour {country}: {e}")
+        return country
 
 def poisson_pmf(k, lmbda):
     return math.exp(-lmbda) * (lmbda ** k) / math.factorial(k)
@@ -1339,6 +1372,17 @@ def poisson_issues(probabilities):
         "under35": under35,
         "btts": btts
     }
+
+def get_top_poisson_scores(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
+    probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals)
+    sorted_probs = sorted(probabilities.items(), key=lambda x: x[1], reverse=True)[:n_top]
+    top_scores = []
+    for (h, a), p in sorted_probs:
+        top_scores.append({
+            "score": f"{name1} {h}-{a} {name2}",
+            "probability": round(p * 100, 2)
+        })
+    return top_scores
 
 def print_poisson_probabilities(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
     probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=max_goals)
@@ -1398,8 +1442,6 @@ def get_today_matches_filtered():
             away_api = match['teams']['away']['name']
             time = match['fixture']['date'][11:16]
             date = match['fixture']['date'][:10]
-            
-            # Nouveau filtrage : on ne garde que les matchs à partir de 08:00
             heure, minute = map(int, time.split(":"))
             if heure < 8:
                 continue
@@ -1414,8 +1456,9 @@ def get_today_matches_filtered():
                     team2_stats = process_team(away_api, return_data=True)
                     if team1_stats: team1_stats['nom'] = home_espn
                     if team2_stats: team2_stats['nom'] = away_espn
+                    translated_country = translate_country_to_french(country)
                     compare_teams_and_predict_score(
-                        team1_stats, team2_stats, home_api, away_api, date, time, league, country, résultats=résultats
+                        team1_stats, team2_stats, home_api, away_api, date, time, league, translated_country, résultats=résultats
                     )
                 else:
                     if home_espn in teams_urls:
@@ -1759,14 +1802,13 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
     diff_indice_forme = abs(indice_forme_t1 - indice_forme_t2)
     both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
 
-    pred_diff = pred_t1 - pred_t2
-    home_no_defeat = has_no_home_defeat(t1, name1)
-    away_win_count = away_wins_count(t2, name2)
-    # RÈGLE SPÉCIALE 1X SUPPRIMÉE
+    # 🛑 Blocage total si deux équipes instables et aucune ne domine vraiment
+    if both_at_least_3_defeats and diff_indice_forme < 1.2:
+        print("🛑 Blocage : match trop instable, aucune prédiction proposée.")
+        return "⚠️ Trop de défaites récentes, match instable à éviter", 55
 
     predictions_candidates = []
 
-    # Prédiction total de buts
     conf_total = confidence_total(total_pred)
     if total_pred >= 2.8:
         predictions_candidates.append({
@@ -1787,7 +1829,6 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
             "type": "total"
         })
 
-    # Prédiction BTTS
     conf_btts = confidence_btts(pred_t1, pred_t2, t1, t2)
     if conf_btts > 0:
         if not (has_two_games_no_goal(t1, name1) or has_two_games_no_goal(t2, name2)):
@@ -1797,7 +1838,6 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
                 "type": "btts"
             })
 
-    # Prédictions victoire/double chance
     if diff_indice_forme < 0.3 and defeats_t1 >= 2 and defeats_t2 >= 2:
         predictions_candidates.append({
             "prediction": "⚠️ Match très équilibré, à éviter",
@@ -1869,12 +1909,42 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
                     "type": "victory"
                 })
 
-    # Retourner la prédiction avec la plus haute confiance
     if predictions_candidates:
         best_prediction = max(predictions_candidates, key=lambda x: x['confidence'])
         return best_prediction["prediction"], best_prediction["confidence"]
     else:
         return None, 0
+
+def calculate_defensive_reduction(avg_conceded):
+    if avg_conceded >= 1.0:
+        return 0.0
+    return round((1.0 - avg_conceded) * 0.3, 3)
+
+def apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2):
+    if DEFENSE_ADJUST_METHOD == "asym":
+        defense_threshold = 0.9
+        if t1['moyenne_encaisses'] < defense_threshold and t2['moyenne_encaisses'] >= defense_threshold:
+            reduction_pct = 0.20
+            print(f"🛡️ {name1} a une défense solide ➤ réduction de 20% sur le score estimé de {name2}")
+            pred_t2 *= (1 - reduction_pct)
+        elif t2['moyenne_encaisses'] < defense_threshold and t1['moyenne_encaisses'] >= defense_threshold:
+            reduction_pct = 0.20
+            print(f"🛡️ {name2} a une défense solide ➤ réduction de 20% sur le score estimé de {name1}")
+            pred_t1 *= (1 - reduction_pct)
+        elif t1['moyenne_encaisses'] < defense_threshold and t2['moyenne_encaisses'] < defense_threshold:
+            print(f"🛡️ Les deux équipes ont une défense solide ➤ réduction de 15% sur chaque score")
+            pred_t1 *= 0.85
+            pred_t2 *= 0.85
+    elif DEFENSE_ADJUST_METHOD == "continuous":
+        reduction_pct_t1 = calculate_defensive_reduction(t1['moyenne_encaisses'])
+        reduction_pct_t2 = calculate_defensive_reduction(t2['moyenne_encaisses'])
+        if reduction_pct_t1 > 0:
+            print(f"🛡️ Réduction continue appliquée ➤ {name2} réduit de {int(reduction_pct_t1 * 100)}%")
+            pred_t2 *= (1 - reduction_pct_t1)
+        if reduction_pct_t2 > 0:
+            print(f"🛡️ Réduction continue appliquée ➤ {name1} réduit de {int(reduction_pct_t2 * 100)}%")
+            pred_t1 *= (1 - reduction_pct_t2)
+    return pred_t1, pred_t2
 
 def compare_teams_and_predict_score(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
@@ -1907,20 +1977,16 @@ def compare_teams_and_predict_score(
     pred_t1 *= facteur_offensif
     pred_t2 *= facteur_offensif
 
+    global DEFENSE_ADJUST_METHOD
+    DEFENSE_ADJUST_METHOD = choisir_methode_ajustement(t1, t2)
+    print(f"🧠 Méthode d'ajustement défensif choisie : {DEFENSE_ADJUST_METHOD}")
+
     pred_t1_before_defensive = pred_t1
     pred_t2_before_defensive = pred_t2
 
-    defensive_reduction_applied = False
-    if t1['moyenne_encaisses'] < 0.8 and t2['moyenne_encaisses'] < 0.8:
-        if t1['moyenne_encaisses'] < 0.6 and t2['moyenne_encaisses'] < 0.6:
-            facteur_defensif = 0.80
-            print("🛡️ Défenses d'acier (<0.6) ➤ scores estimés réduits de 20%")
-        else:
-            facteur_defensif = 0.85
-            print("🛡️ Deux défenses très solides (<0.8) ➤ scores estimés réduits de 15%")
-        pred_t1 *= facteur_defensif
-        pred_t2 *= facteur_defensif
-        defensive_reduction_applied = True
+    pred_t1, pred_t2 = apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2)
+
+    defensive_reduction_applied = (pred_t1 != pred_t1_before_defensive) or (pred_t2 != pred_t2_before_defensive)
 
     pred_t1 = max(pred_t1, 0.1)
     pred_t2 = max(pred_t2, 0.1)
@@ -1938,6 +2004,7 @@ def compare_teams_and_predict_score(
     print(f"{name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
 
     poisson_probs, poisson_issues_dict = print_poisson_probabilities(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
+    poisson_top_scores = get_top_poisson_scores(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
 
     indice_forme_t1 = compute_indice_forme(t1, forme_adj1, adj1)
     indice_forme_t2 = compute_indice_forme(t2, forme_adj2, adj2)
@@ -1978,7 +2045,6 @@ def compare_teams_and_predict_score(
 
     print("\n🔎 Prédictions détaillées :")
 
-    # ------ AJUSTEMENT POISSON DU %
     if pred_safe == "+1.5 buts":
         poisson_conf = int(poisson_issues_dict["over15"] * 100)
         print(f"🔁 Ajustement Poisson : confiance over1.5 = {poisson_conf}%")
@@ -2040,7 +2106,8 @@ def compare_teams_and_predict_score(
                 "over25": round(poisson_issues_dict["over25"] * 100, 2),
                 "under35": round(poisson_issues_dict["under35"] * 100, 2),
                 "btts": round(poisson_issues_dict["btts"] * 100, 2)
-            }
+            },
+            "poisson_top_scores": poisson_top_scores
         }
         PREDICTIONS.append(prediction_obj)
         if résultats is not None:
@@ -2054,65 +2121,140 @@ def process_team(team_name, return_data=False):
 
 def generate_combined_predictions(predictions):
     print("\n🔗 Génération des prédictions combinées...")
-    high_confidence_predictions = [p for p in predictions if p['confidence'] >= 80 and p['prediction'] != "⚠️ Match très équilibré, à éviter"]
-    if len(high_confidence_predictions) < 2:
-        print("⚠️ Pas assez de prédictions avec confiance élevée pour générer des combinés.")
+
+    # Règles d'inclusion
+    def pred_eligible(pred):
+        if pred['prediction'] == "Les deux équipes marquent":
+            return pred['confidence'] >= 70
+        return pred['confidence'] >= 80
+
+    # Grouper les combinés par nombre de matchs aptes
+    eligible_preds = [p for p in predictions if pred_eligible(p)]
+
+    # Pour éviter les doublons de matchs dans un même combiné
+    def get_match_id(pred):
+        return (pred['HomeTeam'], pred['AwayTeam'], pred['date'])
+
+    match_ids = [get_match_id(p) for p in eligible_preds]
+    num_matches = len(eligible_preds)
+
+    if num_matches < 2:
+        print("⚠️ Pas assez de prédictions éligibles pour combiner.")
         return
-    for combo_size in range(2, min(5, len(high_confidence_predictions) + 1)):
-        combinations = list(itertools.combinations(high_confidence_predictions, combo_size))
-        max_combos = 10 if combo_size == 2 else 5 if combo_size == 3 else 3
-        combinations = combinations[:max_combos]
-        for combo in combinations:
-            combined_confidence = 1.0
-            for pred in combo:
-                combined_confidence *= (pred['confidence'] / 100.0)
-            combined_confidence_percent = round(combined_confidence * 100, 2)
-            if combined_confidence_percent >= 30:
-                combo_name = f"Combiné {combo_size} matchs"
-                combo_description = " + ".join([f"{p['HomeTeam']} vs {p['AwayTeam']} ({p['prediction']})" for p in combo])
-                combined_pred = {
-                    "id": len(COMBINED_PREDICTIONS) + 1,
-                    "name": combo_name,
-                    "description": combo_description,
-                    "matches": [
-                        {
-                            "match": f"{p['HomeTeam']} vs {p['AwayTeam']}",
-                            "prediction": p['prediction'],
-                            "individual_confidence": p['confidence']
-                        } for p in combo
-                    ],
-                    "combined_confidence": combined_confidence_percent,
-                    "type": "combined",
-                    "size": combo_size,
-                    "estimated_odds": round(1 / combined_confidence, 2) if combined_confidence > 0 else 0
-                }
-                COMBINED_PREDICTIONS.append(combined_pred)
+
+    combinable_sizes = []
+    if num_matches == 2:
+        combinable_sizes = [2]
+    elif num_matches == 3:
+        combinable_sizes = [2, 3]
+    elif num_matches == 4:
+        combinable_sizes = [3, 4]
+    else:
+        combinable_sizes = [3, num_matches] if num_matches > 4 else []
+
+    if num_matches > 4:
+        # Pour n>4, peut générer tous les combinés de 3 et de n
+        combinable_sizes = [3, num_matches]
+
+    all_combos = []
+    for combo_size in combinable_sizes:
+        combos = []
+        for combo in itertools.combinations(eligible_preds, combo_size):
+            # Vérifier qu'aucun match n'est répété dans le combiné
+            match_set = set()
+            for p in combo:
+                mid = get_match_id(p)
+                if mid in match_set:
+                    break
+                match_set.add(mid)
+            else:
+                combos.append(combo)
+        all_combos.extend(combos)
+
+    # Limiter le nombre de combinés par taille si besoin
+    # (ex: max 10 pour size 2, 5 pour size 3, 2 pour size max)
+    limited_combos = []
+    for combo_size in combinable_sizes:
+        combos = [c for c in all_combos if len(c) == combo_size]
+        max_combos = 10 if combo_size == 2 else 5 if combo_size == 3 else 2
+        limited_combos.extend(combos[:max_combos])
+
+    for combo in limited_combos:
+        combined_confidence = 1.0
+        for pred in combo:
+            combined_confidence *= (pred['confidence'] / 100.0)
+        combined_confidence_percent = round(combined_confidence * 100, 2)
+        combo_name = f"Combiné IA {len(combo)} matchs"
+        matches_desc = []
+        for p in combo:
+            pays_fr = translate_country_to_french(p['country'])
+            matches_desc.append(f"{p['HomeTeam']} vs {p['AwayTeam']} : {pays_fr} {p['league']}")
+        combo_description = " | ".join(matches_desc)
+        combined_pred = {
+            "id": len(COMBINED_PREDICTIONS) + 1,
+            "name": combo_name,
+            "description": combo_description,
+            "matches": [
+                {
+                    "match": f"{p['HomeTeam']} vs {p['AwayTeam']}",
+                    "prediction": p['prediction'],
+                    "individual_confidence": p['confidence'],
+                    "country_fr": translate_country_to_french(p['country']),
+                    "league": p['league']
+                } for p in combo
+            ],
+            "combined_confidence": combined_confidence_percent,
+            "type": "combined_ia",
+            "size": len(combo),
+            "estimated_odds": round(1 / combined_confidence, 2) if combined_confidence > 0 else 0
+        }
+        COMBINED_PREDICTIONS.append(combined_pred)
     COMBINED_PREDICTIONS.sort(key=lambda x: x['combined_confidence'], reverse=True)
-    print(f"✅ {len(COMBINED_PREDICTIONS)} prédictions combinées générées.")
-    print("\n🏆 Top 5 des meilleures prédictions combinées :")
+    print(f"✅ {len(COMBINED_PREDICTIONS)} combinés IA générés.")
+    print("\n🏆 Top 5 des meilleurs combinés IA :")
     for i, combo in enumerate(COMBINED_PREDICTIONS[:5], 1):
         print(f"{i}. {combo['name']} - Confiance: {combo['combined_confidence']}% - Cote estimée: {combo['estimated_odds']}")
         print(f"   {combo['description'][:100]}{'...' if len(combo['description']) > 100 else ''}")
 
 def sauvegarder_prediction_json_complete(predictions_simples, predictions_combinees, date_str):
-    total_predictions = len(predictions_simples)
-    high_confidence_count = len([p for p in predictions_simples if p['confidence'] >= 80])
-    medium_confidence_count = len([p for p in predictions_simples if 60 <= p['confidence'] < 80])
-    low_confidence_count = len([p for p in predictions_simples if p['confidence'] < 60])
-    avg_confidence = round(sum(p['confidence'] for p in predictions_simples) / total_predictions, 2) if total_predictions > 0 else 0
+    # Les safes sont uniquement les 85%+
+    safest_bets = [p for p in predictions_simples if p['confidence'] >= 85]
+
+    # singles premium = toutes les prédictions 80%+
+    ia_singles_premium = [p for p in predictions_simples if p['confidence'] >= 80]
+
+    details_filtered = [p for p in predictions_simples if p['confidence'] < 80]
+    total_predictions = len(details_filtered)
+    high_confidence_count = len([p for p in details_filtered if p['confidence'] >= 80])
+    medium_confidence_count = len([p for p in details_filtered if 60 <= p['confidence'] < 80])
+    low_confidence_count = len([p for p in details_filtered if p['confidence'] < 60])
+    avg_confidence = round(
+        sum(p['confidence'] for p in details_filtered) / total_predictions, 2
+    ) if total_predictions > 0 else 0
+
     prediction_types = {}
-    for pred in predictions_simples:
+    for pred in details_filtered:
         pred_type = pred['prediction']
         if pred_type not in prediction_types:
             prediction_types[pred_type] = []
         prediction_types[pred_type].append(pred)
+
+    for p in predictions_simples:
+        p['country_fr'] = translate_country_to_french(p['country'])
+
+    for p in predictions_combinees:
+        for m in p.get('matches', []):
+            m['country_fr'] = translate_country_to_french(m['country_fr']) if 'country_fr' in m else ""
+
+    # Ajout des scores Poisson déjà fait dans la clé 'poisson_top_scores' dans chaque prédiction
+
     data_complete = {
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "2.2 - Poisson + Combinés + JSON erreurs",
+            "version_algorithme": "3.1 - Poisson + IA Singles Premium + Combinés IA + scores Poisson",
             "total_predictions_simples": total_predictions,
-            "total_predictions_combinees": len(predictions_combinees),
+            "total_predictions_combinees_ia": len(predictions_combinees),
             "statistiques": {
                 "confiance_moyenne": avg_confidence,
                 "haute_confiance_80plus": high_confidence_count,
@@ -2122,25 +2264,27 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         },
         "predictions_simples": {
             "count": total_predictions,
-            "details": predictions_simples,
+            "details": details_filtered,
             "par_type": prediction_types
         },
-        "predictions_combinees": {
+        "ia_singles_premium": {
+            "count": len(ia_singles_premium),
+            "details": ia_singles_premium
+        },
+        "predictions_combinees_ia": {
             "count": len(predictions_combinees),
             "details": predictions_combinees,
             "meilleures_5": predictions_combinees[:5] if predictions_combinees else []
         },
         "recommandations": {
-            "safest_bets": [p for p in predictions_simples if p['confidence'] >= 85],
-            "value_bets": [p for p in predictions_simples if 70 <= p['confidence'] < 85],
-            "best_combined": predictions_combinees[:3] if predictions_combinees else []
+            "safest_bets": safest_bets
         }
     }
     chemin = f"prédiction-{date_str}-analyse-ia.json"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
     print(f"✅ Prédictions complètes sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} prédictions simples + {len(predictions_combinees)} combinés")
+    print(f"📊 Total: {total_predictions} prédictions simples + {len(predictions_combinees)} combinés IA")
     print(f"📈 Confiance moyenne: {avg_confidence}%")
 
 def save_failed_teams_json(failed_teams, date_str):
@@ -2155,26 +2299,26 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 2.2 sans règle spéciale 1X et JSON erreurs"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.1 IA Singles Premium, Combinés IA, Poisson"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("✅ Prédictions poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v2.2 : Poisson, combinés, sécurité, ajustement défensif, JSON erreurs !")
-    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, prédictions combinées, sécurité, sauvegarde erreurs JSON")
+    print("⚽️ Bienvenue dans l'analyse IA v3.1 : Poisson, Singles Premium, combinés IA, sécurité, ajustement défensif, JSON erreurs !")
+    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, singles premium, combinés IA, scores Poisson, sécurité, sauvegarde erreurs JSON")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
     print(f"   🎯 {len(PREDICTIONS)} prédictions simples générées")
-    print(f"   🔗 {len(COMBINED_PREDICTIONS)} prédictions combinées créées")
+    print(f"   🔗 {len(COMBINED_PREDICTIONS)} combinés IA créés")
     if COMBINED_PREDICTIONS:
-        print(f"\n🏆 Meilleure prédiction combinée:")
+        print(f"\n🏆 Meilleur combiné IA:")
         best = COMBINED_PREDICTIONS[0]
         print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
         print(f"   Cote estimée: {best['estimated_odds']}")
-    print("\n✨ Merci d'avoir utilisé le script IA v2.2 ⚽️📊. Bonne chance avec vos paris ! 🍀")
+    print("\n✨ Merci d'avoir utilisé le script IA v3.1 ⚽️📊. Bonne chance avec vos paris ! 🍀")
 
 if __name__ == "__main__":
     main()
