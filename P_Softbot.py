@@ -44,6 +44,7 @@ team_name_mapping = {
     "Shandong Luneng": "Shandong Taishan",
     "Sichuan Jiuniu": "Shenzhen Xinpengcheng",
     "Tianjin Teda": "Tianjin Jinmen Tiger",
+    "Inter Miami": "Inter Miami CF",
 }
 
 teams_urls = {
