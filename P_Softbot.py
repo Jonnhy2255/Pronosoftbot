@@ -30,21 +30,11 @@ team_name_mapping = {
     "Seattle Sounders": "Seattle Sounders FC",
     "Los Angeles FC": "LAFC",
     "Santa Fe": "Independiente Santa Fe",
-    "Qingdao Jonoon": "Qingdao Hainiu",
+    "Qingdao Youth Island": "Qingdao Hainiu",
     "Atletico Nacional": "Atlético Nacional",
     "Henan Jianye": "Henan Songshan Longmen",
     "SHANGHAI SIPG": "Shanghai Port",
     "Al-Hilal Saudi FC": "Al Hilal",
-    "Bayern München": "Bayern Munich",
-    "CF Montreal": "CF Montréal",
-    "Chengdu Better City": "Chengdu Rongcheng",
-    "Hangzhou Greentown": "Zhejiang Professional FC",
-    "Meizhou Kejia": "Meizhou Hakka",
-    "Qingdao Youth Island": "Qingdao West Coast",
-    "Shandong Luneng": "Shandong Taishan",
-    "Sichuan Jiuniu": "Shenzhen Xinpengcheng",
-    "Tianjin Teda": "Tianjin Jinmen Tiger",
-    "Inter Miami": "Inter Miami CF",
 }
 
 teams_urls = {
@@ -1311,7 +1301,6 @@ teams_urls = {
     # Ajoutez d'autres équipes si besoin
 }
 
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -1441,6 +1430,8 @@ def get_today_matches_filtered():
             country = match['league']['country']
             home_api = match['teams']['home']['name']
             away_api = match['teams']['away']['name']
+            logo_home = match['teams']['home']['logo']  # Ajout
+            logo_away = match['teams']['away']['logo']  # Ajout
             time = match['fixture']['date'][11:16]
             date = match['fixture']['date'][:10]
             heure, minute = map(int, time.split(":"))
@@ -1459,7 +1450,8 @@ def get_today_matches_filtered():
                     if team2_stats: team2_stats['nom'] = away_espn
                     translated_country = translate_country_to_french(country)
                     compare_teams_and_predict_score(
-                        team1_stats, team2_stats, home_api, away_api, date, time, league, translated_country, résultats=résultats
+                        team1_stats, team2_stats, home_api, away_api, date, time, league, translated_country,
+                        logo_home=logo_home, logo_away=logo_away, résultats=résultats  # Ajout des logos
                     )
                 else:
                     if home_espn in teams_urls:
@@ -1947,9 +1939,10 @@ def apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2):
             pred_t1 *= (1 - reduction_pct_t2)
     return pred_t1, pred_t2
 
+# MODIFICATION : ajout logo_home et logo_away dans la signature
 def compare_teams_and_predict_score(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
-    league="N/A", country="N/A", résultats=None
+    league="N/A", country="N/A", logo_home=None, logo_away=None, résultats=None
 ):
     if not t1 or not t2:
         print("⚠️ Données insuffisantes pour la comparaison.")
@@ -2108,7 +2101,9 @@ def compare_teams_and_predict_score(
                 "under35": round(poisson_issues_dict["under35"] * 100, 2),
                 "btts": round(poisson_issues_dict["btts"] * 100, 2)
             },
-            "poisson_top_scores": poisson_top_scores
+            "poisson_top_scores": poisson_top_scores,
+            "logo_home": logo_home,   # Ajout du logo home
+            "logo_away": logo_away    # Ajout du logo away
         }
         PREDICTIONS.append(prediction_obj)
         if résultats is not None:
@@ -2120,6 +2115,7 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
+# MODIFICATION : combo_description améliorée (objet structuré)
 def generate_combined_predictions(predictions):
     print("\n🔗 Génération des prédictions combinées...")
 
@@ -2186,11 +2182,19 @@ def generate_combined_predictions(predictions):
             combined_confidence *= (pred['confidence'] / 100.0)
         combined_confidence_percent = round(combined_confidence * 100, 2)
         combo_name = f"Combiné IA {len(combo)} matchs"
-        matches_desc = []
-        for p in combo:
-            pays_fr = translate_country_to_french(p['country'])
-            matches_desc.append(f"{p['HomeTeam']} vs {p['AwayTeam']} : {pays_fr} {p['league']}")
-        combo_description = " | ".join(matches_desc)
+
+        # MODIFICATION : description structurée
+        combo_description = {
+            "nombre_evenements": len(combo),
+            "événements": [
+                {
+                    "match": f"{p['HomeTeam']} - {p['AwayTeam']}",
+                    "prédiction": p['prediction'],
+                    "ligue": p['league']
+                } for p in combo
+            ]
+        }
+
         combined_pred = {
             "id": len(COMBINED_PREDICTIONS) + 1,
             "name": combo_name,
@@ -2214,8 +2218,13 @@ def generate_combined_predictions(predictions):
     print(f"✅ {len(COMBINED_PREDICTIONS)} combinés IA générés.")
     print("\n🏆 Top 5 des meilleurs combinés IA :")
     for i, combo in enumerate(COMBINED_PREDICTIONS[:5], 1):
+        descr = combo['description']
+        if isinstance(descr, dict):
+            resume = " | ".join([f"{e['match']} : {e['ligue']}" for e in descr['événements']])
+        else:
+            resume = descr
         print(f"{i}. {combo['name']} - Confiance: {combo['combined_confidence']}% - Cote estimée: {combo['estimated_odds']}")
-        print(f"   {combo['description'][:100]}{'...' if len(combo['description']) > 100 else ''}")
+        print(f"   {resume[:100]}{'...' if len(resume) > 100 else ''}")
 
 def sauvegarder_prediction_json_complete(predictions_simples, predictions_combinees, date_str):
     # Les safes sont uniquement les 85%+
@@ -2253,7 +2262,7 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "3.1 - Poisson + IA Singles Premium + Combinés IA + scores Poisson",
+            "version_algorithme": "3.2 - Poisson + IA Singles Premium + Combinés IA + scores Poisson",
             "total_predictions_simples": total_predictions,
             "total_predictions_combinees_ia": len(predictions_combinees),
             "statistiques": {
@@ -2307,7 +2316,7 @@ def git_commit_and_push(filepath):
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v3.1 : Poisson, Singles Premium, combinés IA, sécurité, ajustement défensif, JSON erreurs !")
+    print("⚽️ Bienvenue dans l'analyse IA v3.2 : Poisson, Singles Premium, combinés IA, sécurité, ajustement défensif, JSON erreurs !")
     print("🔬 Nouvelles fonctionnalités: Modèle Poisson, singles premium, combinés IA, scores Poisson, sécurité, sauvegarde erreurs JSON")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
