@@ -1310,6 +1310,86 @@ COUNTRY_TRANSLATION_CACHE = {}
 
 DEFENSE_ADJUST_METHOD = "asym"
 
+# ----------- ✅ NOUVEAU PROMPT & FONCTION IA -----------
+GROQ_API_KEY = "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"  # à sécuriser
+
+def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method):
+    prompt = f"""
+Match : {pred_obj['HomeTeam']} vs {pred_obj['AwayTeam']}
+Date : {pred_obj['date']}
+Compétition : {pred_obj['league']} ({pred_obj['country']})
+
+Score estimé : {pred_obj['score_prediction']} par le système de base
+
+📊 Statistiques :
+- Moy. buts marqués : {t1['moyenne_marques']:.2f} ({t1['nom']}), {t2['moyenne_marques']:.2f} ({t2['nom']})
+- Moy. encaissés : {t1['moyenne_encaisses']:.2f} / {t2['moyenne_encaisses']:.2f}
+- Tendance pondérée : {t1['trend_scored']:.2f}-{t1['trend_conceded']:.2f} / {t2['trend_scored']:.2f}-{t2['trend_conceded']:.2f}
+- Forme récente : {t1['recent_form']} vs {t2['recent_form']}
+- Série à domicile : {'-'.join(t1.get('serie_domicile', [])) or 'N/A'}
+- Série à l'extérieur : {'-'.join(t2.get('serie_exterieur', [])) or 'N/A'}
+- Ajustement forme & tendance : {forme1:+.2f} / {adj1:+.2f} ({t1['nom']}), {forme2:+.2f} / {adj2:+.2f} ({t2['nom']})
+- Bonus défenses faibles : {'Oui' if bonus > 0 else 'Non'}
+- Facteur offensif : x{facteur:.2f}
+- Méthode d'ajustement défensif : {method}
+
+📈 Probabilités Poisson :
+- Victoire {pred_obj['HomeTeam']}: {pred_obj['poisson_probabilities']['win1']}%
+- Nul : {pred_obj['poisson_probabilities']['draw']}%
+- Victoire {pred_obj['AwayTeam']}: {pred_obj['poisson_probabilities']['win2']}%
+- Over 1.5 : {pred_obj['poisson_probabilities']['over15']}%
+- Under 3.5 : {pred_obj['poisson_probabilities']['under35']}%
+- Les deux marquent : {pred_obj['poisson_probabilities']['btts']}%
+
+🎯 Tâche :
+Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt).  
+❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
+✅ Choisis **une seule prédiction finale**, parmi cette liste :
+
+- Total équipe 1 : +0.5
+- Total équipe 2 : +1.5
+- Victoire équipe 1 + total +1.5(uniquement dans les cas où équipe1 est nettement prête de gagner et équipe 2 est en mesure de marquer)
+- Victoire équipe 2 + total +1.5(uniquement dans les cas où équipe2 est nettement prête de gagner et équipe 1 est en mesure de marquer)
+- Victoire équipe 1
+- Victoire ou nul équipe 1
+- Victoire équipe 2
+- Victoire ou nul équipe 2
+- Les deux équipes marquent
+- +1.5 buts
+- -3.5 buts
+
+💡 Ton objectif est de **minimiser les risques de perte**, même si la cote est plus basse.  
+🧠 Analyse les forces/faiblesses, les formes, les buts, le contexte et les probabilités pour choisir **la meilleure option de sécurité**.
+
+Réponds en **français**, de manière **claire, directe et justifiée**.
+"""
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    body = {
+        "model": "llama3-8b-8192",
+        "messages": [
+            {"role": "system", "content": "Tu es un expert en analyse de données sportives et paris. Tu disposes de toutes les statistiques détaillées du match pour faire la meilleure prédiction possible."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.6,
+        "max_tokens": 1000
+    }
+    try:
+        response = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers=headers,
+            json=body
+        )
+        response.raise_for_status()
+        content = response.json()["choices"][0]["message"]["content"]
+        return content
+    except Exception as e:
+        print(f"❌ Erreur IA Groq : {e}")
+        return "Erreur IA - Données insuffisantes pour l'analyse"
+# ----------- ✅ FIN NOUVEAU PROMPT & IA -----------
+
 def choisir_methode_ajustement(t1, t2):
     ecart_def = abs(t1['moyenne_encaisses'] - t2['moyenne_encaisses'])
     if ecart_def >= 0.6:
@@ -1430,8 +1510,8 @@ def get_today_matches_filtered():
             country = match['league']['country']
             home_api = match['teams']['home']['name']
             away_api = match['teams']['away']['name']
-            logo_home = match['teams']['home']['logo']  # Ajout
-            logo_away = match['teams']['away']['logo']  # Ajout
+            logo_home = match['teams']['home']['logo']
+            logo_away = match['teams']['away']['logo']
             time = match['fixture']['date'][11:16]
             date = match['fixture']['date'][:10]
             heure, minute = map(int, time.split(":"))
@@ -1451,7 +1531,7 @@ def get_today_matches_filtered():
                     translated_country = translate_country_to_french(country)
                     compare_teams_and_predict_score(
                         team1_stats, team2_stats, home_api, away_api, date, time, league, translated_country,
-                        logo_home=logo_home, logo_away=logo_away, résultats=résultats  # Ajout des logos
+                        logo_home=logo_home, logo_away=logo_away, résultats=résultats
                     )
                 else:
                     if home_espn in teams_urls:
@@ -1575,6 +1655,11 @@ def scrape_team_data(team_name, action):
         buts_dom_encaisses = 0
         buts_ext_marques = 0
         buts_ext_encaisses = 0
+
+        # 🏗️ Initialisation des séries domicile/extérieur
+        serie_domicile = []
+        serie_exterieur = []
+
         for match in matches:
             date = match.find('div', class_='matchTeams')
             date_text = date.text.strip() if date else "N/A"
@@ -1589,6 +1674,14 @@ def scrape_team_data(team_name, action):
                 result = get_match_result_for_team(espn_team_name, score, team1, team2)
                 if result:
                     recent_form.append(result)
+
+                    # 🔄 Ajout dans la bonne série
+                    is_home = (team1 == espn_team_name)
+                    if is_home:
+                        serie_domicile.append(result)
+                    else:
+                        serie_exterieur.append(result)
+
                 buts_m, buts_e, domicile = extract_goals(espn_team_name, score, team1, team2)
                 if buts_m is not None and buts_e is not None:
                     if domicile:
@@ -1621,13 +1714,20 @@ def scrape_team_data(team_name, action):
         print(f"\n📈 Moyenne buts marqués par match : {total_marques / nb_matchs:.2f}")
         print(f"📉 Moyenne buts encaissés par match : {total_encaisses / nb_matchs:.2f}")
         avg_trend_scored, avg_trend_conceded = analyze_weighted_trends(valid_results, espn_team_name, return_values=True)
+
+        # 💡 BONUS : Affichage des séries
+        print(f"🏠 Série domicile : {'-'.join(serie_domicile)}")
+        print(f"✈️ Série extérieur : {'-'.join(serie_exterieur)}")
+
         return {
             "matches": valid_results,
             "moyenne_marques": total_marques / nb_matchs,
             "moyenne_encaisses": total_encaisses / nb_matchs,
             "recent_form": recent_form,
             "trend_scored": avg_trend_scored,
-            "trend_conceded": avg_trend_conceded
+            "trend_conceded": avg_trend_conceded,
+            "serie_domicile": serie_domicile,
+            "serie_exterieur": serie_exterieur
         }
     except Exception as e:
         print(f"Erreur scraping {espn_team_name} ({action}) : {e}")
@@ -1795,7 +1895,6 @@ def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_
     diff_indice_forme = abs(indice_forme_t1 - indice_forme_t2)
     both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
 
-    # 🛑 Blocage total si deux équipes instables et aucune ne domine vraiment
     if both_at_least_3_defeats and diff_indice_forme < 1.2:
         print("🛑 Blocage : match trop instable, aucune prédiction proposée.")
         return "⚠️ Trop de défaites récentes, match instable à éviter", 55
@@ -1939,7 +2038,6 @@ def apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2):
             pred_t1 *= (1 - reduction_pct_t2)
     return pred_t1, pred_t2
 
-# MODIFICATION : ajout logo_home et logo_away dans la signature
 def compare_teams_and_predict_score(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
     league="N/A", country="N/A", logo_home=None, logo_away=None, résultats=None
@@ -2102,9 +2200,16 @@ def compare_teams_and_predict_score(
                 "btts": round(poisson_issues_dict["btts"] * 100, 2)
             },
             "poisson_top_scores": poisson_top_scores,
-            "logo_home": logo_home,   # Ajout du logo home
-            "logo_away": logo_away    # Ajout du logo away
+            "logo_home": logo_home,
+            "logo_away": logo_away
         }
+
+        # ✅ NOUVEL APPEL IA SELON DEMANDE :
+        prediction_obj["analyse_ia"] = generate_ai_analysis(
+            prediction_obj, t1, t2, adj1, adj2, forme_adj1, forme_adj2,
+            bonus_defense, facteur_offensif, DEFENSE_ADJUST_METHOD
+        )
+
         PREDICTIONS.append(prediction_obj)
         if résultats is not None:
             résultats.append(prediction_obj)
@@ -2115,20 +2220,16 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
-# MODIFICATION : combo_description améliorée (objet structuré)
 def generate_combined_predictions(predictions):
     print("\n🔗 Génération des prédictions combinées...")
 
-    # Règles d'inclusion
     def pred_eligible(pred):
         if pred['prediction'] == "Les deux équipes marquent":
             return pred['confidence'] >= 70
         return pred['confidence'] >= 80
 
-    # Grouper les combinés par nombre de matchs aptes
     eligible_preds = [p for p in predictions if pred_eligible(p)]
 
-    # Pour éviter les doublons de matchs dans un même combiné
     def get_match_id(pred):
         return (pred['HomeTeam'], pred['AwayTeam'], pred['date'])
 
@@ -2150,14 +2251,12 @@ def generate_combined_predictions(predictions):
         combinable_sizes = [3, num_matches] if num_matches > 4 else []
 
     if num_matches > 4:
-        # Pour n>4, peut générer tous les combinés de 3 et de n
         combinable_sizes = [3, num_matches]
 
     all_combos = []
     for combo_size in combinable_sizes:
         combos = []
         for combo in itertools.combinations(eligible_preds, combo_size):
-            # Vérifier qu'aucun match n'est répété dans le combiné
             match_set = set()
             for p in combo:
                 mid = get_match_id(p)
@@ -2168,8 +2267,6 @@ def generate_combined_predictions(predictions):
                 combos.append(combo)
         all_combos.extend(combos)
 
-    # Limiter le nombre de combinés par taille si besoin
-    # (ex: max 10 pour size 2, 5 pour size 3, 2 pour size max)
     limited_combos = []
     for combo_size in combinable_sizes:
         combos = [c for c in all_combos if len(c) == combo_size]
@@ -2183,7 +2280,6 @@ def generate_combined_predictions(predictions):
         combined_confidence_percent = round(combined_confidence * 100, 2)
         combo_name = f"Combiné IA {len(combo)} matchs"
 
-        # MODIFICATION : description structurée
         combo_description = {
             "nombre_evenements": len(combo),
             "événements": [
@@ -2227,12 +2323,8 @@ def generate_combined_predictions(predictions):
         print(f"   {resume[:100]}{'...' if len(resume) > 100 else ''}")
 
 def sauvegarder_prediction_json_complete(predictions_simples, predictions_combinees, date_str):
-    # Les safes sont uniquement les 85%+
     safest_bets = [p for p in predictions_simples if p['confidence'] >= 85]
-
-    # singles premium = toutes les prédictions 80%+
     ia_singles_premium = [p for p in predictions_simples if p['confidence'] >= 80]
-
     details_filtered = [p for p in predictions_simples if p['confidence'] < 80]
     total_predictions = len(details_filtered)
     high_confidence_count = len([p for p in details_filtered if p['confidence'] >= 80])
@@ -2256,13 +2348,11 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         for m in p.get('matches', []):
             m['country_fr'] = translate_country_to_french(m['country_fr']) if 'country_fr' in m else ""
 
-    # Ajout des scores Poisson déjà fait dans la clé 'poisson_top_scores' dans chaque prédiction
-
     data_complete = {
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "3.2 - Poisson + IA Singles Premium + Combinés IA + scores Poisson",
+            "version_algorithme": "3.5 - Poisson + IA Singles Premium + Combinés IA + scores Poisson + IA Enrichie",
             "total_predictions_simples": total_predictions,
             "total_predictions_combinees_ia": len(predictions_combinees),
             "statistiques": {
@@ -2309,15 +2399,16 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.1 IA Singles Premium, Combinés IA, Poisson"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.2 IA Enrichie, Singles Premium, Combinés IA, Poisson"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("✅ Prédictions poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v3.2 : Poisson, Singles Premium, combinés IA, sécurité, ajustement défensif, JSON erreurs !")
-    print("🔬 Nouvelles fonctionnalités: Modèle Poisson, singles premium, combinés IA, scores Poisson, sécurité, sauvegarde erreurs JSON")
+    print("⚽️ Bienvenue dans l'analyse IA v3.5 : Poisson, Singles Premium, combinés IA, IA enrichie avec contexte complet !")
+    print("🔬 Nouvelles fonctionnalités: Analyse IA avec TOUTES les données contextuelles (stats, tendances, forme, séries, ajustements)")
+    print("🧠 L'IA LLaMA 3 dispose maintenant de l'intégralité du contexte pour optimiser les prédictions")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
@@ -2328,7 +2419,7 @@ def main():
         best = COMBINED_PREDICTIONS[0]
         print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
         print(f"   Cote estimée: {best['estimated_odds']}")
-    print("\n✨ Merci d'avoir utilisé le script IA v3.1 ⚽️📊. Bonne chance avec vos paris ! 🍀")
+    print("\n✨ Merci d'avoir utilisé le script IA v3.5 ⚽️📊🧠. Bonne chance avec vos paris ! 🍀")
 
 if __name__ == "__main__":
     main()
