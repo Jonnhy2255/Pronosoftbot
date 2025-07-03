@@ -1349,15 +1349,15 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 
 - Total équipe 1 : +0.5
 - Total équipe 2 : +1.5
-- Victoire équipe 1 + total +1.5(uniquement dans les cas où équipe1 est nettement prête de gagner et équipe 2 est en mesure de marquer)
-- Victoire équipe 2 + total +1.5(uniquement dans les cas où équipe2 est nettement prête de gagner et équipe 1 est en mesure de marquer)
+- Victoire équipe 1 + total1:+0.5(uniquement dans les cas où équipe1 est nettement prête de gagner et équipe 1 est en mesure de marquer)
+- Victoire équipe 2 + total2:+0.5(uniquement dans les cas où équipe2 est nettement prête de gagner et équipe 2 est en mesure de marquer)
 - Victoire équipe 1
 - Victoire ou nul équipe 1
 - Victoire équipe 2
 - Victoire ou nul équipe 2
 - Les deux équipes marquent
-- +1.5 buts
-- -3.5 buts
+- +1.5 buts(ça veut dire au moins 2buts dans le match)
+- -3.5 buts( ça veut dire pas plus de 3 buts dans le match)
 
 💡 Ton objectif est de **minimiser les risques de perte**, même si la cote est plus basse.  
 🧠 Analyse les forces/faiblesses, les formes, les buts, le contexte et les probabilités pour choisir **la meilleure option de sécurité**.
