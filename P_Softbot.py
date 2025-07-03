@@ -6,6 +6,7 @@ import subprocess
 import math
 import itertools
 from deep_translator import GoogleTranslator
+import os
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
 api_headers = {
@@ -1311,7 +1312,7 @@ COUNTRY_TRANSLATION_CACHE = {}
 DEFENSE_ADJUST_METHOD = "asym"
 
 # ----------- ✅ NOUVEAU PROMPT & FONCTION IA -----------
-GROQ_API_KEY = "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"  # à sécuriser
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
 def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method):
     prompt = f"""
@@ -2420,6 +2421,5 @@ def main():
         print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
         print(f"   Cote estimée: {best['estimated_odds']}")
     print("\n✨ Merci d'avoir utilisé le script IA v3.5 ⚽️📊🧠. Bonne chance avec vos paris ! 🍀")
-
 if __name__ == "__main__":
     main()
