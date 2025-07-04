@@ -1343,14 +1343,14 @@ Score estimé : {pred_obj['score_prediction']} par le système de base
 - Les deux marquent : {pred_obj['poisson_probabilities']['btts']}%
 
 🎯 Tâche :
-Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt).  
+Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et les séries à domicile et à l'extérieur se traduisent par: W = Victoire, D = match Nul et L = Defaite.  
 ❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
 ✅ Choisis **une seule prédiction finale**, parmi cette liste :
 
 - Total équipe 1 : +0.5
 - Total équipe 2 : +1.5
-- Victoire équipe 1 + total1:+1.5(Il faut que équipe1 gagne et marque au moins 2 buts)
-- Victoire équipe 2 + total2:+1.5(Il faut que équipe2 gagne et marque au moins 2 buts)
+- Victoire équipe 1 + total1:+1.5(Il faut que équipe1 gagne et marque au moins 2 buts ):tu la choisis uniquement quand équipe2 a une mauvaise série à l'extérieur(et mauvaise forme aussi) et équipe 1 a une bonne série à domicile(et une bonne forme aussi)
+- Victoire équipe 2 + total2:+1.5(Il faut que équipe2 gagne et marque au moins 2 buts):tu la choisis uniquement quand équipe1 a une mauvaise série à domicile(et mauvaise forme aussi) et équipe 2 a une bonne série à l'extérieur(et une bonne forme aussi)
 - Victoire équipe 1
 - Victoire ou nul équipe 1
 - Victoire équipe 2
