@@ -1349,8 +1349,8 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 
 - Total équipe 1 : +0.5
 - Total équipe 2 : +1.5
-- Victoire équipe 1 + total1:+0.5(uniquement dans les cas où équipe1 est nettement prête de gagner et équipe 1 est en mesure de marquer)
-- Victoire équipe 2 + total2:+0.5(uniquement dans les cas où équipe2 est nettement prête de gagner et équipe 2 est en mesure de marquer)
+- Victoire équipe 1 + total1:+1.5(Il faut que équipe1 gagne et marque au moins 2 buts)
+- Victoire équipe 2 + total2:+1.5(Il faut que équipe2 gagne et marque au moins 2 buts)
 - Victoire équipe 1
 - Victoire ou nul équipe 1
 - Victoire équipe 2
