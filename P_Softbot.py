@@ -1375,7 +1375,7 @@ Réponds en **français**, de manière **claire, directe et justifiée**.
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 1000
+        "max_tokens": 3000
     }
     try:
         response = requests.post(
