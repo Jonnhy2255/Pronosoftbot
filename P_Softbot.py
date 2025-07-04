@@ -1343,7 +1343,7 @@ Score estimé : {pred_obj['score_prediction']} par le système de base
 - Les deux marquent : {pred_obj['poisson_probabilities']['btts']}%
 
 🎯 Tâche :
-Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et les séries à domicile et à l'extérieur se traduisent par: W = Victoire, D = match Nul et L = Defaite.  
+Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et les séries à domicile et à l'extérieur se traduisent par: W = Victoire, D = match Nul et L = Defaite.🇫🇷 Réponds strictement en français.
 ❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
 ✅ Choisis **une seule prédiction finale**, parmi cette liste :
 
@@ -1370,11 +1370,11 @@ Réponds en **français**, de manière **claire, directe et justifiée**.
     }
     body = {
         "model": "deepseek-r1-distill-llama-70b",
-        "messages": [
-            {"role": "system", "content": "Tu es un expert en analyse de données sportives et paris. Tu disposes de toutes les statistiques détaillées du match pour faire la meilleure prédiction possible."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.6,
+        messages = [
+  {"role": "system", "content": "Tu es une IA experte en football et tu réponds toujours en **français** avec un raisonnement clair, structuré et direct pour faire la meilleure prédiction possible."},
+  {"role": "user", "content": prompt}
+],
+        "temperature": 0.7,
         "max_tokens": 1000
     }
     try:
