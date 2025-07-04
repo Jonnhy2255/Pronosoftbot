@@ -1370,8 +1370,7 @@ Réponds en **français**, de manière **claire, directe et justifiée**.
     }
     body = {
         "model": "deepseek-r1-distill-llama-70b",
-        messages = [
-  {"role": "system", "content": "Tu es une IA experte en football et tu réponds toujours en **français** avec un raisonnement clair, structuré et direct pour faire la meilleure prédiction possible."},
+        messages:[{"role": "system", "content": "Tu es une IA experte en football et tu réponds toujours en **français** avec un raisonnement clair, structuré et direct pour faire la meilleure prédiction possible."},
   {"role": "user", "content": prompt}
 ],
         "temperature": 0.7,
