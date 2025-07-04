@@ -1369,7 +1369,7 @@ Réponds en **français**, de manière **claire, directe et justifiée**.
         "Content-Type": "application/json"
     }
     body = {
-        "model": "llama3-8b-8192",
+        "model": "deepseek-r1-distill-llama-70b",
         "messages": [
             {"role": "system", "content": "Tu es un expert en analyse de données sportives et paris. Tu disposes de toutes les statistiques détaillées du match pour faire la meilleure prédiction possible."},
             {"role": "user", "content": prompt}
