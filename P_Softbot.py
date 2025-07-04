@@ -1343,7 +1343,7 @@ Score estimé : {pred_obj['score_prediction']} par le système de base
 - Les deux marquent : {pred_obj['poisson_probabilities']['btts']}%
 
 🎯 Tâche :
-Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et réponds stricte en français.  
+Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et réponds stricte en français même ton raisonnement en français ne fais rien en anglais.  
 ❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
 ✅ Choisis **une seule prédiction finale**, parmi cette liste :
 
