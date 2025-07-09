@@ -38,6 +38,28 @@ team_name_mapping = {
     "Al-Hilal Saudi FC": "Al Hilal",
 }
 
+classement_ligue_mapping = {
+    "Colombia": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
+    "France": {"Ligue 1": "https://www.espn.com/soccer/standings/_/league/fra.1"},
+    "Belgium": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
+    "England": {"Premier League": "https://www.espn.com/soccer/standings/_/league/eng.1"},
+    "Netherlands": {"Eredivisie": "https://www.espn.com/soccer/standings/_/league/ned.1"},
+    "Portugal": {"Primeira Liga": "https://www.espn.com/soccer/standings/_/league/por.1"},
+    "Spain": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
+    "Germany": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
+    "Italy": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
+    "Brazil": {"Serie A": "https://www.espn.com/soccer/standings/_/league/bra.1"},
+    "Turkey": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
+    "Mexico": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
+    "USA": {"Major League Soccer": "https://www.espn.com/soccer/standings/_/league/usa.1"},
+    "Japan": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
+    "Saudi-Arabia": {"Pro League": "https://www.espn.com/soccer/standings/_/league/ksa.1"},
+    "Switzerland": {"Super League": "https://www.espn.com/soccer/standings/_/league/sui.1"},
+    "China": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
+    "Russia": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
+    "Greece": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"}
+}
+
 teams_urls = {
     # Bloc Europe du dernier JSON
     "Wales": {"results": "https://www.espn.com/soccer/team/results/_/id/578/wales"},
@@ -1298,10 +1320,648 @@ teams_urls = {
         },
         "Águilas Doradas": {
             "results": "https://www.espn.com/football/team/results/_/id/9762/aguilas-doradas"
+        },
+        "Amazonas": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21888/amazonas"
+        },
+        "America Mineiro": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6154/america-mineiro"
+        },
+        "Athletic": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20851/athletic"
+        },
+        "Athletico Paranaense": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3458/athletico-paranaense"
+        },
+        "Atletico Goianiense": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10357/atletico-goianiense"
+        },
+        "Avai": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9966/avai"
+        },
+        "Botafogo Sp": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10281/botafogo-sp"
+        },
+        "Crb": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9970/crb"
+        },
+        "Chapecoense": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9318/chapecoense"
+        },
+        "Coritiba": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3456/coritiba"
+        },
+        "Criciuma": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9971/criciuma"
+        },
+        "Cuiaba": {
+            "results": "https://africa.espn.com/football/team/results/_/id/17313/cuiaba"
+        },
+        "Ferroviaria": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18126/ferroviaria"
+        },
+        "Goias": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3395/goias"
+        },
+        "Novorizontino": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18127/novorizontino"
+        },
+        "Operario Pr": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18187/operario-pr"
+        },
+        "Paysandu": {
+            "results": "https://africa.espn.com/football/team/results/_/id/15424/paysandu"
+        },
+        "Remo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4936/remo"
+        },
+        "Vila Nova": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9973/vila-nova"
+        },
+        "Volta Redonda": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4806/volta-redonda"
+        },
+        "Audax Italiano": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4138/audax-italiano"
+        },
+        "Cobresal": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4133/cobresal"
+        },
+        "Colo Colo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2688/colo-colo"
+        },
+        "Coquimbo Unido": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8186/coquimbo-unido"
+        },
+        "Deportes Iquique": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10142/deportes-iquique"
+        },
+        "Deportes Limache": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19195/deportes-limache"
+        },
+        "Everton Cd": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4129/everton-cd"
+        },
+        "Huachipato": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4134/huachipato"
+        },
+        "La Serena": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4137/la-serena"
+        },
+        "Ohiggins": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6072/ohiggins"
+        },
+        "Palestino": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4422/palestino"
+        },
+        "Universidad Catolica": {
+            "results": "https://africa.espn.com/football/team/results/_/id/885/universidad-catolica"
+        },
+        "Universidad De Chile": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4139/universidad-de-chile"
+        },
+        "Union Espanola": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4132/union-espanola"
+        },
+        "Union La Calera": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10144/union-la-calera"
+        },
+        "Nublense": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7427/nublense"
+        },
+        "Adt": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21314/adt"
+        },
+        "Alianza Atletico": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5267/alianza-atletico"
+        },
+        "Alianza Lima": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2680/alianza-lima"
+        },
+        "Alianza Universidad": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19432/alianza-universidad"
+        },
+        "Atletico Grau": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20293/atletico-grau"
+        },
+        "Ayacucho Fc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10116/ayacucho-fc"
+        },
+        "Cienciano Del Cusco": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3372/cienciano-del-cusco"
+        },
+        "Comerciantes Unidos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18153/comerciantes-unidos"
+        },
+        "Cusco Fc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11995/cusco-fc"
+        },
+        "Deportivo Binacional": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18985/deportivo-binacional"
+        },
+        "Deportivo Garcilaso": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21819/deportivo-garcilaso"
+        },
+        "Juan Pablo Ii": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22534/juan-pablo-ii"
+        },
+        "Los Chankas": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22168/los-chankas"
+        },
+        "Melgar": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7312/melgar"
+        },
+        "Sport Boys": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5570/sport-boys"
+        },
+        "Sport Huancayo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10318/sport-huancayo"
+        },
+        "Sporting Cristal": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2673/sporting-cristal"
+        },
+        "Utc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10122/utc"
+        },
+        "Universitario": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2685/universitario"
+        },
+        "Austria Vienna": {
+            "results": "https://africa.espn.com/football/team/results/_/id/1382/austria-vienna"
+        },
+        "Fc Blau Weiß Linz": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21950/fc-blau-weiß-linz"
+        },
+        "Grazer Ak": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21846/grazer-ak"
+        },
+        "Lask Linz": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4411/lask-linz"
+        },
+        "Rb Salzburg": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2790/rb-salzburg"
+        },
+        "Rapid Vienna": {
+            "results": "https://africa.espn.com/football/team/results/_/id/519/rapid-vienna"
+        },
+        "Sc Rheindorf Altach": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4405/sc-rheindorf-altach"
+        },
+        "Sk Sturm Graz": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3746/sk-sturm-graz"
+        },
+        "Sv Josko Ried": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3759/sv-josko-ried"
+        },
+        "Tsv Hartberg": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6907/tsv-hartberg"
+        },
+        "Wsg Swarovski Tirol": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18794/wsg-swarovski-tirol"
+        },
+        "Wolfsberger": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13294/wolfsberger"
+        },
+        "Aik": {
+            "results": "https://africa.espn.com/football/team/results/_/id/994/aik"
+        },
+        "Bk Hacken": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7834/bk-hacken"
+        },
+        "Degerfors If": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20856/degerfors-if"
+        },
+        "Djurgarden": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2339/djurgarden"
+        },
+        "Gais": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8222/gais"
+        },
+        "Halmstads Bk": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3017/halmstads-bk"
+        },
+        "Hammarby If": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2495/hammarby-if"
+        },
+        "If Brommapojkarna": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8221/if-brommapojkarna"
+        },
+        "If Elfsborg": {
+            "results": "https://africa.espn.com/football/team/results/_/id/529/if-elfsborg"
+        },
+        "Ifk Goteborg": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2556/ifk-goteborg"
+        },
+        "Ifk Norrkoping": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8544/ifk-norrkoping"
+        },
+        "Ifk Varnamo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21382/ifk-varnamo"
+        },
+        "Ik Sirius": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8547/ik-sirius"
+        },
+        "Malmo Ff": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2720/malmo-ff"
+        },
+        "Mjallby Aif": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20301/mjallby-aif"
+        },
+        "Osters If": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2936/osters-if"
+        },
+        "Agropecuario": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13913/agropecuario"
+        },
+        "All Boys": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9786/all-boys"
+        },
+        "Almagro": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2/almagro"
+        },
+        "Almirante Brown": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9740/almirante-brown"
+        },
+        "Alvarado Mar Del Plata": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19143/alvarado-mar-del-plata"
+        },
+        "Arsenal Sarandi": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2635/arsenal-sarandi"
+        },
+        "Atlanta": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10146/atlanta"
+        },
+        "Central Norte": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11993/central-norte"
+        },
+        "Chacarita Juniors": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6/chacarita-juniors"
+        },
+        "Chaco For Ever": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11963/chaco-for-ever"
+        },
+        "Colegiales": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10149/colegiales"
+        },
+        "Colon Santa Fe": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7/colon-santa-fe"
+        },
+        "Defensores Unidos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/17697/defensores-unidos"
+        },
+        "Defensores De Belgrano": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10151/defensores-de-belgrano"
+        },
+        "Deportivo Madryn": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18260/deportivo-madryn"
+        },
+        "Deportivo Maipu": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11978/deportivo-maipu"
+        },
+        "Deportivo Moron": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10154/deportivo-moron"
+        },
+        "Estudiantes Buenos Aires": {
+            "results": "https://africa.espn.com/football/team/results/_/id/17352/estudiantes-buenos-aires"
+        },
+        "Estudiantes De Rio Cuarto": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19685/estudiantes-de-rio-cuarto"
+        },
+        "Ferro Carril Oeste": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9743/ferro-carril-oeste"
+        },
+        "Gimnasia Mendoza": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11972/gimnasia-mendoza"
+        },
+        "Gimnasia Y Esgrima Jujuy": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5263/gimnasia-y-esgrima-jujuy"
+        },
+        "Gimnasia Y Tiro Salta": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10743/gimnasia-y-tiro-salta"
+        },
+        "Guemes": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18284/guemes"
+        },
+        "Los Andes": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13/los-andes"
+        },
+        "Mitre Santiago Del Estero": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11990/mitre-santiago-del-estero"
+        },
+        "Nueva Chicago": {
+            "results": "https://africa.espn.com/football/team/results/_/id/236/nueva-chicago"
+        },
+        "Patronato": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10374/patronato"
+        },
+        "Quilmes": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2741/quilmes"
+        },
+        "Racing Cordoba": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19145/racing-cordoba"
+        },
+        "San Martin Tucuman": {
+            "results": "https://africa.espn.com/football/team/results/_/id/17814/san-martin-tucuman"
+        },
+        "San Miguel": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10058/san-miguel"
+        },
+        "San Telmo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10157/san-telmo"
+        },
+        "Talleres": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10161/talleres"
+        },
+        "Temperley": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10162/temperley"
+        },
+        "Tristan Suarez": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10163/tristan-suarez"
+        },
+        "2 De Mayo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6097/2-de-mayo"
+        },
+        "Cerro Porteno": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2671/cerro-porteno"
+        },
+        "Club Atletico Tembetary": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22518/club-atletico-tembetary"
+        },
+        "Deportivo Recoleta": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22517/deportivo-recoleta"
+        },
+        "General Caballero Jlm": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21316/general-caballero-jlm"
+        },
+        "Guarani": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7385/guarani"
+        },
+        "Libertad": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2670/libertad"
+        },
+        "Nacional": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5584/nacional"
+        },
+        "Olimpia": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2675/olimpia"
+        },
+        "Sportivo Ameliano": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21313/sportivo-ameliano"
+        },
+        "Sportivo Luqueno": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5583/sportivo-luqueno"
+        },
+        "Trinidense": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7466/trinidense"
+        },
+        "Academia Anzoategui": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13783/academia-anzoategui"
+        },
+        "Academia Puerto Cabello": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18995/academia-puerto-cabello"
+        },
+        "Carabobo": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6037/carabobo"
+        },
+        "Caracas Fc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4811/caracas-fc"
+        },
+        "Deportivo La Guaira": {
+            "results": "https://africa.espn.com/football/team/results/_/id/17090/deportivo-la-guaira"
+        },
+        "Deportivo Rayo Zuliano": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21850/deportivo-rayo-zuliano"
+        },
+        "Deportivo Tachira": {
+            "results": "https://africa.espn.com/football/team/results/_/id/4818/deportivo-tachira"
+        },
+        "Estudiantes De Merida": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6038/estudiantes-de-merida"
+        },
+        "Metropolitanos Fc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13481/metropolitanos-fc"
+        },
+        "Monagas Sc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6041/monagas-sc"
+        },
+        "Portuguesa": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6762/portuguesa"
+        },
+        "Universidad Central": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10094/universidad-central"
+        },
+        "Yaracuyanos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/10096/yaracuyanos"
+        },
+        "Zamora": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6763/zamora"
+        },
+        "Cfr Cluj Napoca": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5260/cfr-cluj-napoca"
+        },
+        "Csu Craiova": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8089/csu-craiova"
+        },
+        "Csikszereda": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21032/csikszereda"
+        },
+        "Dinamo Bucuresti": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2496/dinamo-bucuresti"
+        },
+        "Fc Arges": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20725/fc-arges"
+        },
+        "Fc Botosani": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9682/fc-botosani"
+        },
+        "Fc Farul Constanta": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6731/fc-farul-constanta"
+        },
+        "Fcsb": {
+            "results": "https://africa.espn.com/football/team/results/_/id/484/fcsb"
+        },
+        "Hermannstadt": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19265/hermannstadt"
+        },
+        "Metaloglobus": {
+            "results": "https://africa.espn.com/football/team/results/_/id/130880/metaloglobus"
+        },
+        "Otelul Galati": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2942/otelul-galati"
+        },
+        "Petrolul Ploiesti": {
+            "results": "https://africa.espn.com/football/team/results/_/id/12603/petrolul-ploiesti"
+        },
+        "Rapid Bucuresti": {
+            "results": "https://africa.espn.com/football/team/results/_/id/545/rapid-bucuresti"
+        },
+        "Uta Arad": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6912/uta-arad"
+        },
+        "Unirea Slobozia": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22314/unirea-slobozia"
+        },
+        "Universitatea Cluj": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8091/universitatea-cluj"
+        },
+        "Beitar Jerusalem": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5218/beitar-jerusalem"
+        },
+        "Bnei Sakhnin": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8329/bnei-sakhnin"
+        },
+        "Hapoel Beer": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13083/hapoel-beer"
+        },
+        "Hapoel Hadera": {
+            "results": "https://africa.espn.com/football/team/results/_/id/19255/hapoel-hadera"
+        },
+        "Hapoel Haifa": {
+            "results": "https://africa.espn.com/football/team/results/_/id/9577/hapoel-haifa"
+        },
+        "Hapoel Jerusalem": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20970/hapoel-jerusalem"
+        },
+        "Hapoel Kiryat Shmona": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8327/hapoel-kiryat-shmona"
+        },
+        "Ironi Tiberias": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22311/ironi-tiberias"
+        },
+        "Maccabi Haifa": {
+            "results": "https://africa.espn.com/football/team/results/_/id/611/maccabi-haifa"
+        },
+        "Maccabi Netanya": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5945/maccabi-netanya"
+        },
+        "Maccabi Petah Tikva": {
+            "results": "https://africa.espn.com/football/team/results/_/id/2983/maccabi-petah-tikva"
+        },
+        "Maccabi Raina": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21517/maccabi-raina"
+        },
+        "Maccabi Tel Aviv": {
+            "results": "https://africa.espn.com/football/team/results/_/id/524/maccabi-tel-aviv"
+        },
+        "Moadon Sport Ashdod": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5269/moadon-sport-ashdod"
+        },
+        "Afc Fylde": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13884/afc-fylde"
+        },
+        "Aldershot Town": {
+            "results": "https://africa.espn.com/football/team/results/_/id/632/aldershot-town"
+        },
+        "Altrincham": {
+            "results": "https://africa.espn.com/football/team/results/_/id/633/altrincham"
+        },
+        "Barnet": {
+            "results": "https://africa.espn.com/football/team/results/_/id/280/barnet"
+        },
+        "Boston United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3256/boston-united"
+        },
+        "Braintree Town": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3828/braintree-town"
+        },
+        "Dagenham Redbridge": {
+            "results": "https://africa.espn.com/football/team/results/_/id/275/dagenham-redbridge"
+        },
+        "Eastleigh": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3897/eastleigh"
+        },
+        "Ebbsfleet United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/640/ebbsfleet-united"
+        },
+        "Fc Halifax Town": {
+            "results": "https://africa.espn.com/football/team/results/_/id/312/fc-halifax-town"
+        },
+        "Forest Green Rovers": {
+            "results": "https://africa.espn.com/football/team/results/_/id/282/forest-green-rovers"
+        },
+        "Gateshead": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3138/gateshead"
+        },
+        "Hartlepool United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/323/hartlepool-united"
+        },
+        "Maidenhead United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/7156/maidenhead-united"
+        },
+        "Oldham Athletic": {
+            "results": "https://africa.espn.com/football/team/results/_/id/332/oldham-athletic"
+        },
+        "Rochdale": {
+            "results": "https://africa.espn.com/football/team/results/_/id/303/rochdale"
+        },
+        "Solihull Moors": {
+            "results": "https://africa.espn.com/football/team/results/_/id/13061/solihull-moors"
+        },
+        "Southend United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/310/southend-united"
+        },
+        "Sutton United": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3231/sutton-united"
+        },
+        "Tamworth": {
+            "results": "https://africa.espn.com/football/team/results/_/id/645/tamworth"
+        },
+        "Wealdstone": {
+            "results": "https://africa.espn.com/football/team/results/_/id/3887/wealdstone"
+        },
+        "Woking": {
+            "results": "https://africa.espn.com/football/team/results/_/id/290/woking"
+        },
+        "Yeovil Town": {
+            "results": "https://africa.espn.com/football/team/results/_/id/284/yeovil-town"
+        },
+        "York City": {
+            "results": "https://africa.espn.com/football/team/results/_/id/315/york-city"
+        },
+        "Aek Athens": {
+            "results": "https://africa.espn.com/football/team/results/_/id/887/aek-athens"
+        },
+        "Aris": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11553/aris"
+        },
+        "Asteras Tripoli": {
+            "results": "https://africa.espn.com/football/team/results/_/id/8354/asteras-tripoli"
+        },
+        "Athens Kallithea": {
+            "results": "https://africa.espn.com/football/team/results/_/id/22325/athens-kallithea"
+        },
+        "Atromitos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/6790/atromitos"
+        },
+        "Lamia": {
+            "results": "https://africa.espn.com/football/team/results/_/id/18814/lamia"
+        },
+        "Levadiakos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/5276/levadiakos"
+        },
+        "Ofi Crete": {
+            "results": "https://africa.espn.com/football/team/results/_/id/1010/ofi-crete"
+        },
+        "Olympiacos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/435/olympiacos"
+        },
+        "Paok Salonika": {
+            "results": "https://africa.espn.com/football/team/results/_/id/605/paok-salonika"
+        },
+        "Panathinaikos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/443/panathinaikos"
+        },
+        "Panetolikos": {
+            "results": "https://africa.espn.com/football/team/results/_/id/11431/panetolikos"
+        },
+        "Panserraikos Fc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/21970/panserraikos-fc"
+        },
+        "Volos Nfc": {
+            "results": "https://africa.espn.com/football/team/results/_/id/20043/volos-nfc"
         }
     # Ajoutez d'autres équipes si besoin
 }
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -1311,14 +1971,57 @@ COUNTRY_TRANSLATION_CACHE = {}
 
 DEFENSE_ADJUST_METHOD = "asym"
 
+# 🔧 Classe réutilisable de scraping de classement
+class ClassementScraper:
+    def __init__(self, url):
+        self.url = url
+        self.headers = {'User-Agent': 'Mozilla/5.0'}
+        self.teams_positions = {}
+
+    def scrape_table(self):
+        try:
+            response = requests.get(self.url, headers=self.headers)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            rows = soup.find_all('tr', class_='Table__TR')
+
+            for row in rows:
+                pos_tag = row.find('span', class_='team-position')
+                team_tag = row.find('span', class_='hide-mobile')
+                if pos_tag and team_tag:
+                    position = int(pos_tag.text.strip())
+                    team_name = team_tag.text.strip()
+                    self.teams_positions[team_name.lower()] = (position, team_name)
+
+        except Exception as e:
+            print(f"❌ Erreur scraping classement : {e}")
+
+    def get_position(self, team_query):
+        for key, (position, full_name) in self.teams_positions.items():
+            if team_query.lower() in key:
+                return position, full_name
+        return None, None
+
+# 🧠 Fonction utilitaire get_team_classement_position
+def get_team_classement_position(country, league, team_name):
+    url = classement_ligue_mapping.get(country, {}).get(league)
+    if not url:
+        return None, None
+    scraper = ClassementScraper(url)
+    scraper.scrape_table()
+    return scraper.get_position(team_name)
+
 # ----------- ✅ NOUVEAU PROMPT & FONCTION IA -----------
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
-def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method):
+def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method, bonus_serie_domicile=0.0, bonus_serie_exterieur=0.0):
     prompt = f"""
 Match : {pred_obj['HomeTeam']} vs {pred_obj['AwayTeam']}
 Date : {pred_obj['date']}
 Compétition : {pred_obj['league']} ({pred_obj['country']})
+Classement actuel :
+- {pred_obj['HomeTeam']} : {pred_obj.get('classement_home', 'N/A')}ᵉ
+- {pred_obj['AwayTeam']} : {pred_obj.get('classement_away', 'N/A')}ᵉ
 
 Score estimé : {pred_obj['score_prediction']} par le système de base
 
@@ -1329,6 +2032,7 @@ Score estimé : {pred_obj['score_prediction']} par le système de base
 - Forme récente : {t1['recent_form']} vs {t2['recent_form']}
 - Série à domicile : {'-'.join(t1.get('serie_domicile', [])) or 'N/A'}
 - Série à l'extérieur : {'-'.join(t2.get('serie_exterieur', [])) or 'N/A'}
+- Bonus série domicile/ext. : {bonus_serie_domicile:+.2f} / {bonus_serie_exterieur:+.2f}
 - Ajustement forme & tendance : {forme1:+.2f} / {adj1:+.2f} ({t1['nom']}), {forme2:+.2f} / {adj2:+.2f} ({t2['nom']})
 - Bonus défenses faibles : {'Oui' if bonus > 0 else 'Non'}
 - Facteur offensif : x{facteur:.2f}
@@ -1359,10 +2063,11 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 - +1.5 buts
 - -3.5 buts
 
+⚠️ **Ce match sera utilisé dans un pari combiné.**
 💡 Ton objectif est de **minimiser les risques de perte**, même si la cote est plus basse.  
 🧠 Analyse les forces/faiblesses, les formes, les buts, le contexte et les probabilités pour choisir **la meilleure option de sécurité**.
 
-Réponds en **français**, de manière **claire, directe et justifiée**.
+Réponds en **français**, de manière **claire, directe et justifiée**.Jamais autre langue que le français.
 """
     headers = {
         "Authorization": f"Bearer {GROQ_API_KEY}",
@@ -1630,6 +2335,39 @@ def get_streak_bonus(recent_form):
     if count_lose >= 2:
         streak_malus -= (count_lose - 1)
     return streak_bonus + streak_malus
+
+def calcul_ajustement_automatique_serie(serie):
+    """
+    Calcule un ajustement automatique en fonction des plus longues séries de victoires/défaites.
+    Bonus max = +0.5 | Malus max = -0.5
+    """
+    if not serie:
+        return 0.0
+
+    streak = 0
+    current = None
+    max_wins = 0
+    max_losses = 0
+
+    for r in serie:
+        if r == current:
+            streak += 1
+        else:
+            current = r
+            streak = 1
+
+        if r == 'W':
+            max_wins = max(max_wins, streak)
+        elif r == 'L':
+            max_losses = max(max_losses, streak)
+
+    bonus = 0.05 * max_wins   # ex: 4 victoires = +0.20
+    malus = -0.05 * max_losses  # ex: 3 défaites = -0.15
+
+    bonus = min(bonus, 0.5)
+    malus = max(malus, -0.5)
+
+    return bonus + malus
 
 def get_form_points(recent_form):
     points_map = {'W': 3, 'D': 1, 'L': 0}
@@ -2046,6 +2784,16 @@ def compare_teams_and_predict_score(
     if not t1 or not t2:
         print("⚠️ Données insuffisantes pour la comparaison.")
         return
+
+    # 🏆 Récupération classement des équipes
+    pos_home, nom_classement_home = get_team_classement_position(country, league, name1)
+    pos_away, nom_classement_away = get_team_classement_position(country, league, name2)
+
+    if pos_home:
+        print(f"📌 Classement de {nom_classement_home} : {pos_home}ᵉ")
+    if pos_away:
+        print(f"📌 Classement de {nom_classement_away} : {pos_away}ᵉ")
+
     print(f"\n📅 Match prévu le {match_date} à {match_time}")
     print(f"🏆 Compétition : [{country}] {league}")
     print(f"⚔️ {name1} vs {name2}")
@@ -2059,6 +2807,16 @@ def compare_teams_and_predict_score(
     points2, ratio2, momentum2 = get_form_points(t2.get('recent_form', []))
     forme_adj1 = (ratio1 - 0.5) * 0.5 + 0.1 * momentum1
     forme_adj2 = (ratio2 - 0.5) * 0.5 + 0.1 * momentum2
+
+    # 🎯 Ajustement automatique selon les séries domicile / extérieur
+    bonus_serie_domicile = calcul_ajustement_automatique_serie(t1.get('serie_domicile', []))
+    bonus_serie_exterieur = calcul_ajustement_automatique_serie(t2.get('serie_exterieur', []))
+
+    forme_adj1 += bonus_serie_domicile
+    forme_adj2 += bonus_serie_exterieur
+
+    print(f"🏠 Bonus série domicile ({name1}) : {bonus_serie_domicile:+.2f}")
+    print(f"✈️ Bonus série extérieur ({name2}) : {bonus_serie_exterieur:+.2f}")
 
     pred_t1_initial = (t1['moyenne_marques'] + t2['moyenne_encaisses']) / 2
     pred_t2_initial = (t2['moyenne_marques'] + t1['moyenne_encaisses']) / 2
@@ -2202,13 +2960,20 @@ def compare_teams_and_predict_score(
             },
             "poisson_top_scores": poisson_top_scores,
             "logo_home": logo_home,
-            "logo_away": logo_away
+            "logo_away": logo_away,
+            "bonus_serie_domicile": bonus_serie_domicile,
+            "bonus_serie_exterieur": bonus_serie_exterieur,
+            "classement_home": pos_home,
+            "classement_away": pos_away,
+            "nom_classement_home": nom_classement_home,
+            "nom_classement_away": nom_classement_away
         }
 
-        # ✅ NOUVEL APPEL IA SELON DEMANDE :
+        # ✅ NOUVEL APPEL IA SELON DEMANDE avec bonus séries :
         prediction_obj["analyse_ia"] = generate_ai_analysis(
             prediction_obj, t1, t2, adj1, adj2, forme_adj1, forme_adj2,
-            bonus_defense, facteur_offensif, DEFENSE_ADJUST_METHOD
+            bonus_defense, facteur_offensif, DEFENSE_ADJUST_METHOD, 
+            bonus_serie_domicile, bonus_serie_exterieur
         )
 
         PREDICTIONS.append(prediction_obj)
@@ -2353,7 +3118,7 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "3.5 - Poisson + IA Singles Premium + Combinés IA + scores Poisson + IA Enrichie",
+            "version_algorithme": "3.7 - Poisson + IA Singles Premium + Combinés IA + scores Poisson + IA Enrichie + Bonus Séries Auto + Classements",
             "total_predictions_simples": total_predictions,
             "total_predictions_combinees_ia": len(predictions_combinees),
             "statistiques": {
@@ -2400,16 +3165,18 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.2 IA Enrichie, Singles Premium, Combinés IA, Poisson"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.7 IA Enrichie + Bonus Séries Automatiques + Classements"], check=True)
         subprocess.run(["git", "push"], check=True)
         print("✅ Prédictions poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v3.5 : Poisson, Singles Premium, combinés IA, IA enrichie avec contexte complet !")
-    print("🔬 Nouvelles fonctionnalités: Analyse IA avec TOUTES les données contextuelles (stats, tendances, forme, séries, ajustements)")
+    print("⚽️ Bienvenue dans l'analyse IA v3.7 : Poisson, Singles Premium, combinés IA, IA enrichie + Bonus Séries Automatiques + Classements !")
+    print("🔬 Nouvelles fonctionnalités: Analyse IA avec TOUTES les données contextuelles + ajustement automatique selon séries domicile/extérieur + classements")
     print("🧠 L'IA LLaMA 3 dispose maintenant de l'intégralité du contexte pour optimiser les prédictions")
+    print("🎯 Bonus automatiques selon les plus longues séries de victoires/défaites à domicile et à l'extérieur")
+    print("🏆 Intégration des classements des équipes dans les analyses")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
@@ -2420,6 +3187,7 @@ def main():
         best = COMBINED_PREDICTIONS[0]
         print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
         print(f"   Cote estimée: {best['estimated_odds']}")
-    print("\n✨ Merci d'avoir utilisé le script IA v3.5 ⚽️📊🧠. Bonne chance avec vos paris ! 🍀")
+    print("\n✨ Merci d'avoir utilisé le script IA v3.7 ⚽️📊🧠🏆. Bonne chance avec vos paris ! 🍀")
+
 if __name__ == "__main__":
     main()
