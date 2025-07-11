@@ -37,44 +37,56 @@ team_name_mapping = {
     "SHANGHAI SIPG": "Shanghai Port",
     "Al-Hilal Saudi FC": "Al Hilal",
     "Inter Miami": "Inter Miami CF",
+    "Portuguesa FC": "Portuguesa",
+    "2 de Mayo": "2 de Mayo",
+    "America de Cali": "América de Cali",
+    "Carabobo FC": "Carabobo",
+    "Rapid": "Rapid Bucuresti",
+    "Operario-PR": "Operario PR",
+    "Arges Pitesti": "Fc Arges",
+    "Libertad Asuncion": "Libertad",
+    "General Caballero": "General Caballero JLM",
+    "Real Esppor Club": "Deportivo La Guaira",
+    "UCV": "Universidad Central",
 }
 
+
 classement_ligue_mapping = {
-    "Colombia": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
+    "Colombie": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
     "France": {"Ligue 1": "https://www.espn.com/soccer/standings/_/league/fra.1"},
-    "Belgium": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
-    "England": {
+    "Belgique": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
+    "Angleterre": {
         "Premier League": "https://www.espn.com/soccer/standings/_/league/eng.1",
         "National League": "https://www.espn.com/soccer/standings/_/league/eng.4"
     },
     "Netherlands": {"Eredivisie": "https://www.espn.com/soccer/standings/_/league/ned.1"},
     "Portugal": {"Primeira Liga": "https://www.espn.com/soccer/standings/_/league/por.1"},
-    "Spain": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
-    "Germany": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
-    "Austria": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/aut.1"},
-    "Italy": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
-    "Brazil": {
+    "Espagne": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
+    "Allemagne": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
+    "Australie": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/aut.1"},
+    "Italie": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
+    "Brésil": {
         "Serie A": "https://www.espn.com/soccer/standings/_/league/bra.1",
         "Serie B": "https://www.espn.com/soccer/standings/_/league/bra.2"
     },
-    "Turkey": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
-    "Mexico": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
+    "Turkie": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
+    "Mexique": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
     "USA": {"Major League Soccer": "https://www.espn.com/soccer/standings/_/league/usa.1"},
-    "Japan": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
+    "Japon": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
     "Saudi-Arabia": {"Pro League": "https://www.espn.com/soccer/standings/_/league/ksa.1"},
     "Switzerland": {"Super League": "https://www.espn.com/soccer/standings/_/league/sui.1"},
-    "China": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
-    "Russia": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
-    "Greece": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"},
+    "Chine": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
+    "Russie": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
+    "Grèce": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"},
 
     # ✅ Nouvelles ligues ajoutées
-    "Chile": {"Primera División": "https://www.espn.com/soccer/standings/_/league/chi.1"},
-    "Peru": {"Primera División": "https://www.espn.com/soccer/standings/_/league/per.1"},
-    "Sweden": {"Allsvenskan": "https://www.espn.com/soccer/standings/_/league/swe.1"},
-    "Argentina": {"Primera Nacional": "https://www.espn.com/soccer/standings/_/league/arg.2"},
+    "Chili": {"Primera División": "https://www.espn.com/soccer/standings/_/league/chi.1"},
+    "Pérou": {"Primera División": "https://www.espn.com/soccer/standings/_/league/per.1"},
+    "Suède": {"Allsvenskan": "https://www.espn.com/soccer/standings/_/league/swe.1"},
+    "Argentine": {"Primera Nacional": "https://www.espn.com/soccer/standings/_/league/arg.2"},
     "Paraguay": {"Division Profesional": "https://www.espn.com/soccer/standings/_/league/par.1"},
-    "Venezuela": {"Primera División": "https://www.espn.com/soccer/standings/_/league/ven.1"},
-    "Romania": {"Liga I": "https://www.espn.com/soccer/standings/_/league/rou.1"}
+    "Vénézuéla": {"Primera División": "https://www.espn.com/soccer/standings/_/league/ven.1"},
+    "Roumanie": {"Liga I": "https://www.espn.com/soccer/standings/_/league/rou.1"}
 }
 
 teams_urls = {
@@ -1383,7 +1395,7 @@ teams_urls = {
         "Novorizontino": {
             "results": "https://africa.espn.com/football/team/results/_/id/18127/novorizontino"
         },
-        "Operario Pr": {
+        "Operario PR": {
             "results": "https://africa.espn.com/football/team/results/_/id/18187/operario-pr"
         },
         "Paysandu": {
@@ -1446,7 +1458,7 @@ teams_urls = {
         "Nublense": {
             "results": "https://africa.espn.com/football/team/results/_/id/7427/nublense"
         },
-        "Adt": {
+        "ADT": {
             "results": "https://africa.espn.com/football/team/results/_/id/21314/adt"
         },
         "Alianza Atletico": {
@@ -1695,7 +1707,7 @@ teams_urls = {
         "Tristan Suarez": {
             "results": "https://africa.espn.com/football/team/results/_/id/10163/tristan-suarez"
         },
-        "2 De Mayo": {
+        "2 de Mayo": {
             "results": "https://africa.espn.com/football/team/results/_/id/6097/2-de-mayo"
         },
         "Cerro Porteno": {
@@ -1707,7 +1719,7 @@ teams_urls = {
         "Deportivo Recoleta": {
             "results": "https://africa.espn.com/football/team/results/_/id/22517/deportivo-recoleta"
         },
-        "General Caballero Jlm": {
+        "General Caballero JLM": {
             "results": "https://africa.espn.com/football/team/results/_/id/21316/general-caballero-jlm"
         },
         "Guarani": {
@@ -1725,7 +1737,7 @@ teams_urls = {
         "Sportivo Ameliano": {
             "results": "https://africa.espn.com/football/team/results/_/id/21313/sportivo-ameliano"
         },
-        "Sportivo Luqueno": {
+        "Sportivo Luqueño": {
             "results": "https://africa.espn.com/football/team/results/_/id/5583/sportivo-luqueno"
         },
         "Trinidense": {
