@@ -11,8 +11,9 @@ jobs:
     permissions:
       contents: write
     env:
-      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-
+  GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+  GROQ_API_KEY1: ${{ secrets.GROQ_API_KEY1 }}
+  
     steps:
       - name: 📥 Récupération du dépôt
         uses: actions/checkout@v3
