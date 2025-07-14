@@ -5,7 +5,6 @@ import json
 import subprocess
 import math
 import itertools
-from deep_translator import GoogleTranslator
 import os
 
 API_KEY = '1933761904aae9724ca6497102b2e094'
@@ -52,41 +51,41 @@ team_name_mapping = {
 
 
 classement_ligue_mapping = {
-    "Colombie": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
+    "Colombia": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
     "France": {"Ligue 1": "https://www.espn.com/soccer/standings/_/league/fra.1"},
-    "Belgique": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
-    "Angleterre": {
+    "Belgium": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
+    "England": {
         "Premier League": "https://www.espn.com/soccer/standings/_/league/eng.1",
         "National League": "https://www.espn.com/soccer/standings/_/league/eng.4"
     },
     "Netherlands": {"Eredivisie": "https://www.espn.com/soccer/standings/_/league/ned.1"},
     "Portugal": {"Primeira Liga": "https://www.espn.com/soccer/standings/_/league/por.1"},
-    "Espagne": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
-    "Allemagne": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
-    "Australie": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/aut.1"},
-    "Italie": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
-    "Brésil": {
+    "Spain": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
+    "Germany": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
+    "Austria": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/aut.1"},
+    "Italy": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
+    "Brazil": {
         "Serie A": "https://www.espn.com/soccer/standings/_/league/bra.1",
         "Serie B": "https://www.espn.com/soccer/standings/_/league/bra.2"
     },
-    "Turkie": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
-    "Mexique": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
+    "Turkey": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
+    "Mexico": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
     "USA": {"Major League Soccer": "https://www.espn.com/soccer/standings/_/league/usa.1"},
-    "Japon": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
+    "Japan": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
     "Saudi-Arabia": {"Pro League": "https://www.espn.com/soccer/standings/_/league/ksa.1"},
     "Switzerland": {"Super League": "https://www.espn.com/soccer/standings/_/league/sui.1"},
-    "Chine": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
-    "Russie": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
-    "Grèce": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"},
+    "China": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
+    "Russia": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
+    "Greece": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"},
 
     # ✅ Nouvelles ligues ajoutées
-    "Chili": {"Primera División": "https://www.espn.com/soccer/standings/_/league/chi.1"},
-    "Pérou": {"Primera División": "https://www.espn.com/soccer/standings/_/league/per.1"},
-    "Suède": {"Allsvenskan": "https://www.espn.com/soccer/standings/_/league/swe.1"},
-    "Argentine": {"Primera Nacional": "https://www.espn.com/soccer/standings/_/league/arg.2"},
+    "Chile": {"Primera División": "https://www.espn.com/soccer/standings/_/league/chi.1"},
+    "Peru": {"Primera División": "https://www.espn.com/soccer/standings/_/league/per.1"},
+    "Sweden": {"Allsvenskan": "https://www.espn.com/soccer/standings/_/league/swe.1"},
+    "Argentina": {"Primera Nacional": "https://www.espn.com/soccer/standings/_/league/arg.2"},
     "Paraguay": {"Division Profesional": "https://www.espn.com/soccer/standings/_/league/par.1"},
-    "Vénézuéla": {"Primera División": "https://www.espn.com/soccer/standings/_/league/ven.1"},
-    "Roumanie": {"Liga I": "https://www.espn.com/soccer/standings/_/league/rou.1"}
+    "Venezuela": {"Primera División": "https://www.espn.com/soccer/standings/_/league/ven.1"},
+    "Romania": {"Liga I": "https://www.espn.com/soccer/standings/_/league/rou.1"}
 }
 
 teams_urls = {
@@ -1996,7 +1995,17 @@ headers = {'User-Agent': 'Mozilla/5.0'}
 PREDICTIONS = []
 COMBINED_PREDICTIONS = []
 FAILED_TEAMS = set()
+IGNORED_ZERO_FORM_TEAMS = []
 COUNTRY_TRANSLATION_CACHE = {}
+
+# Récupération des deux clés Groq via les variables d'environnement
+groq_keys = list(filter(None, [
+    os.environ.get("GROQ_API_KEY"),
+    os.environ.get("GROQ_API_KEY1")
+]))
+
+# Création d'un itérateur infini qui tourne entre les deux
+GROQ_KEY_CYCLE = itertools.cycle(groq_keys)
 
 DEFENSE_ADJUST_METHOD = "asym"
 
@@ -2041,13 +2050,11 @@ def get_team_classement_position(country, league, team_name):
     return scraper.get_position(team_name)
 
 # ----------- ✅ NOUVEAU PROMPT & FONCTION IA -----------
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-
 def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method, bonus_serie_domicile=0.0, bonus_serie_exterieur=0.0):
     prompt = f"""
 Match : {pred_obj['HomeTeam']} vs {pred_obj['AwayTeam']}
 Date : {pred_obj['date']}
-Compétition : {pred_obj['league']} ({pred_obj['country']})
+Compétition : {pred_obj['league']}
 Classement actuel :
 - {pred_obj['HomeTeam']} : {pred_obj.get('classement_home', 'N/A')}ᵉ
 - {pred_obj['AwayTeam']} : {pred_obj.get('classement_away', 'N/A')}ᵉ
@@ -2098,8 +2105,9 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 
 Réponds en **français**, de manière **claire, directe et justifiée**.Jamais autre langue que le français.
 """
+    selected_key = next(GROQ_KEY_CYCLE)
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {selected_key}",
         "Content-Type": "application/json"
     }
     body = {
@@ -2131,19 +2139,6 @@ def choisir_methode_ajustement(t1, t2):
         return "asym"
     else:
         return "continuous"
-
-def translate_country_to_french(country):
-    if not country:
-        return ""
-    if country in COUNTRY_TRANSLATION_CACHE:
-        return COUNTRY_TRANSLATION_CACHE[country]
-    try:
-        fr = GoogleTranslator(source='auto', target='fr').translate(country)
-        COUNTRY_TRANSLATION_CACHE[country] = fr
-        return fr
-    except Exception as e:
-        print(f"Erreur de traduction pour {country}: {e}")
-        return country
 
 def poisson_pmf(k, lmbda):
     return math.exp(-lmbda) * (lmbda ** k) / math.factorial(k)
@@ -2263,9 +2258,8 @@ def get_today_matches_filtered():
                     team2_stats = process_team(away_api, return_data=True)
                     if team1_stats: team1_stats['nom'] = home_espn
                     if team2_stats: team2_stats['nom'] = away_espn
-                    translated_country = translate_country_to_french(country)
                     compare_teams_and_predict_score(
-                        team1_stats, team2_stats, home_api, away_api, date, time, league, translated_country,
+                        team1_stats, team2_stats, home_api, away_api, date, time, league, country,
                         logo_home=logo_home, logo_away=logo_away, résultats=résultats
                     )
                 else:
@@ -2278,12 +2272,13 @@ def get_today_matches_filtered():
                     else:
                         FAILED_TEAMS.add(away_api)
         if résultats:
-            generate_combined_predictions(résultats)
-            sauvegarder_prediction_json_complete(résultats, COMBINED_PREDICTIONS, today)
+            sauvegarder_prediction_json_complete(résultats, [], today)
             fichier = f"prédiction-{today}-analyse-ia.json"
             git_commit_and_push(fichier)
         if FAILED_TEAMS:
             save_failed_teams_json(FAILED_TEAMS, today)
+        if IGNORED_ZERO_FORM_TEAMS:
+            save_ignored_teams_json(IGNORED_ZERO_FORM_TEAMS, today)
     except Exception as e:
         print(f"❌ Erreur lors de la récupération des matchs : {e}")
 
@@ -2814,6 +2809,19 @@ def compare_teams_and_predict_score(
         print("⚠️ Données insuffisantes pour la comparaison.")
         return
 
+    # Vérifier si une équipe a une forme récente totalement vide (0 point)
+    points1, _, _ = get_form_points(t1.get('recent_form', []))
+    points2, _, _ = get_form_points(t2.get('recent_form', []))
+
+    if points1 == 0:
+        print(f"🚫 {name1} a une forme totalement vide (0 point), match ignoré.")
+        IGNORED_ZERO_FORM_TEAMS.append(name1)
+        return
+    if points2 == 0:
+        print(f"🚫 {name2} a une forme totalement vide (0 point), match ignoré.")
+        IGNORED_ZERO_FORM_TEAMS.append(name2)
+        return
+
     # 🏆 Récupération classement des équipes
     pos_home, nom_classement_home = get_team_classement_position(country, league, name1)
     pos_away, nom_classement_away = get_team_classement_position(country, league, name2)
@@ -2971,8 +2979,7 @@ def compare_teams_and_predict_score(
             "AwayTeam": name2,
             "confidence": conf_safe,
             "date": format_date_fr(match_date, match_time),
-            "league": league,
-            "country": country,
+            "league": f"{country} - {league}",
             "prediction": pred_safe,
             "type": "single",
             "score_prediction": f"{pred_t1:.1f} - {pred_t2:.1f}",
@@ -3095,7 +3102,7 @@ def generate_combined_predictions(predictions):
                     "match": f"{p['HomeTeam']} vs {p['AwayTeam']}",
                     "prediction": p['prediction'],
                     "individual_confidence": p['confidence'],
-                    "country_fr": translate_country_to_french(p['country']),
+                    "country_fr": p['league'],
                     "league": p['league']
                 } for p in combo
             ],
@@ -3137,11 +3144,7 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         prediction_types[pred_type].append(pred)
 
     for p in predictions_simples:
-        p['country_fr'] = translate_country_to_french(p['country'])
-
-    for p in predictions_combinees:
-        for m in p.get('matches', []):
-            m['country_fr'] = translate_country_to_french(m['country_fr']) if 'country_fr' in m else ""
+        p['country_fr'] = p['league']
 
     data_complete = {
         "metadata": {
@@ -3149,7 +3152,6 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
             "date_matchs": date_str,
             "version_algorithme": "3.7 - Poisson + IA Singles Premium + Combinés IA + scores Poisson + IA Enrichie + Bonus Séries Auto + Classements",
             "total_predictions_simples": total_predictions,
-            "total_predictions_combinees_ia": len(predictions_combinees),
             "statistiques": {
                 "confiance_moyenne": avg_confidence,
                 "haute_confiance_80plus": high_confidence_count,
@@ -3166,11 +3168,6 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
             "count": len(ia_singles_premium),
             "details": ia_singles_premium
         },
-        "predictions_combinees_ia": {
-            "count": len(predictions_combinees),
-            "details": predictions_combinees,
-            "meilleures_5": predictions_combinees[:5] if predictions_combinees else []
-        },
         "recommandations": {
             "safest_bets": safest_bets
         }
@@ -3179,7 +3176,7 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
     print(f"✅ Prédictions complètes sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} prédictions simples + {len(predictions_combinees)} combinés IA")
+    print(f"📊 Total: {total_predictions} prédictions simples")
     print(f"📈 Confiance moyenne: {avg_confidence}%")
 
 def save_failed_teams_json(failed_teams, date_str):
@@ -3188,6 +3185,13 @@ def save_failed_teams_json(failed_teams, date_str):
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"❗ Liste des équipes sans données sauvegardée dans : {chemin}")
+
+def save_ignored_teams_json(ignored_teams, date_str):
+    chemin = f"teams_ignored_zero_form_{date_str}.json"
+    data = {"teams_ignored_zero_form": sorted(list(set(ignored_teams)))}
+    with open(chemin, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"🛑 Équipes ignorées pour forme nulle sauvegardées dans : {chemin}")
 
 def git_commit_and_push(filepath):
     try:
@@ -3206,11 +3210,14 @@ def main():
     print("🧠 L'IA LLaMA 3 dispose maintenant de l'intégralité du contexte pour optimiser les prédictions")
     print("🎯 Bonus automatiques selon les plus longues séries de victoires/défaites à domicile et à l'extérieur")
     print("🏆 Intégration des classements des équipes dans les analyses")
+    print("🛑 Filtrage automatique des équipes avec forme nulle (0 point)")
     print("📊 Analyse complète des matchs du jour avec recommandations...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
     print(f"   🎯 {len(PREDICTIONS)} prédictions simples générées")
     print(f"   🔗 {len(COMBINED_PREDICTIONS)} combinés IA créés")
+    if IGNORED_ZERO_FORM_TEAMS:
+        print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
     if COMBINED_PREDICTIONS:
         print(f"\n🏆 Meilleur combiné IA:")
         best = COMBINED_PREDICTIONS[0]
