@@ -1383,7 +1383,7 @@ teams_urls = {
         "Criciuma": {
             "results": "https://africa.espn.com/football/team/results/_/id/9971/criciuma"
         },
-        "Cuiaba": {
+        "Cuiabá": {
             "results": "https://africa.espn.com/football/team/results/_/id/17313/cuiaba"
         },
         "Ferroviaria": {
