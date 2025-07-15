@@ -47,6 +47,7 @@ team_name_mapping = {
     "General Caballero": "General Caballero JLM",
     "Real Esppor Club": "Deportivo La Guaira",
     "UCV": "Universidad Central",
+    "Cuiaba": "Cuiabá",
 }
 
 
@@ -2086,11 +2087,7 @@ Score estimé : {pred_obj['score_prediction']} par le système de base
 Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et réponds stricte en français même ton raisonnement en français ne fais rien en anglais.  
 ❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
 ✅ Choisis **une seule prédiction finale**, parmi cette liste :
-
-- Total équipe 1 : +0.5
-- Total équipe 2 : +1.5
-- Victoire équipe 1 + total1 +1.5
-- Victoire équipe 2 + total2 +1.5
+ 
 - Victoire équipe 1
 - Victoire ou nul équipe 1
 - Victoire équipe 2
