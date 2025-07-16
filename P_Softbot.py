@@ -2094,9 +2094,7 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 ✅ Choisis **une seule prédiction finale**, parmi cette liste :
 
 - Total équipe 1 : +0.5
-- Total équipe 2 : +1.5
-- Victoire équipe 1 + total1 +1.5
-- Victoire équipe 2 + total2 +1.5
+- Total équipe 2 : +0.5
 - Victoire équipe 1
 - Victoire ou nul équipe 1
 - Victoire équipe 2
@@ -2106,6 +2104,7 @@ Tu dois proposer **la prédiction la plus sûre possible** à partir de ces donn
 - -3.5 buts
 
 ⚠️ **Ce match sera utilisé dans un pari combiné.**
+la forme récente est dans cet ordre:*Du plus récent au moins récent*.
 💡 Ton objectif est de **minimiser les risques de perte**, même si la cote est plus basse.  
 🧠 Analyse les forces/faiblesses, les formes, les buts, le contexte et les probabilités pour choisir **la meilleure option de sécurité**.
 
