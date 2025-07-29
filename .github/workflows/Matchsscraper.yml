@@ -1,0 +1,32 @@
+name: MAJ Matches Premier League
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Tous les jours à 00h UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Exécuter le script de scraping
+        run: python premier_league_scraper.py
+
+      - name: Commit & push
+        run: |
+          git config user.name 'bot'
+          git config user.email 'bot@example.com'
+          git add datapremier_league.json
+          git commit -m "🔄 Mise à jour quotidienne des matchs Premier League"
+          git push
