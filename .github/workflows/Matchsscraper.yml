@@ -1,37 +1,33 @@
-name: 🏟️ MAJ Matchs Premier League 2024-2025
+name: Mise à jour quotidienne Premier League
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Tous les jours à 00h UTC
-  workflow_dispatch:       # Lancer manuellement si nécessaire
+    - cron: "0 0 * * *"  # Tous les jours à 00h UTC
+  workflow_dispatch:  # Lancer manuellement si nécessaire
 
 jobs:
-  maj-premier-league:
+  update-json:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 📥 Cloner le dépôt
-      uses: actions/checkout@v4
-      with:
-        persist-credentials: false  # pour utiliser notre propre auth
+      - name: 📥 Cloner le repo
+        uses: actions/checkout@v3
 
-    - name: 🐍 Installer Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: 🐍 Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
 
-    - name: 📦 Installer les dépendances
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: 📦 Installer les dépendances
+        run: pip install beautifulsoup4 requests
 
-    - name: 🔍 Exécuter le scraper Premier League
-      run: python premier_league_scraper.py
+      - name: 🔄 Lancer le script de mise à jour
+        run: python update_premier_league_today.py
 
-    - name: 💾 Commit et push des mises à jour
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add premier_league2024-2025.json
-        git commit -m "🔄 MAJ quotidienne des matchs Premier League" || echo "Aucun changement"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+      - name: 🆙 Commit et Push si changements
+        run: |
+          git config --global user.name "softbot"
+          git config --global user.email "softbot@users.noreply.github.com"
+          git add premier_league2024-2025.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Mise à jour automatique des matchs du $(date -u +'%Y-%m-%d')"
+          git push
