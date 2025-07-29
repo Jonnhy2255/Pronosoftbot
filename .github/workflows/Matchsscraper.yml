@@ -22,7 +22,7 @@ jobs:
         run: pip install beautifulsoup4 requests
 
       - name: 🔄 Lancer le script de mise à jour
-        run: python update_premier_league_today.py
+        run: python p_league.py
 
       - name: 🆙 Commit et Push si changements
         run: |
