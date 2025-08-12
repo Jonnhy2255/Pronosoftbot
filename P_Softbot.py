@@ -7,7 +7,7 @@ import math
 import itertools
 import os
 
-API_KEY = '1933761904aae9724ca6497102b2e094'
+API_KEY = '86cbe44822a0495ecf987ce7a2dbea62'
 api_headers = {
     'x-apisports-key': API_KEY
 }
