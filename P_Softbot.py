@@ -48,6 +48,11 @@ team_name_mapping = {
     "Real Esppor Club": "Deportivo La Guaira",
     "UCV": "Universidad Central",
     "Cuiaba": "Cuiabá",
+    "Wolves": "Wolverhampton Wanderers",
+    "West Ham": "West Ham United",
+    "Tottenham": "Tottenham Hotspur",
+    "Brighton": "Brighton & Hove Albion",
+    
 }
 
 
