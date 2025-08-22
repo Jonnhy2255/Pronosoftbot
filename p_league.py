@@ -11,7 +11,8 @@ HEADERS = {
 
 LEAGUES = {
     "Premier League": {"code": "eng.1", "json": "p_league.json"},
-    "LaLiga": {"code": "esp.1", "json": "laliga.json"}
+    "LaLiga": {"code": "esp.1", "json": "laliga.json"},
+    "Bundesliga": {"code": "ger.1", "json": "bundesliga.json"}  # ✅ Ajout Bundesliga
 }
 
 # Calcul de la date d'hier en UTC
@@ -88,7 +89,7 @@ for league_name, league_info in LEAGUES.items():
                     existing_matches[game_id] = match_data
 
             except Exception as e:
-                print(f"⚠️ Erreur lors du parsing : {e}")
+                print(f"⚠️ Erreur lors du parsing pour {league_name} : {e}")
                 continue
 
     # Sauvegarde mise à jour
