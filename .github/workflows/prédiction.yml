@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: 📥 Récupération du dépôt
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           persist-credentials: true
           fetch-depth: 0
