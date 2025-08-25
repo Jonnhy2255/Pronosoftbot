@@ -2618,10 +2618,12 @@ def get_today_matches_filtered():
                         process_team(away_api)
                     else:
                         FAILED_TEAMS.add(away_api)
+        
+        # ✅ CORRECTION 1 : Récupérer le chemin retourné par sauvegarder_stats_brutes_json
         if résultats:
-            sauvegarder_stats_brutes_json(résultats, today)
-            fichier = f"stats-brutes-{today}.json"
-            git_commit_and_push(fichier)
+            chemin = sauvegarder_stats_brutes_json(résultats, today)  # ✅ Récupérer le chemin
+            git_commit_and_push(chemin)  # ✅ Utiliser le bon chemin
+        
         if FAILED_TEAMS:
             save_failed_teams_json(FAILED_TEAMS, today)
         if IGNORED_ZERO_FORM_TEAMS:
@@ -2956,11 +2958,15 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
         }
     }
     
-    chemin = f"prédiction-{date_str}analyse-ia.json"
+    # ✅ CORRECTION 2 : Ajouter le tiret manquant dans le nom du fichier
+    chemin = f"prédiction-{date_str}-analyse-ia.json"  # ✅ Tiret ajouté avant "analyse-ia"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
     print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + retry sauvegardées dans : {chemin}")
     print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H élargi")
+    
+    # ✅ CORRECTION 3 : Retourner le chemin du fichier créé
+    return chemin
 
 def save_failed_teams_json(failed_teams, date_str):
     chemin = f"teams_failed_{date_str}.json"
