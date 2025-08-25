@@ -1,16 +1,31 @@
 import requests
+import json
 from datetime import datetime
 from bs4 import BeautifulSoup
-import json
 import subprocess
 import math
 import itertools
 import os
 
-API_KEY = '86cbe44822a0495ecf987ce7a2dbea62'
+# 🔑 Récupération des clés depuis GitHub Secrets (variables d'environnement)
+API_KEY = os.getenv("API_FOOTBALL_KEY")
+ODDS_API_KEY = os.getenv("ODDS_API_KEY")
+groq_keys = [
+    os.getenv("GROQ_API_KEY"),
+    os.getenv("GROQ_API_KEY1")
+]
+
+# En-têtes API Football
 api_headers = {
     'x-apisports-key': API_KEY
 }
+
+# Paramètres API Odds
+REGION = "eu"
+MARKETS = "h2h,totals"
+
+# Alternateur pour Groq
+groq_key_index = 0
 
 team_name_mapping = {
     "Bournemouth": "AFC Bournemouth",
@@ -48,50 +63,180 @@ team_name_mapping = {
     "Real Esppor Club": "Deportivo La Guaira",
     "UCV": "Universidad Central",
     "Cuiaba": "Cuiabá",
-    "Wolves": "Wolverhampton Wanderers",
-    "West Ham": "West Ham United",
-    "Tottenham": "Tottenham Hotspur",
-    "Brighton": "Brighton & Hove Albion",
-    
+    "remo": "Remo",
 }
 
-
 classement_ligue_mapping = {
-    "Colombia": {"Primera A": "https://www.espn.com/soccer/standings/_/league/col.1"},
-    "France": {"Ligue 1": "https://www.espn.com/soccer/standings/_/league/fra.1"},
-    "Belgium": {"Jupiler Pro League": "https://www.espn.com/soccer/standings/_/league/bel.1"},
+    "Colombia": {
+        "Primera A": {
+            "url": "https://www.espn.com/soccer/standings/_/league/col.1",
+            "odds_id": "none"
+        }
+    },
+    "France": {
+        "Ligue 1": {
+            "url": "https://www.espn.com/soccer/standings/_/league/fra.1",
+            "odds_id": "soccer_france_ligue_one"
+        }
+    },
+    "Belgium": {
+        "Jupiler Pro League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/bel.1",
+            "odds_id": "soccer_belgium_first_div"
+        }
+    },
     "England": {
-        "Premier League": "https://www.espn.com/soccer/standings/_/league/eng.1",
-        "National League": "https://www.espn.com/soccer/standings/_/league/eng.4"
+        "Premier League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
+            "odds_id": "soccer_epl"
+        },
+        "National League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/eng.4",
+            "odds_id": "none"
+        }
     },
-    "Netherlands": {"Eredivisie": "https://www.espn.com/soccer/standings/_/league/ned.1"},
-    "Portugal": {"Primeira Liga": "https://www.espn.com/soccer/standings/_/league/por.1"},
-    "Spain": {"La Liga": "https://www.espn.com/soccer/standings/_/league/esp.1"},
-    "Germany": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/ger.1"},
-    "Austria": {"Bundesliga": "https://www.espn.com/soccer/standings/_/league/aut.1"},
-    "Italy": {"Serie A": "https://www.espn.com/soccer/standings/_/league/ita.1"},
+    "Netherlands": {
+        "Eredivisie": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ned.1",
+            "odds_id": "soccer_netherlands_eredivisie"
+        }
+    },
+    "Portugal": {
+        "Primeira Liga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/por.1",
+            "odds_id": "soccer_portugal_primeira_liga"
+        }
+    },
+    "Spain": {
+        "La Liga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/esp.1",
+            "odds_id": "soccer_spain_la_liga"
+        }
+    },
+    "Germany": {
+        "Bundesliga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ger.1",
+            "odds_id": "soccer_germany_bundesliga"
+        }
+    },
+    "Austria": {
+        "Bundesliga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/aut.1",
+            "odds_id": "soccer_austria_bundesliga"
+        }
+    },
+    "Italy": {
+        "Serie A": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
+            "odds_id": "soccer_italy_serie_a"
+        }
+    },
     "Brazil": {
-        "Serie A": "https://www.espn.com/soccer/standings/_/league/bra.1",
-        "Serie B": "https://www.espn.com/soccer/standings/_/league/bra.2"
+        "Serie A": {
+            "url": "https://www.espn.com/soccer/standings/_/league/bra.1",
+            "odds_id": "soccer_brazil_campeonato"
+        },
+        "Serie B": {
+            "url": "https://www.espn.com/soccer/standings/_/league/bra.2",
+            "odds_id": "soccer_brazil_serie_b"
+        }
     },
-    "Turkey": {"Süper Lig": "https://www.espn.com/soccer/standings/_/league/tur.1"},
-    "Mexico": {"Liga MX": "https://www.espn.com/soccer/standings/_/league/mex.1"},
-    "USA": {"Major League Soccer": "https://www.espn.com/soccer/standings/_/league/usa.1"},
-    "Japan": {"J1 League": "https://www.espn.com/soccer/standings/_/league/jpn.1"},
-    "Saudi-Arabia": {"Pro League": "https://www.espn.com/soccer/standings/_/league/ksa.1"},
-    "Switzerland": {"Super League": "https://www.espn.com/soccer/standings/_/league/sui.1"},
-    "China": {"Super League": "https://www.espn.com/soccer/standings/_/league/chn.1"},
-    "Russia": {"Premier League": "https://www.espn.com/soccer/standings/_/league/rus.1"},
-    "Greece": {"Super League 1": "https://www.espn.com/soccer/standings/_/league/gre.1"},
-
-    # ✅ Nouvelles ligues ajoutées
-    "Chile": {"Primera División": "https://www.espn.com/soccer/standings/_/league/chi.1"},
-    "Peru": {"Primera División": "https://www.espn.com/soccer/standings/_/league/per.1"},
-    "Sweden": {"Allsvenskan": "https://www.espn.com/soccer/standings/_/league/swe.1"},
-    "Argentina": {"Primera Nacional": "https://www.espn.com/soccer/standings/_/league/arg.2"},
-    "Paraguay": {"Division Profesional": "https://www.espn.com/soccer/standings/_/league/par.1"},
-    "Venezuela": {"Primera División": "https://www.espn.com/soccer/standings/_/league/ven.1"},
-    "Romania": {"Liga I": "https://www.espn.com/soccer/standings/_/league/rou.1"}
+    "Turkey": {
+        "Süper Lig": {
+            "url": "https://www.espn.com/soccer/standings/_/league/tur.1",
+            "odds_id": "soccer_turkey_super_league"
+        }
+    },
+    "Mexico": {
+        "Liga MX": {
+            "url": "https://www.espn.com/soccer/standings/_/league/mex.1",
+            "odds_id": "soccer_mexico_ligamx"
+        }
+    },
+    "USA": {
+        "Major League Soccer": {
+            "url": "https://www.espn.com/soccer/standings/_/league/usa.1",
+            "odds_id": "soccer_usa_mls"
+        }
+    },
+    "Japan": {
+        "J1 League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/jpn.1",
+            "odds_id": "soccer_japan_j_league"
+        }
+    },
+    "Saudi-Arabia": {
+        "Pro League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ksa.1",
+            "odds_id": "none"
+        }
+    },
+    "Switzerland": {
+        "Super League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/sui.1",
+            "odds_id": "soccer_switzerland_superleague"
+        }
+    },
+    "China": {
+        "Super League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/chn.1",
+            "odds_id": "soccer_china_superleague"
+        }
+    },
+    "Russia": {
+        "Premier League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/rus.1",
+            "odds_id": "none"
+        }
+    },
+    "Greece": {
+        "Super League 1": {
+            "url": "https://www.espn.com/soccer/standings/_/league/gre.1",
+            "odds_id": "soccer_greece_super_league"
+        }
+    },
+    "Chile": {
+        "Primera División": {
+            "url": "https://www.espn.com/soccer/standings/_/league/chi.1",
+            "odds_id": "soccer_chile_campeonato"
+        }
+    },
+    "Peru": {
+        "Primera División": {
+            "url": "https://www.espn.com/soccer/standings/_/league/per.1",
+            "odds_id": "none"
+        }
+    },
+    "Sweden": {
+        "Allsvenskan": {
+            "url": "https://www.espn.com/soccer/standings/_/league/swe.1",
+            "odds_id": "soccer_sweden_allsvenskan"
+        }
+    },
+    "Argentina": {
+        "Primera Nacional": {
+            "url": "https://www.espn.com/soccer/standings/_/league/arg.2",
+            "odds_id": "soccer_argentina_primera_division"
+        }
+    },
+    "Paraguay": {
+        "Division Profesional": {
+            "url": "https://www.espn.com/soccer/standings/_/league/par.1",
+            "odds_id": "none"
+        }
+    },
+    "Venezuela": {
+        "Primera División": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ven.1",
+            "odds_id": "none"
+        }
+    },
+    "Romania": {
+        "Liga I": {
+            "url": "https://www.espn.com/soccer/standings/_/league/rou.1",
+            "odds_id": "none"
+        }
+    }
 }
 
 teams_urls = {
@@ -1391,10 +1536,10 @@ teams_urls = {
         "Cuiabá": {
             "results": "https://africa.espn.com/football/team/results/_/id/17313/cuiaba"
         },
-        "Ferroviaria": {
+        "Ferroviária": {
             "results": "https://africa.espn.com/football/team/results/_/id/18126/ferroviaria"
         },
-        "Goias": {
+        "Goiás": {
             "results": "https://africa.espn.com/football/team/results/_/id/3395/goias"
         },
         "Novorizontino": {
@@ -1757,7 +1902,7 @@ teams_urls = {
         "Carabobo": {
             "results": "https://africa.espn.com/football/team/results/_/id/6037/carabobo"
         },
-        "Caracas Fc": {
+        "Caracas FC": {
             "results": "https://africa.espn.com/football/team/results/_/id/4811/caracas-fc"
         },
         "Deportivo La Guaira": {
@@ -1769,7 +1914,7 @@ teams_urls = {
         "Deportivo Tachira": {
             "results": "https://africa.espn.com/football/team/results/_/id/4818/deportivo-tachira"
         },
-        "Estudiantes De Merida": {
+        "Estudiantes de Merida": {
             "results": "https://africa.espn.com/football/team/results/_/id/6038/estudiantes-de-merida"
         },
         "Metropolitanos Fc": {
@@ -1996,46 +2141,316 @@ teams_urls = {
         }
     # Ajoutez d'autres équipes si besoin
 }
+
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
-COMBINED_PREDICTIONS = []
 FAILED_TEAMS = set()
 IGNORED_ZERO_FORM_TEAMS = []
-COUNTRY_TRANSLATION_CACHE = {}
 
+# 🧠 Fonction DeepSeek avec alternance automatique des clés et retry automatique (VERSION AMÉLIORÉE)
+def call_deepseek_analysis(prompt, max_retries=5):
+    global groq_key_index
 
-# Récupération des deux clés Groq via les variables d'environnement
-groq_keys = list(filter(None, [
-    os.environ.get("GROQ_API_KEY"),
-    os.environ.get("GROQ_API_KEY1")
-]))
-# Création d'un itérateur infini qui tourne entre les deux
-GROQ_KEY_CYCLE = itertools.cycle(groq_keys)
+    for attempt in range(1, max_retries + 1):
+        key = groq_keys[groq_key_index % len(groq_keys)]
+        groq_key_index += 1
 
-DEFENSE_ADJUST_METHOD = "asym"
+        headers = {
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json"
+        }
 
-# 🔧 Classe réutilisable de scraping de classement
+        data = {
+            "model": "deepseek-r1-distill-llama-70b",
+            "messages": [
+                {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, nul, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, ou double chance (1X ou X2). Explique pourquoi en détail."},
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0.3
+        }
+
+        try:
+            print(f"🧠 Tentative {attempt}/{max_retries} avec clé {(groq_key_index - 1) % len(groq_keys) + 1}...")
+            response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data)
+            response.raise_for_status()
+            result = response.json()["choices"][0]["message"]["content"].strip()
+            print(f"✅ Analyse IA réussie à la tentative {attempt}")
+            return result
+        except Exception as e:
+            print(f"❌ Erreur DeepSeek (tentative {attempt}/{max_retries}) : {str(e)}")
+            if attempt < max_retries:
+                print("🔄 Nouvel essai dans 2 secondes...")
+                import time
+                time.sleep(2)  # Petite pause avant retry
+            else:
+                error_msg = f"❌ Échec définitif après {max_retries} tentatives. Dernière erreur : {str(e)}"
+                print(error_msg)
+                return error_msg
+
+# 🔮 Générateur de prompt détaillé (VERSION ENRICHIE)
+def generate_detailed_prompt(prediction_obj):
+    home = prediction_obj["HomeTeam"]
+    away = prediction_obj["AwayTeam"]
+    stats_home = prediction_obj["stats_home"]
+    stats_away = prediction_obj["stats_away"]
+    odds = prediction_obj.get("odds", {})
+    pos_home = prediction_obj.get("classement_home")
+    pts_home = prediction_obj.get("points_classement_home")
+    pos_away = prediction_obj.get("classement_away")
+    pts_away = prediction_obj.get("points_classement_away")
+    league = prediction_obj["league"]
+    date = prediction_obj["date"]
+
+    prompt = f"""
+ANALYSE DE MATCH - {date}
+{league}
+{home} (DOMICILE) vs {away} (EXTÉRIEUR)
+
+🏠 STATISTIQUES DE {home} (DOMICILE) :
+- Classement : {pos_home}ᵉ avec {pts_home} points
+- Moyenne buts marqués : {stats_home['moyenne_marques']:.2f}
+- Moyenne buts encaissés : {stats_home['moyenne_encaisses']:.2f}
+- Forme sur 6 matchs : {' '.join(stats_home['form_6'])} ({stats_home.get('total_points_6', 0)} points)
+- Forme sur 10 matchs : {' '.join(stats_home['form_10'])} ({stats_home.get('total_points_10', 0)} points)
+- Série domicile : {'-'.join(stats_home.get('serie_domicile', []))}
+- Buts marqués domicile : {stats_home.get('buts_dom_marques', 0)}
+- Buts encaissés domicile : {stats_home.get('buts_dom_encaisses', 0)}
+
+✈️ STATISTIQUES DE {away} (EXTÉRIEUR) :
+- Classement : {pos_away}ᵉ avec {pts_away} points
+- Moyenne buts marqués : {stats_away['moyenne_marques']:.2f}
+- Moyenne buts encaissés : {stats_away['moyenne_encaisses']:.2f}
+- Forme sur 6 matchs : {' '.join(stats_away['form_6'])} ({stats_away.get('total_points_6', 0)} points)
+- Forme sur 10 matchs : {' '.join(stats_away['form_10'])} ({stats_away.get('total_points_10', 0)} points)
+- Série extérieur : {'-'.join(stats_away.get('serie_exterieur', []))}
+- Buts marqués extérieur : {stats_away.get('buts_ext_marques', 0)}
+- Buts encaissés extérieur : {stats_away.get('buts_ext_encaisses', 0)}
+
+💰 COTES DISPONIBLES :
+"""
+    if odds and odds != {}:
+        bookmaker = odds.get('bookmaker', 'N/A')
+        prompt += f"Bookmaker : {bookmaker}\n"
+        
+        h2h = odds.get('h2h', {})
+        if h2h:
+            prompt += "- 1X2 : "
+            for outcome, cote in h2h.items():
+                prompt += f"{outcome} : {cote} | "
+            prompt += "\n"
+        
+        totals = odds.get('totals', {})
+        if totals:
+            prompt += "- Total 2.5 : "
+            for outcome, cote in totals.items():
+                prompt += f"{outcome} : {cote} | "
+            prompt += "\n"
+    else:
+        prompt += "Aucune cote disponible\n"
+
+    # ✅ NOUVEAUTÉ 1 : Ajout des 10 derniers matchs complets
+    prompt += f"\n📅 10 DERNIERS MATCHS DE {home} (DOMICILE) :\n"
+    last_matches_home = prediction_obj.get("last_matches_home", [])
+    if last_matches_home:
+        for i, match in enumerate(last_matches_home[:10], 1):
+            if len(match) >= 6:
+                date_match, team1, team2, competition, score, status = match[0], match[1], match[2], match[3], match[4], match[5]
+                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status})\n"
+    else:
+        prompt += "  Aucun match détaillé disponible\n"
+
+    prompt += f"\n📅 10 DERNIERS MATCHS DE {away} (EXTÉRIEUR) :\n"
+    last_matches_away = prediction_obj.get("last_matches_away", [])
+    if last_matches_away:
+        for i, match in enumerate(last_matches_away[:10], 1):
+            if len(match) >= 6:
+                date_match, team1, team2, competition, score, status = match[0], match[1], match[2], match[3], match[4], match[5]
+                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status})\n"
+    else:
+        prompt += "  Aucun match détaillé disponible\n"
+
+    # ✅ NOUVEAUTÉ 2 : Ajout du classement complet de la ligue
+    prompt += "\n🏆 CLASSEMENT COMPLET DE LA LIGUE :\n"
+    classement_complet = prediction_obj.get("classement_complet", [])
+    if classement_complet:
+        for team_data in classement_complet[:20]:  # Limiter à 20 pour éviter un prompt trop long
+            position = team_data.get('position', 'N/A')
+            team_name = team_data.get('team', 'N/A')
+            points = team_data.get('points', 'N/A')
+            
+            # Marquer les équipes du match en cours
+            marker = ""
+            if team_name == home:
+                marker = " ← DOMICILE"
+            elif team_name == away:
+                marker = " ← EXTÉRIEUR"
+            
+            prompt += f"  {position}. {team_name} ({points} pts){marker}\n"
+    else:
+        prompt += "  Classement complet non disponible\n"
+
+    # ✅ NOUVEAUTÉ 3 : Ajout des confrontations directes H2H (ÉLARGI À TOUS LES CHAMPIONNATS)
+    confrontations_h2h = prediction_obj.get("confrontations_saison_derniere", [])
+    if confrontations_h2h:
+        prompt += f"\n🆚 CONFRONTATIONS DIRECTES (SAISON DERNIÈRE) :\n"
+        for i, match in enumerate(confrontations_h2h, 1):
+            date_h2h = match.get('date', 'N/A')
+            team1_h2h = match.get('team1', 'N/A')
+            team2_h2h = match.get('team2', 'N/A')
+            score_h2h = match.get('score', 'N/A')
+            competition_h2h = match.get('competition', 'N/A')
+            source_h2h = match.get('source', 'N/A')
+            prompt += f"  {i}. {date_h2h} | {team1_h2h} vs {team2_h2h} : {score_h2h} [{competition_h2h}] (Source: {source_h2h})\n"
+    else:
+        prompt += f"\n🆚 CONFRONTATIONS DIRECTES (SAISON DERNIÈRE) :\n  Aucune confrontation H2H disponible\n"
+
+    prompt += f"""
+MISSION :
+1. Analyse comparative des deux équipes (forces/faiblesses)
+2. Impact du facteur domicile/extérieur
+3. Analyse des formes récentes et tendances à partir des matchs détaillés
+4. Analyse du contexte du championnat grâce au classement complet
+5. Prise en compte des confrontations directes récentes (si disponibles)
+6. Évaluation des cotes (si disponibles)
+7. Prédiction finale claire : UNE SEULE recommandation parmi :
+   - "Victoire domicile" ({home})
+   - "Victoire extérieur" ({away})
+   - "Match nul"
+   - "Plus de 2.5 buts"
+   - "Moins de 2.5 buts"
+   - "BTTS oui" (Both Teams To Score)
+   - "BTTS non"
+   - "Double chance 1X" (domicile ou nul)
+   - "Double chance X2" (nul ou extérieur)
+
+Justifie ta prédiction avec toutes les données statistiques fournies, en tenant compte particulièrement des matchs récents détaillés, du contexte du classement et des confrontations directes.
+"""
+    return prompt
+
+def get_odds_for_match(sport_odds_id, home_team_api, away_team_api, home_team_espn, away_team_espn):
+    if sport_odds_id == "none":
+        print(f"⚠️ Pas d'odds_id disponible pour ce championnat")
+        return None
+
+    url = f"https://api.the-odds-api.com/v4/sports/{sport_odds_id}/odds"
+    params = {
+        "apiKey": ODDS_API_KEY,
+        "regions": REGION,
+        "markets": MARKETS,
+        "oddsFormat": "decimal"
+    }
+
+    try:
+        response = requests.get(url, params=params)
+        if response.status_code != 200:
+            print(f"❌ Erreur API Odds : {response.status_code}")
+            return None
+
+        matches = response.json()
+
+        target_match = None
+        for match in matches:
+            home_odds = match['home_team']
+            away_odds = match['away_team']
+
+            if ((home_odds.lower() == home_team_api.lower() or away_odds.lower() == home_team_api.lower()) and 
+                (home_odds.lower() == away_team_api.lower() or away_odds.lower() == away_team_api.lower())):
+                target_match = match
+                print(f"✅ Match trouvé avec noms API : {home_odds} vs {away_odds}")
+                break
+
+            if ((home_odds.lower() == home_team_espn.lower() or away_odds.lower() == home_team_espn.lower()) and 
+                (home_odds.lower() == away_team_espn.lower() or away_odds.lower() == away_team_espn.lower())):
+                target_match = match
+                print(f"✅ Match trouvé avec noms ESPN : {home_odds} vs {away_odds}")
+                break
+
+        if not target_match:
+            print(f"❌ Match non trouvé dans les cotes : {home_team_api} vs {away_team_api}")
+            return None
+
+        # ✅ Choix du bookmaker (priorité 1xBet, puis Betclic, sinon premier dispo)
+        bookmaker = next((b for b in target_match['bookmakers'] if b['title'].lower() == "1xbet"), None)
+        if not bookmaker:
+            bookmaker = next((b for b in target_match['bookmakers'] if b['title'].lower() == "betclic"), None)
+        if not bookmaker and target_match['bookmakers']:
+            bookmaker = target_match['bookmakers'][0]
+
+        if not bookmaker:
+            print(f"⚠️ Aucun bookmaker disponible pour ce match")
+            return None
+
+        print(f"🏢 Bookmaker utilisé : {bookmaker['title']}")
+
+        odds_data = {
+            "bookmaker": bookmaker['title'],
+            "h2h": {},
+            "totals": {}
+        }
+
+        for market in bookmaker['markets']:
+            if market['key'] == "h2h":
+                print("🎯 Marché : 1X2")
+                for outcome in market['outcomes']:
+                    odds_data['h2h'][outcome['name']] = outcome['price']
+                    print(f"    ➤ {outcome['name']} : Cote {outcome['price']}")
+            elif market['key'] == "totals":
+                print("🎯 Marché : Total 2.5 (Over/Under)")
+                for outcome in market['outcomes']:
+                    odds_data['totals'][outcome['name']] = outcome['price']
+                    print(f"    ➤ {outcome['name']} : Cote {outcome['price']}")
+
+        return odds_data
+
+    except Exception as e:
+        print(f"❌ Erreur lors de la récupération des cotes : {e}")
+        return None
+
+# 🔧 Classe réutilisable de scraping de classement (VERSION AMÉLIORÉE)
 class ClassementScraper:
     def __init__(self, url):
         self.url = url
         self.headers = {'User-Agent': 'Mozilla/5.0'}
         self.teams_positions = {}
+        self.full_standings = []  # Nouveau : stockage du classement complet
 
     def scrape_table(self):
         try:
             response = requests.get(self.url, headers=self.headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-            rows = soup.find_all('tr', class_='Table__TR')
-
-            for row in rows:
-                pos_tag = row.find('span', class_='team-position')
-                team_tag = row.find('span', class_='hide-mobile')
-                if pos_tag and team_tag:
-                    position = int(pos_tag.text.strip())
-                    team_name = team_tag.text.strip()
-                    self.teams_positions[team_name.lower()] = (position, team_name)
+            
+            # 1. Extraire les noms d'équipes
+            team_divs = soup.select('.team-link .hide-mobile a')
+            team_names = [tag.text.strip() for tag in team_divs]
+            
+            # 2. Extraire les points (8e cellule de chaque ligne dans le 2e tableau)
+            stat_rows = soup.select('.Table__Scroller .Table__TBODY > tr')
+            team_points = []
+            
+            for row in stat_rows:
+                cells = row.find_all("td")
+                if len(cells) >= 8:
+                    try:
+                        points = int(cells[7].text.strip())
+                    except ValueError:
+                        points = None
+                    team_points.append(points)
+            
+            # 3. Combiner équipes + points et créer le dictionnaire de positions
+            teams_data = list(zip(team_names, team_points))
+            
+            print(f"🏆 Classement extrait de {self.url}:")
+            for i, (team, pts) in enumerate(teams_data, start=1):
+                if team and pts is not None:
+                    self.teams_positions[team.lower()] = (i, team, pts)
+                    self.full_standings.append({
+                        "position": i,
+                        "team": team,
+                        "points": pts
+                    })
+                    print(f"  {i}. {team}: {pts} points")
 
         except Exception as e:
             print(f"❌ Erreur scraping classement : {e}")
@@ -2044,170 +2459,45 @@ class ClassementScraper:
         # Utiliser le mapping pour convertir le nom API vers le nom ESPN
         mapped_team_name = team_name_mapping.get(team_query, team_query)
         
-        for key, (position, full_name) in self.teams_positions.items():
-            if mapped_team_name.lower() in key:
-                return position, full_name
-        return None, None
+        # Recherche exacte d'abord
+        if mapped_team_name.lower() in self.teams_positions:
+            return self.teams_positions[mapped_team_name.lower()]
+        
+        # Recherche partielle ensuite
+        for key, (position, full_name, points) in self.teams_positions.items():
+            if mapped_team_name.lower() in key or key in mapped_team_name.lower():
+                return position, full_name, points
+        return None, None, None
 
-# 🧠 Fonction utilitaire get_team_classement_position
+    def get_full_standings(self):
+        """Retourne le classement complet"""
+        return self.full_standings
+
+# 🧠 Fonction utilitaire get_team_classement_position (modifiée pour retourner le classement complet)
 def get_team_classement_position(country, league, team_name):
-    url = classement_ligue_mapping.get(country, {}).get(league)
-    if not url:
-        return None, None
+    league_info = classement_ligue_mapping.get(country, {}).get(league)
+    if not league_info:
+        print(f"⚠️ Informations de ligue introuvables pour {country} - {league}")
+        return None, None, None, []
+    
+    url = league_info["url"]
+    odds_id = league_info["odds_id"]
+    
+    print(f"🔍 Recherche classement pour {team_name} dans {country} - {league} (odds_id: {odds_id})")
     scraper = ClassementScraper(url)
     scraper.scrape_table()
+    
     # Utiliser le mapping pour convertir le nom API vers le nom ESPN
     mapped_team_name = team_name_mapping.get(team_name, team_name)
-    return scraper.get_position(mapped_team_name)
-
-# ----------- ✅ NOUVEAU PROMPT & FONCTION IA -----------
-def generate_ai_analysis(pred_obj, t1, t2, adj1, adj2, forme1, forme2, bonus, facteur, method, bonus_serie_domicile=0.0, bonus_serie_exterieur=0.0):
-    prompt = f"""
-Match : {pred_obj['HomeTeam']} vs {pred_obj['AwayTeam']}
-Date : {pred_obj['date']}
-Compétition : {pred_obj['league']}
-Classement actuel :
-- {pred_obj['HomeTeam']} : {pred_obj.get('classement_home', 'N/A')}ᵉ
-- {pred_obj['AwayTeam']} : {pred_obj.get('classement_away', 'N/A')}ᵉ
-
-Score estimé : {pred_obj['score_prediction']} par le système de base
-
-📊 Statistiques :
-- Moy. buts marqués : {t1['moyenne_marques']:.2f} ({t1['nom']}), {t2['moyenne_marques']:.2f} ({t2['nom']})
-- Moy. encaissés : {t1['moyenne_encaisses']:.2f} / {t2['moyenne_encaisses']:.2f}
-- Tendance pondérée : {t1['trend_scored']:.2f}-{t1['trend_conceded']:.2f} / {t2['trend_scored']:.2f}-{t2['trend_conceded']:.2f}
-- Forme récente : {t1['recent_form']} vs {t2['recent_form']}
-- Série à domicile : {'-'.join(t1.get('serie_domicile', [])) or 'N/A'}
-- Série à l'extérieur : {'-'.join(t2.get('serie_exterieur', [])) or 'N/A'}
-- Bonus série domicile/ext. : {bonus_serie_domicile:+.2f} / {bonus_serie_exterieur:+.2f}
-- Ajustement forme & tendance : {forme1:+.2f} / {adj1:+.2f} ({t1['nom']}), {forme2:+.2f} / {adj2:+.2f} ({t2['nom']})
-- Bonus défenses faibles : {'Oui' if bonus > 0 else 'Non'}
-- Facteur offensif : x{facteur:.2f}
-- Méthode d'ajustement défensif : {method}
-
-📈 Probabilités Poisson :
-- Victoire {pred_obj['HomeTeam']}: {pred_obj['poisson_probabilities']['win1']}%
-- Nul : {pred_obj['poisson_probabilities']['draw']}%
-- Victoire {pred_obj['AwayTeam']}: {pred_obj['poisson_probabilities']['win2']}%
-- Over 1.5 : {pred_obj['poisson_probabilities']['over15']}%
-- Under 3.5 : {pred_obj['poisson_probabilities']['under35']}%
-- Les deux marquent : {pred_obj['poisson_probabilities']['btts']}%
-
-🎯 Tâche :
-Tu dois proposer **la prédiction la plus sûre possible** à partir de ces données(rien en dehors des données du prompt) et réponds stricte en français même ton raisonnement en français ne fais rien en anglais.  
-❌ Ignore totalement la prédiction précédente et les probabilités poisson .  
-✅ Choisis **une seule prédiction finale**, parmi cette liste :
-
-- Victoire équipe 1
-- Victoire ou nul équipe 1
-- Victoire équipe 2
-- Victoire ou nul équipe 2
-- Les deux équipes marquent
-- +1.5 buts dans le match 
-- -3.5 buts dans le match 
-
-⚠️ **Ce match sera utilisé dans un pari combiné.**
-🧠les formes récentes sont dans l'ordre décroissant du plus récent au moins récent.
-💡 Ton objectif est de **minimiser les risques de perte**, même si la cote est plus basse.  
-🧠 Analyse les forces/faiblesses, les formes,le classement, les buts, le contexte et les probabilités pour choisir **la meilleure option de sécurité**.
-
-Réponds en **français**, de manière **claire, directe et justifiée**.Jamais autre langue que le français.
-"""
-    selected_key = next(GROQ_KEY_CYCLE)
-    headers = {
-        "Authorization": f"Bearer {selected_key}",
-        "Content-Type": "application/json"
-    }
-    body = {
-        "model": "deepseek-r1-distill-llama-70b",
-        "messages": [
-            {"role": "system", "content": "Tu es un expert français en analyse de données sportives et paris. Tu disposes de toutes les statistiques détaillées du match pour faire la meilleure prédiction possible."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.7,
-        "max_tokens": 3000
-    }
-    try:
-        response = requests.post(
-            "https://api.groq.com/openai/v1/chat/completions",
-            headers=headers,
-            json=body
-        )
-        response.raise_for_status()
-        content = response.json()["choices"][0]["message"]["content"]
-        return content
-    except Exception as e:
-        print(f"❌ Erreur IA Groq : {e}")
-        return "Erreur IA - Données insuffisantes pour l'analyse"
-# ----------- ✅ FIN NOUVEAU PROMPT & IA -----------
-
-def choisir_methode_ajustement(t1, t2):
-    ecart_def = abs(t1['moyenne_encaisses'] - t2['moyenne_encaisses'])
-    if ecart_def >= 0.6:
-        return "asym"
+    position, full_name, points = scraper.get_position(mapped_team_name)
+    full_standings = scraper.get_full_standings()
+    
+    if position:
+        print(f"✅ {full_name} trouvé à la position {position} avec {points} points")
     else:
-        return "continuous"
-
-def poisson_pmf(k, lmbda):
-    return math.exp(-lmbda) * (lmbda ** k) / math.factorial(k)
-
-def poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=5):
-    probabilities = {}
-    for home_goals in range(0, max_goals + 1):
-        for away_goals in range(0, max_goals + 1):
-            prob = poisson_pmf(home_goals, lmbda_home) * poisson_pmf(away_goals, lmbda_away)
-            probabilities[(home_goals, away_goals)] = prob
-    residual_home = 1 - sum(poisson_pmf(i, lmbda_home) for i in range(0, max_goals + 1))
-    residual_away = 1 - sum(poisson_pmf(i, lmbda_away) for i in range(0, max_goals + 1))
-    if residual_home > 0 or residual_away > 0:
-        probabilities[(max_goals, max_goals)] += residual_home * residual_away
-    return probabilities
-
-def poisson_issues(probabilities):
-    win1 = sum(p for (h, a), p in probabilities.items() if h > a)
-    win2 = sum(p for (h, a), p in probabilities.items() if h < a)
-    draw = sum(p for (h, a), p in probabilities.items() if h == a)
-    over15 = sum(p for (h, a), p in probabilities.items() if h + a > 1)
-    over25 = sum(p for (h, a), p in probabilities.items() if h + a > 2)
-    under35 = sum(p for (h, a), p in probabilities.items() if h + a < 4)
-    btts = sum(p for (h, a), p in probabilities.items() if h > 0 and a > 0)
-    return {
-        "win1": win1,
-        "draw": draw,
-        "win2": win2,
-        "over15": over15,
-        "over25": over25,
-        "under35": under35,
-        "btts": btts
-    }
-
-def get_top_poisson_scores(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
-    probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals)
-    sorted_probs = sorted(probabilities.items(), key=lambda x: x[1], reverse=True)[:n_top]
-    top_scores = []
-    for (h, a), p in sorted_probs:
-        top_scores.append({
-            "score": f"{name1} {h}-{a} {name2}",
-            "probability": round(p * 100, 2)
-        })
-    return top_scores
-
-def print_poisson_probabilities(lmbda_home, lmbda_away, name1, name2, max_goals=5, n_top=5):
-    probabilities = poisson_score_probabilities(lmbda_home, lmbda_away, max_goals=max_goals)
-    sorted_probs = sorted(probabilities.items(), key=lambda x: x[1], reverse=True)[:n_top]
-    print("\n📊 Scores les plus probables (modèle Poisson):")
-    for (h, a), p in sorted_probs:
-        print(f"Score {name1} {h}-{a} {name2} : {p*100:.2f}%")
-    issues = poisson_issues(probabilities)
-    print(f"\n✅ Probabilités Poisson cumulées :")
-    print(f"Victoire {name1}: {issues['win1']*100:.2f}%")
-    print(f"Match nul   : {issues['draw']*100:.2f}%")
-    print(f"Victoire {name2}: {issues['win2']*100:.2f}%")
-    print(f"+1.5 buts : {issues['over15']*100:.2f}%")
-    print(f"+2.5 buts : {issues['over25']*100:.2f}%")
-    print(f"-3.5 buts : {issues['under35']*100:.2f}%")
-    print(f"Les deux équipes marquent : {issues['btts']*100:.2f}%")
-    return probabilities, issues
+        print(f"❌ {team_name} (mappé: {mapped_team_name}) non trouvé dans le classement")
+    
+    return position, full_name, points, full_standings
 
 def get_espn_name(api_team_name):
     mapped = team_name_mapping.get(api_team_name, api_team_name)
@@ -2226,6 +2516,54 @@ def format_date_fr(date_str, time_str):
         return f"{dt.day} {mois} {dt.year} à {dt.strftime('%H:%M:%S')} UTC"
     except Exception as e:
         return f"{date_str} à {time_str}:00 UTC"
+
+# 🆚 Fonction pour récupérer les confrontations directes de la saison passée (ÉLARGIE À TOUS LES CHAMPIONNATS)
+def get_h2h_confrontations(home_team_espn, away_team_espn):
+    """
+    Récupère les confrontations directes de la saison passée depuis plusieurs fichiers JSON
+    (Premier League, La Liga, Bundesliga, etc.)
+    """
+    fichiers_h2h = [
+        {"file": "P_league.json", "name": "Premier League"},
+        {"file": "laliga.json", "name": "La Liga"},
+        {"file": "bundesliga.json", "name": "Bundesliga"}
+    ]
+    
+    confrontations = []
+    
+    for fichier_info in fichiers_h2h:
+        fichier = fichier_info["file"]
+        nom_championnat = fichier_info["name"]
+        
+        if not os.path.exists(fichier):
+            print(f"⚠️ Fichier {fichier} ({nom_championnat}) non trouvé")
+            continue
+        
+        try:
+            with open(fichier, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            
+            matchs_trouvés = 0
+            # Parcourir tous les matchs dans le fichier JSON
+            for match in data:
+                team1 = match.get("team1", "")
+                team2 = match.get("team2", "")
+                
+                # Vérifier si les deux équipes correspondent (dans un sens ou l'autre)
+                if ((team1 == home_team_espn and team2 == away_team_espn) or 
+                    (team1 == away_team_espn and team2 == home_team_espn)):
+                    match["source"] = nom_championnat  # Ajouter la source du championnat
+                    confrontations.append(match)
+                    matchs_trouvés += 1
+            
+            if matchs_trouvés > 0:
+                print(f"🆚 {matchs_trouvés} confrontation(s) trouvée(s) dans {nom_championnat}")
+        
+        except Exception as e:
+            print(f"❌ Erreur lors de la lecture de {fichier} ({nom_championnat}) : {e}")
+    
+    print(f"🆚 Total : {len(confrontations)} confrontation(s) directe(s) trouvée(s) pour {home_team_espn} vs {away_team_espn}")
+    return confrontations
 
 def get_today_matches_filtered():
     today = datetime.now().strftime('%Y-%m-%d')
@@ -2267,7 +2605,7 @@ def get_today_matches_filtered():
                     team2_stats = process_team(away_api, return_data=True)
                     if team1_stats: team1_stats['nom'] = home_espn
                     if team2_stats: team2_stats['nom'] = away_espn
-                    compare_teams_and_predict_score(
+                    compare_teams_basic_stats(
                         team1_stats, team2_stats, home_api, away_api, date, time, league, country,
                         logo_home=logo_home, logo_away=logo_away, résultats=résultats
                     )
@@ -2281,8 +2619,8 @@ def get_today_matches_filtered():
                     else:
                         FAILED_TEAMS.add(away_api)
         if résultats:
-            sauvegarder_prediction_json_complete(résultats, [], today)
-            fichier = f"prédiction-{today}-analyse-ia.json"
+            sauvegarder_stats_brutes_json(résultats, today)
+            fichier = f"stats-brutes-{today}.json"
             git_commit_and_push(fichier)
         if FAILED_TEAMS:
             save_failed_teams_json(FAILED_TEAMS, today)
@@ -2325,101 +2663,10 @@ def extract_goals(team_name, score, team1, team2):
         return away_score, home_score, False
     return None, None, None
 
-def analyze_weighted_trends(match_data, team_name, return_values=False):
-    if len(match_data) < 6:
-        print("\n⚠️ Pas assez de données pour la tendance pondérée.")
-        if return_values:
-            return 0.0, 0.0
-        return
-    poids = [0.5, 0.6, 0.7, 1.0, 1.2, 1.5]
-    scored, conceded = 0.0, 0.0
-    total_poids = 0.0
-    data = match_data[-6:]
-    for idx, (_, team1, team2, _, score, _) in enumerate(data):
-        buts_m, buts_e, _ = extract_goals(team_name, score, team1, team2)
-        if buts_m is not None and buts_e is not None:
-            p = poids[idx]
-            scored += buts_m * p
-            conceded += buts_e * p
-            total_poids += p
-    avg_scored = scored / total_poids if total_poids else 0.0
-    avg_conceded = conceded / total_poids if total_poids else 0.0
-
-    print("\n📊 Tendance pondérée (poids croissants sur 6 matchs) :")
-    print(f"   ⚽ Moyenne mobile buts marqués   : {avg_scored:.2f}")
-    print(f"   🛡️ Moyenne mobile buts encaissés : {avg_conceded:.2f}")
-
-    if return_values:
-        return avg_scored, avg_conceded
-
-def get_streak_bonus(recent_form):
-    streak_bonus = 0
-    streak_malus = 0
-    count_win = 0
-    count_lose = 0
-    for r in recent_form:
-        if r == 'W':
-            count_win += 1
-            if count_lose >= 2:
-                streak_malus -= (count_lose - 1)
-            count_lose = 0
-        elif r == 'L':
-            count_lose += 1
-            if count_win >= 2:
-                streak_bonus += (count_win - 1)
-            count_win = 0
-        else:
-            if count_win >= 2:
-                streak_bonus += (count_win - 1)
-            if count_lose >= 2:
-                streak_malus -= (count_lose - 1)
-            count_win = 0
-            count_lose = 0
-    if count_win >= 2:
-        streak_bonus += (count_win - 1)
-    if count_lose >= 2:
-        streak_malus -= (count_lose - 1)
-    return streak_bonus + streak_malus
-
-def calcul_ajustement_automatique_serie(serie):
-    """
-    Calcule un ajustement automatique en fonction des plus longues séries de victoires/défaites.
-    Bonus max = +0.5 | Malus max = -0.5
-    """
-    if not serie:
-        return 0.0
-
-    streak = 0
-    current = None
-    max_wins = 0
-    max_losses = 0
-
-    for r in serie:
-        if r == current:
-            streak += 1
-        else:
-            current = r
-            streak = 1
-
-        if r == 'W':
-            max_wins = max(max_wins, streak)
-        elif r == 'L':
-            max_losses = max(max_losses, streak)
-
-    bonus = 0.05 * max_wins   # ex: 4 victoires = +0.20
-    malus = -0.05 * max_losses  # ex: 3 défaites = -0.15
-
-    bonus = min(bonus, 0.5)
-    malus = max(malus, -0.5)
-
-    return bonus + malus
-
 def get_form_points(recent_form):
     points_map = {'W': 3, 'D': 1, 'L': 0}
     total = sum(points_map.get(r, 0) for r in recent_form)
-    ratio = total / (len(recent_form)*3) if recent_form else 0
-    momentum = get_streak_bonus(recent_form)
-    return total, ratio, momentum
+    return total
 
 def scrape_team_data(team_name, action):
     espn_team_name = get_espn_name(team_name)
@@ -2434,7 +2681,8 @@ def scrape_team_data(team_name, action):
         soup = BeautifulSoup(response.text, 'html.parser')
         matches = soup.find_all('tr', class_='Table__TR')
         valid_results = []
-        recent_form = []
+        form_6 = []
+        form_10 = []
         buts_dom_marques = 0
         buts_dom_encaisses = 0
         buts_ext_marques = 0
@@ -2454,10 +2702,12 @@ def scrape_team_data(team_name, action):
             score = match.find('span').text.strip() if match.find('span') else "N/A"
             status = match.find_all('a', class_='AnchorLink')[-1].text.strip() if match.find_all('a', 'AnchorLink') else "N/A"
             if all(val != "N/A" for val in [date_text, team1, team2, score]):
-                valid_results.append((date_text, team1, team2, competition, score, status))
+                valid_results.append([date_text, team1, team2, competition, score, status])  # ✅ Changé en liste
                 result = get_match_result_for_team(espn_team_name, score, team1, team2)
                 if result:
-                    recent_form.append(result)
+                    form_10.append(result)
+                    if len(form_6) < 6:
+                        form_6.append(result)
 
                     # 🔄 Ajout dans la bonne série - utiliser le mapping
                     mapped_team1 = team_name_mapping.get(team1, team1)
@@ -2476,7 +2726,7 @@ def scrape_team_data(team_name, action):
                     else:
                         buts_ext_marques += buts_m
                         buts_ext_encaisses += buts_e
-            if len(valid_results) >= 6:
+            if len(valid_results) >= 10:
                 break
         nb_matchs = len(valid_results)
         if nb_matchs == 0:
@@ -2488,9 +2738,12 @@ def scrape_team_data(team_name, action):
         print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} :")
         for result in valid_results:
             print(" | ".join(result))
-        points_map = {'W': 3, 'D': 1, 'L': 0}
-        total_points = sum(points_map.get(r, 0) for r in recent_form)
-        print(f"\n📊 Forme récente (6 derniers matchs) : {' '.join(recent_form)} (Total points : {total_points})")
+        
+        total_points_6 = get_form_points(form_6)
+        total_points_10 = get_form_points(form_10[:10])  # sécurité si <10
+        
+        print(f"\n📊 Forme courte (6 derniers matchs) : {' '.join(form_6)} (Total points : {total_points_6})")
+        print(f"📊 Forme longue (10 derniers matchs) : {' '.join(form_10[:10])} (Total points : {total_points_10})")
         print(f"⚽ Buts marqués à domicile : {buts_dom_marques}")
         print(f"⚽ Buts encaissés à domicile : {buts_dom_encaisses}")
         print(f"⚽ Buts marqués à l'extérieur : {buts_ext_marques}")
@@ -2499,344 +2752,36 @@ def scrape_team_data(team_name, action):
         print(f"🛡️ Total buts encaissés : {total_encaisses}")
         print(f"\n📈 Moyenne buts marqués par match : {total_marques / nb_matchs:.2f}")
         print(f"📉 Moyenne buts encaissés par match : {total_encaisses / nb_matchs:.2f}")
-        avg_trend_scored, avg_trend_conceded = analyze_weighted_trends(valid_results, espn_team_name, return_values=True)
 
-        # 💡 BONUS : Affichage des séries
+        # 💡 Affichage des séries
         print(f"🏠 Série domicile : {'-'.join(serie_domicile)}")
         print(f"✈️ Série extérieur : {'-'.join(serie_exterieur)}")
 
         return {
-            "matches": valid_results,
+            "matches": valid_results,  # ✅ Maintenant c'est une liste de listes
             "moyenne_marques": total_marques / nb_matchs,
             "moyenne_encaisses": total_encaisses / nb_matchs,
-            "recent_form": recent_form,
-            "trend_scored": avg_trend_scored,
-            "trend_conceded": avg_trend_conceded,
+            "form_6": form_6,
+            "form_10": form_10[:10],
+            "recent_form": form_6,  # compatibilité avec l'ancien code
             "serie_domicile": serie_domicile,
-            "serie_exterieur": serie_exterieur
+            "serie_exterieur": serie_exterieur,
+            "buts_dom_marques": buts_dom_marques,
+            "buts_dom_encaisses": buts_dom_encaisses,
+            "buts_ext_marques": buts_ext_marques,
+            "buts_ext_encaisses": buts_ext_encaisses,
+            "total_marques": total_marques,
+            "total_encaisses": total_encaisses,
+            "total_points_6": total_points_6,
+            "total_points_10": total_points_10,
+            "total_points": total_points_6  # compatibilité avec l'ancien code
         }
     except Exception as e:
         print(f"Erreur scraping {espn_team_name} ({action}) : {e}")
         FAILED_TEAMS.add(team_name)
         return []
 
-def confidence_total(total_pred):
-    diff = abs(total_pred - 3)
-    if diff >= 1.5:
-        return 90
-    elif diff >= 1.0:
-        return 80
-    elif diff >= 0.7:
-        return 75
-    elif diff >= 0.4:
-        return 65
-    else:
-        return 55
-
-def confidence_btts(pred_t1, pred_t2, t1, t2):
-    if (
-        pred_t1 >= 1.2 and pred_t2 >= 1.2 and
-        t1['moyenne_encaisses'] >= 1.0 and
-        t2['moyenne_encaisses'] >= 1.0
-    ):
-        def_ok_1 = t1['moyenne_encaisses'] >= 1.0
-        def_ok_2 = t2['moyenne_encaisses'] >= 1.0
-        if def_ok_1 and def_ok_2:
-            return 85
-        elif def_ok_1 or def_ok_2:
-            return 75
-        else:
-            return 65
-    return 0
-
-def confidence_victory(diff, adj, forme):
-    if diff >= 2.0:
-        return 90
-    elif diff >= 1.5:
-        return 80
-    elif diff >= 1.0:
-        return 60 + int((diff-1.0)*20)
-    else:
-        return 0
-
-def confidence_win_or_draw(diff, adj, forme):
-    if diff >= 1.0:
-        conf = 75 + int(min((diff-1.0)*10, 15))
-        conf += int(abs(adj)*10) + int(abs(forme)*10)
-        return min(conf, 90)
-    elif 0.1 < diff < 0.7:
-        conf = 60 + int(30 * (diff-0.1)/0.6)
-        conf += int(abs(adj)*10) + int(abs(forme)*10)
-        return min(conf, 90)
-    return 0
-
-def count_defeats(recent_form):
-    return sum(1 for r in recent_form if r == 'L')
-
-def compute_indice_forme(t, forme_adj, adj):
-    return (
-        0.4 * (t['moyenne_marques'] - t['moyenne_encaisses']) +
-        0.3 * forme_adj +
-        0.3 * (adj)
-    )
-
-def apply_weak_defense_bonus(pred_t1, pred_t2, t1, t2):
-    SEUIL_DEFENSE_FAIBLE = 1.5
-    nom1 = t1.get('nom', 'Équipe 1')
-    nom2 = t2.get('nom', 'Équipe 2')
-    defense_faible_t1 = t1['moyenne_encaisses'] >= SEUIL_DEFENSE_FAIBLE
-    defense_faible_t2 = t2['moyenne_encaisses'] >= SEUIL_DEFENSE_FAIBLE
-    bonus_applied = 0
-
-    if defense_faible_t1 and defense_faible_t2:
-        bonus = 0.3
-        pred_t1 += bonus
-        pred_t2 += bonus
-        bonus_applied = bonus
-        print(f"🚨 Bonus défenses faibles appliqué : +{bonus} but pour chaque équipe ({nom1}, {nom2})")
-    elif defense_faible_t1:
-        bonus = 0.2
-        pred_t2 += bonus
-        bonus_applied = bonus
-        print(f"🚨 Bonus défense faible {nom1} : +{bonus} but pour {nom2}")
-    elif defense_faible_t2:
-        bonus = 0.2
-        pred_t1 += bonus
-        bonus_applied = bonus
-        print(f"🚨 Bonus défense faible {nom2} : +{bonus} but pour {nom1}")
-
-    return pred_t1, pred_t2, bonus_applied
-
-def calculate_match_offensive_factor(t1, t2):
-    moyenne_encaisse_combinee = (t1['moyenne_encaisses'] + t2['moyenne_encaisses']) / 2
-    if moyenne_encaisse_combinee >= 2.0:
-        facteur = 1.4
-        print(f"🔥 Match à fort potentiel offensif (facteur: {facteur})")
-    elif moyenne_encaisse_combinee >= 1.5:
-        facteur = 1.2
-        print(f"⚡ Match avec potentiel offensif modéré (facteur: {facteur})")
-    elif moyenne_encaisse_combinee >= 1.0:
-        facteur = 1.1
-        print(f"📈 Match équilibré offensivement (facteur: {facteur})")
-    else:
-        facteur = 1.0
-        print(f"🛡️ Match défensif attendu (facteur: {facteur})")
-    return facteur
-
-def is_undefeated_home(team, team_name):
-    last_matches = team.get('matches', [])
-    count = 0
-    # Utiliser le mapping pour les comparaisons
-    mapped_team_name = team_name_mapping.get(team_name, team_name)
-    for m in last_matches:
-        mapped_m1 = team_name_mapping.get(m[1], m[1])
-        is_home = (mapped_m1 == mapped_team_name)
-        res = get_match_result_for_team(team_name, m[4], m[1], m[2])
-        if is_home and res in ('W', 'D'):
-            count += 1
-        if count >= 3:
-            return True
-    return False
-
-def has_no_home_defeat(team, team_name):
-    last_matches = team.get('matches', [])[:6]
-    # Utiliser le mapping pour les comparaisons
-    mapped_team_name = team_name_mapping.get(team_name, team_name)
-    for m in last_matches:
-        mapped_m1 = team_name_mapping.get(m[1], m[1])
-        is_home = (mapped_m1 == mapped_team_name)
-        res = get_match_result_for_team(team_name, m[4], m[1], m[2])
-        if is_home and res == 'L':
-            return False
-    return True
-
-def has_no_away_win_in_5(team, team_name):
-    last_matches = team.get('matches', [])[:5]
-    count = 0
-    # Utiliser le mapping pour les comparaisons
-    mapped_team_name = team_name_mapping.get(team_name, team_name)
-    for m in last_matches:
-        mapped_m2 = team_name_mapping.get(m[2], m[2])
-        is_away = (mapped_m2 == mapped_team_name)
-        res = get_match_result_for_team(team_name, m[4], m[1], m[2])
-        if is_away and res == 'W':
-            return False
-        if is_away:
-            count += 1
-        if count >= 5:
-            break
-    return count == 5
-
-def away_wins_count(team, team_name):
-    last_matches = team.get('matches', [])[:6]
-    count = 0
-    # Utiliser le mapping pour les comparaisons
-    mapped_team_name = team_name_mapping.get(team_name, team_name)
-    for m in last_matches:
-        mapped_m2 = team_name_mapping.get(m[2], m[2])
-        is_away = (mapped_m2 == mapped_team_name)
-        res = get_match_result_for_team(team_name, m[4], m[1], m[2])
-        if is_away and res == 'W':
-            count += 1
-    return count
-
-def has_two_games_no_goal(team, team_name):
-    matches = team.get('matches', [])[:2]
-    for m in matches:
-        buts, _, _ = extract_goals(team_name, m[4], m[1], m[2])
-        if buts and buts > 0:
-            return False
-    return len(matches) == 2
-
-def determine_optimal_prediction(pred_t1, pred_t2, t1, t2, name1, name2, indice_forme_t1, indice_forme_t2, defeats_t1, defeats_t2, adj1, adj2, forme_adj1, forme_adj2):
-    total_pred = pred_t1 + pred_t2
-    diff_indice_forme = abs(indice_forme_t1 - indice_forme_t2)
-    both_at_least_3_defeats = (defeats_t1 >= 3 and defeats_t2 >= 3)
-
-    if both_at_least_3_defeats and diff_indice_forme < 1.2:
-        print("🛑 Blocage : match trop instable, aucune prédiction proposée.")
-        return "⚠️ Trop de défaites récentes, match instable à éviter", 55
-
-    predictions_candidates = []
-
-    conf_total = confidence_total(total_pred)
-    if total_pred >= 2.8:
-        predictions_candidates.append({
-            "prediction": "+1.5 buts",
-            "confidence": conf_total,
-            "type": "total"
-        })
-    elif total_pred <= 2.3:
-        predictions_candidates.append({
-            "prediction": "-3.5 buts",
-            "confidence": conf_total,
-            "type": "total"
-        })
-    else:
-        predictions_candidates.append({
-            "prediction": "+1.5 buts",
-            "confidence": conf_total,
-            "type": "total"
-        })
-
-    conf_btts = confidence_btts(pred_t1, pred_t2, t1, t2)
-    if conf_btts > 0:
-        if not (has_two_games_no_goal(t1, name1) or has_two_games_no_goal(t2, name2)):
-            predictions_candidates.append({
-                "prediction": "Les deux équipes marquent",
-                "confidence": conf_btts,
-                "type": "btts"
-            })
-
-    if diff_indice_forme < 0.3 and defeats_t1 >= 2 and defeats_t2 >= 2:
-        predictions_candidates.append({
-            "prediction": "⚠️ Match très équilibré, à éviter",
-            "confidence": 60,
-            "type": "avoid"
-        })
-    else:
-        if indice_forme_t1 > indice_forme_t2:
-            conf_draw = confidence_win_or_draw(diff_indice_forme, adj1, forme_adj1)
-            conf_vic = confidence_victory(diff_indice_forme, adj1, forme_adj1)
-
-            if 0.1 < diff_indice_forme < 0.7:
-                victoire_pred = f"Victoire ou nul {name1}"
-                conf_pred = conf_draw
-            elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
-                victoire_pred = f"Victoire {name1}"
-                conf_pred = conf_vic
-            elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
-                victoire_pred = f"Victoire ou nul {name1}"
-                conf_pred = conf_draw
-            else:
-                victoire_pred = None
-                conf_pred = 0
-
-            if victoire_pred and victoire_pred == f"Victoire {name1}" and name1 != name2:
-                if is_undefeated_home(t1, name1):
-                    victoire_pred = f"Victoire ou nul {name1}"
-                    conf_pred = min(conf_pred, 75)
-                elif has_no_away_win_in_5(t1, name1):
-                    victoire_pred = f"Victoire ou nul {name1}"
-                    conf_pred = min(conf_pred, 75)
-
-            if victoire_pred and conf_pred > 0:
-                predictions_candidates.append({
-                    "prediction": victoire_pred,
-                    "confidence": conf_pred,
-                    "type": "victory"
-                })
-
-        elif indice_forme_t2 > indice_forme_t1:
-            conf_draw = confidence_win_or_draw(diff_indice_forme, adj2, forme_adj2)
-            conf_vic = confidence_victory(diff_indice_forme, adj2, forme_adj2)
-
-            if 0.1 < diff_indice_forme < 0.7:
-                victoire_pred = f"Victoire ou nul {name2}"
-                conf_pred = conf_draw
-            elif diff_indice_forme >= 1.0 and not both_at_least_3_defeats:
-                victoire_pred = f"Victoire {name2}"
-                conf_pred = conf_vic
-            elif diff_indice_forme >= 1.0 and both_at_least_3_defeats:
-                victoire_pred = f"Victoire ou nul {name2}"
-                conf_pred = conf_draw
-            else:
-                victoire_pred = None
-                conf_pred = 0
-
-            if victoire_pred and victoire_pred == f"Victoire {name2}" and name1 != name2:
-                if is_undefeated_home(t1, name1):
-                    victoire_pred = f"Victoire ou nul {name2}"
-                    conf_pred = min(conf_pred, 75)
-                elif has_no_away_win_in_5(t2, name2):
-                    victoire_pred = f"Victoire ou nul {name2}"
-                    conf_pred = min(conf_pred, 75)
-
-            if victoire_pred and conf_pred > 0:
-                predictions_candidates.append({
-                    "prediction": victoire_pred,
-                    "confidence": conf_pred,
-                    "type": "victory"
-                })
-
-    if predictions_candidates:
-        best_prediction = max(predictions_candidates, key=lambda x: x['confidence'])
-        return best_prediction["prediction"], best_prediction["confidence"]
-    else:
-        return None, 0
-
-def calculate_defensive_reduction(avg_conceded):
-    if avg_conceded >= 1.0:
-        return 0.0
-    return round((1.0 - avg_conceded) * 0.3, 3)
-
-def apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2):
-    if DEFENSE_ADJUST_METHOD == "asym":
-        defense_threshold = 0.9
-        if t1['moyenne_encaisses'] < defense_threshold and t2['moyenne_encaisses'] >= defense_threshold:
-            reduction_pct = 0.20
-            print(f"🛡️ {name1} a une défense solide ➤ réduction de 20% sur le score estimé de {name2}")
-            pred_t2 *= (1 - reduction_pct)
-        elif t2['moyenne_encaisses'] < defense_threshold and t1['moyenne_encaisses'] >= defense_threshold:
-            reduction_pct = 0.20
-            print(f"🛡️ {name2} a une défense solide ➤ réduction de 20% sur le score estimé de {name1}")
-            pred_t1 *= (1 - reduction_pct)
-        elif t1['moyenne_encaisses'] < defense_threshold and t2['moyenne_encaisses'] < defense_threshold:
-            print(f"🛡️ Les deux équipes ont une défense solide ➤ réduction de 15% sur chaque score")
-            pred_t1 *= 0.85
-            pred_t2 *= 0.85
-    elif DEFENSE_ADJUST_METHOD == "continuous":
-        reduction_pct_t1 = calculate_defensive_reduction(t1['moyenne_encaisses'])
-        reduction_pct_t2 = calculate_defensive_reduction(t2['moyenne_encaisses'])
-        if reduction_pct_t1 > 0:
-            print(f"🛡️ Réduction continue appliquée ➤ {name2} réduit de {int(reduction_pct_t1 * 100)}%")
-            pred_t2 *= (1 - reduction_pct_t1)
-        if reduction_pct_t2 > 0:
-            print(f"🛡️ Réduction continue appliquée ➤ {name1} réduit de {int(reduction_pct_t2 * 100)}%")
-            pred_t1 *= (1 - reduction_pct_t2)
-    return pred_t1, pred_t2
-
-def compare_teams_and_predict_score(
+def compare_teams_basic_stats(
     t1, t2, name1, name2, match_date="N/A", match_time="N/A",
     league="N/A", country="N/A", logo_home=None, logo_away=None, résultats=None
 ):
@@ -2845,8 +2790,8 @@ def compare_teams_and_predict_score(
         return
 
     # Vérifier si une équipe a une forme récente totalement vide (0 point)
-    points1, _, _ = get_form_points(t1.get('recent_form', []))
-    points2, _, _ = get_form_points(t2.get('recent_form', []))
+    points1 = get_form_points(t1.get('form_6', []))
+    points2 = get_form_points(t2.get('form_6', []))
 
     if points1 == 0:
         print(f"🚫 {name1} a une forme totalement vide (0 point), match ignoré.")
@@ -2857,219 +2802,124 @@ def compare_teams_and_predict_score(
         IGNORED_ZERO_FORM_TEAMS.append(name2)
         return
 
-    # 🏆 Récupération classement des équipes - utiliser le mapping
-    pos_home, nom_classement_home = get_team_classement_position(country, league, name1)
-    pos_away, nom_classement_away = get_team_classement_position(country, league, name2)
+    # 🏆 Récupération classement des équipes - utiliser le mapping (modifié pour récupérer le classement complet)
+    pos_home, nom_classement_home, pts_home, full_standings_home = get_team_classement_position(country, league, name1)
+    pos_away, nom_classement_away, pts_away, full_standings_away = get_team_classement_position(country, league, name2)
 
     if pos_home:
-        print(f"📌 Classement de {nom_classement_home} : {pos_home}ᵉ")
+        print(f"📌 Classement de {nom_classement_home} : {pos_home}ᵉ avec {pts_home} points")
     if pos_away:
-        print(f"📌 Classement de {nom_classement_away} : {pos_away}ᵉ")
+        print(f"📌 Classement de {nom_classement_away} : {pos_away}ᵉ avec {pts_away} points")
+
+    # 💰 Récupération des cotes
+    print(f"\n💰 Récupération des cotes...")
+    home_espn = get_espn_name(name1)
+    away_espn = get_espn_name(name2)
+    
+    league_info = classement_ligue_mapping.get(country, {}).get(league)
+    odds_id = league_info.get("odds_id", "none") if league_info else "none"
+    
+    odds_data = get_odds_for_match(odds_id, name1, name2, home_espn, away_espn)
+
+    # 🆚 Récupération des confrontations directes (ÉLARGI À TOUS LES CHAMPIONNATS)
+    confrontations_h2h = get_h2h_confrontations(home_espn, away_espn)
 
     print(f"\n📅 Match prévu le {match_date} à {match_time}")
     print(f"🏆 Compétition : [{country}] {league}")
     print(f"⚔️ {name1} vs {name2}")
-    print(f"\n🤝 Comparaison directe :")
+    
+    print(f"\n🤝 Statistiques brutes :")
     print(f"{name1} ➤ Moy. buts marqués : {t1['moyenne_marques']:.2f} | Moy. encaissés : {t1['moyenne_encaisses']:.2f}")
     print(f"{name2} ➤ Moy. buts marqués : {t2['moyenne_marques']:.2f} | Moy. encaissés : {t2['moyenne_encaisses']:.2f}")
 
-    adj1 = t1['trend_scored'] - t1['trend_conceded']
-    adj2 = t2['trend_scored'] - t2['trend_conceded']
-    points1, ratio1, momentum1 = get_form_points(t1.get('recent_form', []))
-    points2, ratio2, momentum2 = get_form_points(t2.get('recent_form', []))
-    forme_adj1 = (ratio1 - 0.5) * 0.5 + 0.1 * momentum1
-    forme_adj2 = (ratio2 - 0.5) * 0.5 + 0.1 * momentum2
+    print(f"\n📊 Forme courte (6) : {' '.join(t1['form_6'])} ({name1}) vs {' '.join(t2['form_6'])} ({name2})")
+    print(f"📊 Forme longue (10) : {' '.join(t1['form_10'])} ({name1}) vs {' '.join(t2['form_10'])} ({name2})")
 
-    # 🎯 Ajustement automatique selon les séries domicile / extérieur
-    bonus_serie_domicile = calcul_ajustement_automatique_serie(t1.get('serie_domicile', []))
-    bonus_serie_exterieur = calcul_ajustement_automatique_serie(t2.get('serie_exterieur', []))
+    print(f"🏠 Série domicile ({name1}) : {'-'.join(t1.get('serie_domicile', []))}")
+    print(f"✈️ Série extérieur ({name2}) : {'-'.join(t2.get('serie_exterieur', []))}")
 
-    forme_adj1 += bonus_serie_domicile
-    forme_adj2 += bonus_serie_exterieur
+    # ✅ CRÉATION DE L'OBJET AVEC STATISTIQUES BRUTES + COTES + MATCHS COMPLETS + CLASSEMENT COMPLET
+    prediction_obj = {
+        "id": len(PREDICTIONS) + 1,
+        "HomeTeam": name1,
+        "AwayTeam": name2,
+        "date": format_date_fr(match_date, match_time),
+        "league": f"{country} - {league}",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": odds_data,  # Cotes des bookmakers
+        "stats_home": {
+            "moyenne_marques": t1['moyenne_marques'],
+            "moyenne_encaisses": t1['moyenne_encaisses'],
+            "form_6": t1['form_6'],
+            "form_10": t1['form_10'],
+            "recent_form": t1['form_6'],  # compatibilité
+            "total_points_6": t1.get('total_points_6', 0),
+            "total_points_10": t1.get('total_points_10', 0),
+            "total_points": t1.get('total_points_6', 0),  # compatibilité
+            "serie_domicile": t1.get('serie_domicile', []),
+            "buts_dom_marques": t1.get('buts_dom_marques', 0),
+            "buts_dom_encaisses": t1.get('buts_dom_encaisses', 0),
+            "buts_ext_marques": t1.get('buts_ext_marques', 0),
+            "buts_ext_encaisses": t1.get('buts_ext_encaisses', 0),
+            "total_marques": t1.get('total_marques', 0),
+            "total_encaisses": t1.get('total_encaisses', 0)
+        },
+        "stats_away": {
+            "moyenne_marques": t2['moyenne_marques'],
+            "moyenne_encaisses": t2['moyenne_encaisses'],
+            "form_6": t2['form_6'],
+            "form_10": t2['form_10'],
+            "recent_form": t2['form_6'],  # compatibilité
+            "total_points_6": t2.get('total_points_6', 0),
+            "total_points_10": t2.get('total_points_10', 0),
+            "total_points": t2.get('total_points_6', 0),  # compatibilité
+            "serie_exterieur": t2.get('serie_exterieur', []),
+            "buts_dom_marques": t2.get('buts_dom_marques', 0),
+            "buts_dom_encaisses": t2.get('buts_dom_encaisses', 0),
+            "buts_ext_marques": t2.get('buts_ext_marques', 0),
+            "buts_ext_encaisses": t2.get('buts_ext_encaisses', 0),
+            "total_marques": t2.get('total_marques', 0),
+            "total_encaisses": t2.get('total_encaisses', 0)
+        },
+        # ✅ NOUVEAUX CHAMPS : MATCHS COMPLETS
+        "last_matches_home": t1.get('matches', []),  # Les 10 vrais matchs de l'équipe domicile
+        "last_matches_away": t2.get('matches', []),  # Les 10 vrais matchs de l'équipe extérieure
+        # ✅ CLASSEMENT DES ÉQUIPES
+        "classement": {
+            name1: {"position": pos_home, "points": pts_home} if pos_home else None,
+            name2: {"position": pos_away, "points": pts_away} if pos_away else None
+        },
+        # ✅ CLASSEMENT COMPLET DE LA LIGUE
+        "classement_complet": full_standings_home if full_standings_home else full_standings_away,
+        # ✅ CONFRONTATIONS DIRECTES (ÉLARGI À TOUS LES CHAMPIONNATS)
+        "confrontations_saison_derniere": confrontations_h2h,
+        # Anciens champs conservés pour compatibilité
+        "logo_home": logo_home,
+        "logo_away": logo_away,
+        "classement_home": pos_home,
+        "classement_away": pos_away,
+        "points_classement_home": pts_home,
+        "points_classement_away": pts_away,
+        "nom_classement_home": nom_classement_home,
+        "nom_classement_away": nom_classement_away,
+        "country_fr": f"{country} - {league}"
+    }
 
-    print(f"🏠 Bonus série domicile ({name1}) : {bonus_serie_domicile:+.2f}")
-    print(f"✈️ Bonus série extérieur ({name2}) : {bonus_serie_exterieur:+.2f}")
+    # 🔮 Génération d'analyse IA avec DeepSeek (AVEC RETRY AUTOMATIQUE)
+    print(f"\n🧠 Lancement de l'analyse IA DeepSeek avec retry automatique...")
+    prompt = generate_detailed_prompt(prediction_obj)
+    analyse_ia = call_deepseek_analysis(prompt, max_retries=5)  # ✅ 5 tentatives max
 
-    pred_t1_initial = (t1['moyenne_marques'] + t2['moyenne_encaisses']) / 2
-    pred_t2_initial = (t2['moyenne_marques'] + t1['moyenne_encaisses']) / 2
-    pred_t1_initial += adj1*0.5 + forme_adj1
-    pred_t2_initial += adj2*0.5 + forme_adj2
+    prediction_obj["analyse_ia"] = analyse_ia
+    print(f"\n🧠 Analyse IA DeepSeek :\n{'='*60}")
+    print(analyse_ia)
+    print(f"{'='*60}\n")
 
-    pred_t1, pred_t2, bonus_defense = apply_weak_defense_bonus(pred_t1_initial, pred_t2_initial, t1, t2)
-    facteur_offensif = calculate_match_offensive_factor(t1, t2)
-    pred_t1 *= facteur_offensif
-    pred_t2 *= facteur_offensif
+    PREDICTIONS.append(prediction_obj)
+    if résultats is not None:
+        résultats.append(prediction_obj)
 
-    global DEFENSE_ADJUST_METHOD
-    DEFENSE_ADJUST_METHOD = choisir_methode_ajustement(t1, t2)
-    print(f"🧠 Méthode d'ajustement défensif choisie : {DEFENSE_ADJUST_METHOD}")
-
-    pred_t1_before_defensive = pred_t1
-    pred_t2_before_defensive = pred_t2
-
-    pred_t1, pred_t2 = apply_defensive_adjustment(pred_t1, pred_t2, t1, t2, name1, name2)
-
-    defensive_reduction_applied = (pred_t1 != pred_t1_before_defensive) or (pred_t2 != pred_t2_before_defensive)
-
-    pred_t1 = max(pred_t1, 0.1)
-    pred_t2 = max(pred_t2, 0.1)
-
-    print(f"\n🛠️ Ajustements appliqués :")
-    print(f"{name1} ➤ Tendance:{adj1:+.2f} | Forme:{forme_adj1:+.2f}")
-    print(f"{name2} ➤ Tendance:{adj2:+.2f} | Forme:{forme_adj2:+.2f}")
-    print(f"Facteur offensif appliqué : x{facteur_offensif:.2f}")
-
-    if defensive_reduction_applied:
-        print(f"Score avant réduction défensive : {name1} {pred_t1_before_defensive:.1f} - {pred_t2_before_defensive:.1f} {name2}")
-        print(f"Score après réduction défensive : {name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
-
-    print(f"\n🔮 **Score estimé final** :")
-    print(f"{name1} {pred_t1:.1f} - {pred_t2:.1f} {name2}")
-
-    poisson_probs, poisson_issues_dict = print_poisson_probabilities(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
-    poisson_top_scores = get_top_poisson_scores(pred_t1, pred_t2, name1, name2, max_goals=5, n_top=5)
-
-    indice_forme_t1 = compute_indice_forme(t1, forme_adj1, adj1)
-    indice_forme_t2 = compute_indice_forme(t2, forme_adj2, adj2)
-    defeats_t1 = count_defeats(t1.get('recent_form', []))
-    defeats_t2 = count_defeats(t2.get('recent_form', []))
-
-    # ✅ Calcul du bonus classement et intégration dans le moteur de prédiction
-    rank_bonus_home = 0.0
-    rank_bonus_away = 0.0
-
-    if pos_home and pos_away:
-        total_teams = 20  # optionnel : à personnaliser selon la ligue
-        avantage = max(min((pos_away - pos_home) / total_teams, 0.5), -0.5)
-        rank_bonus_home = round(avantage, 2)
-        rank_bonus_away = round(-avantage, 2)
-        print(f"📊 Bonus classement : {name1}: {rank_bonus_home:+.2f} | {name2}: {rank_bonus_away:+.2f}")
-
-    diff_indice_forme = abs((indice_forme_t1 + rank_bonus_home) - (indice_forme_t2 + rank_bonus_away))
-
-    print(f"\n📊 Indice de forme (avec bonus classement) : {name1}: {indice_forme_t1 + rank_bonus_home:.2f} | {name2}: {indice_forme_t2 + rank_bonus_away:.2f} | Diff: {diff_indice_forme:.2f}")
-
-    pred_safe = None
-    conf_safe = 0
-
-    if defensive_reduction_applied:
-        print(f"\n🔄 Vérification de cohérence après réduction défensive...")
-
-        pred_before, conf_before = determine_optimal_prediction(
-            pred_t1_before_defensive, pred_t2_before_defensive, t1, t2, name1, name2,
-            indice_forme_t1 + rank_bonus_home,
-            indice_forme_t2 + rank_bonus_away,
-            defeats_t1, defeats_t2, adj1, adj2, forme_adj1, forme_adj2
-        )
-        pred_after, conf_after = determine_optimal_prediction(
-            pred_t1, pred_t2, t1, t2, name1, name2,
-            indice_forme_t1 + rank_bonus_home,
-            indice_forme_t2 + rank_bonus_away,
-            defeats_t1, defeats_t2, adj1, adj2, forme_adj1, forme_adj2
-        )
-
-        if pred_before != pred_after:
-            print(f"⚠️ Changement de prédiction dû à la réduction défensive :")
-            print(f"   • Avant réduction : {pred_before} (Confiance: {conf_before}%)")
-            print(f"   • Après réduction : {pred_after} (Confiance: {conf_after}%)")
-            print(f"   • Prédiction finale retenue : {pred_after}")
-
-        pred_safe = pred_after
-        conf_safe = conf_after
-    else:
-        pred_safe, conf_safe = determine_optimal_prediction(
-            pred_t1, pred_t2, t1, t2, name1, name2,
-            indice_forme_t1 + rank_bonus_home,
-            indice_forme_t2 + rank_bonus_away,
-            defeats_t1, defeats_t2, adj1, adj2, forme_adj1, forme_adj2
-        )
-
-    print("\n🔎 Prédictions détaillées :")
-
-    if pred_safe == "+1.5 buts":
-        poisson_conf = int(poisson_issues_dict["over15"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance over1.5 = {poisson_conf}%")
-        conf_safe = (conf_safe + poisson_conf) // 2
-    elif pred_safe == "+2.5 buts":
-        poisson_conf = int(poisson_issues_dict["over25"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance over2.5 = {poisson_conf}%")
-        conf_safe = (conf_safe + poisson_conf) // 2
-    elif pred_safe == "-3.5 buts":
-        poisson_conf = int(poisson_issues_dict["under35"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance under3.5 = {poisson_conf}%")
-        conf_safe = (conf_safe + poisson_conf) // 2
-    elif pred_safe == "Les deux équipes marquent":
-        poisson_conf = int(poisson_issues_dict["btts"] * 100)
-        print(f"🔁 Ajustement Poisson : confiance BTTS = {poisson_conf}%")
-        conf_safe = (conf_safe + poisson_conf) // 2
-    elif pred_safe and pred_safe.startswith("Victoire ") and not pred_safe.endswith("nul"):
-        if name1 in pred_safe:
-            poisson_conf = int(poisson_issues_dict["win1"] * 100)
-            print(f"🔁 Ajustement Poisson : confiance victoire {name1} = {poisson_conf}%")
-            conf_safe = (conf_safe + poisson_conf) // 2
-        elif name2 in pred_safe:
-            poisson_conf = int(poisson_issues_dict["win2"] * 100)
-            print(f"🔁 Ajustement Poisson : confiance victoire {name2} = {poisson_conf}%")
-            conf_safe = (conf_safe + poisson_conf) // 2
-    elif pred_safe and pred_safe.startswith("Victoire ou nul "):
-        if name1 in pred_safe:
-            poisson_conf = int((poisson_issues_dict["win1"] + poisson_issues_dict["draw"]) * 100)
-            print(f"🔁 Ajustement Poisson : confiance 1X = {poisson_conf}%")
-            conf_safe = (conf_safe + poisson_conf) // 2
-        elif name2 in pred_safe:
-            poisson_conf = int((poisson_issues_dict["win2"] + poisson_issues_dict["draw"]) * 100)
-            print(f"🔁 Ajustement Poisson : confiance X2 = {poisson_conf}%")
-            conf_safe = (conf_safe + poisson_conf) // 2
-
-    print(f"👉 Prédiction finale : **{pred_safe}** (Confiance : {conf_safe}%)")
-
-    print("\n📚 Note : Prédictions issues de la tendance pondérée, forme récente, séries, stats offensives/défensives, indice de forme combiné, bonus défenses faibles, facteur offensif, **ajustement automatique après réduction défensive**, **bonus classement intégré au moteur** et **ajustement probabilités Poisson**. La fiabilité (%) est une estimation statistique, non une certitude.")
-
-    if pred_safe and conf_safe:
-        prediction_obj = {
-            "id": len(PREDICTIONS) + 1,
-            "HomeTeam": name1,
-            "AwayTeam": name2,
-            "confidence": conf_safe,
-            "date": format_date_fr(match_date, match_time),
-            "league": f"{country} - {league}",
-            "prediction": pred_safe,
-            "type": "single",
-            "score_prediction": f"{pred_t1:.1f} - {pred_t2:.1f}",
-            "defensive_reduction_applied": defensive_reduction_applied,
-            "score_before_reduction": f"{pred_t1_before_defensive:.1f} - {pred_t2_before_defensive:.1f}" if defensive_reduction_applied else None,
-            "poisson_probabilities": {
-                "win1": round(poisson_issues_dict["win1"] * 100, 2),
-                "draw": round(poisson_issues_dict["draw"] * 100, 2),
-                "win2": round(poisson_issues_dict["win2"] * 100, 2),
-                "over15": round(poisson_issues_dict["over15"] * 100, 2),
-                "over25": round(poisson_issues_dict["over25"] * 100, 2),
-                "under35": round(poisson_issues_dict["under35"] * 100, 2),
-                "btts": round(poisson_issues_dict["btts"] * 100, 2)
-            },
-            "poisson_top_scores": poisson_top_scores,
-            "logo_home": logo_home,
-            "logo_away": logo_away,
-            "bonus_serie_domicile": bonus_serie_domicile,
-            "bonus_serie_exterieur": bonus_serie_exterieur,
-            "classement_home": pos_home,
-            "classement_away": pos_away,
-            "nom_classement_home": nom_classement_home,
-            "nom_classement_away": nom_classement_away,
-            "rank_bonus_home": rank_bonus_home,
-            "rank_bonus_away": rank_bonus_away
-        }
-
-        # ✅ NOUVEL APPEL IA SELON DEMANDE avec bonus séries :
-        prediction_obj["analyse_ia"] = generate_ai_analysis(
-            prediction_obj, t1, t2, adj1, adj2, forme_adj1, forme_adj2,
-            bonus_defense, facteur_offensif, DEFENSE_ADJUST_METHOD, 
-            bonus_serie_domicile, bonus_serie_exterieur
-        )
-
-        PREDICTIONS.append(prediction_obj)
-        if résultats is not None:
-            résultats.append(prediction_obj)
+    print("\n📚 Note : Statistiques brutes avec cotes + analyse IA DeepSeek avec retry + matchs complets + classement complet + H2H élargi (Premier League, La Liga, Bundesliga).")
 
 def process_team(team_name, return_data=False):
     print(f"\n🧠 Analyse pour l'équipe : {get_espn_name(team_name)}")
@@ -3077,113 +2927,8 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
-def generate_combined_predictions(predictions):
-    print("\n🔗 Génération des prédictions combinées...")
-
-    def pred_eligible(pred):
-        if pred['prediction'] == "Les deux équipes marquent":
-            return pred['confidence'] >= 70
-        return pred['confidence'] >= 80
-
-    eligible_preds = [p for p in predictions if pred_eligible(p)]
-
-    def get_match_id(pred):
-        return (pred['HomeTeam'], pred['AwayTeam'], pred['date'])
-
-    match_ids = [get_match_id(p) for p in eligible_preds]
-    num_matches = len(eligible_preds)
-
-    if num_matches < 2:
-        print("⚠️ Pas assez de prédictions éligibles pour combiner.")
-        return
-
-    combinable_sizes = []
-    if num_matches == 2:
-        combinable_sizes = [2]
-    elif num_matches == 3:
-        combinable_sizes = [2, 3]
-    elif num_matches == 4:
-        combinable_sizes = [3, 4]
-    else:
-        combinable_sizes = [3, num_matches] if num_matches > 4 else []
-
-    if num_matches > 4:
-        combinable_sizes = [3, num_matches]
-
-    all_combos = []
-    for combo_size in combinable_sizes:
-        combos = []
-        for combo in itertools.combinations(eligible_preds, combo_size):
-            match_set = set()
-            for p in combo:
-                mid = get_match_id(p)
-                if mid in match_set:
-                    break
-                match_set.add(mid)
-            else:
-                combos.append(combo)
-        all_combos.extend(combos)
-
-    limited_combos = []
-    for combo_size in combinable_sizes:
-        combos = [c for c in all_combos if len(c) == combo_size]
-        max_combos = 10 if combo_size == 2 else 5 if combo_size == 3 else 2
-        limited_combos.extend(combos[:max_combos])
-
-    for combo in limited_combos:
-        combined_confidence = 1.0
-        for pred in combo:
-            combined_confidence *= (pred['confidence'] / 100.0)
-        combined_confidence_percent = round(combined_confidence * 100, 2)
-        combo_name = f"Combiné IA {len(combo)} matchs"
-
-        combo_description = {
-            "nombre_evenements": len(combo),
-            "événements": [
-                {
-                    "match": f"{p['HomeTeam']} - {p['AwayTeam']}",
-                    "prédiction": p['prediction'],
-                    "ligue": p['league']
-                } for p in combo
-            ]
-        }
-
-        combined_pred = {
-            "id": len(COMBINED_PREDICTIONS) + 1,
-            "name": combo_name,
-            "description": combo_description,
-            "matches": [
-                {
-                    "match": f"{p['HomeTeam']} vs {p['AwayTeam']}",
-                    "prediction": p['prediction'],
-                    "individual_confidence": p['confidence'],
-                    "country_fr": p['league'],
-                    "league": p['league']
-                } for p in combo
-            ],
-            "combined_confidence": combined_confidence_percent,
-            "type": "combined_ia",
-            "size": len(combo),
-            "estimated_odds": round(1 / combined_confidence, 2) if combined_confidence > 0 else 0
-        }
-        COMBINED_PREDICTIONS.append(combined_pred)
-    COMBINED_PREDICTIONS.sort(key=lambda x: x['combined_confidence'], reverse=True)
-    print(f"✅ {len(COMBINED_PREDICTIONS)} combinés IA générés.")
-    print("\n🏆 Top 5 des meilleurs combinés IA :")
-    for i, combo in enumerate(COMBINED_PREDICTIONS[:5], 1):
-        descr = combo['description']
-        if isinstance(descr, dict):
-            resume = " | ".join([f"{e['match']} : {e['ligue']}" for e in descr['événements']])
-        else:
-            resume = descr
-        print(f"{i}. {combo['name']} - Confiance: {combo['combined_confidence']}% - Cote estimée: {combo['estimated_odds']}")
-        print(f"   {resume[:100]}{'...' if len(resume) > 100 else ''}")
-
-def sauvegarder_prediction_json_complete(predictions_simples, predictions_combinees, date_str):
+def sauvegarder_stats_brutes_json(predictions_simples, date_str):
     total_predictions = len(predictions_simples)
-    avg_confidence = round(
-        sum(p['confidence'] for p in predictions_simples) / total_predictions, 2
-    ) if total_predictions > 0 else 0
 
     for p in predictions_simples:
         p['country_fr'] = p['league']
@@ -3192,22 +2937,30 @@ def sauvegarder_prediction_json_complete(predictions_simples, predictions_combin
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "3.8 - Poisson + IA Singles + Combinés IA + scores Poisson + IA Enrichie + Bonus Séries Auto + Classements intégrés moteur + Mapping Teams + Structure unifiée",
+            "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
             "total_predictions": total_predictions,
-            "confiance_moyenne": avg_confidence
+            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+            "ia_model": "deepseek-r1-distill-llama-70b",
+            "groq_keys_count": len(groq_keys),
+            "nouveautes_v7_2": [
+                "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+                "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+                "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+                "Amélioration de la robustesse du système d'analyse IA"
+            ]
         },
-        "pronostics": {
+        "statistiques_brutes_avec_ia": {
             "count": len(predictions_simples),
             "details": predictions_simples
         }
     }
     
-    chemin = f"prédiction-{date_str}-analyse-ia.json"
+    chemin = f"prédiction-{date_str}analyse-ia.json"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
-    print(f"✅ Prédictions complètes sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} prédictions simples")
-    print(f"📈 Confiance moyenne: {avg_confidence}%")
+    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + retry sauvegardées dans : {chemin}")
+    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H élargi")
 
 def save_failed_teams_json(failed_teams, date_str):
     chemin = f"teams_failed_{date_str}.json"
@@ -3228,34 +2981,45 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Prédictions IA du {datetime.now().strftime('%Y-%m-%d')} - Version 3.8 IA Enrichie + Bonus Séries Auto + Classements intégrés moteur + Mapping Teams + Structure unifiée"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 7.2 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA"], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Prédictions poussées avec succès sur GitHub.")
+        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + retry + H2H élargi poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("⚽️ Bienvenue dans l'analyse IA v3.8 : Poisson, Singles, combinés IA, IA enrichie + Bonus Séries Automatiques + Classements intégrés au moteur + Mapping Teams + Structure unifiée !")
-    print("🔬 Nouvelles fonctionnalités: Classements intégrés dans le moteur de prédiction + Structure JSON unifiée")
-    print("🧠 L'IA LLaMA 3 dispose maintenant de l'intégralité du contexte pour optimiser les prédictions")
-    print("🎯 Bonus automatiques selon les plus longues séries de victoires/défaites à domicile et à l'extérieur")
-    print("🏆 Classements des équipes maintenant intégrés directement dans le calcul des prédictions")
-    print("🔄 Mapping automatique des noms d'équipes API vers ESPN pour une meilleure correspondance")
-    print("🛑 Filtrage automatique des équipes avec forme nulle (0 point)")
-    print("📊 Structure JSON unifiée avec section unique 'pronostics'")
-    print("📊 Analyse complète des matchs du jour avec recommandations...\n")
+    print("📊 Bienvenue dans l'analyse v7.2 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ÉLARGI !")
+    print("🧹 Toutes les fonctionnalités d'analyse avancée ont été supprimées")
+    print("📈 Collecte complète des statistiques brutes :")
+    print("   - Moyennes buts marqués/encaissés")
+    print("   - Forme récente (6 derniers matchs)")
+    print("   - Forme longue (10 derniers matchs)")
+    print("   - Séries domicile/extérieur")
+    print("   - Classements des équipes avec points")
+    print("   - Points de forme (6 et 10 matchs)")
+    print("   💰 - Cotes des bookmakers (1xBet prioritaire, puis Betclic)")
+    print("   🧠 - Analyse IA DeepSeek ENRICHIE avec alternance automatique des clés Groq")
+    print("   🔄 - NOUVEAU : Retry automatique (5 tentatives) si l'IA échoue")
+    print("   📋 - 10 vrais matchs complets avec date, équipes, score, compétition")
+    print("   🏆 - Classement complet de la ligue")
+    print("   🆚 - NOUVEAU : Confrontations directes H2H élargies (P_league.json, laliga.json, bundesliga.json)")
+    print("   ✨ - NOUVEAU : Prompt IA enrichi avec toutes ces données détaillées + sources multiples")
+    print("🚫 Aucun ajustement, bonus, malus")
+    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique")
+    print("🔄 Mapping automatique des noms d'équipes conservé")
+    print("🛑 Filtrage automatique des équipes avec forme nulle conservé")
+    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H élargi des matchs du jour...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
-    print(f"   🎯 {len(PREDICTIONS)} prédictions simples générées")
-    print(f"   🔗 {len(COMBINED_PREDICTIONS)} combinés IA créés")
+    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + retry générées")
+    print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec retry automatique intégrée")
+    print(f"   🔑 {len(groq_keys)} clés Groq disponibles")
+    print(f"   📋 Matchs complets et classements complets intégrés dans le prompt IA")
+    print(f"   🆚 Confrontations H2H élargies (Premier League, La Liga, Bundesliga) disponibles dans le prompt IA")
+    print(f"   🔄 Système de retry automatique (5 tentatives) pour garantir les analyses IA")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    if COMBINED_PREDICTIONS:
-        print(f"\n🏆 Meilleur combiné IA:")
-        best = COMBINED_PREDICTIONS[0]
-        print(f"   {best['name']} - Confiance: {best['combined_confidence']}%")
-        print(f"   Cote estimée: {best['estimated_odds']}")
-    print("\n✨ Merci d'avoir utilisé le script IA v3.8 ⚽️📊🧠🏆🔄. Bonne chance avec vos paris ! 🍀")
+    print("\n✨ Merci d'avoir utilisé le script v7.2 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H élargi !")
 
 if __name__ == "__main__":
     main()
