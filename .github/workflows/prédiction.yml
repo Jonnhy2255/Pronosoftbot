@@ -2,7 +2,7 @@ name: Prediction IA journalière
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # Tous les jours à 1h du matin
+    - cron: '0 1 * * *'  # Tous les jours à 1h du matin UTC
   workflow_dispatch:
 
 jobs:
@@ -11,17 +11,20 @@ jobs:
     permissions:
       contents: write
     env:
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       GROQ_API_KEY1: ${{ secrets.GROQ_API_KEY1 }}
 
     steps:
       - name: 📥 Récupération du dépôt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: 🐍 Configuration de Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
