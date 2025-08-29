@@ -1,0 +1,1444 @@
+{
+  "metadata": {
+    "date_generation": "2025-08-29 02:23:25",
+    "date_matchs": "2025-08-29",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 5,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 5,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Cremonese",
+        "AwayTeam": "Sassuolo",
+        "date": "29 août 2025 à 16:30:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cremonese": 2.39,
+            "Sassuolo": 3.14,
+            "Draw": 3.58
+          },
+          "totals": {
+            "Over": 2.03,
+            "Under": 1.91
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_domicile": [
+            "D"
+          ],
+          "buts_dom_marques": 0,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 1,
+          "total_marques": 2,
+          "total_encaisses": 1
+        },
+        "stats_away": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 3,
+          "total_points": 3,
+          "serie_exterieur": [],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 0,
+          "buts_ext_encaisses": 0,
+          "total_marques": 1,
+          "total_encaisses": 2
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 23",
+            "AC Milan",
+            "Cremonese",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Cremonese",
+            "Palermo",
+            "",
+            "0 - 0",
+            "FT-Pens"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 23",
+            "Sassuolo",
+            "Napoli",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Sassuolo",
+            "Catanzaro",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Cremonese": {
+            "position": 5,
+            "points": 3
+          },
+          "Sassuolo": {
+            "position": 19,
+            "points": 0
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": "Napoli",
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": "Como",
+            "points": 3
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 3
+          },
+          {
+            "position": 5,
+            "team": "Cremonese",
+            "points": 3
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 3
+          },
+          {
+            "position": 7,
+            "team": "Fiorentina",
+            "points": 1
+          },
+          {
+            "position": 8,
+            "team": "Hellas Verona",
+            "points": 1
+          },
+          {
+            "position": 9,
+            "team": "Pisa",
+            "points": 1
+          },
+          {
+            "position": 10,
+            "team": "Atalanta",
+            "points": 1
+          },
+          {
+            "position": 11,
+            "team": "Cagliari",
+            "points": 1
+          },
+          {
+            "position": 12,
+            "team": "Udinese",
+            "points": 1
+          },
+          {
+            "position": 13,
+            "team": "Genoa",
+            "points": 1
+          },
+          {
+            "position": 14,
+            "team": "Lecce",
+            "points": 1
+          },
+          {
+            "position": 15,
+            "team": "AC Milan",
+            "points": 0
+          },
+          {
+            "position": 16,
+            "team": "Bologna",
+            "points": 0
+          },
+          {
+            "position": 17,
+            "team": "Lazio",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Parma",
+            "points": 0
+          },
+          {
+            "position": 19,
+            "team": "Sassuolo",
+            "points": 0
+          },
+          {
+            "position": 20,
+            "team": "Torino",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/520.png",
+        "logo_away": "https://media.api-sports.io/football/teams/488.png",
+        "classement_home": 5,
+        "classement_away": 19,
+        "points_classement_home": 3,
+        "points_classement_away": 0,
+        "nom_classement_home": "Cremonese",
+        "nom_classement_away": "Sassuolo",
+        "country_fr": "Italy - Serie A",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Cremonese et Sassuolo pour proposer une prédiction. Commençons par regarder les statistiques de base.\n\nCremonese est 5ème avec 3 points, tandis que Sassuolo est 19ème avec 0 point. Cela montre que Cremonese a un meilleur classement pour l'instant. En ce qui concerne les buts, Cremonese marque en moyenne 1 but par match et encaisse 0.5. Sassuolo, lui, ne marque que 0.5 buts et encaisse 1 par match. Donc, offensivement, Cremonese semble un peu plus solide, et défensivement aussi.\n\nRegardons leurs formes récentes. Cremonese a gagné contre Milan 2-1 et a fait match nul 0-0 contre Palermo. Sassuolo a perdu 0-2 contre Napoli et a gagné 1-0 contre Catanzaro. Donc, Cremonese a une forme légèrement meilleure avec une victoire et un nul, tandis que Sassuolo a une victoire et une défaite.\n\nEn ce qui concerne le match à domicile, Cremonese a un nul 0-0, donc il n'a pas marqué mais n'a pas non plus encaissé. Sassuolo, en extérieur, n'a pas de statistiques disponibles, ce qui est un peu inquiétant. Mais d'après leurs matchs récents, Sassuolo a du mal à marquer, seulement 1 but en deux matchs.\n\nLes cotes sont Cremonese à 2.39, Sassuolo à 3.14 et le nul à 3.58. Cela suggère que Cremonese est légèrement favori, mais pas de manière écrasante. Le total de buts est de 2.5, avec Over à 2.03 et Under à 1.91. Donc, les bookmakers pensent que le match pourrait être serré en termes de buts.\n\nEn termes de tendances, Cremonese a une défense solide, n'encaissant que 0.5 buts par match. Sassuolo, lui, a du mal à marquer, avec seulement 0.5 buts par match. Cela pourrait indiquer un match avec peu de buts.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de se baser là-dessus. Mais d'après les statistiques, Cremonese semble avoir l'avantage à domicile.\n\nEn résumé, Cremonese a une meilleure forme, un meilleur classement et une défense solide. Sassuolo a des difficultés offensives et est actuellement dernier. Donc, je pencherais pour une victoire de Cremonese, mais sachant que Sassuolo pourrait être coriace, il y a aussi une chance de nul. Cependant, vu que Cremonese a gagné contre Milan, il pourrait répéter cette performance.\n\nEn ce qui concerne les options de pari, une double chance 1X (victoire de Cremonese ou nul) semble prudente, car cela couvre les deux issues probables. Cependant, si je dois choisir une seule prédiction, je dirais que Cremonese gagnera, car il a l'avantage du terrain et une meilleure forme.\n\nMais pour être sûr, je regarde aussi les cotes du total de buts. Comme Sassuolo a du mal à marquer et Cremonese n'a pas non plus marqué énormément, le sous de 2.5 buts pourrait être une bonne option. Cependant, Cremonese a marqué 2 buts contre Milan, donc il y a une possibilité de plus de 2.5 buts si Sassuolo parvient à marquer.\n\nFinalement, je pense que le match sera serré avec peu de buts, donc \"Moins de 2.5 buts\" pourrait être une bonne option. Mais comme Cremonese a une légère supériorité, je vais opter pour la victoire de Cremonese.\n</think>\n\n**Prédiction : Victoire domicile (Cremonese)**\n\n**Justification :**\n\n1. **Classement et Forme :** Cremonese occupe la 5ème place avec 3 points, tandis que Sassuolo est 19ème avec 0 point. Cremonese a une meilleure forme récente avec une victoire et un nul, contre une victoire et une défaite pour Sassuolo.\n\n2. **Statistiques Offensives et Défensives :** Cremonese marque en moyenne 1 but par match et encaisse 0.5, contre 0.5 but marqués et 1 encaissé pour Sassuolo. Cela montre une légère supériorité offensive et défensive pour Cremonese.\n\n3. **Performances à Domicile/Extérieur :** Cremonese a tenu un nul à domicile sans encaisser de but, tandis que Sassuolo a des difficultés à marquer à l'extérieur.\n\n4. **Cotes et Tendances :** Les cotes favorisent légèrement Cremonese, et les tendances montrent un match potentiellement serré en termes de buts, mais Cremonese a déjà montré sa capacité à gagner contre une équipe forte comme Milan.\n\n5. **Conclusion :** Compte tenu de l'avantage à domicile, de la meilleure forme et des statistiques défensives solides, Cremonese semble en position de gagner ce match."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Goztepe",
+        "AwayTeam": "Konyaspor",
+        "date": "29 août 2025 à 18:30:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.6666666666666667,
+          "moyenne_encaisses": 0.0,
+          "form_6": [
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_domicile": [
+            "D"
+          ],
+          "buts_dom_marques": 0,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 0,
+          "total_marques": 5,
+          "total_encaisses": 0
+        },
+        "stats_away": {
+          "moyenne_marques": 3.5,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_exterieur": [
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 1,
+          "total_marques": 7,
+          "total_encaisses": 1
+        },
+        "last_matches_home": [
+          [
+            "Fri, Aug 22",
+            "Fatih Karagümrük",
+            "Goztepe",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Goztepe",
+            "Fenerbahce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Caykur Rizespor",
+            "Goztepe",
+            "",
+            "0 - 3",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Aug 17",
+            "Konyaspor",
+            "Gaziantep FK",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Eyupspor",
+            "Konyaspor",
+            "",
+            "1 - 4",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Goztepe": {
+            "position": 3,
+            "points": 7
+          },
+          "Konyaspor": {
+            "position": 4,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Trabzonspor",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Goztepe",
+            "points": 7
+          },
+          {
+            "position": 4,
+            "team": "Konyaspor",
+            "points": 6
+          },
+          {
+            "position": 5,
+            "team": "Samsunspor",
+            "points": 6
+          },
+          {
+            "position": 6,
+            "team": "Antalyaspor",
+            "points": 6
+          },
+          {
+            "position": 7,
+            "team": "Fenerbahce",
+            "points": 4
+          },
+          {
+            "position": 8,
+            "team": "Besiktas",
+            "points": 3
+          },
+          {
+            "position": 9,
+            "team": "Eyupspor",
+            "points": 3
+          },
+          {
+            "position": 10,
+            "team": "Gaziantep FK",
+            "points": 3
+          },
+          {
+            "position": 11,
+            "team": "Istanbul Basaksehir",
+            "points": 1
+          },
+          {
+            "position": 12,
+            "team": "Alanyaspor",
+            "points": 1
+          },
+          {
+            "position": 13,
+            "team": "Caykur Rizespor",
+            "points": 1
+          },
+          {
+            "position": 14,
+            "team": "Kayserispor",
+            "points": 1
+          },
+          {
+            "position": 15,
+            "team": "Kasimpasa",
+            "points": 0
+          },
+          {
+            "position": 16,
+            "team": "Genclerbirligi",
+            "points": 0
+          },
+          {
+            "position": 17,
+            "team": "Kocaelispor",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Fatih Karagümrük",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/994.png",
+        "logo_away": "https://media.api-sports.io/football/teams/607.png",
+        "classement_home": 3,
+        "classement_away": 4,
+        "points_classement_home": 7,
+        "points_classement_away": 6,
+        "nom_classement_home": "Goztepe",
+        "nom_classement_away": "Konyaspor",
+        "country_fr": "Turkey - Süper Lig",
+        "analyse_ia": "**Analyse du match Goztepe vs Konyaspor**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Goztepe (Domicile) :** Actuellement 3ème avec 7 points, Goztepe affiche une moyenne de 1.67 but marqués par match et n'a pas encore encaissé de buts cette saison. Cependant, lors de ses trois derniers matchs, l'équipe n'a marqué que 2 buts, dont un match nul 0-0 face à Fenerbahce. Cela suggère une certaine difficulté à scorer malgré une défense solide.\n\n- **Konyaspor (Extérieur) :** 4ème avec 6 points, Konyaspor a une attaque plus prolifique avec une moyenne de 3.5 buts marqués par match. En déplacement, ils ont marqué 4 buts lors de leur dernier match, montrant une efficacité offensive notable. Cependant, leur défense a encaissé 1 but en moyenne, ce qui peut être un point faible.\n\n**2. Impact du facteur domicile/extérieur :**\n\nGoztepe joue à domicile, où il a une forme mitigée avec une série de 3 matchs sans victoire (2 défaites et 1 nul). Cependant, leur défense reste inviolée à domicile. Konyaspor, quant à lui, est en forme sur le plan offensif en extérieur, avec une victoire et 4 buts marqués lors de son dernier déplacement.\n\n**3. Forme récente et tendances :**\n\n- **Goztepe :** Malgré une défense solide, l'attaque peine à scorer, avec seulement 2 buts en 3 matchs. Le match nul 0-0 face à Fenerbahce montre une certaine difficulté à concrétiser les occasions.\n\n- **Konyaspor :** En forme ascendante avec 2 victoires consécutives, dont une large victoire 4-1 en extérieur. Cela indique une confiance renforcée et une attaque en pleine effervescence.\n\n**4. Contexte du championnat :**\n\nLe classement actuel est serré, avec Goztepe à la 3ème place et Konyaspor à la 4ème, séparées par seulement un point. Ce match est crucial pour le maintien dans le haut du tableau et pourrait avoir un impact sur la confiance des joueurs pour la suite de la saison.\n\n**5. Confrontations directes :**\n\nAucune confrontation récente n'est disponible, ce qui rend difficile l'analyse des tendances H2H. Cependant, les statistiques offensives et défensives actuelles peuvent donner un aperçu de leur dynamique.\n\n**6. Évaluation des cotes :**\n\nAucune cote n'est disponible pour ce match, ce qui limite l'analyse basée sur les marchés du pari. Cependant, les statistiques des équipes peuvent guider la prédiction.\n\n**7. Prédiction finale :**\n\n**Double chance X2 (Konyaspor victoire ou nul)**\n\n**Justification :**\n\n- **Forme offensive de Konyaspor :** Avec une moyenne de 3.5 buts marqués par match et une victoire 4-1 en extérieur, Konyaspor semble avoir une attaque en pleine confiance. Même si Goztepe a une défense solide, la pression exercée par Konyaspor pourrait payer.\n\n- **Difficultés offensives de Goztepe :** Malgré leur position au classement, Goztepe a du mal à marquer, notamment à domicile où ils n'ont pas inscrit de buts lors de leurs deux derniers matchs. Cela pourrait limiter leur capacité à prendre le dessin.\n\n- **Impact psychologique :** Konyaspor, avec deux victoires consécutives, arrive en confiance, ce qui peut peser sur le moral de Goztepe, qui cherche à se relancer après des résultats mitigés.\n\n- **Double chance X2 :** Cette option couvre à la fois une victoire de Konyaspor et la possibilité d'un match nul, ce qui semble plausible compte tenu des forces et faiblesses des deux équipes.\n\nEn conclusion, bien que Goztepe ait une défense solide, la puissance offensive et la confiance de Konyaspor, combinées aux difficultés récentes de Goztepe à scorer, penchent la balance en faveur d'une double chance pour Konyaspor."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Lecce",
+        "AwayTeam": "AC Milan",
+        "date": "29 août 2025 à 18:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "AC Milan": 1.79,
+            "Lecce": 5.15,
+            "Draw": 3.79
+          },
+          "totals": {
+            "Over": 2.15,
+            "Under": 1.82
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.0,
+          "form_6": [
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_domicile": [
+            "W"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 0,
+          "buts_ext_encaisses": 0,
+          "total_marques": 2,
+          "total_encaisses": 0
+        },
+        "stats_away": {
+          "moyenne_marques": 2.5714285714285716,
+          "moyenne_encaisses": 1.4285714285714286,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 10,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 15,
+          "buts_ext_encaisses": 8,
+          "total_marques": 18,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 23",
+            "Genoa",
+            "Lecce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Lecce",
+            "Juve Stabia",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 23",
+            "AC Milan",
+            "Cremonese",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "AC Milan",
+            "Bari",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Chelsea",
+            "AC Milan",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Leeds United",
+            "AC Milan",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Jul 31",
+            "Perth Glory",
+            "AC Milan",
+            "",
+            "0 - 9",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Liverpool",
+            "AC Milan",
+            "",
+            "2 - 4",
+            "FT"
+          ],
+          [
+            "Wed, Jul 23",
+            "Arsenal",
+            "AC Milan",
+            "",
+            "1 - 0",
+            "FT-Pens"
+          ]
+        ],
+        "classement": {
+          "Lecce": {
+            "position": 14,
+            "points": 1
+          },
+          "AC Milan": {
+            "position": 15,
+            "points": 0
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": "Napoli",
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": "Como",
+            "points": 3
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 3
+          },
+          {
+            "position": 5,
+            "team": "Cremonese",
+            "points": 3
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 3
+          },
+          {
+            "position": 7,
+            "team": "Fiorentina",
+            "points": 1
+          },
+          {
+            "position": 8,
+            "team": "Hellas Verona",
+            "points": 1
+          },
+          {
+            "position": 9,
+            "team": "Pisa",
+            "points": 1
+          },
+          {
+            "position": 10,
+            "team": "Atalanta",
+            "points": 1
+          },
+          {
+            "position": 11,
+            "team": "Cagliari",
+            "points": 1
+          },
+          {
+            "position": 12,
+            "team": "Udinese",
+            "points": 1
+          },
+          {
+            "position": 13,
+            "team": "Genoa",
+            "points": 1
+          },
+          {
+            "position": 14,
+            "team": "Lecce",
+            "points": 1
+          },
+          {
+            "position": 15,
+            "team": "AC Milan",
+            "points": 0
+          },
+          {
+            "position": 16,
+            "team": "Bologna",
+            "points": 0
+          },
+          {
+            "position": 17,
+            "team": "Lazio",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Parma",
+            "points": 0
+          },
+          {
+            "position": 19,
+            "team": "Sassuolo",
+            "points": 0
+          },
+          {
+            "position": 20,
+            "team": "Torino",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/867.png",
+        "logo_away": "https://media.api-sports.io/football/teams/489.png",
+        "classement_home": 14,
+        "classement_away": 15,
+        "points_classement_home": 1,
+        "points_classement_away": 0,
+        "nom_classement_home": "Lecce",
+        "nom_classement_away": "AC Milan",
+        "country_fr": "Italy - Serie A",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Lecce et l'AC Milan. D'abord, je regarde les statistiques de Lecce à domicile. Ils ont gagné leur dernier match à domicile 2-0 et ont un bon début de saison avec 4 points en 6 matchs. Cependant, leur moyenne de buts marqués est de 1, ce qui n'est pas très élevé. En revanche, l'AC Milan, malgré son mauvais classement, a une moyenne de buts marqués de 2,57, ce qui est assez impressionnant. \n\nJe note que l'AC Milan a perdu son dernier match à domicile contre la Cremonese, ce qui est inquiétant, mais ils ont aussi des victoires contre des équipes comme Bari et Perth Glory. Leur forme sur 6 matchs est mitigée avec 10 points, ce qui montre qu'ils ont des moments de brillance mais aussi des défaites. \n\nEn ce qui concerne les buts, Lecce n'a pas encore encaissé de buts à domicile, ce qui est un point fort pour eux. L'AC Milan, quant à lui, a marqué beaucoup mais a aussi encaissé 8 buts en 5 matchs extérieurs. Cela pourrait indiquer une défense fragile.\n\nJe regarde aussi les cotes. L'AC Milan est favori avec une cote de 1.79, ce qui semble logique vu leur potentiel offensif. Cependant, Lecce a une cote de 5.15, ce qui semble un peu élevé étant donné leur bonne forme à domicile. \n\nEn termes de BTTS, Lecce n'a pas encore encaissé de buts à domicile, donc \"BTTS non\" pourrait être une option. Mais l'AC Milan a marqué dans presque tous ses matchs, donc s'ils arrivent à marquer, et si Lecce marque aussi, alors BTTS oui pourrait se justifier. \n\nJe me demande aussi si le match sera riche en buts. Avec l'AC Milan qui marque beaucoup, mais Lecce qui défend bien, il y a une chance que le total reste bas. \n\nEn fin de compte, bien que l'AC Milan ait une meilleure attaque, Lecce semble solide à domicile. Peut-être que le match se terminera par un nul, ou que Lecce pourrait même gagner. Mais vu les cotes et les statistiques, une double chance X2 (nul ou victoire de l'AC Milan) semble prudente, car l'AC Milan a le potentiel pour gagner ou au moins faire match nul.\n</think>\n\n**Prédiction : Double chance X2 (AC Milan ou match nul)**\n\n**Justification :**\n\n1. **Forme récente :** L'AC Milan, malgré une 15e place, a montré une forme offensive solide avec une moyenne de 2,57 buts marqués par match. Lecce, bien que solide à domicile, a une moyenne offensive plus faible (1 but par match).\n\n2. **Statistiques défensives :** Lecce n'a pas encore encaissé de buts à domicile, ce qui suggère une défense solide. Cependant, l'AC Milan a marqué dans la majorité de ses matchs, ce qui augure d'une pression offensive constante.\n\n3. **Cotes et valeur :** Les cotes favorisent l'AC Milan (1.79), reflétant leur potentiel offensif. Cependant, Lecce a une cote élevée (5.15) malgré sa bonne forme à domicile, ce qui peut représenter une valeur potentielle.\n\n4. **Contexte du championnat :** Les deux équipes sont en bas du tableau, ce qui peut motiver l'AC Milan à performer pour grimper au classement, tout en sachant que Lecce sera difficile à battre à domicile.\n\n5. **BTTS :** Bien que Lecce n'ait pas encaissé de buts à domicile, l'AC Milan a une attaque puissante. Cependant, la solidité défensive de Lecce pourrait limiter le nombre de buts.\n\nEn conclusion, bien que Lecce puisse résister, l'AC Milan a les ressources pour gagner ou au moins faire match nul, ce qui rend la double chance X2 une option prudente et équilibrée."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Valencia",
+        "AwayTeam": "Getafe",
+        "date": "29 août 2025 à 19:30:00 UTC",
+        "league": "Spain - La Liga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Getafe": 3.96,
+            "Valencia": 2.27,
+            "Draw": 3.1
+          },
+          "totals": {
+            "Over": 1.67,
+            "Under": 2.41
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.3333333333333333,
+          "moyenne_encaisses": 1.3333333333333333,
+          "form_6": [
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 1,
+          "total_points_10": 1,
+          "total_points": 1,
+          "serie_domicile": [
+            "D"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 0,
+          "buts_ext_encaisses": 3,
+          "total_marques": 1,
+          "total_encaisses": 4
+        },
+        "stats_away": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_exterieur": [
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 0,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 1,
+          "total_marques": 4,
+          "total_encaisses": 1
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 24",
+            "Osasuna",
+            "Valencia",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Valencia",
+            "Real Sociedad",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Borussia Mönchengladbach",
+            "Valencia",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Mon, Aug 25",
+            "Sevilla",
+            "Getafe",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Celta Vigo",
+            "Getafe",
+            "",
+            "0 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Valencia": {
+            "position": 15,
+            "points": 1
+          },
+          "Getafe": {
+            "position": 4,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Villarreal",
+            "points": 6
+          },
+          {
+            "position": 2,
+            "team": "Barcelona",
+            "points": 6
+          },
+          {
+            "position": 3,
+            "team": "Real Madrid",
+            "points": 6
+          },
+          {
+            "position": 4,
+            "team": "Getafe",
+            "points": 6
+          },
+          {
+            "position": 5,
+            "team": "Athletic Club",
+            "points": 6
+          },
+          {
+            "position": 6,
+            "team": "Real Betis",
+            "points": 5
+          },
+          {
+            "position": 7,
+            "team": "Espanyol",
+            "points": 4
+          },
+          {
+            "position": 8,
+            "team": "Rayo Vallecano",
+            "points": 3
+          },
+          {
+            "position": 9,
+            "team": "Alavés",
+            "points": 3
+          },
+          {
+            "position": 10,
+            "team": "Osasuna",
+            "points": 3
+          },
+          {
+            "position": 11,
+            "team": "Real Sociedad",
+            "points": 2
+          },
+          {
+            "position": 12,
+            "team": "Elche",
+            "points": 2
+          },
+          {
+            "position": 13,
+            "team": "Celta Vigo",
+            "points": 2
+          },
+          {
+            "position": 14,
+            "team": "Atlético Madrid",
+            "points": 1
+          },
+          {
+            "position": 15,
+            "team": "Valencia",
+            "points": 1
+          },
+          {
+            "position": 16,
+            "team": "Mallorca",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "Levante",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Sevilla",
+            "points": 0
+          },
+          {
+            "position": 19,
+            "team": "Real Oviedo",
+            "points": 0
+          },
+          {
+            "position": 20,
+            "team": "Girona",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704760",
+            "date": "Sunday, October 27, 2024",
+            "team1": "Getafe",
+            "score": "1 - 1",
+            "team2": "Valencia",
+            "title": "Getafe VS Valencia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704760/valencia-getafe",
+            "source": "La Liga"
+          },
+          {
+            "gameId": "705005",
+            "date": "Saturday, May 10, 2025",
+            "team1": "Valencia",
+            "score": "3 - 0",
+            "team2": "Getafe",
+            "title": "Valencia VS Getafe",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/705005/getafe-valencia",
+            "source": "La Liga"
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/532.png",
+        "logo_away": "https://media.api-sports.io/football/teams/546.png",
+        "classement_home": 15,
+        "classement_away": 4,
+        "points_classement_home": 1,
+        "points_classement_away": 6,
+        "nom_classement_home": "Valencia",
+        "nom_classement_away": "Getafe",
+        "country_fr": "Spain - La Liga",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Valencia et Getafe pour faire une prédiction. D'abord, je regarde les statistiques de chaque équipe. Valencia joue à domicile, mais leur forme récente semble inquiétante. Ils sont 15ème avec seulement 1 point en 3 matchs, marquant très peu de buts. En revanche, Getafe est 4ème avec 6 points, gagnant leurs deux derniers matchs et marquant 4 buts à l'extérieur.\n\nJe me souviens que Getafe a bien performé à l'extérieur ces derniers temps, ce qui est un bon signe. De plus, lors de leurs confrontations directes récentes, Valencia a gagné 3-0 à domicile, mais Getafe a aussi obtenu un nul 1-1. Cela montre que Getafe peut tenir tête à Valencia.\n\nEn regardant les cotes, Getafe a une cote de 3.96 pour une victoire, ce qui semble intéressant. De plus, Getafe a une moyenne élevée de buts marqués et encaissés peu, ce qui suggère qu'ils pourraient gagner ou au moins ne pas perdre.\n\nEn considérant tout cela, je pense que Getafe a de bonnes chances de gagner ou au moins de faire un nul. Donc, une double chance X2 semble prudente, couvrant un nul ou une victoire de Getafe.\n</think>\n\n**Prédiction : Double chance X2 (Getafe ou nul)**\n\n**Justification :**\n\n1. **Forme récente :** Getafe est en pleine confiance avec deux victoires consécutives à l'extérieur, marquant 4 buts et n'encaissant qu'1. Valencia, en revanche, peine à performer, ne gagnant qu'un seul point en trois matchs.\n\n2. **Statistiques offensives et défensives :** Getafe affiche une moyenne de 2 buts marqués par match et ne concède que 0.5 buts, contre une moyenne de seulement 0.33 buts marqués pour Valencia et 1.33 encaissés.\n\n3. **Confrontations directes :** Bien que Valencia ait gagné leur dernier match à domicile, Getafe a su résister en obtenant un nul dans un précédent match, montrant sa capacité à rivaliser.\n\n4. **Cotes :** Les cotes de Getafe pour une victoire sont attractives (3.96), reflétant leur forme actuelle. Une double chance X2 (nul ou victoire de Getafe) semble donc une option sécurisée.\n\nEn conclusion, compte tenu de la forme, des statistiques et des confrontations récentes, Getafe a de solides chances de ne pas perdre, ce qui rend la double chance X2 une prédiction judicieuse."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Operario-PR",
+        "AwayTeam": "Coritiba",
+        "date": "29 août 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Coritiba": 3.15,
+            "Operario PR": 2.48,
+            "Draw": 2.93
+          },
+          "totals": {
+            "Over": 1.63,
+            "Under": 2.23
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 13,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 4,
+          "total_marques": 9,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 19,
+          "total_points": 10,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 3,
+          "total_marques": 12,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          [
+            "Sun, 24 Aug",
+            "Paysandu",
+            "Operario PR",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Tue, 19 Aug",
+            "Operario PR",
+            "Avaí",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Goiás",
+            "Operario PR",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "Operario PR",
+            "Criciúma",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Ferroviária",
+            "Operario PR",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 22 Jul",
+            "Operario PR",
+            "Atlético Goianiense",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Thu, 17 Jul",
+            "Operario PR",
+            "CRB",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "Vila Nova",
+            "Operario PR",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 7 Jul",
+            "Operario PR",
+            "Chapecoense",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Volta Redonda",
+            "Operario PR",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 23 Aug",
+            "Coritiba",
+            "Remo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Novorizontino",
+            "Coritiba",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Coritiba",
+            "Chapecoense",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Vila Nova",
+            "Coritiba",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Coritiba",
+            "Amazonas",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Athletic",
+            "Coritiba",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Coritiba",
+            "Paysandu",
+            "",
+            "2 - 5",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "CRB",
+            "Coritiba",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 4 Jul",
+            "Coritiba",
+            "Volta Redonda",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Athletico Paranaense",
+            "Coritiba",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Operario-PR": {
+            "position": 11,
+            "points": 30
+          },
+          "Coritiba": {
+            "position": 2,
+            "points": 43
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Goiás",
+            "points": 44
+          },
+          {
+            "position": 2,
+            "team": "Coritiba",
+            "points": 43
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 40
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 36
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 36
+          },
+          {
+            "position": 6,
+            "team": "Remo",
+            "points": 35
+          },
+          {
+            "position": 7,
+            "team": "Vila Nova",
+            "points": 33
+          },
+          {
+            "position": 8,
+            "team": "Cuiabá",
+            "points": 33
+          },
+          {
+            "position": 9,
+            "team": "Avaí",
+            "points": 33
+          },
+          {
+            "position": 10,
+            "team": "CRB",
+            "points": 31
+          },
+          {
+            "position": 11,
+            "team": "Operario PR",
+            "points": 30
+          },
+          {
+            "position": 12,
+            "team": "Athletico Paranaense",
+            "points": 30
+          },
+          {
+            "position": 13,
+            "team": "Ferroviária",
+            "points": 30
+          },
+          {
+            "position": 14,
+            "team": "Atlético Goianiense",
+            "points": 28
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 25
+          },
+          {
+            "position": 16,
+            "team": "Botafogo-SP",
+            "points": 25
+          },
+          {
+            "position": 17,
+            "team": "Amazonas",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Volta Redonda",
+            "points": 23
+          },
+          {
+            "position": 19,
+            "team": "América Mineiro",
+            "points": 22
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 21
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1223.png",
+        "logo_away": "https://media.api-sports.io/football/teams/147.png",
+        "classement_home": 11,
+        "classement_away": 2,
+        "points_classement_home": 30,
+        "points_classement_away": 43,
+        "nom_classement_home": "Operario PR",
+        "nom_classement_away": "Coritiba",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Operario-PR et Coritiba. D'abord, je regarde le classement. Coritiba est 2ème avec 43 points, tandis qu'Operario-PR est 11ème avec 30 points. Ça montre que Coritiba est une équipe forte, peut-être en course pour la montée.\n\nEn regardant les statistiques offensives et défensives, Operario-PR marque en moyenne 0,90 buts par match et encaisse 0,70. Coritiba, quant à elle, marque 1,20 buts et encaisse 0,90. Donc, Coritiba a une attaque plus performante, mais aussi une défense un peu plus perméable.\n\nLa forme récente d'Operario-PR est mitigée. Sur les 6 derniers matchs, ils ont 11 points avec 3 victoires, 2 nuls et 1 défaite. À domicile, leur forme est D-W-W-D-L, ce qui signifie qu'ils ont perdu leur dernier match à domicile. Coritiba, en déplacement, a une forme de D-W-D-W-D-D, ce qui montre une certaine constance sans trop de défaites.\n\nEn regardant les 10 derniers matchs, Operario-PR a eu du mal à domicile, avec seulement 6 buts marqués pour 3 encaissés. Coritiba, en extérieur, a marqué 7 buts et en a encaissé 3. Cela suggère que Coritiba est plus efficace à l'extérieur.\n\nLe contexte du championnat est important aussi. Coritiba lutte pour une place en Serie A, donc ils ont probablement une motivation supplémentaire pour gagner. Operario-PR, en milieu de tableau, cherche peut-être à se stabiliser.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu plus difficile, mais les statistiques générales montrent que Coritiba est plus forte.\n\nEn ce qui concerne les cotes, Coritiba est à 3.15, Operario-PR à 2.48 et le nul à 2.93. La cote pour plus de 2.5 buts est de 1.63, ce qui est assez bas, suggérant que les bookmakers s'attendent à un match avec des buts.\n\nEn résumé, Coritiba semble avoir l'avantage avec une meilleure attaque et une forme stable à l'extérieur. Operario-PR a des difficultés à domicile. Donc, je pencherais pour une victoire de Coritiba.\n</think>\n\n**Prédiction : Victoire extérieur (Coritiba)**\n\n**Justification :**\n\n1. **Classement et Contexte du Championnat :**\n   - Coritiba est 2ème avec 43 points, tandis qu'Operario-PR est 11ème avec 30 points. Coritiba est en course pour la montée en Serie A, ce qui motive fortement l'équipe à performer.\n   - Operario-PR, en milieu de tableau, cherche à se stabiliser, ce qui peut limiter son ambition.\n\n2. **Forme Récente :**\n   - Coritiba a une forme constante à l'extérieur avec une série de résultats positifs (W-W-D-W-W) sur ses 5 derniers matchs extérieurs.\n   - Operario-PR a une forme mitigée à domicile, avec une défaite récente, indiquant un manque de constance.\n\n3. **Statistiques Offensives et Défensives :**\n   - Coritiba possède une attaque plus performante (1,20 buts/match) et une défense solide, bien qu'un peu plus perméable (0,90 buts/match).\n   - Operario-PR a une attaque moins efficace (0,90 buts/match) et une défense légèrement meilleure (0,70 buts/match), mais qui pourrait être mise à rude épreuve par l'attaque de Coritiba.\n\n4. **Analyse des Derniers Matchs :**\n   - Coritiba a marqué 7 buts en 5 matchs extérieurs récents, montrant son efficacité offensive à l'extérieur.\n   - Operario-PR a marqué seulement 6 buts en 5 matchs à domicile, indiquant des difficultés à scorer.\n\n5. **Cotes et Marché des Buts :**\n   - La cote pour plus de 2.5 buts est attractive (1.63), reflétant l'attaque puissante de Coritiba et les possibilités de buts dans ce match.\n\nEn conclusion, Coritiba semble avoir l'avantage nécessaire pour s'imposer à l'extérieur, compte tenu de sa forme, de son attaque performante et de son enjeu de classement."
+      }
+    ]
+  }
+}
