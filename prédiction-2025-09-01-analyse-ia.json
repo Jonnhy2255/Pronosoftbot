@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-01 02:48:39",
+    "date_matchs": "2025-09-01",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Agropecuario",
+        "AwayTeam": "Almirante Brown",
+        "date": "1 septembre 2025 à 17:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 14,
+          "total_points": 8,
+          "serie_domicile": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 6,
+          "total_marques": 12,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 10,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 8,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          [
+            "Sun, 24 Aug",
+            "Chaco For Ever",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 18 Aug",
+            "Agropecuario",
+            "Mitre (Santiago del Estero)",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Colón (Santa Fe)",
+            "Agropecuario",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Agropecuario",
+            "Temperley",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Defensores Unidos",
+            "Agropecuario",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 21 Jul",
+            "Agropecuario",
+            "Estudiantes (Buenos Aires)",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Deportivo Morón",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Agropecuario",
+            "Talleres",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Estudiantes de Río Cuarto",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 22 Jun",
+            "Agropecuario",
+            "Defensores de Belgrano",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, 24 Aug",
+            "Almirante Brown",
+            "Gimnasia y Esgrima (Jujuy)",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Gimnasia (Mendoza)",
+            "Almirante Brown",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Almirante Brown",
+            "Central Norte",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Nueva Chicago",
+            "Almirante Brown",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Chaco For Ever",
+            "Almirante Brown",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Almirante Brown",
+            "Mitre (Santiago del Estero)",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Colón (Santa Fe)",
+            "Almirante Brown",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Almirante Brown",
+            "Temperley",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Defensores Unidos",
+            "Almirante Brown",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 22 Jun",
+            "Almirante Brown",
+            "Estudiantes (Buenos Aires)",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Agropecuario": {
+            "position": 27,
+            "points": 46
+          },
+          "Almirante Brown": {
+            "position": 34,
+            "points": 33
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Atlanta",
+            "points": 50
+          },
+          {
+            "position": 3,
+            "team": "Tristán Suárez",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "San Miguel",
+            "points": 44
+          },
+          {
+            "position": 5,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 43
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Los Andes",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 11,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 12,
+            "team": "Racing (Córdoba)",
+            "points": 34
+          },
+          {
+            "position": 13,
+            "team": "Colegiales",
+            "points": 34
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 34
+          },
+          {
+            "position": 15,
+            "team": "Güemes",
+            "points": 33
+          },
+          {
+            "position": 16,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 17,
+            "team": "Ferro Carril Oeste",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Deportivo Morón",
+            "points": 54
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 52
+          },
+          {
+            "position": 23,
+            "team": "Chacarita Juniors",
+            "points": 50
+          },
+          {
+            "position": 24,
+            "team": "Chaco For Ever",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 47
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 47
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 46
+          },
+          {
+            "position": 28,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 45
+          },
+          {
+            "position": 29,
+            "team": "Defensores de Belgrano",
+            "points": 39
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 36
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 35
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 33
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/462.png",
+        "logo_away": "https://media.api-sports.io/football/teams/8375.png",
+        "classement_home": 27,
+        "classement_away": 34,
+        "points_classement_home": 46,
+        "points_classement_away": 33,
+        "nom_classement_home": "Agropecuario",
+        "nom_classement_away": "Almirante Brown",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Agropecuario et Almirante Brown en Primera Nacional. D'abord, je regarde les statistiques de chaque équipe.\n\nAgropecuario joue à domicile. Ils sont 27ème avec 46 points. En moyenne, ils marquent 1.20 but par match et encaissent 1.10. Ces chiffres montrent qu'ils ont une attaque modeste et une défense solide. Leur forme récente est mitigée : sur les 6 derniers matchs, ils ont 8 points, avec des victoires et des défaites. À domicile, leur série est W-D-L-W-D, avec 6 buts marqués et 5 encaissés. Cela suggère qu'ils sont compétitifs à domicile mais ont des difficultés à maintenir une constance.\n\nAlmirante Brown, eux, sont 34ème avec 33 points. En extérieur, ils marquent en moyenne 0.80 but et encaissent 0.80. Leur forme récente est similaire avec 8 points sur 6 matchs. En extérieur, leur série est L-W-L-L-D, avec 6 buts marqués et 7 encaissés. Cela indique des difficultés en déplacement, mais une défense relativement solide.\n\nEn regardant les 10 derniers matchs, Agropecuario a une légère tendance à marquer, avec des buts dans la plupart de leurs matchs. Almirante Brown a du mal à marquer régulièrement, avec plusieurs matchs sans but.\n\nLe classement montre qu'Agropecuario est légèrement mieux placé, mais la compétition est serrée. Sans confrontations directes récentes, c'est difficile de comparer leurs performances face à face.\n\nEn considérant le contexte, Agropecuario a l'avantage du terrain, ce qui peut les motiver à performer. Cependant, leur forme récente est inégale. Almirante Brown, bien qu'en bas du classement, a une défense solide qui pourrait contenir l'attaque d'Agropecuario.\n\nLes cotes n'étant pas disponibles, je me base sur les statistiques. Les deux équipes ont des difficultés à marquer massivement, ce qui suggère un match peu prolifique en buts. De plus, Agropecuario a tendance à jouer des matchs serrés à domicile.\n\nEn conclusion, bien qu'Agropecuario ait l'avantage du domicile, les deux équipes ont des difficultés offensives et des défenses solides. Un match nul semble probable, avec peu de buts marqués.\n</think>\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n1. **Statistiques Offensives et Défensives :**\n   - **Agropecuario** marque en moyenne 1.20 but par match et encaisse 1.10. Bien qu'ils aient une attaque modeste, leur défense est solide.\n   - **Almirante Brown** marque 0.80 but par match et encaisse 0.80. Leur attaque est plus faible, mais leur défense est également solide.\n\n2. **Forme Récente :**\n   - Agropecuario a une forme mitigée avec 8 points sur 6 matchs, montrant une certaine instabilité.\n   - Almirante Brown a une forme similaire avec 8 points sur 6 matchs, mais semble plus en difficulté à l'extérieur.\n\n3. **Analyse des Derniers Matchs :**\n   - Agropecuario a marqué dans la plupart de ses matchs récents, mais avec des défaites récentes.\n   - Almirante Brown a du mal à marquer régulièrement, avec plusieurs matchs sans but.\n\n4. **Contexte du Championnat :**\n   - Agropecuario est légèrement mieux classé, mais la compétition est serrée dans cette partie du tableau.\n\n5. **Avantage Domicile :**\n   - Bien que jouant à domicile, Agropecuario n'a pas une forme suffisamment dominante pour assurer une victoire.\n\n6. **Confrontations Directes :**\n   - Aucune donnée disponible, donc difficile de comparer leurs performances face à face.\n\n7. **Tendance aux Buts :**\n   - Les deux équipes ont des difficultés à marquer massivement, ce qui suggère un match avec peu de buts.\n\n**Conclusion :**\nCompte tenu des statistiques offensives modestes, des défenses solides, et des formes récentes mitigées des deux équipes, un match nul semble probable. De plus, le faible nombre de buts marqués par les deux équipes dans leurs derniers matchs renforce cette prédiction."
+      }
+    ]
+  }
+}
