@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-02 02:25:02",
+    "date_matchs": "2025-09-02",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Solihull Moors",
+        "AwayTeam": "Yeovil Town",
+        "date": "2 septembre 2025 à 18:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.8333333333333334,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 3,
+          "total_points": 3,
+          "serie_domicile": [
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1666666666666667,
+          "moyenne_encaisses": 1.8333333333333333,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 6,
+          "total_marques": 7,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "Solihull Moors",
+            "Southend United",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 25 Aug",
+            "Altrincham",
+            "Solihull Moors",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Solihull Moors",
+            "Aldershot Town",
+            "",
+            "1 - 5",
+            "FT"
+          ],
+          [
+            "Tue, 19 Aug",
+            "Carlisle United",
+            "Solihull Moors",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Sutton United",
+            "Solihull Moors",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Solihull Moors",
+            "Forest Green Rovers",
+            "",
+            "2 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "FC Halifax Town",
+            "Yeovil Town",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 25 Aug",
+            "Yeovil Town",
+            "Gateshead",
+            "",
+            "3 - 4",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Braintree Town",
+            "Yeovil Town",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 20 Aug",
+            "Yeovil Town",
+            "Brackley Town",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Forest Green Rovers",
+            "Yeovil Town",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Yeovil Town",
+            "Hartlepool United",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Solihull Moors": {
+            "position": 24,
+            "points": 3
+          },
+          "Yeovil Town": {
+            "position": 20,
+            "points": 4
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Forest Green Rovers",
+            "points": 14
+          },
+          {
+            "position": 3,
+            "team": "Southend United",
+            "points": 14
+          },
+          {
+            "position": 4,
+            "team": "Hartlepool United",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "team": "Carlisle United",
+            "points": 11
+          },
+          {
+            "position": 6,
+            "team": "Scunthorpe United",
+            "points": 11
+          },
+          {
+            "position": 7,
+            "team": "Gateshead",
+            "points": 10
+          },
+          {
+            "position": 8,
+            "team": "Wealdstone",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Eastleigh",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Brackley Town",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Boreham Wood",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Aldershot Town",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "FC Halifax Town",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Braintree Town",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "York City",
+            "points": 6
+          },
+          {
+            "position": 16,
+            "team": "Altrincham",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Boston United",
+            "points": 6
+          },
+          {
+            "position": 18,
+            "team": "Sutton United",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "Tamworth",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "Yeovil Town",
+            "points": 4
+          },
+          {
+            "position": 21,
+            "team": "Woking",
+            "points": 4
+          },
+          {
+            "position": 22,
+            "team": "Truro City",
+            "points": 3
+          },
+          {
+            "position": 23,
+            "team": "Morecambe",
+            "points": 3
+          },
+          {
+            "position": 24,
+            "team": "Solihull Moors",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1377.png",
+        "classement_home": 24,
+        "classement_away": 20,
+        "points_classement_home": 3,
+        "points_classement_away": 4,
+        "nom_classement_home": "Solihull Moors",
+        "nom_classement_away": "Yeovil Town",
+        "country_fr": "England - National League",
+        "analyse_ia": "**Analyse du Match : Solihull Moors vs Yeovil Town**\n\n**1. Analyse Comparative des Deux Équipes**\n\n- **Solihull Moors (Domicile)** : Actuellement 24ᵉ avec seulement 3 points, l'équipe est en grande difficulté. Elle a marqué 4 buts en 6 matchs à domicile et en a encaissé 9. Sa forme récente est inquiétante avec une série de 6 défaites consécutives en championnat. Cependant, lors de ses 10 derniers matchs, elle a obtenu quelques nuls, ce qui montre une certaine résilience défensive.\n\n- **Yeovil Town (Extérieur)** : 20ᵉ avec 4 points, Yeovil Town se situe légèrement mieux que Solihull Moors. Elle a marqué 2 buts en 3 matchs à l'extérieur et en a encaissé 6. Sa forme récente est également préoccupante avec 3 défaites en 4 matchs, mais elle a réussi à obtenir une victoire et un nul récemment.\n\n**2. Impact du Facteur Domicile/Extérieur**\n\nSolihull Moors joue à domicile, où elle a marqué 4 buts en 6 matchs, mais a encaissé 9. Son bilan à domicile est donc mitigé. Yeovil Town, quant à elle, a du mal à l'extérieur avec seulement 2 buts marqués en 3 matchs et 6 encaissés. Cependant, Yeovil semble avoir une légère supériorité offensive par rapport à Solihull.\n\n**3. Forme Récents et Tendances**\n\nSolihull Moors est en pleine crise avec 6 défaites consécutives en championnat. Elle n'a pas gagné depuis plusieurs matchs et semble manquer de confiance. Yeovil Town, bien qu'elle soit aussi en difficulté, a montré des signes de rétablissement avec une victoire et un nul dans ses 4 derniers matchs.\n\n**4. Contexte du Championnat**\n\nSolihull Moors est relégable avec seulement 3 points, tandis que Yeovil Town est à la 20ᵉ place avec 4 points. Les deux équipes luttent pour éviter la relégation, ce qui ajoute une pression supplémentaire sur ce match. Cependant, Yeovil Town semble avoir une légère avance en termes de points et de forme récente.\n\n**5. Confrontations Directes**\n\nAucune confrontation directe récente n'est disponible, donc il est difficile de se baser sur l'historique des rencontres entre ces deux équipes.\n\n**6. Évaluation des Cotes**\n\nAucune cote n'est disponible pour ce match, donc l'analyse se base uniquement sur les statistiques et la forme des équipes.\n\n**7. Prédiction Finale**\n\n**Prédiction : Victoire Extérieur (Yeovil Town)**\n\n**Justification :**\n\n- **Forme Récente :** Yeovil Town, bien qu'elle soit aussi en difficulté, a montré une légère amélioration avec une victoire et un nul dans ses 4 derniers matchs, contrairement à Solihull Moors qui est en pleine crise avec 6 défaites consécutives.\n\n- **Statistiques Offensives :** Yeovil Town a une moyenne de buts marqués légèrement supérieure (1.17 contre 0.83) et a réussi à marquer dans la plupart de ses matchs récents, y compris à l'extérieur.\n\n- **Statistiques Défensives :** Bien que Solihull Moors ait une défense qui encaisse plus de buts, Yeovil Town a une défense plus solide en ce moment, ayant concédé moins de buts par match en moyenne.\n\n- **Contexte du Championnat :** Les deux équipes sont proches au classement, mais Yeovil Town a une légère avance en termes de points et de performance récente, ce qui pourrait lui donner un avantage psychologique.\n\nEn conclusion, bien que le match soit serré et que les deux équipes soient en difficulté, Yeovil Town semble avoir une légère supériorité qui pourrait lui permettre de s'imposer à l'extérieur."
+      }
+    ]
+  }
+}
