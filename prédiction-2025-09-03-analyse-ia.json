@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-03 02:16:15",
+    "date_matchs": "2025-09-03",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Gateshead",
+        "AwayTeam": "Altrincham",
+        "date": "3 septembre 2025 à 18:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.8333333333333333,
+          "moyenne_encaisses": 2.3333333333333335,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 10,
+          "total_points": 10,
+          "serie_domicile": [
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3333333333333333,
+          "moyenne_encaisses": 1.6666666666666667,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 8,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "Gateshead",
+            "Aldershot Town",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Mon, 25 Aug",
+            "Yeovil Town",
+            "Gateshead",
+            "",
+            "3 - 4",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Gateshead",
+            "Tamworth",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 20 Aug",
+            "Rochdale",
+            "Gateshead",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Eastleigh",
+            "Gateshead",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Gateshead",
+            "Southend United",
+            "",
+            "0 - 3",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "Eastleigh",
+            "Altrincham",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 25 Aug",
+            "Altrincham",
+            "Solihull Moors",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Morecambe",
+            "Altrincham",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Tue, 19 Aug",
+            "Altrincham",
+            "Hartlepool United",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Rochdale",
+            "Altrincham",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Altrincham",
+            "Aldershot Town",
+            "",
+            "3 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Gateshead": {
+            "position": 8,
+            "points": 10
+          },
+          "Altrincham": {
+            "position": 18,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Forest Green Rovers",
+            "points": 17
+          },
+          {
+            "position": 2,
+            "team": "Rochdale",
+            "points": 15
+          },
+          {
+            "position": 3,
+            "team": "Southend United",
+            "points": 14
+          },
+          {
+            "position": 4,
+            "team": "Hartlepool United",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "team": "Wealdstone",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Carlisle United",
+            "points": 11
+          },
+          {
+            "position": 7,
+            "team": "Scunthorpe United",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Gateshead",
+            "points": 10
+          },
+          {
+            "position": 9,
+            "team": "Eastleigh",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Brackley Town",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Boreham Wood",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Aldershot Town",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Tamworth",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Yeovil Town",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "FC Halifax Town",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Braintree Town",
+            "points": 7
+          },
+          {
+            "position": 17,
+            "team": "York City",
+            "points": 6
+          },
+          {
+            "position": 18,
+            "team": "Altrincham",
+            "points": 6
+          },
+          {
+            "position": 19,
+            "team": "Boston United",
+            "points": 6
+          },
+          {
+            "position": 20,
+            "team": "Sutton United",
+            "points": 5
+          },
+          {
+            "position": 21,
+            "team": "Woking",
+            "points": 4
+          },
+          {
+            "position": 22,
+            "team": "Truro City",
+            "points": 3
+          },
+          {
+            "position": 23,
+            "team": "Morecambe",
+            "points": 3
+          },
+          {
+            "position": 24,
+            "team": "Solihull Moors",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1823.png",
+        "logo_away": "https://media.api-sports.io/football/teams/4700.png",
+        "classement_home": 8,
+        "classement_away": 18,
+        "points_classement_home": 10,
+        "points_classement_away": 6,
+        "nom_classement_home": "Gateshead",
+        "nom_classement_away": "Altrincham",
+        "country_fr": "England - National League",
+        "analyse_ia": "**Analyse du match : Gateshead vs Altrincham**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Gateshead (Domicile) :**\n  - **Points forts :** Gateshead a une attaque performante avec une moyenne de 1,83 buts marqués par match. Ils ont également montré une certaine constance à domicile, malgré une récente défaite contre Southend United (0-3).\n  - **Points faibles :** La défense de Gateshead semble fragile, encaissant en moyenne 2,33 buts par match. Cela pourrait être un problème face à une équipe comme Altrincham, qui a des attaques occasionnelles.\n\n- **Altrincham (Extérieur) :**\n  - **Points forts :** Bien qu'ils soient 18èmes, Altrincham a une défense solide avec une moyenne de 1,67 buts encaissés par match. Cela pourrait les aider à contenir l'attaque de Gateshead.\n  - **Points faibles :** Leur attaque est moins efficace, avec seulement 1,33 buts marqués en moyenne. De plus, leur forme à l'extérieur est préoccupante, avec une série de défaites récentes.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Gateshead joue à domicile, où ils ont une légère supériorité en termes de buts marqués. Cependant, leur défense à domicile a été instable.\n- Altrincham, quant à lui, a des difficultés à l'extérieur, avec une série de trois défaites consécutives. Cela pourrait affecter leur confiance.\n\n**3. Analyse des formes récentes :**\n\n- **Gateshead :** Les 6 derniers matchs montrent une forme mitigée (D-W-W-L-W-L). Une victoire décisive 4-3 contre Yeovil Town, mais aussi une défaite cuisante 0-3 contre Southend United. Cela indique une irrégularité.\n- **Altrincham :** Les 6 derniers matchs sont plus inquiétants (L-W-L-L-L-W). Une seule victoire face à Solihull Moors, mais des défaites contre des équipes comme Morecambe et Rochdale.\n\n**4. Contexte du championnat :**\n\n- Gateshead est 8ème avec 10 points, tandis qu'Altrincham est 18ème avec 6 points. Gateshead a plus de marge pour se permettre des erreurs, tandis qu'Altrincham a besoin de résultats pour éviter la relégation.\n\n**5. Confrontations directes :**\n\n- Aucune confrontation H2H disponible, donc difficile de tirer des conclusions de ce côté.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote disponible, donc l'analyse se base uniquement sur les statistiques.\n\n**7. Prédiction finale :**\n\n**Double chance 1X (Victoire de Gateshead ou Match nul)**\n\n**Justification :**\n\n- Gateshead a une attaque plus performante et joue à domicile, ce qui est un avantage certain.\n- Malgré une défense fragile, Gateshead a montré qu'il pouvait marquer des buts, ce qui pourrait compenser les buts encaissés.\n- Altrincham, bien qu'il ait une défense solide, a des difficultés à l'extérieur et une attaque moins efficace.\n- La double chance 1X couvre à la fois une victoire de Gateshead et la possibilité d'un match nul, ce qui semble plausible compte tenu des statistiques offensives et défensives des deux équipes.\n\n**Conclusion :**\n\nGateshead devrait avoir l'avantage du terrain et une attaque plus productive, ce qui pèse en faveur d'une victoire ou d'un nul. Altrincham, malgré sa solidité défensive, a des difficultés à l'extérieur et pourrait ne pas marquer suffisamment pour s'imposer. La double chance 1X semble donc la prédiction la plus fiable."
+      }
+    ]
+  }
+}
