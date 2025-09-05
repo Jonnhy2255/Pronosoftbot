@@ -1,0 +1,1277 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-05 02:19:52",
+    "date_matchs": "2025-09-05",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "San Miguel",
+        "AwayTeam": "Almagro",
+        "date": "5 septembre 2025 à 18:30:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 16,
+          "total_points": 8,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 8,
+          "total_marques": 9,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 7,
+          "total_points": 6,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 7,
+          "total_marques": 7,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          [
+            "Sun, 31 Aug",
+            "Los Andes",
+            "San Miguel",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 22 Aug",
+            "Quilmes",
+            "San Miguel",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "San Miguel",
+            "Racing (Córdoba)",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Atlanta",
+            "San Miguel",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "San Miguel",
+            "Colegiales",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Arsenal Sarandi",
+            "San Miguel",
+            "",
+            "5 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "San Miguel",
+            "All Boys",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Alvarado (Mar del Plata)",
+            "San Miguel",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "San Miguel",
+            "Deportivo Madryn",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Deportivo Maipú",
+            "San Miguel",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, 31 Aug",
+            "Almagro",
+            "Quilmes",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Racing (Córdoba)",
+            "Almagro",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Almagro",
+            "Atlanta",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Colegiales",
+            "Almagro",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "Almagro",
+            "Arsenal Sarandi",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "All Boys",
+            "Almagro",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Almagro",
+            "Alvarado (Mar del Plata)",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Deportivo Madryn",
+            "Almagro",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Almagro",
+            "Deportivo Maipú",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Gimnasia y Tiro (Salta)",
+            "Almagro",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "San Miguel": {
+            "position": 4,
+            "points": 44
+          },
+          "Almagro": {
+            "position": 14,
+            "points": 34
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Atlanta",
+            "points": 50
+          },
+          {
+            "position": 3,
+            "team": "Tristán Suárez",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "San Miguel",
+            "points": 44
+          },
+          {
+            "position": 5,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 43
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Los Andes",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 11,
+            "team": "Racing (Córdoba)",
+            "points": 35
+          },
+          {
+            "position": 12,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 13,
+            "team": "Colegiales",
+            "points": 34
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 34
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 33
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Deportivo Morón",
+            "points": 54
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 53
+          },
+          {
+            "position": 23,
+            "team": "Chacarita Juniors",
+            "points": 50
+          },
+          {
+            "position": 24,
+            "team": "Chaco For Ever",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 47
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 47
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 46
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 45
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 42
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 38
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/8379.png",
+        "logo_away": "https://media.api-sports.io/football/teams/482.png",
+        "classement_home": 4,
+        "classement_away": 14,
+        "points_classement_home": 44,
+        "points_classement_away": 34,
+        "nom_classement_home": "San Miguel",
+        "nom_classement_away": "Almagro",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between San Miguel and Almagro on September 5, 2025. Let me start by looking at the data provided.\n\nSan Miguel is playing at home. They're 4th in the league with 44 points. Their average goals scored is 0.90 and conceded is 1.00. Looking at their recent form, in the last 6 matches, they have 8 points with a record of D, L, W, D, W, L. Over 10 matches, they have 16 points with D, L, W, D, W, L, W, D, D, W. At home, they've won three in a row and drawn one, scoring 5 and conceding 2.\n\nAlmagro is 14th with 34 points. They average 0.70 goals scored and 1.10 conceded. Their last 6 matches give them 6 points with D, D, D, L, W, L. Over 10 matches, only 7 points with D, D, D, L, W, L, D, L, L, L. Away form is poor: D, L, L, L, L, scoring 2 and conceding 7.\n\nLooking at their last 10 matches, San Miguel has more wins and draws, while Almagro has mostly losses and a few draws. San Miguel's home form is strong, especially defensively. Almagro struggles away, both in scoring and defending.\n\nThe league standings show San Miguel in a comfortable position, while Almagro is near the bottom, likely fighting relegation. This could mean Almagro might be more motivated, but their form doesn't show it.\n\nThere are no head-to-head stats, so I can't factor that in. No betting odds are provided, so I have to rely on stats.\n\nConsidering all this, San Miguel seems more likely to win. They're in better form, especially at home, and Almagro's away form is weak. I think San Miguel will take advantage of this and secure a victory.\n</think>\n\n**Prédiction : Victoire domicile (San Miguel)**\n\n**Justification :**\n\n1. **Forme Récente :** San Miguel a une forme plus solide avec 16 points sur 10 matchs, contre seulement 7 points pour Almagro. Les récentes performances de San Miguel, notamment à domicile, montrent une tendance positive.\n\n2. **Statistiques Domicile/Extérieur :** San Miguel a une forte dominance à domicile, avec une série de 3 victoires consécutives et un bilan défensif solide (5 buts marqués pour 2 encaissés). Almagro, en revanche, a une forme extérieure très faible, avec 5 défaites consécutives et seulement 2 buts marqués pour 7 encaissés.\n\n3. **Contexte du Championnat :** San Miguel, 4ème avec 44 points, est dans une position confortable, tandis qu'Almagro, 14ème avec 34 points, lutte pour maintenir sa place. Bien qu'Almagro puisse être motivé pour éviter la relégation, son manque de forme et de résultats à l'extérieur joue en défaveur.\n\n4. **Analyse des Matchs Récents :** Les 10 derniers matchs de San Miguel montrent une équipe capable de gagner et de faire des nuls, tandis qu'Almagro a du mal à gagner, avec une majorité de défaites et de nuls.\n\n5. **Bilans Offensifs et Défensifs :** San Miguel a une meilleure moyenne de buts marqués (0,90 contre 0,70) et une défense plus solide (1,00 but encaissé en moyenne contre 1,10). Ces statistiques renforcent l'avantage de San Miguel à domicile.\n\nSans données sur les confrontations directes récentes, mais en considérant toutes les statistiques et tendances, il est raisonnable de conclure que San Miguel a plus de chances de s'imposer dans ce match."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Amazonas",
+        "AwayTeam": "remo",
+        "date": "5 septembre 2025 à 20:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 10,
+          "total_points": 6,
+          "serie_domicile": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 9,
+          "total_marques": 13,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 12,
+          "total_points": 6,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 2,
+          "total_marques": 7,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          [
+            "Sun, 31 Aug",
+            "Atlético Goianiense",
+            "Amazonas",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 26 Aug",
+            "Avaí",
+            "Amazonas",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Amazonas",
+            "América Mineiro",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Ferroviária",
+            "Amazonas",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Amazonas",
+            "Goiás",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Coritiba",
+            "Amazonas",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Thu, 24 Jul",
+            "Amazonas",
+            "Paysandu",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Amazonas",
+            "Botafogo-SP",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 15 Jul",
+            "Cuiabá",
+            "Amazonas",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Amazonas",
+            "Athletico Paranaense",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Fri, 29 Aug",
+            "Remo",
+            "Criciúma",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Coritiba",
+            "Remo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Remo",
+            "Botafogo-SP",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "América Mineiro",
+            "Remo",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Remo",
+            "Ferroviária",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Goiás",
+            "Remo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "Remo",
+            "Avaí",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "Remo",
+            "Novorizontino",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Chapecoense",
+            "Remo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Remo",
+            "Cuiabá",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Amazonas": {
+            "position": 18,
+            "points": 24
+          },
+          "remo": {
+            "position": 6,
+            "points": 35
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Goiás",
+            "points": 44
+          },
+          {
+            "position": 2,
+            "team": "Coritiba",
+            "points": 43
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 41
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 39
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 36
+          },
+          {
+            "position": 6,
+            "team": "Remo",
+            "points": 35
+          },
+          {
+            "position": 7,
+            "team": "CRB",
+            "points": 34
+          },
+          {
+            "position": 8,
+            "team": "Vila Nova",
+            "points": 34
+          },
+          {
+            "position": 9,
+            "team": "Cuiabá",
+            "points": 34
+          },
+          {
+            "position": 10,
+            "team": "Operario PR",
+            "points": 33
+          },
+          {
+            "position": 11,
+            "team": "Athletico Paranaense",
+            "points": 33
+          },
+          {
+            "position": 12,
+            "team": "Avaí",
+            "points": 33
+          },
+          {
+            "position": 13,
+            "team": "Ferroviária",
+            "points": 31
+          },
+          {
+            "position": 14,
+            "team": "Atlético Goianiense",
+            "points": 31
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 28
+          },
+          {
+            "position": 16,
+            "team": "Botafogo-SP",
+            "points": 28
+          },
+          {
+            "position": 17,
+            "team": "América Mineiro",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 24
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 21
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/10862.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1198.png",
+        "classement_home": 18,
+        "classement_away": 6,
+        "points_classement_home": 24,
+        "points_classement_away": 35,
+        "nom_classement_home": "Amazonas",
+        "nom_classement_away": "Remo",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "<think>\nAlright, let's tackle this match analysis between Amazonas and Remo. So, first off, I need to understand the context. Amazonas is playing at home, and they're currently 18th in the Serie B with 24 points. Remo is 6th with 35 points, so they're in a better position in the league. \n\nLooking at their recent forms, Amazonas has been a bit inconsistent. In their last six matches, they've only managed to get 6 points, which isn't great. Their home form is also not impressive, with a series of draws and a few losses. They've scored 8 goals at home and conceded 6, which shows they can score but also have defensive issues.\n\nOn the other hand, Remo is in a better spot but hasn't been performing exceptionally well either. Their away form is decent, with some draws and a couple of wins. They've scored fewer goals away, only 3, but have a tighter defense, conceding just 2 goals. Their recent matches show a trend towards low-scoring games, which might be a key point.\n\nLooking at the head-to-head data, there isn't any from the last season, so I can't rely on past meetings to inform my prediction. The league standings show that Remo is safely mid-table, while Amazonas is struggling near the relegation zone. This could mean that Remo has less pressure and might play more conservatively, while Amazonas might be more motivated to win to escape the bottom.\n\nConsidering the betting options, I don't have the odds, but based on the stats, I can infer that a low-scoring game is likely. Both teams haven't been scoring a lot recently, and their defensive stats are decent. Amazonas has a slightly better scoring record at home, but Remo's defense is solid.\n\nSo, putting it all together, I think the match might end in a draw. Both teams aren't in great form, and their defensive stats suggest they can hold each other. Alternatively, considering the double chance, backing either a draw or a Remo win could be safer, but given their away form, a draw seems more plausible.\n\nAnother angle is the BTTS (Both Teams To Score). Amazonas has scored in most of their home games, and Remo occasionally scores away. However, their recent matches have been low on goals, so maybe BTTS non is more likely. But since Amazonas has a decent home scoring record, it's a bit of a toss-up.\n\nIn terms of total goals, given both teams' recent trends, under 2.5 goals seems more probable. They haven't been involved in high-scoring games lately, so that's another option to consider.\n\nBut focusing on the most probable outcome, I think the match will end in a draw. Both teams are evenly matched in terms of recent performance, and their defensive capabilities might cancel each other out.\n</think>\n\n**Prédiction finale : Match nul**\n\n**Justification :**\n\n1. **Forme récente :** Amazonas et Remo présentent des formes similaires, avec une tendance à des résultats mitigés. Les deux équipes ont obtenu 6 points sur leurs 6 derniers matchs, indiquant un équilibre en termes de performance récente.\n\n2. **Statistiques offensives et défensives :** Amazonas a marqué 8 buts à domicile et en a concédé 6, tandis que Remo a marqué 3 buts à l'extérieur et n'en a concédé que 2. Ces statistiques suggèrent que les deux équipes ont des forces et des faiblesses équilibrées.\n\n3. **Contexte du championnat :** Remo, 6e avec 35 points, est en meilleure position que Amazonas, 18e avec 24 points. Cependant, Amazonas joue à domicile, ce qui peut compenser le désavantage en termes de classement.\n\n4. **Tendance aux matchs serrés :** Les matchs récents des deux équipes montrent une tendance vers des scores bas et des résultats étroits, ce qui augmente la probabilité d'un match nul.\n\n5. **Confrontations directes :** Bien qu'il n'y ait pas de données H2H récentes, les statistiques globales des deux équipes suggèrent un équilibre, renforçant l'idée d'un match nul.\n\nEn conclusion, compte tenu des formes récentes, des statistiques et du contexte du championnat, un match nul semble être l'issue la plus probable."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Paysandu",
+        "AwayTeam": "Volta Redonda",
+        "date": "5 septembre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Paysandu": 2.16,
+            "Volta Redonda": 3.6,
+            "Draw": 3.12
+          },
+          "totals": {
+            "Over": 2.36,
+            "Under": 1.47
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 2,
+          "total_points_10": 8,
+          "total_points": 2,
+          "serie_domicile": [
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 8,
+          "total_marques": 11,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 9,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 8,
+          "total_marques": 7,
+          "total_encaisses": 14
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "CRB",
+            "Paysandu",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Paysandu",
+            "Operario PR",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Chapecoense",
+            "Paysandu",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 12 Aug",
+            "Paysandu",
+            "Vila Nova",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Athletico Paranaense",
+            "Paysandu",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Tue, 29 Jul",
+            "Paysandu",
+            "Athletic",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Thu, 24 Jul",
+            "Amazonas",
+            "Paysandu",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Coritiba",
+            "Paysandu",
+            "",
+            "2 - 5",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Paysandu",
+            "Atlético Goianiense",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Avaí",
+            "Paysandu",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, 31 Aug",
+            "Volta Redonda",
+            "Athletic",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Ferroviária",
+            "Volta Redonda",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 18 Aug",
+            "Volta Redonda",
+            "CRB",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Volta Redonda",
+            "Novorizontino",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 5 Aug",
+            "Cuiabá",
+            "Volta Redonda",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Volta Redonda",
+            "Vila Nova",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Chapecoense",
+            "Volta Redonda",
+            "",
+            "4 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Volta Redonda",
+            "Athletico Paranaense",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Tue, 15 Jul",
+            "Botafogo-SP",
+            "Volta Redonda",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 4 Jul",
+            "Coritiba",
+            "Volta Redonda",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Paysandu": {
+            "position": 20,
+            "points": 21
+          },
+          "Volta Redonda": {
+            "position": 19,
+            "points": 23
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Goiás",
+            "points": 44
+          },
+          {
+            "position": 2,
+            "team": "Coritiba",
+            "points": 43
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 41
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 39
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 36
+          },
+          {
+            "position": 6,
+            "team": "Remo",
+            "points": 35
+          },
+          {
+            "position": 7,
+            "team": "CRB",
+            "points": 34
+          },
+          {
+            "position": 8,
+            "team": "Vila Nova",
+            "points": 34
+          },
+          {
+            "position": 9,
+            "team": "Cuiabá",
+            "points": 34
+          },
+          {
+            "position": 10,
+            "team": "Operario PR",
+            "points": 33
+          },
+          {
+            "position": 11,
+            "team": "Athletico Paranaense",
+            "points": 33
+          },
+          {
+            "position": 12,
+            "team": "Avaí",
+            "points": 33
+          },
+          {
+            "position": 13,
+            "team": "Ferroviária",
+            "points": 31
+          },
+          {
+            "position": 14,
+            "team": "Atlético Goianiense",
+            "points": 31
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 28
+          },
+          {
+            "position": 16,
+            "team": "Botafogo-SP",
+            "points": 28
+          },
+          {
+            "position": 17,
+            "team": "América Mineiro",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 24
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 21
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/149.png",
+        "logo_away": "https://media.api-sports.io/football/teams/7814.png",
+        "classement_home": 20,
+        "classement_away": 19,
+        "points_classement_home": 21,
+        "points_classement_away": 23,
+        "nom_classement_home": "Paysandu",
+        "nom_classement_away": "Volta Redonda",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Paysandu et Volta Redonda en Serie B brésilienne. Commençons par regarder les statistiques de chaque équipe.\n\nPaysandu est 20ème avec 21 points. Ils ont une moyenne de buts marqués de 1.10 et encaissent en moyenne 1.40 but par match. Ces derniers temps, leur forme est inquiétante : 4 défaites consécutives en 6 matchs, et sur 10 matchs, seulement 8 points. À domicile, ils n'ont pas gagné depuis un moment, avec une série de défaites et de nuls. Ils ont marqué seulement 4 buts à domicile et en ont concédé 6.\n\nVolta Redonda, eux, sont 19ème avec 23 points. Leur moyenne de buts marqués est faible, 0.70, et ils encaissent aussi 1.40 but par match. Leur forme récente est mitigée : une victoire sur 6 matchs, avec 5 points. À l'extérieur, ils ont du mal, avec une série de défaites et de nuls, marquant seulement 2 buts et encaissant 8.\n\nEn regardant les 10 derniers matchs de chaque équipe, Paysandu a perdu 6 de ses 10 derniers matchs, avec seulement 2 nuls et une victoire. Volta Redonda a perdu 6 de ses 10 matchs, avec 3 nuls et une victoire.\n\nLe classement montre que les deux équipes sont proches, avec Volta Redonda légèrement mieux classée. Cependant, leurs performances récentes sont similaires, avec peu de points marqués.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de se baser là-dessus. Les cotes des bookmakers montrent que Paysandu est favori avec une cote de 2.16, mais ce n'est pas écrasant. Le total de buts sous 2.5 est à 1.47, ce qui suggère que le match pourrait être peu prolifique.\n\nEn considérant tout cela, je pense que le match pourrait être serré. Paysandu a l'avantage du terrain, mais leur forme récente est préoccupante. Volta Redonda a du mal à marquer, mais ils pourraient surprendre. Une double chance X2 (nul ou victoire extérieure) semble plausible, car Volta Redonda a une légère amélioration récente avec une victoire et un nul dans leurs derniers matchs, tandis que Paysandu a du mal à gagner.\n</think>\n\n**Prédiction : Double chance X2 (Volta Redonda ou match nul)**\n\n**Justification :**\n\n1. **Forme Récente :** Volta Redonda montre des signes de légère amélioration avec une victoire et un nul dans leurs 6 derniers matchs, tandis que Paysandu est en difficulté avec seulement 2 points sur 6 matchs.\n\n2. **Statistiques Offensives :** Volta Redonda a du mal à marquer, mais a récemment inscrit des buts dans des matchs clés. Paysandu, bien qu'il joue à domicile, n'a pas été en mesure de capitaliser ses occasions récemment.\n\n3. **Défense :** Les deux équipes encaissent en moyenne 1.40 buts par match, ce qui suggère une défense solide de part et d'autre, limitant les occasions de but.\n\n4. **Cotes et Marché :** Les cotes pour le total de buts sous 2.5 sont attractives (1.47), indiquant un match probablement fermé avec peu de buts.\n\n5. **Contexte du Championnat :** Les deux équipes sont proches au classement et luttent pour éviter la relégation, ce qui motive fortement les joueurs, mais aussi augmente la pression, pouvant conduire à un match prudent.\n\nEn conclusion, bien que Paysandu joue à domicile, la forme récente et les difficultés offensives des deux équipes suggèrent un match serré avec peu de buts, rendant la double chance X2 une option prudente et raisonnable."
+      }
+    ]
+  }
+}
