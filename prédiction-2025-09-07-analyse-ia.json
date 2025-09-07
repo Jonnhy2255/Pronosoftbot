@@ -1,0 +1,2906 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-07 02:24:16",
+    "date_matchs": "2025-09-07",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 7,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 7,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Cobresal",
+        "AwayTeam": "Palestino",
+        "date": "7 septembre 2025 à 18:00:00 UTC",
+        "league": "Chile - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cobresal": 2.7,
+            "Palestino": 2.5,
+            "Draw": 3.4
+          },
+          "totals": {
+            "Over": 1.88,
+            "Under": 1.89
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 14,
+          "total_points": 9,
+          "serie_domicile": [
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 9,
+          "total_marques": 11,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 15,
+          "total_points": 11,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 10,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "Universidad Católica",
+            "Cobresal",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Cobresal",
+            "Unión La Calera",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "O'Higgins",
+            "Cobresal",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Cobresal",
+            "Coquimbo Unido",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 4 Aug",
+            "Universidad de Chile",
+            "Cobresal",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "La Serena",
+            "Cobresal",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 22 Jun",
+            "Cobresal",
+            "Ñublense",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Tue, 17 Jun",
+            "Colo Colo",
+            "Cobresal",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 2 Jun",
+            "Cobresal",
+            "Deportes Iquique",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 24 May",
+            "Everton CD",
+            "Cobresal",
+            "",
+            "2 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "Unión La Calera",
+            "Palestino",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 22 Aug",
+            "Palestino",
+            "Colo Colo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Ñublense",
+            "Palestino",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Palestino",
+            "Deportes Iquique",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "Audax Italiano",
+            "Palestino",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Palestino",
+            "Unión Española",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Palestino",
+            "Bolívar",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Wed, 16 Jul",
+            "Bolívar",
+            "Palestino",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 21 Jun",
+            "Huachipato",
+            "Palestino",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 14 Jun",
+            "Palestino",
+            "La Serena",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Cobresal": {
+            "position": 7,
+            "points": 32
+          },
+          "Palestino": {
+            "position": 2,
+            "points": 39
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coquimbo Unido",
+            "points": 53
+          },
+          {
+            "position": 2,
+            "team": "Palestino",
+            "points": 39
+          },
+          {
+            "position": 3,
+            "team": "Universidad de Chile",
+            "points": 38
+          },
+          {
+            "position": 4,
+            "team": "O'Higgins",
+            "points": 38
+          },
+          {
+            "position": 5,
+            "team": "Audax Italiano",
+            "points": 37
+          },
+          {
+            "position": 6,
+            "team": "Universidad Católica",
+            "points": 36
+          },
+          {
+            "position": 7,
+            "team": "Cobresal",
+            "points": 32
+          },
+          {
+            "position": 8,
+            "team": "Colo Colo",
+            "points": 31
+          },
+          {
+            "position": 9,
+            "team": "Huachipato",
+            "points": 31
+          },
+          {
+            "position": 10,
+            "team": "Ñublense",
+            "points": 29
+          },
+          {
+            "position": 11,
+            "team": "Unión La Calera",
+            "points": 23
+          },
+          {
+            "position": 12,
+            "team": "Everton CD",
+            "points": 22
+          },
+          {
+            "position": 13,
+            "team": "La Serena",
+            "points": 19
+          },
+          {
+            "position": 14,
+            "team": "Deportes Limache",
+            "points": 18
+          },
+          {
+            "position": 15,
+            "team": "Unión Española",
+            "points": 17
+          },
+          {
+            "position": 16,
+            "team": "Deportes Iquique",
+            "points": 14
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2331.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2318.png",
+        "classement_home": 7,
+        "classement_away": 2,
+        "points_classement_home": 32,
+        "points_classement_away": 39,
+        "nom_classement_home": "Cobresal",
+        "nom_classement_away": "Palestino",
+        "country_fr": "Chile - Primera División",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Cobresal et Palestino pour proposer une prédiction. D'abord, je vais regarder les statistiques de chaque équipe.\n\nCobresal est 7ème avec 32 points. Ils ont une moyenne de buts marqués de 1.10 et encaissés de 1.30. À domicile, leur forme récente est mitigée : W-L-D-W. Ils ont marqué 5 buts et en ont encaissé 4. Sur les 6 derniers matchs, ils ont 9 points, ce qui est correct.\n\nPalestino est 2ème avec 39 points. Leur moyenne de buts est un peu plus basse : 1.00 marqués et 1.20 encaissés. En extérieur, leur forme est W-L-D-L-D, avec 5 buts marqués et 8 encaissés. Sur les 6 derniers matchs, ils ont 11 points, ce qui est meilleur que Cobresal.\n\nEn regardant les 10 derniers matchs, Cobresal a une forme en dents de scie : des victoires et des défaites alternées. Palestino semble plus stable, avec quelques victoires et des nuls, mais aussi des défaites.\n\nLe classement montre que Palestino est bien meilleur, 2ème contre 7ème. Cela pourrait indiquer une supériorité. Cependant, Cobresal joue à domicile, ce qui est un avantage.\n\nLes cotes proposées sont : Cobresal à 2.7, Palestino à 2.5, et nul à 3.4. Le total 2.5 buts est à 1.88 pour le over et 1.89 pour le under.\n\nEn regardant les matchs récents, Cobresal a gagné contre des équipes du bas du classement, comme Unión La Calera et Deportes Iquique, mais a perdu contre des équipes plus fortes comme Universidad Católica. Palestino a gagné contre des équipes comme Unión La Calera et Colo Colo, mais a aussi perdu contre des équipes comme Ñublense.\n\nIl n'y a pas de confrontations directes récentes, donc c'est difficile à dire. Mais Palestino semble plus solide en défense, avec une moyenne d'encaissement légèrement meilleure.\n\nEn termes de buts, Cobresal a marqué 5 en 4 matchs à domicile, tandis que Palestino a marqué 5 en 5 matchs extérieurs. Cobresal a encaissé 4 buts à domicile, Palestino 8 à l'extérieur.\n\nJe pense que le match pourrait être serré. Cobresal a l'avantage du terrain, mais Palestino est mieux classé et a une forme un peu plus stable. Peut-être un nul ou une victoire de Palestino.\n\nEn considérant les cotes, un nul est à 3.4, ce qui pourrait être une bonne valeur. Mais aussi, la double chance X2 (nul ou victoire de Palestino) pourrait être une option sûre.\n\nEn fin de compte, je penche pour un nul, car Cobresal est solide à domicile et Palestino a des difficultés à l'extérieur, avec des buts encaissés. Donc, prédiction : Match nul.\n</think>\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n1. **Analyse Comparative :**\n   - **Cobresal** : 7ᵉ avec 32 points. Attaque modeste (1.10 buts/match), défense légèrement plus faible (1.30). À domicile, ils ont marqué 5 buts en 4 matchs et en ont encaissé 4.\n   - **Palestino** : 2ᵉ avec 39 points. Attaque légèrement inférieure (1.00), défense un peu meilleure (1.20). À l'extérieur, ils ont marqué 5 buts en 5 matchs et en ont encaissé 8.\n\n2. **Forme Récente :**\n   - Cobresal : Forme en dents de scie avec 9 points sur 6 matchs.\n   - Palestino : Plus stable avec 11 points sur 6 matchs.\n\n3. **Contexte du Championnat :**\n   - Palestino est mieux classé, indiquant une supériorité potentielle.\n   - Cobresal joue à domicile, un avantage non négligeable.\n\n4. **Cotes et Marché :**\n   - Cotes : Cobresal (2.7), Palestino (2.5), Nul (3.4).\n   - Total buts : Over 2.5 (1.88), Under (1.89).\n\n5. **Matchs Récents :**\n   - Cobresal : Victoires contre des équipes du bas du classement, défaites contre des équipes fortes.\n   - Palestino : Victoires contre des équipes du milieu et haut de tableau, mais aussi des défaites.\n\n6. **Buts Marqués/Encaissés :**\n   - Cobresal : 5 buts marqués en 4 matchs à domicile.\n   - Palestino : 5 buts marqués en 5 matchs à l'extérieur, 8 encaissés.\n\n**Conclusion :**\nLe match semble équilibré. Cobresal a l'avantage du terrain, mais Palestino est mieux classé. Les statistiques offensives et défensives sont proches. Un nul est probable, compte tenu des difficultés de Palestino à l'extérieur et de la solidité de Cobresal à domicile."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "2 de Mayo",
+        "AwayTeam": "Olimpia",
+        "date": "7 septembre 2025 à 19:00:00 UTC",
+        "league": "Paraguay - Division Profesional - Clausura",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 10,
+          "total_points": 3,
+          "serie_domicile": [
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 10,
+          "total_marques": 10,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 12,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 11,
+          "total_marques": 13,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "Deportivo Recoleta",
+            "2 de Mayo",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "2 de Mayo",
+            "Sportivo Ameliano",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Club Atlético Tembetary",
+            "2 de Mayo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "2 de Mayo",
+            "Trinidense",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "Nacional",
+            "2 de Mayo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Cerro Porteño",
+            "2 de Mayo",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "2 de Mayo",
+            "Sportivo Luqueño",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "General Caballero JLM",
+            "2 de Mayo",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "2 de Mayo",
+            "Libertad",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Guarani",
+            "2 de Mayo",
+            "",
+            "3 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "Olimpia",
+            "Sportivo Luqueño",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "General Caballero JLM",
+            "Olimpia",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Olimpia",
+            "Libertad",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Guarani",
+            "Olimpia",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Olimpia",
+            "Cerro Porteño",
+            "",
+            "2 - 3",
+            "FT"
+          ],
+          [
+            "Thu, 31 Jul",
+            "Olimpia",
+            "Deportivo Recoleta",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Sportivo Ameliano",
+            "Olimpia",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Olimpia",
+            "Club Atlético Tembetary",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Trinidense",
+            "Olimpia",
+            "",
+            "4 - 3",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Olimpia",
+            "Nacional",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "2 de Mayo": null,
+          "Olimpia": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2140.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1182.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Paraguay - Division Profesional - Clausura",
+        "analyse_ia": "**Prédiction finale : BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n1. **Analyse comparative des deux équipes :**\n   - **2 de Mayo (Domicile) :** \n     - **Attaque :** Marque en moyenne 1 but par match, avec une tendance à inscrire des buts à domicile (4 buts en 4 matchs).\n     - **Défense :** Encaisse 1.5 but par match en moyenne, avec 5 buts encaissés en 4 matchs à domicile.\n   - **Olimpia (Extérieur) :**\n     - **Attaque :** Marque en moyenne 1.3 but par match, avec 4 buts inscrits en 4 matchs à l'extérieur.\n     - **Défense :** Encaisse 1.6 but par match en moyenne, avec 11 buts encaissés en 4 matchs à l'extérieur.\n\n2. **Impact du facteur domicile/extérieur :**\n   - **2 de Mayo** semble avoir une légère tendance à mieux performer à domicile, bien qu'elle n'ait pas une forme récente exceptionnelle.\n   - **Olimpia** a du mal à l'extérieur, avec une défense qui encaisse beaucoup de buts, ce qui pourrait profiter à l'attaque de 2 de Mayo.\n\n3. **Forme récente et tendances :**\n   - **2 de Mayo :** Forme récente inquiétante avec 3 points en 6 matchs, mais a marqué dans la majorité de ses matchs à domicile.\n   - **Olimpia :** Forme en dents de scie, mais a marqué dans la plupart de ses matchs à l'extérieur.\n\n4. **Contexte du championnat :**\n   - Bien que le classement complet ne soit pas disponible, les statistiques de buts marqués et encaissés suggèrent que les deux équipes ont des attaques capables de marquer et des défenses perméables.\n\n5. **Confrontations directes :**\n   - Aucune donnée disponible, donc l'analyse se base sur les statistiques générales.\n\n6. **Évaluation des cotes :**\n   - Aucune cote disponible, donc la prédiction se base exclusivement sur les statistiques.\n\n7. **Conclusion :**\n   - Les deux équipes ont des attaques capables de marquer et des défenses qui encaissent des buts.\n   - Il est probable que les deux équipes inscrivent au moins un but chacune, ce qui mène à la prédiction **BTTS oui**."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Deportivo Madryn",
+        "AwayTeam": "Los Andes",
+        "date": "7 septembre 2025 à 19:15:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 21,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 7,
+          "total_marques": 20,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 13,
+          "total_points": 9,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 9,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sun, 31 Aug",
+            "Deportivo Maipú",
+            "Deportivo Madryn",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Deportivo Madryn",
+            "Gimnasia y Tiro (Salta)",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Tristán Suárez",
+            "Deportivo Madryn",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Deportivo Madryn",
+            "San Martín (Tucumán)",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Güemes",
+            "Deportivo Madryn",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Deportivo Madryn",
+            "Quilmes",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Deportivo Madryn",
+            "Patronato",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Ferro Carril Oeste",
+            "Deportivo Madryn",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Deportivo Madryn",
+            "Almagro",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "San Miguel",
+            "Deportivo Madryn",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, 31 Aug",
+            "Los Andes",
+            "San Miguel",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Deportivo Maipú",
+            "Los Andes",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Los Andes",
+            "Quilmes",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Gimnasia y Tiro (Salta)",
+            "Los Andes",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Los Andes",
+            "Racing (Córdoba)",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Tristán Suárez",
+            "Los Andes",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Los Andes",
+            "Atlanta",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "San Martín (Tucumán)",
+            "Los Andes",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Los Andes",
+            "Colegiales",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Güemes",
+            "Los Andes",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Deportivo Madryn": {
+            "position": 2,
+            "points": 51
+          },
+          "Los Andes": {
+            "position": 9,
+            "points": 40
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Deportivo Madryn",
+            "points": 51
+          },
+          {
+            "position": 3,
+            "team": "San Miguel",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 45
+          },
+          {
+            "position": 5,
+            "team": "Tristán Suárez",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Los Andes",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Colegiales",
+            "points": 37
+          },
+          {
+            "position": 11,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 12,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 13,
+            "team": "Racing (Córdoba)",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 34
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Gimnasia (Mendoza)",
+            "points": 54
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 53
+          },
+          {
+            "position": 23,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 53
+          },
+          {
+            "position": 24,
+            "team": "Temperley",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Chacarita Juniors",
+            "points": 49
+          },
+          {
+            "position": 26,
+            "team": "Chaco For Ever",
+            "points": 48
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 47
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 47
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 42
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 38
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1929.png",
+        "logo_away": "https://media.api-sports.io/football/teams/483.png",
+        "classement_home": 2,
+        "classement_away": 9,
+        "points_classement_home": 51,
+        "points_classement_away": 40,
+        "nom_classement_home": "Deportivo Madryn",
+        "nom_classement_away": "Los Andes",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Deportivo Madryn et Los Andes. D'abord, je vais regarder les statistiques de chaque équipe. Deportivo Madryn est en deuxième position du classement avec 51 points, ce qui montre qu'ils sont en forme. Ils ont une moyenne de 2 buts marqués par match et encaissent en moyenne 1 but. Ces stats sont solides, surtout à domicile où ils ont gagné leurs cinq derniers matchs. Leur forme récente est impressionnante avec 13 points sur 6 matchs et 21 sur 10, ce qui indique une constance.\n\nEnsuite, je regarde Los Andes, qui sont 9èmes avec 40 points. Leur moyenne de buts marqués est de 0.9, ce qui est faible, et ils encaissent 0.6 en moyenne. Cependant, leur forme récente est moins convaincante avec seulement 9 points sur 6 matchs et 13 sur 10. Leur série à l'extérieur est inquiétante avec plusieurs défaites récentes.\n\nJe note que Deportivo Madryn a marqué 12 buts à domicile en 5 matchs et n'en a concédé que 3. Cela montre une attaque performante et une défense solide. Los Andes, quant à eux, ont du mal à marquer à l'extérieur, ne marquant que 3 buts en 5 matchs, et ont concédé 6 buts.\n\nEn regardant les 10 derniers matchs de chaque équipe, Deportivo Madryn a une série de 5 victoires consécutives à domicile, ce qui est un signe de confiance. Los Andes ont perdu 3 de leurs 5 derniers matchs à l'extérieur, ce qui indique un manque de constance.\n\nLe classement complet de la ligue montre que Deportivo Madryn est bien établi dans le haut du tableau, tandis que Los Andes lutte pour rester dans la première moitié. Sans confrontations directes récentes, il est difficile de comparer leurs performances face à face, mais les stats générales penchent clairement en faveur de Deportivo Madryn.\n\nEn conclusion, compte tenu de la forme récente, des statistiques offensives et défensives, ainsi que de l'avantage du terrain, il est logique de prédire une victoire de Deportivo Madryn. Même si Los Andes ont une défense solide, leur faible efficacité offensive à l'extérieur joue contre eux. Deportivo Madryn devrait donc s'imposer dans ce match.\n</think>\n\n**Prédiction : Victoire domicile (Deportivo Madryn)**\n\n**Justification :**\n\n1. **Forme Récente :** Deportivo Madryn est en excellente forme avec 5 victoires consécutives à domicile et un total de 21 points sur ses 10 derniers matchs. Los Andes, en revanche, a perdu 3 de ses 5 derniers matchs à l'extérieur, montrant un manque de constance.\n\n2. **Statistiques Offensives et Défensives :** Deportivo Madryn a une moyenne élevée de buts marqués (2.00) et une défense solide (1.00 but encaissé en moyenne). Los Andes a du mal à marquer, avec seulement 0.90 but par match et a concédé plus de buts à l'extérieur.\n\n3. **Avantage Domicile :** Deportivo Madryn a une série impressionnante de victoires à domicile, avec 12 buts marqués en 5 matchs, tandis que Los Andes a du mal à scorer à l'extérieur.\n\n4. **Classement :** Deportivo Madryn est bien positionné dans le haut du classement, ce qui indique une équipe confiante et compétitive.\n\nCes facteurs cumulés font pencher la balance en faveur d'une victoire de Deportivo Madryn."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Central Norte",
+        "AwayTeam": "Agropecuario",
+        "date": "7 septembre 2025 à 20:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 14,
+          "total_points": 8,
+          "serie_domicile": [
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 2,
+          "total_marques": 10,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 16,
+          "total_points": 11,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 6,
+          "total_marques": 14,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          [
+            "Sun, 31 Aug",
+            "Gimnasia y Esgrima (Jujuy)",
+            "Central Norte",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Central Norte",
+            "Gimnasia (Mendoza)",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 18 Aug",
+            "Nueva Chicago",
+            "Central Norte",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Almirante Brown",
+            "Central Norte",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Central Norte",
+            "Chaco For Ever",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Mitre (Santiago del Estero)",
+            "Central Norte",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Central Norte",
+            "Colón (Santa Fe)",
+            "",
+            "3 - 4",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Temperley",
+            "Central Norte",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Central Norte",
+            "Defensores Unidos",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Estudiantes (Buenos Aires)",
+            "Central Norte",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Mon, 1 Sep",
+            "Agropecuario",
+            "Almirante Brown",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Chaco For Ever",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 18 Aug",
+            "Agropecuario",
+            "Mitre (Santiago del Estero)",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Colón (Santa Fe)",
+            "Agropecuario",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Agropecuario",
+            "Temperley",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Defensores Unidos",
+            "Agropecuario",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 21 Jul",
+            "Agropecuario",
+            "Estudiantes (Buenos Aires)",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Deportivo Morón",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Agropecuario",
+            "Talleres",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Estudiantes de Río Cuarto",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Central Norte": {
+            "position": 32,
+            "points": 35
+          },
+          "Agropecuario": {
+            "position": 27,
+            "points": 47
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Deportivo Madryn",
+            "points": 51
+          },
+          {
+            "position": 3,
+            "team": "San Miguel",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 45
+          },
+          {
+            "position": 5,
+            "team": "Tristán Suárez",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Los Andes",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Colegiales",
+            "points": 37
+          },
+          {
+            "position": 11,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 12,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 13,
+            "team": "Racing (Córdoba)",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 34
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Gimnasia (Mendoza)",
+            "points": 54
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 53
+          },
+          {
+            "position": 23,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 53
+          },
+          {
+            "position": 24,
+            "team": "Temperley",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Chacarita Juniors",
+            "points": 49
+          },
+          {
+            "position": 26,
+            "team": "Chaco For Ever",
+            "points": 48
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 47
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 47
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 42
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 38
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1951.png",
+        "logo_away": "https://media.api-sports.io/football/teams/462.png",
+        "classement_home": 32,
+        "classement_away": 27,
+        "points_classement_home": 35,
+        "points_classement_away": 47,
+        "nom_classement_home": "Central Norte",
+        "nom_classement_away": "Agropecuario",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between Central Norte and Agropecuario. Let me start by looking at their statistics and recent performances.\n\nCentral Norte is playing at home. They're ranked 32nd with 35 points. They score an average of 1 goal per game and concede 0.7. Their recent form is a bit mixed: in the last six games, they have 2 wins, 2 draws, and 2 losses. At home, they've won 2, lost 1, and drawn 1 in their last four matches. They've scored 7 goals and let in 5 at home.\n\nAgropecuario is the away team, ranked 27th with 47 points. They score 1.4 goals on average and concede 1.1. Their recent form is decent: 3 wins, 2 draws, and 1 loss in the last six games. Away from home, they've drawn three times and lost once in their last four. They've scored 6 goals and conceded 6 away.\n\nLooking at their last 10 matches, Central Norte has 4 wins, 3 draws, and 3 losses. They've been inconsistent but have some solid wins. Agropecuario has 5 wins, 4 draws, and 1 loss, showing more consistency.\n\nIn terms of head-to-head, there's no data provided, so I can't factor that in. The league standings show Agropecuario higher, but Central Norte is still mid-table.\n\nI think Agropecuario is more consistent and has a better goal-scoring record. They might have the edge, but Central Norte at home can be tough. Maybe a draw is likely, but considering Agropecuario's away form, they might push for a win. Alternatively, both teams scoring is possible since Agropecuario scores regularly and Central Norte has some goals at home.\n\nI'm leaning towards BTTS oui because both teams have scoring capabilities, and their recent matches show goals from both sides. Alternatively, a double chance of X2 (draw or away win) could be safe, but BTTS seems more certain.\n</think>\n\n**Prédiction : BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n1. **Analyse comparative des équipes :**\n   - **Central Norte (Domicile) :** Bien que leur forme récente soit inégale, ils ont marqué 7 buts en 4 matchs à domicile, montrant une capacité à scorer.\n   - **Agropecuario (Extérieur) :** Avec une moyenne de 1.4 but marqués par match, ils ont une attaque plus constante et ont marqué dans la majorité de leurs matchs récents.\n\n2. **Impact du facteur domicile/extérieur :**\n   - Central Norte a une légère avance à domicile, mais Agropecuario a une solide forme extérieure avec 6 buts marqués en 4 matchs.\n\n3. **Forme récente :**\n   - Les deux équipes ont des tendances montrent des buts marqués dans leurs matchs récents, avec une propension à BTTS dans plusieurs rencontres.\n\n4. **Contexte du championnat :**\n   - Bien que Agropecuario soit mieux classé, Central Norte est compétitif à domicile, ce qui augmente les chances que les deux équipes marquent.\n\n5. **Confrontations directes :**\n   - Aucune donnée disponible, donc l'analyse se base sur les performances individuelles.\n\n**Conclusion :** Les statistiques offensives des deux équipes et leurs récentes performances suggèrent que les deux marqueront, faisant de BTTS oui une prédiction solide."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "America de Cali",
+        "AwayTeam": "Deportivo Cali",
+        "date": "7 septembre 2025 à 21:10:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 7,
+          "total_points": 4,
+          "serie_domicile": [
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 8,
+          "total_marques": 7,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 10,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 6,
+          "total_marques": 11,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          [
+            "Wed, Sep 3",
+            "América de Cali",
+            "Bucaramanga",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Alianza FC",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Bucaramanga",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "América de Cali",
+            "Atlético Nacional",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 19",
+            "Fluminense",
+            "América de Cali",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 14",
+            "Deportivo Pereira",
+            "América de Cali",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 12",
+            "América de Cali",
+            "Fluminense",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "América de Cali",
+            "Deportes Tolima",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Tigres",
+            "América de Cali",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Independiente Santa Fe",
+            "América de Cali",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Deportivo Cali",
+            "Independiente Medellín",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Mon, Aug 25",
+            "Boyacá Chicó",
+            "Deportivo Cali",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 13",
+            "Deportivo Cali",
+            "Unión Magdalena",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 8",
+            "Millonarios",
+            "Deportivo Cali",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Deportivo Cali",
+            "Llaneros",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Mon, Jul 28",
+            "Bucaramanga",
+            "Deportivo Cali",
+            "",
+            "2 - 3",
+            "FT"
+          ],
+          [
+            "Thu, Jul 24",
+            "Deportivo Cali",
+            "Fortaleza CEIF",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Envigado",
+            "Deportivo Cali",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jul 12",
+            "Deportivo Cali",
+            "Atlético Junior",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jun 14",
+            "Boyacá Chicó",
+            "Deportivo Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "America de Cali": {
+            "position": 20,
+            "points": 5
+          },
+          "Deportivo Cali": {
+            "position": 14,
+            "points": 10
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Atlético Junior",
+            "points": 20
+          },
+          {
+            "position": 2,
+            "team": "Independiente Medellín",
+            "points": 19
+          },
+          {
+            "position": 3,
+            "team": "Deportes Tolima",
+            "points": 17
+          },
+          {
+            "position": 4,
+            "team": "Llaneros",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "Bucaramanga",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Atlético Nacional",
+            "points": 16
+          },
+          {
+            "position": 7,
+            "team": "Fortaleza CEIF",
+            "points": 15
+          },
+          {
+            "position": 8,
+            "team": "Independiente Santa Fe",
+            "points": 12
+          },
+          {
+            "position": 9,
+            "team": "Deportivo Pereira",
+            "points": 12
+          },
+          {
+            "position": 10,
+            "team": "Alianza FC",
+            "points": 12
+          },
+          {
+            "position": 11,
+            "team": "Unión Magdalena",
+            "points": 11
+          },
+          {
+            "position": 12,
+            "team": "Envigado",
+            "points": 10
+          },
+          {
+            "position": 13,
+            "team": "La Equidad",
+            "points": 10
+          },
+          {
+            "position": 14,
+            "team": "Deportivo Cali",
+            "points": 10
+          },
+          {
+            "position": 15,
+            "team": "Boyacá Chicó",
+            "points": 10
+          },
+          {
+            "position": 16,
+            "team": "Deportivo Pasto",
+            "points": 9
+          },
+          {
+            "position": 17,
+            "team": "Once Caldas",
+            "points": 9
+          },
+          {
+            "position": 18,
+            "team": "Millonarios",
+            "points": 7
+          },
+          {
+            "position": 19,
+            "team": "Águilas Doradas",
+            "points": 7
+          },
+          {
+            "position": 20,
+            "team": "América de Cali",
+            "points": 5
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1138.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1127.png",
+        "classement_home": 20,
+        "classement_away": 14,
+        "points_classement_home": 5,
+        "points_classement_away": 10,
+        "nom_classement_home": "América de Cali",
+        "nom_classement_away": "Deportivo Cali",
+        "country_fr": "Colombia - Primera A",
+        "analyse_ia": "**Analyse du match : América de Cali vs Deportivo Cali**\n\n**1. Analyse comparative des deux équipes :**\n\n- **América de Cali (Domicile) :**\n  - **Points forts :** Bien qu'ils soient en difficulté, América de Cali a montré des signes de résilience, notamment une victoire récente contre Bucaramanga. Leur défense à domicile semble solide, n'encaissant que 4 buts en 4 matchs.\n  - **Points faibles :** Leur attaque est en panne, avec seulement 4 buts marqués en 4 matchs à domicile. Leur forme récente est inquiétante, avec une seule victoire lors de leurs 6 derniers matchs.\n\n- **Deportivo Cali (Extérieur) :**\n  - **Points forts :** Meilleure attaque avec une moyenne de 1.10 but marqués par match. Leur forme récente est plus stable, avec 8 points en 6 matchs.\n  - **Points faibles :** Défense fragile, encaissant 1.60 buts par match en extérieur. Leur série extérieure récente montre des résultats mitigés.\n\n**2. Impact du facteur domicile/extérieur :**\n\nAmérica de Cali joue à domicile, où ils ont une légère tendance à mieux performer, bien qu'ils aient perdu deux de leurs quatre derniers matchs à domicile. Deportivo Cali, en déplacement, a du mal à gagner, avec seulement un succès en cinq matchs extérieurs récents.\n\n**3. Analyse des formes récentes :**\n\n- América de Cali : Seulement 4 points en 6 matchs, avec une victoire, un nul et quatre défaites. Leur attaque peine à marquer, ce qui est préoccupant.\n- Deportivo Cali : 8 points en 6 matchs, avec deux victoires, deux nuls et deux défaites. Leur attaque se montre plus efficace, mais leur défense reste vulnérable.\n\n**4. Contexte du championnat :**\n\nAmérica de Cali est lanterne rouge avec 5 points, tandis que Deportivo Cali est 14ème avec 10 points. Les deux équipes ont besoin de résultats pour se sortir de la zone de relégation.\n\n**5. Confrontations directes :**\n\nAucune donnée disponible, ce qui rend difficile une analyse basée sur l'historique des confrontations.\n\n**6. Évaluation des cotes :**\n\nAucune cote disponible pour ce match.\n\n**7. Prédiction finale :**\n\n**Double chance X2 (Nul ou Victoire extérieure)**\n\n**Justification :**\n\n- América de Cali a du mal à marquer et a une forme récente décevante.\n- Deportivo Cali, bien qu'ils soient en déplacement, ont une attaque plus performante et une forme plus stable.\n- Le match pourrait être serré, avec une possibilité de nul ou d'une victoire de Deportivo Cali.\n- La double chance X2 couvre ces deux scénarios, offrant une prédiction plus prudente compte tenu des difficultés offensives d'América de Cali et des faiblesses défensives de Deportivo Cali."
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Chaco For Ever",
+        "AwayTeam": "Chacarita Juniors",
+        "date": "7 septembre 2025 à 22:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 15,
+          "total_points": 10,
+          "serie_domicile": [
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 5,
+          "total_marques": 10,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 12,
+          "total_points": 7,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 2,
+          "total_marques": 8,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "San Telmo",
+            "Chaco For Ever",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Chaco For Ever",
+            "Agropecuario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Gimnasia y Esgrima (Jujuy)",
+            "Chaco For Ever",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Chaco For Ever",
+            "Gimnasia (Mendoza)",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Central Norte",
+            "Chaco For Ever",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Chaco For Ever",
+            "Almirante Brown",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Nueva Chicago",
+            "Chaco For Ever",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Mitre (Santiago del Estero)",
+            "Chaco For Ever",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Chaco For Ever",
+            "Colón (Santa Fe)",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Temperley",
+            "Chaco For Ever",
+            "",
+            "2 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "Chacarita Juniors",
+            "Mitre (Santiago del Estero)",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Colón (Santa Fe)",
+            "Chacarita Juniors",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Chacarita Juniors",
+            "Temperley",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Defensores Unidos",
+            "Chacarita Juniors",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Chacarita Juniors",
+            "Estudiantes (Buenos Aires)",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Deportivo Morón",
+            "Chacarita Juniors",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Chacarita Juniors",
+            "Talleres",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Estudiantes de Río Cuarto",
+            "Chacarita Juniors",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Chacarita Juniors",
+            "Defensores de Belgrano",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Chacarita Juniors",
+            "Nueva Chicago",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Chaco For Ever": {
+            "position": 26,
+            "points": 48
+          },
+          "Chacarita Juniors": {
+            "position": 25,
+            "points": 49
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Deportivo Madryn",
+            "points": 51
+          },
+          {
+            "position": 3,
+            "team": "San Miguel",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 45
+          },
+          {
+            "position": 5,
+            "team": "Tristán Suárez",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Los Andes",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Colegiales",
+            "points": 37
+          },
+          {
+            "position": 11,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 12,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 13,
+            "team": "Racing (Córdoba)",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 34
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Gimnasia (Mendoza)",
+            "points": 54
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 53
+          },
+          {
+            "position": 23,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 53
+          },
+          {
+            "position": 24,
+            "team": "Temperley",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Chacarita Juniors",
+            "points": 49
+          },
+          {
+            "position": 26,
+            "team": "Chaco For Ever",
+            "points": 48
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 47
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 47
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 42
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 38
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1946.png",
+        "logo_away": "https://media.api-sports.io/football/teams/447.png",
+        "classement_home": 26,
+        "classement_away": 25,
+        "points_classement_home": 48,
+        "points_classement_away": 49,
+        "nom_classement_home": "Chaco For Ever",
+        "nom_classement_away": "Chacarita Juniors",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "**Analyse du match Chaco For Ever vs Chacarita Juniors**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Chaco For Ever (Domicile) :**\n  - **Points forts :** \n    - Une moyenne de buts marqués de 1.00 par match, ce qui indique une attaque régulière.\n    - Une défense solide avec une moyenne de buts encaissés de 0.90, meilleure que celle de Chacarita Juniors.\n    - Une forme récente en hausse avec 4 victoires sur les 6 derniers matchs.\n  - **Points faibles :**\n    - Une forme irrégulière sur les 10 derniers matchs avec des défaites et des nuls.\n    - Une tendance à concéder des buts à domicile, avec 4 buts encaissés sur les 5 derniers matchs.\n\n- **Chacarita Juniors (Extérieur) :**\n  - **Points forts :**\n    - Une défense extérieure solide avec seulement 2 buts encaissés sur les 5 derniers matchs à l'extérieur.\n    - Une capacité à maintenir le score nul, avec plusieurs matchs sans vainqueur.\n  - **Points faibles :**\n    - Une attaque en berne avec une moyenne de 0.80 buts marqués par match.\n    - Une forme récente mitigée avec seulement 7 points sur les 6 derniers matchs.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Chaco For Ever joue à domicile, où il a marqué 5 buts en 5 matchs, montrant une certaine efficacité offensive.\n- Chacarita Juniors, bien qu'étant en déplacement, a une défense solide à l'extérieur, n'encaissant que 2 buts en 5 matchs.\n\n**3. Analyse des formes récentes et tendances :**\n\n- **Chaco For Ever :** \n  - Forme sur 6 matchs : W D L L W W (10 points). Une nette amélioration avec 2 victoires consécutives.\n  - Forme sur 10 matchs : W D L L W W D L W D (15 points). Une régularité qui se confirme.\n  - Série domicile : D-L-W-W. Une tendance positive avec 2 victoires sur les 3 derniers matchs à domicile.\n\n- **Chacarita Juniors :**\n  - Forme sur 6 matchs : D D D D L W (7 points). Une forme en dents de scie avec une victoire récente.\n  - Forme sur 10 matchs : D D D D L W W D L D (12 points). Une irrégularité marquée.\n  - Série extérieur : D-D-W-D. Une tendance à ne pas s'imposer à l'extérieur.\n\n**4. Analyse du contexte du championnat :**\n\n- **Classement :**\n  - Chaco For Ever : 26ᵉ avec 48 points.\n  - Chacarita Juniors : 25ᵉ avec 49 points.\n  - Les deux équipes sont très proches au classement, ce qui suggère un match équilibré.\n\n- **Objectifs :**\n  - Chaco For Ever cherche à grimper dans le classement pour éviter la relégation.\n  - Chacarita Juniors, avec un point de plus, vise également à se maintenir dans la zone de confort.\n\n**5. Prise en compte des confrontations directes :**\n\n- Aucune confrontation H2H récente disponible, ce qui rend difficile l'analyse basée sur l'historique.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote disponible, donc l'analyse se base uniquement sur les statistiques.\n\n**7. Prédiction finale :**\n\n**Double chance 1X (Victoire domicile ou Match nul)**\n\n**Justification :**\n\n- **Forme récente de Chaco For Ever :** Avec 4 victoires sur les 6 derniers matchs, dont 2 à domicile, Chaco For Ever semble en confiance. Son attaque, bien que modeste, est efficace à domicile.\n  \n- **Défense solide de Chacarita Juniors :** Bien que leur attaque soit faible, leur défense extérieure a été solide, n'encaissant que 2 buts en 5 matchs. Cela suggère qu'ils pourraient limiter les occasions de Chaco For Ever.\n\n- **Équilibre au classement :** Les deux équipes sont très proches, ce qui pousse à penser que le match pourrait être serré. Chaco For Ever a l'avantage du terrain, mais Chacarita Juniors pourrait maintenir le score nul.\n\n- **Tendance aux nuls :** Chacarita Juniors a plusieurs matchs nuls récemment, ce qui indique leur capacité à résister et à ne pas perdre.\n\n- **BTTS (Both Teams To Score) :** Bien que Chaco For Ever ait une attaque régulière, Chacarita Juniors a du mal à marquer. Cependant, avec 4 buts marqués en 5 matchs à domicile pour Chaco et 4 buts encaissés par Chacarita, il y a une possibilité que les deux équipes ne marquent pas.\n\n**Conclusion :**\n\nChaco For Ever a une légère supériorité à domicile avec une forme ascendante, mais Chacarita Juniors, grâce à sa défense solide, pourrait empêcher une défaite. Le match pourrait donc se terminer par une victoire de Chaco For Ever ou un match nul. La double chance 1X semble la prédiction la plus fiable."
+      },
+      {
+        "id": 7,
+        "HomeTeam": "Sporting Kansas City",
+        "AwayTeam": "Austin",
+        "date": "7 septembre 2025 à 23:00:00 UTC",
+        "league": "USA - Major League Soccer",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Austin FC": 2.67,
+            "Sporting Kansas City": 2.49,
+            "Draw": 3.75
+          },
+          "totals": {
+            "Over": 1.59,
+            "Under": 2.43
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 2.2,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 11,
+          "total_points": 4,
+          "serie_domicile": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 12,
+          "total_marques": 15,
+          "total_encaisses": 22
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 16,
+          "total_points": 11,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 10,
+          "buts_ext_encaisses": 10,
+          "total_marques": 18,
+          "total_encaisses": 15
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 30",
+            "Sporting Kansas City",
+            "Colorado Rapids",
+            "",
+            "4 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Seattle Sounders FC",
+            "Sporting Kansas City",
+            "",
+            "5 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Orlando City SC",
+            "Sporting Kansas City",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Sporting Kansas City",
+            "San Diego FC",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Vancouver Whitecaps",
+            "Sporting Kansas City",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Sporting Kansas City",
+            "New York City FC",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 12",
+            "Sporting Kansas City",
+            "Seattle Sounders FC",
+            "",
+            "2 - 3",
+            "FT"
+          ],
+          [
+            "Fri, Jul 4",
+            "Colorado Rapids",
+            "Sporting Kansas City",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Sporting Kansas City",
+            "Real Salt Lake",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jun 25",
+            "Sporting Kansas City",
+            "Charlotte FC",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Austin FC",
+            "San Jose Earthquakes",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "CF Montréal",
+            "Austin FC",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Austin FC",
+            "FC Dallas",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Austin FC",
+            "Houston Dynamo FC",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "D.C. United",
+            "Austin FC",
+            "",
+            "2 - 4",
+            "FT"
+          ],
+          [
+            "Wed, Jul 16",
+            "LA Galaxy",
+            "Austin FC",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 12",
+            "Austin FC",
+            "New England Revolution",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Tue, Jul 8",
+            "San Jose Earthquakes",
+            "Austin FC",
+            "",
+            "2 - 2",
+            "FT-Pens"
+          ],
+          [
+            "Sat, Jun 28",
+            "Seattle Sounders FC",
+            "Austin FC",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jun 14",
+            "Austin FC",
+            "New York Red Bulls",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Sporting Kansas City": {
+            "position": 28,
+            "points": 31
+          },
+          "Austin": {
+            "position": 22,
+            "points": 41
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "FC Cincinnati",
+            "points": 57
+          },
+          {
+            "position": 3,
+            "team": "Charlotte FC",
+            "points": 52
+          },
+          {
+            "position": 4,
+            "team": "Nashville SC",
+            "points": 50
+          },
+          {
+            "position": 5,
+            "team": "Orlando City SC",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Inter Miami CF",
+            "points": 47
+          },
+          {
+            "position": 7,
+            "team": "Columbus Crew",
+            "points": 46
+          },
+          {
+            "position": 8,
+            "team": "New York City FC",
+            "points": 46
+          },
+          {
+            "position": 9,
+            "team": "New York Red Bulls",
+            "points": 44
+          },
+          {
+            "position": 10,
+            "team": "Chicago Fire FC",
+            "points": 40
+          },
+          {
+            "position": 11,
+            "team": "New England Revolution",
+            "points": 39
+          },
+          {
+            "position": 12,
+            "team": "Atlanta United FC",
+            "points": 31
+          },
+          {
+            "position": 13,
+            "team": "Toronto FC",
+            "points": 26
+          },
+          {
+            "position": 14,
+            "team": "CF Montréal",
+            "points": 25
+          },
+          {
+            "position": 15,
+            "team": "D.C. United",
+            "points": 24
+          },
+          {
+            "position": 16,
+            "team": "San Diego FC",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Vancouver Whitecaps",
+            "points": 56
+          },
+          {
+            "position": 19,
+            "team": "Seattle Sounders FC",
+            "points": 51
+          },
+          {
+            "position": 20,
+            "team": "LAFC",
+            "points": 49
+          },
+          {
+            "position": 21,
+            "team": "Portland Timbers",
+            "points": 44
+          },
+          {
+            "position": 22,
+            "team": "Austin FC",
+            "points": 41
+          },
+          {
+            "position": 23,
+            "team": "Colorado Rapids",
+            "points": 39
+          },
+          {
+            "position": 24,
+            "team": "San Jose Earthquakes",
+            "points": 38
+          },
+          {
+            "position": 25,
+            "team": "Houston Dynamo FC",
+            "points": 36
+          },
+          {
+            "position": 26,
+            "team": "Real Salt Lake",
+            "points": 35
+          },
+          {
+            "position": 27,
+            "team": "FC Dallas",
+            "points": 32
+          },
+          {
+            "position": 28,
+            "team": "Sporting Kansas City",
+            "points": 31
+          },
+          {
+            "position": 29,
+            "team": "St. Louis CITY SC",
+            "points": 30
+          },
+          {
+            "position": 30,
+            "team": "LA Galaxy",
+            "points": 27
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1611.png",
+        "logo_away": "https://media.api-sports.io/football/teams/16489.png",
+        "classement_home": 28,
+        "classement_away": 22,
+        "points_classement_home": 31,
+        "points_classement_away": 41,
+        "nom_classement_home": "Sporting Kansas City",
+        "nom_classement_away": "Austin FC",
+        "country_fr": "USA - Major League Soccer",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Sporting Kansas City et Austin pour proposer une prédiction. D'abord, je vais regarder les statistiques de base. Sporting Kansas City est 28ème avec 31 points, tandis qu'Austin est 22ème avec 41 points. Austin semble donc un peu mieux au classement.\n\nEn regardant les moyennes de buts, Sporting Kansas City marque en moyenne 1.50 buts et encaisse 2.20. Austin marque 1.80 et encaisse 1.50. Donc, Austin a une attaque un peu plus performante et une défense meilleure.\n\nLa forme récente de Sporting Kansas City est inquiétante. Sur les 6 derniers matchs, ils ont seulement 4 points avec une seule victoire et un nul. Sur 10 matchs, c'est un peu mieux avec 11 points, mais toujours avec plus de défaites que de victoires. À domicile, leur série est W-L-D-L-D-W, ce qui montre une irrégularité.\n\nAustin, en revanche, a 11 points sur les 6 derniers matchs avec 3 victoires et 2 défaites. Sur 10 matchs, ils ont 16 points, ce qui est solide. En extérieur, leur série est L-W-W-D-L, ce qui indique une certaine constance.\n\nEn regardant les 10 derniers matchs détaillés, Sporting Kansas City a perdu plusieurs fois à domicile, comme contre San Diego FC (0-2) et contre Orlando City SC (1-3). Ils ont cependant gagné contre Colorado Rapids (4-2). Austin a gagné contre San Jose Earthquakes (3-1) et contre D.C. United (4-2), mais a aussi perdu contre CF Montréal (2-3).\n\nLe contexte du championnat montre qu'Austin est en meilleure position, ce qui pourrait les motiver à bien performer pour maintenir leur place. Sporting Kansas City, en bas de tableau, lutte pour éviter la relégation, ce qui pourrait les pousser à se battre, mais leur forme récente est préoccupante.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de se baser là-dessus. Les cotes proposées par 1xBet montrent Austin à 2.67 et Sporting Kansas City à 2.49, avec un nul à 3.75. Cela suggère que les bookmakers voient un léger avantage pour Austin.\n\nEn termes de buts, Sporting Kansas City a marqué 10 buts à domicile et en a encaissé 10. Austin a marqué 10 buts à l'extérieur et en a encaissé 10. Cela indique que les deux équipes ont des problèmes défensifs, ce qui pourrait mener à un match avec plusieurs buts.\n\nEn résumé, Austin semble avoir une meilleure forme et une meilleure position au classement, ce qui joue en leur faveur. Sporting Kansas City a du mal à gagner à domicile et a une défense qui encaisse beaucoup. Cependant, les deux équipes ont des difficultés défensives, ce qui pourrait conduire à un match avec plus de 2.5 buts. Donc, je pencherais pour \"Plus de 2.5 buts\" comme prédiction.\n</think>\n\n**Prédiction : Plus de 2.5 buts**\n\n**Justification :**\n\n1. **Forme récente et statistiques offensives :**\n   - Sporting Kansas City a marqué 10 buts à domicile et en a encaissé 10, montrant une tendance à des matchs ouverts.\n   - Austin a marqué 10 buts à l'extérieur et en a encaissé 10, indiquant une vulnérabilité défensive.\n\n2. **Analyse des matchs récents :**\n   - Les deux équipes ont été impliquées dans plusieurs matchs avec plus de 2.5 buts, notamment Sporting Kansas City contre Colorado Rapids (4-2) et Austin contre D.C. United (4-2).\n\n3. **Contexte du championnat :**\n   - Austin, mieux classé, cherche à maintenir sa position, ce qui pourrait le pousser à attaquer.\n   - Sporting Kansas City, en bas de tableau, doit gagner pour éviter la relégation, ce qui pourrait conduire à un jeu plus offensif.\n\n4. **Cotes et tendances :**\n   - Les cotes des bookmakers (Over 2.5 à 1.59) reflètent une attente de match prolifique en buts.\n\nEn conclusion, les tendances offensives et défensives des deux équipes, combinées à leur récent rendement, suggèrent un match avec plus de 2.5 buts."
+      }
+    ]
+  }
+}
