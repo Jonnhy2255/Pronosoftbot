@@ -1,0 +1,945 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-08 02:25:23",
+    "date_matchs": "2025-09-08",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Almirante Brown",
+        "AwayTeam": "San Telmo",
+        "date": "8 septembre 2025 à 21:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 10,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 10,
+          "total_marques": 9,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 9,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 6,
+          "total_marques": 6,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          [
+            "Mon, 1 Sep",
+            "Agropecuario",
+            "Almirante Brown",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Almirante Brown",
+            "Gimnasia y Esgrima (Jujuy)",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Gimnasia (Mendoza)",
+            "Almirante Brown",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Almirante Brown",
+            "Central Norte",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Nueva Chicago",
+            "Almirante Brown",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Chaco For Ever",
+            "Almirante Brown",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Almirante Brown",
+            "Mitre (Santiago del Estero)",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Colón (Santa Fe)",
+            "Almirante Brown",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 6 Jul",
+            "Almirante Brown",
+            "Temperley",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Defensores Unidos",
+            "Almirante Brown",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "San Telmo",
+            "Chaco For Ever",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Mitre (Santiago del Estero)",
+            "San Telmo",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "San Telmo",
+            "Colón (Santa Fe)",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Temperley",
+            "San Telmo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "San Telmo",
+            "Defensores Unidos",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Thu, 31 Jul",
+            "Defensores de Belgrano",
+            "San Telmo",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Estudiantes (Buenos Aires)",
+            "San Telmo",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "San Telmo",
+            "Deportivo Morón",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Talleres",
+            "San Telmo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "San Telmo",
+            "Estudiantes de Río Cuarto",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Almirante Brown": {
+            "position": 34,
+            "points": 33
+          },
+          "San Telmo": {
+            "position": 30,
+            "points": 41
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Atlanta",
+            "points": 53
+          },
+          {
+            "position": 3,
+            "team": "San Miguel",
+            "points": 51
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 45
+          },
+          {
+            "position": 5,
+            "team": "Tristán Suárez",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Racing (Córdoba)",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Los Andes",
+            "points": 38
+          },
+          {
+            "position": 11,
+            "team": "Colegiales",
+            "points": 37
+          },
+          {
+            "position": 12,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 13,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 34
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia (Mendoza)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Deportivo Morón",
+            "points": 56
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 54
+          },
+          {
+            "position": 23,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 53
+          },
+          {
+            "position": 24,
+            "team": "Chacarita Juniors",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Chaco For Ever",
+            "points": 49
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 48
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 48
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 48
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 45
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 41
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/8375.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1932.png",
+        "classement_home": 34,
+        "classement_away": 30,
+        "points_classement_home": 33,
+        "points_classement_away": 41,
+        "nom_classement_home": "Almirante Brown",
+        "nom_classement_away": "San Telmo",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Almirante Brown et San Telmo. D'abord, je vais regarder les statistiques de chaque équipe. \n\nAlmirante Brown joue à domicile. Leur classement est 34ème avec 33 points. Ils marquent en moyenne 0.90 buts par match et encaissent 1.00. Ces stats montrent qu'ils ne marquent pas beaucoup mais défendent correctement. Leur forme récente est un peu inquiétante : sur les 6 derniers matchs, ils ont 5 points, ce qui n'est pas formidable. À domicile, leur série est D-D-W-D, avec seulement 2 buts marqués et 0 encaissés. Cela suggère une défense solide à domicile.\n\nSan Telmo, eux, sont 30ème avec 41 points. Ils marquent 0.60 buts de moyenne et encaissent 1.30. Leur forme récente est un peu meilleure avec 8 points sur 6 matchs. En extérieur, leur série est L-D-W-L-D, avec 2 buts marqués et 6 encaissés. Cela montre une attaque faible et une défense qui a des lacunes.\n\nEn regardant les 10 derniers matchs, Almirante Brown a du mal à gagner, avec beaucoup de défaites et de nuls. San Telmo a une forme un peu plus irrégulière, avec des défaites mais aussi quelques victoires et nuls.\n\nLe classement complet montre que San Telmo est légèrement mieux classé, mais pas de beaucoup. Les confrontations directes ne sont pas disponibles, donc je ne peux pas m'appuyer là-dessus.\n\nEn termes de buts, Almirante Brown a tendance à ne pas encaisser beaucoup à domicile, tandis que San Telmo a du mal à marquer à l'extérieur. Cela pourrait conduire à un match avec peu de buts.\n\nEn résumé, Almirante Brown a une défense solide à domicile, tandis que San Telmo a du mal à marquer. Peu de buts sont donc attendus. Je penche vers un match nul ou une faible prolificité.\n</think>\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n1. **Analyse Comparative :**\n   - **Almirante Brown (Domicile)** : Une équipe qui défend bien, avec une moyenne de 1 but encaissé par match. Cependant, son attaque est timide, ne marquant que 0.90 buts en moyenne.\n   - **San Telmo (Extérieur)** : Une équipe qui a du mal à marquer, avec une moyenne de 0.60 buts par match. Son attaque est donc faible, mais sa défense encaisse 1.30 buts en moyenne.\n\n2. **Impact du Facteur Domicile/Extérieur :**\n   - Almirante Brown a une défense solide à domicile, n'encaissant aucun but dans ses derniers matchs à domicile.\n   - San Telmo a des difficultés à marquer à l'extérieur, avec seulement 2 buts marqués dans ses derniers matchs extérieurs.\n\n3. **Forme Récente :**\n   - Almirante Brown a une forme récente mitigée, avec une tendance aux nuls et aux défaites.\n   - San Telmo a une forme légèrement meilleure, mais reste irrégulière.\n\n4. **Contexte du Championnat :**\n   - Les deux équipes sont proches au classement, avec San Telmo légèrement mieux placé. Cependant, Almirante Brown a l'avantage du terrain.\n\n5. **Confrontations Directes :**\n   - Aucune donnée disponible, donc impossible de s'appuyer sur des rencontres précédentes.\n\n6. **Évaluation des Buts :**\n   - Les deux équipes ont des difficultés à marquer, ce qui suggère un match avec peu de buts.\n\n**Conclusion :**\nCompte tenu de la solidité défensive d'Almirante Brown à domicile et des difficultés offensives de San Telmo à l'extérieur, le match devrait être serré et peu prolifique en buts. Une issue nulle semble probable."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Quilmes",
+        "AwayTeam": "Ferro Carril Oeste",
+        "date": "8 septembre 2025 à 22:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 12,
+          "total_points": 8,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 9,
+          "total_marques": 10,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 8,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 10,
+          "total_marques": 7,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          [
+            "Sun, 31 Aug",
+            "Almagro",
+            "Quilmes",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 29 Aug",
+            "Quilmes",
+            "Alvarado (Mar del Plata)",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 22 Aug",
+            "Quilmes",
+            "San Miguel",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Los Andes",
+            "Quilmes",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 12 Aug",
+            "Racing (Córdoba)",
+            "Quilmes",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 6 Aug",
+            "Quilmes",
+            "Atlanta",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Deportivo Madryn",
+            "Quilmes",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Colegiales",
+            "Quilmes",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Quilmes",
+            "Arsenal Sarandi",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "All Boys",
+            "Quilmes",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Tue, 2 Sep",
+            "Ferro Carril Oeste",
+            "Racing (Córdoba)",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Atlanta",
+            "Ferro Carril Oeste",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Ferro Carril Oeste",
+            "Colegiales",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 11 Aug",
+            "Arsenal Sarandi",
+            "Ferro Carril Oeste",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 4 Aug",
+            "Ferro Carril Oeste",
+            "All Boys",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Alvarado (Mar del Plata)",
+            "Ferro Carril Oeste",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Ferro Carril Oeste",
+            "Deportivo Madryn",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Deportivo Maipú",
+            "Ferro Carril Oeste",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Ferro Carril Oeste",
+            "Gimnasia y Tiro (Salta)",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 28 Jun",
+            "Tristán Suárez",
+            "Ferro Carril Oeste",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Quilmes": {
+            "position": 12,
+            "points": 37
+          },
+          "Ferro Carril Oeste": {
+            "position": 15,
+            "points": 34
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Atlanta",
+            "points": 53
+          },
+          {
+            "position": 3,
+            "team": "San Miguel",
+            "points": 51
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 45
+          },
+          {
+            "position": 5,
+            "team": "Tristán Suárez",
+            "points": 44
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Patronato",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Maipú",
+            "points": 43
+          },
+          {
+            "position": 9,
+            "team": "Racing (Córdoba)",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Los Andes",
+            "points": 38
+          },
+          {
+            "position": 11,
+            "team": "Colegiales",
+            "points": 37
+          },
+          {
+            "position": 12,
+            "team": "Quilmes",
+            "points": 37
+          },
+          {
+            "position": 13,
+            "team": "All Boys",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Almagro",
+            "points": 35
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 34
+          },
+          {
+            "position": 16,
+            "team": "Güemes",
+            "points": 31
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 30
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia (Mendoza)",
+            "points": 28
+          },
+          {
+            "position": 21,
+            "team": "Deportivo Morón",
+            "points": 56
+          },
+          {
+            "position": 22,
+            "team": "Estudiantes de Río Cuarto",
+            "points": 54
+          },
+          {
+            "position": 23,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 53
+          },
+          {
+            "position": 24,
+            "team": "Chacarita Juniors",
+            "points": 50
+          },
+          {
+            "position": 25,
+            "team": "Chaco For Ever",
+            "points": 49
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 48
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 48
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 48
+          },
+          {
+            "position": 29,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 45
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 41
+          },
+          {
+            "position": 31,
+            "team": "Nueva Chicago",
+            "points": 36
+          },
+          {
+            "position": 32,
+            "team": "Central Norte",
+            "points": 35
+          },
+          {
+            "position": 33,
+            "team": "Colón (Santa Fe)",
+            "points": 34
+          },
+          {
+            "position": 34,
+            "team": "Almirante Brown",
+            "points": 33
+          },
+          {
+            "position": 35,
+            "team": "Defensores Unidos",
+            "points": 28
+          },
+          {
+            "position": 36,
+            "team": "Talleres",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/480.png",
+        "logo_away": "https://media.api-sports.io/football/teams/470.png",
+        "classement_home": 12,
+        "classement_away": 15,
+        "points_classement_home": 37,
+        "points_classement_away": 34,
+        "nom_classement_home": "Quilmes",
+        "nom_classement_away": "Ferro Carril Oeste",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "**Analyse du match Quilmes vs Ferro Carril Oeste**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Quilmes (Domicile) :**\n  - **Points forts :** Quilmes a une meilleure attaque avec une moyenne de 1.00 but marqué par match, contre 0.70 pour Ferro Carril Oeste. Ils ont également une meilleure défense, encaissant en moyenne 1.10 but contre 1.30 pour leur adversaire.\n  - **Points faibles :** Malgré une légère baisse de forme récemment, avec deux défaites consécutives, Quilmes a montré une certaine solidité à domicile, avec une série de 4 victoires consécutives avant cette baisse.\n\n- **Ferro Carril Oeste (Extérieur) :**\n  - **Points forts :** Ferro Carril Oeste a une défense solide, même si leur attaque est moins performante. Ils ont réussi à marquer dans la majorité de leurs matchs récents.\n  - **Points faibles :** Leur forme récente est inquiétante, avec seulement 5 points en 6 matchs. Leur bilan à l'extérieur est particulièrement préoccupant, avec 4 défaites consécutives.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Quilmes semble tirer parti de son statut de domicile, avec une série de 4 victoires consécutives avant les deux dernières défaites. Cela suggère qu'ils sont généralement solides à domicile.\n- Ferro Carril Oeste, en revanche, a des difficultés à l'extérieur, avec une série de 4 défaites de suite. Cela indique un manque de confiance ou d'adaptabilité hors de leur stade.\n\n**3. Analyse des formes récentes :**\n\n- **Quilmes :** Bien qu'ils aient perdu deux matchs consécutifs, leur forme sur 10 matchs est encore acceptable avec 12 points. Leur capacité à marquer des buts à domicile est un atout majeur.\n- **Ferro Carril Oeste :** Leur forme est préoccupante, avec seulement 5 points en 6 matchs. Leur incapacité à gagner à l'extérieur est un gros handicap.\n\n**4. Contexte du championnat :**\n\n- Quilmes est 12ème avec 37 points, tandis que Ferro Carril Oeste est 15ème avec 34 points. Quilmes est donc légèrement mieux classé et a plus de chances de progresser.\n- Le classement montre que Quilmes est dans une zone plus confortable, tandis que Ferro Carril Oeste lutte pour éviter la relégation, ce qui peut ajouter une pression supplémentaire.\n\n**5. Confrontations directes :**\n\n- Aucune confrontation récente n'est disponible, donc il faut se baser sur les statistiques générales.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote n'est disponible, donc l'analyse se base uniquement sur les statistiques.\n\n**Prédiction finale :**\n\n**Victoire domicile (Quilmes)**\n\n**Justification :**\n\n- Quilmes a une meilleure attaque et une défense plus solide que Ferro Carril Oeste.\n- Leur statut de domicile est un avantage significatif, compte tenu de leur bonne forme à domicile récemment.\n- Ferro Carril Oeste a des difficultés à l'extérieur et une forme récente décevante.\n- Le contexte du championnat montre que Quilmes est mieux classé et plus en confiance.\n\nCes facteurs combinés donnent une nette avance à Quilmes pour s'imposer dans ce match."
+      }
+    ]
+  }
+}
