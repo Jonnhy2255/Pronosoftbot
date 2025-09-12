@@ -1,0 +1,3360 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-12 02:16:48",
+    "date_matchs": "2025-09-12",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 9,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 9,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Machida Zelvia",
+        "AwayTeam": "Yokohama FC",
+        "date": "12 septembre 2025 à 10:00:00 UTC",
+        "league": "Japan - J1 League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.3,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 25,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 10,
+          "buts_ext_encaisses": 6,
+          "total_marques": 23,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 9,
+          "total_marques": 6,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 31",
+            "Kawasaki Frontale",
+            "Machida Zelvia",
+            "",
+            "5 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Yokohama F. Marinos",
+            "Machida Zelvia",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Machida Zelvia",
+            "Gamba Osaka",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Machida Zelvia",
+            "Cerezo Osaka",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Machida Zelvia",
+            "Vissel Kobe",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Tokyo Verdy 1969",
+            "Machida Zelvia",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Machida Zelvia",
+            "Shimizu S-Pulse",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jun 29",
+            "Albirex Niigata",
+            "Machida Zelvia",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Jun 21",
+            "Machida Zelvia",
+            "Kashima Antlers",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jun 14",
+            "Shonan Bellmare",
+            "Machida Zelvia",
+            "",
+            "1 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Yokohama FC",
+            "Tokyo Verdy 1969",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Gamba Osaka",
+            "Yokohama FC",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Vissel Kobe",
+            "Yokohama FC",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Yokohama FC",
+            "Urawa Red Diamonds",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Shimizu S-Pulse",
+            "Yokohama FC",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Yokohama FC",
+            "Yokohama F. Marinos",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "FC Tokyo",
+            "Yokohama FC",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jun 22",
+            "Yokohama FC",
+            "Sanfrecce Hiroshima",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Jun 14",
+            "Yokohama FC",
+            "Kawasaki Frontale",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jun 1",
+            "Urawa Red Diamonds",
+            "Yokohama FC",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Machida Zelvia": {
+            "position": 5,
+            "points": 50
+          },
+          "Yokohama FC": {
+            "position": 19,
+            "points": 23
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Kyoto Sanga",
+            "points": 54
+          },
+          {
+            "position": 2,
+            "team": "Kashiwa Reysol",
+            "points": 53
+          },
+          {
+            "position": 3,
+            "team": "Vissel Kobe",
+            "points": 53
+          },
+          {
+            "position": 4,
+            "team": "Kashima Antlers",
+            "points": 52
+          },
+          {
+            "position": 5,
+            "team": "Machida Zelvia",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Sanfrecce Hiroshima",
+            "points": 50
+          },
+          {
+            "position": 7,
+            "team": "Urawa Red Diamonds",
+            "points": 47
+          },
+          {
+            "position": 8,
+            "team": "Kawasaki Frontale",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Gamba Osaka",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Cerezo Osaka",
+            "points": 39
+          },
+          {
+            "position": 11,
+            "team": "Fagiano Okayama",
+            "points": 39
+          },
+          {
+            "position": 12,
+            "team": "Avispa Fukuoka",
+            "points": 37
+          },
+          {
+            "position": 13,
+            "team": "Shimizu S-Pulse",
+            "points": 33
+          },
+          {
+            "position": 14,
+            "team": "Tokyo Verdy 1969",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "FC Tokyo",
+            "points": 31
+          },
+          {
+            "position": 16,
+            "team": "Nagoya Grampus",
+            "points": 29
+          },
+          {
+            "position": 17,
+            "team": "Yokohama F. Marinos",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Shonan Bellmare",
+            "points": 25
+          },
+          {
+            "position": 19,
+            "team": "Yokohama FC",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Albirex Niigata",
+            "points": 20
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/303.png",
+        "logo_away": "https://media.api-sports.io/football/teams/307.png",
+        "classement_home": 5,
+        "classement_away": 19,
+        "points_classement_home": 50,
+        "points_classement_away": 23,
+        "nom_classement_home": "Machida Zelvia",
+        "nom_classement_away": "Yokohama FC",
+        "country_fr": "Japan - J1 League",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Machida Zelvia et Yokohama FC. Machida joue à domicile, et Yokohama est en déplacement. D'après les statistiques, Machida est 5ème avec 50 points, tandis que Yokohama est 19ème avec 23 points. Cela montre que Machida est dans une meilleure position au classement.\n\nRegardons leurs formes récentes. Machida a gagné ses 5 derniers matchs à domicile, ce qui est impressionnant. Ils ont marqué 13 buts et n'en ont concédé que 2. Cela indique une forte attaque et une défense solide. Yokohama, en revanche, a perdu 4 de ses 5 derniers matchs à l'extérieur, ne marquant que 5 buts et encaissant 9. Cela suggère des difficultés offensives et défensives.\n\nEn regardant les 10 derniers matchs, Machida a une forme incroyable avec 25 points sur 10 matchs, contre seulement 4 points pour Yokohama. Cela montre une nette supériorité de Machida en termes de performance récente.\n\nLe contexte du championnat est aussi important. Machida se bat pour une place en haut du tableau, tandis que Yokohama lutte pour éviter la relégation. Cela pourrait motiver Machida à performer pour maintenir leur position, tandis que Yokohama pourrait être sous pression.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile à dire, mais les statistiques générales penchent clairement en faveur de Machida.\n\nEn ce qui concerne les cotes, il n'y en a pas, donc je dois m'appuyer uniquement sur les statistiques.\n\nEn résumé, Machida a une meilleure forme, une attaque puissante et une défense solide à domicile. Yokohama a des difficultés à marquer et à défendre à l'extérieur. Donc, je pense que Machida devrait gagner ce match.\n</think>\n\n**Prédiction : Victoire domicile (Machida Zelvia)**\n\n**Justification :**\n\n1. **Forme Récente :** Machida Zelvia est en pleine confiance avec 5 victoires consécutives à domicile, marquant 13 buts et n'en concédant que 2. Yokohama FC, en revanche, a perdu 4 de ses 5 derniers matchs à l'extérieur, avec seulement 5 buts marqués et 9 encaissés.\n\n2. **Performance Générale :** Machida occupe la 5ème place avec 50 points, contre une 19ème place pour Yokohama avec 23 points. Cela reflète une nette supériorité de Machida dans la compétition.\n\n3. **Contexte du Championnat :** Machida se bat pour maintenir sa position élevée, ce qui motive l'équipe à performer. Yokohama, en lutte contre la relégation, pourrait ressentir une pression accrue, affectant potentiellement leur rendement.\n\n4. **Statistiques Offensives et Défensives :** Machida affiche une moyenne de 2.30 buts marqués par match et 0.80 encaissés, contre respectivement 0.60 et 1.70 pour Yokohama. Cela met en lumière la puissance offensive et la solidité défensive de Machida.\n\n5. **Avantage Domicile :** Jouer à domicile est un avantage certain pour Machida, qui a excellemment performé dans ses matchs à domicile récents.\n\nEn conclusion, toutes les statistiques et tendances penchent en faveur d'une victoire de Machida Zelvia."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Vissel Kobe",
+        "AwayTeam": "Kashiwa Reysol",
+        "date": "12 septembre 2025 à 10:00:00 UTC",
+        "league": "Japan - J1 League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Kashiwa Reysol": 3.32,
+            "Vissel Kobe": 2.24,
+            "Draw": 3.34
+          },
+          "totals": {
+            "Over": 2.13,
+            "Under": 1.73
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 17,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 4,
+          "total_marques": 11,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 2.1,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 19,
+          "total_points": 12,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 5,
+          "total_marques": 21,
+          "total_encaisses": 14
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 30",
+            "Vissel Kobe",
+            "Yokohama F. Marinos",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Cerezo Osaka",
+            "Vissel Kobe",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Sanfrecce Hiroshima",
+            "Vissel Kobe",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Vissel Kobe",
+            "Yokohama FC",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Machida Zelvia",
+            "Vissel Kobe",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Vissel Kobe",
+            "Barcelona",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Fagiano Okayama",
+            "Vissel Kobe",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Vissel Kobe",
+            "Shonan Bellmare",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Jul 2",
+            "Vissel Kobe",
+            "Sanfrecce Hiroshima",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Avispa Fukuoka",
+            "Vissel Kobe",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Aug 31",
+            "Kashiwa Reysol",
+            "Avispa Fukuoka",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 22",
+            "Kashiwa Reysol",
+            "Urawa Red Diamonds",
+            "",
+            "4 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Fagiano Okayama",
+            "Kashiwa Reysol",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Kashiwa Reysol",
+            "Shonan Bellmare",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Kashima Antlers",
+            "Kashiwa Reysol",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Kashiwa Reysol",
+            "FC Tokyo",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Shimizu S-Pulse",
+            "Kashiwa Reysol",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jun 21",
+            "Kashiwa Reysol",
+            "Kyoto Sanga",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Sun, Jun 15",
+            "Tokyo Verdy 1969",
+            "Kashiwa Reysol",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Sat, May 31",
+            "Kashiwa Reysol",
+            "Vissel Kobe",
+            "",
+            "1 - 3",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Vissel Kobe": {
+            "position": 3,
+            "points": 53
+          },
+          "Kashiwa Reysol": {
+            "position": 2,
+            "points": 53
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Kyoto Sanga",
+            "points": 54
+          },
+          {
+            "position": 2,
+            "team": "Kashiwa Reysol",
+            "points": 53
+          },
+          {
+            "position": 3,
+            "team": "Vissel Kobe",
+            "points": 53
+          },
+          {
+            "position": 4,
+            "team": "Kashima Antlers",
+            "points": 52
+          },
+          {
+            "position": 5,
+            "team": "Machida Zelvia",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Sanfrecce Hiroshima",
+            "points": 50
+          },
+          {
+            "position": 7,
+            "team": "Urawa Red Diamonds",
+            "points": 47
+          },
+          {
+            "position": 8,
+            "team": "Kawasaki Frontale",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Gamba Osaka",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Cerezo Osaka",
+            "points": 39
+          },
+          {
+            "position": 11,
+            "team": "Fagiano Okayama",
+            "points": 39
+          },
+          {
+            "position": 12,
+            "team": "Avispa Fukuoka",
+            "points": 37
+          },
+          {
+            "position": 13,
+            "team": "Shimizu S-Pulse",
+            "points": 33
+          },
+          {
+            "position": 14,
+            "team": "Tokyo Verdy 1969",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "FC Tokyo",
+            "points": 31
+          },
+          {
+            "position": 16,
+            "team": "Nagoya Grampus",
+            "points": 29
+          },
+          {
+            "position": 17,
+            "team": "Yokohama F. Marinos",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Shonan Bellmare",
+            "points": 25
+          },
+          {
+            "position": 19,
+            "team": "Yokohama FC",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Albirex Niigata",
+            "points": 20
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/289.png",
+        "logo_away": "https://media.api-sports.io/football/teams/281.png",
+        "classement_home": 3,
+        "classement_away": 2,
+        "points_classement_home": 53,
+        "points_classement_away": 53,
+        "nom_classement_home": "Vissel Kobe",
+        "nom_classement_away": "Kashiwa Reysol",
+        "country_fr": "Japan - J1 League",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Vissel Kobe et Kashiwa Reysol. D'abord, je regarde le classement. Les deux équipes sont très proches : Vissel Kobe est 3ème avec 53 points et Kashiwa Reysol est 2ème, aussi avec 53 points. Cela suggère que c'est un match crucial pour le haut du tableau.\n\nEn regardant les statistiques offensives, Kashiwa Reysol a une moyenne de 2.10 buts marqués par match, ce qui est assez élevé. Vissel Kobe marque en moyenne 1.10 but, ce qui est moins, mais ils encaissent moins aussi avec 0.80 contre 1.40 pour Kashiwa. Cela indique que Vissel Kobe a une défense solide, tandis que Kashiwa Reysol est plus attaquant.\n\nJe regarde aussi les formes récentes. Vissel Kobe a une forme en dents de scie avec 3 défaites dans leurs 6 derniers matchs, ce qui est inquiétant. Kashiwa Reysol, eux, ont une forme plus constante avec 4 victoires dans leurs 6 derniers matchs. Cela montre que Kashiwa est plus en confiance actuellement.\n\nEn ce qui concerne les matchs à domicile et à l'extérieur, Vissel Kobe a un bilan mitigé avec des victoires et des défaites à domicile. Kashiwa Reysol, bien qu'ils soient à l'extérieur, ont une bonne forme avec 8 buts marqués en 5 matchs à l'extérieur, contre seulement 5 encaissés. Cela suggère qu'ils sont capables de performer loin de chez eux.\n\nJe regarde aussi les 10 derniers matchs de chaque équipe. Vissel Kobe a perdu contre des équipes comme Machida Zelvia et Yokohama FC, ce qui est préoccupant. Kashiwa Reysol a gagné contre des équipes comme Urawa Red Diamonds et Shimizu S-Pulse, ce qui montre leur force.\n\nEn termes de cotes, Vissel Kobe est légèrement favori avec une cote de 2.24 contre 3.32 pour Kashiwa Reysol. Cependant, compte tenu de la forme récente et de l'attaque plus puissante de Kashiwa, cela pourrait être un piège à éviter.\n\nEnfin, bien qu'il n'y ait pas de confrontations directes récentes, le contexte du championnat montre que ce match est crucial pour le podium. Kashiwa Reysol semble avoir l'avantage en termes d'attaque et de forme récente, donc je penche pour une victoire extérieure.\n</think>\n\n**Prédiction : Victoire extérieur (Kashiwa Reysol)**\n\n**Justification :**\n\n1. **Forme récente :** Kashiwa Reysol affiche une forme plus constante avec 4 victoires sur ses 6 derniers matchs, contre une forme inégale pour Vissel Kobe, qui a perdu 3 de ses 6 derniers matchs.\n\n2. **Statistiques offensives :** Kashiwa Reysol possède une attaque plus puissante avec une moyenne de 2.10 buts marqués par match, contre 1.10 pour Vissel Kobe. Cela suggère une capacité à inscrire des buts, même à l'extérieur.\n\n3. **Performance à l'extérieur :** Bien que jouant à l'extérieur, Kashiwa Reysol a marqué 8 buts en 5 matchs, montrant leur efficacité hors domicile.\n\n4. **Contexte du championnat :** Ce match est crucial pour le haut du classement, et Kashiwa Reysol semble avoir l'avantage en termes de confiance et de performance récente.\n\n5. **Cotes :** Bien que Vissel Kobe soit légèrement favori, les performances de Kashiwa Reysol justifient une victoire extérieure."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Sanfrecce Hiroshima",
+        "AwayTeam": "Kyoto Sanga",
+        "date": "12 septembre 2025 à 10:00:00 UTC",
+        "league": "Japan - J1 League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 17,
+          "total_points": 11,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 2,
+          "total_marques": 13,
+          "total_encaisses": 5
+        },
+        "stats_away": {
+          "moyenne_marques": 2.5,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 16,
+          "total_points_10": 23,
+          "total_points": 16,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 14,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 7,
+          "total_marques": 25,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 31",
+            "Cerezo Osaka",
+            "Sanfrecce Hiroshima",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Tokyo Verdy 1969",
+            "Sanfrecce Hiroshima",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Sanfrecce Hiroshima",
+            "Vissel Kobe",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Sanfrecce Hiroshima",
+            "Gamba Osaka",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Sanfrecce Hiroshima",
+            "Shimizu S-Pulse",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 20",
+            "Albirex Niigata",
+            "Sanfrecce Hiroshima",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Fagiano Okayama",
+            "Sanfrecce Hiroshima",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 2",
+            "Vissel Kobe",
+            "Sanfrecce Hiroshima",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Sanfrecce Hiroshima",
+            "Nagoya Grampus",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Jun 22",
+            "Yokohama FC",
+            "Sanfrecce Hiroshima",
+            "",
+            "0 - 4",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Kyoto Sanga",
+            "Fagiano Okayama",
+            "",
+            "5 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "FC Tokyo",
+            "Kyoto Sanga",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Kyoto Sanga",
+            "Tokyo Verdy 1969",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Nagoya Grampus",
+            "Kyoto Sanga",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Mon, Jul 21",
+            "Avispa Fukuoka",
+            "Kyoto Sanga",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 5",
+            "Kyoto Sanga",
+            "Albirex Niigata",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Kyoto Sanga",
+            "Gamba Osaka",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jun 21",
+            "Kashiwa Reysol",
+            "Kyoto Sanga",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Sat, May 31",
+            "Kyoto Sanga",
+            "FC Tokyo",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, May 25",
+            "Tokyo Verdy 1969",
+            "Kyoto Sanga",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Sanfrecce Hiroshima": {
+            "position": 6,
+            "points": 50
+          },
+          "Kyoto Sanga": {
+            "position": 1,
+            "points": 54
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Kyoto Sanga",
+            "points": 54
+          },
+          {
+            "position": 2,
+            "team": "Kashiwa Reysol",
+            "points": 53
+          },
+          {
+            "position": 3,
+            "team": "Vissel Kobe",
+            "points": 53
+          },
+          {
+            "position": 4,
+            "team": "Kashima Antlers",
+            "points": 52
+          },
+          {
+            "position": 5,
+            "team": "Machida Zelvia",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Sanfrecce Hiroshima",
+            "points": 50
+          },
+          {
+            "position": 7,
+            "team": "Urawa Red Diamonds",
+            "points": 47
+          },
+          {
+            "position": 8,
+            "team": "Kawasaki Frontale",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Gamba Osaka",
+            "points": 40
+          },
+          {
+            "position": 10,
+            "team": "Cerezo Osaka",
+            "points": 39
+          },
+          {
+            "position": 11,
+            "team": "Fagiano Okayama",
+            "points": 39
+          },
+          {
+            "position": 12,
+            "team": "Avispa Fukuoka",
+            "points": 37
+          },
+          {
+            "position": 13,
+            "team": "Shimizu S-Pulse",
+            "points": 33
+          },
+          {
+            "position": 14,
+            "team": "Tokyo Verdy 1969",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "FC Tokyo",
+            "points": 31
+          },
+          {
+            "position": 16,
+            "team": "Nagoya Grampus",
+            "points": 29
+          },
+          {
+            "position": 17,
+            "team": "Yokohama F. Marinos",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Shonan Bellmare",
+            "points": 25
+          },
+          {
+            "position": 19,
+            "team": "Yokohama FC",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Albirex Niigata",
+            "points": 20
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/282.png",
+        "logo_away": "https://media.api-sports.io/football/teams/302.png",
+        "classement_home": 6,
+        "classement_away": 1,
+        "points_classement_home": 50,
+        "points_classement_away": 54,
+        "nom_classement_home": "Sanfrecce Hiroshima",
+        "nom_classement_away": "Kyoto Sanga",
+        "country_fr": "Japan - J1 League",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Sanfrecce Hiroshima et Kyoto Sanga. D'abord, je regarde le classement. Kyoto Sanga est premier avec 54 points, tandis que Sanfrecce Hiroshima est sixième avec 50 points. Ça montre que Kyoto Sanga est en meilleure position.\n\nEnsuite, je regarde les statistiques offensives et défensives. Kyoto Sanga marque en moyenne 2.5 buts par match et encaisse 0.9. Sanfrecce Hiroshima marque 1.3 et encaisse 0.5. Donc, Kyoto Sanga a une attaque plus puissante et une défense solide.\n\nJe regarde aussi la forme récente. Kyoto Sanga a gagné 4 de ses 5 derniers matchs, ce qui est impressionnant. Sanfrecce Hiroshima a une forme un peu irrégulière, avec des victoires et des défaites en alternance.\n\nEn ce qui concerne les matchs à domicile et à l'extérieur, Sanfrecce Hiroshima a une légère tendance à perdre ou à faire des nuls à domicile, tandis que Kyoto Sanga a une bonne forme à l'extérieur, avec 11 buts marqués en 5 matchs.\n\nJe note aussi que Kyoto Sanga a marqué dans presque tous ses matchs récents, ce qui suggère qu'ils ont une attaque constante. De l'autre côté, Sanfrecce Hiroshima a du mal à marquer régulièrement, avec des matchs sans buts récemment.\n\nEnfin, bien qu'il n'y ait pas de confrontations directes récentes, le contexte du classement et les formes récentes montrent que Kyoto Sanga semble avoir l'avantage.\n\nDonc, je pense que Kyoto Sanga pourrait gagner ce match.\n</think>\n\n**Prédiction : Victoire extérieur (Kyoto Sanga)**\n\n**Justification :**\n\n1. **Classement et Contexte du Championnat :**\n   - Kyoto Sanga occupe la 1re place avec 54 points, tandis que Sanfrecce Hiroshima est 6e avec 50 points. Kyoto Sanga est en position de leader et a plus de poids dans la compétition.\n\n2. **Forme Récente :**\n   - Kyoto Sanga est en excellente forme avec 4 victoires sur ses 5 derniers matchs, montrant une constance et une efficacité offensive.\n   - Sanfrecce Hiroshima a une forme irrégulière avec des défaites et des nuls, ce qui indique une instabilité.\n\n3. **Statistiques Offensives et Défensives :**\n   - Kyoto Sanga a une moyenne élevée de buts marqués (2.5) et une défense solide (0.9 but encaissé en moyenne), ce qui en fait une équipe équilibrée.\n   - Sanfrecce Hiroshima a une attaque moins performante (1.3 but par match) et une défense légèrement moins solide (0.5).\n\n4. **Performance à Domicile et à l'Extérieur :**\n   - Kyoto Sanga performe bien à l'extérieur, avec 11 buts marqués en 5 matchs, montrant leur capacité à s'adapter hors domicile.\n   - Sanfrecce Hiroshima a une performance mitigée à domicile, avec des résultats inégaux.\n\n5. **Capacité à Marquer :**\n   - Kyoto Sanga a marqué dans la majorité de ses matchs récents, indiquant une attaque constante.\n   - Sanfrecce Hiroshima a des difficultés à marquer de manière régulière, avec des matchs sans buts.\n\nBien que Sanfrecce Hiroshima ait une défense solide, la supériorité offensive et la forme récente de Kyoto Sanga donnent un avantage significatif. Par conséquent, la prédiction est une victoire pour Kyoto Sanga."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "SHANGHAI SIPG",
+        "AwayTeam": "Yunnan Yukun",
+        "date": "12 septembre 2025 à 10:00:00 UTC",
+        "league": "China - Super League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.5,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 23,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 15,
+          "buts_ext_encaisses": 10,
+          "total_marques": 25,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 2.3,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 12,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 13,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 10,
+          "total_marques": 16,
+          "total_encaisses": 23
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 30",
+            "Chengdu Rongcheng",
+            "Shanghai Port",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Shanghai Port",
+            "Tianjin Jinmen Tiger",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Shanghai Port",
+            "Henan Songshan Longmen",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Shanghai Shenhua",
+            "Shanghai Port",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Meizhou Hakka",
+            "Shanghai Port",
+            "",
+            "2 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Shanghai Port",
+            "Qingdao West Coast",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Jul 18",
+            "Changchun Yatai",
+            "Shanghai Port",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Mon, Jun 30",
+            "Shenzhen Xinpengcheng",
+            "Shanghai Port",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Thu, Jun 26",
+            "Shanghai Port",
+            "Dalian Yingbo",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Jun 18",
+            "Henan Songshan Longmen",
+            "Shanghai Port",
+            "",
+            "1 - 3",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Yunnan Yukun",
+            "Changchun Yatai",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Yunnan Yukun",
+            "Chengdu Rongcheng",
+            "",
+            "1 - 5",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Yunnan Yukun",
+            "Wuhan Three Towns",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Qingdao Hainiu",
+            "Yunnan Yukun",
+            "",
+            "5 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Yunnan Yukun",
+            "Shanghai Shenhua",
+            "",
+            "4 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Yunnan Yukun",
+            "Shenzhen Xinpengcheng",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Jul 18",
+            "Zhejiang Professional FC",
+            "Yunnan Yukun",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Mon, Jun 30",
+            "Beijing Guoan",
+            "Yunnan Yukun",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Jun 26",
+            "Yunnan Yukun",
+            "Henan Songshan Longmen",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jun 14",
+            "Qingdao West Coast",
+            "Yunnan Yukun",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "SHANGHAI SIPG": {
+            "position": 3,
+            "points": 48
+          },
+          "Yunnan Yukun": {
+            "position": 8,
+            "points": 30
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Chengdu Rongcheng",
+            "points": 50
+          },
+          {
+            "position": 2,
+            "team": "Shanghai Shenhua",
+            "points": 49
+          },
+          {
+            "position": 3,
+            "team": "Shanghai Port",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "Beijing Guoan",
+            "points": 48
+          },
+          {
+            "position": 5,
+            "team": "Shandong Taishan",
+            "points": 40
+          },
+          {
+            "position": 6,
+            "team": "Zhejiang Professional FC",
+            "points": 34
+          },
+          {
+            "position": 7,
+            "team": "Tianjin Jinmen Tiger",
+            "points": 34
+          },
+          {
+            "position": 8,
+            "team": "Yunnan Yukun",
+            "points": 30
+          },
+          {
+            "position": 9,
+            "team": "Dalian Yingbo",
+            "points": 29
+          },
+          {
+            "position": 10,
+            "team": "Qingdao West Coast",
+            "points": 27
+          },
+          {
+            "position": 11,
+            "team": "Wuhan Three Towns",
+            "points": 24
+          },
+          {
+            "position": 12,
+            "team": "Henan Songshan Longmen",
+            "points": 23
+          },
+          {
+            "position": 13,
+            "team": "Shenzhen Xinpengcheng",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Meizhou Hakka",
+            "points": 17
+          },
+          {
+            "position": 15,
+            "team": "Qingdao Hainiu",
+            "points": 16
+          },
+          {
+            "position": 16,
+            "team": "Changchun Yatai",
+            "points": 16
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/836.png",
+        "logo_away": "https://media.api-sports.io/football/teams/21265.png",
+        "classement_home": 3,
+        "classement_away": 8,
+        "points_classement_home": 48,
+        "points_classement_away": 30,
+        "nom_classement_home": "Shanghai Port",
+        "nom_classement_away": "Yunnan Yukun",
+        "country_fr": "China - Super League",
+        "analyse_ia": "**Analyse du match entre Shanghai SIPG et Yunnan Yukun**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Shanghai SIPG (Domicile) :**\n  - **Forces :** \n    - 3ème du classement avec 48 points, montre une constance dans la saison.\n    - Moyenne de 2,50 buts marqués par match, attaque offensive.\n    - Seulement 1,40 but encaissés en moyenne, défense solide.\n    - Forme récente : 4 victoires en 6 derniers matchs, avec une tendance positive.\n    - Performances à domicile : 10 buts marqués pour seulement 4 encaissés, un bon équilibre.\n  - **Faiblesses :**\n    - Une forme en dents de scie avec des défaites et des nuls récemment.\n    - Dépendance à certains joueurs clés pour la création et le marquage.\n\n- **Yunnan Yukun (Extérieur) :**\n  - **Forces :**\n    - Capacité à marquer des buts, avec une moyenne de 1,60 par match.\n    - Des performances inégales mais avec des moments de brillance (match nul 4-4 avec Shanghai Shenhua).\n  - **Faiblesses :**\n    - 8ème du classement, manque de constance.\n    - Difficultés en extérieur : seulement 3 buts marqués pour 10 encaissés.\n    - Forme récente mitigée avec des défaites et des nuls.\n\n**2. Impact du facteur domicile/extérieur :**\n\nShanghai SIPG joue à domicile, où il a une forte influence avec une bonne défense et une attaque performante. Yunnan Yukun, en déplacement, a du mal à gagner à l'extérieur et encaisse beaucoup de buts.\n\n**3. Forme récente et tendances :**\n\n- **Shanghai SIPG :** \n  - 4 victoires en 6 matchs, avec une tendance à dominer les rencontres.\n  - Une attaque en pleine confiance, avec des buteurs réguliers.\n  - La défense reste solide, limitant les occasions adverses.\n\n- **Yunnan Yukun :**\n  - Forme irrégulière avec des hauts et des bas.\n  - Difficulté à maintenir une pression offensive constante à l'extérieur.\n  - Problèmes défensifs, avec une moyenne élevée de buts encaissés.\n\n**4. Contexte du championnat :**\n\nShanghai SIPG est en course pour les places du haut du tableau, avec une pression pour maintenir son rang. Yunnan Yukun, plus en bas de tableau, lutte pour éviter la relégation, ce qui peut motiver ses joueurs à se battre pour chaque point.\n\n**5. Confrontations directes :**\n\nAucune confrontation récente disponible, donc difficile de tirer des conclusions de H2H.\n\n**6. Évaluation des cotes :**\n\nAucune cote disponible, donc l'analyse se base sur les statistiques et les performances.\n\n**7. Prédiction finale :**\n\n**Victoire domicile (Shanghai SIPG)**\n\n**Justification :**\n\n- **Supériorité offensive et défensive :** Shanghai SIPG a une attaque plus performante et une défense plus solide que Yunnan Yukun.\n- **Avantage du terrain :** Jouer à domicile renforce leur confiance et leur capacité à contrôler le match.\n- **Forme récente :** Une tendance positive avec 4 victoires en 6 matchs, contrairement à Yunnan Yukun qui a du mal à performer à l'extérieur.\n- **Enjeu du championnat :** La pression de rester dans le haut du classement devrait motiver Shanghai SIPG à prendre les trois points.\n\nShanghai SIPG devrait donc s'imposer dans ce match."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Henan Jianye",
+        "AwayTeam": "Beijing Guoan",
+        "date": "12 septembre 2025 à 11:35:00 UTC",
+        "league": "China - Super League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 9,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 12,
+          "total_marques": 18,
+          "total_encaisses": 19
+        },
+        "stats_away": {
+          "moyenne_marques": 2.1,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 19,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 12,
+          "total_marques": 21,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          [
+            "Fri, Aug 29",
+            "Qingdao Hainiu",
+            "Henan Songshan Longmen",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Henan Songshan Longmen",
+            "Dalian Yingbo",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Shanghai Port",
+            "Henan Songshan Longmen",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 8",
+            "Henan Songshan Longmen",
+            "Shenzhen Xinpengcheng",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Qingdao West Coast",
+            "Henan Songshan Longmen",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Shanghai Shenhua",
+            "Henan Songshan Longmen",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Henan Songshan Longmen",
+            "Meizhou Hakka",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Mon, Jun 30",
+            "Henan Songshan Longmen",
+            "Shandong Taishan",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Thu, Jun 26",
+            "Yunnan Yukun",
+            "Henan Songshan Longmen",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jun 18",
+            "Henan Songshan Longmen",
+            "Shanghai Port",
+            "",
+            "1 - 3",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Aug 31",
+            "Shandong Taishan",
+            "Beijing Guoan",
+            "",
+            "6 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 25",
+            "Beijing Guoan",
+            "Wuhan Three Towns",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Qingdao West Coast",
+            "Beijing Guoan",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Zhejiang Professional FC",
+            "Beijing Guoan",
+            "",
+            "3 - 4",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "Beijing Guoan",
+            "Tianjin Jinmen Tiger",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Chengdu Rongcheng",
+            "Beijing Guoan",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Beijing Guoan",
+            "Shanghai Shenhua",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Mon, Jun 30",
+            "Beijing Guoan",
+            "Yunnan Yukun",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jun 25",
+            "Meizhou Hakka",
+            "Beijing Guoan",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Tue, Jun 17",
+            "Beijing Guoan",
+            "Qingdao West Coast",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Henan Jianye": {
+            "position": 12,
+            "points": 23
+          },
+          "Beijing Guoan": {
+            "position": 4,
+            "points": 48
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Chengdu Rongcheng",
+            "points": 50
+          },
+          {
+            "position": 2,
+            "team": "Shanghai Shenhua",
+            "points": 49
+          },
+          {
+            "position": 3,
+            "team": "Shanghai Port",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "Beijing Guoan",
+            "points": 48
+          },
+          {
+            "position": 5,
+            "team": "Shandong Taishan",
+            "points": 40
+          },
+          {
+            "position": 6,
+            "team": "Zhejiang Professional FC",
+            "points": 34
+          },
+          {
+            "position": 7,
+            "team": "Tianjin Jinmen Tiger",
+            "points": 34
+          },
+          {
+            "position": 8,
+            "team": "Yunnan Yukun",
+            "points": 30
+          },
+          {
+            "position": 9,
+            "team": "Dalian Yingbo",
+            "points": 29
+          },
+          {
+            "position": 10,
+            "team": "Qingdao West Coast",
+            "points": 27
+          },
+          {
+            "position": 11,
+            "team": "Wuhan Three Towns",
+            "points": 24
+          },
+          {
+            "position": 12,
+            "team": "Henan Songshan Longmen",
+            "points": 23
+          },
+          {
+            "position": 13,
+            "team": "Shenzhen Xinpengcheng",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Meizhou Hakka",
+            "points": 17
+          },
+          {
+            "position": 15,
+            "team": "Qingdao Hainiu",
+            "points": 16
+          },
+          {
+            "position": 16,
+            "team": "Changchun Yatai",
+            "points": 16
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/840.png",
+        "logo_away": "https://media.api-sports.io/football/teams/830.png",
+        "classement_home": 12,
+        "classement_away": 4,
+        "points_classement_home": 23,
+        "points_classement_away": 48,
+        "nom_classement_home": "Henan Songshan Longmen",
+        "nom_classement_away": "Beijing Guoan",
+        "country_fr": "China - Super League",
+        "analyse_ia": "<think>\n\n**Analyse du match Henan Jianye vs Beijing Guoan**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Henan Jianye (Domicile) :**\n  - **Classement :** 12ᵉ avec 23 points.\n  - **Attaque :** Moyenne de 1.80 buts marqués par match. Dans les 10 derniers matchs, ils ont marqué 16 buts, montrant une attaque régulière mais pas exceptionnelle.\n  - **Défense :** Moyenne de 1.90 buts encaissés par match. Sur les 10 derniers matchs, ils ont concédé 19 buts, ce qui indique des lacunes défensives.\n  - **Forme récente :** Sur les 6 derniers matchs, ils ont obtenu 7 points (2 victoires, 1 nul, 3 défaites). Sur les 10 derniers matchs, 9 points (2 victoires, 3 nuls, 5 défaites). La forme est en baisse.\n  - **Domicile :** Série actuelle : W-W-D-D-L. Ils ont marqué 12 buts et en ont concédé 7 en 10 matchs à domicile.\n\n- **Beijing Guoan (Extérieur) :**\n  - **Classement :** 4ᵉ avec 48 points.\n  - **Attaque :** Moyenne de 2.10 buts marqués par match. Dans les 10 derniers matchs, 19 buts marqués, montrant une attaque offensive.\n  - **Défense :** Moyenne de 1.80 buts encaissés par match. 16 buts encaissés en 10 matchs, une défense solide.\n  - **Forme récente :** Sur les 6 derniers matchs, 10 points (3 victoires, 1 nul, 2 défaites). Sur les 10 derniers matchs, 19 points (6 victoires, 1 nul, 3 défaites). Forme ascendante.\n  - **Extérieur :** Série actuelle : L-W-W-L-W. 11 buts marqués et 12 encaissés en 10 matchs extérieurs.\n\n**2. Impact du facteur domicile/extérieur :**\n\nHenan Jianye joue à domicile, où ils ont une légère tendance à performer correctement (12 buts marqués en 10 matchs). Cependant, leur forme récente est déclinante avec une série de défaites récentes.\n\nBeijing Guoan, bien qu'étant en déplacement, a une meilleure forme récente et une attaque plus performante. Leur capacité à marquer des buts à l'extérieur (11 buts en 10 matchs) est un avantage.\n\n**3. Analyse des formes récentes et tendances :**\n\n- **Henan Jianye :** Les 10 derniers matchs montrent une tendance à encaisser des buts, avec 19 buts concédés. Leur attaque, bien que régulière, ne compense pas toujours les défaites défensives.\n- **Beijing Guoan :** Une attaque en pleine confiance avec 19 buts en 10 matchs. Leur défense, bien qu'elle ait concédé 16 buts, reste solide.\n\n**4. Contexte du championnat :**\n\nHenan Jianye est en difficulté en 12e position, avec seulement 23 points. Ils luttent pour éviter la relégation. Beijing Guoan, 4e avec 48 points, est en course pour les places européennes, ce qui motive fortement l'équipe.\n\n**5. Confrontations directes :**\n\nAucune donnée disponible sur les confrontations récentes entre les deux équipes.\n\n**6. Évaluation des cotes :**\n\nAucune cote disponible pour ce match.\n\n**7. Prédiction finale :**\n\n**Victoire extérieur (Beijing Guoan)**\n\n**Justification :**\n\n- **Forme récente :** Beijing Guoan est en meilleure forme avec 19 points sur 10 matchs, contre 9 points pour Henan Jianye.\n- **Attaque vs Défense :** L'attaque de Beijing Guoan (2.10 buts/match) devrait faire la différence contre une défense de Henan Jianye qui concède 1.90 but/match.\n- **Contexte du championnat :** Beijing Guoan a plus à jouer en termes de places européennes, ce qui les motive davantage.\n- **Performance à l'extérieur :** Bien que jouant à l'extérieur, Beijing Guoan a une attaque performante et une défense solide.\n\nCette analyse statistique et contextuelle conduit à la prédiction d'une victoire de Beijing Guoan."
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Universitatea Cluj",
+        "AwayTeam": "Rapid",
+        "date": "12 septembre 2025 à 18:00:00 UTC",
+        "league": "Romania - Liga I",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 13,
+          "total_points": 8,
+          "serie_domicile": [
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 5,
+          "total_marques": 12,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 1.75,
+          "moyenne_encaisses": 0.75,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 18,
+          "total_points": 14,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 2,
+          "total_marques": 14,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sat, 30 Aug",
+            "Unirea Slobozia",
+            "Universitatea Cluj",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Universitatea Cluj",
+            "Dinamo Bucuresti",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 18 Aug",
+            "FC Farul Constanta",
+            "Universitatea Cluj",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Universitatea Cluj",
+            "Petrolul Ploiesti",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Hermannstadt",
+            "Universitatea Cluj",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Thu, 31 Jul",
+            "Universitatea Cluj",
+            "Ararat-Armenia",
+            "",
+            "1 - 2",
+            "AET"
+          ],
+          [
+            "Mon, 28 Jul",
+            "CSU Craiova",
+            "Universitatea Cluj",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Thu, 24 Jul",
+            "Ararat-Armenia",
+            "Universitatea Cluj",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Universitatea Cluj",
+            "UTA Arad",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "Metaloglobus",
+            "Universitatea Cluj",
+            "",
+            "1 - 4",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Fri, 29 Aug",
+            "Rapid Bucuresti",
+            "UTA Arad",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 22 Aug",
+            "Metaloglobus",
+            "Rapid Bucuresti",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Rapid Bucuresti",
+            "FCSB",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 11 Aug",
+            "Otelul Galati",
+            "Rapid Bucuresti",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 4 Aug",
+            "Rapid Bucuresti",
+            "FC Botosani",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "Csíkszereda",
+            "Rapid Bucuresti",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 20 Jul",
+            "Rapid Bucuresti",
+            "CFR Cluj-Napoca",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "FC Arges",
+            "Rapid Bucuresti",
+            "",
+            "0 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Universitatea Cluj": {
+            "position": 8,
+            "points": 12
+          },
+          "Rapid": {
+            "position": 2,
+            "points": 18
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "CSU Craiova",
+            "points": 20
+          },
+          {
+            "position": 2,
+            "team": "Rapid Bucuresti",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "Dinamo Bucuresti",
+            "points": 15
+          },
+          {
+            "position": 4,
+            "team": "FC Arges",
+            "points": 15
+          },
+          {
+            "position": 5,
+            "team": "FC Botosani",
+            "points": 13
+          },
+          {
+            "position": 6,
+            "team": "FC Farul Constanta",
+            "points": 13
+          },
+          {
+            "position": 7,
+            "team": "UTA Arad",
+            "points": 13
+          },
+          {
+            "position": 8,
+            "team": "Universitatea Cluj",
+            "points": 12
+          },
+          {
+            "position": 9,
+            "team": "Unirea Slobozia",
+            "points": 11
+          },
+          {
+            "position": 10,
+            "team": "Otelul Galati",
+            "points": 10
+          },
+          {
+            "position": 11,
+            "team": "Hermannstadt",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Petrolul Ploiesti",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "FCSB",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "CFR Cluj-Napoca",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "Csíkszereda",
+            "points": 2
+          },
+          {
+            "position": 16,
+            "team": "Metaloglobus",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2599.png",
+        "logo_away": "https://media.api-sports.io/football/teams/6231.png",
+        "classement_home": 8,
+        "classement_away": 2,
+        "points_classement_home": 12,
+        "points_classement_away": 18,
+        "nom_classement_home": "Universitatea Cluj",
+        "nom_classement_away": "Rapid Bucuresti",
+        "country_fr": "Romania - Liga I",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre l'Universitatea Cluj et le Rapid Bucuresti. D'après les données fournies, l'Universitatea Cluj joue à domicile, tandis que le Rapid est en déplacement. \n\nTout d'abord, je regarde le classement. Le Rapid est 2ème avec 18 points, tandis que l'Universitatea Cluj est 8ème avec 12 points. Cela montre que le Rapid semble être une équipe plus forte en ce moment.\n\nEnsuite, je regarde les statistiques offensives et défensives. L'Universitatea Cluj marque en moyenne 1.20 buts par match et encaisse 1.00. Le Rapid, lui, marque 1.75 buts et ne prend que 0.75 en moyenne. Cela suggère que le Rapid a une attaque plus performante et une défense solide.\n\nJe regarde aussi la forme récente. L'Universitatea Cluj a une forme inégale avec 8 points sur 6 matchs, tandis que le Rapid a 14 points sur 6 matchs, avec une série de 4 victoires consécutives à l'extérieur. Cela indique que le Rapid est en bonne forme et performant à l'extérieur.\n\nEn ce qui concerne les matchs à domicile pour l'Universitatea Cluj, leur série récente est L-D-L-D, ce qui signifie qu'ils ont du mal à gagner à domicile. Les supporters pourraient être un facteur, mais leurs récentes performances ne sont pas très convaincantes.\n\nPour le Rapid, leur série à l'extérieur est W-D-W-W, ce qui montre une grande confiance et une capacité à performer loin de chez eux. De plus, ils ont marqué 7 buts à l'extérieur sur leurs 10 derniers matchs, ce qui est impressionnant.\n\nJe regarde aussi les 10 derniers matchs de chaque équipe. L'Universitatea Cluj a gagné 3 matchs, a fait 4 nuls et a perdu 3. Le Rapid a gagné 6 matchs, a fait 3 nuls et n'a pas perdu. Cela montre une supériorité du Rapid.\n\nEn termes de buts, l'Universitatea Cluj a marqué 3 buts à domicile en 4 matchs, tandis que le Rapid a marqué 7 buts à l'extérieur en 4 matchs. Cela suggère que le Rapid a une attaque plus efficace.\n\nJe pense aussi au contexte du championnat. Le Rapid est en course pour le titre, donc ils ont probablement l'ambition de gagner ce match pour maintenir leur position. L'Universitatea Cluj, étant plus bas au classement, pourrait être en train de se battre pour éviter la relégation, ce qui les motivera aussi, mais leurs performances récentes ne sont pas très fortes.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de comparer, mais d'après les statistiques générales, le Rapid semble avoir l'avantage.\n\nEn conclusion, bien que le match soit à domicile pour l'Universitatea Cluj, le Rapid semble être dans une meilleure forme, avec une attaque plus performante et une défense solide. Leur capacité à gagner à l'extérieur est un facteur clé. Donc, je pencherais pour une victoire du Rapid à l'extérieur.\n</think>\n\n**Prédiction : Victoire extérieur (Rapid)**\n\n**Justification :**\n\n1. **Classement et Forme Générale :** Le Rapid est 2ème avec 18 points, contre 8ème place pour l'Universitatea Cluj avec 12 points. Le Rapid affiche une forme récente impressionnante avec 14 points sur 6 matchs, tandis que l'Universitatea Cluj ne totalise que 8 points sur la même période.\n\n2. **Statistiques Offensives et Défensives :** Le Rapid marque en moyenne 1.75 buts par match et encaisse seulement 0.75, contre respectivement 1.20 et 1.00 pour l'Universitatea Cluj. Cela indique une attaque plus efficace et une défense solide pour le Rapid.\n\n3. **Performance à l'Extérieur :** Le Rapid a une série de 4 victoires consécutives à l'extérieur, marquant 7 buts en 4 matchs. L'Universitatea Cluj, quant à lui, a du mal à domicile avec une série L-D-L-D.\n\n4. **10 Derniers Matchs :** Le Rapid a gagné 6 de ses 10 derniers matchs, tandis que l'Universitatea Cluj n'en a gagné que 3, avec 4 nuls et 3 défaites.\n\n5. **Contexte du Championnat :** Le Rapid, en course pour le titre, a l'ambition de gagner pour maintenir sa position, tandis que l'Universitatea Cluj, plus bas au classement, peine à performer malgré la motivation.\n\nCes facteurs cumulés montrent que le Rapid a l'avantage et devrait s'imposer à l'extérieur."
+      },
+      {
+        "id": 7,
+        "HomeTeam": "Bayer Leverkusen",
+        "AwayTeam": "Eintracht Frankfurt",
+        "date": "12 septembre 2025 à 18:30:00 UTC",
+        "league": "Germany - Bundesliga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bayer Leverkusen": 2.33,
+            "Eintracht Frankfurt": 3.0,
+            "Draw": 3.96
+          },
+          "totals": {
+            "Over": 2.29,
+            "Under": 1.73
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 1.625,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 13,
+          "total_points": 10,
+          "serie_domicile": [
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 12,
+          "buts_ext_encaisses": 11,
+          "total_marques": 16,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 4.0,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 15,
+          "total_points_10": 15,
+          "total_points": 15,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 16,
+          "buts_ext_encaisses": 5,
+          "total_marques": 20,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 30",
+            "Werder Bremen",
+            "Bayer Leverkusen",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Bayer Leverkusen",
+            "TSG Hoffenheim",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "SG Sonnenhof Großaspach",
+            "Bayer Leverkusen",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Fri, Aug 8",
+            "Chelsea",
+            "Bayer Leverkusen",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Tue, Aug 5",
+            "Bayer Leverkusen",
+            "Pisa",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 1",
+            "Fortuna Sittard",
+            "Bayer Leverkusen",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "VfL Bochum",
+            "Bayer Leverkusen",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Jul 18",
+            "Flamengo U20",
+            "Bayer Leverkusen",
+            "",
+            "5 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "TSG Hoffenheim",
+            "Eintracht Frankfurt",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Eintracht Frankfurt",
+            "Werder Bremen",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "FV Engers 07",
+            "Eintracht Frankfurt",
+            "",
+            "0 - 5",
+            "FT"
+          ],
+          [
+            "Tue, Jul 29",
+            "Louisville City FC",
+            "Eintracht Frankfurt",
+            "",
+            "2 - 5",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "FSV Frankfurt",
+            "Eintracht Frankfurt",
+            "",
+            "2 - 3",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Bayer Leverkusen": {
+            "position": 12,
+            "points": 1
+          },
+          "Eintracht Frankfurt": {
+            "position": 2,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bayern Munich",
+            "points": 6
+          },
+          {
+            "position": 2,
+            "team": "Eintracht Frankfurt",
+            "points": 6
+          },
+          {
+            "position": 3,
+            "team": "FC Cologne",
+            "points": 6
+          },
+          {
+            "position": 4,
+            "team": "Borussia Dortmund",
+            "points": 4
+          },
+          {
+            "position": 5,
+            "team": "St. Pauli",
+            "points": 4
+          },
+          {
+            "position": 6,
+            "team": "VfL Wolfsburg",
+            "points": 4
+          },
+          {
+            "position": 7,
+            "team": "FC Augsburg",
+            "points": 3
+          },
+          {
+            "position": 8,
+            "team": "VfB Stuttgart",
+            "points": 3
+          },
+          {
+            "position": 9,
+            "team": "TSG Hoffenheim",
+            "points": 3
+          },
+          {
+            "position": 10,
+            "team": "1. FC Union Berlin",
+            "points": 3
+          },
+          {
+            "position": 11,
+            "team": "RB Leipzig",
+            "points": 3
+          },
+          {
+            "position": 12,
+            "team": "Bayer Leverkusen",
+            "points": 1
+          },
+          {
+            "position": 13,
+            "team": "Mainz",
+            "points": 1
+          },
+          {
+            "position": 14,
+            "team": "Borussia Mönchengladbach",
+            "points": 1
+          },
+          {
+            "position": 15,
+            "team": "Hamburg SV",
+            "points": 1
+          },
+          {
+            "position": 16,
+            "team": "Werder Bremen",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "1. FC Heidenheim 1846",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "SC Freiburg",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "711493",
+            "date": "Saturday, October 19, 2024",
+            "team1": "Bayer Leverkusen",
+            "score": "2 - 1",
+            "team2": "Eintracht Frankfurt",
+            "title": "Bayer Leverkusen VS Eintracht Frankfurt",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711493/eintracht-frankfurt-bayer-leverkusen",
+            "league": "ger.1",
+            "source": "Bundesliga"
+          },
+          {
+            "gameId": "711644",
+            "date": "Saturday, March 1, 2025",
+            "team1": "Eintracht Frankfurt",
+            "score": "1 - 4",
+            "team2": "Bayer Leverkusen",
+            "title": "Eintracht Frankfurt VS Bayer Leverkusen",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711644/bayer-leverkusen-eintracht-frankfurt",
+            "league": "ger.1",
+            "source": "Bundesliga"
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/168.png",
+        "logo_away": "https://media.api-sports.io/football/teams/169.png",
+        "classement_home": 12,
+        "classement_away": 2,
+        "points_classement_home": 1,
+        "points_classement_away": 6,
+        "nom_classement_home": "Bayer Leverkusen",
+        "nom_classement_away": "Eintracht Frankfurt",
+        "country_fr": "Germany - Bundesliga",
+        "analyse_ia": "<think>\nAlright, I need to analyze the upcoming match between Bayer Leverkusen and Eintracht Frankfurt on September 12, 2025. Let me start by looking at the provided statistics and recent performances of both teams.\n\nFirst, Bayer Leverkusen is playing at home. Their current form isn't great—they're 12th in the league with only 1 point. They've scored an average of 2 goals per game but have also conceded 1.62. Looking at their last 6 matches, they have a mixed record: D, L, W, L, W, W. It seems inconsistent, but they've managed to get 10 points from those games. At home, they've only played a couple of games, winning one and losing one, scoring 4 and conceding 2.\n\nOn the other hand, Eintracht Frankfurt is in 2nd place with 6 points. They have a strong offense, averaging 4 goals per game, and a solid defense, conceding only 1.2 per game. Their recent form is impressive with 5 straight wins in their last 6 matches, earning them 15 points. Away from home, they've won all their recent games, scoring 16 goals and letting in 5. That's a significant goal difference.\n\nLooking at the head-to-head record, in their last two meetings, Bayer Leverkusen won 2-1 at home, and Eintracht Frankfurt lost 1-4 away. This suggests that Bayer has had the upper hand historically, but Eintracht's recent form might change that.\n\nThe current league standings show Eintracht Frankfurt performing much better than Bayer Leverkusen. Bayer is struggling near the bottom, while Frankfurt is near the top. This could indicate that Frankfurt has the momentum and confidence going into the match.\n\nConsidering the betting odds, a win for Bayer is at 2.33, Frankfurt at 3.0, and a draw at 3.96. The over/under for 2.5 goals is 2.29 for over and 1.73 for under. Given that Frankfurt scores an average of 4 goals and Bayer concedes about 1.62, there might be a good chance of over 2.5 goals.\n\nHowever, looking at the recent matches, both teams have been scoring and conceding. Bayer's last 10 matches show a mix of high and low scores, while Frankfurt's recent games have been high-scoring, especially away. This makes me think that both teams might score, but considering Frankfurt's strong attack, they might edge the game.\n\nI'm a bit torn between predicting a win for Frankfurt or going with over 2.5 goals. Given their offensive strength and Bayer's defensive vulnerabilities, over 2.5 goals seems likely. But since the user wants one prediction, I'll go with the over 2.5 because it's a safer bet considering both teams' scoring tendencies.\n</think>\n\n**Prédiction : Plus de 2.5 buts**\n\n**Justification :**\n\n1. **Forme Offensive des Deux Équipes :**\n   - **Bayer Leverkusen** a marqué une moyenne de 2 buts par match et a concédé 1,62 buts. Bien qu'ils soient en difficulté au classement, leur attaque reste efficace.\n   - **Eintracht Frankfurt** affiche une attaque particulièrement prolifique avec une moyenne de 4 buts marqués par match. Lors de leurs 5 derniers matchs à l'extérieur, ils ont inscrit 16 buts, démontrant leur capacité à scorer régulièrement.\n\n2. **Tendances Récentes :**\n   - Les matchs récents de Bayer montrent une tendance à des scores élevés, avec des résultats comme 3-3 et 4-0.\n   - Frankfurt a maintenu une dynamique offensive constante, avec des scores sans cesse élevés, ce qui suggère une poursuite de cette tendance.\n\n3. **Confrontations Directes :**\n   - Dans leurs rencontres précédentes, les matchs ont été riches en buts, avec des scores comme 2-1 et 1-4. Cela indique que les confrontations entre ces deux équipes tendent à générer plusieurs buts.\n\n4. **Cotes et Marché :**\n   - Les cotes pour le total de buts (2.5) sont de 2.29 pour le \"Over\", ce qui reflète la confiance des bookmakers en un match prolifique.\n\nEn conclusion, compte tenu des forces offensives de Frankfurt et des lacunes défensives de Bayer, ainsi que des tendances récentes des deux équipes, il est raisonnable de s'attendre à un match avec plus de 2.5 buts."
+      },
+      {
+        "id": 8,
+        "HomeTeam": "Standard Liege",
+        "AwayTeam": "KV Mechelen",
+        "date": "12 septembre 2025 à 18:45:00 UTC",
+        "league": "Belgium - Jupiler Pro League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "KV Mechelen": 2.92,
+            "Standard Liege": 2.47,
+            "Draw": 3.34
+          },
+          "totals": {
+            "Over": 1.97,
+            "Under": 1.85
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.8333333333333334,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 4,
+          "total_marques": 5,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5714285714285714,
+          "moyenne_encaisses": 1.4285714285714286,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 11,
+          "total_points": 11,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 11,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 31",
+            "Oud-Heverlee Leuven",
+            "Standard Liege",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Standard Liege",
+            "Cercle Brugge KSV",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Union St.-Gilloise",
+            "Standard Liege",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Standard Liege",
+            "Racing Genk",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Standard Liege",
+            "Dender",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "RAAL La Louvière",
+            "Standard Liege",
+            "",
+            "0 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "KV Mechelen",
+            "RAAL La Louvière",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Antwerp",
+            "KV Mechelen",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "KV Mechelen",
+            "KAA Gent",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "KVC Westerlo",
+            "KV Mechelen",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 1",
+            "KV Mechelen",
+            "Club Brugge",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Zulte-Waregem",
+            "KV Mechelen",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Ajax Amsterdam",
+            "KV Mechelen",
+            "",
+            "3 - 2",
+            "AET"
+          ]
+        ],
+        "classement": {
+          "Standard Liege": {
+            "position": 9,
+            "points": 7
+          },
+          "KV Mechelen": {
+            "position": 3,
+            "points": 11
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Union St.-Gilloise",
+            "points": 14
+          },
+          {
+            "position": 2,
+            "team": "Sint-Truidense",
+            "points": 14
+          },
+          {
+            "position": 3,
+            "team": "KV Mechelen",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Club Brugge",
+            "points": 10
+          },
+          {
+            "position": 5,
+            "team": "Anderlecht",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Antwerp",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Cercle Brugge KSV",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Racing Genk",
+            "points": 7
+          },
+          {
+            "position": 9,
+            "team": "Standard Liege",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Oud-Heverlee Leuven",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "KVC Westerlo",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Royal Charleroi SC",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "KAA Gent",
+            "points": 5
+          },
+          {
+            "position": 14,
+            "team": "RAAL La Louvière",
+            "points": 4
+          },
+          {
+            "position": 15,
+            "team": "Zulte-Waregem",
+            "points": 4
+          },
+          {
+            "position": 16,
+            "team": "Dender",
+            "points": 2
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/733.png",
+        "logo_away": "https://media.api-sports.io/football/teams/266.png",
+        "classement_home": 9,
+        "classement_away": 3,
+        "points_classement_home": 7,
+        "points_classement_away": 11,
+        "nom_classement_home": "Standard Liege",
+        "nom_classement_away": "KV Mechelen",
+        "country_fr": "Belgium - Jupiler Pro League",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Standard Liège et KV Mechelen. Commençons par regarder les statistiques de chaque équipe.\n\nStandard Liège est 9ème avec 7 points. Ils ont une moyenne de 0.83 buts marqués par match et encaissent 1.50. À domicile, ils ont marqué 3 buts et en ont concédé 5. Leur forme récente est L-L-L-W-D-W, ce qui leur donne 7 points sur 6 matchs. Sur 10 matchs, c'est la même chose. Leur série à domicile est L-W-D.\n\nKV Mechelen est 3ème avec 11 points. Ils ont une moyenne de 1.57 buts marqués et 1.43 encaissés. En extérieur, ils ont marqué 5 et concédé 6. Leur forme est W-L-D-W-W-D, ce qui leur donne 11 points sur 6 matchs. Sur 10 matchs, c'est un peu plus mitigé avec un L en plus. Leur série à l'extérieur est L-W-D-L.\n\nEn regardant les 10 derniers matchs, Standard Liège a perdu contre Oud-Heverlee Leuven, Cercle Brugge et Union St.-Gilloise, mais a gagné contre Racing Genk et a fait match nul contre Dender. KV Mechelen a gagné contre RAAL La Louvière et Club Brugge, a perdu contre Antwerp, a fait nul contre KAA Gent et KVC Westerlo, et a perdu aux tirs au but contre Ajax.\n\nLe classement montre que KV Mechelen est mieux classé que Standard Liège. Les cotes sont Standard Liège à 2.47, KV Mechelen à 2.92 et nul à 3.34. Pour le total de buts, c'est 1.97 pour plus de 2.5 et 1.85 pour moins.\n\nJe dois maintenant évaluer les forces et faiblesses. KV Mechelen a une meilleure attaque et un classement plus élevé, mais joue à l'extérieur. Standard Liège a des difficultés à marquer et a une défense qui concède beaucoup. Cependant, ils ont une légère amélioration avec une victoire et un nul récents.\n\nLe contexte du championnat montre que KV Mechelen est en meilleure position et a une meilleure forme récente. Même si Standard Liège est à domicile, leur attaque est faible. KV Mechelen a une attaque plus puissante et pourrait profiter des faiblesses défensives de Standard.\n\nEn ce qui concerne les buts, KV Mechelen a une moyenne élevée de buts marqués, et Standard Liège a du mal à garder ses buts. Cela suggère que le match pourrait voir plusieurs buts.\n\nDonc, je pencherais pour \"Plus de 2.5 buts\" car les deux équipes ont tendance à encaisser et KV Mechelen a une attaque performante.\n</think>\n\n**Prédiction : Plus de 2.5 buts**\n\n**Justification :**\n\n1. **Statistiques Offensives et Défensives :**\n   - KV Mechelen a une moyenne élevée de buts marqués (1.57) et a marqué 5 buts en extérieur.\n   - Standard Liège, bien qu'à domicile, a une moyenne de buts marqués plus faible (0.83) mais a concédé 5 buts à domicile.\n\n2. **Forme Récente :**\n   - KV Mechelen montre une forme ascendante avec des victoires récentes malgré quelques défaites.\n   - Standard Liège, bien qu'il ait une légère amélioration, a du mal à maintenir une défense solide.\n\n3. **Cotes et Tendances :**\n   - Les cotes pour plus de 2.5 buts sont attractives (1.97), reflétant la probabilité d'un match offensif.\n   - Les deux équipes ont tendance à encaisser, ce qui augmente les chances de dépasser le total de 2.5 buts.\n\n4. **Contexte du Championnat :**\n   - KV Mechelen, mieux classé, a une attaque plus performante, ce qui pèse en faveur d'un match avec plusieurs buts.\n\nEn conclusion, compte tenu des tendances offensives et défensives, ainsi que du contexte récent, il est probable que le match dépasse les 2.5 buts."
+      },
+      {
+        "id": 9,
+        "HomeTeam": "Benfica",
+        "AwayTeam": "Santa Clara",
+        "date": "12 septembre 2025 à 19:15:00 UTC",
+        "league": "Portugal - Primeira Liga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Benfica": 1.27,
+            "Santa Clara": 12.0,
+            "Draw": 5.55
+          },
+          "totals": {
+            "Over": 1.77,
+            "Under": 2.05
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 16,
+          "total_points_10": 25,
+          "total_points": 16,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 1,
+          "total_marques": 16,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 12,
+          "total_points": 6,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 5,
+          "total_marques": 8,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 31",
+            "Alverca",
+            "Benfica",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Benfica",
+            "Fenerbahce",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Benfica",
+            "Tondela",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Fenerbahce",
+            "Benfica",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Estrela",
+            "Benfica",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 12",
+            "Benfica",
+            "Nice",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Nice",
+            "Benfica",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Benfica",
+            "Fenerbahce",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jun 28",
+            "Benfica",
+            "Chelsea",
+            "",
+            "1 - 4",
+            "AET"
+          ],
+          [
+            "Tue, Jun 24",
+            "Benfica",
+            "Bayern Munich",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 6",
+            "Estoril",
+            "Santa Clara",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Santa Clara",
+            "Estrela",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 28",
+            "Shamrock Rovers",
+            "Santa Clara",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 21",
+            "Santa Clara",
+            "Shamrock Rovers",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Santa Clara",
+            "Moreirense",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 14",
+            "Santa Clara",
+            "Larne",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "FC Famalicao",
+            "Santa Clara",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 7",
+            "Larne",
+            "Santa Clara",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Thu, Jul 31",
+            "Santa Clara",
+            "Varteks",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Jul 24",
+            "Varteks",
+            "Santa Clara",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Benfica": {
+            "position": 4,
+            "points": 9
+          },
+          "Santa Clara": {
+            "position": 10,
+            "points": 4
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Porto",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "FC Famalicao",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "Sporting CP",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Benfica",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Moreirense",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Braga",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "team": "Gil Vicente",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "Arouca",
+            "points": 5
+          },
+          {
+            "position": 9,
+            "team": "C.D. Nacional",
+            "points": 4
+          },
+          {
+            "position": 10,
+            "team": "Santa Clara",
+            "points": 4
+          },
+          {
+            "position": 11,
+            "team": "Guimaraes",
+            "points": 4
+          },
+          {
+            "position": 12,
+            "team": "Rio Ave",
+            "points": 3
+          },
+          {
+            "position": 13,
+            "team": "Estrela",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Casa Pia",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Estoril",
+            "points": 2
+          },
+          {
+            "position": 16,
+            "team": "Alverca",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "AVS",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Tondela",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/211.png",
+        "logo_away": "https://media.api-sports.io/football/teams/227.png",
+        "classement_home": 4,
+        "classement_away": 10,
+        "points_classement_home": 9,
+        "points_classement_away": 4,
+        "nom_classement_home": "Benfica",
+        "nom_classement_away": "Santa Clara",
+        "country_fr": "Portugal - Primeira Liga",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between Benfica and Santa Clara to make a prediction. Let me start by looking at the statistics provided.\n\nBenfica is playing at home and is ranked 4th with 9 points. They have a strong home record, winning their last five matches in a row. Their average goals scored is 1.60, and they concede 0.70 on average. Looking at their recent 10 matches, they've won 8 out of 10, which shows they're in great form.\n\nSanta Clara, on the other hand, is 10th with only 4 points. They have a mixed record away, with only one win in their last five. Their average goals are lower, both scored and conceded, at 0.80 each. Their recent form isn't great, with only one win in the last six matches.\n\nBenfica's home form is impressive, and they've been consistent. Santa Clara struggles away, especially against stronger teams. Benfica's attack is solid, and their defense is tight, which makes them likely to control the game.\n\nI also checked the head-to-head stats, but there aren't any recent ones provided. However, considering their current forms and league positions, Benfica seems to have the upper hand.\n\nLooking at the odds, Benfica is a clear favorite at 1.27, which reflects their strong position. The over/under for 2.5 goals is set at 1.77 for over, but Benfica's average is around 1.6 goals per game, which might not always go over.\n\nConsidering all this, I think Benfica is likely to win this match. They have the home advantage, better form, and stronger stats. Santa Clara might struggle to score against Benfica's defense, so a victory for Benfica seems the most probable outcome.\n</think>\n\n**Prédiction : Victoire domicile (Benfica)**\n\n**Justification :**\n\n1. **Forme Récente :** Benfica est en excellente forme avec 5 victoires consécutives à domicile et 8 victoires sur ses 10 derniers matchs. Santa Clara, en revanche, ne compte qu'une seule victoire lors de ses 6 derniers matchs.\n\n2. **Statistiques Offensives et Défensives :** Benfica marque en moyenne 1.60 but par match et encaisse seulement 0.70, tandis que Santa Clara marque 0.80 et encaisse 0.80. La solidité défensive de Benfica et son efficacité offensive sont des atouts majeurs.\n\n3. **Avantage Domicile :** Benfica a une forte tradition de performances à domicile, avec une série de 5 victoires consécutives. Santa Clara, qui ne s'est imposée qu'une fois à l'extérieur lors de ses 5 derniers déplacements, pourrait rencontrer des difficultés.\n\n4. **Contexte du Championnat :** Benfica, 4ème avec 9 points, cherche à grimper au classement, tandis que Santa Clara, 10ème avec 4 points, lutte pour s'éloigner de la zone de relégation. La motivation de Benfica à performer à domicile pour renforcer sa position en haut du tableau est élevée.\n\n5. **Cotes et Marché des Buts :** Les cotes de 1X2 (1.27 pour Benfica) reflètent son statut de grand favori. Bien que le total 2.5 buts soit proposé à 1.77, la tendance de Benfica à marquer autour de 1.60 buts par match suggère que le match pourrait rester en dessous, mais l'attaque de Benfica devrait suffire pour s'imposer.\n\nEn conclusion, compte tenu de la forme récente, des statistiques offensives et défensives, de l'avantage du terrain, et du contexte du championnat, une victoire de Benfica semble la plus probable."
+      }
+    ]
+  }
+}
