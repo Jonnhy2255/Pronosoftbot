@@ -1,0 +1,1774 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-15 02:26:30",
+    "date_matchs": "2025-09-15",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 5,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 5,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Petrolul Ploiesti",
+        "AwayTeam": "Dinamo Bucuresti",
+        "date": "15 septembre 2025 à 18:00:00 UTC",
+        "league": "Romania - Liga I",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.875,
+          "moyenne_encaisses": 1.125,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 6,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 5,
+          "total_marques": 7,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 15,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 4,
+          "total_marques": 12,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          [
+            "Mon, 1 Sep",
+            "FC Farul Constanta",
+            "Petrolul Ploiesti",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "CSU Craiova",
+            "Petrolul Ploiesti",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 16 Aug",
+            "Petrolul Ploiesti",
+            "Hermannstadt",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "Universitatea Cluj",
+            "Petrolul Ploiesti",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Petrolul Ploiesti",
+            "UTA Arad",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "Metaloglobus",
+            "Petrolul Ploiesti",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Petrolul Ploiesti",
+            "FCSB",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Otelul Galati",
+            "Petrolul Ploiesti",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, 30 Aug",
+            "Dinamo Bucuresti",
+            "Hermannstadt",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Universitatea Cluj",
+            "Dinamo Bucuresti",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Dinamo Bucuresti",
+            "UTA Arad",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Metaloglobus",
+            "Dinamo Bucuresti",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 2 Aug",
+            "Dinamo Bucuresti",
+            "FCSB",
+            "",
+            "4 - 3",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Otelul Galati",
+            "Dinamo Bucuresti",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Mon, 21 Jul",
+            "Dinamo Bucuresti",
+            "FC Botosani",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 14 Jul",
+            "Csíkszereda",
+            "Dinamo Bucuresti",
+            "",
+            "2 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Petrolul Ploiesti": {
+            "position": 14,
+            "points": 6
+          },
+          "Dinamo Bucuresti": {
+            "position": 5,
+            "points": 15
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "CSU Craiova",
+            "points": 23
+          },
+          {
+            "position": 2,
+            "team": "Rapid Bucuresti",
+            "points": 19
+          },
+          {
+            "position": 3,
+            "team": "FC Botosani",
+            "points": 16
+          },
+          {
+            "position": 4,
+            "team": "FC Arges",
+            "points": 16
+          },
+          {
+            "position": 5,
+            "team": "Dinamo Bucuresti",
+            "points": 15
+          },
+          {
+            "position": 6,
+            "team": "UTA Arad",
+            "points": 14
+          },
+          {
+            "position": 7,
+            "team": "Universitatea Cluj",
+            "points": 13
+          },
+          {
+            "position": 8,
+            "team": "FC Farul Constanta",
+            "points": 13
+          },
+          {
+            "position": 9,
+            "team": "Unirea Slobozia",
+            "points": 11
+          },
+          {
+            "position": 10,
+            "team": "Otelul Galati",
+            "points": 10
+          },
+          {
+            "position": 11,
+            "team": "Hermannstadt",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "FCSB",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "CFR Cluj-Napoca",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Petrolul Ploiesti",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "Csíkszereda",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Metaloglobus",
+            "points": 2
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2598.png",
+        "logo_away": "https://media.api-sports.io/football/teams/635.png",
+        "classement_home": 14,
+        "classement_away": 5,
+        "points_classement_home": 6,
+        "points_classement_away": 15,
+        "nom_classement_home": "Petrolul Ploiesti",
+        "nom_classement_away": "Dinamo Bucuresti",
+        "country_fr": "Romania - Liga I",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Petrolul Ploiesti et Dinamo Bucuresti. D'abord, je regarde les statistiques de base. Petrolul est 14ème avec 6 points, tandis que Dinamo est 5ème avec 15 points. Ça montre que Dinamo est mieux classée.\n\nEn regardant les moyennes de buts, Petrolul marque en moyenne 0.88 buts et encaisse 1.12. Dinamo, elle, marque 1.5 et encaisse 1. Alors Dinamo a une attaque plus performante et une défense un peu meilleure.\n\nLa forme récente de Petrolul est inégale : ils ont perdu 5 de leurs 6 derniers matchs, avec seulement 5 points. À domicile, ils ont perdu deux fois et ont du mal à marquer, ne trouvant le filet qu'à 2 reprises. En revanche, Dinamo a gagné 4 de ses 6 derniers matchs, avec 13 points. Même si leur dernière sortie est une défaite, leur forme générale est ascendante.\n\nEn termes de buts, Petrolul a du mal à marquer, tandis que Dinamo a marqué 5 buts en 4 matchs extérieurs. Cela suggère que Dinamo a le potentiel offensif pour créer des occasions.\n\nLe classement de la ligue montre que Dinamo est en position européenne, donc ils ont probablement une motivation supplémentaire pour gagner. Petrolul, lui, lutte pour éviter la relégation, ce qui peut les motiver, mais leurs performances récentes ne sont pas encourageantes.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de comparer, mais les statistiques générales penchent en faveur de Dinamo.\n\nEn conclusion, bien que Petrolul joue à domicile, Dinamo semble avoir l'avantage en termes de forme, d'attaque et de défense. Donc, je penche pour une victoire de Dinamo Bucuresti.\n</think>\n\n**Prédiction : Victoire extérieur (Dinamo Bucuresti)**\n\n**Justification :**\n\n1. **Statistiques Générales :**\n   - Dinamo Bucuresti occupe la 5ᵉ place avec 15 points, contre la 14ᵉ place de Petrolul Ploiesti avec seulement 6 points. Cela reflète une meilleure performance globale de Dinamo dans le championnat.\n   - Dinamo a une moyenne de buts marqués supérieure (1.50 contre 0.88) et une moyenne de buts encaissés inférieure (1.00 contre 1.12), indiquant une attaque plus efficace et une défense plus solide.\n\n2. **Forme Récente :**\n   - Dinamo Bucuresti affiche une forme récente impressionnante avec 4 victoires en 6 matchs, totalisant 13 points. Petrolul Ploiesti, en revanche, n'a gagné qu'une seule fois en 6 matchs, avec seulement 5 points.\n   - À domicile, Petrolul a perdu deux de ses trois derniers matchs et n'a marqué que 2 buts, tandis que Dinamo a gagné trois de ses quatre derniers matchs à l'extérieur, marquant 5 buts.\n\n3. **Contexte du Championnat :**\n   - Dinamo Bucuresti, en milieu de tableau, cherche à maintenir sa position pour une possible qualification européenne. Petrolul Ploiesti, proche de la zone de relégation, doit lutter pour se maintenir, ce qui peut entraîner un jeu plus défensif et moins offensif.\n\n4. **Analyse des Buts :**\n   - Dinamo a marqué 5 buts en 4 matchs extérieurs, montrant son efficacité offensive à l'extérieur. Petrolul a du mal à marquer, ne trouvant le filet qu'à 2 reprises en 3 matchs à domicile.\n\n5. **Confrontations Directes :**\n   - Bien qu'il n'y ait pas de confrontations directes récentes, les performances globales et récentes de Dinamo suggèrent un avantage significatif.\n\n**Conclusion :**\nCompte tenu de la supériorité offensive et défensive de Dinamo, ainsi que de sa meilleure forme récente, il est raisonnable de prédire une victoire de l'équipe extérieure, Dinamo Bucuresti."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Como",
+        "AwayTeam": "Genoa",
+        "date": "15 septembre 2025 à 18:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Como": 1.71,
+            "Genoa": 5.87,
+            "Draw": 3.83
+          },
+          "totals": {
+            "Over": 2.23,
+            "Under": 1.76
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6666666666666667,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 10,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 8,
+          "total_marques": 10,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.3333333333333333,
+          "form_6": [
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_exterieur": [],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 0,
+          "buts_ext_encaisses": 0,
+          "total_marques": 3,
+          "total_encaisses": 1
+        },
+        "last_matches_home": [
+          [
+            "Sat, Aug 30",
+            "Bologna",
+            "Como",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Como",
+            "Lazio",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Como",
+            "Suditrol",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Barcelona",
+            "Como",
+            "",
+            "5 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Real Betis",
+            "Como",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Como",
+            "Ajax Amsterdam",
+            "",
+            "3 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Aug 31",
+            "Genoa",
+            "Juventus",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Genoa",
+            "Lecce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Genoa",
+            "Vicenza",
+            "",
+            "3 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Como": {
+            "position": 10,
+            "points": 3
+          },
+          "Genoa": {
+            "position": 16,
+            "points": 1
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Napoli",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Juventus",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Udinese",
+            "points": 7
+          },
+          {
+            "position": 4,
+            "team": "Cremonese",
+            "points": 6
+          },
+          {
+            "position": 5,
+            "team": "AC Milan",
+            "points": 6
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 6
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 5
+          },
+          {
+            "position": 8,
+            "team": "Cagliari",
+            "points": 4
+          },
+          {
+            "position": 9,
+            "team": "Torino",
+            "points": 4
+          },
+          {
+            "position": 10,
+            "team": "Como",
+            "points": 3
+          },
+          {
+            "position": 11,
+            "team": "Internazionale",
+            "points": 3
+          },
+          {
+            "position": 12,
+            "team": "Lazio",
+            "points": 3
+          },
+          {
+            "position": 13,
+            "team": "Bologna",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Sassuolo",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Fiorentina",
+            "points": 2
+          },
+          {
+            "position": 16,
+            "team": "Genoa",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "Hellas Verona",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Pisa",
+            "points": 1
+          },
+          {
+            "position": 19,
+            "team": "Parma",
+            "points": 1
+          },
+          {
+            "position": 20,
+            "team": "Lecce",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/895.png",
+        "logo_away": "https://media.api-sports.io/football/teams/495.png",
+        "classement_home": 10,
+        "classement_away": 16,
+        "points_classement_home": 3,
+        "points_classement_away": 1,
+        "nom_classement_home": "Como",
+        "nom_classement_away": "Genoa",
+        "country_fr": "Italy - Serie A",
+        "analyse_ia": "<think>\nAlright, let's tackle this prediction for the Como vs. Genoa match. First, I'll start by looking at the statistics provided. Como is playing at home, and their recent form looks pretty solid. They've won three of their last six matches and have a strong home record, scoring 8 goals and only conceding 1. That's impressive. Their average of 1.67 goals scored per game suggests they have a decent attacking force.\n\nOn the other hand, Genoa is struggling a bit. They're sitting at 16th with only 1 point, and their away form isn't great. They've not scored any goals in their last three away games, which is a big concern. Their average of 1 goal per game overall isn't terrible, but if they can't score away, that's a problem.\n\nLooking at the head-to-head, there's no recent data, so I'll have to rely on current form. Como's recent matches show they can handle both strong and weaker teams, like beating Lazio and Ajax, which indicates they're in good shape. Genoa's recent games include a loss to Juventus and a draw with Lecce, which doesn't inspire much confidence.\n\nThe odds provided by 1xBet have Como as clear favorites, which makes sense given their home advantage and better form. The over/under is set at 2.5, and considering Como's scoring rate, there's a good chance they might hit that, but Genoa's lack of scoring might keep the total lower.\n\nI'm also considering the BTTS (Both Teams To Score) option. Since Genoa hasn't scored away, it's less likely both teams will score. So, BTTS non might be a safer bet.\n\nPutting it all together, Como seems likely to win this one, especially at home. Their strong defense and decent attack should be enough to take down Genoa, who are struggling offensively on the road. So, I'm leaning towards a \"Victoire domicile\" prediction.\n</think>\n\n**Prédiction : Victoire domicile (Como)**\n\n**Justification :**\n\n1. **Forme Récente :**\n   - Como affiche une forme ascendante avec 3 victoires en 6 matchs récents, dont une série de 3 victoires consécutives à domicile. \n   - Genoa, en revanche, n'a gagné qu'un seul de ses 6 derniers matchs et semble en difficulté, particulièrement à l'extérieur.\n\n2. **Statistiques Offensives et Défensives :**\n   - Como a marqué 8 buts en 3 matchs à domicile et n'a concédé que 1 but, montrant une solide défense et une attaque efficace.\n   - Genoa n'a pas marqué un seul but à l'extérieur lors de ses 3 derniers déplacements, ce qui constitue un problème majeur pour leur capacité à scorer.\n\n3. **Contexte du Championnat :**\n   - Como occupe la 10e place avec 3 points, tandis que Genoa est 16e avec seulement 1 point. \n   - Cette différence de classement reflète un écart de performance entre les deux équipes.\n\n4. **Cotes et Marché :**\n   - Les cotes de 1xBet favorisent clairement Como, avec un odds de 1.71 pour une victoire à domicile, ce qui est cohérent avec les statistiques et la forme actuelle.\n\n5. **BTTS (Both Teams To Score) :**\n   - Étant donné que Genoa n'a pas marqué à l'extérieur, il est peu probable que les deux équipes marquent dans ce match.\n\n**Conclusion :**\nComo semble en meilleure forme, avec une forte dominance à domicile et une attaque performante. Genoa, en revanche, peine à marquer à l'extérieur et lutte pour maintenir sa tête hors de l'eau. Une victoire de Como est donc la prédiction la plus probable pour ce match."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Espanyol",
+        "AwayTeam": "Mallorca",
+        "date": "15 septembre 2025 à 19:00:00 UTC",
+        "league": "Spain - La Liga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Espanyol": 2.3,
+            "Mallorca": 3.56,
+            "Draw": 3.34
+          },
+          "totals": {
+            "Over": 2.35,
+            "Under": 1.69
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 13,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 2,
+          "total_marques": 7,
+          "total_encaisses": 3
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8333333333333334,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 2,
+          "total_marques": 5,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          [
+            "Sun, Aug 31",
+            "Espanyol",
+            "Osasuna",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Real Sociedad",
+            "Espanyol",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Espanyol",
+            "Atlético Madrid",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "1. FC Union Berlin",
+            "Espanyol",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "VfL Wolfsburg",
+            "Espanyol",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Aug 30",
+            "Real Madrid",
+            "Mallorca",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Mallorca",
+            "Celta Vigo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Mallorca",
+            "Barcelona",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Thu, Jul 31",
+            "Mallorca",
+            "Parma",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "Mallorca",
+            "Lyon",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Mallorca",
+            "Shabab Al-Ahli",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Espanyol": {
+            "position": 6,
+            "points": 7
+          },
+          "Mallorca": {
+            "position": 19,
+            "points": 1
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Real Madrid",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Barcelona",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "Getafe",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Athletic Club",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Villarreal",
+            "points": 7
+          },
+          {
+            "position": 6,
+            "team": "Espanyol",
+            "points": 7
+          },
+          {
+            "position": 7,
+            "team": "Alavés",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "Elche",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Osasuna",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Real Betis",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Atlético Madrid",
+            "points": 5
+          },
+          {
+            "position": 12,
+            "team": "Sevilla",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Rayo Vallecano",
+            "points": 4
+          },
+          {
+            "position": 14,
+            "team": "Celta Vigo",
+            "points": 4
+          },
+          {
+            "position": 15,
+            "team": "Valencia",
+            "points": 4
+          },
+          {
+            "position": 16,
+            "team": "Real Oviedo",
+            "points": 3
+          },
+          {
+            "position": 17,
+            "team": "Real Sociedad",
+            "points": 2
+          },
+          {
+            "position": 18,
+            "team": "Levante",
+            "points": 1
+          },
+          {
+            "position": 19,
+            "team": "Mallorca",
+            "points": 1
+          },
+          {
+            "position": 20,
+            "team": "Girona",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704749",
+            "date": "Saturday, October 5, 2024",
+            "team1": "Espanyol",
+            "score": "2 - 1",
+            "team2": "Mallorca",
+            "title": "Espanyol VS Mallorca",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704749/mallorca-espanyol",
+            "source": "La Liga"
+          },
+          {
+            "gameId": "704934",
+            "date": "Saturday, March 15, 2025",
+            "team1": "Mallorca",
+            "score": "2 - 1",
+            "team2": "Espanyol",
+            "title": "Mallorca VS Espanyol",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704934/espanyol-mallorca",
+            "source": "La Liga"
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/540.png",
+        "logo_away": "https://media.api-sports.io/football/teams/798.png",
+        "classement_home": 6,
+        "classement_away": 19,
+        "points_classement_home": 7,
+        "points_classement_away": 1,
+        "nom_classement_home": "Espanyol",
+        "nom_classement_away": "Mallorca",
+        "country_fr": "Spain - La Liga",
+        "analyse_ia": "<think>\nAlright, I need to analyze the upcoming match between Espanyol and Mallorca on September 15, 2025. Let me start by looking at the data provided.\n\nFirst, Espanyol is playing at home. They're ranked 6th with 7 points, which is pretty decent. Their average goals scored are 1.40 and they concede only 0.60 on average. That shows they have a solid defense. Looking at their recent form, they've won four out of their last five matches and have two consecutive home wins. They've scored 3 goals and let in just 1 in their last two home games. Their recent matches include wins against Osasuna and Atlético Madrid, which are strong teams, so that's impressive.\n\nNow, Mallorca is at the bottom, 19th with only 1 point. They score 0.83 goals per game and concede 2.00, which isn't great. Their recent form is shaky with mostly losses and a few draws. They've only won one of their last six matches. In their last away game, they lost 2-1 to Real Madrid, which isn't too bad, but overall, their away form is weak. They've only scored 1 goal in their last two away games and let in 2.\n\nLooking at the head-to-head, Espanyol won 2-1 in their last meeting, while Mallorca won 2-1 earlier this year. So, it's been competitive between them.\n\nConsidering the odds, Espanyol is favored at 2.3, which makes sense given their form and home advantage. The over/under is 2.5, with over at 2.35 and under at 1.69. Given Espanyol's low goals conceded and Mallorca's low scoring, under might be a good bet.\n\nEspanyol's recent matches show they can win against tough teams, and their defense is solid. Mallorca struggles to score and defend, especially away. So, I think Espanyol will win this match. They have the home advantage, better form, and a stronger defense. Mallorca might not score much, so under 2.5 goals is also likely, but the main prediction is a home win.\n</think>\n\n**Prédiction : Victoire domicile (Espanyol)**\n\n**Justification :**\n\n1. **Forme récente et statistiques :**\n   - Espanyol est en excellente forme avec 4 victoires en 5 matchs, dont 2 victoires consécutives à domicile. Ils ont marqué 3 buts et n'en ont concédé que 1 à domicile.\n   - Mallorca, en revanche, ne s'est imposé qu'une fois en 6 matchs et a perdu son dernier match à l'extérieur. Ils ont du mal à marquer, avec seulement 1 but inscrit à l'extérieur.\n\n2. **Contexte du championnat :**\n   - Espanyol occupe une confortable 6e place avec 7 points, tandis que Mallorca lutte en 19e position avec seulement 1 point. La pression est plus forte pour Mallorca, qui doit grimper au classement.\n\n3. **Confrontations directes :**\n   - Dans leurs deux dernières rencontres, Espanyol a remporté un match et Mallorca l'autre, mais Espanyol a gagné la dernière confrontation à domicile.\n\n4. **Cotes et tendances :**\n   - Les cotes favorisent Espanyol (2.3) pour une victoire, ce qui reflète leur supériorité statistique et leur forme actuelle.\n\nEn conclusion, Espanyol devrait s'imposer grâce à sa solide défense et son efficacité offensive, profitant de l'avantage du terrain contre un Mallorca en difficulté."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Ferroviária",
+        "AwayTeam": "Novorizontino",
+        "date": "15 septembre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 13,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 8,
+          "total_marques": 12,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 10,
+          "total_points": 3,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 9,
+          "total_marques": 9,
+          "total_encaisses": 14
+        },
+        "last_matches_home": [
+          [
+            "Sat, 6 Sep",
+            "Coritiba",
+            "Ferroviária",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Tue, 2 Sep",
+            "Ferroviária",
+            "Cuiabá",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Ferroviária",
+            "Volta Redonda",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Atlético Goianiense",
+            "Ferroviária",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Ferroviária",
+            "Amazonas",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Remo",
+            "Ferroviária",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, 26 Jul",
+            "Ferroviária",
+            "Operario PR",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Athletico Paranaense",
+            "Ferroviária",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Ferroviária",
+            "Athletic",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 13 Jul",
+            "Criciúma",
+            "Ferroviária",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Mon, 8 Sep",
+            "Novorizontino",
+            "Atlético Goianiense",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 31 Aug",
+            "Athletico Paranaense",
+            "Novorizontino",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Criciúma",
+            "Novorizontino",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Novorizontino",
+            "Coritiba",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Volta Redonda",
+            "Novorizontino",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Novorizontino",
+            "Avaí",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "CRB",
+            "Novorizontino",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Novorizontino",
+            "Goiás",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "Remo",
+            "Novorizontino",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 12 Jul",
+            "Novorizontino",
+            "América Mineiro",
+            "",
+            "3 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Ferroviária": {
+            "position": 15,
+            "points": 31
+          },
+          "Novorizontino": {
+            "position": 7,
+            "points": 37
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 47
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 45
+          },
+          {
+            "position": 3,
+            "team": "Criciúma",
+            "points": 43
+          },
+          {
+            "position": 4,
+            "team": "Chapecoense",
+            "points": 41
+          },
+          {
+            "position": 5,
+            "team": "Remo",
+            "points": 39
+          },
+          {
+            "position": 6,
+            "team": "Cuiabá",
+            "points": 38
+          },
+          {
+            "position": 7,
+            "team": "Novorizontino",
+            "points": 37
+          },
+          {
+            "position": 8,
+            "team": "Athletico Paranaense",
+            "points": 36
+          },
+          {
+            "position": 9,
+            "team": "Vila Nova",
+            "points": 36
+          },
+          {
+            "position": 10,
+            "team": "Avaí",
+            "points": 36
+          },
+          {
+            "position": 11,
+            "team": "Operario PR",
+            "points": 35
+          },
+          {
+            "position": 12,
+            "team": "CRB",
+            "points": 34
+          },
+          {
+            "position": 13,
+            "team": "Athletic",
+            "points": 32
+          },
+          {
+            "position": 14,
+            "team": "Atlético Goianiense",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "Ferroviária",
+            "points": 31
+          },
+          {
+            "position": 16,
+            "team": "Botafogo-SP",
+            "points": 28
+          },
+          {
+            "position": 17,
+            "team": "América Mineiro",
+            "points": 27
+          },
+          {
+            "position": 18,
+            "team": "Volta Redonda",
+            "points": 27
+          },
+          {
+            "position": 19,
+            "team": "Amazonas",
+            "points": 24
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 22
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/7826.png",
+        "logo_away": "https://media.api-sports.io/football/teams/7834.png",
+        "classement_home": 15,
+        "classement_away": 7,
+        "points_classement_home": 31,
+        "points_classement_away": 37,
+        "nom_classement_home": "Ferroviária",
+        "nom_classement_away": "Novorizontino",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "**Analyse du match : Ferroviária vs Novorizontino**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Ferroviária (Domicile) :**\n  - **Points forts :** \n    - Meilleure moyenne de buts marqués (1.20 vs 0.90 pour Novorizontino).\n    - Forme récente en hausse avec 4 victoires sur les 6 derniers matchs.\n    - Bonne résistance à domicile avec une moyenne de buts encaissés de 1.30.\n  - **Points faibles :**\n    - Position au classement (15e) laissant à désirer.\n    - Forme sur 10 matchs mitigée (13 points sur 30).\n\n- **Novorizontino (Extérieur) :**\n  - **Points forts :**\n    - Meilleure position au classement (7e vs 15e pour Ferroviária).\n    - Capacité à marquer des buts à l'extérieur malgré une moyenne basse.\n  - **Points faibles :**\n    - Forme récente décevante avec seulement 3 points sur les 6 derniers matchs.\n    - Difficultés à l'extérieur avec une moyenne de buts encaissés élevée (1.40).\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Ferroviária semble plus performante à domicile avec une moyenne de buts marqués supérieure et une meilleure résistance défensive.\n- Novorizontino, malgré son classement plus élevé, a des difficultés à l'extérieur, avec une moyenne de buts encaissés plus élevée et une forme récente inquiétante.\n\n**3. Analyse des formes récentes :**\n\n- **Ferroviária :** \n  - Forme sur 6 matchs : 11 points sur 18 (4 victoires, 2 défaites).\n  - Forme sur 10 matchs : 13 points sur 30 (4 victoires, 3 nuls, 3 défaites).\n  - Série récente à domicile : D-D-W-D-L (2 victoires, 2 nuls, 1 défaite).\n  - Buts marqués à domicile : 5 en 5 matchs (moyenne de 1 but par match).\n  - Buts encaissés à domicile : 5 en 5 matchs (moyenne de 1 but par match).\n\n- **Novorizontino :**\n  - Forme sur 6 matchs : 3 points sur 18 (0 victoires, 3 nuls, 3 défaites).\n  - Forme sur 10 matchs : 10 points sur 30 (2 victoires, 4 nuls, 4 défaites).\n  - Série récente à l'extérieur : L-L-D-L-D (0 victoires, 2 nuls, 3 défaites).\n  - Buts marqués à l'extérieur : 2 en 5 matchs (moyenne de 0.4 but par match).\n  - Buts encaissés à l'extérieur : 9 en 5 matchs (moyenne de 1.8 but par match).\n\n**4. Contexte du championnat :**\n\n- Ferroviária est en 15e position avec 31 points, lutte pour éviter la relégation.\n- Novorizontino est en 7e position avec 37 points, dans la course pour les places supérieures.\n- Les deux équipes ont des objectifs différents : Ferroviária cherche à se maintenir, Novorizontino à grimper au classement.\n\n**5. Confrontations directes :**\n\n- Aucune confrontation H2H disponible pour cette saison.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote disponible pour ce match.\n\n**7. Prédiction finale :**\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n- **Forme récente :** Ferroviária est en meilleure forme avec 4 victoires sur les 6 derniers matchs, tandis que Novorizontino accuse un passage à vide avec seulement 3 points sur les 6 derniers matchs.\n- **Performance à domicile/extérieur :** Ferroviária a une meilleure moyenne de buts marqués et encaissés à domicile, tandis que Novorizontino a des difficultés à l'extérieur, avec une moyenne élevée de buts encaissés.\n- **Contexte du championnat :** Ferroviária a besoin de points pour se maintenir, ce qui pourrait la motiver à prendre au moins un point. Novorizontino, bien que mieux classée, a du mal à l'extérieur et pourrait être tentée de jouer de manière prudente.\n- **Buts marqués/encaissés :** Les deux équipes ont des statistiques de buts marqués/encaissés qui suggèrent un match serré, avec une moyenne totale de buts par match inférieure à 2.5.\n- **BTTS :** Bien que Ferroviária ait une moyenne de buts marqués à domicile de 1.20 et Novorizontino une moyenne de buts marqués à l'extérieur de 0.90, il est probable que les deux équipes marquent, mais le match pourrait être serré.\n\nEn conclusion, compte tenu de la forme récente, des performances à domicile et à l'extérieur, et du contexte du championnat, un match nul semble être la issue la plus probable."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Bahia",
+        "AwayTeam": "Cruzeiro",
+        "date": "15 septembre 2025 à 23:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bahia": 2.52,
+            "Cruzeiro": 3.08,
+            "Draw": 3.12
+          },
+          "totals": {
+            "Over": 2.34,
+            "Under": 1.63
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 20,
+          "total_points": 12,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 9,
+          "total_marques": 19,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 20,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 1,
+          "total_marques": 14,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Wed, Sep 10",
+            "Fluminense",
+            "Bahia",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Sep 6",
+            "Bahia",
+            "Confiança",
+            "",
+            "5 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Sep 3",
+            "Confiança",
+            "Bahia",
+            "",
+            "1 - 4",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Mirassol",
+            "Bahia",
+            "",
+            "5 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 28",
+            "Bahia",
+            "Fluminense",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Bahia",
+            "Santos",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Bahia",
+            "Ceará",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Corinthians",
+            "Bahia",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Bahia",
+            "Fluminense",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Retró",
+            "Bahia",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Thu, Sep 11",
+            "Cruzeiro",
+            "Atlético-MG",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Cruzeiro",
+            "São Paulo",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Atlético-MG",
+            "Cruzeiro",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Cruzeiro",
+            "Internacional",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Mirassol",
+            "Cruzeiro",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Cruzeiro",
+            "Santos",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Thu, Aug 7",
+            "CRB",
+            "Cruzeiro",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "Botafogo",
+            "Cruzeiro",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "Cruzeiro",
+            "CRB",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Cruzeiro",
+            "Ceará",
+            "",
+            "1 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Bahia": {
+            "position": 5,
+            "points": 36
+          },
+          "Cruzeiro": {
+            "position": 3,
+            "points": 44
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 50
+          },
+          {
+            "position": 2,
+            "team": "Palmeiras",
+            "points": 46
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 44
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 38
+          },
+          {
+            "position": 5,
+            "team": "Bahia",
+            "points": 36
+          },
+          {
+            "position": 6,
+            "team": "Botafogo",
+            "points": 35
+          },
+          {
+            "position": 7,
+            "team": "São Paulo",
+            "points": 35
+          },
+          {
+            "position": 8,
+            "team": "Red Bull Bragantino",
+            "points": 31
+          },
+          {
+            "position": 9,
+            "team": "Corinthians",
+            "points": 29
+          },
+          {
+            "position": 10,
+            "team": "Fluminense",
+            "points": 28
+          },
+          {
+            "position": 11,
+            "team": "Ceará",
+            "points": 27
+          },
+          {
+            "position": 12,
+            "team": "Internacional",
+            "points": 27
+          },
+          {
+            "position": 13,
+            "team": "Atlético-MG",
+            "points": 25
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 25
+          },
+          {
+            "position": 15,
+            "team": "Vasco da Gama",
+            "points": 23
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 23
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 22
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 21
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 18
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/118.png",
+        "logo_away": "https://media.api-sports.io/football/teams/135.png",
+        "classement_home": 5,
+        "classement_away": 3,
+        "points_classement_home": 36,
+        "points_classement_away": 44,
+        "nom_classement_home": "Bahia",
+        "nom_classement_away": "Cruzeiro",
+        "country_fr": "Brazil - Serie A",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match entre Bahia et Cruzeiro en Serie A brésilienne. Commençons par regarder les statistiques de chaque équipe.\n\nBahia joue à domicile. Ils sont 5èmes avec 36 points. Leur moyenne de buts marqués est de 1.90 et ils encaissent en moyenne 1.20 but par match. Ces stats montrent qu'ils ont une attaque performante et une défense solide. Regardons leur forme récente : sur les 6 derniers matchs, ils ont 4 victoires, une défaite et un nul. Sur 10 matchs, c'est 6 victoires, 3 nuls et une défaite. À domicile, ils ont une série de 4 victoires consécutives et un nul. Ils ont marqué 12 buts et n'en ont concédé que 3. C'est impressionnant.\n\nCruzeiro, eux, sont 3èmes avec 44 points. Leur moyenne de buts marqués est de 1.40 et ils encaissent 0.60 but par match. Cela suggère une attaque un peu moins prolifique que Bahia, mais une défense très solide. Leur forme récente est également bonne : 4 victoires, un nul et une défaite sur les 6 derniers matchs. Sur 10 matchs, c'est 6 victoires, 3 nuls et une défaite. En extérieur, ils ont 3 victoires, un nul et une défaite. Ils ont marqué 7 buts et n'en ont concédé que 1.\n\nEn regardant les 10 derniers matchs de Bahia, ils ont marqué beaucoup, notamment 5-0 et 4-1. Cependant, leur dernier match était une défaite 2-0 contre Fluminense. Pour Cruzeiro, ils ont des résultats solides, avec des victoires contre des équipes comme São Paulo et Internacional, mais aussi une défaite récente contre Atlético-MG.\n\nLe classement montre que Cruzeiro est mieux placé, mais Bahia n'est pas loin. Le contexte du championnat est important : Bahia cherche à grimper encore plus, tandis que Cruzeiro veut maintenir sa position parmi les premiers.\n\nIl n'y a pas de confrontations directes récentes, donc c'est un peu difficile de comparer. Les cotes des bookmakers montrent que Bahia est légèrement favorite, avec une cote de 2.52 contre 3.08 pour Cruzeiro. Le total de buts est de 2.5, avec une cote de 2.34 pour le over et 1.63 pour le under.\n\nEn termes de prédiction, Bahia a une forte attaque et une défense solide à domicile. Cruzeiro a une défense très solide mais une attaque un peu plus faible. Cependant, Cruzeiro a une bonne forme en extérieur. Compte tenu de cela, il y a une chance que le match soit serré. Une double chance 1X semble raisonnable, car Bahia a une forte chance de gagner ou de faire match nul. De plus, le total de buts pourrait être sous les 2.5, car Cruzeiro a une défense solide et Bahia n'a pas toujours explosé en buts face à de fortes défenses.\n\nEn conclusion, je pencherais pour une double chance 1X, car Bahia a une forte chance de ne pas perdre, et le match pourrait être décisif pour leur position dans le championnat.\n</think>\n\n**Prédiction : Double chance 1X (Bahia ou match nul)**\n\n**Justification :**\n\n1. **Forme à domicile de Bahia :** Bahia affiche une excellente forme à domicile avec 4 victoires consécutives et un nul. Ils ont marqué 12 buts et n'en ont concédé que 3, ce qui témoigne d'une attaque performante et d'une défense solide.\n\n2. **Solidité défensive de Cruzeiro :** Cruzeiro possède une défense très solide, avec une moyenne de seulement 0.60 but encaissé par match. Cela suggère que l'équipe pourrait limiter les occasions de Bahia.\n\n3. **Contexte du championnat :** Bahia, 5ème, cherche à grimper au classement, tandis que Cruzeiro, 3ème, veut maintenir sa position. Le match est crucial pour les deux équipes, ce qui pourrait conduire à un jeu plus prudent.\n\n4. **Analyse des cotes :** Les cotes des bookmakers montrent une légère préférence pour Bahia, mais la double chance 1X offre une marge de sécurité compte tenu de la solidité défensive de Cruzeiro.\n\n5. **Tendance aux buts :** Bien que Bahia ait une attaque puissante, la défense de Cruzeiro pourrait limiter le nombre de buts, ce qui soutient la probabilité d'un match nul ou d'une victoire de Bahia.\n\nEn conclusion, la double chance 1X semble la prédiction la plus fiable, couvrant à la fois une victoire de Bahia et la possibilité d'un match nul."
+      }
+    ]
+  }
+}
