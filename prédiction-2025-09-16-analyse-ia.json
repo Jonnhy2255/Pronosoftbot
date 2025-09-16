@@ -1,0 +1,1244 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-16 02:17:20",
+    "date_matchs": "2025-09-16",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Comerciantes Unidos",
+        "AwayTeam": "Sport Huancayo",
+        "date": "16 septembre 2025 à 22:30:00 UTC",
+        "league": "Peru - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 8,
+          "total_points": 8,
+          "serie_domicile": [
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 10,
+          "total_marques": 8,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 12,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 10,
+          "total_marques": 12,
+          "total_encaisses": 15
+        },
+        "last_matches_home": [
+          [
+            "Sat, 13 Sep",
+            "Sport Boys",
+            "Comerciantes Unidos",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Comerciantes Unidos",
+            "Alianza Universidad",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Atlético Grau",
+            "Comerciantes Unidos",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Comerciantes Unidos",
+            "Cienciano del Cusco",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Los Chankas",
+            "Comerciantes Unidos",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Comerciantes Unidos",
+            "Deportivo Garcilaso",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Universitario",
+            "Comerciantes Unidos",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "ADT",
+            "Comerciantes Unidos",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Comerciantes Unidos",
+            "Ayacucho FC",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Sporting Cristal",
+            "Comerciantes Unidos",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Fri, 12 Sep",
+            "Sport Huancayo",
+            "Los Chankas",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Deportivo Garcilaso",
+            "Sport Huancayo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Sport Huancayo",
+            "Universitario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "ADT",
+            "Sport Huancayo",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Sport Huancayo",
+            "Ayacucho FC",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Sporting Cristal",
+            "Sport Huancayo",
+            "",
+            "5 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "Sport Huancayo",
+            "Juan Pablo II",
+            "",
+            "5 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "Alianza Atlético",
+            "Sport Huancayo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 14 Jul",
+            "Cusco FC",
+            "Sport Huancayo",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 4 Jul",
+            "Sport Huancayo",
+            "UTC",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Comerciantes Unidos": {
+            "position": 12,
+            "points": 8
+          },
+          "Sport Huancayo": {
+            "position": 9,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Universitario",
+            "points": 18
+          },
+          {
+            "position": 2,
+            "team": "Cusco FC",
+            "points": 16
+          },
+          {
+            "position": 3,
+            "team": "Deportivo Garcilaso",
+            "points": 16
+          },
+          {
+            "position": 4,
+            "team": "Sporting Cristal",
+            "points": 14
+          },
+          {
+            "position": 5,
+            "team": "Alianza Lima",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Los Chankas",
+            "points": 12
+          },
+          {
+            "position": 7,
+            "team": "Cienciano del Cusco",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Alianza Universidad",
+            "points": 10
+          },
+          {
+            "position": 9,
+            "team": "Sport Huancayo",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Juan Pablo II",
+            "points": 9
+          },
+          {
+            "position": 11,
+            "team": "Melgar",
+            "points": 9
+          },
+          {
+            "position": 12,
+            "team": "Comerciantes Unidos",
+            "points": 8
+          },
+          {
+            "position": 13,
+            "team": "Atlético Grau",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Ayacucho FC",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "ADT",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Alianza Atlético",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Sport Boys",
+            "points": 4
+          },
+          {
+            "position": 18,
+            "team": "UTC",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Deportivo Binacional",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2558.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2555.png",
+        "classement_home": 12,
+        "classement_away": 9,
+        "points_classement_home": 8,
+        "points_classement_away": 9,
+        "nom_classement_home": "Comerciantes Unidos",
+        "nom_classement_away": "Sport Huancayo",
+        "country_fr": "Peru - Primera División",
+        "analyse_ia": "<think>\nOkay, so I need to analyze the upcoming match between Comerciantes Unidos and Sport Huancayo on September 16, 2025. Let me start by looking at the data provided.\n\nFirst, I see that Comerciantes Unidos is playing at home. They're ranked 12th with 8 points. Their average goals scored are 0.80, and they concede 1.40 on average. Looking at their recent form over the last six matches, they have 8 points with a record of W L W D L D. Over ten matches, they only have 8 points, which isn't great. Their home form is L-D-D-L, scoring 2 and conceding 4. That doesn't look too strong defensively at home.\n\nNow, Sport Huancayo is the away team, ranked 9th with 9 points. They score 1.20 goals on average and concede 1.50. Their last six matches give them 5 points with L D D L W L. Over ten matches, they have 12 points with a more varied record. Their away form is D-L-L-D-L, scoring 1 and conceding 10. That's a lot of goals against, which might indicate defensive issues.\n\nLooking at the head-to-head, there's no data provided, so I can't factor that in. The league standings show that both teams are in the lower half, with Comerciantes Unidos just below Sport Huancayo.\n\nI should also check their recent matches. Comerciantes Unidos won their last match 1-0 against Sport Boys, but before that, they had a loss and some draws. Sport Huancayo lost their last match 2-1 against Los Chankas but had a win and some draws before that.\n\nConsidering the defensive stats, Comerciantes Unidos at home have conceded 4 goals in their last four matches, while Sport Huancayo away have let in 10 goals in five matches. That suggests that both teams might struggle defensively, which could lead to goals.\n\nLooking at the BTTS (Both Teams To Score) option, Comerciantes Unidos have only scored 2 goals at home recently, but Sport Huancayo have scored 1 away. However, given the defensive weaknesses, it's possible both could score.\n\nThe over/under 2.5 goals: Comerciantes Unidos average 0.80 scored and 1.40 conceded, while Sport Huancayo average 1.20 scored and 1.50 conceded. That adds up to around 2.5 goals per match, but looking at recent games, both teams haven't had many high-scoring matches. Maybe under 2.5 is more likely.\n\nFor the result, Comerciantes Unidos are not in great form, but they're at home. Sport Huancayo are slightly better in the league but have a poor away record. It might end in a draw, but considering their defensive issues, maybe both teams can score.\n\nSo, putting it all together, I think BTTS oui is a good bet because both teams have defensive vulnerabilities and might concede at least once each. Alternatively, considering their recent forms, a draw is possible, but BTTS seems more likely because of the defensive stats.\n</think>\n\n**Prédiction : BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n1. **Analyse Comparative des Équipes :**\n   - **Comerciantes Unidos (Domicile)** a marqué 2 buts en 4 matchs à domicile et en a encaissé 4. \n   - **Sport Huancayo (Extérieur)** a marqué 1 but en 5 matchs à l'extérieur et en a encaissé 10.\n\n2. **Forme Récente :**\n   - Les deux équipes ont des difficultés défensives, avec Comerciantes Unidos encaissant 4 buts à domicile et Sport Huancayo encaissant 10 buts à l'extérieur.\n\n3. **Contexte du Championnat :**\n   - Les deux équipes sont dans la partie basse du classement, ce qui suggère qu'elles pourraient être sous pression et plus susceptibles de commettre des erreurs défensives.\n\n4. **Tendances de Buts :**\n   - Les statistiques montrent que les matchs récents de ces équipes ont souvent vu des buts des deux côtés, en particulier en raison de leurs faiblesses défensives.\n\n5. **Conclusion :**\n   - Compte tenu des difficultés défensives de both teams et de leur capacité à marquer occasionnellement, il est probable que les deux équipes marquent au moins un but chacune lors de ce match.\n\n**Prédiction finale : BTTS oui**"
+      },
+      {
+        "id": 2,
+        "HomeTeam": "America de Cali",
+        "AwayTeam": "Bucaramanga",
+        "date": "16 septembre 2025 à 23:00:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 7,
+          "total_marques": 5,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 22,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 5,
+          "total_marques": 16,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          [
+            "Sat, Sep 13",
+            "Fortaleza CEIF",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Sep 7",
+            "América de Cali",
+            "Deportivo Cali",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Sep 3",
+            "América de Cali",
+            "Bucaramanga",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Alianza FC",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Bucaramanga",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "América de Cali",
+            "Atlético Nacional",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 19",
+            "Fluminense",
+            "América de Cali",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 14",
+            "Deportivo Pereira",
+            "América de Cali",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 12",
+            "América de Cali",
+            "Fluminense",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "América de Cali",
+            "Deportes Tolima",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Atlético Nacional",
+            "Bucaramanga",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Sep 9",
+            "Bucaramanga",
+            "Once Caldas",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Sep 6",
+            "Bucaramanga",
+            "Alianza FC",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Sep 3",
+            "América de Cali",
+            "Bucaramanga",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Deportivo Pereira",
+            "Bucaramanga",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Bucaramanga",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Bucaramanga",
+            "Águilas Doradas",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Atlético Junior",
+            "Bucaramanga",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Bucaramanga",
+            "Independiente Santa Fe",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "Alianza FC",
+            "Bucaramanga",
+            "",
+            "1 - 3",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "America de Cali": {
+            "position": 20,
+            "points": 6
+          },
+          "Bucaramanga": {
+            "position": 3,
+            "points": 20
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Atlético Junior",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Fortaleza CEIF",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "Bucaramanga",
+            "points": 20
+          },
+          {
+            "position": 4,
+            "team": "Deportes Tolima",
+            "points": 20
+          },
+          {
+            "position": 5,
+            "team": "Independiente Medellín",
+            "points": 20
+          },
+          {
+            "position": 6,
+            "team": "Llaneros",
+            "points": 18
+          },
+          {
+            "position": 7,
+            "team": "Atlético Nacional",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "Independiente Santa Fe",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Alianza FC",
+            "points": 15
+          },
+          {
+            "position": 10,
+            "team": "Deportivo Cali",
+            "points": 14
+          },
+          {
+            "position": 11,
+            "team": "Deportivo Pereira",
+            "points": 13
+          },
+          {
+            "position": 12,
+            "team": "Once Caldas",
+            "points": 13
+          },
+          {
+            "position": 13,
+            "team": "Envigado",
+            "points": 11
+          },
+          {
+            "position": 14,
+            "team": "Millonarios",
+            "points": 11
+          },
+          {
+            "position": 15,
+            "team": "La Equidad",
+            "points": 11
+          },
+          {
+            "position": 16,
+            "team": "Unión Magdalena",
+            "points": 11
+          },
+          {
+            "position": 17,
+            "team": "Boyacá Chicó",
+            "points": 10
+          },
+          {
+            "position": 18,
+            "team": "Deportivo Pasto",
+            "points": 9
+          },
+          {
+            "position": 19,
+            "team": "Águilas Doradas",
+            "points": 8
+          },
+          {
+            "position": 20,
+            "team": "América de Cali",
+            "points": 6
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1138.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1131.png",
+        "classement_home": 20,
+        "classement_away": 3,
+        "points_classement_home": 6,
+        "points_classement_away": 20,
+        "nom_classement_home": "América de Cali",
+        "nom_classement_away": "Bucaramanga",
+        "country_fr": "Colombia - Primera A",
+        "analyse_ia": "**Analyse du match : America de Cali vs Bucaramanga**\n\n**1. Analyse comparative des deux équipes :**\n\n- **America de Cali (Domicile) :**\n  - **Points forts :** \n    - Bien qu'ils soient en difficulté ce saison, ils ont montré une certaine solidité défensive à domicile, n'encaissant que 4 buts en 5 matchs.\n    - Leur attaque, bien qu'elle ne soit pas prolifique, a marqué 4 buts à domicile, ce qui est un bon signe.\n  - **Points faibles :**\n    - Leur forme récente est inquiétante avec seulement 5 points en 10 matchs.\n    - Leur moyenne de buts marqués est faible (0.50 par match), ce qui peut poser problème pour s'imposer.\n\n- **Bucaramanga (Extérieur) :**\n  - **Points forts :**\n    - Excellent classement (3e) avec 20 points, ce qui montre leur constance.\n    - Attaque performante avec une moyenne de 1.60 buts marqués par match.\n    - Forme récente très solide avec 13 points en 6 matchs.\n  - **Points faibles :**\n    - En déplacement, ils ont marqué 6 buts mais en ont aussi encaissé 5, ce qui peut indiquer une certaine fragilité défensive.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- America de Cali joue à domicile, ce qui est généralement un avantage, mais leur forme récente y est mitigée (D-W-D-L-L).\n- Bucaramanga, bien qu'étant en déplacement, a une bonne forme extérieure avec une série de résultats positifs (W-L-W-L-W).\n\n**3. Analyse des formes récentes :**\n\n- **America de Cali :** \n  - Les 10 derniers matchs montrent une nette domination des défaites (5 points sur 30 possibles).\n  - Leur dernière victoire à domicile remonte à plusieurs matchs, ce qui indique un manque de confiance.\n  \n- **Bucaramanga :**\n  - Une forme ascensionnelle avec 4 victoires en 5 matchs.\n  - Leur attaque semble en pleine confiance, ce qui est un atout majeur.\n\n**4. Contexte du championnat :**\n\n- America de Cali est lanterne rouge avec seulement 6 points, ce qui les place sous pression pour obtenir des résultats.\n- Bucaramanga, en 3e position, lutte pour les places de leader et a donc besoin de points pour maintenir sa position.\n\n**5. Confrontations directes :**\n\n- Aucune donnée disponible, ce qui rend difficile une analyse comparative directe.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote n'est fournie, donc l'analyse se base uniquement sur les statistiques.\n\n**Prédiction finale : Victoire extérieur (Bucaramanga)**\n\n**Justification :**\n\n- **Forme récente :** Bucaramanga est en pleine confiance avec une série de résultats positifs, y compris des victoires contre des équipes bien classées.\n- **Attaque performante :** Leur moyenne de buts marqués est supérieure, ce qui leur donne un avantage offensif.\n- **Position au classement :** En étant dans les premières places, Bucaramanga a un objectif clair et la motivation nécessaire pour s'imposer.\n- **Faiblesses de America de Cali :** Leur difficulté à marquer et leur forme décevante font d'elles des outsiders malgré le fait de jouer à domicile.\n\nCette analyse statistique et contextuelle m'amène à prévoir une victoire de Bucaramanga, compte tenu de leur supériorité en termes de forme et de performance offensive."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Inter Miami",
+        "AwayTeam": "Seattle Sounders",
+        "date": "16 septembre 2025 à 23:30:00 UTC",
+        "league": "USA - Major League Soccer",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Inter Miami CF": 1.98,
+            "Seattle Sounders FC": 3.46,
+            "Draw": 4.05
+          },
+          "totals": {
+            "Over": 2.23,
+            "Under": 1.69
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 17,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 15,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 11,
+          "total_marques": 17,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 2.7,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 23,
+          "total_points": 11,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 14,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 13,
+          "buts_ext_encaisses": 1,
+          "total_marques": 27,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          [
+            "Sat, Sep 13",
+            "Charlotte FC",
+            "Inter Miami CF",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Seattle Sounders FC",
+            "Inter Miami CF",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Inter Miami CF",
+            "Orlando City SC",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "D.C. United",
+            "Inter Miami CF",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Inter Miami CF",
+            "Tigres UANL",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Inter Miami CF",
+            "LA Galaxy",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Orlando City SC",
+            "Inter Miami CF",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Inter Miami CF",
+            "Pumas UNAM",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Inter Miami CF",
+            "Necaxa",
+            "",
+            "2 - 2",
+            "FT-Pens"
+          ],
+          [
+            "Wed, Jul 30",
+            "Inter Miami CF",
+            "Atlas",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Seattle Sounders FC",
+            "LA Galaxy",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Seattle Sounders FC",
+            "Inter Miami CF",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "LA Galaxy",
+            "Seattle Sounders FC",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Seattle Sounders FC",
+            "Sporting Kansas City",
+            "",
+            "5 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Seattle Sounders FC",
+            "Puebla",
+            "",
+            "0 - 0",
+            "FT-Pens"
+          ],
+          [
+            "Sat, Aug 16",
+            "Minnesota United FC",
+            "Seattle Sounders FC",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "LA Galaxy",
+            "Seattle Sounders FC",
+            "",
+            "0 - 4",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Seattle Sounders FC",
+            "Tijuana",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "Seattle Sounders FC",
+            "Santos",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Jul 31",
+            "Cruz Azul",
+            "Seattle Sounders FC",
+            "",
+            "0 - 7",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Inter Miami": {
+            "position": 8,
+            "points": 47
+          },
+          "Seattle Sounders": {
+            "position": 19,
+            "points": 54
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "FC Cincinnati",
+            "points": 57
+          },
+          {
+            "position": 3,
+            "team": "Charlotte FC",
+            "points": 55
+          },
+          {
+            "position": 4,
+            "team": "Nashville SC",
+            "points": 53
+          },
+          {
+            "position": 5,
+            "team": "Columbus Crew",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Orlando City SC",
+            "points": 49
+          },
+          {
+            "position": 7,
+            "team": "New York City FC",
+            "points": 48
+          },
+          {
+            "position": 8,
+            "team": "Inter Miami CF",
+            "points": 47
+          },
+          {
+            "position": 9,
+            "team": "Chicago Fire FC",
+            "points": 46
+          },
+          {
+            "position": 10,
+            "team": "New York Red Bulls",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "New England Revolution",
+            "points": 40
+          },
+          {
+            "position": 12,
+            "team": "Toronto FC",
+            "points": 32
+          },
+          {
+            "position": 13,
+            "team": "Atlanta United FC",
+            "points": 26
+          },
+          {
+            "position": 14,
+            "team": "D.C. United",
+            "points": 26
+          },
+          {
+            "position": 15,
+            "team": "CF Montréal",
+            "points": 25
+          },
+          {
+            "position": 16,
+            "team": "San Diego FC",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Vancouver Whitecaps",
+            "points": 56
+          },
+          {
+            "position": 19,
+            "team": "Seattle Sounders FC",
+            "points": 54
+          },
+          {
+            "position": 20,
+            "team": "LAFC",
+            "points": 52
+          },
+          {
+            "position": 21,
+            "team": "Portland Timbers",
+            "points": 45
+          },
+          {
+            "position": 22,
+            "team": "Austin FC",
+            "points": 44
+          },
+          {
+            "position": 23,
+            "team": "Colorado Rapids",
+            "points": 42
+          },
+          {
+            "position": 24,
+            "team": "San Jose Earthquakes",
+            "points": 41
+          },
+          {
+            "position": 25,
+            "team": "Real Salt Lake",
+            "points": 39
+          },
+          {
+            "position": 26,
+            "team": "FC Dallas",
+            "points": 35
+          },
+          {
+            "position": 27,
+            "team": "Houston Dynamo FC",
+            "points": 34
+          },
+          {
+            "position": 28,
+            "team": "Sporting Kansas City",
+            "points": 34
+          },
+          {
+            "position": 29,
+            "team": "St. Louis CITY SC",
+            "points": 33
+          },
+          {
+            "position": 30,
+            "team": "LA Galaxy",
+            "points": 27
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/9568.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1595.png",
+        "classement_home": 8,
+        "classement_away": 19,
+        "points_classement_home": 47,
+        "points_classement_away": 54,
+        "nom_classement_home": "Inter Miami CF",
+        "nom_classement_away": "Seattle Sounders FC",
+        "country_fr": "USA - Major League Soccer",
+        "analyse_ia": "<think>\n\n**Analyse du Match : Inter Miami vs Seattle Sounders**\n\n**1. Analyse Comparative des Deux Équipes :**\n\n- **Inter Miami (Domicile) :**\n  - **Points Forts :**\n    - Bonne forme récente avec 4 victoires en 5 derniers matchs.\n    - Performant à domicile, avec une série de 6 matchs sans défaite (W-W-W-W-D-W).\n    - Capacité à marquer des buts, avec une moyenne de 1,70 buts marqués par match.\n  - **Points Faibles :**\n    - Défense qui concède en moyenne 1,80 but par match.\n    - Forme irrégulière sur les 10 derniers matchs (17 points sur 30 possibles).\n\n- **Seattle Sounders (Extérieur) :**\n  - **Points Forts :**\n    - Meilleure équipe de la ligue avec 54 points, bien devant Inter Miami (8ᵉ avec 47 points).\n    - Excellente moyenne offensive avec 2,70 buts marqués par match.\n    - Défense solide, ne concédant que 0,70 but par match en moyenne.\n    - Très performant à l'extérieur, avec 13 buts marqués et seulement 1 encaissé.\n  - **Points Faibles :**\n    - Forme récente légèrement en doute avec une défaite dans leur dernier match.\n    - Peu de données sur les confrontations directes récentes.\n\n**2. Impact du Facteur Domicile/Extérieur :**\n\n- **Inter Miami** semble particulièrement à l'aise chez lui, avec une série de 6 victoires consécutives à domicile. Cela montre une forte domination territoriale.\n- **Seattle Sounders**, bien qu'étant une équipe performante à l'extérieur, a perdu son dernier match à l'extérieur, ce qui pourrait indiquer une légère baisse de forme.\n\n**3. Analyse des Formes Récents et Tendances :**\n\n- **Inter Miami** a marqué au moins 2 buts dans 4 de ses 5 derniers matchs, montrant une attaque en confiance.\n- **Seattle Sounders** a une attaque très prolifique, avec une moyenne élevée de buts marqués, mais a concédé une défaite lors de son dernier déplacement.\n\n**4. Contexte du Championnat :**\n\n- **Seattle Sounders** est en course pour un haut classement, voire la première place, ce qui motive fortement l'équipe.\n- **Inter Miami** est en lutte pour maintenir sa position dans le top 8, ce qui ajoute une pression supplémentaire.\n\n**5. Confrontations Directes :**\n\n- Aucune confrontation directe récente n'est disponible, ce qui rend difficile l'analyse de leur face-à-face.\n\n**6. Évaluation des Cotes :**\n\n- Les cotes proposées par 1xBet montrent une légère préférence pour Inter Miami (1.98) contre Seattle Sounders (3.46), avec un nul à 4.05.\n- Le total de buts est légèrement en faveur de l'under 2.5 (1.69 contre 2.23).\n\n**7. Prédiction Finale :**\n\n**Victoire Extérieur (Seattle Sounders)**\n\n**Justification :**\n\n- **Supériorité Statistique :** Seattle Sounders affiche de meilleures statistiques offensives et défensives sur l'ensemble de la saison.\n- **Motivation :** En étant 19ᵉ avec 54 points, Seattle est dans une course serrée pour les premières places, ce qui pousse l'équipe à performer.\n- **Performance à l'Extérieur :** Bien qu'ils aient perdu leur dernier match à l'extérieur, leur bilan global à l'extérieur est très positif avec 13 buts marqués pour seulement 1 encaissé.\n- **Forme Offensante :** Avec une moyenne de 2.70 buts marqués par match, Seattle a l'attaque la plus performante de la ligue, ce qui leur donne un avantage certain face à une défense d'Inter Miami qui concède en moyenne 1.80 but par match.\n- **Contrôle du Match :** Seattle a montré dans ses récents matchs une capacité à contrôler le rythme et à maintenir la pression offensive, ce qui devrait les aider à dominer le match.\n\nBien que Inter Miami ait une bonne forme à domicile, la qualité et la constance de Seattle Sounders sur l'ensemble de la saison, combinées à leur puissance offensive, donnent une nette avantage à l'équipe visiteuse."
+      }
+    ]
+  }
+}
