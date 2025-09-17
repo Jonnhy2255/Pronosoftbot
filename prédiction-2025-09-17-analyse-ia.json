@@ -1,0 +1,1857 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-17 02:17:09",
+    "date_matchs": "2025-09-17",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 5,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 5,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Fenerbahce",
+        "AwayTeam": "Alanyaspor",
+        "date": "17 septembre 2025 à 17:00:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Alanyaspor": 9.75,
+            "Fenerbahce": 1.29,
+            "Draw": 5.79
+          },
+          "totals": {
+            "Over": 2.27,
+            "Under": 1.65
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 17,
+          "total_points": 11,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 16,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 1.25,
+          "moyenne_encaisses": 0.75,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_exterieur": [
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 3
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Fenerbahce",
+            "Trabzonspor",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Genclerbirligi",
+            "Fenerbahce",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Benfica",
+            "Fenerbahce",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Fenerbahce",
+            "Kocaelispor",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 20",
+            "Fenerbahce",
+            "Benfica",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Goztepe",
+            "Fenerbahce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Tue, Aug 12",
+            "Fenerbahce",
+            "Feyenoord Rotterdam",
+            "",
+            "5 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Feyenoord Rotterdam",
+            "Fenerbahce",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "Fenerbahce",
+            "Lazio",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Benfica",
+            "Fenerbahce",
+            "",
+            "3 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Konyaspor",
+            "Alanyaspor",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Alanyaspor",
+            "Besiktas",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 25",
+            "Eyupspor",
+            "Alanyaspor",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Alanyaspor",
+            "Caykur Rizespor",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Fenerbahce": {
+            "position": 2,
+            "points": 10
+          },
+          "Alanyaspor": {
+            "position": 8,
+            "points": 7
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Fenerbahce",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "Trabzonspor",
+            "points": 10
+          },
+          {
+            "position": 4,
+            "team": "Goztepe",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Antalyaspor",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Gaziantep FK",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Konyaspor",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "Alanyaspor",
+            "points": 7
+          },
+          {
+            "position": 9,
+            "team": "Samsunspor",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Besiktas",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Caykur Rizespor",
+            "points": 4
+          },
+          {
+            "position": 12,
+            "team": "Eyupspor",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Kasimpasa",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Kayserispor",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Fatih Karagümrük",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Istanbul Basaksehir",
+            "points": 2
+          },
+          {
+            "position": 17,
+            "team": "Kocaelispor",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Genclerbirligi",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/611.png",
+        "logo_away": "https://media.api-sports.io/football/teams/996.png",
+        "classement_home": 2,
+        "classement_away": 8,
+        "points_classement_home": 10,
+        "points_classement_away": 7,
+        "nom_classement_home": "Fenerbahce",
+        "nom_classement_away": "Alanyaspor",
+        "country_fr": "Turkey - Süper Lig",
+        "analyse_ia": "<think>\nOkay, so I need to analyze the Fenerbahce vs. Alanyaspor match and make a prediction based on the data provided. Let me start by going through all the information given.\n\nFirst, Fenerbahce is playing at home. They're ranked 2nd with 10 points. Their average goals scored are 1.60 and conceded 1.00. Looking at their recent form over the last six matches, they have 11 points with a record of W W L W D D. Over ten matches, they have 17 points with W W L W D D W L W L. At home, their form is strong: W-W-D-W-W, scoring 10 goals and conceding only 3.\n\nAlanyaspor is 8th with 7 points. They average 1.25 goals scored and 0.75 conceded. Their last six matches give them 7 points with W W L D. Over ten matches, same 7 points with W W L D. Away form is W-L, scoring 3 and conceding 3.\n\nLooking at the odds, Fenerbahce is heavily favored at 1.29 for a win, while Alanyaspor is 9.75. The over/under is 2.5 with over at 2.27 and under at 1.65.\n\nFenerbahce's last ten matches show they've been solid, especially at home. They've won against strong teams like Trabzonspor and Genclerbirligi. Their only recent loss was against Benfica in a friendly, but in the league, they've been consistent.\n\nAlanyaspor's recent matches include a win against Konyaspor and a draw against Caykur Rizespor. They've been decent but not spectacular. Their away form is a bit shaky with a loss to Eyupspor.\n\nThe league standings show Fenerbahce is a top contender, while Alanyaspor is mid-table. No recent H2H data is available, which might be a slight disadvantage, but Fenerbahce's home advantage is significant.\n\nConsidering all this, Fenerbahce seems likely to win. They have a strong home record and better overall form. However, Alanyaspor has managed to score in their away games, so BTTS could be a consideration, but given Fenerbahce's defensive record, maybe not. The over/under is a bit tricky, but Fenerbahce's average is around 1.6 goals, so maybe under 2.5.\n\nWait, but Fenerbahce has scored 10 goals at home in 5 matches, which is an average of 2 per game. That might push towards over 2.5. But their recent matches have been lower scoring, like 1-0 and 3-1. Hmm.\n\nI think the safest bet is on Fenerbahce winning at home given their strong form and Alanyaspor's inconsistent away record.\n</think>\n\n**Prédiction : Victoire domicile (Fenerbahce)**\n\n**Justification :**\n\n1. **Forme Récente et Statistiques :** Fenerbahce affiche une forme solide à domicile avec une série de victoires et un bilan défensif impressionnant (seulement 3 buts encaissés en 5 matchs). Leur moyenne de buts marqués à domicile est de 2 par match, ce qui suggère une attaque efficace.\n\n2. **Contexte du Championnat :** En tant que 2ème du classement, Fenerbahce est une équipe en confiance, cherchant à maintenir sa position dominante. Alanyaspor, 8ème, lutte pour se stabiliser, ce qui donne un avantage psychologique à Fenerbahce.\n\n3. **Analyse des Cotes :** Les cotes favorisent fortement Fenerbahce, reflétant leur statut de favori pour ce match. Bien que les cotes ne soient pas toujours décisives, elles renforcent l'idée que Fenerbahce a plus de chances de gagner.\n\n4. **Forme Extérieure d'Alanyaspor :** Les résultats inégaux d'Alanyaspor à l'extérieur, avec une défaite récente, suggèrent des difficultés à performer loin de domicile, ce qui joue en faveur de Fenerbahce.\n\nEn conclusion, compte tenu de la forte forme domicile de Fenerbahce, de leur meilleure position au classement et de la faiblesse relative d'Alanyaspor à l'extérieur, une victoire de Fenerbahce semble la plus probable."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Samsunspor",
+        "AwayTeam": "Kasimpasa",
+        "date": "17 septembre 2025 à 17:00:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 8,
+          "total_points": 8,
+          "serie_domicile": [
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 3,
+          "total_marques": 6,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 3,
+          "total_points": 3,
+          "serie_exterieur": [
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 2,
+          "total_marques": 4,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sat, Sep 13",
+            "Samsunspor",
+            "Antalyaspor",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Trabzonspor",
+            "Samsunspor",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 28",
+            "Samsunspor",
+            "Panathinaikos",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 21",
+            "Panathinaikos",
+            "Samsunspor",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Kocaelispor",
+            "Samsunspor",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Samsunspor",
+            "Genclerbirligi",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Fatih Karagümrük",
+            "Kasimpasa",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Kasimpasa",
+            "Gaziantep FK",
+            "",
+            "2 - 3",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Kasimpasa",
+            "Trabzonspor",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Antalyaspor",
+            "Kasimpasa",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Samsunspor": {
+            "position": 9,
+            "points": 7
+          },
+          "Kasimpasa": {
+            "position": 13,
+            "points": 3
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Fenerbahce",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "Trabzonspor",
+            "points": 10
+          },
+          {
+            "position": 4,
+            "team": "Goztepe",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Antalyaspor",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Gaziantep FK",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Konyaspor",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "Alanyaspor",
+            "points": 7
+          },
+          {
+            "position": 9,
+            "team": "Samsunspor",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Besiktas",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Caykur Rizespor",
+            "points": 4
+          },
+          {
+            "position": 12,
+            "team": "Eyupspor",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Kasimpasa",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Kayserispor",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Fatih Karagümrük",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Istanbul Basaksehir",
+            "points": 2
+          },
+          {
+            "position": 17,
+            "team": "Kocaelispor",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Genclerbirligi",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/3603.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1004.png",
+        "classement_home": 9,
+        "classement_away": 13,
+        "points_classement_home": 7,
+        "points_classement_away": 3,
+        "nom_classement_home": "Samsunspor",
+        "nom_classement_away": "Kasimpasa",
+        "country_fr": "Turkey - Süper Lig",
+        "analyse_ia": "**Analyse du match : Samsunspor (DOMICILE) vs Kasimpasa (EXTÉRIEUR)**\n\n1. **Analyse comparative des deux équipes :**\n   - **Samsunspor** : Actuellement 9ème avec 7 points, Samsunspor a une moyenne de 1 but marqué et 1 but encaissé par match. À domicile, ils ont marqué 3 buts et en ont encaissé 3 en 3 matchs. Leur forme récente est mitigée avec 2 victoires, 2 défaites et 2 nuls sur leurs 6 derniers matchs.\n   - **Kasimpasa** : 13ème avec 3 points, Kasimpasa a une moyenne de 1 but marqué et 1.5 buts encaissés par match. À l'extérieur, ils ont marqué 2 buts et en ont encaissé 2 en 2 matchs. Leur forme récente est inquiétante avec 1 victoire et 3 défaites sur leurs 4 derniers matchs.\n\n2. **Impact du facteur domicile/extérieur :**\n   - Samsunspor semble avoir une légère supériorité à domicile, bien qu'ils aient perdu leur dernier match à domicile contre Antalyaspor. Kasimpasa, malgré une victoire à l'extérieur contre Fatih Karagümrük, a du mal à maintenir une constance.\n\n3. **Forme récente et tendances :**\n   - Samsunspor a montré des signes de rétablissement avec 2 victoires consécutives, bien qu'ils aient perdu leur dernier match. Kasimpasa, quant à lui, est en difficulté avec seulement 1 victoire en 4 matchs.\n\n4. **Contexte du championnat :**\n   - Samsunspor est en milieu de tableau et cherche à se stabiliser, tandis que Kasimpasa lutte pour éviter la zone de relégation. Ce match est crucial pour Kasimpasa pour tenter de se rapprocher de la sécurité.\n\n5. **Confrontations directes :**\n   - Aucune confrontation récente n'est disponible, ce qui rend difficile une analyse basée sur l'historique.\n\n6. **Évaluation des cotes :**\n   - Aucune cote n'est disponible pour ce match.\n\n7. **Prédiction finale :**\n   - **Double chance 1X (Victoire domicile ou Match nul)**\n\n**Justification :**\nSamsunspor, bien qu'inconstant, a une légère avance à domicile avec une meilleure forme récente comparée à Kasimpasa. Kasimpasa, malgré une victoire à l'extérieur, a du mal à maintenir une performance constante. La double chance 1X semble prudente, car Samsunspor a plus de chances de s'imposer ou de faire match nul face à un Kasimpasa en difficulté."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Comerciantes Unidos",
+        "AwayTeam": "Sport Huancayo",
+        "date": "17 septembre 2025 à 20:15:00 UTC",
+        "league": "Peru - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 8,
+          "total_points": 8,
+          "serie_domicile": [
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 10,
+          "total_marques": 8,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 12,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 10,
+          "total_marques": 12,
+          "total_encaisses": 15
+        },
+        "last_matches_home": [
+          [
+            "Sat, 13 Sep",
+            "Sport Boys",
+            "Comerciantes Unidos",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Comerciantes Unidos",
+            "Alianza Universidad",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Atlético Grau",
+            "Comerciantes Unidos",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, 8 Aug",
+            "Comerciantes Unidos",
+            "Cienciano del Cusco",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 1 Aug",
+            "Los Chankas",
+            "Comerciantes Unidos",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "Comerciantes Unidos",
+            "Deportivo Garcilaso",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 19 Jul",
+            "Universitario",
+            "Comerciantes Unidos",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 11 Jul",
+            "ADT",
+            "Comerciantes Unidos",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, 5 Jul",
+            "Comerciantes Unidos",
+            "Ayacucho FC",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 29 Jun",
+            "Sporting Cristal",
+            "Comerciantes Unidos",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Fri, 12 Sep",
+            "Sport Huancayo",
+            "Los Chankas",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 24 Aug",
+            "Deportivo Garcilaso",
+            "Sport Huancayo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 17 Aug",
+            "Sport Huancayo",
+            "Universitario",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 9 Aug",
+            "ADT",
+            "Sport Huancayo",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Sport Huancayo",
+            "Ayacucho FC",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, 30 Jul",
+            "Sporting Cristal",
+            "Sport Huancayo",
+            "",
+            "5 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 25 Jul",
+            "Sport Huancayo",
+            "Juan Pablo II",
+            "",
+            "5 - 1",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "Alianza Atlético",
+            "Sport Huancayo",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Mon, 14 Jul",
+            "Cusco FC",
+            "Sport Huancayo",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 4 Jul",
+            "Sport Huancayo",
+            "UTC",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Comerciantes Unidos": {
+            "position": 13,
+            "points": 8
+          },
+          "Sport Huancayo": {
+            "position": 10,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Universitario",
+            "points": 18
+          },
+          {
+            "position": 2,
+            "team": "Cusco FC",
+            "points": 16
+          },
+          {
+            "position": 3,
+            "team": "Deportivo Garcilaso",
+            "points": 16
+          },
+          {
+            "position": 4,
+            "team": "Sporting Cristal",
+            "points": 14
+          },
+          {
+            "position": 5,
+            "team": "Alianza Lima",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Los Chankas",
+            "points": 12
+          },
+          {
+            "position": 7,
+            "team": "Cienciano del Cusco",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Alianza Universidad",
+            "points": 10
+          },
+          {
+            "position": 9,
+            "team": "ADT",
+            "points": 10
+          },
+          {
+            "position": 10,
+            "team": "Sport Huancayo",
+            "points": 9
+          },
+          {
+            "position": 11,
+            "team": "Juan Pablo II",
+            "points": 9
+          },
+          {
+            "position": 12,
+            "team": "Melgar",
+            "points": 9
+          },
+          {
+            "position": 13,
+            "team": "Comerciantes Unidos",
+            "points": 8
+          },
+          {
+            "position": 14,
+            "team": "Atlético Grau",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "Ayacucho FC",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Alianza Atlético",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Sport Boys",
+            "points": 4
+          },
+          {
+            "position": 18,
+            "team": "UTC",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Deportivo Binacional",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2558.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2555.png",
+        "classement_home": 13,
+        "classement_away": 10,
+        "points_classement_home": 8,
+        "points_classement_away": 9,
+        "nom_classement_home": "Comerciantes Unidos",
+        "nom_classement_away": "Sport Huancayo",
+        "country_fr": "Peru - Primera División",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between Comerciantes Unidos and Sport Huancayo. Let me start by looking at their recent forms and statistics.\n\nComerciantes Unidos is 13th with 8 points. They have a weak home record, scoring only 2 goals and conceding 4 in their last four home games. Their recent form is inconsistent, with more losses and draws than wins. They've only won once in their last six matches, which doesn't look good.\n\nOn the other hand, Sport Huancayo is 10th with 9 points. They have a better scoring average, both overall and away. However, their away form isn't great either. They've struggled defensively, conceding 10 goals in their last five away games. But they have some positive results, like a 5-1 win recently, which shows they can score.\n\nLooking at their head-to-head, there's no data provided, so I can't factor that in. The league standings show both teams are in the lower half, so this match is crucial for them to climb up.\n\nConsidering their defensive issues, both teams might concede. Comerciantes Unidos has only kept one clean sheet in their last ten games, and Sport Huancayo has none in their last five away games. This makes me think both teams will score, so BTTS oui seems likely.\n\nI don't see a clear winner because both teams are inconsistent. Their defensive weaknesses and occasional scoring ability make a draw or a BTTS outcome plausible. Since BTTS oui is an option, that's my prediction.\n</think>\n\n**Prédiction : BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n1. **Forme récente des attaques :**\n   - Comerciantes Unidos a marqué dans 3 de ses 5 derniers matchs à domicile.\n   - Sport Huancayo a marqué dans 3 de ses 5 derniers matchs à l'extérieur.\n\n2. **Faiblesses défensives :**\n   - Comerciantes Unidos a encaissé dans 4 de ses 5 derniers matchs à domicile.\n   - Sport Huancayo a encaissé dans 4 de ses 5 derniers matchs à l'extérieur.\n\n3. **Confrontations récentes :**\n   - Bien que les confrontations directes ne soient pas disponibles, les statistiques offensives et défensives des deux équipes suggèrent qu'elles sont capables de marquer et d'encaisser des buts.\n\n4. **Contexte du championnat :**\n   - Les deux équipes sont dans la partie basse du classement, ce qui peut les inciter à attaquer pour gagner des points, augmentant ainsi les chances que les deux équipes marquent.\n\nEn conclusion, compte tenu des faiblesses défensives et des capacités offensives des deux équipes, il est probable que les deux équipes marquent au moins un but chacune lors de ce match."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Botafogo",
+        "AwayTeam": "Mirassol",
+        "date": "17 septembre 2025 à 22:30:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Botafogo": 1.76,
+            "Mirassol": 4.86,
+            "Draw": 3.73
+          },
+          "totals": {
+            "Over": 2.11,
+            "Under": 1.76
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 17,
+          "total_points": 8,
+          "serie_domicile": [
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 10,
+          "buts_ext_encaisses": 5,
+          "total_marques": 16,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 21,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 3,
+          "total_marques": 19,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "São Paulo",
+            "Botafogo",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Sep 11",
+            "Botafogo",
+            "Vasco da Gama",
+            "",
+            "1 - 1",
+            "FT-Pens"
+          ],
+          [
+            "Sat, Aug 30",
+            "Botafogo",
+            "Red Bull Bragantino",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Vasco da Gama",
+            "Botafogo",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Juventude",
+            "Botafogo",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Thu, Aug 21",
+            "Liga de Quito",
+            "Botafogo",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Botafogo",
+            "Palmeiras",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 14",
+            "Botafogo",
+            "Liga de Quito",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Fortaleza",
+            "Botafogo",
+            "",
+            "0 - 5",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Red Bull Bragantino",
+            "Botafogo",
+            "",
+            "0 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Grêmio",
+            "Mirassol",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Mirassol",
+            "Bahia",
+            "",
+            "5 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Fortaleza",
+            "Mirassol",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Mirassol",
+            "Cruzeiro",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Flamengo",
+            "Mirassol",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Mirassol",
+            "Vasco da Gama",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "Mirassol",
+            "Vitória",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 23",
+            "Ceará",
+            "Mirassol",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Mirassol",
+            "Santos",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Wed, Jul 16",
+            "Palmeiras",
+            "Mirassol",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Botafogo": {
+            "position": 6,
+            "points": 35
+          },
+          "Mirassol": {
+            "position": 4,
+            "points": 38
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 50
+          },
+          {
+            "position": 2,
+            "team": "Cruzeiro",
+            "points": 47
+          },
+          {
+            "position": 3,
+            "team": "Palmeiras",
+            "points": 46
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 38
+          },
+          {
+            "position": 5,
+            "team": "Bahia",
+            "points": 36
+          },
+          {
+            "position": 6,
+            "team": "Botafogo",
+            "points": 35
+          },
+          {
+            "position": 7,
+            "team": "São Paulo",
+            "points": 35
+          },
+          {
+            "position": 8,
+            "team": "Red Bull Bragantino",
+            "points": 31
+          },
+          {
+            "position": 9,
+            "team": "Corinthians",
+            "points": 29
+          },
+          {
+            "position": 10,
+            "team": "Fluminense",
+            "points": 28
+          },
+          {
+            "position": 11,
+            "team": "Ceará",
+            "points": 27
+          },
+          {
+            "position": 12,
+            "team": "Internacional",
+            "points": 27
+          },
+          {
+            "position": 13,
+            "team": "Atlético-MG",
+            "points": 25
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 25
+          },
+          {
+            "position": 15,
+            "team": "Vasco da Gama",
+            "points": 23
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 23
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 22
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 21
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 18
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/120.png",
+        "logo_away": "https://media.api-sports.io/football/teams/7848.png",
+        "classement_home": 6,
+        "classement_away": 4,
+        "points_classement_home": 35,
+        "points_classement_away": 38,
+        "nom_classement_home": "Botafogo",
+        "nom_classement_away": "Mirassol",
+        "country_fr": "Brazil - Serie A",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between Botafogo and Mirassol on September 17, 2025. Let me start by looking at the statistics provided.\n\nBotafogo is playing at home. They're ranked 6th with 35 points. They score an average of 1.6 goals per game and concede 0.8. Their recent form over 6 games is L D W D W L, which is 8 points. Over 10 games, it's 17 points. At home, their form is D-W-L-W, scoring 6 and conceding 3.\n\nMirassol is 4th with 38 points. They score 1.9 goals on average and concede 0.8. Their last 6 games are W W W D L W, 13 points. Over 10 games, 21 points. Away form is W-W-L-W-D, scoring 6 and conceding 3.\n\nLooking at their last 10 matches, Botafogo has some inconsistent results. They lost to São Paulo, drew with Vasco da Gama, and had a big win against Red Bull Bragantino. They also lost to Liga de Quito and Palmeiras but had a strong 5-0 win against Fortaleza.\n\nMirassol's recent games show strong performances. They won against Grêmio, Bahia, Fortaleza, and had a draw with Cruzeiro. They lost to Flamengo but beat Vasco da Gama and had a draw with Vitória. They also won against Ceará and Santos, and drew with Palmeiras.\n\nThe head-to-head data isn't available, so I can't factor that in. The odds from 1xBet have Botafogo at 1.76, Mirassol at 4.86, and a draw at 3.73. For total goals, over 2.5 is 2.11 and under is 1.76.\n\nConsidering the context of the league, both teams are in the top 6, with Mirassol slightly higher. Botafogo's home form is decent but inconsistent, while Mirassol's away form is strong, with only one loss in their last five away games.\n\nI think Mirassol's attacking strength and consistent form give them an edge. Botafogo's defense is solid, but they might struggle against Mirassol's offense. The odds for a Mirassol win are higher, but considering their form, it's a good bet.\n</think>\n\n**Prédiction : Victoire extérieur (Mirassol)**\n\n**Justification :**\n\n1. **Forme Récente :** Mirassol affiche une forme très solide avec 4 victoires en 5 derniers matchs, y compris des succès contre des équipes bien classées comme Grêmio et Bahia. Botafogo, bien qu'il ait gagné contre Red Bull Bragantino, a montré une forme inégale avec des défaites contre São Paulo et Palmeiras.\n\n2. **Statistiques Offensives :** Mirassol a une moyenne de 1.90 buts marqués par match, supérieure à celle de Botafogo (1.60). Cette efficacité offensive, combinée à une défense solide (0.80 buts encaissés en moyenne), fait de Mirassol une équipe redoutable à l'extérieur.\n\n3. **Performance à l'Extérieur :** Mirassol a perdu seulement un de ses cinq derniers matchs à l'extérieur, contre Flamengo, et a gagné contre des adversaires compétitifs. Botafogo, bien que performant à domicile, a perdu deux de ses cinq derniers matchs à domicile.\n\n4. **Contexte du Championnat :** Mirassol, 4ème avec 38 points, est en meilleure position que Botafogo (6ème avec 35 points). Cela indique une constance et une maturité dans leur jeu qui peut faire la différence dans ce match.\n\n5. **Cotes et Valeur :** Bien que les cotes pour une victoire de Mirassol soient plus élevées (4.86), elles offrent une bonne valeur compte tenu de leur forme et de leur performance à l'extérieur.\n\nEn conclusion, Mirassol semble avoir l'avantage nécessaire pour s'imposer face à Botafogo, grâce à sa forme récente, son efficacité offensive et sa solidité défensive."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "New York City FC",
+        "AwayTeam": "Columbus Crew",
+        "date": "17 septembre 2025 à 23:30:00 UTC",
+        "league": "USA - Major League Soccer",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 19,
+          "total_points": 12,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 12,
+          "buts_ext_encaisses": 8,
+          "total_marques": 17,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 15,
+          "total_points": 11,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 10,
+          "total_marques": 16,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          [
+            "Sat, Sep 13",
+            "Chicago Fire FC",
+            "New York City FC",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "New York City FC",
+            "D.C. United",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "FC Cincinnati",
+            "New York City FC",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "New York City FC",
+            "Nashville SC",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 5",
+            "Toluca",
+            "New York City FC",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 1",
+            "New York City FC",
+            "León",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Tue, Jul 29",
+            "New York City FC",
+            "Puebla",
+            "",
+            "0 - 3",
+            "FT"
+          ],
+          [
+            "Fri, Jul 25",
+            "FC Dallas",
+            "New York City FC",
+            "",
+            "3 - 4",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Sporting Kansas City",
+            "New York City FC",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 16",
+            "Orlando City SC",
+            "New York City FC",
+            "",
+            "1 - 2",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Atlanta United FC",
+            "Columbus Crew",
+            "",
+            "4 - 5",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "New York Red Bulls",
+            "Columbus Crew",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Columbus Crew",
+            "New England Revolution",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Toronto FC",
+            "Columbus Crew",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Aug 5",
+            "Columbus Crew",
+            "León",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 1",
+            "Columbus Crew",
+            "Puebla",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Jul 29",
+            "Toluca",
+            "Columbus Crew",
+            "",
+            "2 - 2",
+            "FT-Pens"
+          ],
+          [
+            "Fri, Jul 25",
+            "Columbus Crew",
+            "Orlando City SC",
+            "",
+            "1 - 3",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Columbus Crew",
+            "D.C. United",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 16",
+            "Nashville SC",
+            "Columbus Crew",
+            "",
+            "3 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "New York City FC": {
+            "position": 8,
+            "points": 48
+          },
+          "Columbus Crew": {
+            "position": 6,
+            "points": 49
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "FC Cincinnati",
+            "points": 57
+          },
+          {
+            "position": 3,
+            "team": "Charlotte FC",
+            "points": 55
+          },
+          {
+            "position": 4,
+            "team": "Nashville SC",
+            "points": 53
+          },
+          {
+            "position": 5,
+            "team": "Inter Miami CF",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Columbus Crew",
+            "points": 49
+          },
+          {
+            "position": 7,
+            "team": "Orlando City SC",
+            "points": 49
+          },
+          {
+            "position": 8,
+            "team": "New York City FC",
+            "points": 48
+          },
+          {
+            "position": 9,
+            "team": "Chicago Fire FC",
+            "points": 47
+          },
+          {
+            "position": 10,
+            "team": "New York Red Bulls",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "New England Revolution",
+            "points": 40
+          },
+          {
+            "position": 12,
+            "team": "Toronto FC",
+            "points": 32
+          },
+          {
+            "position": 13,
+            "team": "Atlanta United FC",
+            "points": 26
+          },
+          {
+            "position": 14,
+            "team": "D.C. United",
+            "points": 26
+          },
+          {
+            "position": 15,
+            "team": "CF Montréal",
+            "points": 25
+          },
+          {
+            "position": 16,
+            "team": "San Diego FC",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Vancouver Whitecaps",
+            "points": 56
+          },
+          {
+            "position": 19,
+            "team": "Seattle Sounders FC",
+            "points": 54
+          },
+          {
+            "position": 20,
+            "team": "LAFC",
+            "points": 52
+          },
+          {
+            "position": 21,
+            "team": "Portland Timbers",
+            "points": 45
+          },
+          {
+            "position": 22,
+            "team": "Austin FC",
+            "points": 44
+          },
+          {
+            "position": 23,
+            "team": "Colorado Rapids",
+            "points": 42
+          },
+          {
+            "position": 24,
+            "team": "San Jose Earthquakes",
+            "points": 41
+          },
+          {
+            "position": 25,
+            "team": "Real Salt Lake",
+            "points": 39
+          },
+          {
+            "position": 26,
+            "team": "FC Dallas",
+            "points": 35
+          },
+          {
+            "position": 27,
+            "team": "Houston Dynamo FC",
+            "points": 34
+          },
+          {
+            "position": 28,
+            "team": "Sporting Kansas City",
+            "points": 34
+          },
+          {
+            "position": 29,
+            "team": "St. Louis CITY SC",
+            "points": 33
+          },
+          {
+            "position": 30,
+            "team": "LA Galaxy",
+            "points": 27
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1604.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1613.png",
+        "classement_home": 8,
+        "classement_away": 6,
+        "points_classement_home": 48,
+        "points_classement_away": 49,
+        "nom_classement_home": "New York City FC",
+        "nom_classement_away": "Columbus Crew",
+        "country_fr": "USA - Major League Soccer",
+        "analyse_ia": "**Analyse du match : New York City FC vs Columbus Crew**\n\n**1. Analyse comparative des deux équipes :**\n\n- **New York City FC (Domicile) :**\n  - **Points forts :**\n    - Bonne moyenne de buts marqués (1.70) et solide en défense (1.40 buts encaissés en moyenne).\n    - Forme récente encourageante avec 4 victoires sur les 6 derniers matchs.\n    - Performant à domicile avec une série récente de L-W-W-L, marquant 5 buts et encaissant 6.\n  - **Points faibles :**\n    - Une certaine irrégularité dans les résultats, avec des défaites contre des équipes comme D.C. United et Toluca.\n    - La défense à domicile semble perméable, ayant encaissé 6 buts en 4 matchs.\n\n- **Columbus Crew (Extérieur) :**\n  - **Points forts :**\n    - Classement légèrement meilleur (6ᵉ avec 49 pts) que New York City FC (8ᵉ avec 48 pts).\n    - Capacité à marquer des buts à l'extérieur (8 buts en 5 matchs) et à maintenir une moyenne correcte en attaque (1.60).\n    - Récemment, ils ont montré une bonne résilience, comme leur victoire 5-4 contre Atlanta United.\n  - **Points faibles :**\n    - Forme en dents de scie avec des matchs nuls et des défaites récentes.\n    - Défense extérieure fragile, ayant encaissé 10 buts en 5 matchs.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- New York City FC joue à domicile, où il a une légère supériorité en termes de statistiques offensives et défensives.\n- Columbus Crew, bien qu'extérieur, a une attaque performante à l'extérieur, ce qui pourrait poser problème à la défense de New York.\n\n**3. Analyse des formes récentes :**\n\n- **New York City FC :** \n  - Forme sur 6 matchs : W L W W L W (12 points sur 18).\n  - Performances récentes montrent une tendance positive, avec des victoires contre des équipes comme Chicago Fire et Nashville SC.\n  - Cependant, une défaite récente contre D.C. United (1-2) montre des failles en défense.\n\n- **Columbus Crew :**\n  - Forme sur 6 matchs : W D L D W W (11 points sur 18).\n  - Une victoire spectaculaire contre Atlanta (5-4) mais aussi des défaites et des nuls qui montrent un manque de constance.\n  - La défense semble être un problème récurrent, avec 10 buts encaissés en 5 matchs extérieurs.\n\n**4. Contexte du championnat :**\n\n- Les deux équipes sont très proches au classement, avec Columbus Crew devant New York City FC d'un seul point.\n- Cela suggère que le match pourrait être disputé et serré, avec peu de différence entre les deux formations.\n\n**5. Confrontations directes :**\n\n- Aucune confrontation H2H récente disponible, ce qui rend difficile l'analyse basée sur l'historique des rencontres.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote n'est disponible pour ce match, ce qui limite l'analyse basée sur les marchés du pari.\n\n**7. Prédiction finale :**\n\n**BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n- Les deux équipes ont une attaque performante, avec New York City FC marquant 1.70 buts par match et Columbus Crew 1.60.\n- Les défenses respectives montrent des signes de faiblesse : New York a encaissé 6 buts en 4 matchs à domicile, et Columbus a encaissé 10 buts en 5 matchs à l'extérieur.\n- Les récents matchs des deux équipes montrent une tendance à des buts des deux côtés, comme la victoire 5-4 de Columbus contre Atlanta et la victoire 4-3 de New York contre Dallas.\n- Le contexte du championnat serré suggère que les deux équipes chercheront à marquer pour s'imposer, augmentant ainsi les chances que les deux équipes inscrivent au moins un but chacune.\n\nCette analyse statistique et contextuelle soutient l'idée que le match devrait voir des buts des deux côtés."
+      }
+    ]
+  }
+}
