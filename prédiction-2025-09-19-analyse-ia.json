@@ -1,0 +1,2749 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-19 02:21:48",
+    "date_matchs": "2025-09-19",
+    "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+    "total_predictions": 8,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v7_2": [
+      "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
+      "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
+      "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
+      "Amélioration de la robustesse du système d'analyse IA"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 8,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Wuhan Three Towns",
+        "AwayTeam": "Henan Jianye",
+        "date": "19 septembre 2025 à 11:35:00 UTC",
+        "league": "China - Super League",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 2.1,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 6,
+          "total_points": 4,
+          "serie_domicile": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 16,
+          "total_marques": 9,
+          "total_encaisses": 21
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 12,
+          "total_points": 10,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 12,
+          "total_marques": 19,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Tianjin Jinmen Tiger",
+            "Wuhan Three Towns",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Wuhan Three Towns",
+            "Shanghai Shenhua",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 25",
+            "Beijing Guoan",
+            "Wuhan Three Towns",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Yunnan Yukun",
+            "Wuhan Three Towns",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Wuhan Three Towns",
+            "Meizhou Hakka",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "Wuhan Three Towns",
+            "Changchun Yatai",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Zhejiang Professional FC",
+            "Wuhan Three Towns",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Jul 18",
+            "Wuhan Three Towns",
+            "Qingdao West Coast",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jun 29",
+            "Wuhan Three Towns",
+            "Chengdu Rongcheng",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Jun 25",
+            "Shandong Taishan",
+            "Wuhan Three Towns",
+            "",
+            "3 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Fri, Sep 12",
+            "Henan Songshan Longmen",
+            "Beijing Guoan",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 29",
+            "Qingdao Hainiu",
+            "Henan Songshan Longmen",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Henan Songshan Longmen",
+            "Dalian Yingbo",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Shanghai Port",
+            "Henan Songshan Longmen",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 8",
+            "Henan Songshan Longmen",
+            "Shenzhen Xinpengcheng",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Qingdao West Coast",
+            "Henan Songshan Longmen",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jul 27",
+            "Shanghai Shenhua",
+            "Henan Songshan Longmen",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Jul 19",
+            "Henan Songshan Longmen",
+            "Meizhou Hakka",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Mon, Jun 30",
+            "Henan Songshan Longmen",
+            "Shandong Taishan",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Thu, Jun 26",
+            "Yunnan Yukun",
+            "Henan Songshan Longmen",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Wuhan Three Towns": {
+            "position": 12,
+            "points": 24
+          },
+          "Henan Jianye": {
+            "position": 11,
+            "points": 26
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Chengdu Rongcheng",
+            "points": 53
+          },
+          {
+            "position": 2,
+            "team": "Shanghai Port",
+            "points": 51
+          },
+          {
+            "position": 3,
+            "team": "Shanghai Shenhua",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Beijing Guoan",
+            "points": 48
+          },
+          {
+            "position": 5,
+            "team": "Shandong Taishan",
+            "points": 41
+          },
+          {
+            "position": 6,
+            "team": "Zhejiang Professional FC",
+            "points": 37
+          },
+          {
+            "position": 7,
+            "team": "Tianjin Jinmen Tiger",
+            "points": 37
+          },
+          {
+            "position": 8,
+            "team": "Dalian Yingbo",
+            "points": 32
+          },
+          {
+            "position": 9,
+            "team": "Yunnan Yukun",
+            "points": 30
+          },
+          {
+            "position": 10,
+            "team": "Qingdao West Coast",
+            "points": 27
+          },
+          {
+            "position": 11,
+            "team": "Henan Songshan Longmen",
+            "points": 26
+          },
+          {
+            "position": 12,
+            "team": "Wuhan Three Towns",
+            "points": 24
+          },
+          {
+            "position": 13,
+            "team": "Shenzhen Xinpengcheng",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Meizhou Hakka",
+            "points": 17
+          },
+          {
+            "position": 15,
+            "team": "Qingdao Hainiu",
+            "points": 16
+          },
+          {
+            "position": 16,
+            "team": "Changchun Yatai",
+            "points": 16
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/5695.png",
+        "logo_away": "https://media.api-sports.io/football/teams/840.png",
+        "classement_home": 12,
+        "classement_away": 11,
+        "points_classement_home": 24,
+        "points_classement_away": 26,
+        "nom_classement_home": "Wuhan Three Towns",
+        "nom_classement_away": "Henan Songshan Longmen",
+        "country_fr": "China - Super League",
+        "analyse_ia": "<think>\nAlright, I need to analyze the upcoming match between Wuhan Three Towns and Henan Jianye. Let me start by looking at the statistics provided.\n\nWuhan Three Towns is ranked 12th with 24 points. Their average goals scored is 0.90, and they concede 2.10 on average. Looking at their recent form, they've only won one game in their last six, which isn't great. At home, they've scored 5 goals and let in 5, so their defense seems shaky.\n\nHenan Jianye is just one spot above Wuhan, at 11th with 26 points. They score more on average, 1.90 goals per game, but also concede 1.60. Their recent form is a bit better, with three wins in the last six matches. However, their away form isn't impressive—they've lost three of their last five away games, scoring only 6 and conceding 12.\n\nLooking at the head-to-head, there's no data provided, so I can't factor that in. The league standings show both teams are in the lower half, struggling to move up.\n\nWuhan's recent matches show they've lost four of their last five, including a heavy 4-0 defeat. Their only win was against Shanghai Shenhua. At home, they've had some draws but not many wins.\n\nHenan has some wins but also some losses. They've scored in most of their games, which is a positive. Their away form is concerning, though, with more goals conceded than scored.\n\nConsidering both teams' defensive issues, it's likely that both might score. Wuhan's home games have seen goals from both sides, and Henan's away games have too. The match could go either way, but given their similar positions and defensive weaknesses, a draw seems plausible. Alternatively, since both can score, BTTS oui is also a good option.\n\nI think the safest bet is BTTS oui because both teams have shown they can score, even if they don't win. Alternatively, a draw could happen, but I'm more confident in both teams scoring.\n</think>\n\n**Prédiction : BTTS oui (Both Teams To Score)**\n\n**Justification :**\n\n1. **Analyse Comparative des Équipes :**\n   - **Wuhan Three Towns (Domicile) :** \n     - Faible moyenne de buts marqués (0,90) mais capable de marquer occasionnellement.\n     - Défense fragile avec une moyenne de 2,10 buts encaissés.\n   - **Henan Jianye (Extérieur) :**\n     - Meilleure moyenne offensive (1,90) mais défense vulnérable (1,60).\n     - Capacité à marquer même à l'extérieur, malgré des défaites récentes.\n\n2. **Impact du Facteur Domicile/Extérieur :**\n   - Wuhan a du mal à gagner à domicile, avec seulement 5 buts marqués en 5 matchs.\n   - Henan a des difficultés à l'extérieur, avec 6 buts marqués pour 12 encaissés, montrant une tendance à concéder des buts.\n\n3. **Forme Récente et Tendances :**\n   - Wuhan a perdu 4 de ses 5 derniers matchs, montrant une forme déclinante.\n   - Henan a une forme inégale, avec des victoires et des défaites, mais reste capable de marquer.\n\n4. **Contexte du Championnat :**\n   - Les deux équipes sont proches au classement, avec Henan légèrement mieux classée.\n   - Les deux équipes luttent pour éviter la relégation, ce qui peut motiver une performance offensive.\n\n5. **Confrontations Directes :**\n   - Aucune donnée disponible, donc l'analyse se base sur les statistiques générales.\n\n6. **Évaluation des Cotes :**\n   - Aucune cote disponible, donc la prédiction se base sur les statistiques.\n\n**Conclusion :**\nLes deux équipes ont des défenses fragiles et sont capables de marquer, ce qui augmente la probabilité que les deux équipes inscrivent au moins un but chacune. Bien qu'un match nul soit possible, le scénario le plus probable est que les deux équipes marquent, d'où la prédiction BTTS oui."
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Goztepe",
+        "AwayTeam": "Besiktas",
+        "date": "19 septembre 2025 à 17:00:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.4,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 9,
+          "total_points": 9,
+          "serie_domicile": [
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 1,
+          "total_marques": 7,
+          "total_encaisses": 2
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 13,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 11,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 15,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Kayserispor",
+            "Goztepe",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 29",
+            "Goztepe",
+            "Konyaspor",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 22",
+            "Fatih Karagümrük",
+            "Goztepe",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Goztepe",
+            "Fenerbahce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 10",
+            "Caykur Rizespor",
+            "Goztepe",
+            "",
+            "0 - 3",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Besiktas",
+            "Istanbul Basaksehir",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Alanyaspor",
+            "Besiktas",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Aug 28",
+            "Besiktas",
+            "Lausanne Sports",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 21",
+            "Lausanne Sports",
+            "Besiktas",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Besiktas",
+            "Eyupspor",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 14",
+            "Besiktas",
+            "St Patricks Athletic",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Thu, Aug 7",
+            "St Patricks Athletic",
+            "Besiktas",
+            "",
+            "1 - 4",
+            "FT"
+          ],
+          [
+            "Thu, Jul 31",
+            "Shakhtar Donetsk",
+            "Besiktas",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Thu, Jul 24",
+            "Besiktas",
+            "Shakhtar Donetsk",
+            "",
+            "2 - 4",
+            "FT"
+          ],
+          [
+            "Thu, Jul 17",
+            "Besiktas",
+            "Petrzalka",
+            "",
+            "1 - 2",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Goztepe": {
+            "position": 4,
+            "points": 9
+          },
+          "Besiktas": {
+            "position": 10,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Fenerbahce",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Trabzonspor",
+            "points": 10
+          },
+          {
+            "position": 4,
+            "team": "Goztepe",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Antalyaspor",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Gaziantep FK",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Alanyaspor",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Samsunspor",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Konyaspor",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Besiktas",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Istanbul Basaksehir",
+            "points": 5
+          },
+          {
+            "position": 12,
+            "team": "Kasimpasa",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Caykur Rizespor",
+            "points": 4
+          },
+          {
+            "position": 14,
+            "team": "Eyupspor",
+            "points": 4
+          },
+          {
+            "position": 15,
+            "team": "Kayserispor",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Fatih Karagümrük",
+            "points": 3
+          },
+          {
+            "position": 17,
+            "team": "Kocaelispor",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Genclerbirligi",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/994.png",
+        "logo_away": "https://media.api-sports.io/football/teams/549.png",
+        "classement_home": 4,
+        "classement_away": 10,
+        "points_classement_home": 9,
+        "points_classement_away": 6,
+        "nom_classement_home": "Goztepe",
+        "nom_classement_away": "Besiktas",
+        "country_fr": "Turkey - Süper Lig",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Goztepe et Besiktas en Süper Lig. D'abord, je vais regarder les statistiques de chaque équipe.\n\nGoztepe est 4ème avec 9 points. Ils ont une moyenne de 1,40 but marqués par match et encaissent en moyenne 0,40 but. Cela montre qu'ils ont une défense solide. Ces derniers temps, leur forme est mitigée avec des matchs nuls et une victoire. À domicile, ils ont marqué et encaissé chacun 1 but, ce qui indique qu'ils ne sont pas particulièrement dominants à domicile.\n\nBesiktas, eux, sont 10èmes avec 6 points. Ils marquent en moyenne 1,50 but et encaissent 1,70. Leur forme récente est inégale avec des victoires et des défaites. En extérieur, ils ont marqué 5 buts et en ont encaissé 6, ce qui suggère une attaque efficace mais une défense fragile.\n\nEn regardant leurs 10 derniers matchs, Goztepe a plus de nuls et une seule victoire, tandis que Besiktas a une alternance de victoires et défaites. Cela indique que Goztepe est plus stable mais manque d'impact offensif, alors que Besiktas a une attaque plus percutante mais une défense qui accuse.\n\nLe classement montre que Goztepe est mieux placé, mais Besiktas a une attaque plus productive. Comme il n'y a pas de confrontations directes récentes, je dois m'appuyer sur les statistiques actuelles.\n\nJe pense que le match pourrait être serré. Goztepe a une bonne défense, donc il est peu probable que Besiktas leur inflige un large score. En même temps, l'attaque de Besiktas pourrait poser des problèmes à Goztepe. Une issue nulle semble plausible, car Goztepe a tendance à faire des nuls, et Besiktas a du mal à gagner à l'extérieur.\n\nEn plus, les deux équipes ont des difficultés à marquer ou à concéder des buts, donc le total de buts pourrait être bas. Mais comme Besiktas a une attaque qui fonctionne, il y a une chance que les deux équipes marquent. Cependant, vu la solidité défensive de Goztepe, cela pourrait se limiter.\n\nEn résumé, je pencherais pour un match nul, car les deux équipes ont des forces et des faiblesses qui pourraient équilibrer le match. De plus, Goztepe a une tendance aux nuls, et Besiktas a du mal à s'imposer à l'extérieur.\n</think>\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n1. **Forme récente :** Goztepe a une forme mitigée avec plusieurs nuls, tandis que Besiktas alterne victoires et défaites. Cela suggère un équilibre potentiel entre les deux équipes.\n\n2. **Statistiques offensives et défensives :** Goztepe a une défense solide (0,40 buts encaissés en moyenne), ce qui rend difficile pour Besiktas de marquer largement. Besiktas, bien que plus offensif, a une défense plus perméable, ce qui pourrait permettre à Goztepe de marquer.\n\n3. **Contexte du championnat :** Goztepe est mieux classé, jouant à domicile, où il a tendance à faire des nuls. Besiktas, en déplacement, a du mal à gagner, ce qui renforce la probabilité d'un nul.\n\n4. **Tendances des buts :** Bien que Besiktas ait une attaque plus productive, la solidité défensive de Goztepe pourrait limiter le nombre de buts, conduisant à un score bas.\n\nEn conclusion, les deux équipes ont des caractéristiques qui favorisent un match nul, avec une défense solide de Goztepe et une attaque de Besiktas qui pourrait être contenue."
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Lecce",
+        "AwayTeam": "Cagliari",
+        "date": "19 septembre 2025 à 18:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cagliari": 2.96,
+            "Lecce": 2.87,
+            "Draw": 3.04
+          },
+          "totals": {
+            "Over": 1.59,
+            "Under": 2.6
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.75,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_domicile": [
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 4,
+          "total_marques": 3,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 4,
+          "total_marques": 5,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Atalanta",
+            "Lecce",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 29",
+            "Lecce",
+            "AC Milan",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Genoa",
+            "Lecce",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Fri, Aug 15",
+            "Lecce",
+            "Juve Stabia",
+            "",
+            "2 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Cagliari",
+            "Parma",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Napoli",
+            "Cagliari",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Cagliari",
+            "Fiorentina",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Cagliari",
+            "Virtus Entella",
+            "",
+            "1 - 1",
+            "FT-Pens"
+          ],
+          [
+            "Wed, Jul 23",
+            "Galatasaray",
+            "Cagliari",
+            "",
+            "3 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Lecce": {
+            "position": 20,
+            "points": 1
+          },
+          "Cagliari": {
+            "position": 8,
+            "points": 4
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Napoli",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Juventus",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Cremonese",
+            "points": 7
+          },
+          {
+            "position": 4,
+            "team": "Udinese",
+            "points": 7
+          },
+          {
+            "position": 5,
+            "team": "AC Milan",
+            "points": 6
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 6
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 5
+          },
+          {
+            "position": 8,
+            "team": "Cagliari",
+            "points": 4
+          },
+          {
+            "position": 9,
+            "team": "Como",
+            "points": 4
+          },
+          {
+            "position": 10,
+            "team": "Torino",
+            "points": 4
+          },
+          {
+            "position": 11,
+            "team": "Internazionale",
+            "points": 3
+          },
+          {
+            "position": 12,
+            "team": "Lazio",
+            "points": 3
+          },
+          {
+            "position": 13,
+            "team": "Bologna",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Sassuolo",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "Genoa",
+            "points": 2
+          },
+          {
+            "position": 16,
+            "team": "Fiorentina",
+            "points": 2
+          },
+          {
+            "position": 17,
+            "team": "Hellas Verona",
+            "points": 2
+          },
+          {
+            "position": 18,
+            "team": "Pisa",
+            "points": 1
+          },
+          {
+            "position": 19,
+            "team": "Parma",
+            "points": 1
+          },
+          {
+            "position": 20,
+            "team": "Lecce",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/867.png",
+        "logo_away": "https://media.api-sports.io/football/teams/490.png",
+        "classement_home": 20,
+        "classement_away": 8,
+        "points_classement_home": 1,
+        "points_classement_away": 4,
+        "nom_classement_home": "Lecce",
+        "nom_classement_away": "Cagliari",
+        "country_fr": "Italy - Serie A",
+        "analyse_ia": "**Analyse du match : Lecce vs Cagliari**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Lecce (Domicile) :**\n  - Classement : 20ᵉ avec 1 point.\n  - Forme récente : 4 points sur 6 matchs (2 défaites, 1 nul, 1 victoire).\n  - Statistiques à domicile : 2 buts marqués et 2 encaissés en 2 matchs.\n  - Faiblesse offensive : Seulement 0,75 but marqués en moyenne par match.\n  - Défense fragile : 1,5 but encaissés en moyenne.\n\n- **Cagliari (Extérieur) :**\n  - Classement : 8ᵉ avec 4 points.\n  - Forme récente : 5 points sur 6 matchs (1 victoire, 2 nuls, 2 défaites).\n  - Statistiques à l'extérieur : 1 but marqué et 4 encaissés en 2 matchs.\n  - Attaque plus en vue : 1 but marqué en moyenne par match.\n  - Défense instable : 1,2 but encaissés en moyenne.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Lecce semble avoir des difficultés à domicile, avec une seule victoire et une défaite, malgré une légère amélioration récente.\n- Cagliari, bien qu'étant en déplacement, a une forme plus stable avec une victoire et des nuls, montrant une certaine solidité.\n\n**3. Forme récente et tendances :**\n\n- **Lecce :** Une victoire contre Juve Stabia en amical, mais des performances inégales en championnat, avec une lourde défaite contre Atalanta (4-1).\n- **Cagliari :** Une victoire contre Parma et un nul contre Fiorentina, montrent une capacité à rivaliser avec des équipes du haut de tableau.\n\n**4. Contexte du championnat :**\n\n- Lecce est lanterne rouge avec seulement 1 point, urgente de réagir pour ne pas s'enfoncer.\n- Cagliari, avec 4 points, est en milieu de tableau, cherchant à grimper.\n\n**5. Confrontations directes :**\n\n- Aucune donnée disponible pour cette saison, donc pas d'indications supplémentaires.\n\n**6. Évaluation des cotes :**\n\n- **1X2 :** Cagliari : 2.96, Lecce : 2.87, Nul : 3.04.\n- **Total 2.5 :** Over : 1.59, Under : 2.6.\n\n**7. Prédiction finale :**\n\n**Double chance X2 (Nul ou Victoire de Cagliari)**\n\n**Justification :**\n\n- **Forme récente :** Cagliari montre une meilleure constance avec une victoire et des nuls, tandis que Lecce peine à performer.\n- **Attaque vs Défense :** Bien que Lecce ait marqué 2 buts à domicile, sa moyenne offensive reste faible. Cagliari, malgré des encaissements, a une attaque plus régulière.\n- **Cotes :** Les cotes pour un nul ou une victoire de Cagliari sont attractives, reflétant le potentiel de l'équipe extérieure.\n- **Enjeu :** Cagliari a plus d'expérience et de maturité pour gérer ce type de match, contrairement à Lecce qui lutte pour se maintenir.\n\nEn conclusion, compte tenu des formes récentes, des statistiques offensives et défensives, ainsi que du contexte du championnat, la double chance X2 semble être la prédiction la plus fiable pour ce match."
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Lyon",
+        "AwayTeam": "Angers",
+        "date": "19 septembre 2025 à 18:45:00 UTC",
+        "league": "France - Ligue 1",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Angers": 6.86,
+            "Lyon": 1.51,
+            "Draw": 4.87
+          },
+          "totals": {
+            "Over": 1.82,
+            "Under": 2.15
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.8333333333333333,
+          "moyenne_encaisses": 0.8333333333333334,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 12,
+          "total_points": 12,
+          "serie_domicile": [
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 5,
+          "total_marques": 11,
+          "total_encaisses": 5
+        },
+        "stats_away": {
+          "moyenne_marques": 0.75,
+          "moyenne_encaisses": 0.75,
+          "form_6": [
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 2,
+          "total_marques": 3,
+          "total_encaisses": 3
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Stade Rennais",
+            "Lyon",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Lyon",
+            "Marseille",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Lyon",
+            "Metz",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Lens",
+            "Lyon",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Bayern Munich",
+            "Lyon",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "Mallorca",
+            "Lyon",
+            "",
+            "0 - 4",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Sep 14",
+            "Metz",
+            "Angers",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Angers",
+            "Stade Rennais",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 22",
+            "Paris Saint-Germain",
+            "Angers",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Angers",
+            "Paris FC",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Lyon": {
+            "position": 4,
+            "points": 9
+          },
+          "Angers": {
+            "position": 12,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Paris Saint-Germain",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Lille",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "AS Monaco",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Lyon",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Strasbourg",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Stade Rennais",
+            "points": 7
+          },
+          {
+            "position": 7,
+            "team": "Marseille",
+            "points": 6
+          },
+          {
+            "position": 8,
+            "team": "Lens",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Nice",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Toulouse",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Paris FC",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Angers",
+            "points": 5
+          },
+          {
+            "position": 13,
+            "team": "Le Havre AC",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Nantes",
+            "points": 3
+          },
+          {
+            "position": 15,
+            "team": "AJ Auxerre",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Lorient",
+            "points": 3
+          },
+          {
+            "position": 17,
+            "team": "Brest",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Metz",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/80.png",
+        "logo_away": "https://media.api-sports.io/football/teams/77.png",
+        "classement_home": 4,
+        "classement_away": 12,
+        "points_classement_home": 9,
+        "points_classement_away": 5,
+        "nom_classement_home": "Lyon",
+        "nom_classement_away": "Angers",
+        "country_fr": "France - Ligue 1",
+        "analyse_ia": "<think>\nBon, je dois analyser ce match de football entre Lyon et Angers pour faire une prédiction. D'abord, je vais regarder les statistiques de chaque équipe.\n\nLyon est 4ème avec 9 points. Ils ont une moyenne de 1,83 but marqués par match et encaissent en moyenne 0,83 but. Ces stats montrent qu'ils sont offensivement solides et défensivement stables. Leur forme récente est bonne : sur les 6 derniers matchs, ils ont 12 points avec 4 victoires et 1 défaite. À domicile, ils ont gagné leurs deux derniers matchs sans encaisser de buts, ce qui est un bon signe.\n\nAngers, eux, sont 12ème avec 5 points. Ils marquent en moyenne 0,75 buts et encaissent 0,75 aussi. Leur forme est moins bonne : sur les 6 derniers matchs, ils ont 5 points avec 1 victoire, 2 nuls et 3 défaites. En extérieur, ils ont perdu deux fois et ont marqué seulement 1 but.\n\nEn regardant les 10 derniers matchs de Lyon, ils ont gagné contre des équipes comme Marseille et Metz, et ont aussi battu la Rennes. Cela montre qu'ils performent bien contre des équipes du haut et du milieu du tableau. Angers, quant à eux, ont du mal à gagner en extérieur, avec seulement un nul et une défaite récemment.\n\nLe classement complet de la Ligue 1 montre que Lyon est dans le top 4, tandis qu'Angers lutte pour ne pas descendre. Cela indique que Lyon a plus d'enjeux pour rester dans les premières places, ce qui peut motiver les joueurs.\n\nIl n'y a pas de confrontations directes récentes entre les deux équipes, donc c'est un peu difficile de se baser là-dessus. Mais les stats générales montrent que Lyon a une attaque plus puissante et une défense solide.\n\nEn ce qui concerne les cotes, Lyon a une cote de 1,51 pour gagner, ce qui est assez bas, ce qui reflète leur statut de favoris. Le total de buts sur 2,5 a une cote de 1,82 pour le \"plus\", ce qui suggère que les bookmakers s'attendent à un match avec plusieurs buts.\n\nEn résumé, Lyon semble être la meilleure équipe ici. Ils ont une bonne forme, une attaque efficace et une défense solide. Angers a du mal à marquer et à gagner en extérieur. Donc, je pense que Lyon devrait gagner ce match.\n\nPour les options de pari, je pourrais choisir \"Victoire domicile\" ou \"Plus de 2.5 buts\". Mais comme Lyon a marqué 4 buts en deux matchs à domicile sans encaisser, il est probable qu'ils marquent au moins deux buts. Donc, \"Plus de 2.5 buts\" semble une bonne option.\n\nEn conclusion, je vais recommander \"Plus de 2.5 buts\" pour ce match.\n</think>\n\n**Prédiction : Plus de 2.5 buts**\n\n**Justification :**\n\n1. **Statistiques Offensives de Lyon :**\n   - Lyon a une moyenne de 1,83 but marqué par match, montrant une attaque efficace.\n   - À domicile, Lyon a marqué 4 buts en deux matchs, démontrant une capacité à inscrire des buts.\n\n2. **Faiblesses Defensives d'Angers :**\n   - Angers encaisse en moyenne 0,75 but par match, mais a déjà concédé 2 buts en extérieur.\n   - En extérieur, Angers a du mal à contenir les attaques adverses, ce qui pourrait profiter à Lyon.\n\n3. **Forme Récente :**\n   - Lyon est en bonne forme avec 4 victoires en 6 matchs, tandis qu'Angers a du mal à gagner.\n   - Les deux derniers matchs à domicile de Lyon ont été sans but encaissé, indiquant une défense solide.\n\n4. **Cotes et Marché :**\n   - Les cotes pour \"Plus de 2.5 buts\" sont de 1,82, reflétant l'attente d'un match prolifique en buts.\n\n5. **Contexte du Championnat :**\n   - Lyon, 4ème, a besoin de points pour maintenir sa position, ce qui motive l'équipe à attaquer.\n\n**Conclusion :**\nCompte tenu de l'attaque puissante de Lyon et des difficultés défensives d'Angers, il est probable que le match dépasse les 2,5 buts."
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Real Betis",
+        "AwayTeam": "Real Sociedad",
+        "date": "19 septembre 2025 à 19:00:00 UTC",
+        "league": "Spain - La Liga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Real Betis": 2.05,
+            "Real Sociedad": 4.01,
+            "Draw": 3.58
+          },
+          "totals": {
+            "Over": 2.02,
+            "Under": 1.92
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.625,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 11,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 8,
+          "total_marques": 13,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 2,
+          "total_points_10": 2,
+          "total_points": 2,
+          "serie_exterieur": [
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 2,
+          "total_marques": 4,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Sun, Sep 14",
+            "Levante",
+            "Real Betis",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Real Betis",
+            "Athletic Club",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Celta Vigo",
+            "Real Betis",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Aug 22",
+            "Real Betis",
+            "Alavés",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Elche",
+            "Real Betis",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 6",
+            "Real Betis",
+            "Como",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Wed, Jul 30",
+            "Coventry City",
+            "Real Betis",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Fri, Jul 25",
+            "Córdoba",
+            "Real Betis",
+            "",
+            "3 - 4",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "Real Sociedad",
+            "Real Madrid",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Real Oviedo",
+            "Real Sociedad",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Real Sociedad",
+            "Espanyol",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 16",
+            "Valencia",
+            "Real Sociedad",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Real Betis": {
+            "position": 10,
+            "points": 6
+          },
+          "Real Sociedad": {
+            "position": 17,
+            "points": 2
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Real Madrid",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Barcelona",
+            "points": 10
+          },
+          {
+            "position": 3,
+            "team": "Espanyol",
+            "points": 10
+          },
+          {
+            "position": 4,
+            "team": "Getafe",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "Athletic Club",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Villarreal",
+            "points": 7
+          },
+          {
+            "position": 7,
+            "team": "Alavés",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "Elche",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Osasuna",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Real Betis",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Atlético Madrid",
+            "points": 5
+          },
+          {
+            "position": 12,
+            "team": "Sevilla",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Rayo Vallecano",
+            "points": 4
+          },
+          {
+            "position": 14,
+            "team": "Celta Vigo",
+            "points": 4
+          },
+          {
+            "position": 15,
+            "team": "Valencia",
+            "points": 4
+          },
+          {
+            "position": 16,
+            "team": "Real Oviedo",
+            "points": 3
+          },
+          {
+            "position": 17,
+            "team": "Real Sociedad",
+            "points": 2
+          },
+          {
+            "position": 18,
+            "team": "Levante",
+            "points": 1
+          },
+          {
+            "position": 19,
+            "team": "Mallorca",
+            "points": 1
+          },
+          {
+            "position": 20,
+            "team": "Girona",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704805",
+            "date": "Sunday, December 1, 2024",
+            "team1": "Real Sociedad",
+            "score": "2 - 0",
+            "team2": "Real Betis",
+            "title": "Real Sociedad VS Real Betis",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704805/real-betis-real-sociedad",
+            "source": "La Liga"
+          },
+          {
+            "gameId": "704896",
+            "date": "Sunday, February 16, 2025",
+            "team1": "Real Betis",
+            "score": "3 - 0",
+            "team2": "Real Sociedad",
+            "title": "Real Betis VS Real Sociedad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704896/real-sociedad-real-betis",
+            "source": "La Liga"
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/543.png",
+        "logo_away": "https://media.api-sports.io/football/teams/548.png",
+        "classement_home": 10,
+        "classement_away": 17,
+        "points_classement_home": 6,
+        "points_classement_away": 2,
+        "nom_classement_home": "Real Betis",
+        "nom_classement_away": "Real Sociedad",
+        "country_fr": "Spain - La Liga",
+        "analyse_ia": "<think>\nOkay, I need to analyze the match between Real Betis and Real Sociedad on September 19, 2025. Let me go through the data provided step by step.\n\nFirst, looking at Real Betis as the home team. They're ranked 10th with 6 points. Their average goals scored is 1.62 and conceded is 1.50. In their last 6 matches, they have 7 points with a form of D, L, D, W, D, D. Over 10 matches, they have 11 points. At home, their recent form is L-W-D, scoring 4 and conceding 4.\n\nNow, Real Sociedad is the away team, ranked 17th with 2 points. They average 1.00 goals scored and 1.50 conceded. Their last 6 matches give them 2 points with a form of L, L, D, D. Over 10 matches, it's the same 2 points. Away form is L-D, scoring 1 and conceding 2.\n\nLooking at their head-to-head in the last season, Real Sociedad won 2-0 at home, and Real Betis won 3-0 at home. So, each team won once in their last two meetings.\n\nThe odds from 1xBet are: Real Betis to win at 2.05, Real Sociedad at 4.01, and a draw at 3.58. For total goals, over 2.5 is 2.02 and under is 1.92.\n\nReal Betis has a better recent form compared to Real Sociedad. They have a higher average of goals scored and a slightly better defensive record. At home, they've shown some inconsistency but have the potential to score. Real Sociedad is struggling, especially away, with only 1 goal scored in their last two away games.\n\nConsidering the head-to-head, Real Betis has a strong home win recently. Their recent form, even with some draws and a loss, shows they can score against various opponents. Real Sociedad's struggle to win away and their lower scoring rate makes it tough for them.\n\nThe odds suggest a slight edge towards Real Betis, but not overwhelmingly. A draw is possible, but given Real Betis's home advantage and better scoring ability, they might edge this. However, considering both teams can score, BTTS oui is a possibility, but Real Betis's home form and better attack might lead to a win.\n\nSo, I think the best prediction is a \"Victoire domicile\" for Real Betis.\n</think>\n\n**Prédiction : Victoire domicile (Real Betis)**\n\n**Justification :**\n\n1. **Forme Récente :** Real Betis montre une forme plus solide avec une moyenne de 1.62 buts marqués par match, contre 1.00 pour Real Sociedad. Bien qu'ils aient des défaites, leur capacité à marquer régulièrement est un avantage.\n\n2. **Avantage Domicile :** Real Betis a gagné leur dernier match à domicile contre la Real Sociedad avec un score de 3-0, démontrant leur force à domicile.\n\n3. **Difficultés de Real Sociedad à l'Extérieur :** Real Sociedad a du mal à gagner à l'extérieur, ne marquant qu'un seul but dans leurs deux derniers déplacements, ce qui les place en 17ème position.\n\n4. **Confrontations Directes :** Bien que Real Sociedad ait gagné à domicile la dernière fois, Real Betis a dominé lors de leur dernier match à domicile, indiquant une supériorité potentielle.\n\n5. **Cotes :** Les cotes de 1xBet favorisent légèrement Real Betis, avec un odds de 2.05 pour une victoire, reflétant leur meilleure forme et position.\n\nEn conclusion, compte tenu de leur meilleure forme offensive, de leur avantage à domicile et des difficultés de Real Sociedad à l'extérieur, Real Betis devrait s'imposer dans ce match."
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Rio Ave",
+        "AwayTeam": "FC Porto",
+        "date": "19 septembre 2025 à 19:15:00 UTC",
+        "league": "Portugal - Primeira Liga",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 2.6,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 3,
+          "total_points": 3,
+          "serie_domicile": [
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 7,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 0.7777777777777778,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 18,
+          "total_points_10": 20,
+          "total_points": 18,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 3,
+          "total_marques": 18,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          [
+            "Sat, Sep 13",
+            "Moreirense",
+            "Rio Ave",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Rio Ave",
+            "Braga",
+            "",
+            "2 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 23",
+            "Arouca",
+            "Rio Ave",
+            "",
+            "3 - 3",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Rio Ave",
+            "C.D. Nacional",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Thu, Aug 7",
+            "Al Nassr",
+            "Rio Ave",
+            "",
+            "4 - 0",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sat, Sep 13",
+            "FC Porto",
+            "C.D. Nacional",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Sporting CP",
+            "FC Porto",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "FC Porto",
+            "Casa Pia",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Gil Vicente",
+            "FC Porto",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Mon, Aug 11",
+            "FC Porto",
+            "Guimaraes",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 3",
+            "FC Porto",
+            "Atlético Madrid",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Jun 23",
+            "FC Porto",
+            "Al Ahly",
+            "",
+            "4 - 4",
+            "FT"
+          ],
+          [
+            "Thu, Jun 19",
+            "Inter Miami CF",
+            "FC Porto",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Jun 15",
+            "Palmeiras",
+            "FC Porto",
+            "",
+            "0 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Rio Ave": {
+            "position": 15,
+            "points": 3
+          },
+          "FC Porto": {
+            "position": 1,
+            "points": 15
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Porto",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Sporting CP",
+            "points": 12
+          },
+          {
+            "position": 3,
+            "team": "Moreirense",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "FC Famalicao",
+            "points": 10
+          },
+          {
+            "position": 5,
+            "team": "Gil Vicente",
+            "points": 10
+          },
+          {
+            "position": 6,
+            "team": "Benfica",
+            "points": 10
+          },
+          {
+            "position": 7,
+            "team": "Braga",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Guimaraes",
+            "points": 7
+          },
+          {
+            "position": 9,
+            "team": "Casa Pia",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Santa Clara",
+            "points": 5
+          },
+          {
+            "position": 11,
+            "team": "Estoril",
+            "points": 5
+          },
+          {
+            "position": 12,
+            "team": "Arouca",
+            "points": 5
+          },
+          {
+            "position": 13,
+            "team": "Alverca",
+            "points": 4
+          },
+          {
+            "position": 14,
+            "team": "C.D. Nacional",
+            "points": 4
+          },
+          {
+            "position": 15,
+            "team": "Rio Ave",
+            "points": 3
+          },
+          {
+            "position": 16,
+            "team": "Estrela",
+            "points": 3
+          },
+          {
+            "position": 17,
+            "team": "AVS",
+            "points": 1
+          },
+          {
+            "position": 18,
+            "team": "Tondela",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/226.png",
+        "logo_away": "https://media.api-sports.io/football/teams/212.png",
+        "classement_home": 15,
+        "classement_away": 1,
+        "points_classement_home": 3,
+        "points_classement_away": 15,
+        "nom_classement_home": "Rio Ave",
+        "nom_classement_away": "FC Porto",
+        "country_fr": "Portugal - Primeira Liga",
+        "analyse_ia": "**Analyse du match : Rio Ave vs FC Porto**\n\n**1. Analyse comparative des deux équipes :**\n\n- **Rio Ave (Domicile) :**\n  - Classement : 15ᵉ avec 3 points.\n  - Forme récente : Seulement 3 points en 6 matchs, avec une série de 4 défaites et 2 nuls.\n  - Statistiques offensives : Moyenne de 1.40 buts marqués par match.\n  - Statistiques défensives : Moyenne de 2.60 buts encaissés par match.\n  - Performances à domicile : 3 buts marqués et 3 encaissés en 2 matchs.\n\n- **FC Porto (Extérieur) :**\n  - Classement : 1ᵉ avec 15 points.\n  - Forme récente : 6 victoires consécutives en championnat.\n  - Statistiques offensives : Moyenne de 2.00 buts marqués par match.\n  - Statistiques défensives : Moyenne de 0.78 buts encaissés par match.\n  - Performances à l'extérieur : 5 buts marqués et 3 encaissés en 4 matchs.\n\n**2. Impact du facteur domicile/extérieur :**\n\n- Rio Ave semble avoir des difficultés à domicile, avec une seule victoire en 5 matchs.\n- FC Porto, malgré une défaite à l'extérieur contre Inter Miami CF, maintient une excellente forme en championnat.\n\n**3. Analyse des formes récentes et tendances :**\n\n- Rio Ave : En difficulté avec une seule victoire en 10 matchs, montrant une faible efficacité offensive et défensive.\n- FC Porto : En pleine confiance avec 6 victoires de suite, démontrant une solidité défensive et une attaque performante.\n\n**4. Analyse du contexte du championnat :**\n\n- FC Porto domine le championnat avec 15 points, tandis que Rio Ave lutte pour ne pas descendre.\n- La pression est plus forte sur Rio Ave pour obtenir des points, mais leur forme récente ne les y prédispose pas.\n\n**5. Confrontations directes récentes :**\n\n- Aucune confrontation directe récente disponible, ce qui rend difficile une analyse comparative historique.\n\n**6. Évaluation des cotes :**\n\n- Aucune cote disponible, donc l'analyse se base uniquement sur les statistiques.\n\n**7. Prédiction finale :**\n\n**Victoire extérieur (FC Porto)**\n\n**Justification :**\n\n- FC Porto est en forme ascendante avec 6 victoires consécutives en championnat.\n- Rio Ave est en difficulté, avec une forme descendante et des statistiques défensives faibles.\n- FC Porto possède une attaque plus performante et une défense solide, ce qui leur donne un avantage significatif.\n- Bien que Rio Ave ait marqué des buts à domicile, leur incapacité à gagner et leur défense fragile les exposent face à une équipe en pleine confiance comme FC Porto."
+      },
+      {
+        "id": 7,
+        "HomeTeam": "Novorizontino",
+        "AwayTeam": "Athletic Club",
+        "date": "19 septembre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 10,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 10,
+          "total_marques": 8,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1111111111111112,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 9,
+          "total_points": 9,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 13,
+          "total_marques": 10,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          [
+            "Mon, 15 Sep",
+            "Ferroviária",
+            "Novorizontino",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Mon, 8 Sep",
+            "Novorizontino",
+            "Atlético Goianiense",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 31 Aug",
+            "Athletico Paranaense",
+            "Novorizontino",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, 23 Aug",
+            "Criciúma",
+            "Novorizontino",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 15 Aug",
+            "Novorizontino",
+            "Coritiba",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Sun, 10 Aug",
+            "Volta Redonda",
+            "Novorizontino",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sun, 3 Aug",
+            "Novorizontino",
+            "Avaí",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, 27 Jul",
+            "CRB",
+            "Novorizontino",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Wed, 23 Jul",
+            "Novorizontino",
+            "Goiás",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Fri, 18 Jul",
+            "Remo",
+            "Novorizontino",
+            "",
+            "1 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Tue, Sep 16",
+            "Athletic Club",
+            "Arsenal",
+            "",
+            "0 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Sep 13",
+            "Athletic Club",
+            "Alavés",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Real Betis",
+            "Athletic Club",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Mon, Aug 25",
+            "Athletic Club",
+            "Rayo Vallecano",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Athletic Club",
+            "Sevilla",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Arsenal",
+            "Athletic Club",
+            "",
+            "3 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 4",
+            "Liverpool",
+            "Athletic Club",
+            "",
+            "3 - 2",
+            "FT"
+          ],
+          [
+            "Mon, Aug 4",
+            "Liverpool",
+            "Athletic Club",
+            "",
+            "4 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Jul 26",
+            "PSV Eindhoven",
+            "Athletic Club",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Novorizontino": {
+            "position": 5,
+            "points": 40
+          },
+          "Athletic Club": {
+            "position": 14,
+            "points": 32
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 47
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 45
+          },
+          {
+            "position": 3,
+            "team": "Criciúma",
+            "points": 43
+          },
+          {
+            "position": 4,
+            "team": "Chapecoense",
+            "points": 41
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 40
+          },
+          {
+            "position": 6,
+            "team": "Athletico Paranaense",
+            "points": 39
+          },
+          {
+            "position": 7,
+            "team": "Remo",
+            "points": 39
+          },
+          {
+            "position": 8,
+            "team": "Cuiabá",
+            "points": 38
+          },
+          {
+            "position": 9,
+            "team": "CRB",
+            "points": 37
+          },
+          {
+            "position": 10,
+            "team": "Vila Nova",
+            "points": 36
+          },
+          {
+            "position": 11,
+            "team": "Avaí",
+            "points": 36
+          },
+          {
+            "position": 12,
+            "team": "Operario PR",
+            "points": 36
+          },
+          {
+            "position": 13,
+            "team": "Atlético Goianiense",
+            "points": 35
+          },
+          {
+            "position": 14,
+            "team": "Athletic",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "Ferroviária",
+            "points": 31
+          },
+          {
+            "position": 16,
+            "team": "Botafogo-SP",
+            "points": 29
+          },
+          {
+            "position": 17,
+            "team": "América Mineiro",
+            "points": 27
+          },
+          {
+            "position": 18,
+            "team": "Volta Redonda",
+            "points": 27
+          },
+          {
+            "position": 19,
+            "team": "Amazonas",
+            "points": 24
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 22
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/7834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/13975.png",
+        "classement_home": 5,
+        "classement_away": 14,
+        "points_classement_home": 40,
+        "points_classement_away": 32,
+        "nom_classement_home": "Novorizontino",
+        "nom_classement_away": "Athletic",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "<think>\nOkay, I'm trying to figure out how to predict the outcome of the match between Novorizontino and Athletic Club. Let me start by looking at the data provided.\n\nFirst, Novorizontino is playing at home. They're ranked 5th with 40 points. Their average goals scored is 0.80 and conceded is 1.40. Looking at their recent form over the last 6 games, they've only managed 5 points with a record of W D L L L D. Over 10 games, it's a bit better with 10 points, but still not great: W D L L L D D L W D. At home, their recent form is D-L-D-W, scoring 4 and conceding 4.\n\nAthletic Club is 14th with 32 points. They score an average of 1.11 and concede 2.00. Their last 6 games show 9 points with L L W W W L. Over 10 games, they have 9 points with a lot of losses. Away form is W-L-L-L-L, scoring 6 and conceding 13.\n\nLooking at their last 10 matches, Novorizontino has a mix of wins, draws, and losses, but not very convincing. They drew against Atlético Goianiense and Avaí, lost to Athletico Paranaense and Criciúma, and had a few wins. Athletic Club's recent games are a bit inconsistent too. They lost to Arsenal and Alavés, but won against Real Betis and Rayo Vallecano.\n\nIn terms of the league standings, Novorizontino is mid-table, while Athletic Club is near the relegation zone. That might mean Athletic is fighting harder to avoid relegation, which could motivate them to perform better.\n\nSince there are no head-to-head stats, I have to rely on other factors. Both teams don't have a strong offensive record, especially Novorizontino with only 0.80 goals per game. Athletic concedes a lot, 2.00 on average, which is a weakness.\n\nConsidering the recent forms, both teams aren't in top shape. Novorizontino's home form is shaky, and Athletic's away form is poor. But Athletic has managed some wins recently, which might indicate they're improving.\n\nI'm thinking about the BTTS (Both Teams To Score) option. Novorizontino doesn't score much, but they do concede at home. Athletic scores a bit more but also concedes a lot. It's possible both could score, but given their low scoring averages, maybe not.\n\nLooking at the over/under 2.5 goals, both teams have low averages. Novorizontino's games often have fewer goals, and Athletic's away games also tend to be low scoring.\n\nThe double chance options: 1X (home win or draw) or X2 (draw or away win). Given both teams' forms, a draw seems plausible. Alternatively, considering Athletic's motivation, maybe they could pull off a win.\n\nBut since Athletic's away form is bad and Novorizontino is at home, maybe a draw is more likely. Alternatively, Novorizontino might edge it, but their scoring is low.\n\nI'm leaning towards a draw because both teams aren't in great form and their scoring isn't high. Alternatively, considering Athletic's need for points, they might push for a win, but their away form is poor. So, maybe a nul is the safest bet.\n</think>\n\n**Prédiction : Match nul**\n\n**Justification :**\n\n1. **Forme Récente :** Les deux équipes ne sont pas dans une forme éblouissante. Novorizontino a obtenu 5 points sur ses 6 derniers matchs, tandis qu'Athletic Club a 9 points sur la même période, mais avec des performances inégales.\n\n2. **Statistiques Offensives et Défensives :** Novorizontino a une faible moyenne de buts marqués (0,80) et encaissés (1,40) à domicile. Athletic Club, bien qu'en scoring un peu plus (1,11), encaisse beaucoup (2,00) à l'extérieur.\n\n3. **Contexte du Championnat :** Novorizontino, 5ème, cherche à maintenir sa position, tandis qu'Athletic Club, 14ème, lutte pour éviter la relégation, ce qui pourrait les motiver à performer.\n\n4. **BTTS et Over/Under :** Les deux équipes ont des tendances défensives, avec un faible nombre de buts marqués. Cependant, leur capacité à encaisser des buts suggère que le match pourrait voir des buts des deux côtés, mais cela reste incertain.\n\n5. **Double Chance :** Bien qu'Athletic Club ait une mauvaise forme à l'extérieur, leur besoin de points pourrait les inciter à jouer de manière plus offensive. Cependant, Novorizontino, jouant à domicile, pourrait résister.\n\n6. **Conclusion :** Compte tenu des statistiques et des formes récentes, un match nul semble probable, car ni l'une ni l'autre équipe ne semble en mesure de dominer clairement l'autre."
+      },
+      {
+        "id": 8,
+        "HomeTeam": "Bucaramanga",
+        "AwayTeam": "Deportes Tolima",
+        "date": "19 septembre 2025 à 23:00:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 20,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 4,
+          "total_marques": 13,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 17,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 2,
+          "total_marques": 12,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          [
+            "Tue, Sep 16",
+            "América de Cali",
+            "Bucaramanga",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Sep 13",
+            "Atlético Nacional",
+            "Bucaramanga",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Tue, Sep 9",
+            "Bucaramanga",
+            "Once Caldas",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Sep 6",
+            "Bucaramanga",
+            "Alianza FC",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Sep 3",
+            "América de Cali",
+            "Bucaramanga",
+            "",
+            "2 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 30",
+            "Deportivo Pereira",
+            "Bucaramanga",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 27",
+            "Bucaramanga",
+            "América de Cali",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Bucaramanga",
+            "Águilas Doradas",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Mon, Aug 18",
+            "Atlético Junior",
+            "Bucaramanga",
+            "",
+            "2 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "Bucaramanga",
+            "Independiente Santa Fe",
+            "",
+            "2 - 1",
+            "FT"
+          ]
+        ],
+        "last_matches_away": [
+          [
+            "Sun, Sep 14",
+            "Deportes Tolima",
+            "Boyacá Chicó",
+            "",
+            "4 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Sep 6",
+            "Llaneros",
+            "Deportes Tolima",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sun, Aug 31",
+            "Deportes Tolima",
+            "Fortaleza CEIF",
+            "",
+            "1 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 24",
+            "Once Caldas",
+            "Deportes Tolima",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sun, Aug 17",
+            "Deportes Tolima",
+            "Millonarios",
+            "",
+            "3 - 1",
+            "FT"
+          ],
+          [
+            "Wed, Aug 13",
+            "Real Cundinamarca",
+            "Deportes Tolima",
+            "",
+            "1 - 0",
+            "FT"
+          ],
+          [
+            "Sat, Aug 9",
+            "América de Cali",
+            "Deportes Tolima",
+            "",
+            "0 - 1",
+            "FT"
+          ],
+          [
+            "Sat, Aug 2",
+            "Deportes Tolima",
+            "Atlético Nacional",
+            "",
+            "0 - 0",
+            "FT"
+          ],
+          [
+            "Tue, Jul 29",
+            "Deportes Tolima",
+            "Real Cundinamarca",
+            "",
+            "1 - 2",
+            "FT"
+          ],
+          [
+            "Fri, Jul 25",
+            "Deportes Tolima",
+            "Deportivo Pereira",
+            "",
+            "1 - 0",
+            "FT"
+          ]
+        ],
+        "classement": {
+          "Bucaramanga": {
+            "position": 1,
+            "points": 21
+          },
+          "Deportes Tolima": {
+            "position": 4,
+            "points": 20
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bucaramanga",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Atlético Junior",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "Fortaleza CEIF",
+            "points": 21
+          },
+          {
+            "position": 4,
+            "team": "Deportes Tolima",
+            "points": 20
+          },
+          {
+            "position": 5,
+            "team": "Independiente Medellín",
+            "points": 20
+          },
+          {
+            "position": 6,
+            "team": "Llaneros",
+            "points": 18
+          },
+          {
+            "position": 7,
+            "team": "Atlético Nacional",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "Independiente Santa Fe",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Alianza FC",
+            "points": 15
+          },
+          {
+            "position": 10,
+            "team": "Deportivo Cali",
+            "points": 14
+          },
+          {
+            "position": 11,
+            "team": "Deportivo Pereira",
+            "points": 13
+          },
+          {
+            "position": 12,
+            "team": "Once Caldas",
+            "points": 13
+          },
+          {
+            "position": 13,
+            "team": "Envigado",
+            "points": 11
+          },
+          {
+            "position": 14,
+            "team": "Millonarios",
+            "points": 11
+          },
+          {
+            "position": 15,
+            "team": "La Equidad",
+            "points": 11
+          },
+          {
+            "position": 16,
+            "team": "Unión Magdalena",
+            "points": 11
+          },
+          {
+            "position": 17,
+            "team": "Boyacá Chicó",
+            "points": 10
+          },
+          {
+            "position": 18,
+            "team": "Deportivo Pasto",
+            "points": 9
+          },
+          {
+            "position": 19,
+            "team": "Águilas Doradas",
+            "points": 8
+          },
+          {
+            "position": 20,
+            "team": "América de Cali",
+            "points": 7
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1131.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1142.png",
+        "classement_home": 1,
+        "classement_away": 4,
+        "points_classement_home": 21,
+        "points_classement_away": 20,
+        "nom_classement_home": "Bucaramanga",
+        "nom_classement_away": "Deportes Tolima",
+        "country_fr": "Colombia - Primera A",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Bucaramanga et Deportes Tolima. D'abord, je regarde les statistiques de Bucaramanga à domicile. Ils sont premiers avec 21 points, ce qui montre qu'ils sont en forme. Ils marquent en moyenne 1.30 buts par match et n'encaissent que 0.60. Ces stats sont solides, surtout à domicile où ils ont une série de victoires récentes.\n\nEnsuite, je regarde Deportes Tolima. Ils sont quatrièmes avec 20 points, un peu derrière Bucaramanga. Leur moyenne de buts marqués est un peu inférieure, 1.20, et ils encaissent aussi 0.60 en moyenne. Cependant, leur forme à l'extérieur est un peu inégale avec des défaites récentes.\n\nJe note que Bucaramanga a une série de 5 victoires consécutives à domicile, ce qui indique une forte domination. Deportes Tolima, quant à eux, ont perdu deux de leurs trois derniers matchs à l'extérieur, ce qui pourrait les handicaper.\n\nEn regardant les 10 derniers matchs de Bucaramanga, ils ont gagné 7 fois et ont fait quelques nuls. Deportes Tolima ont gagné 5 fois, mais ont aussi perdu 3 fois, ce qui montre une certaine irrégularité.\n\nLe classement complet montre que Bucaramanga est en tête, avec une légère avance sur Deportes Tolima. Cela suggère que Bucaramanga a une mentalité gagnante, ce qui est un avantage pour ce match.\n\nIl n'y a pas de confrontations directes récentes, donc je dois m'appuyer sur les stats générales. Les cotes ne sont pas disponibles, donc je dois me fier aux performances des équipes.\n\nEn conclusion, Bucaramanga semble avoir l'avantage à domicile avec une forte forme récente et une défense solide. Deportes Tolima, bien qu'ils soient bien classés, ont des difficultés à l'extérieur. Donc, je penche pour une victoire de Bucaramanga.\n</think>\n\n**Prédiction : Victoire domicile (Bucaramanga)**\n\n**Justification :**\n\n1. **Statistiques à domicile de Bucaramanga :**\n   - Bucaramanga occupe la 1re place avec 21 points, marquant en moyenne 1.30 buts par match et n'encaissant que 0.60.\n   - Forme récente : 5 victoires consécutives à domicile, avec 10 buts marqués et seulement 2 encaissés.\n\n2. **Statistiques à l'extérieur de Deportes Tolima :**\n   - Deportes Tolima est 4e avec 20 points, marquant 1.20 buts par match et encaissant 0.60.\n   - Forme récente à l'extérieur : 2 défaites dans leurs 3 derniers matchs, avec seulement 2 buts marqués.\n\n3. **Forme récente :**\n   - Bucaramanga : 7 victoires et 3 nuls sur 10 matchs.\n   - Deportes Tolima : 5 victoires, 2 nuls et 3 défaites sur 10 matchs.\n\n4. **Classement :**\n   - Bucaramanga est en tête, avec une légère avance sur Deportes Tolima, indiquant une meilleure forme et confiance.\n\n5. **Conclusion :**\n   - Bucaramanga a une forte dominance à domicile avec une défense solide.\n   - Deportes Tolima a des difficultés à l'extérieur, ce qui donne un avantage à Bucaramanga.\n\nAinsi, la prédiction est une victoire de Bucaramanga."
+      }
+    ]
+  }
+}
