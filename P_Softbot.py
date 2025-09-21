@@ -2148,6 +2148,46 @@ PREDICTIONS = []
 FAILED_TEAMS = set()
 IGNORED_ZERO_FORM_TEAMS = []
 
+def get_match_stats(game_id):
+    """
+    Récupère les statistiques détaillées d'un match ESPN via son game_id.
+    Retourne un dict { "Possession": (home, away), ... }
+    """
+    url = f"https://africa.espn.com/football/match/_/gameId/{game_id}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/117.0.0.0 Safari/537.36",
+        "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7"
+    }
+
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        stats_section = soup.find("section", {"data-testid": "prism-LayoutCard"})
+        stats_divs = stats_section.find_all("div", class_="LOSQp") if stats_section else []
+        
+        stats = {}
+        for div in stats_divs:
+            stat_name_tag = div.find("span", class_="OkRBU")
+            if not stat_name_tag:
+                continue
+            stat_name = stat_name_tag.get_text(strip=True)
+            values = div.find_all("span", class_="bLeWt")
+            if len(values) >= 2:
+                team1_value = values[0].get_text(strip=True)
+                team2_value = values[1].get_text(strip=True)
+                stats[stat_name] = (team1_value, team2_value)
+
+        print(f"📊 Stats récupérées pour match {game_id}: {len(stats)} statistiques trouvées")
+        return stats
+
+    except Exception as e:
+        print(f"❌ Erreur récupération stats match {game_id} : {e}")
+        return {}
+
 # 🧠 Fonction DeepSeek avec alternance automatique des clés et retry automatique (VERSION AMÉLIORÉE)
 def call_deepseek_analysis(prompt, max_retries=5):
     global groq_key_index
@@ -2188,7 +2228,7 @@ def call_deepseek_analysis(prompt, max_retries=5):
                 print(error_msg)
                 return error_msg
 
-# 🔮 Générateur de prompt détaillé (VERSION ENRICHIE)
+# 🔮 Générateur de prompt détaillé (VERSION ENRICHIE AVEC STATS DÉTAILLÉES)
 def generate_detailed_prompt(prediction_obj):
     home = prediction_obj["HomeTeam"]
     away = prediction_obj["AwayTeam"]
@@ -2249,24 +2289,60 @@ ANALYSE DE MATCH - {date}
     else:
         prompt += "Aucune cote disponible\n"
 
-    # ✅ NOUVEAUTÉ 1 : Ajout des 10 derniers matchs complets
-    prompt += f"\n📅 10 DERNIERS MATCHS DE {home} (DOMICILE) :\n"
+    # ✅ NOUVEAUTÉ 1 : Ajout des 10 derniers matchs complets avec nouvelle structure + STATS DÉTAILLÉES
+    prompt += f"\n📅 10 DERNIERS MATCHS DE {home} (DOMICILE) AVEC STATISTIQUES DÉTAILLÉES :\n"
     last_matches_home = prediction_obj.get("last_matches_home", [])
     if last_matches_home:
         for i, match in enumerate(last_matches_home[:10], 1):
-            if len(match) >= 6:
-                date_match, team1, team2, competition, score, status = match[0], match[1], match[2], match[3], match[4], match[5]
-                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status})\n"
+            if isinstance(match, dict) and all(key in match for key in ['date', 'home_team', 'away_team', 'score', 'competition', 'status']):
+                date_match = match['date']
+                team1 = match['home_team']
+                team2 = match['away_team']
+                competition = match['competition']
+                score = match['score']
+                status = match['status']
+                game_id = match.get('game_id', 'N/A')
+                url = match.get('url', 'N/A')
+                
+                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status}) [ID: {game_id}]\n"
+                
+                # ✅ NOUVEAU : Ajout des statistiques détaillées du match
+                match_stats = match.get('stats', {})
+                if match_stats:
+                    prompt += f"     📊 Stats détaillées : "
+                    for stat_name, (val1, val2) in match_stats.items():
+                        prompt += f"{stat_name}: {val1}-{val2} | "
+                    prompt += f"\n     🔗 URL: {url}\n"
+                else:
+                    prompt += f"     📊 Stats détaillées : Non disponibles\n"
     else:
         prompt += "  Aucun match détaillé disponible\n"
 
-    prompt += f"\n📅 10 DERNIERS MATCHS DE {away} (EXTÉRIEUR) :\n"
+    prompt += f"\n📅 10 DERNIERS MATCHS DE {away} (EXTÉRIEUR) AVEC STATISTIQUES DÉTAILLÉES :\n"
     last_matches_away = prediction_obj.get("last_matches_away", [])
     if last_matches_away:
         for i, match in enumerate(last_matches_away[:10], 1):
-            if len(match) >= 6:
-                date_match, team1, team2, competition, score, status = match[0], match[1], match[2], match[3], match[4], match[5]
-                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status})\n"
+            if isinstance(match, dict) and all(key in match for key in ['date', 'home_team', 'away_team', 'score', 'competition', 'status']):
+                date_match = match['date']
+                team1 = match['home_team']
+                team2 = match['away_team']
+                competition = match['competition']
+                score = match['score']
+                status = match['status']
+                game_id = match.get('game_id', 'N/A')
+                url = match.get('url', 'N/A')
+                
+                prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status}) [ID: {game_id}]\n"
+                
+                # ✅ NOUVEAU : Ajout des statistiques détaillées du match
+                match_stats = match.get('stats', {})
+                if match_stats:
+                    prompt += f"     📊 Stats détaillées : "
+                    for stat_name, (val1, val2) in match_stats.items():
+                        prompt += f"{stat_name}: {val1}-{val2} | "
+                    prompt += f"\n     🔗 URL: {url}\n"
+                else:
+                    prompt += f"     📊 Stats détaillées : Non disponibles\n"
     else:
         prompt += "  Aucun match détaillé disponible\n"
 
@@ -2309,11 +2385,12 @@ ANALYSE DE MATCH - {date}
 MISSION :
 1. Analyse comparative des deux équipes (forces/faiblesses)
 2. Impact du facteur domicile/extérieur
-3. Analyse des formes récentes et tendances à partir des matchs détaillés
+3. Analyse des formes récentes et tendances à partir des matchs détaillés AVEC LEURS STATISTIQUES
 4. Analyse du contexte du championnat grâce au classement complet
 5. Prise en compte des confrontations directes récentes (si disponibles)
 6. Évaluation des cotes (si disponibles)
-7. Prédiction finale claire : UNE SEULE recommandation parmi :
+7. ✨ NOUVEAU : Analyse approfondie des statistiques détaillées des matchs passés (possession, tirs, corners, etc.)
+8. Prédiction finale claire : UNE SEULE recommandation parmi :
    - "Victoire domicile" ({home})
    - "Victoire extérieur" ({away})
    - "Match nul"
@@ -2324,7 +2401,7 @@ MISSION :
    - "Double chance 1X" (domicile ou nul)
    - "Double chance X2" (nul ou extérieur)
 
-Justifie ta prédiction avec toutes les données statistiques fournies, en tenant compte particulièrement des matchs récents détaillés, du contexte du classement et des confrontations directes.
+Justifie ta prédiction avec toutes les données statistiques fournies, en tenant compte particulièrement des matchs récents détaillés avec leurs statistiques complètes, du contexte du classement et des confrontations directes.
 """
     return prompt
 
@@ -2682,6 +2759,8 @@ def scrape_team_data(team_name, action):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         matches = soup.find_all('tr', class_='Table__TR')
+        
+        # ✅ NOUVELLE STRUCTURE - Objet au lieu de liste
         valid_results = []
         form_6 = []
         form_10 = []
@@ -2695,16 +2774,65 @@ def scrape_team_data(team_name, action):
         serie_exterieur = []
 
         for match in matches:
-            date = match.find('div', class_='matchTeams')
-            date_text = date.text.strip() if date else "N/A"
+            # Date
+            date_tag = match.find('div', class_='matchTeams')
+            date_text = date_tag.text.strip() if date_tag else "N/A"
+
+            # Équipes
             teams = match.find_all('a', class_='AnchorLink Table__Team')
             team1 = teams[0].text.strip() if len(teams) > 0 else "N/A"
             team2 = teams[1].text.strip() if len(teams) > 1 else "N/A"
-            competition = match.find_all('a', class_='AnchorLink')[1].text.strip() if len(match.find_all('a', 'AnchorLink')) > 1 else "N/A"
-            score = match.find('span').text.strip() if match.find('span') else "N/A"
-            status = match.find_all('a', class_='AnchorLink')[-1].text.strip() if match.find_all('a', 'AnchorLink') else "N/A"
+
+            # Compétition
+            comp_tags = match.find_all('a', class_='AnchorLink')
+            competition = comp_tags[1].text.strip() if len(comp_tags) > 1 else "N/A"
+
+            # Score + Game ID (via l'URL du match)
+            score_tag = match.find('a', href=lambda x: x and "gameId" in x)
+            score = score_tag.text.strip() if score_tag else "N/A"
+            game_id = "N/A"
+            if score_tag and score_tag.get('href') and "gameId" in score_tag['href']:
+                try:
+                    game_id = score_tag['href'].split("gameId/")[1].split("/")[0]
+                except:
+                    game_id = "N/A"
+
+            # Statut (FT, Postponed…) - essayer plusieurs sélecteurs
+            status = "N/A"
+            status_tag = match.find('span', {"data-testid": "result"})
+            if not status_tag:
+                # Fallback - chercher dans les derniers liens
+                last_links = match.find_all('a', class_='AnchorLink')
+                if last_links:
+                    status = last_links[-1].text.strip()
+            else:
+                status = status_tag.text.strip()
+
+            # Si toutes les infos clés sont présentes, créer l'objet match
             if all(val != "N/A" for val in [date_text, team1, team2, score]):
-                valid_results.append([date_text, team1, team2, competition, score, status])  # ✅ Changé en liste
+                match_obj = {
+                    "game_id": game_id,
+                    "date": date_text,
+                    "home_team": team1,
+                    "away_team": team2,
+                    "score": score,
+                    "status": status,
+                    "competition": competition
+                }
+
+                # ✅ NOUVEAU : Enrichir avec les statistiques détaillées si game_id disponible
+                if game_id != "N/A":
+                    print(f"🔍 Récupération des stats détaillées pour le match {game_id}...")
+                    match_stats = get_match_stats(game_id)
+                    match_obj["stats"] = match_stats
+                    match_obj["url"] = f"https://africa.espn.com/football/match/_/gameId/{game_id}"
+                else:
+                    match_obj["stats"] = {}
+                    match_obj["url"] = "N/A"
+
+                valid_results.append(match_obj)
+                
+                # Calculer les formes et stats avec la nouvelle structure
                 result = get_match_result_for_team(espn_team_name, score, team1, team2)
                 if result:
                     form_10.append(result)
@@ -2728,18 +2856,29 @@ def scrape_team_data(team_name, action):
                     else:
                         buts_ext_marques += buts_m
                         buts_ext_encaisses += buts_e
+            
             if len(valid_results) >= 10:
                 break
+        
         nb_matchs = len(valid_results)
         if nb_matchs == 0:
             print("Aucun match trouvé.")
             FAILED_TEAMS.add(team_name)
             return []
+        
         total_marques = buts_dom_marques + buts_ext_marques
         total_encaisses = buts_dom_encaisses + buts_ext_encaisses
+        
         print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} :")
-        for result in valid_results:
-            print(" | ".join(result))
+        for match_obj in valid_results:
+            print(f"ID: {match_obj['game_id']} | {match_obj['date']} | {match_obj['home_team']} vs {match_obj['away_team']} : {match_obj['score']} [{match_obj['competition']}] ({match_obj['status']})")
+            # ✅ Afficher les stats si disponibles
+            if match_obj.get('stats'):
+                print(f"  📊 Stats: {len(match_obj['stats'])} statistiques récupérées")
+                for stat_name, (val1, val2) in list(match_obj['stats'].items())[:3]:  # Afficher les 3 premières
+                    print(f"    - {stat_name}: {val1} - {val2}")
+                if len(match_obj['stats']) > 3:
+                    print(f"    - ... et {len(match_obj['stats']) - 3} autres stats")
         
         total_points_6 = get_form_points(form_6)
         total_points_10 = get_form_points(form_10[:10])  # sécurité si <10
@@ -2760,7 +2899,7 @@ def scrape_team_data(team_name, action):
         print(f"✈️ Série extérieur : {'-'.join(serie_exterieur)}")
 
         return {
-            "matches": valid_results,  # ✅ Maintenant c'est une liste de listes
+            "matches": valid_results,  # ✅ Maintenant c'est une liste d'objets avec nouvelle structure + STATS DÉTAILLÉES
             "moyenne_marques": total_marques / nb_matchs,
             "moyenne_encaisses": total_encaisses / nb_matchs,
             "form_6": form_6,
@@ -2840,14 +2979,14 @@ def compare_teams_basic_stats(
     print(f"🏠 Série domicile ({name1}) : {'-'.join(t1.get('serie_domicile', []))}")
     print(f"✈️ Série extérieur ({name2}) : {'-'.join(t2.get('serie_exterieur', []))}")
 
-    # ✅ CRÉATION DE L'OBJET AVEC STATISTIQUES BRUTES + COTES + MATCHS COMPLETS + CLASSEMENT COMPLET
+    # ✅ CRÉATION DE L'OBJET AVEC NOUVELLE STRUCTURE DES MATCHS + STATS DÉTAILLÉES
     prediction_obj = {
         "id": len(PREDICTIONS) + 1,
         "HomeTeam": name1,
         "AwayTeam": name2,
         "date": format_date_fr(match_date, match_time),
         "league": f"{country} - {league}",
-        "type": "stats_brutes_avec_cotes_et_ia",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees",
         "odds": odds_data,  # Cotes des bookmakers
         "stats_home": {
             "moyenne_marques": t1['moyenne_marques'],
@@ -2883,9 +3022,9 @@ def compare_teams_basic_stats(
             "total_marques": t2.get('total_marques', 0),
             "total_encaisses": t2.get('total_encaisses', 0)
         },
-        # ✅ NOUVEAUX CHAMPS : MATCHS COMPLETS
-        "last_matches_home": t1.get('matches', []),  # Les 10 vrais matchs de l'équipe domicile
-        "last_matches_away": t2.get('matches', []),  # Les 10 vrais matchs de l'équipe extérieure
+        # ✅ NOUVEAUX CHAMPS : MATCHS COMPLETS AVEC NOUVELLE STRUCTURE + STATS DÉTAILLÉES
+        "last_matches_home": t1.get('matches', []),  # Les 10 vrais matchs avec objets + STATS DÉTAILLÉES
+        "last_matches_away": t2.get('matches', []),  # Les 10 vrais matchs avec objets + STATS DÉTAILLÉES
         # ✅ CLASSEMENT DES ÉQUIPES
         "classement": {
             name1: {"position": pos_home, "points": pts_home} if pos_home else None,
@@ -2907,8 +3046,8 @@ def compare_teams_basic_stats(
         "country_fr": f"{country} - {league}"
     }
 
-    # 🔮 Génération d'analyse IA avec DeepSeek (AVEC RETRY AUTOMATIQUE)
-    print(f"\n🧠 Lancement de l'analyse IA DeepSeek avec retry automatique...")
+    # 🔮 Génération d'analyse IA avec DeepSeek (AVEC RETRY AUTOMATIQUE + STATS DÉTAILLÉES)
+    print(f"\n🧠 Lancement de l'analyse IA DeepSeek avec retry automatique + stats détaillées...")
     prompt = generate_detailed_prompt(prediction_obj)
     analyse_ia = call_deepseek_analysis(prompt, max_retries=5)  # ✅ 5 tentatives max
 
@@ -2921,7 +3060,7 @@ def compare_teams_basic_stats(
     if résultats is not None:
         résultats.append(prediction_obj)
 
-    print("\n📚 Note : Statistiques brutes avec cotes + analyse IA DeepSeek avec retry + matchs complets + classement complet + H2H élargi (Premier League, La Liga, Bundesliga).")
+    print("\n📚 Note : Statistiques brutes avec cotes + analyse IA DeepSeek avec retry + matchs complets avec stats détaillées + classement complet + H2H élargi.")
 
 def process_team(team_name, return_data=False):
     print(f"\n🧠 Analyse pour l'équipe : {get_espn_name(team_name)}")
@@ -2939,17 +3078,18 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "7.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
+            "version_algorithme": "7.4 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA",
             "total_predictions": total_predictions,
-            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry",
-            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés + classement complet + confrontations directes H2H élargies (Premier League, La Liga, Bundesliga) + retry automatique IA",
+            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees",
+            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies + retry automatique IA",
             "ia_model": "deepseek-r1-distill-llama-70b",
             "groq_keys_count": len(groq_keys),
-            "nouveautes_v7_2": [
-                "Support des fichiers laliga.json et bundesliga.json pour les confrontations H2H",
-                "Retry automatique (5 tentatives) si l'analyse IA DeepSeek échoue",
-                "H2H élargi à tous les championnats disponibles (Premier League, La Liga, Bundesliga)",
-                "Amélioration de la robustesse du système d'analyse IA"
+            "nouveautes_v7_4": [
+                "Ajout des statistiques détaillées ESPN pour chaque match passé (possession, tirs, corners, etc.)",
+                "Nouvelle fonction get_match_stats() pour récupérer les stats via game_id",
+                "Enrichissement du prompt IA avec toutes les statistiques détaillées des matchs",
+                "URL ESPN directe pour chaque match dans les données",
+                "Analyse IA encore plus précise grâce aux données détaillées"
             ]
         },
         "statistiques_brutes_avec_ia": {
@@ -2959,11 +3099,11 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
     }
     
     # ✅ CORRECTION 2 : Ajouter le tiret manquant dans le nom du fichier
-    chemin = f"prédiction-{date_str}-analyse-ia.json"  # ✅ Tiret ajouté avant "analyse-ia"
+    chemin = f"prédiction-{date_str}-analyse-ia-stats-detaillees.json"  # ✅ Nouveau nom avec stats détaillées
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
-    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + retry sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H élargi")
+    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées sauvegardées dans : {chemin}")
+    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H élargi + stats détaillées ESPN")
     
     # ✅ CORRECTION 3 : Retourner le chemin du fichier créé
     return chemin
@@ -2987,14 +3127,14 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 7.2 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 7.4 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ÉLARGI + RETRY IA"], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + retry + H2H élargi poussées avec succès sur GitHub.")
+        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("📊 Bienvenue dans l'analyse v7.2 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ÉLARGI !")
+    print("📊 Bienvenue dans l'analyse v7.4 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ÉLARGI + STATS DÉTAILLÉES ESPN !")
     print("🧹 Toutes les fonctionnalités d'analyse avancée ont été supprimées")
     print("📈 Collecte complète des statistiques brutes :")
     print("   - Moyennes buts marqués/encaissés")
@@ -3005,27 +3145,30 @@ def main():
     print("   - Points de forme (6 et 10 matchs)")
     print("   💰 - Cotes des bookmakers (1xBet prioritaire, puis Betclic)")
     print("   🧠 - Analyse IA DeepSeek ENRICHIE avec alternance automatique des clés Groq")
-    print("   🔄 - NOUVEAU : Retry automatique (5 tentatives) si l'IA échoue")
-    print("   📋 - 10 vrais matchs complets avec date, équipes, score, compétition")
+    print("   🔄 - Retry automatique (5 tentatives) si l'IA échoue")
+    print("   📋 - 10 vrais matchs complets avec structure objet (game_id, date, home_team, away_team, score, status, competition)")
+    print("   📊 - ✨ NOUVEAU : Statistiques détaillées ESPN pour chaque match passé (possession, tirs, corners, etc.)")
     print("   🏆 - Classement complet de la ligue")
-    print("   🆚 - NOUVEAU : Confrontations directes H2H élargies (P_league.json, laliga.json, bundesliga.json)")
-    print("   ✨ - NOUVEAU : Prompt IA enrichi avec toutes ces données détaillées + sources multiples")
+    print("   🆚 - Confrontations directes H2H élargies (P_league.json, laliga.json, bundesliga.json)")
+    print("   ✨ - Prompt IA enrichi avec toutes ces données détaillées + statistiques ESPN des matchs")
     print("🚫 Aucun ajustement, bonus, malus")
-    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique")
+    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique + stats détaillées")
     print("🔄 Mapping automatique des noms d'équipes conservé")
     print("🛑 Filtrage automatique des équipes avec forme nulle conservé")
-    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H élargi des matchs du jour...\n")
+    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H élargi + stats détaillées ESPN des matchs du jour...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
-    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + retry générées")
+    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN générées")
     print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec retry automatique intégrée")
     print(f"   🔑 {len(groq_keys)} clés Groq disponibles")
-    print(f"   📋 Matchs complets et classements complets intégrés dans le prompt IA")
+    print(f"   📋 Matchs complets avec nouvelle structure objet et classements complets intégrés dans le prompt IA")
+    print(f"   📊 ✨ NOUVEAU : Statistiques détaillées ESPN récupérées pour chaque match passé")
     print(f"   🆚 Confrontations H2H élargies (Premier League, La Liga, Bundesliga) disponibles dans le prompt IA")
     print(f"   🔄 Système de retry automatique (5 tentatives) pour garantir les analyses IA")
+    print(f"   ✅ Structure objet des matchs passés avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v7.2 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H élargi !")
+    print("\n✨ Merci d'avoir utilisé le script v7.4 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H élargi + stats détaillées ESPN !")
 
 if __name__ == "__main__":
     main()
