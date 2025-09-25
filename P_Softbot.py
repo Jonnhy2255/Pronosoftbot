@@ -2414,10 +2414,10 @@ MISSION :
    - "Double chance X2" (nul ou extérieur)
 
 9. ✨ NOUVEAUTÉS OBLIGATOIRES :
-   - Prédiction du nombre total de CORNERS (ex: "8-12 corners")
-   - Prédiction du nombre total de TIRS CADRÉS (ex: "6-10 tirs cadrés")
+   - Prédiction du nombre total de CORNERS 
+   - Prédiction du nombre total de TIRS CADRÉS 
    - POURCENTAGE DE CONFIANCE (0-100%) pour ta prédiction principale
-   - LES 2 SCORES LES PLUS PROBABLES (ex: "1-0 ou 2-1")
+   - LES 2 SCORES LES PLUS PROBABLES 
 
 ⚠️ IMPORTANT : Ne JAMAIS prédire "Match nul" - utilise "Double chance 1X" ou "Double chance X2" à la place.
 
