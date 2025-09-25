@@ -2189,7 +2189,7 @@ def get_match_stats(game_id):
         return {}
 
 # 🧠 Fonction DeepSeek avec alternance automatique des clés et retry automatique (VERSION AMÉLIORÉE)
-def call_deepseek_analysis(prompt, max_retries=10):
+def call_deepseek_analysis(prompt, max_retries=5):
     global groq_key_index
 
     for attempt in range(1, max_retries + 1):
@@ -2204,7 +2204,7 @@ def call_deepseek_analysis(prompt, max_retries=10):
         data = {
             "model": "deepseek-r1-distill-llama-70b",
             "messages": [
-                {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, nul, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, double chance (1X ou X2), total corners victoire domicile, total corners victoire extérieur, tirs cadrés victoire domicile, tirs cadrés victoire extérieur. Explique pourquoi en détail."},
+                {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, double chance (1X ou X2). Tu dois aussi prédire le nombre de corners et de tirs cadrés, donner un pourcentage de confiance (0-100%) et les 2 scores les plus probables. ATTENTION : Ne jamais prédire 'match nul' - utilise plutôt 'double chance 1X' ou 'double chance X2'."},
                 {"role": "user", "content": prompt}
             ],
             "temperature": 0.3
@@ -2220,9 +2220,9 @@ def call_deepseek_analysis(prompt, max_retries=10):
         except Exception as e:
             print(f"❌ Erreur DeepSeek (tentative {attempt}/{max_retries}) : {str(e)}")
             if attempt < max_retries:
-                print("🔄 Nouvel essai dans 5 secondes...")
+                print("🔄 Nouvel essai dans 2 secondes...")
                 import time
-                time.sleep(5)  # Pause de 5 secondes avant retry
+                time.sleep(2)  # Petite pause avant retry
             else:
                 error_msg = f"❌ Échec définitif après {max_retries} tentatives. Dernière erreur : {str(e)}"
                 print(error_msg)
@@ -2366,10 +2366,10 @@ ANALYSE DE MATCH - {date}
     else:
         prompt += "  Classement complet non disponible\n"
 
-    # ✅ NOUVEAUTÉ 3 : Ajout des confrontations directes H2H (ÉLARGI À TOUS LES CHAMPIONNATS)
+    # ✅ NOUVEAUTÉ 3 : Ajout des confrontations directes H2H avec STATISTIQUES DÉTAILLÉES
     confrontations_h2h = prediction_obj.get("confrontations_saison_derniere", [])
     if confrontations_h2h:
-        prompt += f"\n🆚 CONFRONTATIONS DIRECTES (SAISON DERNIÈRE) :\n"
+        prompt += f"\n🆚 CONFRONTATIONS DIRECTES (SAISON DERNIÈRE) AVEC STATISTIQUES DÉTAILLÉES :\n"
         for i, match in enumerate(confrontations_h2h, 1):
             date_h2h = match.get('date', 'N/A')
             team1_h2h = match.get('team1', 'N/A')
@@ -2377,7 +2377,19 @@ ANALYSE DE MATCH - {date}
             score_h2h = match.get('score', 'N/A')
             competition_h2h = match.get('competition', 'N/A')
             source_h2h = match.get('source', 'N/A')
-            prompt += f"  {i}. {date_h2h} | {team1_h2h} vs {team2_h2h} : {score_h2h} [{competition_h2h}] (Source: {source_h2h})\n"
+            game_id_h2h = match.get('gameId', 'N/A')
+            
+            prompt += f"  {i}. {date_h2h} | {team1_h2h} vs {team2_h2h} : {score_h2h} [{competition_h2h}] (Source: {source_h2h}) [ID: {game_id_h2h}]\n"
+            
+            # ✅ NOUVEAU : Ajout des statistiques détaillées H2H
+            h2h_stats = match.get('stats', {})
+            if h2h_stats:
+                prompt += f"     📊 Stats H2H détaillées : "
+                for stat_name, (val1, val2) in h2h_stats.items():
+                    prompt += f"{stat_name}: {val1}-{val2} | "
+                prompt += "\n"
+            else:
+                prompt += f"     📊 Stats H2H détaillées : Non disponibles\n"
     else:
         prompt += f"\n🆚 CONFRONTATIONS DIRECTES (SAISON DERNIÈRE) :\n  Aucune confrontation H2H disponible\n"
 
@@ -2387,25 +2399,36 @@ MISSION :
 2. Impact du facteur domicile/extérieur
 3. Analyse des formes récentes et tendances à partir des matchs détaillés AVEC LEURS STATISTIQUES
 4. Analyse du contexte du championnat grâce au classement complet
-5. Prise en compte des confrontations directes récentes (si disponibles)
+5. Prise en compte des confrontations directes récentes avec leurs statistiques détaillées
 6. Évaluation des cotes (si disponibles)
 7. ✨ NOUVEAU : Analyse approfondie des statistiques détaillées des matchs passés (possession, tirs, corners, etc.)
 8. Prédiction finale claire : UNE SEULE recommandation parmi :
    - "Victoire domicile" ({home})
    - "Victoire extérieur" ({away})
-   - "Match nul"
    - "Plus de 2.5 buts"
    - "Moins de 2.5 buts"
    - "BTTS oui" (Both Teams To Score)
    - "BTTS non"
    - "Double chance 1X" (domicile ou nul)
    - "Double chance X2" (nul ou extérieur)
-   - "Total corners victoire domicile" (équipe domicile aura plus de corners)
-   - "Total corners victoire extérieur" (équipe extérieur aura plus de corners)
-   - "Tirs cadrés victoire domicile" (équipe domicile aura plus de tirs cadrés)
-   - "Tirs cadrés victoire extérieur" (équipe extérieur aura plus de tirs cadrés)
 
-Justifie ta prédiction avec toutes les données statistiques fournies, en tenant compte particulièrement des matchs récents détaillés avec leurs statistiques complètes, du contexte du classement et des confrontations directes.
+9. ✨ NOUVEAUTÉS OBLIGATOIRES :
+   - Prédiction du nombre total de CORNERS (ex: "8-12 corners")
+   - Prédiction du nombre total de TIRS CADRÉS (ex: "6-10 tirs cadrés")
+   - POURCENTAGE DE CONFIANCE (0-100%) pour ta prédiction principale
+   - LES 2 SCORES LES PLUS PROBABLES (ex: "1-0 ou 2-1")
+
+⚠️ IMPORTANT : Ne JAMAIS prédire "Match nul" - utilise "Double chance 1X" ou "Double chance X2" à la place.
+
+Justifie ta prédiction avec toutes les données statistiques fournies, en tenant compte particulièrement des matchs récents détaillés avec leurs statistiques complètes, du contexte du classement et des confrontations directes avec leurs stats détaillées.
+
+FORMAT DE RÉPONSE OBLIGATOIRE :
+- PRÉDICTION PRINCIPALE : [ta prédiction]
+- CONFIANCE : [X]%
+- CORNERS PRÉVUS : [X-Y corners]
+- TIRS CADRÉS PRÉVUS : [X-Y tirs cadrés]
+- SCORES PROBABLES : [Score1] ou [Score2]
+- JUSTIFICATION : [ton analyse détaillée]
 """
     return prompt
 
@@ -2598,11 +2621,11 @@ def format_date_fr(date_str, time_str):
     except Exception as e:
         return f"{date_str} à {time_str}:00 UTC"
 
-# 🆚 Fonction pour récupérer les confrontations directes de la saison passée (ÉLARGIE À TOUS LES CHAMPIONNATS)
+# 🆚 Fonction pour récupérer les confrontations directes de la saison passée avec STATISTIQUES DÉTAILLÉES
 def get_h2h_confrontations(home_team_espn, away_team_espn):
     """
     Récupère les confrontations directes de la saison passée depuis plusieurs fichiers JSON
-    (Premier League, La Liga, Bundesliga, etc.)
+    avec récupération des statistiques détaillées via gameId
     """
     fichiers_h2h = [
         {"file": "P_league.json", "name": "Premier League"},
@@ -2633,7 +2656,20 @@ def get_h2h_confrontations(home_team_espn, away_team_espn):
                 # Vérifier si les deux équipes correspondent (dans un sens ou l'autre)
                 if ((team1 == home_team_espn and team2 == away_team_espn) or 
                     (team1 == away_team_espn and team2 == home_team_espn)):
+                    
                     match["source"] = nom_championnat  # Ajouter la source du championnat
+                    
+                    # ✅ NOUVEAU : Récupérer les statistiques détaillées si gameId disponible
+                    game_id = match.get("gameId", "N/A")
+                    if game_id != "N/A":
+                        print(f"🔍 Récupération des stats H2H pour le match {game_id}...")
+                        h2h_stats = get_match_stats(game_id)
+                        match["stats"] = h2h_stats
+                        if h2h_stats:
+                            print(f"📊 {len(h2h_stats)} statistiques H2H récupérées pour {team1} vs {team2}")
+                    else:
+                        match["stats"] = {}
+                    
                     confrontations.append(match)
                     matchs_trouvés += 1
             
@@ -2966,7 +3002,7 @@ def compare_teams_basic_stats(
     
     odds_data = get_odds_for_match(odds_id, name1, name2, home_espn, away_espn)
 
-    # 🆚 Récupération des confrontations directes (ÉLARGI À TOUS LES CHAMPIONNATS)
+    # 🆚 Récupération des confrontations directes avec STATISTIQUES DÉTAILLÉES
     confrontations_h2h = get_h2h_confrontations(home_espn, away_espn)
 
     print(f"\n📅 Match prévu le {match_date} à {match_time}")
@@ -2990,7 +3026,7 @@ def compare_teams_basic_stats(
         "AwayTeam": name2,
         "date": format_date_fr(match_date, match_time),
         "league": f"{country} - {league}",
-        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
         "odds": odds_data,  # Cotes des bookmakers
         "stats_home": {
             "moyenne_marques": t1['moyenne_marques'],
@@ -3036,7 +3072,7 @@ def compare_teams_basic_stats(
         },
         # ✅ CLASSEMENT COMPLET DE LA LIGUE
         "classement_complet": full_standings_home if full_standings_home else full_standings_away,
-        # ✅ CONFRONTATIONS DIRECTES (ÉLARGI À TOUS LES CHAMPIONNATS)
+        # ✅ CONFRONTATIONS DIRECTES AVEC STATISTIQUES DÉTAILLÉES
         "confrontations_saison_derniere": confrontations_h2h,
         # Anciens champs conservés pour compatibilité
         "logo_home": logo_home,
@@ -3050,10 +3086,10 @@ def compare_teams_basic_stats(
         "country_fr": f"{country} - {league}"
     }
 
-    # 🔮 Génération d'analyse IA avec DeepSeek (AVEC RETRY AUTOMATIQUE + STATS DÉTAILLÉES)
-    print(f"\n🧠 Lancement de l'analyse IA DeepSeek avec retry automatique + stats détaillées...")
+    # 🔮 Génération d'analyse IA avec DeepSeek (AVEC RETRY AUTOMATIQUE + STATS DÉTAILLÉES + NOUVELLES FONCTIONNALITÉS)
+    print(f"\n🧠 Lancement de l'analyse IA DeepSeek avec retry automatique + stats détaillées + H2H enrichi + corners/tirs + confiance + scores...")
     prompt = generate_detailed_prompt(prediction_obj)
-    analyse_ia = call_deepseek_analysis(prompt, max_retries=10)  # ✅ 10 tentatives max
+    analyse_ia = call_deepseek_analysis(prompt, max_retries=5)  # ✅ 5 tentatives max
 
     prediction_obj["analyse_ia"] = analyse_ia
     print(f"\n🧠 Analyse IA DeepSeek :\n{'='*60}")
@@ -3064,7 +3100,7 @@ def compare_teams_basic_stats(
     if résultats is not None:
         résultats.append(prediction_obj)
 
-    print("\n📚 Note : Statistiques brutes avec cotes + analyse IA DeepSeek avec retry + matchs complets avec stats détaillées + classement complet + H2H élargi.")
+    print("\n📚 Note : Statistiques brutes avec cotes + analyse IA DeepSeek avec retry + matchs complets avec stats détaillées + classement complet + H2H enrichi avec stats + corners/tirs + confiance + scores.")
 
 def process_team(team_name, return_data=False):
     print(f"\n🧠 Analyse pour l'équipe : {get_espn_name(team_name)}")
@@ -3082,27 +3118,21 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "7.5 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ÉLARGI + 10 RETRY IA + NOUVELLES PRÉDICTIONS",
+            "version_algorithme": "8.0 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE + SCORES + RETRY IA",
             "total_predictions": total_predictions,
-            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_10_retry",
-            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies + 10 retry automatique IA avec pause 5s + nouvelles prédictions corners et tirs cadrés",
+            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance + 2 scores probables + retry automatique IA + suppression 'match nul'",
             "ia_model": "deepseek-r1-distill-llama-70b",
             "groq_keys_count": len(groq_keys),
-            "retry_config": {
-                "max_retries": 10,
-                "retry_delay_seconds": 5
-            },
-            "nouvelles_predictions": [
-                "Total corners victoire domicile",
-                "Total corners victoire extérieur", 
-                "Tirs cadrés victoire domicile",
-                "Tirs cadrés victoire extérieur"
-            ],
-            "nouveautes_v7_5": [
-                "Augmentation du nombre de retry de 5 à 10 tentatives",
-                "Pause de 5 secondes entre chaque retry au lieu de 2",
-                "Ajout de 4 nouvelles prédictions possibles : corners et tirs cadrés par équipe",
-                "Nom de fichier simplifié : prédiction-YYYY-MM-DD-analyse-ia.json"
+            "nouveautes_v8_0": [
+                "Utilisation du gameId des confrontations H2H pour récupérer leurs statistiques détaillées",
+                "Suppression de 'match nul' des prédictions possibles",
+                "Ajout de la prédiction du nombre de corners",
+                "Ajout de la prédiction du nombre de tirs cadrés",
+                "Ajout d'un pourcentage de confiance pour chaque prédiction",
+                "Prédiction des 2 scores les plus probables",
+                "Enrichissement du prompt IA avec toutes ces nouvelles données",
+                "Analyse IA encore plus précise grâce aux statistiques H2H détaillées"
             ]
         },
         "statistiques_brutes_avec_ia": {
@@ -3111,13 +3141,14 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
         }
     }
     
-    # ✅ Nouveau nom de fichier simplifié
-    chemin = f"prédiction-{date_str}-analyse-ia.json"
+    # ✅ CORRECTION 2 : Nouveau nom de fichier pour version 8.0
+    chemin = f"prédiction-{date_str}-analyse-ia-stats-detaillees-h2h-enrichi-corners-tirs-confiance-scores.json"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
-    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + 10 retry + H2H élargi + stats détaillées ESPN + nouvelles prédictions")
+    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées + H2H enrichi + corners/tirs + confiance + scores sauvegardées dans : {chemin}")
+    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H enrichi avec stats + nouvelles fonctionnalités")
     
+    # ✅ CORRECTION 3 : Retourner le chemin du fichier créé
     return chemin
 
 def save_failed_teams_json(failed_teams, date_str):
@@ -3139,14 +3170,14 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 7.5 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ÉLARGI + 10 RETRY IA + NOUVELLES PRÉDICTIONS CORNERS/TIRS"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.0 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE + SCORES + RETRY IA"], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN poussées avec succès sur GitHub.")
+        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("📊 Bienvenue dans l'analyse v7.5 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + 10 RETRY + H2H ÉLARGI + STATS DÉTAILLÉES ESPN + NOUVELLES PRÉDICTIONS !")
+    print("📊 Bienvenue dans l'analyse v8.0 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE + SCORES !")
     print("🧹 Toutes les fonctionnalités d'analyse avancée ont été supprimées")
     print("📈 Collecte complète des statistiques brutes :")
     print("   - Moyennes buts marqués/encaissés")
@@ -3157,34 +3188,37 @@ def main():
     print("   - Points de forme (6 et 10 matchs)")
     print("   💰 - Cotes des bookmakers (1xBet prioritaire, puis Betclic)")
     print("   🧠 - Analyse IA DeepSeek ENRICHIE avec alternance automatique des clés Groq")
-    print("   🔄 - Retry automatique (10 tentatives avec pause 5s) si l'IA échoue")
+    print("   🔄 - Retry automatique (5 tentatives) si l'IA échoue")
     print("   📋 - 10 vrais matchs complets avec structure objet (game_id, date, home_team, away_team, score, status, competition)")
     print("   📊 - ✨ NOUVEAU : Statistiques détaillées ESPN pour chaque match passé (possession, tirs, corners, etc.)")
     print("   🏆 - Classement complet de la ligue")
-    print("   🆚 - Confrontations directes H2H élargies (P_league.json, laliga.json, bundesliga.json)")
-    print("   ✨ - Prompt IA enrichi avec toutes ces données détaillées + statistiques ESPN des matchs")
-    print("   🎯 - ✨ NOUVELLES PRÉDICTIONS : Total corners victoire domicile/extérieur, Tirs cadrés victoire domicile/extérieur")
+    print("   🆚 - ✨ NOUVEAU : Confrontations directes H2H élargies AVEC STATISTIQUES DÉTAILLÉES via gameId")
+    print("   🎯 - ✨ NOUVEAU : Prédiction du nombre de corners")
+    print("   🎯 - ✨ NOUVEAU : Prédiction du nombre de tirs cadrés")
+    print("   📊 - ✨ NOUVEAU : Pourcentage de confiance pour chaque prédiction")
+    print("   ⚽ - ✨ NOUVEAU : Les 2 scores les plus probables")
+    print("   ❌ - ✨ NOUVEAU : Suppression de 'match nul' des prédictions (remplacé par double chance)")
+    print("   ✨ - Prompt IA enrichi avec toutes ces données détaillées + statistiques ESPN des matchs + H2H avec stats")
     print("🚫 Aucun ajustement, bonus, malus")
-    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec 10 retry automatique + stats détaillées + nouvelles prédictions")
+    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique + stats détaillées + H2H enrichi + nouvelles fonctionnalités")
     print("🔄 Mapping automatique des noms d'équipes conservé")
     print("🛑 Filtrage automatique des équipes avec forme nulle conservé")
-    print("📄 Nom de fichier simplifié : prédiction-YYYY-MM-DD-analyse-ia.json")
-    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + 10 retry + H2H élargi + stats détaillées ESPN + nouvelles prédictions des matchs du jour...\n")
+    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H enrichi avec stats + corners/tirs + confiance + scores des matchs du jour...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
-    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN générées")
-    print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec 10 retry automatique (pause 5s) intégrée")
+    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités générées")
+    print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec retry automatique intégrée")
     print(f"   🔑 {len(groq_keys)} clés Groq disponibles")
     print(f"   📋 Matchs complets avec nouvelle structure objet et classements complets intégrés dans le prompt IA")
     print(f"   📊 ✨ NOUVEAU : Statistiques détaillées ESPN récupérées pour chaque match passé")
-    print(f"   🆚 Confrontations H2H élargies (Premier League, La Liga, Bundesliga) disponibles dans le prompt IA")
-    print(f"   🔄 Système de retry automatique (10 tentatives avec pause 5s) pour garantir les analyses IA")
+    print(f"   🆚 ✨ NOUVEAU : Confrontations H2H élargies avec STATISTIQUES DÉTAILLÉES via gameId disponibles dans le prompt IA")
+    print(f"   🎯 ✨ NOUVEAU : Prédictions corners + tirs cadrés + pourcentage confiance + 2 scores probables")
+    print(f"   ❌ ✨ NOUVEAU : Suppression de 'match nul' des prédictions possibles")
+    print(f"   🔄 Système de retry automatique (5 tentatives) pour garantir les analyses IA")
     print(f"   ✅ Structure objet des matchs passés avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES")
-    print(f"   🎯 ✨ NOUVELLES PRÉDICTIONS : Total corners et tirs cadrés par équipe disponibles")
-    print(f"   📄 Fichier généré : prédiction-YYYY-MM-DD-analyse-ia.json")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v7.5 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + 10 retry + H2H élargi + stats détaillées ESPN + nouvelles prédictions !")
+    print("\n✨ Merci d'avoir utilisé le script v8.0 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + corners/tirs + confiance + scores !")
 
 if __name__ == "__main__":
     main()
