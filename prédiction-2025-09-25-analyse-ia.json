@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-25 22:05:01",
+    "date_matchs": "2025-09-25",
+    "version_algorithme": "8.1 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS OPTIMISÉS + CONFIANCE EXTRAITE + SCORES + RETRY IA",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores_optimises",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés optimisées (Total +/-1.5) + pourcentage confiance extrait automatiquement + 2 scores probables + retry automatique IA + suppression 'match nul'",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v8_1": [
+      "Nom de fichier simplifié : prédiction-YYYY-MM-DD-analyse-ia.json",
+      "Prédictions corners/tirs sous forme Total +1.5 ou Total -1.5 (plus réaliste)",
+      "Extraction automatique du pourcentage de confiance dans les données du match",
+      "Optimisation des prédictions pour être plus pratiques et utilisables",
+      "Conservation de toutes les fonctionnalités précédentes"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Al Shabab",
+        "AwayTeam": "Al Kholood",
+        "date": "25 septembre 2025 à 15:25:00 UTC",
+        "league": "Saudi-Arabia - Pro League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_domicile": [
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 2,
+          "total_marques": 4,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 9,
+          "total_points": 9,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 7,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          {
+            "game_id": "736484",
+            "date": "Mon, Sep 22",
+            "home_team": "Abha",
+            "away_team": "Al Shabab",
+            "score": "2 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.1%",
+                "30.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736484"
+          },
+          {
+            "game_id": "755926",
+            "date": "Fri, Sep 19",
+            "home_team": "Al Fayha",
+            "away_team": "Al Shabab",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.5%",
+                "55.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "8",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755926"
+          },
+          {
+            "game_id": "755914",
+            "date": "Fri, Sep 12",
+            "home_team": "Al Shabab",
+            "away_team": "Al Hazem",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.7%",
+                "40.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755914"
+          },
+          {
+            "game_id": "755909",
+            "date": "Fri, Aug 29",
+            "home_team": "Al Shabab",
+            "away_team": "Al Khaleej",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.5%",
+                "44.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "6"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755909"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "755932",
+            "date": "Thu, Sep 25",
+            "home_team": "Al Shabab",
+            "away_team": "Al Kholood",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755932"
+          },
+          {
+            "game_id": "736488",
+            "date": "Mon, Sep 22",
+            "home_team": "Al Bukayriyah",
+            "away_team": "Al Kholood",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.9%",
+                "55.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736488"
+          },
+          {
+            "game_id": "755923",
+            "date": "Thu, Sep 18",
+            "home_team": "Al Kholood",
+            "away_team": "Damac",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755923"
+          },
+          {
+            "game_id": "755921",
+            "date": "Sun, Sep 14",
+            "home_team": "Al Nassr",
+            "away_team": "Al Kholood",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.7%",
+                "31.3%"
+              ],
+              "Shots on Goal": [
+                "12",
+                "1"
+              ],
+              "Shot Attempts": [
+                "29",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755921"
+          },
+          {
+            "game_id": "755906",
+            "date": "Thu, Aug 28",
+            "home_team": "Al Ettifaq",
+            "away_team": "Al Kholood",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52%",
+                "48%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755906"
+          }
+        ],
+        "classement": {
+          "Al Shabab": {
+            "position": 12,
+            "points": 4
+          },
+          "Al Kholood": {
+            "position": 8,
+            "points": 6
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Al Nassr",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Al Ittihad",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Al Taawoun",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Al Hilal",
+            "points": 8
+          },
+          {
+            "position": 5,
+            "team": "Al Qadsiah",
+            "points": 7
+          },
+          {
+            "position": 6,
+            "team": "Al Khaleej",
+            "points": 6
+          },
+          {
+            "position": 7,
+            "team": "Neom SC",
+            "points": 6
+          },
+          {
+            "position": 8,
+            "team": "Al Kholood",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Al Ahli",
+            "points": 5
+          },
+          {
+            "position": 10,
+            "team": "Al Ettifaq",
+            "points": 4
+          },
+          {
+            "position": 11,
+            "team": "Al Fayha",
+            "points": 4
+          },
+          {
+            "position": 12,
+            "team": "Al Shabab",
+            "points": 4
+          },
+          {
+            "position": 13,
+            "team": "Al Riyadh",
+            "points": 3
+          },
+          {
+            "position": 14,
+            "team": "Al Hazem",
+            "points": 2
+          },
+          {
+            "position": 15,
+            "team": "Damac",
+            "points": 1
+          },
+          {
+            "position": 16,
+            "team": "Al Fateh",
+            "points": 1
+          },
+          {
+            "position": 17,
+            "team": "Al Najma",
+            "points": 0
+          },
+          {
+            "position": 18,
+            "team": "Al Okhdood",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/2940.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10509.png",
+        "classement_home": 12,
+        "classement_away": 8,
+        "points_classement_home": 4,
+        "points_classement_away": 6,
+        "nom_classement_home": "Al Shabab",
+        "nom_classement_away": "Al Kholood",
+        "country_fr": "Saudi-Arabia - Pro League",
+        "confidence_percentage": 70,
+        "analyse_ia": "<think>\nOkay, so I need to analyze the match between Al Shabab and Al Kholood on September 25, 2025. Let me start by looking at the data provided.\n\nFirst, Al Shabab is playing at home. They're ranked 12th with 4 points. Their average goals scored are 1.00 and conceded 1.50. Their recent form over 6 matches is D, D, W, L, which gives them 5 points. At home, they've won once and lost once, scoring 2 and conceding 4 goals.\n\nAl Kholood is the away team, ranked 8th with 6 points. They average 1.40 goals scored and 1.40 conceded. Their recent form is W, W, W, L, L, giving them 9 points. Away, they've won twice and lost twice, scoring 5 and conceding 6.\n\nLooking at their last 10 matches, Al Shabab has a form of D, D, W, L, totaling 5 points, while Al Kholood has W, W, W, L, L, with 9 points. So Al Kholood seems to be in better form.\n\nNow, checking the detailed stats from their recent matches:\n\nFor Al Shabab:\n- They drew 2-2 against Abha with high possession (69.1%) but only 4 shots on target.\n- Drew 0-0 against Al Fayha, with possession almost even, few shots on target.\n- Won 1-0 against Al Hazem, with good possession and more shots.\n- Lost 1-4 to Al Khaleej, with decent possession but more shots from the opponent.\n\nFor Al Kholood:\n- Won 2-1 against Al Shabab recently, with 57% possession and more shots.\n- Won 2-1 against Al Bukayriyah, with more possession and shots.\n- Won 2-1 against Damac, less possession but more shots on target.\n- Lost 0-2 to Al Nassr, with low possession and few shots.\n\nFrom these, Al Kholood seems to have a better attacking edge, especially in away games. They have more shots on target and higher possession in some cases.\n\nLooking at the league standings, Al Kholood is 8th, while Al Shabab is 12th. Al Kholood has a better points tally and recent form.\n\nThere are no head-to-head stats from last season, but in their recent match, Al Kholood won 2-1 against Al Shabab.\n\nConsidering all this, Al Kholood seems to have the upper hand. They are in better form, have a better goal average, and recently beat Al Shabab. So I'm leaning towards a victory for Al Kholood.\n\nFor corners, both teams have decent numbers. Al Shabab had 5, 3, 9, 5 in their last four. Al Kholood had 7, 9, 3, 10. So total corners might be over 1.5.\n\nFor shots on target, Al Kholood had 8, 6, 3, 1 in their last four. Al Shabab had 4, 1, 3, 4. So maybe around 8 total shots on target, so over 1.5.\n\nPossible scores could be 1-2 or 0-2, considering Al Kholood's recent wins.\n</think>\n\n**PRÉDICTION PRINCIPALE : Victoire extérieur (Al Kholood)**  \n**CONFIANCE : 70%**  \n**CORNERS : Total +1.5 corners**  \n**TIRS CADRÉS : Total +1.5 tirs cadrés**  \n**SCORES PROBABLES : 1-2 ou 0-2**  \n\n**JUSTIFICATION :**  \nAl Kholood est en meilleure forme récente avec 9 points sur leurs 6 derniers matchs, contre seulement 5 points pour Al Shabab. Al Kholood a récemment battu Al Shabab avec une meilleure efficacité offensive, ce qui suggère une supériorité. Les statistiques de corners et de tirs cadrés montrent une tendance à dépasser les seuils de 1.5. Les scores probables reflètent le potentiel offensif d'Al Kholood par rapport à Al Shabab."
+      }
+    ]
+  }
+}
