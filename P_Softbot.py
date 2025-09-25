@@ -2205,7 +2205,7 @@ def call_deepseek_analysis(prompt, max_retries=5):
         data = {
             "model": "deepseek-r1-distill-llama-70b",
             "messages": [
-                {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, double chance (1X ou X2). Tu dois aussi prédire le total des corners (Total +1.5 corners ou Total -1.5 corners) et le total des tirs cadrés (Total +1.5 tirs cadrés ou Total -1.5 tirs cadrés), donner un pourcentage de confiance (0-100%) et les 2 scores les plus probables. ATTENTION : Ne jamais prédire 'match nul' - utilise plutôt 'double chance 1X' ou 'double chance X2'."},
+                {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, double chance (1X ou X2). Tu dois aussi prédire le nombre de corners et de tirs cadrés, donner un pourcentage de confiance (0-100%) et les 2 scores les plus probables. ATTENTION : Ne jamais prédire 'match nul' - utilise plutôt 'double chance 1X' ou 'double chance X2'."},
                 {"role": "user", "content": prompt}
             ],
             "temperature": 0.3
@@ -2414,8 +2414,8 @@ MISSION :
    - "Double chance X2" (nul ou extérieur)
 
 9. ✨ NOUVEAUTÉS OBLIGATOIRES :
-   - Prédiction CORNERS : "Total +1.5 corners" ou "Total -1.5 corners" (soyez réaliste : si vous prévoyez 8+ corners → +1.5, si vous prévoyez 6- corners → -1.5)
-   - Prédiction TIRS CADRÉS : "Total +1.5 tirs cadrés" ou "Total -1.5 tirs cadrés" (soyez réaliste : si vous prévoyez 8+ tirs cadrés → +1.5, si vous prévoyez 6- tirs cadrés → -1.5)
+   - Prédiction du nombre total de CORNERS (ex: "8-12 corners")
+   - Prédiction du nombre total de TIRS CADRÉS (ex: "6-10 tirs cadrés")
    - POURCENTAGE DE CONFIANCE (0-100%) pour ta prédiction principale
    - LES 2 SCORES LES PLUS PROBABLES (ex: "1-0 ou 2-1")
 
@@ -2426,31 +2426,45 @@ Justifie ta prédiction avec toutes les données statistiques fournies, en tenan
 FORMAT DE RÉPONSE OBLIGATOIRE :
 - PRÉDICTION PRINCIPALE : [ta prédiction]
 - CONFIANCE : [X]%
-- CORNERS : [Total +1.5 corners OU Total -1.5 corners]
-- TIRS CADRÉS : [Total +1.5 tirs cadrés OU Total -1.5 tirs cadrés]
+- CORNERS PRÉVUS : [X-Y corners]
+- TIRS CADRÉS PRÉVUS : [X-Y tirs cadrés]
 - SCORES PROBABLES : [Score1] ou [Score2]
 - JUSTIFICATION : [ton analyse détaillée]
 """
     return prompt
 
+# ✅ NOUVELLE FONCTION : Extraction du pourcentage de confiance de l'analyse IA
 def extract_confidence_percentage(analyse_ia):
     """
     Extrait le pourcentage de confiance de l'analyse IA
+    Retourne le pourcentage en tant que nombre entier ou None si non trouvé
     """
-    try:
-        # Chercher le pattern "CONFIANCE : XX%"
-        match = re.search(r'CONFIANCE\s*:\s*(\d+)%', analyse_ia, re.IGNORECASE)
-        if match:
-            return int(match.group(1))
-        
-        # Fallback : chercher juste un nombre suivi de %
-        match = re.search(r'(\d+)%', analyse_ia)
-        if match:
-            return int(match.group(1))
-        
+    if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    except:
-        return None
+    
+    # Chercher le pattern "CONFIANCE : XX%" dans l'analyse
+    patterns = [
+        r'CONFIANCE\s*:\s*(\d+)%',
+        r'Confiance\s*:\s*(\d+)%',
+        r'confiance\s*:\s*(\d+)%',
+        r'CONFIANCE\s*:\s*(\d+)\s*%',
+        r'(\d+)%\s*de\s*confiance',
+        r'confiance\s*de\s*(\d+)%'
+    ]
+    
+    for pattern in patterns:
+        match = re.search(pattern, analyse_ia, re.IGNORECASE)
+        if match:
+            try:
+                percentage = int(match.group(1))
+                if 0 <= percentage <= 100:
+                    print(f"📊 Pourcentage de confiance extrait : {percentage}%")
+                    return percentage
+            except ValueError:
+                continue
+    
+    print("⚠️ Pourcentage de confiance non trouvé dans l'analyse IA")
+    return None
 
 def get_odds_for_match(sport_odds_id, home_team_api, away_team_api, home_team_espn, away_team_espn):
     if sport_odds_id == "none":
@@ -3111,19 +3125,20 @@ def compare_teams_basic_stats(
     prompt = generate_detailed_prompt(prediction_obj)
     analyse_ia = call_deepseek_analysis(prompt, max_retries=5)  # ✅ 5 tentatives max
 
-    # ✅ NOUVEAU : Extraction du pourcentage de confiance et ajout dans les données du match
-    confidence_percentage = extract_confidence_percentage(analyse_ia)
-    if confidence_percentage:
-        prediction_obj["confidence_percentage"] = confidence_percentage
-        print(f"📊 Pourcentage de confiance extrait : {confidence_percentage}%")
-    else:
-        prediction_obj["confidence_percentage"] = None
-        print("⚠️ Pourcentage de confiance non trouvé dans l'analyse IA")
+    # ✅ NOUVEAU : Extraction du pourcentage de confiance
+    confiance_pourcentage = extract_confidence_percentage(analyse_ia)
 
     prediction_obj["analyse_ia"] = analyse_ia
+    prediction_obj["confiance_pourcentage"] = confiance_pourcentage  # ✅ Nouveau champ dédié
+    
     print(f"\n🧠 Analyse IA DeepSeek :\n{'='*60}")
     print(analyse_ia)
-    print(f"{'='*60}\n")
+    print(f"{'='*60}")
+    
+    if confiance_pourcentage is not None:
+        print(f"\n📊 Pourcentage de confiance extrait : {confiance_pourcentage}%")
+    else:
+        print(f"\n⚠️ Pourcentage de confiance non détecté dans l'analyse")
 
     PREDICTIONS.append(prediction_obj)
     if résultats is not None:
@@ -3137,6 +3152,7 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
+# ✅ MODIFIÉ : Fonction de sauvegarde avec nouveau nom de fichier et structure incluant le pourcentage de confiance
 def sauvegarder_stats_brutes_json(predictions_simples, date_str):
     total_predictions = len(predictions_simples)
 
@@ -3147,18 +3163,17 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
         "metadata": {
             "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             "date_matchs": date_str,
-            "version_algorithme": "8.1 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS OPTIMISÉS + CONFIANCE EXTRAITE + SCORES + RETRY IA",
+            "version_algorithme": "8.1 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA",
             "total_predictions": total_predictions,
-            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores_optimises",
-            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés optimisées (Total +/-1.5) + pourcentage confiance extrait automatiquement + 2 scores probables + retry automatique IA + suppression 'match nul'",
+            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_extraite_scores",
+            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul'",
             "ia_model": "deepseek-r1-distill-llama-70b",
             "groq_keys_count": len(groq_keys),
             "nouveautes_v8_1": [
-                "Nom de fichier simplifié : prédiction-YYYY-MM-DD-analyse-ia.json",
-                "Prédictions corners/tirs sous forme Total +1.5 ou Total -1.5 (plus réaliste)",
-                "Extraction automatique du pourcentage de confiance dans les données du match",
-                "Optimisation des prédictions pour être plus pratiques et utilisables",
-                "Conservation de toutes les fonctionnalités précédentes"
+                "Extraction automatique du pourcentage de confiance de l'analyse IA",
+                "Ajout du champ 'confiance_pourcentage' dans chaque prédiction",
+                "Nom de fichier simplifié au format prédiction-YYYY-MM-DD-analyse-ia.json",
+                "Maintien de toutes les fonctionnalités avancées précédentes"
             ]
         },
         "statistiques_brutes_avec_ia": {
@@ -3171,10 +3186,9 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
     chemin = f"prédiction-{date_str}-analyse-ia.json"
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
-    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées + H2H enrichi + corners/tirs optimisés + confiance extraite + scores sauvegardées dans : {chemin}")
-    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H enrichi avec stats + nouvelles fonctionnalités optimisées")
+    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + confiance extraite sauvegardées dans : {chemin}")
+    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H enrichi avec stats + nouvelles fonctionnalités + confiance extraite")
     
-    # ✅ Retourner le chemin du fichier créé
     return chemin
 
 def save_failed_teams_json(failed_teams, date_str):
@@ -3196,14 +3210,14 @@ def git_commit_and_push(filepath):
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
         subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.1 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS OPTIMISÉS + CONFIANCE EXTRAITE + SCORES + RETRY IA"], check=True)
+        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.1 STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA"], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités optimisées poussées avec succès sur GitHub.")
+        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités + confiance extraite poussées avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
 
 def main():
-    print("📊 Bienvenue dans l'analyse v8.1 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ENRICHI AVEC STATS + CORNERS/TIRS OPTIMISÉS + CONFIANCE EXTRAITE + SCORES !")
+    print("📊 Bienvenue dans l'analyse v8.1 : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES !")
     print("🧹 Toutes les fonctionnalités d'analyse avancée ont été supprimées")
     print("📈 Collecte complète des statistiques brutes :")
     print("   - Moyennes buts marqués/encaissés")
@@ -3219,33 +3233,34 @@ def main():
     print("   📊 - ✨ NOUVEAU : Statistiques détaillées ESPN pour chaque match passé (possession, tirs, corners, etc.)")
     print("   🏆 - Classement complet de la ligue")
     print("   🆚 - ✨ NOUVEAU : Confrontations directes H2H élargies AVEC STATISTIQUES DÉTAILLÉES via gameId")
-    print("   🎯 - ✨ OPTIMISÉ : Prédiction corners/tirs sous forme 'Total +1.5' ou 'Total -1.5' (plus réaliste)")
-    print("   📊 - ✨ OPTIMISÉ : Pourcentage de confiance extrait automatiquement et stocké dans les données")
+    print("   🎯 - ✨ NOUVEAU : Prédiction du nombre de corners")
+    print("   🎯 - ✨ NOUVEAU : Prédiction du nombre de tirs cadrés")
+    print("   📊 - ✨ NOUVEAU : Pourcentage de confiance EXTRAIT AUTOMATIQUEMENT dans un champ dédié")
     print("   ⚽ - ✨ NOUVEAU : Les 2 scores les plus probables")
     print("   ❌ - ✨ NOUVEAU : Suppression de 'match nul' des prédictions (remplacé par double chance)")
-    print("   📁 - ✨ OPTIMISÉ : Nom de fichier simplifié 'prédiction-YYYY-MM-DD-analyse-ia.json'")
+    print("   📁 - ✨ NOUVEAU : Nom de fichier simplifié au format prédiction-YYYY-MM-DD-analyse-ia.json")
     print("   ✨ - Prompt IA enrichi avec toutes ces données détaillées + statistiques ESPN des matchs + H2H avec stats")
     print("🚫 Aucun ajustement, bonus, malus")
-    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique + stats détaillées + H2H enrichi + nouvelles fonctionnalités optimisées")
+    print("🔮 Prédictions basées sur l'analyse IA DeepSeek enrichie avec retry automatique + stats détaillées + H2H enrichi + nouvelles fonctionnalités + confiance extraite")
     print("🔄 Mapping automatique des noms d'équipes conservé")
     print("🛑 Filtrage automatique des équipes avec forme nulle conservé")
-    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H enrichi avec stats + corners/tirs optimisés + confiance extraite + scores des matchs du jour...\n")
+    print("📊 Analyse pure et complète des statistiques brutes + IA enrichie + retry + H2H enrichi avec stats + corners/tirs + confiance extraite + scores des matchs du jour...\n")
     get_today_matches_filtered()
     print(f"\n📋 Résumé de la session:")
-    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités optimisées générées")
+    print(f"   📊 {len(PREDICTIONS)} analyses complètes de statistiques brutes avec cotes et IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités + confiance extraite générées")
     print(f"   🧠 Analyse IA DeepSeek ENRICHIE avec retry automatique intégrée")
     print(f"   🔑 {len(groq_keys)} clés Groq disponibles")
     print(f"   📋 Matchs complets avec nouvelle structure objet et classements complets intégrés dans le prompt IA")
     print(f"   📊 ✨ NOUVEAU : Statistiques détaillées ESPN récupérées pour chaque match passé")
     print(f"   🆚 ✨ NOUVEAU : Confrontations H2H élargies avec STATISTIQUES DÉTAILLÉES via gameId disponibles dans le prompt IA")
-    print(f"   🎯 ✨ OPTIMISÉ : Prédictions corners/tirs sous forme Total +/-1.5 + pourcentage confiance extrait automatiquement + 2 scores probables")
+    print(f"   🎯 ✨ NOUVEAU : Prédictions corners + tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables")
     print(f"   ❌ ✨ NOUVEAU : Suppression de 'match nul' des prédictions possibles")
-    print(f"   📁 ✨ OPTIMISÉ : Fichier de sortie simplifié 'prédiction-{datetime.now().strftime('%Y-%m-%d')}-analyse-ia.json'")
+    print(f"   📁 ✨ NOUVEAU : Fichier sauvegardé avec nom simplifié prédiction-YYYY-MM-DD-analyse-ia.json")
     print(f"   🔄 Système de retry automatique (5 tentatives) pour garantir les analyses IA")
     print(f"   ✅ Structure objet des matchs passés avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v8.1 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + corners/tirs optimisés + confiance extraite + scores !")
+    print("\n✨ Merci d'avoir utilisé le script v8.1 - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + corners/tirs + confiance extraite + scores !")
 
 if __name__ == "__main__":
     main()
