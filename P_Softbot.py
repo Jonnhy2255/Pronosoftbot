@@ -71,171 +71,200 @@ classement_ligue_mapping = {
     "Colombia": {
         "Primera A": {
             "url": "https://www.espn.com/soccer/standings/_/league/col.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "France": {
         "Ligue 1": {
             "url": "https://www.espn.com/soccer/standings/_/league/fra.1",
-            "odds_id": "soccer_france_ligue_one"
+            "odds_id": "soccer_france_ligue_one",
+            "data_json": "none"
         }
     },
     "Belgium": {
         "Jupiler Pro League": {
             "url": "https://www.espn.com/soccer/standings/_/league/bel.1",
-            "odds_id": "soccer_belgium_first_div"
+            "odds_id": "soccer_belgium_first_div",
+            "data_json": "none"
         }
     },
     "England": {
         "Premier League": {
             "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
-            "odds_id": "soccer_epl"
+            "odds_id": "soccer_epl",
+            "data_json": "P_league.json"
         },
         "National League": {
             "url": "https://www.espn.com/soccer/standings/_/league/eng.5",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Netherlands": {
         "Eredivisie": {
             "url": "https://www.espn.com/soccer/standings/_/league/ned.1",
-            "odds_id": "soccer_netherlands_eredivisie"
+            "odds_id": "soccer_netherlands_eredivisie",
+            "data_json": "none"
         }
     },
     "Portugal": {
         "Primeira Liga": {
             "url": "https://www.espn.com/soccer/standings/_/league/por.1",
-            "odds_id": "soccer_portugal_primeira_liga"
+            "odds_id": "soccer_portugal_primeira_liga",
+            "data_json": "none"
         }
     },
     "Spain": {
         "La Liga": {
             "url": "https://www.espn.com/soccer/standings/_/league/esp.1",
-            "odds_id": "soccer_spain_la_liga"
+            "odds_id": "soccer_spain_la_liga",
+            "data_json": "laliga.json"
         }
     },
     "Germany": {
         "Bundesliga": {
             "url": "https://www.espn.com/soccer/standings/_/league/ger.1",
-            "odds_id": "soccer_germany_bundesliga"
+            "odds_id": "soccer_germany_bundesliga",
+            "data_json": "bundesliga.json"
         }
     },
     "Austria": {
         "Bundesliga": {
             "url": "https://www.espn.com/soccer/standings/_/league/aut.1",
-            "odds_id": "soccer_austria_bundesliga"
+            "odds_id": "soccer_austria_bundesliga",
+            "data_json": "none"
         }
     },
     "Italy": {
         "Serie A": {
             "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
-            "odds_id": "soccer_italy_serie_a"
+            "odds_id": "soccer_italy_serie_a",
+            "data_json": "none"
         }
     },
     "Brazil": {
         "Serie A": {
             "url": "https://www.espn.com/soccer/standings/_/league/bra.1",
-            "odds_id": "soccer_brazil_campeonato"
+            "odds_id": "soccer_brazil_campeonato",
+            "data_json": "none"
         },
         "Serie B": {
             "url": "https://www.espn.com/soccer/standings/_/league/bra.2",
-            "odds_id": "soccer_brazil_serie_b"
+            "odds_id": "soccer_brazil_serie_b",
+            "data_json": "none"
         }
     },
     "Turkey": {
         "Süper Lig": {
             "url": "https://www.espn.com/soccer/standings/_/league/tur.1",
-            "odds_id": "soccer_turkey_super_league"
+            "odds_id": "soccer_turkey_super_league",
+            "data_json": "none"
         }
     },
     "Mexico": {
         "Liga MX": {
             "url": "https://www.espn.com/soccer/standings/_/league/mex.1",
-            "odds_id": "soccer_mexico_ligamx"
+            "odds_id": "soccer_mexico_ligamx",
+            "data_json": "none"
         }
     },
     "USA": {
         "Major League Soccer": {
             "url": "https://www.espn.com/soccer/standings/_/league/usa.1",
-            "odds_id": "soccer_usa_mls"
+            "odds_id": "soccer_usa_mls",
+            "data_json": "none"
         }
     },
     "Japan": {
         "J1 League": {
             "url": "https://www.espn.com/soccer/standings/_/league/jpn.1",
-            "odds_id": "soccer_japan_j_league"
+            "odds_id": "soccer_japan_j_league",
+            "data_json": "none"
         }
     },
     "Saudi-Arabia": {
         "Pro League": {
             "url": "https://www.espn.com/soccer/standings/_/league/ksa.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Switzerland": {
         "Super League": {
             "url": "https://www.espn.com/soccer/standings/_/league/sui.1",
-            "odds_id": "soccer_switzerland_superleague"
+            "odds_id": "soccer_switzerland_superleague",
+            "data_json": "none"
         }
     },
     "China": {
         "Super League": {
             "url": "https://www.espn.com/soccer/standings/_/league/chn.1",
-            "odds_id": "soccer_china_superleague"
+            "odds_id": "soccer_china_superleague",
+            "data_json": "none"
         }
     },
     "Russia": {
         "Premier League": {
             "url": "https://www.espn.com/soccer/standings/_/league/rus.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Greece": {
         "Super League 1": {
             "url": "https://www.espn.com/soccer/standings/_/league/gre.1",
-            "odds_id": "soccer_greece_super_league"
+            "odds_id": "soccer_greece_super_league",
+            "data_json": "none"
         }
     },
     "Chile": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/chi.1",
-            "odds_id": "soccer_chile_campeonato"
+            "odds_id": "soccer_chile_campeonato",
+            "data_json": "none"
         }
     },
     "Peru": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/per.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Sweden": {
         "Allsvenskan": {
             "url": "https://www.espn.com/soccer/standings/_/league/swe.1",
-            "odds_id": "soccer_sweden_allsvenskan"
+            "odds_id": "soccer_sweden_allsvenskan",
+            "data_json": "none"
         }
     },
     "Argentina": {
         "Primera Nacional": {
             "url": "https://www.espn.com/soccer/standings/_/league/arg.2",
-            "odds_id": "soccer_argentina_primera_division"
+            "odds_id": "soccer_argentina_primera_division",
+            "data_json": "none"
         }
     },
     "Paraguay": {
         "Division Profesional": {
             "url": "https://www.espn.com/soccer/standings/_/league/par.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Venezuela": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/ven.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     },
     "Romania": {
         "Liga I": {
             "url": "https://www.espn.com/soccer/standings/_/league/rou.1",
-            "odds_id": "none"
+            "odds_id": "none",
+            "data_json": "none"
         }
     }
 }
@@ -2414,10 +2443,10 @@ MISSION :
    - "Double chance X2" (nul ou extérieur)
 
 9. ✨ NOUVEAUTÉS OBLIGATOIRES :
-   - Prédiction du nombre total de CORNERS 
-   - Prédiction du nombre total de TIRS CADRÉS 
+   - Prédiction du nombre total de CORNERS (ex: "8-12 corners")
+   - Prédiction du nombre total de TIRS CADRÉS (ex: "6-10 tirs cadrés")
    - POURCENTAGE DE CONFIANCE (0-100%) pour ta prédiction principale
-   - LES 2 SCORES LES PLUS PROBABLES 
+   - LES 2 SCORES LES PLUS PROBABLES (ex: "1-0 ou 2-1")
 
 ⚠️ IMPORTANT : Ne JAMAIS prédire "Match nul" - utilise "Double chance 1X" ou "Double chance X2" à la place.
 
@@ -2655,63 +2684,62 @@ def format_date_fr(date_str, time_str):
     except Exception as e:
         return f"{date_str} à {time_str}:00 UTC"
 
-# 🆚 Fonction pour récupérer les confrontations directes de la saison passée avec STATISTIQUES DÉTAILLÉES
+# 🆚 Fonction pour récupérer les confrontations directes de la saison passée avec STATISTIQUES DÉTAILLÉES - MODIFIÉE
 def get_h2h_confrontations(home_team_espn, away_team_espn):
     """
-    Récupère les confrontations directes de la saison passée depuis plusieurs fichiers JSON
-    avec récupération des statistiques détaillées via gameId
+    Récupère les confrontations directes de la saison passée depuis les fichiers JSON
+    définis dans classement_ligue_mapping avec récupération des statistiques détaillées via gameId
     """
-    fichiers_h2h = [
-        {"file": "P_league.json", "name": "Premier League"},
-        {"file": "laliga.json", "name": "La Liga"},
-        {"file": "bundesliga.json", "name": "Bundesliga"}
-    ]
-    
     confrontations = []
     
-    for fichier_info in fichiers_h2h:
-        fichier = fichier_info["file"]
-        nom_championnat = fichier_info["name"]
-        
-        if not os.path.exists(fichier):
-            print(f"⚠️ Fichier {fichier} ({nom_championnat}) non trouvé")
-            continue
-        
-        try:
-            with open(fichier, "r", encoding="utf-8") as f:
-                data = json.load(f)
+    # Parcourir tous les pays et ligues dans classement_ligue_mapping
+    for country, leagues in classement_ligue_mapping.items():
+        for league_name, league_info in leagues.items():
+            data_json = league_info.get("data_json", "none")
             
-            matchs_trouvés = 0
-            # Parcourir tous les matchs dans le fichier JSON
-            for match in data:
-                team1 = match.get("team1", "")
-                team2 = match.get("team2", "")
+            # Ignorer si pas de fichier JSON défini
+            if data_json == "none" or not data_json:
+                continue
+            
+            if not os.path.exists(data_json):
+                print(f"⚠️ Fichier {data_json} ({league_name}) non trouvé")
+                continue
+            
+            try:
+                with open(data_json, "r", encoding="utf-8") as f:
+                    data = json.load(f)
                 
-                # Vérifier si les deux équipes correspondent (dans un sens ou l'autre)
-                if ((team1 == home_team_espn and team2 == away_team_espn) or 
-                    (team1 == away_team_espn and team2 == home_team_espn)):
+                matchs_trouvés = 0
+                # Parcourir tous les matchs dans le fichier JSON
+                for match in data:
+                    team1 = match.get("team1", "")
+                    team2 = match.get("team2", "")
                     
-                    match["source"] = nom_championnat  # Ajouter la source du championnat
-                    
-                    # ✅ NOUVEAU : Récupérer les statistiques détaillées si gameId disponible
-                    game_id = match.get("gameId", "N/A")
-                    if game_id != "N/A":
-                        print(f"🔍 Récupération des stats H2H pour le match {game_id}...")
-                        h2h_stats = get_match_stats(game_id)
-                        match["stats"] = h2h_stats
-                        if h2h_stats:
-                            print(f"📊 {len(h2h_stats)} statistiques H2H récupérées pour {team1} vs {team2}")
-                    else:
-                        match["stats"] = {}
-                    
-                    confrontations.append(match)
-                    matchs_trouvés += 1
+                    # Vérifier si les deux équipes correspondent (dans un sens ou l'autre)
+                    if ((team1 == home_team_espn and team2 == away_team_espn) or 
+                        (team1 == away_team_espn and team2 == home_team_espn)):
+                        
+                        match["source"] = league_name  # Ajouter la source du championnat
+                        
+                        # ✅ NOUVEAU : Récupérer les statistiques détaillées si gameId disponible
+                        game_id = match.get("gameId", "N/A")
+                        if game_id != "N/A":
+                            print(f"🔍 Récupération des stats H2H pour le match {game_id}...")
+                            h2h_stats = get_match_stats(game_id)
+                            match["stats"] = h2h_stats
+                            if h2h_stats:
+                                print(f"📊 {len(h2h_stats)} statistiques H2H récupérées pour {team1} vs {team2}")
+                        else:
+                            match["stats"] = {}
+                        
+                        confrontations.append(match)
+                        matchs_trouvés += 1
+                
+                if matchs_trouvés > 0:
+                    print(f"🆚 {matchs_trouvés} confrontation(s) trouvée(s) dans {league_name}")
             
-            if matchs_trouvés > 0:
-                print(f"🆚 {matchs_trouvés} confrontation(s) trouvée(s) dans {nom_championnat}")
-        
-        except Exception as e:
-            print(f"❌ Erreur lors de la lecture de {fichier} ({nom_championnat}) : {e}")
+            except Exception as e:
+                print(f"❌ Erreur lors de la lecture de {data_json} ({league_name}) : {e}")
     
     print(f"🆚 Total : {len(confrontations)} confrontation(s) directe(s) trouvée(s) pour {home_team_espn} vs {away_team_espn}")
     return confrontations
