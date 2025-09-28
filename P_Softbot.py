@@ -72,21 +72,21 @@ classement_ligue_mapping = {
         "Primera A": {
             "url": "https://www.espn.com/soccer/standings/_/league/col.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Colombia_Primera_A.json"
         }
     },
     "France": {
         "Ligue 1": {
             "url": "https://www.espn.com/soccer/standings/_/league/fra.1",
             "odds_id": "soccer_france_ligue_one",
-            "data_json": "none"
+            "data_json": "France_Ligue_1.json"
         }
     },
     "Belgium": {
         "Jupiler Pro League": {
             "url": "https://www.espn.com/soccer/standings/_/league/bel.1",
             "odds_id": "soccer_belgium_first_div",
-            "data_json": "none"
+            "data_json": "Belgium_Jupiler_Pro_League.json"
         }
     },
     "England": {
@@ -98,21 +98,21 @@ classement_ligue_mapping = {
         "National League": {
             "url": "https://www.espn.com/soccer/standings/_/league/eng.5",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "England_National_League.json"
         }
     },
     "Netherlands": {
         "Eredivisie": {
             "url": "https://www.espn.com/soccer/standings/_/league/ned.1",
             "odds_id": "soccer_netherlands_eredivisie",
-            "data_json": "none"
+            "data_json": "Netherlands_Eredivisie.json"
         }
     },
     "Portugal": {
         "Primeira Liga": {
             "url": "https://www.espn.com/soccer/standings/_/league/por.1",
             "odds_id": "soccer_portugal_primeira_liga",
-            "data_json": "none"
+            "data_json": "Portugal_Primeira_Liga.json"
         }
     },
     "Spain": {
@@ -133,138 +133,138 @@ classement_ligue_mapping = {
         "Bundesliga": {
             "url": "https://www.espn.com/soccer/standings/_/league/aut.1",
             "odds_id": "soccer_austria_bundesliga",
-            "data_json": "none"
+            "data_json": "Austria_Bundesliga.json"
         }
     },
     "Italy": {
         "Serie A": {
             "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
             "odds_id": "soccer_italy_serie_a",
-            "data_json": "none"
+            "data_json": "Italy_Serie_A.json"
         }
     },
     "Brazil": {
         "Serie A": {
             "url": "https://www.espn.com/soccer/standings/_/league/bra.1",
             "odds_id": "soccer_brazil_campeonato",
-            "data_json": "none"
+            "data_json": "Brazil_Serie_A.json"
         },
         "Serie B": {
             "url": "https://www.espn.com/soccer/standings/_/league/bra.2",
             "odds_id": "soccer_brazil_serie_b",
-            "data_json": "none"
+            "data_json": "Brazil_Serie_B.json"
         }
     },
     "Turkey": {
         "Süper Lig": {
             "url": "https://www.espn.com/soccer/standings/_/league/tur.1",
             "odds_id": "soccer_turkey_super_league",
-            "data_json": "none"
+            "data_json": "Turkey_Super_Lig.json"
         }
     },
     "Mexico": {
         "Liga MX": {
             "url": "https://www.espn.com/soccer/standings/_/league/mex.1",
             "odds_id": "soccer_mexico_ligamx",
-            "data_json": "none"
+            "data_json": "Mexico_Liga_MX.json"
         }
     },
     "USA": {
         "Major League Soccer": {
             "url": "https://www.espn.com/soccer/standings/_/league/usa.1",
             "odds_id": "soccer_usa_mls",
-            "data_json": "none"
+            "data_json": "USA_Major_League_Soccer.json"
         }
     },
     "Japan": {
         "J1 League": {
             "url": "https://www.espn.com/soccer/standings/_/league/jpn.1",
             "odds_id": "soccer_japan_j_league",
-            "data_json": "none"
+            "data_json": "Japan_J1_League.json"
         }
     },
     "Saudi-Arabia": {
         "Pro League": {
             "url": "https://www.espn.com/soccer/standings/_/league/ksa.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Saudi_Arabia_Pro_League.json"
         }
     },
     "Switzerland": {
         "Super League": {
             "url": "https://www.espn.com/soccer/standings/_/league/sui.1",
             "odds_id": "soccer_switzerland_superleague",
-            "data_json": "none"
+            "data_json": "Switzerland_Super_League.json"
         }
     },
     "China": {
         "Super League": {
             "url": "https://www.espn.com/soccer/standings/_/league/chn.1",
             "odds_id": "soccer_china_superleague",
-            "data_json": "none"
+            "data_json": "China_Super_League.json"
         }
     },
     "Russia": {
         "Premier League": {
             "url": "https://www.espn.com/soccer/standings/_/league/rus.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Russia_Premier_League.json"
         }
     },
     "Greece": {
         "Super League 1": {
             "url": "https://www.espn.com/soccer/standings/_/league/gre.1",
             "odds_id": "soccer_greece_super_league",
-            "data_json": "none"
+            "data_json": "Greece_Super_League_1.json"
         }
     },
     "Chile": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/chi.1",
             "odds_id": "soccer_chile_campeonato",
-            "data_json": "none"
+            "data_json": "Chile_Primera_Division.json"
         }
     },
     "Peru": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/per.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Peru_Primera_Division.json"
         }
     },
     "Sweden": {
         "Allsvenskan": {
             "url": "https://www.espn.com/soccer/standings/_/league/swe.1",
             "odds_id": "soccer_sweden_allsvenskan",
-            "data_json": "none"
+            "data_json": "Sweden_Allsvenskan.json"
         }
     },
     "Argentina": {
         "Primera Nacional": {
             "url": "https://www.espn.com/soccer/standings/_/league/arg.2",
             "odds_id": "soccer_argentina_primera_division",
-            "data_json": "none"
+            "data_json": "Argentina_Primera_Nacional.json"
         }
     },
     "Paraguay": {
         "Division Profesional": {
             "url": "https://www.espn.com/soccer/standings/_/league/par.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Paraguay_Division_Profesional.json"
         }
     },
     "Venezuela": {
         "Primera División": {
             "url": "https://www.espn.com/soccer/standings/_/league/ven.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Venezuela_Primera_Division.json"
         }
     },
     "Romania": {
         "Liga I": {
             "url": "https://www.espn.com/soccer/standings/_/league/rou.1",
             "odds_id": "none",
-            "data_json": "none"
+            "data_json": "Romania_Liga_I.json"
         }
     }
 }
