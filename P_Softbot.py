@@ -93,7 +93,7 @@ classement_ligue_mapping = {
         "Premier League": {
             "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
             "odds_id": "soccer_epl",
-            "data_json": "P_league.json"
+            "data_json": "p_league.json"
         },
         "National League": {
             "url": "https://www.espn.com/soccer/standings/_/league/eng.5",
