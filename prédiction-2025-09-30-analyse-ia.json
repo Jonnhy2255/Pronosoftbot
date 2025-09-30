@@ -1,0 +1,1504 @@
+{
+  "metadata": {
+    "date_generation": "2025-09-30 02:18:37",
+    "date_matchs": "2025-09-30",
+    "version_algorithme": "8.1 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_extraite_scores",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul'",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v8_1": [
+      "Extraction automatique du pourcentage de confiance de l'analyse IA",
+      "Ajout du champ 'confiance_pourcentage' dans chaque prédiction",
+      "Nom de fichier simplifié au format prédiction-YYYY-MM-DD-analyse-ia.json",
+      "Maintien de toutes les fonctionnalités avancées précédentes"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Sport Huancayo",
+        "AwayTeam": "Alianza Universidad",
+        "date": "30 septembre 2025 à 18:00:00 UTC",
+        "league": "Peru - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 11,
+          "total_points": 5,
+          "serie_domicile": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 15,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 12,
+          "total_marques": 17,
+          "total_encaisses": 19
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 10,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 11,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          {
+            "game_id": "758387",
+            "date": "Fri, 26 Sep",
+            "home_team": "Atlético Grau",
+            "away_team": "Sport Huancayo",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.4%",
+                "48.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758387"
+          },
+          {
+            "game_id": "758117",
+            "date": "Sun, 21 Sep",
+            "home_team": "Sport Huancayo",
+            "away_team": "Cienciano del Cusco",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.4%",
+                "58.6%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "19"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758117"
+          },
+          {
+            "game_id": "758105",
+            "date": "Wed, 17 Sep",
+            "home_team": "Comerciantes Unidos",
+            "away_team": "Sport Huancayo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.7%",
+                "55.3%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "7"
+              ],
+              "Shot Attempts": [
+                "18",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "7",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758105"
+          },
+          {
+            "game_id": "756352",
+            "date": "Fri, 12 Sep",
+            "home_team": "Sport Huancayo",
+            "away_team": "Los Chankas",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54%",
+                "46%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/756352"
+          },
+          {
+            "game_id": "754548",
+            "date": "Sun, 24 Aug",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Sport Huancayo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "22"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/754548"
+          },
+          {
+            "game_id": "754540",
+            "date": "Sun, 17 Aug",
+            "home_team": "Sport Huancayo",
+            "away_team": "Universitario",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.6%",
+                "45.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "14",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/754540"
+          },
+          {
+            "game_id": "753684",
+            "date": "Sat, 9 Aug",
+            "home_team": "ADT",
+            "away_team": "Sport Huancayo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "12",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/753684"
+          },
+          {
+            "game_id": "752930",
+            "date": "Sun, 3 Aug",
+            "home_team": "Sport Huancayo",
+            "away_team": "Ayacucho FC",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.3%",
+                "38.7%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/752930"
+          },
+          {
+            "game_id": "751367",
+            "date": "Wed, 30 Jul",
+            "home_team": "Sporting Cristal",
+            "away_team": "Sport Huancayo",
+            "score": "5 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.4%",
+                "33.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/751367"
+          },
+          {
+            "game_id": "749791",
+            "date": "Fri, 25 Jul",
+            "home_team": "Sport Huancayo",
+            "away_team": "Juan Pablo II",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.2%",
+                "44.8%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "3"
+              ],
+              "Shot Attempts": [
+                "25",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749791"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "758385",
+            "date": "Fri, 26 Sep",
+            "home_team": "Alianza Universidad",
+            "away_team": "Sport Boys",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "77.8%",
+                "22.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "23",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758385"
+          },
+          {
+            "game_id": "758111",
+            "date": "Thu, 18 Sep",
+            "home_team": "Atlético Grau",
+            "away_team": "Alianza Universidad",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758111"
+          },
+          {
+            "game_id": "756349",
+            "date": "Sun, 14 Sep",
+            "home_team": "Alianza Universidad",
+            "away_team": "Cienciano del Cusco",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.5%",
+                "31.5%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "6"
+              ],
+              "Shot Attempts": [
+                "6",
+                "9"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/756349"
+          },
+          {
+            "game_id": "754536",
+            "date": "Sat, 30 Aug",
+            "home_team": "Alianza Universidad",
+            "away_team": "Los Chankas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/754536"
+          },
+          {
+            "game_id": "754547",
+            "date": "Sat, 23 Aug",
+            "home_team": "Comerciantes Unidos",
+            "away_team": "Alianza Universidad",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.5%",
+                "43.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/754547"
+          },
+          {
+            "game_id": "753690",
+            "date": "Tue, 12 Aug",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Alianza Universidad",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.7%",
+                "52.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/753690"
+          },
+          {
+            "game_id": "752934",
+            "date": "Tue, 5 Aug",
+            "home_team": "Alianza Universidad",
+            "away_team": "Universitario",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.4%",
+                "34.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "6",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/752934"
+          },
+          {
+            "game_id": "751368",
+            "date": "Thu, 31 Jul",
+            "home_team": "ADT",
+            "away_team": "Alianza Universidad",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.5%",
+                "43.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/751368"
+          },
+          {
+            "game_id": "749793",
+            "date": "Sat, 26 Jul",
+            "home_team": "Alianza Universidad",
+            "away_team": "Ayacucho FC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.2%",
+                "42.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "5"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749793"
+          },
+          {
+            "game_id": "749788",
+            "date": "Sun, 20 Jul",
+            "home_team": "Sporting Cristal",
+            "away_team": "Alianza Universidad",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.7%",
+                "44.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749788"
+          }
+        ],
+        "classement": {
+          "Sport Huancayo": {
+            "position": 10,
+            "points": 12
+          },
+          "Alianza Universidad": {
+            "position": 15,
+            "points": 10
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Universitario",
+            "points": 24
+          },
+          {
+            "position": 2,
+            "team": "Sporting Cristal",
+            "points": 19
+          },
+          {
+            "position": 3,
+            "team": "Cusco FC",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Deportivo Garcilaso",
+            "points": 18
+          },
+          {
+            "position": 5,
+            "team": "ADT",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Alianza Lima",
+            "points": 15
+          },
+          {
+            "position": 7,
+            "team": "Cienciano del Cusco",
+            "points": 15
+          },
+          {
+            "position": 8,
+            "team": "Melgar",
+            "points": 14
+          },
+          {
+            "position": 9,
+            "team": "Atlético Grau",
+            "points": 14
+          },
+          {
+            "position": 10,
+            "team": "Sport Huancayo",
+            "points": 12
+          },
+          {
+            "position": 11,
+            "team": "Comerciantes Unidos",
+            "points": 12
+          },
+          {
+            "position": 12,
+            "team": "Los Chankas",
+            "points": 12
+          },
+          {
+            "position": 13,
+            "team": "Alianza Atlético",
+            "points": 10
+          },
+          {
+            "position": 14,
+            "team": "Juan Pablo II",
+            "points": 10
+          },
+          {
+            "position": 15,
+            "team": "Alianza Universidad",
+            "points": 10
+          },
+          {
+            "position": 16,
+            "team": "Ayacucho FC",
+            "points": 10
+          },
+          {
+            "position": 17,
+            "team": "Sport Boys",
+            "points": 9
+          },
+          {
+            "position": 18,
+            "team": "UTC",
+            "points": 6
+          },
+          {
+            "position": 19,
+            "team": "Deportivo Binacional",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "732030",
+            "date": "Monday, May 12, 2025",
+            "team1": "Alianza Universidad",
+            "score": "0 - 1",
+            "team2": "Sport Huancayo",
+            "title": "Alianza Universidad VS Sport Huancayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732030/sport-huancayo-alianza-universidad",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "64.3%",
+                "35.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "25",
+                "5"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/2555.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2548.png",
+        "classement_home": 10,
+        "classement_away": 15,
+        "points_classement_home": 12,
+        "points_classement_away": 10,
+        "nom_classement_home": "Sport Huancayo",
+        "nom_classement_away": "Alianza Universidad",
+        "country_fr": "Peru - Primera División",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Sport Huancayo et Alianza Universidad. D'abord, je regarde les statistiques générales. Sport Huancayo est 10ème avec 12 points, tandis qu'Alianza Universidad est 15ème avec 10 points. Donc, Sport Huancayo semble un peu mieux classé.\n\nEn regardant leurs formes récentes, Sport Huancayo a gagné 2 de ses 6 derniers matchs, tandis qu'Alianza Universidad a gagné 3 sur 6. Cependant, la forme à domicile de Sport Huancayo est mitigée, avec une série W-L-D-W-W. Alianza Universidad, en déplacement, a une série L-W-D-W-L. Donc, Alianza semble un peu plus irrégulière à l'extérieur.\n\nJe regarde les statistiques de buts. Sport Huancayo marque en moyenne 1.70 buts par match et encaisse 1.90. Alianza Universidad marque 1.10 et encaisse 1.80. Cela suggère que Sport Huancayo a une attaque plus forte, mais aussi une défense un peu plus faible.\n\nEn regardant les 10 derniers matchs détaillés, Sport Huancayo a marqué 5 buts contre Cienciano et 3 contre Ayacucho, montrant qu'ils peuvent marquer plusieurs buts. Cependant, ils ont aussi perdu contre des équipes comme Comerciantes Unidos et Atlético Grau, ce qui montre des failles en défense.\n\nAlianza Universidad, dans ses 10 derniers matchs, a perdu contre des équipes fortes comme Sporting Cristal et Atlético Grau, mais a aussi gagné contre Los Chankas et Comerciantes Unidos. Leur attaque semble moins efficace, avec seulement 6 buts marqués à l'extérieur.\n\nEn ce qui concerne les confrontations directes, le dernier match entre eux a vu Sport Huancayo gagner 1-0. Cela montre que Sport Huancayo a l'avantage à domicile.\n\nJe regarde aussi les statistiques de possession et de tirs. Sport Huancayo a une possession moyenne et plus de tirs cadrés à domicile. Alianza Universidad, bien qu'ils aient une possession élevée dans certains matchs, n'en tirent pas toujours profit.\n\nEn termes de corners et de tirs cadrés, Sport Huancayo a tendance à en avoir plus, ce qui suggère un match avec plusieurs occasions, mais pas nécessairement de nombreux buts.\n\nEn conclusion, bien que Sport Huancayo ait l'avantage à domicile et une meilleure attaque, Alianza Universidad pourrait causer des problèmes en défense. Cependant, la tendance montre que Sport Huancayo gagne souvent contre Alianza Universidad. Donc, je penche pour une victoire de Sport Huancayo, avec un score probable de 1-0 ou 2-1.\n</think>\n\n**PRÉDICTION PRINCIPALE : Victoire domicile (Sport Huancayo)**  \n**CONFIANCE : 70%**  \n**CORNERS PRÉVUS : 8-12 corners**  \n**TIRS CADRÉS PRÉVUS : 6-10 tirs cadrés**  \n**SCORES PROBABLES : 1-0 ou 2-1**  \n\n**JUSTIFICATION :**  \nSport Huancayo, bien qu'il soit 10ème, a une légère supériorité à domicile avec une attaque plus performante (1.70 buts/match) et une défense qui, bien qu'elle encaisse quelques buts, semble capable de contenir l'attaque moins efficace d'Alianza Universidad (1.10 buts/match). Les récentes performances de Sport Huancayo montrent une capacité à marquer contre des équipes du haut du tableau, comme Cienciano. De plus, leur dernier match à domicile contre Cienciano a été high-scoring, ce qui suggère qu'ils pourraient continuer sur cette lancée.  \n\nAlianza Universidad, malgré une forme extérieure mitigée, a montré des signes de résilience, comme sa victoire contre Comerciantes Unidos. Cependant, leur attaque est moins prolifique, et leur défense a du mal à contenir les offensives des équipes plus fortes.  \n\nLes statistiques de possession et de tirs cadrés de Sport Huancayo à domicile, combinées à leur avantage dans les confrontations directes, renforcent la probabilité d'une victoire domicile. Les corners et tirs cadrés devraient être dans une fourchette modérée, reflétant un match compétitif mais pas nécessairement spectaculaire.  \n\nLes scores les plus probables sont 1-0 ou 2-1, reflétant une victoire étroite mais méritée pour Sport Huancayo.",
+        "confiance_pourcentage": 70
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Solihull Moors",
+        "AwayTeam": "Woking",
+        "date": "30 septembre 2025 à 18:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 11,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 12,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 12,
+          "total_encaisses": 20
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 9,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 11,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "751818",
+            "date": "Sat, 27 Sep",
+            "home_team": "Solihull Moors",
+            "away_team": "Brackley Town",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751818"
+          },
+          {
+            "game_id": "751797",
+            "date": "Tue, 23 Sep",
+            "home_team": "Rochdale",
+            "away_team": "Solihull Moors",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751797"
+          },
+          {
+            "game_id": "751783",
+            "date": "Sat, 20 Sep",
+            "home_team": "York City",
+            "away_team": "Solihull Moors",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751783"
+          },
+          {
+            "game_id": "751775",
+            "date": "Sat, 13 Sep",
+            "home_team": "Solihull Moors",
+            "away_team": "Morecambe",
+            "score": "4 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751775"
+          },
+          {
+            "game_id": "751768",
+            "date": "Sat, 6 Sep",
+            "home_team": "Boston United",
+            "away_team": "Solihull Moors",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751768"
+          },
+          {
+            "game_id": "751750",
+            "date": "Tue, 2 Sep",
+            "home_team": "Solihull Moors",
+            "away_team": "Yeovil Town",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751750"
+          },
+          {
+            "game_id": "751735",
+            "date": "Sat, 30 Aug",
+            "home_team": "Solihull Moors",
+            "away_team": "Southend United",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751735"
+          },
+          {
+            "game_id": "751732",
+            "date": "Mon, 25 Aug",
+            "home_team": "Altrincham",
+            "away_team": "Solihull Moors",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751732"
+          },
+          {
+            "game_id": "751714",
+            "date": "Sat, 23 Aug",
+            "home_team": "Solihull Moors",
+            "away_team": "Aldershot Town",
+            "score": "1 - 5",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751714"
+          },
+          {
+            "game_id": "751704",
+            "date": "Tue, 19 Aug",
+            "home_team": "Carlisle United",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751704"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "751808",
+            "date": "Sat, 27 Sep",
+            "home_team": "Boreham Wood",
+            "away_team": "Woking",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751808"
+          },
+          {
+            "game_id": "751795",
+            "date": "Tue, 23 Sep",
+            "home_team": "Woking",
+            "away_team": "Sutton United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751795"
+          },
+          {
+            "game_id": "751784",
+            "date": "Sat, 20 Sep",
+            "home_team": "Woking",
+            "away_team": "Forest Green Rovers",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751784"
+          },
+          {
+            "game_id": "751773",
+            "date": "Sat, 13 Sep",
+            "home_team": "Yeovil Town",
+            "away_team": "Woking",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751773"
+          },
+          {
+            "game_id": "751760",
+            "date": "Sat, 6 Sep",
+            "home_team": "Woking",
+            "away_team": "Gateshead",
+            "score": "5 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751760"
+          },
+          {
+            "game_id": "751753",
+            "date": "Wed, 3 Sep",
+            "home_team": "FC Halifax Town",
+            "away_team": "Woking",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751753"
+          },
+          {
+            "game_id": "751745",
+            "date": "Sat, 30 Aug",
+            "home_team": "Morecambe",
+            "away_team": "Woking",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751745"
+          },
+          {
+            "game_id": "751723",
+            "date": "Mon, 25 Aug",
+            "home_team": "Woking",
+            "away_team": "York City",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751723"
+          },
+          {
+            "game_id": "751716",
+            "date": "Sat, 23 Aug",
+            "home_team": "Hartlepool United",
+            "away_team": "Woking",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751716"
+          },
+          {
+            "game_id": "751701",
+            "date": "Tue, 19 Aug",
+            "home_team": "Woking",
+            "away_team": "Wealdstone",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751701"
+          }
+        ],
+        "classement": {
+          "Solihull Moors": {
+            "position": 16,
+            "points": 13
+          },
+          "Woking": {
+            "position": 21,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Forest Green Rovers",
+            "points": 28
+          },
+          {
+            "position": 2,
+            "team": "Rochdale",
+            "points": 27
+          },
+          {
+            "position": 3,
+            "team": "Boreham Wood",
+            "points": 24
+          },
+          {
+            "position": 4,
+            "team": "Carlisle United",
+            "points": 23
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 22
+          },
+          {
+            "position": 6,
+            "team": "York City",
+            "points": 19
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 18
+          },
+          {
+            "position": 8,
+            "team": "Hartlepool United",
+            "points": 18
+          },
+          {
+            "position": 9,
+            "team": "FC Halifax Town",
+            "points": 18
+          },
+          {
+            "position": 10,
+            "team": "Tamworth",
+            "points": 18
+          },
+          {
+            "position": 11,
+            "team": "Brackley Town",
+            "points": 16
+          },
+          {
+            "position": 12,
+            "team": "Yeovil Town",
+            "points": 16
+          },
+          {
+            "position": 13,
+            "team": "Wealdstone",
+            "points": 15
+          },
+          {
+            "position": 14,
+            "team": "Eastleigh",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Gateshead",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Solihull Moors",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "Aldershot Town",
+            "points": 12
+          },
+          {
+            "position": 18,
+            "team": "Altrincham",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Boston United",
+            "points": 12
+          },
+          {
+            "position": 20,
+            "team": "Braintree Town",
+            "points": 10
+          },
+          {
+            "position": 21,
+            "team": "Woking",
+            "points": 9
+          },
+          {
+            "position": 22,
+            "team": "Sutton United",
+            "points": 7
+          },
+          {
+            "position": 23,
+            "team": "Truro City",
+            "points": 7
+          },
+          {
+            "position": 24,
+            "team": "Morecambe",
+            "points": 7
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713138",
+            "date": "Wednesday, October 23, 2024",
+            "team1": "Solihull Moors",
+            "score": "2 - 1",
+            "team2": "Woking",
+            "title": "Solihull Moors VS Woking",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713138/woking-solihull-moors",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713353",
+            "date": "Wednesday, February 19, 2025",
+            "team1": "Woking",
+            "score": "1 - 0",
+            "team2": "Solihull Moors",
+            "title": "Woking VS Solihull Moors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713353/solihull-moors-woking",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1836.png",
+        "classement_home": 16,
+        "classement_away": 21,
+        "points_classement_home": 13,
+        "points_classement_away": 9,
+        "nom_classement_home": "Solihull Moors",
+        "nom_classement_away": "Woking",
+        "country_fr": "England - National League",
+        "analyse_ia": "<think>\nBon, je dois analyser le match entre Solihull Moors et Woking. D'abord, je regarde leurs statistiques générales. Solihull est 16ème avec 13 points, ils marquent en moyenne 1.20 buts par match et encaissent 2.00. Woking est 21ème avec 9 points, ils marquent 1.10 et encaissent 1.20. \n\nEn forme récente, Solihull a gagné deux de ses six derniers matchs, avec une forme inégale. Woking a perdu trois de ses six derniers matchs, ce qui semble moins bon. \n\nEn regardant les matchs à domicile pour Solihull, ils ont perdu trois des cinq derniers, ce qui est inquiétant. Woking, en déplacement, a perdu deux des cinq derniers, ce qui est un peu mieux. \n\nLes confrontations directes montrent que Solihull a gagné 2-1 la dernière fois, et Woking a gagné 1-0 en février. Donc, c'est assez équilibré. \n\nJe regarde aussi les statistiques des matchs récents. Par exemple, Solihull a gagné contre Brackley Town 1-0, mais a perdu contre Rochdale 4-1. Woking a perdu contre Boreham Wood 1-0, mais a fait match nul contre Sutton United 1-1. \n\nJe note que Solihull a du mal à marquer à domicile, avec seulement 7 buts en 10 matchs. Woking a marqué 3 buts en 5 déplacements. \n\nEn termes de buts, il semble que les deux équipes ne marquent pas énormément, donc je penche vers moins de 2.5 buts. \n\nPour les corners et tirs cadrés, Solihull a une moyenne de 4-6 corners par match, et Woking un peu moins. Les tirs cadrés sont aussi limités, donc je prévois entre 6-10 tirs cadrés au total. \n\nJe pense que le score le plus probable est 1-0 pour Solihull ou 0-0, mais comme je ne peux pas prédire le nul, je choisis la double chance 1X. \n\nEn résumé, je prédis une double chance 1X avec 60% de confiance, 4-6 corners, 6-10 tirs cadrés, et les scores probables de 1-0 ou 0-0.\n</think>\n\n**PRÉDICTION PRINCIPALE : Double chance 1X**  \n**CONFIANCE : 60%**  \n**CORNERS PRÉVUS : 4-6 corners**  \n**TIRS CADRÉS PRÉVUS : 6-10 tirs cadrés**  \n**SCORES PROBABLES : 1-0 ou 0-0**  \n\n**JUSTIFICATION :**  \nSolihull Moors, bien qu'ils soient en position inférieure à Woking, ont montré une légère amélioration avec des victoires récentes. Woking, malgré des performances en dents de scie, conserve une défense solide. Les statistiques montrent un faible nombre de buts marqués par les deux équipes, ce qui suggère un match serré. Les confrontations directes récentes étant partagées, la double chance 1X semble la plus probable. Les corners et tirs cadrés devraient être limités en raison du style de jeu défensif des deux équipes.",
+        "confiance_pourcentage": 60
+      }
+    ]
+  }
+}
