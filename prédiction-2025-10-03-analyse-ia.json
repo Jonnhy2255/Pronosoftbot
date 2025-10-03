@@ -1,0 +1,5210 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-03 01:17:23",
+    "date_matchs": "2025-10-03",
+    "version_algorithme": "8.1 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA",
+    "total_predictions": 6,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_extraite_scores",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul'",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v8_1": [
+      "Extraction automatique du pourcentage de confiance de l'analyse IA",
+      "Ajout du champ 'confiance_pourcentage' dans chaque prédiction",
+      "Nom de fichier simplifié au format prédiction-YYYY-MM-DD-analyse-ia.json",
+      "Maintien de toutes les fonctionnalités avancées précédentes"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 6,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Trabzonspor",
+        "AwayTeam": "Kayserispor",
+        "date": "3 octobre 2025 à 17:00:00 UTC",
+        "league": "Turkey - Süper Lig",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Kayserispor": 6.04,
+            "Trabzonspor": 1.55,
+            "Draw": 4.25
+          },
+          "totals": {
+            "Over": 1.71,
+            "Under": 2.17
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 21,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 5,
+          "total_marques": 16,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7142857142857143,
+          "moyenne_encaisses": 1.8571428571428572,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 5,
+          "total_points": 4,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "749980",
+            "date": "Sat, Sep 27",
+            "home_team": "Fatih Karagümrük",
+            "away_team": "Trabzonspor",
+            "score": "3 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.2%",
+                "55.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "11"
+              ],
+              "Shot Attempts": [
+                "13",
+                "22"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "7",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749980"
+          },
+          {
+            "game_id": "749971",
+            "date": "Sat, Sep 20",
+            "home_team": "Trabzonspor",
+            "away_team": "Gaziantep FK",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.7%",
+                "51.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "27",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749971"
+          },
+          {
+            "game_id": "749958",
+            "date": "Sun, Sep 14",
+            "home_team": "Fenerbahce",
+            "away_team": "Trabzonspor",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.5%",
+                "27.5%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "1"
+              ],
+              "Shot Attempts": [
+                "29",
+                "1"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749958"
+          },
+          {
+            "game_id": "749953",
+            "date": "Sun, Aug 31",
+            "home_team": "Trabzonspor",
+            "away_team": "Samsunspor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.1%",
+                "44.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "10"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749953"
+          },
+          {
+            "game_id": "749944",
+            "date": "Sun, Aug 24",
+            "home_team": "Trabzonspor",
+            "away_team": "Antalyaspor",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.8%",
+                "50.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749944"
+          },
+          {
+            "game_id": "749933",
+            "date": "Mon, Aug 18",
+            "home_team": "Kasimpasa",
+            "away_team": "Trabzonspor",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "1"
+              ],
+              "Shot Attempts": [
+                "8",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749933"
+          },
+          {
+            "game_id": "749921",
+            "date": "Mon, Aug 11",
+            "home_team": "Trabzonspor",
+            "away_team": "Kocaelispor",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.9%",
+                "44.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749921"
+          },
+          {
+            "game_id": "754294",
+            "date": "Sat, Jul 26",
+            "home_team": "Umraniyespor",
+            "away_team": "Trabzonspor",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/754294"
+          },
+          {
+            "game_id": "753561",
+            "date": "Wed, Jul 23",
+            "home_team": "Trabzonspor",
+            "away_team": "Persepolis",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/753561"
+          },
+          {
+            "game_id": "753560",
+            "date": "Sun, Jul 20",
+            "home_team": "Trabzonspor",
+            "away_team": "Zob-Ahan",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/753560"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "749976",
+            "date": "Sun, Sep 28",
+            "home_team": "Kayserispor",
+            "away_team": "Genclerbirligi",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.1%",
+                "27.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "23",
+                "2"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749976"
+          },
+          {
+            "game_id": "749924",
+            "date": "Wed, Sep 24",
+            "home_team": "Kayserispor",
+            "away_team": "Besiktas",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.5%",
+                "49.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "9"
+              ],
+              "Shot Attempts": [
+                "6",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749924"
+          },
+          {
+            "game_id": "749963",
+            "date": "Sat, Sep 20",
+            "home_team": "Antalyaspor",
+            "away_team": "Kayserispor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749963"
+          },
+          {
+            "game_id": "749960",
+            "date": "Sun, Sep 14",
+            "home_team": "Kayserispor",
+            "away_team": "Goztepe",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "7"
+              ],
+              "Shot Attempts": [
+                "8",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749960"
+          },
+          {
+            "game_id": "749952",
+            "date": "Sat, Aug 30",
+            "home_team": "Kocaelispor",
+            "away_team": "Kayserispor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.3%",
+                "56.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749952"
+          },
+          {
+            "game_id": "749941",
+            "date": "Sun, Aug 24",
+            "home_team": "Kayserispor",
+            "away_team": "Galatasaray",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.1%",
+                "65.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "9"
+              ],
+              "Shot Attempts": [
+                "8",
+                "19"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749941"
+          },
+          {
+            "game_id": "749932",
+            "date": "Sun, Aug 17",
+            "home_team": "Istanbul Basaksehir",
+            "away_team": "Kayserispor",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/749932"
+          }
+        ],
+        "classement": {
+          "Trabzonspor": {
+            "position": 3,
+            "points": 14
+          },
+          "Kayserispor": {
+            "position": 15,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Galatasaray",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Fenerbahce",
+            "points": 15
+          },
+          {
+            "position": 3,
+            "team": "Trabzonspor",
+            "points": 14
+          },
+          {
+            "position": 4,
+            "team": "Goztepe",
+            "points": 13
+          },
+          {
+            "position": 5,
+            "team": "Besiktas",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Samsunspor",
+            "points": 12
+          },
+          {
+            "position": 7,
+            "team": "Gaziantep FK",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Konyaspor",
+            "points": 10
+          },
+          {
+            "position": 9,
+            "team": "Antalyaspor",
+            "points": 10
+          },
+          {
+            "position": 10,
+            "team": "Alanyaspor",
+            "points": 9
+          },
+          {
+            "position": 11,
+            "team": "Kasimpasa",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Istanbul Basaksehir",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Caykur Rizespor",
+            "points": 5
+          },
+          {
+            "position": 14,
+            "team": "Eyupspor",
+            "points": 5
+          },
+          {
+            "position": 15,
+            "team": "Kayserispor",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Genclerbirligi",
+            "points": 4
+          },
+          {
+            "position": 17,
+            "team": "Fatih Karagümrük",
+            "points": 3
+          },
+          {
+            "position": 18,
+            "team": "Kocaelispor",
+            "points": 2
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713915",
+            "date": "Thursday, September 19, 2024",
+            "team1": "Trabzonspor",
+            "score": "2 - 2",
+            "team2": "Kayserispor",
+            "title": "Trabzonspor VS Kayserispor",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713915/kayserispor-trabzonspor",
+            "source": "Süper Lig",
+            "stats": {
+              "Possession": [
+                "65.7%",
+                "34.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "25",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "714091",
+            "date": "Saturday, February 1, 2025",
+            "team1": "Kayserispor",
+            "score": "0 - 0",
+            "team2": "Trabzonspor",
+            "title": "Kayserispor VS Trabzonspor",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/714091/trabzonspor-kayserispor",
+            "source": "Süper Lig",
+            "stats": {
+              "Possession": [
+                "35.8%",
+                "64.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/998.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1001.png",
+        "classement_home": 3,
+        "classement_away": 15,
+        "points_classement_home": 14,
+        "points_classement_away": 5,
+        "nom_classement_home": "Trabzonspor",
+        "nom_classement_away": "Kayserispor",
+        "country_fr": "Turkey - Süper Lig",
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire domicile (Trabzonspor)  \n- **CONFIANCE** : 78 %  \n- **CORNERS PRÉVUS** : 8‑11 corners  \n- **TIRS CADRÉS PRÉVUS** : 6‑10 tirs cadrés (total des deux équipes)  \n- **SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative**  \n- **Travzonspor** affiche une défense très solide à domicile (0,70 buts encaissés en moyenne, seulement 2 buts encaissés sur leurs 5 derniers matchs à domicile). Leur attaque moyenne est de 1,60 buts/match, avec 8 buts marqués à domicile cette saison.  \n- **Kayserispor** possède la deuxième pire attaque du championnat (0,71 buts/match) et concède 1,86 buts en moyenne, dont 3 à l’extérieur. En déplacement, ils n’ont inscrit que 3 buts et encaissé 3, soit un ratio très défavorable.\n\n**2. Impact du facteur domicile/extérieur**  \n- Le taux de victoire à domicile de Trabzonspor est élevé (4 victoires, 2 nuls, 0 défaites sur leurs 6 derniers matchs à domicile).  \n- Kayserispor ne gagne que 1 des 6 derniers matchs à l’extérieur (4 défaites, 2 nuls). Le désavantage du déplacement renforce la probabilité d’une victoire de l’hôte.\n\n**3. Forme récente & tendances (stats détaillées)**  \n- **Travzonspor** : dans les 7 derniers matchs à domicile, ils ont produit en moyenne **4,0 tirs cadrés** et **4,3 corners** par rencontre, tout en ne concédant que **0,4 buts**. Leur possession oscille autour de 50 % mais ils restent très efficaces en finition.  \n- **Kayserispor** : en 7 déplacements, ils génèrent **4,3 tirs cadrés** et **4,7 corners** par match, mais ne marquent que **0,6 but** en moyenne et concèdent **1,0 but**. Leurs matchs à l’extérieur sont souvent marqués par une faible conversion et une défense vulnérable.\n\n**4. Contexte du championnat**  \n- Trabzonspor occupe la 3ᵉ place (14 pts) et lutte pour les places européennes, ce qui les motive à ne pas lâcher de points à domicile.  \n- Kayserispor est 15ᵉ avec seulement 5 pts, déjà en zone de relégation, ce qui se traduit par une pression supplémentaire et un manque de confiance offensif.\n\n**5. Confrontations directes**  \n- Les deux dernières rencontres se sont soldées par des nuls (2‑2, 0‑0). Cependant, ces matchs ont été très ouvertes (8 tirs cadrés pour Trabzonspor en 2024, 5‑6 pour Kayserispor). La tendance montre que Kayserispor a du mal à convertir ses occasions contre une défense solide comme celle de Trabzonspor.\n\n**6. Évaluation des cotes**  \n- La cote 1,55 pour la victoire de Trabzonspor reflète bien leur supériorité. La cote 6,04 pour Kayserispor indique une probabilité très faible. Le marché “Over 2.5” à 1,71 est légèrement sous‑évalué, mais les statistiques de buts (1,6 vs 0,7) et la solidité défensive de l’hôte suggèrent que le “Under 2.5” (cote 2,17) est plus cohérent avec les données.\n\n**7. Synthèse**  \n- **Défense** : Trabzonspor ne concède que 0,4 but à domicile sur les 6 derniers matchs, alors que Kayserispor ne marque que 0,6 but à l’extérieur.  \n- **Attaque** : Trabzonspor a une moyenne de 1,6 buts, suffisante pour gagner 1‑0 ou 2‑0 contre une équipe qui peine à marquer.  \n- **Corners & tirs** : La somme des corners attendus (≈9) et des tirs cadrés (≈8‑10) correspond aux fourchettes proposées.\n\nAu vu de ces éléments, la **victoire domicile de Trabzonspor** est la prédiction la plus fiable, avec un score le plus probable de **1‑0** ou **2‑0**, un total de **moins de 2,5 buts**, et un nombre de **corners entre 8 et 11** ainsi que **6 à 10 tirs cadrés** au total.",
+        "confiance_pourcentage": null
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Unirea Slobozia",
+        "AwayTeam": "Dinamo Bucuresti",
+        "date": "3 octobre 2025 à 17:30:00 UTC",
+        "league": "Romania - Liga I",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 18,
+          "total_points": 11,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 14,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 19,
+          "total_points": 12,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 4,
+          "total_marques": 16,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "744441",
+            "date": "Sun, 28 Sep",
+            "home_team": "FC Farul Constanta",
+            "away_team": "Unirea Slobozia",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.3%",
+                "38.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "33",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "11",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744441"
+          },
+          {
+            "game_id": "744439",
+            "date": "Sun, 21 Sep",
+            "home_team": "Unirea Slobozia",
+            "away_team": "Petrolul Ploiesti",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.6%",
+                "52.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744439"
+          },
+          {
+            "game_id": "744425",
+            "date": "Mon, 15 Sep",
+            "home_team": "Hermannstadt",
+            "away_team": "Unirea Slobozia",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.6%",
+                "40.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "3"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "10",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744425"
+          },
+          {
+            "game_id": "744416",
+            "date": "Sat, 30 Aug",
+            "home_team": "Unirea Slobozia",
+            "away_team": "Universitatea Cluj",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.8%",
+                "65.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744416"
+          },
+          {
+            "game_id": "744413",
+            "date": "Fri, 22 Aug",
+            "home_team": "UTA Arad",
+            "away_team": "Unirea Slobozia",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56%",
+                "44%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744413"
+          },
+          {
+            "game_id": "744403",
+            "date": "Fri, 15 Aug",
+            "home_team": "Unirea Slobozia",
+            "away_team": "Metaloglobus",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.4%",
+                "55.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744403"
+          },
+          {
+            "game_id": "744397",
+            "date": "Sun, 10 Aug",
+            "home_team": "FCSB",
+            "away_team": "Unirea Slobozia",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.5%",
+                "30.5%"
+              ],
+              "Shots on Goal": [
+                "13",
+                "4"
+              ],
+              "Shot Attempts": [
+                "35",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "13"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744397"
+          },
+          {
+            "game_id": "744388",
+            "date": "Mon, 4 Aug",
+            "home_team": "Unirea Slobozia",
+            "away_team": "Otelul Galati",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.1%",
+                "52.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "22",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744388"
+          },
+          {
+            "game_id": "744376",
+            "date": "Mon, 28 Jul",
+            "home_team": "FC Botosani",
+            "away_team": "Unirea Slobozia",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744376"
+          },
+          {
+            "game_id": "744373",
+            "date": "Mon, 21 Jul",
+            "home_team": "Unirea Slobozia",
+            "away_team": "Csíkszereda",
+            "score": "6 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.9%",
+                "40.1%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "6"
+              ],
+              "Shot Attempts": [
+                "20",
+                "15"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "5",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744373"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "744447",
+            "date": "Fri, 26 Sep",
+            "home_team": "CSU Craiova",
+            "away_team": "Dinamo Bucuresti",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.7%",
+                "58.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "15",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744447"
+          },
+          {
+            "game_id": "744435",
+            "date": "Mon, 22 Sep",
+            "home_team": "Dinamo Bucuresti",
+            "away_team": "FC Farul Constanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.8%",
+                "46.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744435"
+          },
+          {
+            "game_id": "744428",
+            "date": "Mon, 15 Sep",
+            "home_team": "Petrolul Ploiesti",
+            "away_team": "Dinamo Bucuresti",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42%",
+                "58%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744428"
+          },
+          {
+            "game_id": "744418",
+            "date": "Sat, 30 Aug",
+            "home_team": "Dinamo Bucuresti",
+            "away_team": "Hermannstadt",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.5%",
+                "35.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744418"
+          },
+          {
+            "game_id": "744412",
+            "date": "Sat, 23 Aug",
+            "home_team": "Universitatea Cluj",
+            "away_team": "Dinamo Bucuresti",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.6%",
+                "52.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "5",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744412"
+          },
+          {
+            "game_id": "744406",
+            "date": "Fri, 15 Aug",
+            "home_team": "Dinamo Bucuresti",
+            "away_team": "UTA Arad",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.9%",
+                "39.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744406"
+          },
+          {
+            "game_id": "744396",
+            "date": "Fri, 8 Aug",
+            "home_team": "Metaloglobus",
+            "away_team": "Dinamo Bucuresti",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744396"
+          },
+          {
+            "game_id": "744389",
+            "date": "Sat, 2 Aug",
+            "home_team": "Dinamo Bucuresti",
+            "away_team": "FCSB",
+            "score": "4 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.7%",
+                "43.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744389"
+          },
+          {
+            "game_id": "744381",
+            "date": "Sun, 27 Jul",
+            "home_team": "Otelul Galati",
+            "away_team": "Dinamo Bucuresti",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.7%",
+                "64.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744381"
+          },
+          {
+            "game_id": "744368",
+            "date": "Mon, 21 Jul",
+            "home_team": "Dinamo Bucuresti",
+            "away_team": "FC Botosani",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/744368"
+          }
+        ],
+        "classement": {
+          "Unirea Slobozia": {
+            "position": 6,
+            "points": 18
+          },
+          "Dinamo Bucuresti": {
+            "position": 5,
+            "points": 20
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "CSU Craiova",
+            "points": 24
+          },
+          {
+            "position": 2,
+            "team": "FC Botosani",
+            "points": 22
+          },
+          {
+            "position": 3,
+            "team": "Rapid Bucuresti",
+            "points": 22
+          },
+          {
+            "position": 4,
+            "team": "FC Arges",
+            "points": 22
+          },
+          {
+            "position": 5,
+            "team": "Dinamo Bucuresti",
+            "points": 20
+          },
+          {
+            "position": 6,
+            "team": "Unirea Slobozia",
+            "points": 18
+          },
+          {
+            "position": 7,
+            "team": "UTA Arad",
+            "points": 16
+          },
+          {
+            "position": 8,
+            "team": "FC Farul Constanta",
+            "points": 15
+          },
+          {
+            "position": 9,
+            "team": "Universitatea Cluj",
+            "points": 14
+          },
+          {
+            "position": 10,
+            "team": "Otelul Galati",
+            "points": 13
+          },
+          {
+            "position": 11,
+            "team": "FCSB",
+            "points": 10
+          },
+          {
+            "position": 12,
+            "team": "Hermannstadt",
+            "points": 10
+          },
+          {
+            "position": 13,
+            "team": "CFR Cluj-Napoca",
+            "points": 9
+          },
+          {
+            "position": 14,
+            "team": "Petrolul Ploiesti",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "Csíkszereda",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Metaloglobus",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "711049",
+            "date": "Friday, September 13, 2024",
+            "team1": "Dinamo Bucuresti",
+            "score": "1 - 0",
+            "team2": "Unirea Slobozia",
+            "title": "Dinamo Bucuresti VS Unirea Slobozia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711049/unirea-slobozia-dinamo-bucuresti",
+            "source": "Liga I",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "711173",
+            "date": "Friday, January 31, 2025",
+            "team1": "Unirea Slobozia",
+            "score": "1 - 3",
+            "team2": "Dinamo Bucuresti",
+            "title": "Unirea Slobozia VS Dinamo Bucuresti",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711173/dinamo-bucuresti-unirea-slobozia",
+            "source": "Liga I",
+            "stats": {
+              "Possession": [
+                "26.1%",
+                "73.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "7",
+                "16"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/6916.png",
+        "logo_away": "https://media.api-sports.io/football/teams/635.png",
+        "classement_home": 6,
+        "classement_away": 5,
+        "points_classement_home": 18,
+        "points_classement_away": 20,
+        "nom_classement_home": "Unirea Slobozia",
+        "nom_classement_away": "Dinamo Bucuresti",
+        "country_fr": "Romania - Liga I",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 68 %  \n**CORNERS PRÉVUS** : 9‑13 corners  \n**TIRS CADRÉS PRÉVUS** : 9‑12 tirs cadrés  \n**SCORES PROBABLES** : 2‑1 ou 3‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Unirea Slobozia (domicile)** : moyenne 1,40 buts marqués et 0,90 buts encaissés à domicile. Elle montre une défense solide (seulement 3 buts encaissés sur 9 matchs à domicile) mais peut être très offensive lorsqu’elle domine (ex. 6‑0 contre Hermannstadt, 6‑1 contre Csíkszereda).  \n- **Dinamo Bucarest (extérieur)** : moyenne 1,60 buts marqués et 0,90 buts encaissés à l’extérieur. L’équipe combine une attaque légèrement supérieure à celle d’Unirea avec une défense tout aussi compacte.  \n\n**2. Impact du facteur domicile/extérieur**  \nUnirea bénéficie d’un bon bilan à domicile (9 buts marqués, 3 encaissés). Dinamo, malgré le déplacement, conserve la même moyenne de buts encaissés (0,90) et marque davantage (8 buts en 5 matchs à l’extérieur). Le facteur terrain ne crée donc pas un déséquilibre majeur, les deux équipes restent capables de marquer.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Unirea** : sur ses 9 derniers matchs à domicile, total de 22 buts (moy. 2,44 buts/match). Elle a produit **6 tirs cadrés** contre Farul (7 SOT) et **13 SOT** contre FCSB, preuve d’une capacité à créer de nombreuses occasions.  \n- **Dinamo** : sur ses 10 derniers déplacements, total de 24 buts (moy. 2,40 buts/match). Le match contre FCSB (4‑3) montre qu’elle peut participer à des rencontres très ouvertes. Elle a enregistré **7 SOT** contre FCSB et **5 SOT** contre Hermannstadt.  \n\n**4. Contexte du championnat**  \nLes deux équipes occupent les places 5 (Dinamo, 20 pts) et 6 (Unirea, 18 pts). Elles sont très proches au classement, ce qui rend la rencontre décisive et pousse les deux formations à chercher le but.\n\n**5. Confrontations directes**  \n- Saison précédente : Dinamo 1‑0 Unirea.  \n- Cette saison : Unirea 1‑3 Dinamo.  \nSur les deux rencontres, **5 buts** ont été marqués, soit **2,5 buts par match**. Le dernier affrontement a même produit **4 buts**, indiquant une propension à dépasser les 2,5 buts.\n\n**6. Analyse des corners et tirs cadrés**  \n- **Corners** : moyenne combinée ≈ 5,2 (Unirea) + 5,5 (Dinamo) ≈ 10,7 corners/match → fourchette réaliste 9‑13.  \n- **Tirs cadrés** : moyenne combinée ≈ 6,3 (Unirea) + 4,0 (Dinamo) ≈ 10,3 SOT/match → fourchette 9‑12.\n\n**7. Synthèse**  \n- Total moyen de buts attendu ≈ 2,8 buts/match, légèrement au‑dessus du seuil de 2,5.  \n- Historique des confrontations (5 buts sur 2 matchs) et les récents matchs à forte intensité (4‑3, 6‑1) renforcent la probabilité d’une rencontre avec plus de 2,5 buts.  \n- Le taux de BTTS (≈ 45‑50 %) est respectable mais légèrement inférieur à la probabilité de dépasser 2,5 buts, d’où le choix de la prédiction « Plus de 2.5 buts ».  \n\n**Scores les plus probables** :  \n- **2‑1** (Unirea marque mais Dinamo répond)  \n- **3‑2** (match très ouvert, les deux équipes trouvent le filet).",
+        "confiance_pourcentage": null
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Bournemouth",
+        "AwayTeam": "Fulham",
+        "date": "3 octobre 2025 à 19:00:00 UTC",
+        "league": "England - Premier League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bournemouth": 1.95,
+            "Fulham": 4.18,
+            "Draw": 3.81
+          },
+          "totals": {
+            "Over": 1.96,
+            "Under": 1.98
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 14,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 10,
+          "total_marques": 12,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 1.25,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 14,
+          "total_points": 12,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 6,
+          "total_marques": 10,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740655",
+            "date": "Sat, Sep 27",
+            "home_team": "Leeds United",
+            "away_team": "AFC Bournemouth",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.4%",
+                "58.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740655"
+          },
+          {
+            "game_id": "740644",
+            "date": "Sun, Sep 21",
+            "home_team": "AFC Bournemouth",
+            "away_team": "Newcastle United",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740644"
+          },
+          {
+            "game_id": "740635",
+            "date": "Sat, Sep 13",
+            "home_team": "AFC Bournemouth",
+            "away_team": "Brighton & Hove Albion",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.3%",
+                "48.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "6"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740635"
+          },
+          {
+            "game_id": "740620",
+            "date": "Sat, Aug 30",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "AFC Bournemouth",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "6"
+              ],
+              "Shot Attempts": [
+                "5",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "0",
+                "8"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740620"
+          },
+          {
+            "game_id": "756247",
+            "date": "Tue, Aug 26",
+            "home_team": "AFC Bournemouth",
+            "away_team": "Brentford",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/756247"
+          },
+          {
+            "game_id": "740607",
+            "date": "Sat, Aug 23",
+            "home_team": "AFC Bournemouth",
+            "away_team": "Wolverhampton Wanderers",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.8%",
+                "41.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740607"
+          },
+          {
+            "game_id": "740596",
+            "date": "Fri, Aug 15",
+            "home_team": "Liverpool",
+            "away_team": "AFC Bournemouth",
+            "score": "4 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.2%",
+                "38.8%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740596"
+          },
+          {
+            "game_id": "754184",
+            "date": "Sun, Aug 3",
+            "home_team": "AFC Bournemouth",
+            "away_team": "West Ham United",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/754184"
+          },
+          {
+            "game_id": "754183",
+            "date": "Wed, Jul 30",
+            "home_team": "Manchester United",
+            "away_team": "AFC Bournemouth",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/754183"
+          },
+          {
+            "game_id": "754180",
+            "date": "Sat, Jul 26",
+            "home_team": "Everton",
+            "away_team": "AFC Bournemouth",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/754180"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "740650",
+            "date": "Sun, Sep 28",
+            "home_team": "Aston Villa",
+            "away_team": "Fulham",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.3%",
+                "51.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740650"
+          },
+          {
+            "game_id": "758193",
+            "date": "Tue, Sep 23",
+            "home_team": "Fulham",
+            "away_team": "Cambridge United",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758193"
+          },
+          {
+            "game_id": "740642",
+            "date": "Sat, Sep 20",
+            "home_team": "Fulham",
+            "away_team": "Brentford",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53%",
+                "47%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "10"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740642"
+          },
+          {
+            "game_id": "740631",
+            "date": "Sat, Sep 13",
+            "home_team": "Fulham",
+            "away_team": "Leeds United",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54%",
+                "46%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "5",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740631"
+          },
+          {
+            "game_id": "740618",
+            "date": "Sat, Aug 30",
+            "home_team": "Chelsea",
+            "away_team": "Fulham",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.8%",
+                "46.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740618"
+          },
+          {
+            "game_id": "756250",
+            "date": "Wed, Aug 27",
+            "home_team": "Fulham",
+            "away_team": "Bristol City",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/756250"
+          },
+          {
+            "game_id": "740612",
+            "date": "Sun, Aug 24",
+            "home_team": "Fulham",
+            "away_team": "Manchester United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740612"
+          },
+          {
+            "game_id": "740598",
+            "date": "Sat, Aug 16",
+            "home_team": "Brighton & Hove Albion",
+            "away_team": "Fulham",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.8%",
+                "50.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740598"
+          }
+        ],
+        "classement": {
+          "Bournemouth": {
+            "position": 6,
+            "points": 11
+          },
+          "Fulham": {
+            "position": 11,
+            "points": 8
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Liverpool",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "Arsenal",
+            "points": 13
+          },
+          {
+            "position": 3,
+            "team": "Crystal Palace",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "Tottenham Hotspur",
+            "points": 11
+          },
+          {
+            "position": 5,
+            "team": "Sunderland",
+            "points": 11
+          },
+          {
+            "position": 6,
+            "team": "AFC Bournemouth",
+            "points": 11
+          },
+          {
+            "position": 7,
+            "team": "Manchester City",
+            "points": 10
+          },
+          {
+            "position": 8,
+            "team": "Chelsea",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Everton",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "Brighton & Hove Albion",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Fulham",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Leeds United",
+            "points": 8
+          },
+          {
+            "position": 13,
+            "team": "Brentford",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Manchester United",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "Newcastle United",
+            "points": 6
+          },
+          {
+            "position": 16,
+            "team": "Aston Villa",
+            "points": 6
+          },
+          {
+            "position": 17,
+            "team": "Nottingham Forest",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Burnley",
+            "points": 4
+          },
+          {
+            "position": 19,
+            "team": "West Ham United",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "Wolverhampton Wanderers",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704460",
+            "date": "Sunday, December 29, 2024",
+            "team1": "Fulham",
+            "score": "2 - 2",
+            "team2": "AFC Bournemouth",
+            "title": "Fulham VS AFC Bournemouth",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704460/afc-bournemouth-fulham",
+            "source": "Premier League",
+            "stats": {
+              "Possession": [
+                "52%",
+                "48%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "9"
+              ],
+              "Shot Attempts": [
+                "11",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "704596",
+            "date": "Monday, April 14, 2025",
+            "team1": "AFC Bournemouth",
+            "score": "1 - 0",
+            "team2": "Fulham",
+            "title": "AFC Bournemouth VS Fulham",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704596/fulham-afc-bournemouth",
+            "source": "Premier League",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "7",
+                "2"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/35.png",
+        "logo_away": "https://media.api-sports.io/football/teams/36.png",
+        "classement_home": 6,
+        "classement_away": 11,
+        "points_classement_home": 11,
+        "points_classement_away": 8,
+        "nom_classement_home": "AFC Bournemouth",
+        "nom_classement_away": "Fulham",
+        "country_fr": "England - Premier League",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Double chance 1X (victoire de Bournemouth ou match nul)  \n**CONFIANCE** : 68 %  \n**CORNERS PRÉVUS** : 8‑12 corners  \n**TIRS CADRÉS PRÉVUS** : 7‑11 tirs cadrés  \n**SCORES PROBABLES** : 1‑0 ou 1‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Bournemouth** : moyenne 1,20 but/match, 1,50 but encaissé. À domicile, ils marquent 1,20 but en moyenne (3 buts encaissés en 5 matchs) et concèdent 1,00 but. Leur jeu est plutôt équilibré mais peu prolifique.  \n- **Fulham** : moyenne 1,25 but/match, 1,00 but encaissé. En déplacement, ils ne marquent que 0,40 but en moyenne (2 buts en 5 matchs) tout en concédant 1,20 but. Leur principal point faible à l’extérieur est la défense (6 buts encaissés).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Bournemouth a l’avantage du terrain et bénéficie d’un public qui a limité les buts encaissés à 1,00 but en 5 matchs à domicile.  \n- Fulham montre des difficultés à marquer à l’extérieur (0,4 but/match) et a déjà concédé 6 buts loin de chez eux, ce qui rend une victoire claire difficile.  \n\n**3. Forme récente & tendances (matchs détaillés)**  \n- **Bournemouth** : sur les 6 derniers matchs (D D W W L W) ils ont encaissé 4 buts et marqué 5 buts. Leurs matchs à domicile récents montrent une bonne maîtrise du ballon (possessions > 50 % dans 5/7 matchs) et une capacité à créer des occasions (moyenne 5 SOG par match).  \n- **Fulham** : sur les 6 derniers matchs (L W W W L W) ils ont marqué 6 buts mais n’en ont encaissé que 4, cependant leurs deux seules buts à l’extérieur proviennent d’une victoire 3‑1 contre Aston Villa où ils ont dominé les corners (8‑2).  \n\n**4. Contexte du championnat**  \n- Bournemouth occupe la 6ᵉ place (11 pts) – en lice pour les places européennes.  \n- Fulham est 11ᵉ (8 pts) et lutte pour s’éloigner de la zone de relégation. La motivation de Bournemouth à consolider sa position à domicile est donc élevée, tandis que Fulham cherche surtout à éviter la défaite.  \n\n**5. Confrontations directes**  \n- Saison précédente : 2‑2 (match très ouvert).  \n- Cette saison : Bournemouth 1‑0 victoire à domicile, mais Fulham a dominé les tirs (7 SOG contre 3) et les corners (9‑6). Cela montre que même lorsqu’ils perdent, les Cottagers créent de nombreuses occasions.  \n\n**6. Évaluation des cotes**  \n- 1X2 : Bournemouth 1,95 – Fulham 4,18 – Nul 3,81. La cote de victoire à domicile indique une légère supériorité, mais pas écrasante.  \n- Total 2,5 : Over 1,96 / Under 1,98, quasiment équilibré, ce qui confirme l’incertitude autour du nombre de buts.  \n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Bournemouth domine légèrement à domicile (moy. ≈ 55 %).  \n- **Shots on Goal** : moyenne 5 SOG pour Bournemouth à domicile, 4 SOG pour Fulham à l’extérieur.  \n- **Corners** : Bournemouth 5‑8 corners/match à domicile, Fulham 4‑6 corners à l’extérieur → total attendu 8‑12.  \n- **Tirs cadrés** : combinaison des deux équipes donne 7‑11 tirs cadrés attendus.  \n\n**8. Synthèse**  \n- Le match devrait rester serré, avec peu de buts (probabilité élevée d’« moins de 2,5 buts »).  \n- Bournemouth a l’avantage du terrain et une défense plus solide à domicile, ce qui rend un résultat nul ou une victoire à domicile très plausible.  \n- La probabilité que les deux équipes marquent est modérée (BTTS ≈ 30 %), d’où le choix du **double chance 1X** comme meilleure valeur.  \n\n**Scores les plus probables** : 1‑0 (victoire mince de Bournemouth) ou 1‑1 (défense solide des deux côtés, but unique).  \n\n---  \n\n*Cette prédiction repose sur l’ensemble des données fournies (statistiques de buts, possession, tirs, corners, forme récente, classements et confrontations directes) et tient compte de la quasi‑égalité des cotes sur le total de buts.*",
+        "confiance_pourcentage": null
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Osasuna",
+        "AwayTeam": "Getafe",
+        "date": "3 octobre 2025 à 19:00:00 UTC",
+        "league": "Spain - La Liga",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.7142857142857143,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 6,
+          "total_marques": 5,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1428571428571428,
+          "moyenne_encaisses": 1.2857142857142858,
+          "form_6": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 11,
+          "total_points": 8,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 7,
+          "total_marques": 8,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "748212",
+            "date": "Sun, Sep 28",
+            "home_team": "Real Betis",
+            "away_team": "Osasuna",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.6%",
+                "49.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748212"
+          },
+          {
+            "game_id": "748201",
+            "date": "Thu, Sep 25",
+            "home_team": "Osasuna",
+            "away_team": "Elche",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.6%",
+                "60.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748201"
+          },
+          {
+            "game_id": "748189",
+            "date": "Sat, Sep 20",
+            "home_team": "Villarreal",
+            "away_team": "Osasuna",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.8%",
+                "34.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "26",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748189"
+          },
+          {
+            "game_id": "748176",
+            "date": "Sun, Sep 14",
+            "home_team": "Osasuna",
+            "away_team": "Rayo Vallecano",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.9%",
+                "64.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "19"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748176"
+          },
+          {
+            "game_id": "748169",
+            "date": "Sun, Aug 31",
+            "home_team": "Espanyol",
+            "away_team": "Osasuna",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.4%",
+                "54.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748169"
+          },
+          {
+            "game_id": "748159",
+            "date": "Sun, Aug 24",
+            "home_team": "Osasuna",
+            "away_team": "Valencia",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.7%",
+                "44.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "16",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748159"
+          },
+          {
+            "game_id": "748145",
+            "date": "Tue, Aug 19",
+            "home_team": "Real Madrid",
+            "away_team": "Osasuna",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "70.7%",
+                "29.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "18",
+                "2"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748145"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748206",
+            "date": "Sat, Sep 27",
+            "home_team": "Getafe",
+            "away_team": "Levante",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.9%",
+                "46.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748206"
+          },
+          {
+            "game_id": "748199",
+            "date": "Wed, Sep 24",
+            "home_team": "Getafe",
+            "away_team": "Alavés",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.2%",
+                "53.8%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "7",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "7"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748199"
+          },
+          {
+            "game_id": "748191",
+            "date": "Sun, Sep 21",
+            "home_team": "Barcelona",
+            "away_team": "Getafe",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "70.7%",
+                "29.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "3"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748191"
+          },
+          {
+            "game_id": "748174",
+            "date": "Sat, Sep 13",
+            "home_team": "Getafe",
+            "away_team": "Real Oviedo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.3%",
+                "51.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748174"
+          },
+          {
+            "game_id": "748168",
+            "date": "Fri, Aug 29",
+            "home_team": "Valencia",
+            "away_team": "Getafe",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.5%",
+                "42.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "7",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748168"
+          },
+          {
+            "game_id": "748157",
+            "date": "Mon, Aug 25",
+            "home_team": "Sevilla",
+            "away_team": "Getafe",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.3%",
+                "28.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748157"
+          },
+          {
+            "game_id": "748148",
+            "date": "Sun, Aug 17",
+            "home_team": "Celta Vigo",
+            "away_team": "Getafe",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.1%",
+                "30.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748148"
+          }
+        ],
+        "classement": {
+          "Osasuna": {
+            "position": 13,
+            "points": 7
+          },
+          "Getafe": {
+            "position": 8,
+            "points": 11
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Barcelona",
+            "points": 19
+          },
+          {
+            "position": 2,
+            "team": "Real Madrid",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "Villarreal",
+            "points": 16
+          },
+          {
+            "position": 4,
+            "team": "Elche",
+            "points": 13
+          },
+          {
+            "position": 5,
+            "team": "Atlético Madrid",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Real Betis",
+            "points": 12
+          },
+          {
+            "position": 7,
+            "team": "Espanyol",
+            "points": 12
+          },
+          {
+            "position": 8,
+            "team": "Getafe",
+            "points": 11
+          },
+          {
+            "position": 9,
+            "team": "Sevilla",
+            "points": 10
+          },
+          {
+            "position": 10,
+            "team": "Athletic Club",
+            "points": 10
+          },
+          {
+            "position": 11,
+            "team": "Alavés",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Valencia",
+            "points": 8
+          },
+          {
+            "position": 13,
+            "team": "Osasuna",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Real Oviedo",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "Levante",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Rayo Vallecano",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Celta Vigo",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Real Sociedad",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "Mallorca",
+            "points": 5
+          },
+          {
+            "position": 20,
+            "team": "Girona",
+            "points": 3
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704741",
+            "date": "Saturday, October 5, 2024",
+            "team1": "Getafe",
+            "score": "1 - 1",
+            "team2": "Osasuna",
+            "title": "Getafe VS Osasuna",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704741/osasuna-getafe",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "39.6%",
+                "60.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "704935",
+            "date": "Sunday, March 16, 2025",
+            "team1": "Osasuna",
+            "score": "1 - 2",
+            "team2": "Getafe",
+            "title": "Osasuna VS Getafe",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704935/getafe-osasuna",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "62.2%",
+                "37.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/727.png",
+        "logo_away": "https://media.api-sports.io/football/teams/546.png",
+        "classement_home": 13,
+        "classement_away": 8,
+        "points_classement_home": 7,
+        "points_classement_away": 11,
+        "nom_classement_home": "Osasuna",
+        "nom_classement_away": "Getafe",
+        "country_fr": "Spain - La Liga",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 72 %  \n**CORNERS PRÉVUS** : 7‑10 corners  \n**TIRS CADRÉS PRÉVUS** : 6‑9 tirs cadrés  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Osasuna (domicile)** : moyenne de 0,71 but marqué et 1,00 but encaissé. À domicile, ils n’ont concédé qu’**1 but en 3 matchs** (Rayo 2‑0, Elche 1‑1, Valencia 1‑0) et ont inscrit 4 buts. Leur défense est donc solide à domicile, mais l’attaque reste peu prolifique.  \n- **Getafe (extérieur)** : moyenne de 1,14 but marqué et 1,29 encaissé. En déplacement, ils ont inscrit **4 buts** mais encaissé **7** (4 matchs). Leur défense à l’extérieur est plus fragile que celle d’Osasuna, tandis que l’attaque reste modérée.\n\n**2. Impact du facteur domicile / extérieur**  \n- Osasuna bénéficie d’une série à domicile **D‑W‑W** et d’un bon bilan de possession (≈ 55 %) et de tirs cadrés (≈ 4,3 SOG / match).  \n- Getafe montre des performances irrégulières à l’extérieur (L‑L‑W‑W) avec une possession moyenne (≈ 48 %) et seulement **2,5 tirs cadrés** par match à l’extérieur.\n\n**3. Formes récentes et tendances (statistiques détaillées)**  \n- **Osasuna** : dans les 3 derniers matchs à domicile, ils ont totalisé **13 tirs cadrés** (4,3 moy.) et **8 corners** (2,7 moy.). Leur capacité à créer des occasions est respectable, mais la conversion reste faible (2 buts).  \n- **Getafe** : sur les 4 derniers déplacements, ils ont totalisé **10 tirs cadrés** (2,5 moy.) et **15 corners** (3,75 moy.). Le nombre de corners est plus élevé, signe d’une certaine agressivité, mais la finition reste moyenne (3 buts marqués).\n\n**4. Contexte du championnat**  \n- Classement : Getafe 8ᵉ (11 pts) vs Osasuna 13ᵉ (7 pts). Getafe a un léger avantage en points et en forme globale, mais le match se joue à **Pablo Cacho**, où les équipes du bas du tableau affichent souvent des scores serrés.\n\n**5. Confrontations directes**  \n- Saison précédente : 1‑1 (Getafe à domicile).  \n- Saison en cours : 1‑2 (Osasuna à domicile).  \n  - Dans les deux duels, **les deux équipes ont marqué** et le total de buts était **3**.  \n  - Statistiques H2H : possession Osasuna dominante (62 % vs 38 %), mais Getafe a été plus efficace en tirs (4 SOG contre 4).  \n  - Malgré ces deux rencontres avec plus de 2,5 buts, le petit nombre de matchs rend la tendance moins fiable que les moyennes saisonnières.\n\n**6. Synthèse**  \n- Somme des moyennes de buts attendus : 0,71 (Osasuna) + 1,14 (Getafe) ≈ **1,85** buts, clairement sous 2,5.  \n- La défense d’Osasuna à domicile (1 but encaissé en 3 matchs) combinée à la capacité de Getafe à concéder plus d’un but à l’extérieur (≈ 1,3) indique que le match devrait rester **peu prolifique**.  \n- Les deux précédents duels ont dépassé 2,5 buts, mais ils restent des cas isolés ; la tendance saisonnière (moins de 2,5 buts dans 70 % des matchs de chaque équipe) est plus robuste.\n\n**7. Prédiction des corners et tirs cadrés**  \n- Corners : Osasuna (≈ 2,7) + Getafe (≈ 3,8) → **6‑10** ; on ajoute un léger facteur d’incitation offensif (match serré) → **7‑10**.  \n- Tirs cadrés : Osasuna (≈ 4,3) + Getafe (≈ 2,5) → **≈ 6,8** → intervalle **6‑9**.\n\n**8. Scores les plus probables**  \n- **0‑0** : scénario où la défense d’Osasuna neutralise l’attaque modérée de Getafe.  \n- **1‑0** : Osasuna profite d’une occasion rare (ex. corner) et garde sa cage inviolée, ce qui correspond à leurs performances à domicile.\n\nEn résumé, les indicateurs (moyennes de buts, solidité défensive à domicile d’Osasuna, inefficacité offensive de Getafe à l’extérieur) convergent vers un match **avec moins de 2,5 buts**, d’où la prédiction principale.",
+        "confiance_pourcentage": null
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Casa Pia",
+        "AwayTeam": "Estoril",
+        "date": "3 octobre 2025 à 19:15:00 UTC",
+        "league": "Portugal - Primeira Liga",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Casa Pia": 2.45,
+            "Estoril": 2.87,
+            "Draw": 3.22
+          },
+          "totals": {
+            "Over": 2.19,
+            "Under": 1.65
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.8571428571428571,
+          "moyenne_encaisses": 1.5714285714285714,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_domicile": [
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 6,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1428571428571428,
+          "moyenne_encaisses": 1.5714285714285714,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 5,
+          "total_points": 4,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 7,
+          "total_marques": 8,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "750305",
+            "date": "Sat, Sep 27",
+            "home_team": "Moreirense",
+            "away_team": "Casa Pia",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "20"
+              ],
+              "Yellow Cards": [
+                "5",
+                "5"
+              ],
+              "Corner Kicks": [
+                "6",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750305"
+          },
+          {
+            "game_id": "750293",
+            "date": "Sun, Sep 21",
+            "home_team": "Casa Pia",
+            "away_team": "FC Famalicao",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.3%",
+                "46.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750293"
+          },
+          {
+            "game_id": "750288",
+            "date": "Sun, Sep 14",
+            "home_team": "Arouca",
+            "away_team": "Casa Pia",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.8%",
+                "34.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "7"
+              ],
+              "Corner Kicks": [
+                "7",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750288"
+          },
+          {
+            "game_id": "750274",
+            "date": "Sat, Aug 30",
+            "home_team": "Casa Pia",
+            "away_team": "C.D. Nacional",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.7%",
+                "38.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750274"
+          },
+          {
+            "game_id": "750264",
+            "date": "Sun, Aug 24",
+            "home_team": "FC Porto",
+            "away_team": "Casa Pia",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.1%",
+                "34.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750264"
+          },
+          {
+            "game_id": "750262",
+            "date": "Fri, Aug 15",
+            "home_team": "AVS",
+            "away_team": "Casa Pia",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750262"
+          },
+          {
+            "game_id": "750246",
+            "date": "Fri, Aug 8",
+            "home_team": "Casa Pia",
+            "away_team": "Sporting CP",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33%",
+                "67%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "12"
+              ],
+              "Shot Attempts": [
+                "7",
+                "27"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "9"
+              ],
+              "Saves": [
+                "8",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750246"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750303",
+            "date": "Sat, Sep 27",
+            "home_team": "Estoril",
+            "away_team": "Sporting CP",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.5%",
+                "62.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "7",
+                "9"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750303"
+          },
+          {
+            "game_id": "750294",
+            "date": "Sun, Sep 21",
+            "home_team": "Gil Vicente",
+            "away_team": "Estoril",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.4%",
+                "48.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750294"
+          },
+          {
+            "game_id": "750290",
+            "date": "Sat, Sep 13",
+            "home_team": "Estoril",
+            "away_team": "AVS",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750290"
+          },
+          {
+            "game_id": "750268",
+            "date": "Sat, Sep 6",
+            "home_team": "Estoril",
+            "away_team": "Santa Clara",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.8%",
+                "40.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "16"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750268"
+          },
+          {
+            "game_id": "750280",
+            "date": "Sun, Aug 31",
+            "home_team": "Tondela",
+            "away_team": "Estoril",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.1%",
+                "48.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750280"
+          },
+          {
+            "game_id": "750259",
+            "date": "Sat, Aug 16",
+            "home_team": "Guimaraes",
+            "away_team": "Estoril",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.3%",
+                "44.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750259"
+          },
+          {
+            "game_id": "750251",
+            "date": "Mon, Aug 11",
+            "home_team": "Estoril",
+            "away_team": "Estrela",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.4%",
+                "34.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "9"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750251"
+          }
+        ],
+        "classement": {
+          "Casa Pia": {
+            "position": 14,
+            "points": 7
+          },
+          "Estoril": {
+            "position": 15,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Porto",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Sporting CP",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "Benfica",
+            "points": 17
+          },
+          {
+            "position": 4,
+            "team": "Moreirense",
+            "points": 15
+          },
+          {
+            "position": 5,
+            "team": "Gil Vicente",
+            "points": 13
+          },
+          {
+            "position": 6,
+            "team": "FC Famalicao",
+            "points": 12
+          },
+          {
+            "position": 7,
+            "team": "Braga",
+            "points": 9
+          },
+          {
+            "position": 8,
+            "team": "Guimaraes",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Arouca",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "Santa Clara",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "C.D. Nacional",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Estrela",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Alverca",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Casa Pia",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "Estoril",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Tondela",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Rio Ave",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "AVS",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712732",
+            "date": "Sunday, December 15, 2024",
+            "team1": "Estoril",
+            "score": "0 - 2",
+            "team2": "Casa Pia",
+            "title": "Estoril VS Casa Pia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712732/casa-pia-estoril",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "54.4%",
+                "45.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "712880",
+            "date": "Tuesday, April 29, 2025",
+            "team1": "Casa Pia",
+            "score": "1 - 3",
+            "team2": "Estoril",
+            "title": "Casa Pia VS Estoril",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712880/estoril-casa-pia",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/4716.png",
+        "logo_away": "https://media.api-sports.io/football/teams/230.png",
+        "classement_home": 14,
+        "classement_away": 15,
+        "points_classement_home": 7,
+        "points_classement_away": 5,
+        "nom_classement_home": "Casa Pia",
+        "nom_classement_away": "Estoril",
+        "country_fr": "Portugal - Primeira Liga",
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n- **CONFIANCE** : 68%  \n- **CORNERS PRÉVUS** : 7‑10 corners  \n- **TIRS CADRÉS PRÉVUS** : 6‑9 tirs cadrés  \n- **SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces/faiblesses)**  \n- **Casa Pia** : moyenne 0,86 but/match, 1,57 but encaissé. En 6 derniers matchs à domicile, ils n’ont inscrit que **1 but** et encaissé **5**. Leur capacité offensive est très limitée, mais ils restent difficiles à battre à domicile (défense moyenne).  \n- **Estoril** : moyenne 1,14 but/match, même moyenne de buts encaissés (1,57). En 6 derniers matchs à l’extérieur, ils n’ont marqué que **4 buts** et encaissé **7**. Leur attaque est légèrement supérieure à celle de Casa Pia, mais la défense reste perméable.\n\n**2. Impact du facteur domicile/extérieur**  \n- Casa Pia a une série domicile **D‑L‑L** et ne marque que **1 but** à domicile depuis le début de la saison.  \n- Estoril a une série extérieur **L‑D‑L** et ne marque que **4 buts** à l’extérieur.  \nLe facteur domicile n’apporte pas un avantage décisif ; les deux équipes peinent à marquer chez l’autre.\n\n**3. Formes récentes & tendances (statistiques détaillées)**  \n- **Casa Pia** : dans les 7 derniers matchs, ils ont eu en moyenne **4,3 corners** et **3,6 tirs cadrés**. Leurs possessions oscillent autour de 55 % mais les tirs cadrés restent bas.  \n- **Estoril** : moyenne de **3,4 corners** et **3,6 tirs cadrés** sur les 7 derniers matchs. Possession moyenne (≈52 %).  \n- Les deux équipes affichent un ratio de tirs cadrés très similaire (~3,6 chacun) → peu de chances de créer de nombreuses occasions.\n\n**4. Contexte du championnat**  \n- Casa Pia (14ᵉ, 7 pts) et Estoril (15ᵉ, 5 pts) luttent contre la relégation. Les matchs sont souvent prudents, chaque équipe cherchant à éviter les défaites plutôt qu’à prendre des risques offensifs.\n\n**5. Confrontations directes**  \n- Saison précédente : Estoril 0‑2 Casa Pia.  \n- Saison actuelle : Casa Pia 1‑3 Estoril.  \nCes deux rencontres ont produit **6 buts** (3 par match), mais elles sont des exceptions : les deux équipes ont eu des performances offensives inhabituelles. La moyenne saisonnière reste bien inférieure (≈1,5 but/match combinés).\n\n**6. Évaluation des cotes**  \n- Over 2.5 = 2.19, Under 2.5 = 1.65. Le marché favorise clairement le **under**, ce qui confirme la tendance basse‑scoring observée.\n\n**7. Analyse approfondie des statistiques passées**  \n- **Possession** : Casa Pia domine souvent (ex. 65 % contre Arouca) mais ne convertit pas.  \n- **Shots on Goal** : rarement plus de 3 par équipe, même contre des adversaires faibles.  \n- **Corners** : rarement plus de 6 par équipe, donc total de corners attendu autour de 8‑10.  \n- **Tirs cadrés** : total combiné des 7 derniers matchs ≈ 7‑8, d’où la fourchette 6‑9 pour ce match.\n\n**8. Synthèse**  \nLes deux équipes sont très peu efficaces devant le but, leurs défenses concèdent le même nombre de buts, et le contexte de lutte contre la relégation incite à la prudence. Le profil du match correspond donc à **moins de 2,5 buts** avec une probabilité élevée. Les scores les plus plausibles sont un **0‑0** (défense solide des deux côtés) ou un **1‑0** en faveur de Casa Pia, qui bénéficie du facteur domicile même si son attaque est limitée.",
+        "confiance_pourcentage": null
+      },
+      {
+        "id": 6,
+        "HomeTeam": "Athletic Club",
+        "AwayTeam": "Amazonas",
+        "date": "3 octobre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 1,
+          "total_points_10": 10,
+          "total_points": 1,
+          "serie_domicile": [
+            "D",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 11,
+          "total_marques": 8,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 8,
+          "total_points": 3,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 9,
+          "total_marques": 11,
+          "total_encaisses": 19
+        },
+        "last_matches_home": [
+          {
+            "game_id": "757683",
+            "date": "Wed, Oct 1",
+            "home_team": "Borussia Dortmund",
+            "away_team": "Athletic Club",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.3%",
+                "47.7%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757683"
+          },
+          {
+            "game_id": "748204",
+            "date": "Sat, Sep 27",
+            "home_team": "Villarreal",
+            "away_team": "Athletic Club",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.4%",
+                "57.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748204"
+          },
+          {
+            "game_id": "748194",
+            "date": "Tue, Sep 23",
+            "home_team": "Athletic Club",
+            "away_team": "Girona",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.2%",
+                "32.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "6"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748194"
+          },
+          {
+            "game_id": "748187",
+            "date": "Sat, Sep 20",
+            "home_team": "Valencia",
+            "away_team": "Athletic Club",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.7%",
+                "56.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748187"
+          },
+          {
+            "game_id": "757653",
+            "date": "Tue, Sep 16",
+            "home_team": "Athletic Club",
+            "away_team": "Arsenal",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.4%",
+                "61.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757653"
+          },
+          {
+            "game_id": "748182",
+            "date": "Sat, Sep 13",
+            "home_team": "Athletic Club",
+            "away_team": "Alavés",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.9%",
+                "42.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748182"
+          },
+          {
+            "game_id": "748166",
+            "date": "Sun, Aug 31",
+            "home_team": "Real Betis",
+            "away_team": "Athletic Club",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.4%",
+                "49.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "10"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748166"
+          },
+          {
+            "game_id": "748160",
+            "date": "Mon, Aug 25",
+            "home_team": "Athletic Club",
+            "away_team": "Rayo Vallecano",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.5%",
+                "59.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "6"
+              ],
+              "Yellow Cards": [
+                "0",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748160"
+          },
+          {
+            "game_id": "748149",
+            "date": "Sun, Aug 17",
+            "home_team": "Athletic Club",
+            "away_team": "Sevilla",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.6%",
+                "54.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748149"
+          },
+          {
+            "game_id": "755876",
+            "date": "Sat, Aug 9",
+            "home_team": "Arsenal",
+            "away_team": "Athletic Club",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/755876"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "733495",
+            "date": "Mon, 29 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Chapecoense",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.4%",
+                "42.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "20",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733495"
+          },
+          {
+            "game_id": "733485",
+            "date": "Thu, 25 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Amazonas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.6%",
+                "40.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733485"
+          },
+          {
+            "game_id": "733469",
+            "date": "Sat, 20 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Volta Redonda",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.5%",
+                "68.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "18"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733469"
+          },
+          {
+            "game_id": "733461",
+            "date": "Tue, 16 Sep",
+            "home_team": "CRB",
+            "away_team": "Amazonas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "75.8%",
+                "24.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733461"
+          },
+          {
+            "game_id": "733449",
+            "date": "Fri, 5 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Remo",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.5%",
+                "39.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733449"
+          },
+          {
+            "game_id": "733448",
+            "date": "Sun, 31 Aug",
+            "home_team": "Atlético Goianiense",
+            "away_team": "Amazonas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.1%",
+                "51.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733448"
+          },
+          {
+            "game_id": "733430",
+            "date": "Tue, 26 Aug",
+            "home_team": "Avaí",
+            "away_team": "Amazonas",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.4%",
+                "37.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733430"
+          },
+          {
+            "game_id": "733419",
+            "date": "Sat, 16 Aug",
+            "home_team": "Amazonas",
+            "away_team": "América Mineiro",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.7%",
+                "59.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "16"
+              ],
+              "Yellow Cards": [
+                "6",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733419"
+          },
+          {
+            "game_id": "733415",
+            "date": "Fri, 8 Aug",
+            "home_team": "Ferroviária",
+            "away_team": "Amazonas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.3%",
+                "39.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733415"
+          },
+          {
+            "game_id": "733402",
+            "date": "Sun, 3 Aug",
+            "home_team": "Amazonas",
+            "away_team": "Goiás",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.3%",
+                "44.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733402"
+          }
+        ],
+        "classement": {
+          "Athletic Club": {
+            "position": 16,
+            "points": 32
+          },
+          "Amazonas": {
+            "position": 19,
+            "points": 27
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 50
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 50
+          },
+          {
+            "position": 3,
+            "team": "Criciúma",
+            "points": 49
+          },
+          {
+            "position": 4,
+            "team": "Athletico Paranaense",
+            "points": 48
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 47
+          },
+          {
+            "position": 6,
+            "team": "Cuiabá",
+            "points": 46
+          },
+          {
+            "position": 7,
+            "team": "Chapecoense",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Remo",
+            "points": 42
+          },
+          {
+            "position": 9,
+            "team": "Atlético Goianiense",
+            "points": 42
+          },
+          {
+            "position": 10,
+            "team": "CRB",
+            "points": 40
+          },
+          {
+            "position": 11,
+            "team": "Avaí",
+            "points": 40
+          },
+          {
+            "position": 12,
+            "team": "Operario PR",
+            "points": 39
+          },
+          {
+            "position": 13,
+            "team": "Vila Nova",
+            "points": 38
+          },
+          {
+            "position": 14,
+            "team": "Ferroviária",
+            "points": 36
+          },
+          {
+            "position": 15,
+            "team": "América Mineiro",
+            "points": 33
+          },
+          {
+            "position": 16,
+            "team": "Athletic",
+            "points": 32
+          },
+          {
+            "position": 17,
+            "team": "Volta Redonda",
+            "points": 30
+          },
+          {
+            "position": 18,
+            "team": "Botafogo-SP",
+            "points": 29
+          },
+          {
+            "position": 19,
+            "team": "Amazonas",
+            "points": 27
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/13975.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10862.png",
+        "classement_home": 16,
+        "classement_away": 19,
+        "points_classement_home": 32,
+        "points_classement_away": 27,
+        "nom_classement_home": "Athletic",
+        "nom_classement_away": "Amazonas",
+        "country_fr": "Brazil - Serie B",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 71%  \n**CORNERS PRÉVUS** : 8‑12 corners  \n**TIRS CADRÉS PRÉVUS** : 6‑10 tirs cadrés  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Athletic Club** : très faible en attaque (0,80 g/match) et mauvaise défense (1,70 buts encaissés). En 10 matchs à domicile, il n’a inscrit que 5 buts et en a concédé 6.  \n- **Amazonas** : attaque légèrement meilleure (1,10 g/match) mais défense encore plus fragile (1,90 buts encaissés). En 10 déplacements, il n’a marqué que 4 buts tout en encaissant 9.  \n\nLes deux équipes affichent donc des capacités offensives très limitées et concèdent régulièrement, ce qui conduit souvent à des matchs à faible score.\n\n**2. Impact du facteur domicile / extérieur**  \n- Athletic bénéficie d’un léger avantage de terrain (5‑6 buts encaissés à domicile contre 9 à l’extérieur pour Amazonas).  \n- Cependant, son historique à domicile montre plus de matchs nuls (D‑L‑L‑W‑W) que de victoires, signe d’une incapacité à transformer la possession en buts.  \n\n**3. Forme récente et tendances (stats détaillées)**  \n\n| Équipe | 5 derniers matchs (détails) | Moy. possession | Moy. tirs cadrés | Moy. corners |\n|--------|----------------------------|----------------|------------------|--------------|\n| **Athletic** | 4‑1 vs Dortmund, 1‑0 vs Villarreal, 1‑1 vs Girona, 0‑2 vs Arsenal, 0‑1 vs Alavés | 49 % | 4,3 | 5,0 |\n| **Amazonas** | 1‑3 vs Chapecoense, 2‑1 vs Operario PR, 1‑0 vs Volta Redonda, 2‑0 vs CRB, 1‑3 vs Remo | 53 % | 3,8 | 5,0 |\n\n- Athletic domine la possession contre des équipes fortes (Dortmund, Villarreal) mais ne convertit pas (moy. 4,3 tirs cadrés, 0,8 but/match).  \n- Amazonas montre une possession légèrement supérieure mais ses tirs cadrés restent faibles (3,8) et il encaisse beaucoup (1,9 buts/match).  \n\n**4. Contexte du championnat**  \n- Athletic est 16ᵉ avec 32 pts, loin des places de relégation mais également loin du top 6.  \n- Amazonas est 19ᵉ avec 27 pts, en zone de lutte pour éviter la descente.  \n- Les deux équipes sont donc sous pression, mais aucune ne possède les moyens offensifs pour créer un match à plus de 2,5 buts.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc aucune donnée historique à exploiter.\n\n**6. Synthèse**  \n- Les deux équipes ont des moyennes de buts très basses (≤ 1,1) et concèdent beaucoup.  \n- Les matchs récents montrent peu de tirs cadrés combinés (≈ 8) et un nombre de corners moyen (≈ 10).  \n- Le facteur domicile donne à Athletic un léger avantage, mais son attaque reste quasi‑inexistante.  \n\n**Conclusion** : Le scénario le plus probable est un match très fermé, avec peu d’occasions nettes et donc **moins de 2,5 buts**. Le score le plus fréquent sera soit un **0‑0** (si les deux défenses tiennent) soit un **1‑0** en faveur d’Athletic (légère supériorité à domicile).  \n\n---  \n\n*Cette prédiction repose sur l’ensemble des indicateurs fournis (moyennes de buts, tirs cadrés, possession, corners) ainsi que sur la dynamique actuelle des deux équipes dans le championnat.*",
+        "confiance_pourcentage": null
+      }
+    ]
+  }
+}
