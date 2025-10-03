@@ -2232,7 +2232,7 @@ def call_deepseek_analysis(prompt, max_retries=5):
         }
 
         data = {
-            "model": "openai/gpt-oss-120b",
+            "model": "llama-3.3-70b-versatile",
             "messages": [
                 {"role": "system", "content": "Tu es un expert en paris sportifs. Ton rôle est de faire une analyse complète du match en fonction des données fournies, puis de proposer UNE prédiction fiable parmi : victoire domicile, victoire extérieur, +2.5 buts, -2.5 buts, BTTS oui, BTTS non, double chance (1X ou X2). Tu dois aussi prédire le nombre de corners et de tirs cadrés, donner un pourcentage de confiance (0-100%) et les 2 scores les plus probables. ATTENTION : Ne jamais prédire 'match nul' - utilise plutôt 'double chance 1X' ou 'double chance X2'."},
                 {"role": "user", "content": prompt}
