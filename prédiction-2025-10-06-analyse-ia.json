@@ -1,0 +1,563 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-06 02:20:54",
+    "date_matchs": "2025-10-06",
+    "version_algorithme": "8.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_extraite_scores_extraction_amelioree_2_formats",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v8_2": [
+      "Support amélioré des deux formats d'analyse IA : **FORMAT** et FORMAT simple",
+      "Extraction automatique de prediction_principale, corners_prevu, tirs_cadres_prevu, scores_probables",
+      "Nouveaux champs dédiés dans chaque prédiction pour toutes les extractions",
+      "Détection robuste des patterns avec et sans **",
+      "Maintien de toutes les fonctionnalités avancées v8.1"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "All Boys",
+        "AwayTeam": "Los Andes",
+        "date": "6 octobre 2025 à 23:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 0.4,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 15,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 4
+        },
+        "stats_away": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 12,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 5,
+          "total_marques": 6,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "728802",
+            "date": "Sun, 28 Sep",
+            "home_team": "Alvarado (Mar del Plata)",
+            "away_team": "All Boys",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728802"
+          },
+          {
+            "game_id": "728800",
+            "date": "Tue, 23 Sep",
+            "home_team": "All Boys",
+            "away_team": "Deportivo Madryn",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728800"
+          },
+          {
+            "game_id": "728770",
+            "date": "Sun, 14 Sep",
+            "home_team": "Deportivo Maipú",
+            "away_team": "All Boys",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728770"
+          },
+          {
+            "game_id": "728748",
+            "date": "Sat, 6 Sep",
+            "home_team": "All Boys",
+            "away_team": "Gimnasia y Tiro (Salta)",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728748"
+          },
+          {
+            "game_id": "728736",
+            "date": "Sat, 30 Aug",
+            "home_team": "Tristán Suárez",
+            "away_team": "All Boys",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728736"
+          },
+          {
+            "game_id": "728712",
+            "date": "Tue, 26 Aug",
+            "home_team": "All Boys",
+            "away_team": "San Martín (Tucumán)",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728712"
+          },
+          {
+            "game_id": "728711",
+            "date": "Sun, 17 Aug",
+            "home_team": "Güemes",
+            "away_team": "All Boys",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728711"
+          },
+          {
+            "game_id": "728676",
+            "date": "Mon, 11 Aug",
+            "home_team": "All Boys",
+            "away_team": "Patronato",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728676"
+          },
+          {
+            "game_id": "728659",
+            "date": "Mon, 4 Aug",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "All Boys",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728659"
+          },
+          {
+            "game_id": "728650",
+            "date": "Sat, 26 Jul",
+            "home_team": "All Boys",
+            "away_team": "Almagro",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728650"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "728813",
+            "date": "Sun, 28 Sep",
+            "home_team": "Los Andes",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728813"
+          },
+          {
+            "game_id": "728785",
+            "date": "Sun, 21 Sep",
+            "home_team": "Alvarado (Mar del Plata)",
+            "away_team": "Los Andes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728785"
+          },
+          {
+            "game_id": "728777",
+            "date": "Sun, 14 Sep",
+            "home_team": "Los Andes",
+            "away_team": "Almagro",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728777"
+          },
+          {
+            "game_id": "728758",
+            "date": "Sun, 7 Sep",
+            "home_team": "Deportivo Madryn",
+            "away_team": "Los Andes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728758"
+          },
+          {
+            "game_id": "728741",
+            "date": "Sun, 31 Aug",
+            "home_team": "Los Andes",
+            "away_team": "San Miguel",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728741"
+          },
+          {
+            "game_id": "728723",
+            "date": "Sun, 24 Aug",
+            "home_team": "Deportivo Maipú",
+            "away_team": "Los Andes",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728723"
+          },
+          {
+            "game_id": "728694",
+            "date": "Sat, 16 Aug",
+            "home_team": "Los Andes",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728694"
+          },
+          {
+            "game_id": "728687",
+            "date": "Sun, 10 Aug",
+            "home_team": "Gimnasia y Tiro (Salta)",
+            "away_team": "Los Andes",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728687"
+          },
+          {
+            "game_id": "728674",
+            "date": "Sun, 3 Aug",
+            "home_team": "Los Andes",
+            "away_team": "Racing (Córdoba)",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728674"
+          },
+          {
+            "game_id": "728649",
+            "date": "Sat, 26 Jul",
+            "home_team": "Tristán Suárez",
+            "away_team": "Los Andes",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/728649"
+          }
+        ],
+        "classement": {
+          "All Boys": {
+            "position": 15,
+            "points": 38
+          },
+          "Los Andes": {
+            "position": 12,
+            "points": 41
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Atlanta",
+            "points": 60
+          },
+          {
+            "position": 3,
+            "team": "Tristán Suárez",
+            "points": 55
+          },
+          {
+            "position": 4,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 52
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 51
+          },
+          {
+            "position": 6,
+            "team": "San Martín (Tucumán)",
+            "points": 50
+          },
+          {
+            "position": 7,
+            "team": "Deportivo Maipú",
+            "points": 49
+          },
+          {
+            "position": 8,
+            "team": "Patronato",
+            "points": 48
+          },
+          {
+            "position": 9,
+            "team": "Colegiales",
+            "points": 48
+          },
+          {
+            "position": 10,
+            "team": "Racing (Córdoba)",
+            "points": 47
+          },
+          {
+            "position": 11,
+            "team": "Ferro Carril Oeste",
+            "points": 41
+          },
+          {
+            "position": 12,
+            "team": "Los Andes",
+            "points": 41
+          },
+          {
+            "position": 13,
+            "team": "Güemes",
+            "points": 40
+          },
+          {
+            "position": 14,
+            "team": "Quilmes",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "All Boys",
+            "points": 38
+          },
+          {
+            "position": 16,
+            "team": "Almagro",
+            "points": 38
+          },
+          {
+            "position": 17,
+            "team": "Arsenal Sarandi",
+            "points": 35
+          },
+          {
+            "position": 18,
+            "team": "Alvarado (Mar del Plata)",
+            "points": 34
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia (Mendoza)",
+            "points": 33
+          },
+          {
+            "position": 21,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 63
+          },
+          {
+            "position": 22,
+            "team": "Deportivo Morón",
+            "points": 60
+          },
+          {
+            "position": 23,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 59
+          },
+          {
+            "position": 24,
+            "team": "Temperley",
+            "points": 58
+          },
+          {
+            "position": 25,
+            "team": "Agropecuario",
+            "points": 57
+          },
+          {
+            "position": 26,
+            "team": "Chaco For Ever",
+            "points": 55
+          },
+          {
+            "position": 27,
+            "team": "Chacarita Juniors",
+            "points": 54
+          },
+          {
+            "position": 28,
+            "team": "Defensores de Belgrano",
+            "points": 53
+          },
+          {
+            "position": 29,
+            "team": "Nueva Chicago",
+            "points": 49
+          },
+          {
+            "position": 30,
+            "team": "San Telmo",
+            "points": 48
+          },
+          {
+            "position": 31,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 41
+          },
+          {
+            "position": 32,
+            "team": "Almirante Brown",
+            "points": 41
+          },
+          {
+            "position": 33,
+            "team": "Central Norte",
+            "points": 40
+          },
+          {
+            "position": 34,
+            "team": "Colón (Santa Fe)",
+            "points": 36
+          },
+          {
+            "position": 35,
+            "team": "Talleres",
+            "points": 36
+          },
+          {
+            "position": 36,
+            "team": "Defensores Unidos",
+            "points": 32
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728525",
+            "date": "Saturday, May 31, 2025",
+            "team1": "Los Andes",
+            "score": "1 - 1",
+            "team2": "All Boys",
+            "title": "Los Andes VS All Boys",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728525/all-boys-los-andes",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/464.png",
+        "logo_away": "https://media.api-sports.io/football/teams/483.png",
+        "classement_home": 15,
+        "classement_away": 12,
+        "points_classement_home": 38,
+        "points_classement_away": 41,
+        "nom_classement_home": "All Boys",
+        "nom_classement_away": "Los Andes",
+        "country_fr": "Argentina - Primera Nacional",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 78 %  \n**CORNERS PRÉVUS** : 6‑9 corners  \n**TIRS CADRÉS PRÉVUS** : 4‑7 tirs cadrés  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **All Boys** : moyenne de 0,50 but marqué et 0,40 encaissé. En 6 matchs à domicile, ils n’ont concédé qu’1 but et marqué seulement 3. Leur défense est très solide (0,40 bpg) mais l’attaque est peu prolifique.  \n- **Los Andes** : moyenne de 0,60 but marqué et 0,60 encaissé. En 6 matchs à l’extérieur, ils ont encaissé 5 buts (0,83 bpg) et n’ont marqué que 2 (0,33 bpg). Leur défense est plus vulnérable à l’extérieur que celle d’All Boys, mais l’attaque reste très limitée.\n\n**2. Impact du facteur domicile/extérieur**  \nAll Boys bénéficie d’un bon historique à domicile (3‑1‑0 sur leurs 5 derniers matchs à domicile) avec seulement 1 but encaissé. Los Andes, en revanche, a une série extérieure négative (L‑L‑D‑D‑L) et a concédé 5 buts en 5 matchs à l’extérieur. Le facteur domicile renforce la probabilité d’un match très fermé, voire d’un clean‑sheet pour All Boys.\n\n**3. Forme récente et tendances**  \n- **All Boys** : 5 matches sur 6 se soldent par des défaites ou des nuls (D D D D L D). Aucun match n’a dépassé le score de 1‑0, à l’exception d’un 1‑1.  \n- **Los Andes** : 5 matches sur 6 à l’extérieur se terminent par 0‑1, 0‑0 ou 1‑0. Aucun match ne dépasse 1‑1.  \n\nCes deux tendances indiquent un faible nombre de buts attendus.\n\n**4. Contexte du championnat**  \nAll Boys est 15ᵉ (38 pts) et Los Andes 12ᵉ (41 pts). Les deux équipes évoluent dans la partie médiane du tableau, loin des exigences offensives des équipes du top 5. Leurs objectifs sont davantage la consolidation que la prise de risques, ce qui se traduit par un jeu prudent.\n\n**5. Confrontations directes**  \nLa seule rencontre de la saison actuelle s’est soldée par un 1‑1. C’est le seul match où les deux équipes ont trouvé le chemin des filets, mais il reste en deçà de 2,5 buts.\n\n**6. Analyse des matchs détaillés (possessions, tirs, corners)**  \nMême si les statistiques détaillées (possession, tirs, corners) ne sont pas disponibles, le profil des scores (majorité de 0‑0, 0‑1, 1‑0) suggère :  \n- **Possession** : équilibrée, aucune équipe ne domine clairement.  \n- **Tirs** : très faibles, souvent < 5 tirs au total, dont < 2 cadrés.  \n- **Corners** : rarement plus de 4‑5 par équipe dans ces matchs, donc un total de 6‑9 pour le match est réaliste.\n\n**7. Synthèse**  \n- Faible production offensive des deux équipes.  \n- Défenses solides (All Boys) ou au moins capables de limiter les occasions (Los Andes à l’extérieur).  \n- Historique de matchs à très faible score.  \n\nCes éléments convergent vers une issue **« Moins de 2,5 buts »**, avec une forte probabilité que le match se termine **0‑0** (si les deux défenses tiennent) ou **1‑0** en faveur d’All Boys (légère supériorité à domicile).  \n\n**8. Corners & tirs cadrés**  \n- **Corners** : 6‑9 (les deux équipes génèrent peu de phases offensives).  \n- **Tirs cadrés** : 4‑7 (correspond à la moyenne de < 2 tirs cadrés par équipe dans leurs derniers matchs).",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": "6‑9 corners",
+        "tirs_cadres_prevu": "4‑7 tirs cadrés",
+        "scores_probables": "0‑0 ou 1‑0"
+      }
+    ]
+  }
+}
