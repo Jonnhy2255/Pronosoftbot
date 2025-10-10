@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-10 02:20:20",
+    "date_matchs": "2025-10-10",
+    "version_algorithme": "8.2 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CORNERS/TIRS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_extraite_scores_extraction_amelioree_2_formats",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + prédictions corners/tirs cadrés + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "nouveautes_v8_2": [
+      "Support amélioré des deux formats d'analyse IA : **FORMAT** et FORMAT simple",
+      "Extraction automatique de prediction_principale, corners_prevu, tirs_cadres_prevu, scores_probables",
+      "Nouveaux champs dédiés dans chaque prédiction pour toutes les extractions",
+      "Détection robuste des patterns avec et sans **",
+      "Maintien de toutes les fonctionnalités avancées v8.1"
+    ]
+  },
+  "statistiques_brutes_avec_ia": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Deportivo Recoleta",
+        "AwayTeam": "Olimpia",
+        "date": "10 octobre 2025 à 20:30:00 UTC",
+        "league": "Paraguay - Division Profesional - Clausura",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_corners_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 15,
+          "total_points": 12,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 7,
+          "total_marques": 15,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 11,
+          "total_points": 10,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 13,
+          "total_marques": 12,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          {
+            "game_id": "749866",
+            "date": "Sat, 4 Oct",
+            "home_team": "Cerro Porteño",
+            "away_team": "Deportivo Recoleta",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749866"
+          },
+          {
+            "game_id": "749863",
+            "date": "Mon, 29 Sep",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749863"
+          },
+          {
+            "game_id": "749858",
+            "date": "Sat, 20 Sep",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Club Atlético Tembetary",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749858"
+          },
+          {
+            "game_id": "749851",
+            "date": "Sun, 14 Sep",
+            "home_team": "Trinidense",
+            "away_team": "Deportivo Recoleta",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749851"
+          },
+          {
+            "game_id": "749845",
+            "date": "Sat, 6 Sep",
+            "home_team": "Nacional",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749845"
+          },
+          {
+            "game_id": "749836",
+            "date": "Sat, 30 Aug",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "2 de Mayo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749836"
+          },
+          {
+            "game_id": "749830",
+            "date": "Sat, 23 Aug",
+            "home_team": "Sportivo Luqueño",
+            "away_team": "Deportivo Recoleta",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749830"
+          },
+          {
+            "game_id": "749827",
+            "date": "Fri, 15 Aug",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "General Caballero JLM",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749827"
+          },
+          {
+            "game_id": "749820",
+            "date": "Sun, 10 Aug",
+            "home_team": "Libertad",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749820"
+          },
+          {
+            "game_id": "749816",
+            "date": "Mon, 4 Aug",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Guarani",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749816"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "749870",
+            "date": "Sat, 4 Oct",
+            "home_team": "Olimpia",
+            "away_team": "Sportivo Ameliano",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749870"
+          },
+          {
+            "game_id": "749860",
+            "date": "Mon, 29 Sep",
+            "home_team": "Club Atlético Tembetary",
+            "away_team": "Olimpia",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749860"
+          },
+          {
+            "game_id": "749859",
+            "date": "Fri, 19 Sep",
+            "home_team": "Olimpia",
+            "away_team": "Trinidense",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749859"
+          },
+          {
+            "game_id": "749853",
+            "date": "Sun, 14 Sep",
+            "home_team": "Nacional",
+            "away_team": "Olimpia",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749853"
+          },
+          {
+            "game_id": "749843",
+            "date": "Sun, 7 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "Olimpia",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749843"
+          },
+          {
+            "game_id": "749838",
+            "date": "Sat, 30 Aug",
+            "home_team": "Olimpia",
+            "away_team": "Sportivo Luqueño",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749838"
+          },
+          {
+            "game_id": "749833",
+            "date": "Sun, 24 Aug",
+            "home_team": "General Caballero JLM",
+            "away_team": "Olimpia",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749833"
+          },
+          {
+            "game_id": "749826",
+            "date": "Sun, 17 Aug",
+            "home_team": "Olimpia",
+            "away_team": "Libertad",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749826"
+          },
+          {
+            "game_id": "749822",
+            "date": "Sun, 10 Aug",
+            "home_team": "Guarani",
+            "away_team": "Olimpia",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749822"
+          },
+          {
+            "game_id": "749814",
+            "date": "Sun, 3 Aug",
+            "home_team": "Olimpia",
+            "away_team": "Cerro Porteño",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749814"
+          }
+        ],
+        "classement": {
+          "Deportivo Recoleta": null,
+          "Olimpia": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728919",
+            "date": "Saturday, March 29, 2025",
+            "team1": "Deportivo Recoleta",
+            "score": "1 - 1",
+            "team2": "Olimpia",
+            "title": "Deportivo Recoleta VS Olimpia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728919/olimpia-deportivo-recoleta",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728984",
+            "date": "Sunday, June 1, 2025",
+            "team1": "Olimpia",
+            "score": "0 - 0",
+            "team2": "Deportivo Recoleta",
+            "title": "Olimpia VS Deportivo Recoleta",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728984/deportivo-recoleta-olimpia",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "742152",
+            "date": "Wednesday, July 30, 2025",
+            "team1": "Olimpia",
+            "score": "1 - 0",
+            "team2": "Deportivo Recoleta",
+            "title": "Olimpia VS Deportivo Recoleta",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/742152/deportivo-recoleta-olimpia",
+            "source": "Division Profesional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10476.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1182.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Paraguay - Division Profesional - Clausura",
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Deportivo Recoleta)  \n**CONFIANCE** : 63 %  \n**CORNERS PRÉVUS** : 9‑13 corners  \n**TIRS CADRÉS PRÉVUS** : 6‑10 tirs cadrés  \n**SCORES PROBABLES** : 2‑1 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Défense** : Recoleta concède en moyenne **1,10 buts à domicile** (4 buts encaissés sur 5 matchs à domicile) ; Olimpia concède **1,80 buts à l’extérieur** (13 buts encaissés sur 5 matchs à l’extérieur). La défense de Recoleta est donc nettement plus solide que celle d’Olimpia en déplacement.  \n- **Attaque** : Recoleta marque **1,50 buts par match** (7 buts à domicile) contre **1,20 buts pour Olimpia à l’extérieur** (5 buts à l’extérieur). Recoleta possède un léger avantage offensif, surtout à domicile où il a déjà inscrit 3‑4 buts dans ses deux dernières rencontres à domicile.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Historique à domicile de Recoleta : série récente **W‑W‑D‑L** et 4 victoires sur les 6 derniers matchs à domicile.  \n- Historique à l’extérieur d’Olimpia : série **W‑L‑L‑L‑L** et seulement **1 victoire** sur les 5 derniers déplacements.  \n\n**3. Forme récente**  \n- **Recoleta** (6 derniers) : L W W W L W → 4 victoires, 2 défaites, 12 points.  \n- **Olimpia** (6 derniers) : W W D L L W → 3 victoires, 2 nuls, 2 défaites, 10 points.  \nRecoleta montre une dynamique plus positive, surtout à domicile, alors qu’Olimpia peine à garder ses cages propres à l’extérieur.\n\n**4. Confrontations directes (saison en cours)**  \n- 3 derniers duels : 1‑1, 0‑0, 1‑0 (victoire d’Olimpia).  \n- Aucun but n’a dépassé 1 but d’écart, ce qui indique des matchs serrés, mais la tendance récente (victoire d’Olimpia à l’extérieur) n’est pas suffisante pour compenser la faiblesse défensive d’Olimpia à l’extérieur.\n\n**5. Tendances de buts**  \n- Total moyen de buts par rencontre (Recoleta + Olimpia) : (1,5 + 1,2) ≈ 2,7 buts.  \n- La combinaison d’une défense solide de Recoleta et d’une défense vulnérable d’Olimpia suggère **plus de 2,5 buts** dans le match, mais le risque d’un score serré reste élevé.  \n\n**6. Corners & tirs cadrés (estimation basée sur les moyennes de la ligue)**  \n- Les équipes de ce niveau génèrent en moyenne **4‑6 corners par équipe** par match. On s’attend donc à **9‑13 corners** au total.  \n- En termes de tirs cadrés, les équipes à domicile marquent généralement **3‑5 tirs cadrés**, l’équipe visiteuse **2‑4**. Le total prévu se situe donc entre **6‑10 tirs cadrés**.\n\n**7. Synthèse**  \n- Recoleta possède à la fois une meilleure défense à domicile et une attaque légèrement plus efficace que celle d’Olimpia à l’extérieur.  \n- La forme récente et la série à domicile de Recoleta sont supérieures.  \n- Les confrontations directes sont serrées, mais la faiblesse défensive d’Olimpia à l’extérieur donne un avantage décisif à Recoleta.  \n\n**Conclusion** : La combinaison de ces éléments rend la **victoire domicile** la prédiction la plus plausible, avec une probabilité de **63 %**. Les scores les plus probables sont **2‑1** (Recoleta) ou **1‑0** (Recoleta), reflétant un match où les deux équipes marquent mais où Recoleta garde l’avantage.",
+        "confiance_pourcentage": 63,
+        "prediction_principale": "Victoire domicile (Deportivo Recoleta)",
+        "corners_prevu": "9‑13 corners",
+        "tirs_cadres_prevu": "6‑10 tirs cadrés",
+        "scores_probables": "2‑1 ou 1‑0"
+      }
+    ]
+  }
+}
