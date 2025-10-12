@@ -1,0 +1,5542 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-12 02:25:02",
+    "date_matchs": "2025-10-12",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 5,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 5,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Novorizontino",
+        "AwayTeam": "Operario-PR",
+        "date": "12 octobre 2025 à 19:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 14,
+          "total_points": 13,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 9,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 13,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 4,
+          "total_marques": 9,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "733514",
+            "date": "Wed, 8 Oct",
+            "home_team": "Cuiabá",
+            "away_team": "Novorizontino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733514"
+          },
+          {
+            "game_id": "733502",
+            "date": "Sat, 4 Oct",
+            "home_team": "Chapecoense",
+            "away_team": "Novorizontino",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.1%",
+                "51.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "16"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733502"
+          },
+          {
+            "game_id": "733492",
+            "date": "Sun, 28 Sep",
+            "home_team": "Novorizontino",
+            "away_team": "Vila Nova",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.5%",
+                "36.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "3"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733492"
+          },
+          {
+            "game_id": "733486",
+            "date": "Tue, 23 Sep",
+            "home_team": "Paysandu",
+            "away_team": "Novorizontino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.5%",
+                "46.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733486"
+          },
+          {
+            "game_id": "733477",
+            "date": "Fri, 19 Sep",
+            "home_team": "Novorizontino",
+            "away_team": "Athletic",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "0"
+              ],
+              "Shot Attempts": [
+                "19",
+                "2"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733477"
+          },
+          {
+            "game_id": "733464",
+            "date": "Mon, 15 Sep",
+            "home_team": "Ferroviária",
+            "away_team": "Novorizontino",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "22"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733464"
+          },
+          {
+            "game_id": "733456",
+            "date": "Mon, 8 Sep",
+            "home_team": "Novorizontino",
+            "away_team": "Atlético Goianiense",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.5%",
+                "36.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733456"
+          },
+          {
+            "game_id": "733444",
+            "date": "Sun, 31 Aug",
+            "home_team": "Athletico Paranaense",
+            "away_team": "Novorizontino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "21",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733444"
+          },
+          {
+            "game_id": "733434",
+            "date": "Sat, 23 Aug",
+            "home_team": "Criciúma",
+            "away_team": "Novorizontino",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54%",
+                "46%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "0"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733434"
+          },
+          {
+            "game_id": "733424",
+            "date": "Fri, 15 Aug",
+            "home_team": "Novorizontino",
+            "away_team": "Coritiba",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "9"
+              ],
+              "Yellow Cards": [
+                "5",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733424"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "733517",
+            "date": "Wed, 8 Oct",
+            "home_team": "Operario PR",
+            "away_team": "Athletic",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.6%",
+                "30.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "27",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733517"
+          },
+          {
+            "game_id": "733505",
+            "date": "Sun, 5 Oct",
+            "home_team": "Operario PR",
+            "away_team": "Remo",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.7%",
+                "40.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733505"
+          },
+          {
+            "game_id": "733497",
+            "date": "Sun, 28 Sep",
+            "home_team": "Athletico Paranaense",
+            "away_team": "Operario PR",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.2%",
+                "63.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733497"
+          },
+          {
+            "game_id": "733485",
+            "date": "Thu, 25 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Amazonas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.6%",
+                "40.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733485"
+          },
+          {
+            "game_id": "733473",
+            "date": "Thu, 18 Sep",
+            "home_team": "Botafogo-SP",
+            "away_team": "Operario PR",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.2%",
+                "55.8%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "6",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "7"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733473"
+          },
+          {
+            "game_id": "733465",
+            "date": "Sun, 14 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Cuiabá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.3%",
+                "37.7%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733465"
+          },
+          {
+            "game_id": "733450",
+            "date": "Sun, 7 Sep",
+            "home_team": "América Mineiro",
+            "away_team": "Operario PR",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.9%",
+                "43.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733450"
+          },
+          {
+            "game_id": "733443",
+            "date": "Fri, 29 Aug",
+            "home_team": "Operario PR",
+            "away_team": "Coritiba",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733443"
+          },
+          {
+            "game_id": "733438",
+            "date": "Sun, 24 Aug",
+            "home_team": "Paysandu",
+            "away_team": "Operario PR",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "7"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733438"
+          },
+          {
+            "game_id": "733425",
+            "date": "Tue, 19 Aug",
+            "home_team": "Operario PR",
+            "away_team": "Avaí",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.6%",
+                "34.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733425"
+          }
+        ],
+        "classement": {
+          "Novorizontino": {
+            "position": 5,
+            "points": 50
+          },
+          "Operario-PR": {
+            "position": 13,
+            "points": 39
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 56
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 52
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 50
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Athletico Paranaense",
+            "points": 48
+          },
+          {
+            "position": 7,
+            "team": "Remo",
+            "points": 48
+          },
+          {
+            "position": 8,
+            "team": "CRB",
+            "points": 46
+          },
+          {
+            "position": 9,
+            "team": "Cuiabá",
+            "points": 46
+          },
+          {
+            "position": 10,
+            "team": "Atlético Goianiense",
+            "points": 45
+          },
+          {
+            "position": 11,
+            "team": "Avaí",
+            "points": 43
+          },
+          {
+            "position": 12,
+            "team": "Vila Nova",
+            "points": 40
+          },
+          {
+            "position": 13,
+            "team": "Operario PR",
+            "points": 39
+          },
+          {
+            "position": 14,
+            "team": "América Mineiro",
+            "points": 37
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Ferroviária",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Botafogo-SP",
+            "points": 32
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 31
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "700072",
+            "date": "Tuesday, July 23, 2024",
+            "team1": "Operario PR",
+            "score": "0 - 0",
+            "team2": "Novorizontino",
+            "title": "Operario PR VS Novorizontino",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/700072/novorizontino-operario-pr",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "64.4%",
+                "35.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "700261",
+            "date": "Saturday, November 9, 2024",
+            "team1": "Novorizontino",
+            "score": "0 - 1",
+            "team2": "Operario PR",
+            "title": "Novorizontino VS Operario PR",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/700261/operario-pr-novorizontino",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "50.6%",
+                "49.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "733337",
+            "date": "Monday, June 23, 2025",
+            "team1": "Operario PR",
+            "score": "2 - 0",
+            "team2": "Novorizontino",
+            "title": "Operario PR VS Novorizontino",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733337/novorizontino-operario-pr",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "54.9%",
+                "45.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/7834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1223.png",
+        "classement_home": 5,
+        "classement_away": 13,
+        "points_classement_home": 50,
+        "points_classement_away": 39,
+        "nom_classement_home": "Novorizontino",
+        "nom_classement_away": "Operario PR",
+        "country_fr": "Brazil - Serie B",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.171,
+            "lambda_away": 0.955,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.82,
+            "X": 29.65,
+            "V2": 29.53
+          },
+          "double_chance": {
+            "1X": 70.47,
+            "12": 70.35,
+            "X2": 59.18
+          },
+          "over_under": {
+            "plus_de_0.5": 88.38,
+            "moins_de_0.5": 11.62,
+            "plus_de_1.5": 63.21,
+            "moins_de_1.5": 36.79,
+            "plus_de_2.5": 35.56,
+            "moins_de_2.5": 64.44,
+            "plus_de_3.5": 16.28,
+            "moins_de_3.5": 83.71,
+            "plus_de_4.5": 6.08,
+            "moins_de_4.5": 93.92,
+            "plus_de_5.5": 2.08,
+            "moins_de_5.5": 97.92
+          },
+          "btts": {
+            "oui": 42.42,
+            "non": 57.58
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.82,
+            "1Xet+0.5": 58.85,
+            "V2et+0.5": 29.53,
+            "V1et+1.5": 26.86,
+            "1Xet+1.5": 44.88,
+            "V2et+1.5": 18.33,
+            "V1et+2.5": 18.4,
+            "1Xet+2.5": 22.68,
+            "V2et+2.5": 12.87,
+            "V1et+3.5": 7.26,
+            "1Xet+3.5": 11.55,
+            "V2et+3.5": 4.74,
+            "V1et+4.5": 3.4,
+            "1Xet+4.5": 3.84,
+            "V2et+4.5": 2.24,
+            "V1et+5.5": 1.02,
+            "1Xet+5.5": 1.47,
+            "V2et+5.5": 0.62
+          },
+          "scores_probables": {
+            "1-0": 13.96,
+            "1-1": 13.74,
+            "0-0": 11.62,
+            "0-1": 11.2,
+            "2-0": 8.46,
+            "2-1": 7.85,
+            "1-2": 6.22,
+            "0-2": 5.46,
+            "2-2": 3.84,
+            "3-0": 3.29
+          },
+          "buts_moyens_simules": {
+            "home": 1.17,
+            "away": 0.96,
+            "total": 2.12
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 72 %  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Novorizontino** (5ᵉ, 50 pts) : moyenne 0,90 buts marqués et 1,00 buts encaissés. Très solide défensivement à domicile (4 buts encaissés en 4 derniers matchs à domicile).  \n- **Operário‑PR** (13ᵉ, 39 pts) : même moyenne offensive (0,90) mais légèrement plus vulnérable (1,10 buts encaissés). En déplacement, il ne marque que 4 buts et en encaisse 4 sur les 4 derniers matchs à l’extérieur.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Novorizontino bénéficie d’un bon classement et d’une défense stable à domicile.  \n- Operário‑PR a connu une série extérieure difficile (L‑D‑D‑W) et a concédé en moyenne plus d’un but à l’extérieur.  \n\n**3. Forme récente & tendances détaillées**  \n- **Novorizontino** : sur les 6 derniers matchs, 4 victoires, 1 nul, 1 défaite. Dans les 5 dernières rencontres, il n’a encaissé que 1 but (0‑1, 0‑0, 1‑0, 1‑0, 2‑1). La plupart des victoires se sont jouées avec 1 but d’écart.  \n- **Operário‑PR** : 5 points sur les 6 derniers matchs, dont 3 défaites. En déplacement, les scores récents sont 0‑1, 1‑1, 1‑1, 2‑1 – jamais plus de 2 buts marqués par match.  \n\n**4. Contexte du championnat**  \n- Écart de 11 points entre les deux équipes (5ᵉ vs 13ᵉ). Novorizontino lutte pour les places européennes, tandis qu’Operário‑PR se bat pour éviter la zone de relégation. Cette différence de motivation se traduit souvent par un jeu plus prudent de la part de l’équipe en tête (Novorizontino) et un effort défensif de l’équipe en bas de tableau (Operário‑PR).  \n\n**5. Confrontations directes**  \n- 3 rencontres récentes : 0‑0, 0‑1 (victoire de l’extérieur), 2‑0 (victoire à domicile). Aucun des trois matchs n’a dépassé les 2,5 buts. La moyenne de buts dans ces duels est de 0,67, ce qui renforce l’idée d’un affrontement peu prolifique.  \n\n**6. Analyse des statistiques détaillées**  \n- **Possession** : Novorizontino domine souvent (≈55‑60 %). Operário‑PR a parfois la supériorité (ex. 69 % contre Athletic), mais cela s’est traduit par de nombreux tirs inefficaces et des contre‑attaques limitées.  \n- **Tirs cadrés** : Novorizontino enregistre en moyenne 4‑5 tirs cadrés par match, Operário‑PR 3‑4 à l’extérieur. Les deux équipes convertissent rarement leurs occasions (taux de conversion < 20 %).  \n- **Corners** : Les deux équipes obtiennent peu de corners (≈3‑4 par match), signe d’un jeu moins axé sur les coups de pied arrêtés.  \n\n**7. Synthèse**  \n- Les deux équipes affichent des moyennes offensives très faibles (≈0,9 buts/match).  \n- Les confrontations directes récentes n’ont jamais dépassé 2 buts au total.  \n- La défense de Novorizontino à domicile et la difficulté d’Operário‑PR à marquer à l’extérieur font pencher la balance vers un match où moins de 2,5 buts seront inscrits.  \n\n**Conclusion** : Le scénario le plus probable est un match serré, avec peu d’occasions nettes et une probabilité élevée que le total des buts reste inférieur à 2,5. Les scores les plus plausibles sont un nul 0‑0 (défense solide des deux côtés) ou une victoire de justesse 1‑0 en faveur de Novorizontino.",
+        "confiance_pourcentage": 72,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 1‑0"
+      },
+      {
+        "id": 2,
+        "HomeTeam": "Santa Fe",
+        "AwayTeam": "Llaneros",
+        "date": "12 octobre 2025 à 19:00:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 15,
+          "total_points": 13,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 5,
+          "total_marques": 14,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 11,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 9,
+          "total_marques": 8,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "758928",
+            "date": "Wed, Oct 1",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "Independiente Medellín",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758928"
+          },
+          {
+            "game_id": "750706",
+            "date": "Sun, Sep 28",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "La Equidad",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.8%",
+                "34.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750706"
+          },
+          {
+            "game_id": "758927",
+            "date": "Wed, Sep 24",
+            "home_team": "Independiente Medellín",
+            "away_team": "Independiente Santa Fe",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758927"
+          },
+          {
+            "game_id": "750692",
+            "date": "Sat, Sep 20",
+            "home_team": "Deportivo Pasto",
+            "away_team": "Independiente Santa Fe",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.2%",
+                "58.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "9"
+              ],
+              "Shot Attempts": [
+                "13",
+                "20"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "7",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750692"
+          },
+          {
+            "game_id": "750684",
+            "date": "Sun, Sep 14",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "Unión Magdalena",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.5%",
+                "32.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "23",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750684"
+          },
+          {
+            "game_id": "757623",
+            "date": "Tue, Sep 9",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "Alianza FC",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757623"
+          },
+          {
+            "game_id": "750673",
+            "date": "Sat, Sep 6",
+            "home_team": "Millonarios",
+            "away_team": "Independiente Santa Fe",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750673"
+          },
+          {
+            "game_id": "750667",
+            "date": "Mon, Sep 1",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "Once Caldas",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.2%",
+                "42.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "5"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750667"
+          },
+          {
+            "game_id": "757617",
+            "date": "Thu, Aug 28",
+            "home_team": "Alianza FC",
+            "away_team": "Independiente Santa Fe",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757617"
+          },
+          {
+            "game_id": "750652",
+            "date": "Sat, Aug 23",
+            "home_team": "Fortaleza CEIF",
+            "away_team": "Independiente Santa Fe",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.6%",
+                "46.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750652"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750711",
+            "date": "Sat, Oct 4",
+            "home_team": "Llaneros",
+            "away_team": "Fortaleza CEIF",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750711"
+          },
+          {
+            "game_id": "750701",
+            "date": "Sat, Sep 27",
+            "home_team": "Alianza FC",
+            "away_team": "Llaneros",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.1%",
+                "31.9%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "8"
+              ],
+              "Saves": [
+                "0",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750701"
+          },
+          {
+            "game_id": "750691",
+            "date": "Sat, Sep 20",
+            "home_team": "Llaneros",
+            "away_team": "Águilas Doradas",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "5",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "6"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750691"
+          },
+          {
+            "game_id": "750686",
+            "date": "Sun, Sep 14",
+            "home_team": "Deportivo Pereira",
+            "away_team": "Llaneros",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750686"
+          },
+          {
+            "game_id": "750671",
+            "date": "Sat, Sep 6",
+            "home_team": "Llaneros",
+            "away_team": "Deportes Tolima",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.1%",
+                "61.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "10",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750671"
+          },
+          {
+            "game_id": "750658",
+            "date": "Fri, Aug 29",
+            "home_team": "Atlético Junior",
+            "away_team": "Llaneros",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.4%",
+                "41.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750658"
+          },
+          {
+            "game_id": "750649",
+            "date": "Fri, Aug 22",
+            "home_team": "Llaneros",
+            "away_team": "Deportivo Pasto",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.4%",
+                "55.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750649"
+          },
+          {
+            "game_id": "750638",
+            "date": "Sat, Aug 16",
+            "home_team": "La Equidad",
+            "away_team": "Llaneros",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47%",
+                "53%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750638"
+          },
+          {
+            "game_id": "750635",
+            "date": "Sun, Aug 10",
+            "home_team": "Llaneros",
+            "away_team": "Independiente Medellín",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.1%",
+                "45.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750635"
+          },
+          {
+            "game_id": "750618",
+            "date": "Sat, Aug 2",
+            "home_team": "Deportivo Cali",
+            "away_team": "Llaneros",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "6"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750618"
+          }
+        ],
+        "classement": {
+          "Santa Fe": {
+            "position": 7,
+            "points": 20
+          },
+          "Llaneros": {
+            "position": 11,
+            "points": 19
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bucaramanga",
+            "points": 27
+          },
+          {
+            "position": 2,
+            "team": "Atlético Junior",
+            "points": 25
+          },
+          {
+            "position": 3,
+            "team": "Fortaleza CEIF",
+            "points": 25
+          },
+          {
+            "position": 4,
+            "team": "Atlético Nacional",
+            "points": 24
+          },
+          {
+            "position": 5,
+            "team": "Independiente Medellín",
+            "points": 24
+          },
+          {
+            "position": 6,
+            "team": "Deportes Tolima",
+            "points": 23
+          },
+          {
+            "position": 7,
+            "team": "Independiente Santa Fe",
+            "points": 20
+          },
+          {
+            "position": 8,
+            "team": "Deportivo Cali",
+            "points": 20
+          },
+          {
+            "position": 9,
+            "team": "Alianza FC",
+            "points": 20
+          },
+          {
+            "position": 10,
+            "team": "Once Caldas",
+            "points": 19
+          },
+          {
+            "position": 11,
+            "team": "Llaneros",
+            "points": 19
+          },
+          {
+            "position": 12,
+            "team": "Águilas Doradas",
+            "points": 17
+          },
+          {
+            "position": 13,
+            "team": "Millonarios",
+            "points": 17
+          },
+          {
+            "position": 14,
+            "team": "Envigado",
+            "points": 16
+          },
+          {
+            "position": 15,
+            "team": "Deportivo Pereira",
+            "points": 15
+          },
+          {
+            "position": 16,
+            "team": "Unión Magdalena",
+            "points": 15
+          },
+          {
+            "position": 17,
+            "team": "América de Cali",
+            "points": 14
+          },
+          {
+            "position": 18,
+            "team": "Boyacá Chicó",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Deportivo Pasto",
+            "points": 11
+          },
+          {
+            "position": 20,
+            "team": "La Equidad",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "730458",
+            "date": "Wednesday, April 30, 2025",
+            "team1": "Llaneros",
+            "score": "0 - 1",
+            "team2": "Independiente Santa Fe",
+            "title": "Llaneros VS Independiente Santa Fe",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/730458/independiente-santa-fe-llaneros",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "66.8%",
+                "33.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "11",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1139.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1464.png",
+        "classement_home": 7,
+        "classement_away": 11,
+        "points_classement_home": 20,
+        "points_classement_away": 19,
+        "nom_classement_home": "Independiente Santa Fe",
+        "nom_classement_away": "Llaneros",
+        "country_fr": "Colombia - Primera A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.198,
+            "lambda_away": 1.055,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 39.69,
+            "X": 28.51,
+            "V2": 31.8
+          },
+          "double_chance": {
+            "1X": 68.19,
+            "12": 71.5,
+            "X2": 60.31
+          },
+          "over_under": {
+            "plus_de_0.5": 89.44,
+            "moins_de_0.5": 10.56,
+            "plus_de_1.5": 65.84,
+            "moins_de_1.5": 34.16,
+            "plus_de_2.5": 39.86,
+            "moins_de_2.5": 60.14,
+            "plus_de_3.5": 19.5,
+            "moins_de_3.5": 80.51,
+            "plus_de_4.5": 7.76,
+            "moins_de_4.5": 92.24,
+            "plus_de_5.5": 2.88,
+            "moins_de_5.5": 97.12
+          },
+          "btts": {
+            "oui": 45.56,
+            "non": 54.44
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.69,
+            "1Xet+0.5": 57.64,
+            "V2et+0.5": 31.8,
+            "V1et+1.5": 26.98,
+            "1Xet+1.5": 44.92,
+            "V2et+1.5": 20.92,
+            "V1et+2.5": 19.41,
+            "1Xet+2.5": 24.45,
+            "V2et+2.5": 15.41,
+            "V1et+3.5": 8.33,
+            "1Xet+3.5": 13.36,
+            "V2et+3.5": 6.13,
+            "V1et+4.5": 4.04,
+            "1Xet+4.5": 4.67,
+            "V2et+4.5": 3.09,
+            "V1et+5.5": 1.24,
+            "1Xet+5.5": 1.87,
+            "V2et+5.5": 1.0
+          },
+          "scores_probables": {
+            "1-1": 12.91,
+            "1-0": 12.72,
+            "0-1": 10.89,
+            "0-0": 10.56,
+            "2-1": 8.01,
+            "2-0": 7.56,
+            "1-2": 7.2,
+            "0-2": 5.5,
+            "2-2": 4.42,
+            "3-1": 3.2
+          },
+          "buts_moyens_simules": {
+            "home": 1.21,
+            "away": 1.05,
+            "total": 2.26
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire domicile  \n- **CONFIANCE** : 68 %  \n- **SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Santa Fe** : moyenne 1,40 buts marqués et 1,10 buts encaissés. En 10 matchs à domicile, 10 buts marqués et seulement 6 encaissés → défense solide et attaque efficace.  \n- **Llaneros** : moyenne 0,80 buts marqués et 1,20 buts encaissés à l’extérieur. En 9 matchs à l’extérieur, seulement 4 buts marqués et 12 encaissés → faible capacité offensive et défense fragile.\n\n**2. Impact du facteur domicile/extérieur**  \n- Santa Fe bénéficie d’un bon bilan à domicile (3 victoires, 1 défaite, 1 match nul sur ses 5 derniers matchs à domicile).  \n- Llaneros montre une série extérieure négative (L‑D‑L‑L‑W) avec seulement une victoire et deux nuls sur les 5 derniers déplacements.\n\n**3. Formes récentes et tendances (stats détaillées)**  \n- **Santa Fe** : lors de ses 3 dernières victoires (vs La Equidad, vs Unión Magdalena, vs Alianza FC) l’équipe a dominé la possession (≥ 57 %), généré de nombreux tirs cadrés (5‑8) et a gardé la cage adverse à zéro ou un but.  \n- **Llaneros** : leurs 3 dernières victoires/draws à l’extérieur (0‑0, 1‑0, 0‑0) montrent très peu de tirs cadrés (3‑5) et une incapacité à convertir les occasions (ex. 1‑3 contre Alianza FC).  \n\n**4. Contexte du championnat**  \n- Santa Fe occupe la 7ᵉ place (20 pts) à seulement 2 pts du 5ᵉ, en lutte pour les places européennes.  \n- Llaneros, 11ᵉ avec 19 pts, se bat pour s’éloigner de la zone de relégation. La motivation de Santa Fe à consolider sa position est plus forte que celle de Llaneros qui doit se contenter d’un point.\n\n**5. Confrontations directes**  \n- Dernier affrontement (30 avril 2025) : Santa Fe l’a battu 1‑0 à l’extérieur malgré une possession moindre (33 % contre 66 %). L’efficacité devant le but de Santa Fe (5 tirs cadrés contre 4) et la mauvaise finition de Llaneros (20 tirs, 7 tirs cadrés) confirment un avantage décisif de Santa Fe.\n\n**6. Tendances de buts**  \n- Totaux attendus : Santa Fe ≈ 1,2 buts, Llaneros ≈ 0,5 buts → ≈ 1,7 buts par match, bien en dessous de 2,5.  \n- La probabilité que les deux équipes marquent est faible (BTTS non ≈ 75 %).  \n\n**7. Synthèse**  \nTous les indicateurs (statistiques de buts, forme récente, avantage du terrain, historique direct) convergent vers une victoire de Santa Fe, très probablement avec un seul but ou deux buts au maximum.  \n\n**Conclusion** : la prédiction la plus fiable est donc **Victoire domicile** pour Santa Fe, avec une confiance de 68 % et les scores les plus probables **1‑0 ou 2‑0**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 3,
+        "HomeTeam": "Vila Nova",
+        "AwayTeam": "Amazonas",
+        "date": "12 octobre 2025 à 21:30:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 10,
+          "total_points": 5,
+          "serie_domicile": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 8,
+          "total_marques": 11,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 11,
+          "total_points": 7,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 9,
+          "total_marques": 12,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          {
+            "game_id": "733510",
+            "date": "Thu, 9 Oct",
+            "home_team": "América Mineiro",
+            "away_team": "Vila Nova",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65%",
+                "35%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733510"
+          },
+          {
+            "game_id": "733507",
+            "date": "Fri, 3 Oct",
+            "home_team": "Vila Nova",
+            "away_team": "Criciúma",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.2%",
+                "61.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733507"
+          },
+          {
+            "game_id": "733492",
+            "date": "Sun, 28 Sep",
+            "home_team": "Novorizontino",
+            "away_team": "Vila Nova",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.5%",
+                "36.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "3"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733492"
+          },
+          {
+            "game_id": "733487",
+            "date": "Wed, 24 Sep",
+            "home_team": "Vila Nova",
+            "away_team": "Cuiabá",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "8"
+              ],
+              "Shot Attempts": [
+                "18",
+                "18"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733487"
+          },
+          {
+            "game_id": "733471",
+            "date": "Sun, 21 Sep",
+            "home_team": "Athletico Paranaense",
+            "away_team": "Vila Nova",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "0"
+              ],
+              "Shot Attempts": [
+                "16",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733471"
+          },
+          {
+            "game_id": "733467",
+            "date": "Sat, 13 Sep",
+            "home_team": "Vila Nova",
+            "away_team": "Remo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.5%",
+                "40.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "20",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733467"
+          },
+          {
+            "game_id": "733458",
+            "date": "Tue, 9 Sep",
+            "home_team": "Vila Nova",
+            "away_team": "Athletic",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.6%",
+                "56.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733458"
+          },
+          {
+            "game_id": "733447",
+            "date": "Mon, 1 Sep",
+            "home_team": "Chapecoense",
+            "away_team": "Vila Nova",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.2%",
+                "33.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "7"
+              ],
+              "Corner Kicks": [
+                "10",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733447"
+          },
+          {
+            "game_id": "733431",
+            "date": "Mon, 25 Aug",
+            "home_team": "Botafogo-SP",
+            "away_team": "Vila Nova",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.6%",
+                "38.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733431"
+          },
+          {
+            "game_id": "733427",
+            "date": "Sat, 16 Aug",
+            "home_team": "Vila Nova",
+            "away_team": "Goiás",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "27%",
+                "73%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "9",
+                "10"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733427"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "733509",
+            "date": "Wed, 8 Oct",
+            "home_team": "Amazonas",
+            "away_team": "Criciúma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.6%",
+                "56.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "7"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733509"
+          },
+          {
+            "game_id": "733499",
+            "date": "Fri, 3 Oct",
+            "home_team": "Athletic",
+            "away_team": "Amazonas",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.2%",
+                "43.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "22",
+                "23"
+              ],
+              "Yellow Cards": [
+                "1",
+                "6"
+              ],
+              "Corner Kicks": [
+                "9",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733499"
+          },
+          {
+            "game_id": "733495",
+            "date": "Mon, 29 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Chapecoense",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.4%",
+                "42.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "20",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733495"
+          },
+          {
+            "game_id": "733485",
+            "date": "Thu, 25 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Amazonas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.6%",
+                "40.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733485"
+          },
+          {
+            "game_id": "733469",
+            "date": "Sat, 20 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Volta Redonda",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.5%",
+                "68.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "18"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733469"
+          },
+          {
+            "game_id": "733461",
+            "date": "Tue, 16 Sep",
+            "home_team": "CRB",
+            "away_team": "Amazonas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "75.8%",
+                "24.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733461"
+          },
+          {
+            "game_id": "733449",
+            "date": "Fri, 5 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Remo",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.5%",
+                "39.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733449"
+          },
+          {
+            "game_id": "733448",
+            "date": "Sun, 31 Aug",
+            "home_team": "Atlético Goianiense",
+            "away_team": "Amazonas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.1%",
+                "51.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733448"
+          },
+          {
+            "game_id": "733430",
+            "date": "Tue, 26 Aug",
+            "home_team": "Avaí",
+            "away_team": "Amazonas",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.4%",
+                "37.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733430"
+          },
+          {
+            "game_id": "733419",
+            "date": "Sat, 16 Aug",
+            "home_team": "Amazonas",
+            "away_team": "América Mineiro",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.7%",
+                "59.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "16"
+              ],
+              "Yellow Cards": [
+                "6",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733419"
+          }
+        ],
+        "classement": {
+          "Vila Nova": {
+            "position": 12,
+            "points": 40
+          },
+          "Amazonas": {
+            "position": 18,
+            "points": 31
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 56
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 52
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 50
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Athletico Paranaense",
+            "points": 48
+          },
+          {
+            "position": 7,
+            "team": "Remo",
+            "points": 48
+          },
+          {
+            "position": 8,
+            "team": "CRB",
+            "points": 46
+          },
+          {
+            "position": 9,
+            "team": "Cuiabá",
+            "points": 46
+          },
+          {
+            "position": 10,
+            "team": "Atlético Goianiense",
+            "points": 45
+          },
+          {
+            "position": 11,
+            "team": "Avaí",
+            "points": 43
+          },
+          {
+            "position": 12,
+            "team": "Vila Nova",
+            "points": 40
+          },
+          {
+            "position": 13,
+            "team": "Operario PR",
+            "points": 39
+          },
+          {
+            "position": 14,
+            "team": "América Mineiro",
+            "points": 37
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Ferroviária",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Botafogo-SP",
+            "points": 32
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 31
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "700038",
+            "date": "Monday, July 8, 2024",
+            "team1": "Amazonas",
+            "score": "1 - 2",
+            "team2": "Vila Nova",
+            "title": "Amazonas VS Vila Nova",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/700038/vila-nova-amazonas",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "59.7%",
+                "40.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "20",
+                "14"
+              ],
+              "Yellow Cards": [
+                "4",
+                "0"
+              ],
+              "Corner Kicks": [
+                "16",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "700234",
+            "date": "Tuesday, October 22, 2024",
+            "team1": "Vila Nova",
+            "score": "1 - 0",
+            "team2": "Amazonas",
+            "title": "Vila Nova VS Amazonas",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/700234/amazonas-vila-nova",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "22",
+                "17"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "10",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "733329",
+            "date": "Sunday, June 22, 2025",
+            "team1": "Amazonas",
+            "score": "2 - 1",
+            "team2": "Vila Nova",
+            "title": "Amazonas VS Vila Nova",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733329/vila-nova-amazonas",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/142.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10862.png",
+        "classement_home": 12,
+        "classement_away": 18,
+        "points_classement_home": 40,
+        "points_classement_away": 31,
+        "nom_classement_home": "Vila Nova",
+        "nom_classement_away": "Amazonas",
+        "country_fr": "Brazil - Serie B",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.462,
+            "lambda_away": 1.183,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 43.77,
+            "X": 25.94,
+            "V2": 30.29
+          },
+          "double_chance": {
+            "1X": 69.71,
+            "12": 74.06,
+            "X2": 56.23
+          },
+          "over_under": {
+            "plus_de_0.5": 92.9,
+            "moins_de_0.5": 7.1,
+            "plus_de_1.5": 74.76,
+            "moins_de_1.5": 25.24,
+            "plus_de_2.5": 50.0,
+            "moins_de_2.5": 50.0,
+            "plus_de_3.5": 28.08,
+            "moins_de_3.5": 71.91,
+            "plus_de_4.5": 13.16,
+            "moins_de_4.5": 86.84,
+            "plus_de_5.5": 5.56,
+            "moins_de_5.5": 94.44
+          },
+          "btts": {
+            "oui": 53.71,
+            "non": 46.29
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.77,
+            "1Xet+0.5": 62.6,
+            "V2et+0.5": 30.29,
+            "V1et+1.5": 33.51,
+            "1Xet+1.5": 52.34,
+            "V2et+1.5": 22.42,
+            "V1et+2.5": 25.88,
+            "1Xet+2.5": 32.57,
+            "V2et+2.5": 17.42,
+            "V1et+3.5": 13.36,
+            "1Xet+3.5": 20.05,
+            "V2et+3.5": 8.04,
+            "V1et+4.5": 7.3,
+            "1Xet+4.5": 8.62,
+            "V2et+4.5": 4.54,
+            "V1et+5.5": 2.78,
+            "1Xet+5.5": 4.1,
+            "V2et+5.5": 1.47
+          },
+          "scores_probables": {
+            "1-1": 12.14,
+            "1-0": 10.26,
+            "2-1": 8.96,
+            "0-1": 7.87,
+            "2-0": 7.62,
+            "1-2": 7.31,
+            "0-0": 7.1,
+            "2-2": 5.37,
+            "0-2": 5.0,
+            "3-1": 4.55
+          },
+          "buts_moyens_simules": {
+            "home": 1.48,
+            "away": 1.19,
+            "total": 2.67
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 62 %  \n**SCORES PROBABLES** : 2‑1 ou 2‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Vila Nova (domicile)** : 7 buts marqués / 5 encaissés à domicile (moy. 1,10 / 1,30). Très solide en possession (souvent > 55 %) mais manque d’efficacité offensive ; la plupart de ses matchs à domicile se soldent par des scores serrés (1‑1, 2‑2).  \n- **Amazonas (extérieur)** : 5 buts marqués / 9 encaissés à l’extérieur (moy. 1,20 / 1,80). Défense fragile hors de ses terrains, mais capable de marquer (plusieurs victoires 2‑1, 2‑2).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Vila Nova montre une bonne discipline défensive à domicile (5 buts encaissés en 12 matchs).  \n- Amazonas a concédé en moyenne 1,80 but à l’extérieur, signe d’une propension à laisser entrer des buts.  \n\n**3. Forme récente & tendances (stats détaillées)**  \n- **Vila Nova** : 5 derniers matchs à domicile → 1‑1, 2‑2, 1‑1, 1‑1, 2‑0. 4 sur 5 matchs avec les deux équipes qui marquent. Possession moyenne ≈ 55 %, tirs cadrés ≈ 4‑5, corners ≈ 5‑6.  \n- **Amazonas** : 8 derniers matchs à l’extérieur → 2‑1, 2‑2, 1‑3, 2‑1, 1‑0, 0‑2, 1‑2, 2‑2. 6 sur 8 matchs avec les deux équipes qui marquent. Possession moyenne ≈ 45 %, tirs cadrés ≈ 4‑5, corners ≈ 4‑5.  \n\n**4. Contexte du championnat**  \n- Vila Nova (12ᵉ, 40 pts) lutte pour les places européennes mais n’est pas en danger de relégation.  \n- Amazonas (18ᵉ, 31 pts) se bat contre la chute, ce qui pousse souvent à un jeu plus ouvert et à prendre des risques offensifs.  \n\n**5. Confrontations directes récentes**  \n- 3 rencontres : 2‑1 (Vila Nova), 1‑0 (Vila Nova), 2‑1 (Amazonas). Deux victoires de Vila Nova mais chaque match a produit au moins 2 buts, dont deux fois les deux équipes ont marqué.  \n\n**6. Calcul de l’attendu de buts**  \n- Score attendu de Vila Nova = (Moy. marqués Vila Nova + Moy. encaissés Amazonas) / 2 = (1,10 + 1,80) / 2 ≈ 1,45.  \n- Score attendu d’Amazonas = (Moy. marqués Amazonas + Moy. encaissés Vila Nova) / 2 = (1,20 + 1,30) / 2 ≈ 1,25.  \n- Total moyen attendu ≈ 2,70 buts → au‑delà du seuil de 2,5.  \n\n**7. Probabilité de BTTS vs Plus 2,5**  \n- BTTS (les deux équipes marquent) : Vila Nova marque dans 80 % de ses matchs à domicile, Amazonas marque dans 75 % de ses matchs à l’extérieur → probabilité conjointe ≈ 60 %.  \n- Plus 2,5 buts : 1 sur 5 matchs à domicile de Vila Nova (20 %) + 6 sur 8 matchs à l’extérieur d’Amazonas (75 %) → moyenne pondérée ≈ 62 %.  \n\n**Conclusion** : La combinaison d’une défense à domicile relativement solide mais exposée, d’une défense d’Amazonas très perméable à l’extérieur, et des historiques récents où les deux équipes marquent fréquemment, conduit à estimer que le match dépassera les 2,5 buts. Les scores les plus plausibles sont 2‑1 (victoire mince d’Amazone) ou 2‑2 (match très ouvert).",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 2‑2"
+      },
+      {
+        "id": 4,
+        "HomeTeam": "Austin",
+        "AwayTeam": "Los Angeles FC",
+        "date": "12 octobre 2025 à 23:00:00 UTC",
+        "league": "USA - Major League Soccer",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 13,
+          "total_points": 6,
+          "serie_domicile": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 10,
+          "total_marques": 15,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 2.4,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 18,
+          "total_points_10": 23,
+          "total_points": 18,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 16,
+          "buts_ext_encaisses": 6,
+          "total_marques": 24,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "727287",
+            "date": "Sat, Oct 4",
+            "home_team": "Austin FC",
+            "away_team": "St. Louis CITY SC",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.2%",
+                "43.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "8"
+              ],
+              "Shot Attempts": [
+                "15",
+                "23"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727287"
+          },
+          {
+            "game_id": "758925",
+            "date": "Wed, Oct 1",
+            "home_team": "Austin FC",
+            "away_team": "Nashville SC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.4%",
+                "45.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758925"
+          },
+          {
+            "game_id": "727273",
+            "date": "Sat, Sep 27",
+            "home_team": "Real Salt Lake",
+            "away_team": "Austin FC",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "10"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727273"
+          },
+          {
+            "game_id": "727258",
+            "date": "Sun, Sep 21",
+            "home_team": "Austin FC",
+            "away_team": "Seattle Sounders FC",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.6%",
+                "58.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "17"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "13"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727258"
+          },
+          {
+            "game_id": "751675",
+            "date": "Wed, Sep 17",
+            "home_team": "Minnesota United FC",
+            "away_team": "Austin FC",
+            "score": "1 - 2",
+            "status": "AET",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.6%",
+                "53.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "22",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/751675"
+          },
+          {
+            "game_id": "727239",
+            "date": "Sat, Sep 13",
+            "home_team": "FC Dallas",
+            "away_team": "Austin FC",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "0",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727239"
+          },
+          {
+            "game_id": "727229",
+            "date": "Sun, Sep 7",
+            "home_team": "Sporting Kansas City",
+            "away_team": "Austin FC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.9%",
+                "39.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727229"
+          },
+          {
+            "game_id": "727225",
+            "date": "Sat, Aug 30",
+            "home_team": "Austin FC",
+            "away_team": "San Jose Earthquakes",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.9%",
+                "64.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727225"
+          },
+          {
+            "game_id": "727199",
+            "date": "Sat, Aug 23",
+            "home_team": "CF Montréal",
+            "away_team": "Austin FC",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.2%",
+                "50.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "6"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727199"
+          },
+          {
+            "game_id": "727192",
+            "date": "Sat, Aug 16",
+            "home_team": "Austin FC",
+            "away_team": "FC Dallas",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.6%",
+                "35.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727192"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "727055",
+            "date": "Wed, Oct 8",
+            "home_team": "LAFC",
+            "away_team": "Toronto FC",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.7%",
+                "55.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727055"
+          },
+          {
+            "game_id": "727293",
+            "date": "Sun, Oct 5",
+            "home_team": "LAFC",
+            "away_team": "Atlanta United FC",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54%",
+                "46%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "3"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727293"
+          },
+          {
+            "game_id": "727271",
+            "date": "Sat, Sep 27",
+            "home_team": "St. Louis CITY SC",
+            "away_team": "LAFC",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.5%",
+                "55.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "8",
+                "21"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727271"
+          },
+          {
+            "game_id": "727262",
+            "date": "Sun, Sep 21",
+            "home_team": "LAFC",
+            "away_team": "Real Salt Lake",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.4%",
+                "53.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "19"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727262"
+          },
+          {
+            "game_id": "727077",
+            "date": "Wed, Sep 17",
+            "home_team": "Real Salt Lake",
+            "away_team": "LAFC",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.5%",
+                "41.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "21",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727077"
+          },
+          {
+            "game_id": "727235",
+            "date": "Sat, Sep 13",
+            "home_team": "San Jose Earthquakes",
+            "away_team": "LAFC",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.6%",
+                "34.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727235"
+          },
+          {
+            "game_id": "727228",
+            "date": "Sun, Aug 31",
+            "home_team": "LAFC",
+            "away_team": "San Diego FC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.6%",
+                "58.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "6"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727228"
+          },
+          {
+            "game_id": "727204",
+            "date": "Sat, Aug 23",
+            "home_team": "FC Dallas",
+            "away_team": "LAFC",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.1%",
+                "65.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "10",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "11"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727204"
+          },
+          {
+            "game_id": "727188",
+            "date": "Sat, Aug 16",
+            "home_team": "New England Revolution",
+            "away_team": "LAFC",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727188"
+          },
+          {
+            "game_id": "727174",
+            "date": "Sat, Aug 9",
+            "home_team": "Chicago Fire FC",
+            "away_team": "LAFC",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.1%",
+                "50.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/727174"
+          }
+        ],
+        "classement": {
+          "Austin": {
+            "position": 21,
+            "points": 58
+          },
+          "Los Angeles FC": {
+            "position": 18,
+            "points": 60
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "FC Cincinnati",
+            "points": 66
+          },
+          {
+            "position": 3,
+            "team": "Inter Miami CF",
+            "points": 62
+          },
+          {
+            "position": 4,
+            "team": "Charlotte FC",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "New York City FC",
+            "points": 56
+          },
+          {
+            "position": 6,
+            "team": "Nashville SC",
+            "points": 56
+          },
+          {
+            "position": 7,
+            "team": "Orlando City SC",
+            "points": 54
+          },
+          {
+            "position": 8,
+            "team": "Chicago Fire FC",
+            "points": 53
+          },
+          {
+            "position": 9,
+            "team": "Columbus Crew",
+            "points": 52
+          },
+          {
+            "position": 10,
+            "team": "New York Red Bulls",
+            "points": 51
+          },
+          {
+            "position": 11,
+            "team": "New England Revolution",
+            "points": 43
+          },
+          {
+            "position": 12,
+            "team": "Toronto FC",
+            "points": 35
+          },
+          {
+            "position": 13,
+            "team": "CF Montréal",
+            "points": 29
+          },
+          {
+            "position": 14,
+            "team": "Atlanta United FC",
+            "points": 28
+          },
+          {
+            "position": 15,
+            "team": "D.C. United",
+            "points": 27
+          },
+          {
+            "position": 16,
+            "team": "San Diego FC",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "LAFC",
+            "points": 60
+          },
+          {
+            "position": 19,
+            "team": "Minnesota United FC",
+            "points": 60
+          },
+          {
+            "position": 20,
+            "team": "Seattle Sounders FC",
+            "points": 59
+          },
+          {
+            "position": 21,
+            "team": "Austin FC",
+            "points": 58
+          },
+          {
+            "position": 22,
+            "team": "Portland Timbers",
+            "points": 49
+          },
+          {
+            "position": 23,
+            "team": "FC Dallas",
+            "points": 44
+          },
+          {
+            "position": 24,
+            "team": "Real Salt Lake",
+            "points": 44
+          },
+          {
+            "position": 25,
+            "team": "Colorado Rapids",
+            "points": 41
+          },
+          {
+            "position": 26,
+            "team": "San Jose Earthquakes",
+            "points": 40
+          },
+          {
+            "position": 27,
+            "team": "Houston Dynamo FC",
+            "points": 40
+          },
+          {
+            "position": 28,
+            "team": "St. Louis CITY SC",
+            "points": 38
+          },
+          {
+            "position": 29,
+            "team": "Sporting Kansas City",
+            "points": 36
+          },
+          {
+            "position": 30,
+            "team": "LA Galaxy",
+            "points": 31
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "692868",
+            "date": "Wednesday, June 19, 2024",
+            "team1": "Austin FC",
+            "score": "1 - 1",
+            "team2": "LAFC",
+            "title": "Austin FC VS LAFC",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/692868/lafc-austin-fc",
+            "source": "Major League Soccer",
+            "stats": {
+              "Possession": [
+                "39.9%",
+                "60.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "3",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "8"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            }
+          },
+          {
+            "gameId": "693026",
+            "date": "Wednesday, September 18, 2024",
+            "team1": "LAFC",
+            "score": "1 - 1",
+            "team2": "Austin FC",
+            "title": "LAFC VS Austin FC",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/693026/austin-fc-lafc",
+            "source": "Major League Soccer",
+            "stats": {
+              "Possession": [
+                "61%",
+                "39%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "726846",
+            "date": "Saturday, March 15, 2025",
+            "team1": "LAFC",
+            "score": "0 - 1",
+            "team2": "Austin FC",
+            "title": "LAFC VS Austin FC",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/726846/austin-fc-lafc",
+            "source": "Major League Soccer",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/16489.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1616.png",
+        "classement_home": 21,
+        "classement_away": 18,
+        "points_classement_home": 58,
+        "points_classement_away": 60,
+        "nom_classement_home": "Austin FC",
+        "nom_classement_away": "LAFC",
+        "country_fr": "USA - Major League Soccer",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.256,
+            "lambda_away": 1.544,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 31.3,
+            "X": 24.52,
+            "V2": 44.18
+          },
+          "double_chance": {
+            "1X": 55.82,
+            "12": 75.48,
+            "X2": 68.7
+          },
+          "over_under": {
+            "plus_de_0.5": 93.58,
+            "moins_de_0.5": 6.42,
+            "plus_de_1.5": 76.12,
+            "moins_de_1.5": 23.88,
+            "plus_de_2.5": 52.85,
+            "moins_de_2.5": 47.15,
+            "plus_de_3.5": 30.48,
+            "moins_de_3.5": 69.52,
+            "plus_de_4.5": 15.1,
+            "moins_de_4.5": 84.9,
+            "plus_de_5.5": 6.32,
+            "moins_de_5.5": 93.68
+          },
+          "btts": {
+            "oui": 55.36,
+            "non": 44.64
+          },
+          "resultat_total": {
+            "V1et+0.5": 31.3,
+            "1Xet+0.5": 49.4,
+            "V2et+0.5": 44.18,
+            "V1et+1.5": 23.43,
+            "1Xet+1.5": 41.53,
+            "V2et+1.5": 34.59,
+            "V1et+2.5": 18.34,
+            "1Xet+2.5": 25.43,
+            "V2et+2.5": 27.42,
+            "V1et+3.5": 9.0,
+            "1Xet+3.5": 16.08,
+            "V2et+3.5": 14.4,
+            "V1et+4.5": 5.24,
+            "1Xet+4.5": 6.73,
+            "V2et+4.5": 8.36,
+            "V1et+5.5": 1.73,
+            "1Xet+5.5": 3.22,
+            "V2et+5.5": 3.1
+          },
+          "scores_probables": {
+            "1-1": 11.02,
+            "0-1": 9.59,
+            "1-2": 9.32,
+            "1-0": 7.87,
+            "2-1": 7.4,
+            "0-2": 7.17,
+            "0-0": 6.42,
+            "2-2": 5.59,
+            "2-0": 5.08,
+            "1-3": 4.56
+          },
+          "buts_moyens_simules": {
+            "home": 1.25,
+            "away": 1.53,
+            "total": 2.78
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Los Angeles FC)  \n**CONFIANCE** : 78 %  \n**SCORES PROBABLES** : 2‑0 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Austin FC (domicile)** : 21ᵉ du classement, 58 pts. Moyenne = 1,50 buts marqués / 1,80 buts encaissés. En 10 matchs à domicile, ils n’ont inscrit que **8 buts** et encaissé **8 buts** – une attaque peu prolifique et une défense qui laisse passer presque 2 buts par match.  \n- **Los Angeles FC (extérieur)** : 18ᵉ du classement, 60 pts. Moyenne = 2,40 buts marqués / 0,90 buts encaissés. En 10 matchs à l’extérieur, ils ont marqué **16 buts** et n’ont concédé que **6 buts** – une attaque très efficace et une défense parmi les meilleures de la ligue.\n\n**2. Impact du facteur domicile/extérieur**  \n- Austin montre une forme très irrégulière à domicile (série L‑L‑W‑W‑D) et ne parvient pas à créer de réelle différence face à des équipes du haut du tableau.  \n- LA FC, au contraire, possède une série à l’extérieur de **W‑W‑W‑D‑W‑D** et ne perd jamais lorsqu’il marque plus d’un but.\n\n**3. Formes récentes et tendances (statistiques détaillées)**  \n- **Austin** : Sur ses 5 derniers matchs à domicile, ils n’ont inscrit que **6 buts** (0‑2‑1‑2‑1) et en ont encaissé **7**. Leurs tirs cadrés restent modestes (moyenne ≈ 3‑4 t/c) et les corners sont faibles, signe d’une création limitée.  \n- **LA FC** : Sur ses 5 derniers déplacements, ils ont inscrit **12 buts** (2‑1‑3‑4‑2) et n’en ont encaissé que **2**. Leurs tirs cadrés sont élevés (≈ 6‑7 t/c) et ils dominent la possession (souvent > 55 %).  \n\n**4. Contexte du championnat**  \n- Les deux équipes évoluent dans la partie basse du tableau, mais LA FC possède **2 pts de plus** que Austin malgré un classement inférieur (18ᵉ vs 21ᵉ). Leur différence de points reflète une meilleure capacité à convertir les matchs en victoires, surtout à l’extérieur.\n\n**5. Confrontations directes**  \n- 3 dernières rencontres : 1‑1 (home), 1‑1 (away), 0‑1 (Austin à domicile).  \n- Malgré un petit avantage historique à domicile, les deux matchs n’ont pas montré de domination claire de LA FC. Cependant, le dernier affrontement (mars 2025) a vu Austin gagner 1‑0, mais cela reste une exception dans un contexte où LA FC a depuis renforcé son attaque (2,4 buts/match) et amélioré sa défense (0,9 buts/match).\n\n**6. Tendances de plus/moins de 2,5 buts**  \n- Moyenne combinée des buts attendus = 1,5 + 2,4 = 3,9 buts.  \n- Historique des 5 derniers matchs de LA FC à l’extérieur : **4** fois plus de 2,5 buts (2‑0, 3‑0, 4‑1, 4‑2).  \n- Austin ne dépasse pas 2,5 buts que **1** fois sur ses 5 derniers matchs à domicile.  \n\n**7. Synthèse**  \nLes indicateurs montrent clairement que LA FC possède une attaque supérieure et une défense plus solide que celles d’Austin. Même si Austin a pu surprendre en mars 2025, la forme actuelle de LA FC (6 victoires consécutives) et ses statistiques à l’extérieur (buts marqués/encaissés) font que la victoire extérieure est la résultante la plus probable. Le nombre total de buts attendus dépasse largement les 2,5, d’où la forte probabilité d’un score de **2‑0** ou **3‑1** en faveur de Los Angeles FC.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire extérieur (Los Angeles FC)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑1"
+      },
+      {
+        "id": 5,
+        "HomeTeam": "Cuiaba",
+        "AwayTeam": "Coritiba",
+        "date": "12 octobre 2025 à 23:30:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Coritiba": 3.18,
+            "Cuiabá": 2.37,
+            "Draw": 2.96
+          },
+          "totals": {
+            "Over": 1.46,
+            "Under": 2.38
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 15,
+          "total_points": 9,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 7,
+          "total_marques": 13,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 17,
+          "total_points": 10,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 3,
+          "total_marques": 12,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "733514",
+            "date": "Wed, 8 Oct",
+            "home_team": "Cuiabá",
+            "away_team": "Novorizontino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733514"
+          },
+          {
+            "game_id": "733506",
+            "date": "Thu, 2 Oct",
+            "home_team": "Paysandu",
+            "away_team": "Cuiabá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.5%",
+                "37.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "20",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733506"
+          },
+          {
+            "game_id": "733491",
+            "date": "Mon, 29 Sep",
+            "home_team": "Cuiabá",
+            "away_team": "Athletic",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.8%",
+                "53.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733491"
+          },
+          {
+            "game_id": "733487",
+            "date": "Wed, 24 Sep",
+            "home_team": "Vila Nova",
+            "away_team": "Cuiabá",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "8"
+              ],
+              "Shot Attempts": [
+                "18",
+                "18"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733487"
+          },
+          {
+            "game_id": "733475",
+            "date": "Mon, 22 Sep",
+            "home_team": "Cuiabá",
+            "away_team": "Chapecoense",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "12",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733475"
+          },
+          {
+            "game_id": "733465",
+            "date": "Sun, 14 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Cuiabá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.3%",
+                "37.7%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733465"
+          },
+          {
+            "game_id": "733455",
+            "date": "Tue, 9 Sep",
+            "home_team": "Cuiabá",
+            "away_team": "CRB",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.3%",
+                "65.7%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733455"
+          },
+          {
+            "game_id": "733446",
+            "date": "Tue, 2 Sep",
+            "home_team": "Ferroviária",
+            "away_team": "Cuiabá",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.7%",
+                "50.3%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "3",
+                "16"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733446"
+          },
+          {
+            "game_id": "733435",
+            "date": "Mon, 25 Aug",
+            "home_team": "Cuiabá",
+            "away_team": "Atlético Goianiense",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44%",
+                "56%"
+              ],
+              "Shots on Goal": [
+                "15",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "13"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733435"
+          },
+          {
+            "game_id": "733421",
+            "date": "Sun, 17 Aug",
+            "home_team": "Athletico Paranaense",
+            "away_team": "Cuiabá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.5%",
+                "26.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733421"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "733513",
+            "date": "Thu, 9 Oct",
+            "home_team": "Coritiba",
+            "away_team": "Atlético Goianiense",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.7%",
+                "46.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733513"
+          },
+          {
+            "game_id": "733508",
+            "date": "Sat, 4 Oct",
+            "home_team": "Coritiba",
+            "away_team": "Botafogo-SP",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.2%",
+                "36.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "25",
+                "3"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733508"
+          },
+          {
+            "game_id": "733498",
+            "date": "Mon, 29 Sep",
+            "home_team": "Avaí",
+            "away_team": "Coritiba",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.7%",
+                "49.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733498"
+          },
+          {
+            "game_id": "733488",
+            "date": "Thu, 25 Sep",
+            "home_team": "Coritiba",
+            "away_team": "Criciúma",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.6%",
+                "35.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733488"
+          },
+          {
+            "game_id": "733470",
+            "date": "Sun, 21 Sep",
+            "home_team": "América Mineiro",
+            "away_team": "Coritiba",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.5%",
+                "62.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733470"
+          },
+          {
+            "game_id": "733463",
+            "date": "Sat, 13 Sep",
+            "home_team": "Coritiba",
+            "away_team": "Goiás",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.9%",
+                "33.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "24",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "7"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733463"
+          },
+          {
+            "game_id": "733453",
+            "date": "Sat, 6 Sep",
+            "home_team": "Coritiba",
+            "away_team": "Ferroviária",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733453"
+          },
+          {
+            "game_id": "733443",
+            "date": "Fri, 29 Aug",
+            "home_team": "Operario PR",
+            "away_team": "Coritiba",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733443"
+          },
+          {
+            "game_id": "733433",
+            "date": "Sat, 23 Aug",
+            "home_team": "Coritiba",
+            "away_team": "Remo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.2%",
+                "42.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733433"
+          },
+          {
+            "game_id": "733424",
+            "date": "Fri, 15 Aug",
+            "home_team": "Novorizontino",
+            "away_team": "Coritiba",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "9"
+              ],
+              "Yellow Cards": [
+                "5",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733424"
+          }
+        ],
+        "classement": {
+          "Cuiaba": {
+            "position": 9,
+            "points": 46
+          },
+          "Coritiba": {
+            "position": 1,
+            "points": 56
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 56
+          },
+          {
+            "position": 2,
+            "team": "Goiás",
+            "points": 52
+          },
+          {
+            "position": 3,
+            "team": "Chapecoense",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Criciúma",
+            "points": 50
+          },
+          {
+            "position": 5,
+            "team": "Novorizontino",
+            "points": 50
+          },
+          {
+            "position": 6,
+            "team": "Athletico Paranaense",
+            "points": 48
+          },
+          {
+            "position": 7,
+            "team": "Remo",
+            "points": 48
+          },
+          {
+            "position": 8,
+            "team": "CRB",
+            "points": 46
+          },
+          {
+            "position": 9,
+            "team": "Cuiabá",
+            "points": 46
+          },
+          {
+            "position": 10,
+            "team": "Atlético Goianiense",
+            "points": 45
+          },
+          {
+            "position": 11,
+            "team": "Avaí",
+            "points": 43
+          },
+          {
+            "position": 12,
+            "team": "Vila Nova",
+            "points": 40
+          },
+          {
+            "position": 13,
+            "team": "Operario PR",
+            "points": 39
+          },
+          {
+            "position": 14,
+            "team": "América Mineiro",
+            "points": 37
+          },
+          {
+            "position": 15,
+            "team": "Athletic",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Ferroviária",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Botafogo-SP",
+            "points": 32
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 31
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 26
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "733334",
+            "date": "Sunday, June 22, 2025",
+            "team1": "Coritiba",
+            "score": "2 - 0",
+            "team2": "Cuiabá",
+            "title": "Coritiba VS Cuiabá",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733334/cuiaba-coritiba",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "48.6%",
+                "51.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1193.png",
+        "logo_away": "https://media.api-sports.io/football/teams/147.png",
+        "classement_home": 9,
+        "classement_away": 1,
+        "points_classement_home": 46,
+        "points_classement_away": 56,
+        "nom_classement_home": "Cuiabá",
+        "nom_classement_away": "Coritiba",
+        "country_fr": "Brazil - Serie B",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.35,
+            "lambda_away": 0.99,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 44.9,
+            "X": 28.12,
+            "V2": 26.98
+          },
+          "double_chance": {
+            "1X": 73.02,
+            "12": 71.89,
+            "X2": 55.1
+          },
+          "over_under": {
+            "plus_de_0.5": 89.94,
+            "moins_de_0.5": 10.06,
+            "plus_de_1.5": 67.24,
+            "moins_de_1.5": 32.76,
+            "plus_de_2.5": 41.01,
+            "moins_de_2.5": 58.99,
+            "plus_de_3.5": 20.7,
+            "moins_de_3.5": 79.3,
+            "plus_de_4.5": 8.74,
+            "moins_de_4.5": 91.26,
+            "plus_de_5.5": 3.18,
+            "moins_de_5.5": 96.82
+          },
+          "btts": {
+            "oui": 46.58,
+            "non": 53.42
+          },
+          "resultat_total": {
+            "V1et+0.5": 44.9,
+            "1Xet+0.5": 62.96,
+            "V2et+0.5": 26.98,
+            "V1et+1.5": 31.26,
+            "1Xet+1.5": 49.32,
+            "V2et+1.5": 17.92,
+            "V1et+2.5": 22.82,
+            "1Xet+2.5": 27.78,
+            "V2et+2.5": 13.23,
+            "V1et+3.5": 10.38,
+            "1Xet+3.5": 15.34,
+            "V2et+3.5": 5.36,
+            "V1et+4.5": 5.28,
+            "1Xet+4.5": 5.94,
+            "V2et+4.5": 2.8,
+            "V1et+5.5": 1.69,
+            "1Xet+5.5": 2.34,
+            "V2et+5.5": 0.84
+          },
+          "scores_probables": {
+            "1-0": 13.64,
+            "1-1": 13.1,
+            "0-0": 10.06,
+            "0-1": 9.06,
+            "2-1": 8.6,
+            "2-0": 8.44,
+            "1-2": 6.38,
+            "0-2": 4.69,
+            "2-2": 4.31,
+            "3-1": 3.9
+          },
+          "buts_moyens_simules": {
+            "home": 1.34,
+            "away": 0.99,
+            "total": 2.32
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 2‑1 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Cuiabá (domicile)** : moyenne 1,30 buts marqués / 1,10 buts encaissés. En 10 matchs à domicile, 6 buts marqués et 4 encaissés, soit une moyenne de 1,0 but marqué et 0,7 but encaissé par rencontre. Bonne solidité défensive à domicile.  \n- **Coritiba (extérieur)** : moyenne 1,20 buts marqués / 0,60 buts encaissés. En 10 déplacements, 4 buts marqués et 3 encaissés, soit 0,4 but marqué et 0,3 but encaissé par match – la défense la plus étanche du championnat. L’attaque est toutefois peu prolifique à l’extérieur.\n\n**2. Impact du facteur domicile/extérieur**  \n- Cuiabá a une série à domicile de L‑W‑W‑W‑D, montrant une capacité à gagner ou au moins à ne pas perdre.  \n- Coritiba, malgré une bonne place (1ᵉ), a connu deux défaites à l’extérieur sur ses 4 derniers déplacements (W‑L‑L‑W). L’absence de constance à l’extérieur augmente la probabilité d’un match ouvert.\n\n**3. Formes récentes et tendances (statistiques détaillées)**  \n- **Cuiabá** : sur les 10 derniers matchs à domicile, 24 buts au total (2,4 buts/match). Les rencontres se terminent souvent 2‑2, 2‑1 ou 1‑0, indiquant une tendance à dépasser les 2,5 buts.  \n- **Coritiba** : sur les 10 derniers déplacements, 18 buts (1,8 buts/match). Leurs victoires à l’extérieur sont souvent 2‑0 ou 2‑1, mais ils ont aussi concédé 2‑0 et 0‑1, montrant que lorsqu’ils marquent, ils le font en petite quantité.\n\n**4. Contexte du championnat**  \n- Coritiba domine le classement (56 pts) et possède la meilleure défense (0,60 buts encaissés/match).  \n- Cuiabá, 9ᵉ avec 46 pts, a une défense légèrement plus perméable (1,10 buts encaissés/match) mais bénéficie d’un avantage maison.  \n- L’écart de points indique que Coritiba ne peut pas se permettre un match à très faible score s’il veut conserver son avance.\n\n**5. Confrontations directes**  \n- Dernière rencontre (22 juin 2025) : Coritiba 2‑0 Cuiabá. Le match a dépassé les 2,5 buts, montrant que les deux équipes sont capables de produire au moins trois buts lorsqu’elles se rencontrent.\n\n**6. Analyse des cotes**  \n- **Over 2.5** à 1,46 → probabilité implicite ≈ 68 %.  \n- **Under 2.5** à 2,38 → probabilité ≈ 42 %.  \n- Les cotes reflètent la tendance des bookmakers à anticiper un match avec plusieurs buts, ce qui concorde avec les moyennes de buts à domicile de Cuiabá (2,4) et les précédents directs.\n\n**7. Synthèse**  \n- La défense de Coritiba est solide, mais elle a déjà concédé 2 buts contre Cuiabá à domicile (défaite 2‑0).  \n- Cuiabá marque régulièrement plus d’un but à domicile et a déjà produit des scores à 2‑2.  \n- La combinaison d’une attaque légèrement supérieure à domicile (1,30) et d’une défense adverse qui laisse passer 0,60 but/match crée une probabilité élevée que le total dépasse 2,5 buts.  \n\n**8. Scores les plus probables**  \n- **2‑1** (Cuiabá gagne avec trois buts au total) – reflète la capacité offensive de Cuiabá et la tendance de Coritiba à marquer au moins un but à l’extérieur.  \n- **2‑0** (Cuiabá gagne, total de trois buts) – correspond aux précédents où Coritiba a été tenue sans réponse à Cuiabá.  \n\nCes deux scores respectent la prédiction « Plus de 2.5 buts » tout en restant cohérents avec les tendances récentes et les statistiques détaillées.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 2‑0"
+      }
+    ]
+  }
+}
