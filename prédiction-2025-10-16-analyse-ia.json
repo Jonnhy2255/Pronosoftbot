@@ -1,0 +1,1130 @@
+{
+  "metadata": {
+    "date_generation": "2025-10-16 02:22:20",
+    "date_matchs": "2025-10-16",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "HomeTeam": "Gremio",
+        "AwayTeam": "Sao Paulo",
+        "date": "16 octobre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 13,
+          "total_points": 8,
+          "serie_domicile": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 6,
+          "total_marques": 12,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 10,
+          "total_points": 3,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 4,
+          "total_marques": 8,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732857",
+            "date": "Sat, Oct 4",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Grêmio",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.1%",
+                "41.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "28",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732857"
+          },
+          {
+            "game_id": "732847",
+            "date": "Wed, Oct 1",
+            "home_team": "Santos",
+            "away_team": "Grêmio",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64%",
+                "36%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "24",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732847"
+          },
+          {
+            "game_id": "732837",
+            "date": "Sun, Sep 28",
+            "home_team": "Grêmio",
+            "away_team": "Vitória",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.3%",
+                "49.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732837"
+          },
+          {
+            "game_id": "732747",
+            "date": "Wed, Sep 24",
+            "home_team": "Grêmio",
+            "away_team": "Botafogo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.9%",
+                "54.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732747"
+          },
+          {
+            "game_id": "732824",
+            "date": "Sun, Sep 21",
+            "home_team": "Internacional",
+            "away_team": "Grêmio",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732824"
+          },
+          {
+            "game_id": "732819",
+            "date": "Sat, Sep 13",
+            "home_team": "Grêmio",
+            "away_team": "Mirassol",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.7%",
+                "44.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732819"
+          },
+          {
+            "game_id": "732808",
+            "date": "Sun, Aug 31",
+            "home_team": "Flamengo",
+            "away_team": "Grêmio",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.9%",
+                "33.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "21",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732808"
+          },
+          {
+            "game_id": "732794",
+            "date": "Sat, Aug 23",
+            "home_team": "Grêmio",
+            "away_team": "Ceará",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.6%",
+                "38.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732794"
+          },
+          {
+            "game_id": "732783",
+            "date": "Sun, Aug 17",
+            "home_team": "Atlético-MG",
+            "away_team": "Grêmio",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.2%",
+                "36.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732783"
+          },
+          {
+            "game_id": "732774",
+            "date": "Sun, Aug 10",
+            "home_team": "Grêmio",
+            "away_team": "Sport",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.1%",
+                "40.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732774"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732856",
+            "date": "Sun, Oct 5",
+            "home_team": "São Paulo",
+            "away_team": "Palmeiras",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.1%",
+                "48.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732856"
+          },
+          {
+            "game_id": "732840",
+            "date": "Thu, Oct 2",
+            "home_team": "Fortaleza",
+            "away_team": "São Paulo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.6%",
+                "25.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732840"
+          },
+          {
+            "game_id": "732839",
+            "date": "Mon, Sep 29",
+            "home_team": "São Paulo",
+            "away_team": "Ceará",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.7%",
+                "39.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732839"
+          },
+          {
+            "game_id": "757082",
+            "date": "Thu, Sep 25",
+            "home_team": "São Paulo",
+            "away_team": "Liga de Quito",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.9%",
+                "25.1%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "1"
+              ],
+              "Shot Attempts": [
+                "26",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "16",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "11"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757082"
+          },
+          {
+            "game_id": "732827",
+            "date": "Sun, Sep 21",
+            "home_team": "Santos",
+            "away_team": "São Paulo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732827"
+          },
+          {
+            "game_id": "757079",
+            "date": "Thu, Sep 18",
+            "home_team": "Liga de Quito",
+            "away_team": "São Paulo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757079"
+          },
+          {
+            "game_id": "732818",
+            "date": "Sun, Sep 14",
+            "home_team": "São Paulo",
+            "away_team": "Botafogo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732818"
+          },
+          {
+            "game_id": "732803",
+            "date": "Sat, Aug 30",
+            "home_team": "Cruzeiro",
+            "away_team": "São Paulo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.8%",
+                "60.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732803"
+          },
+          {
+            "game_id": "732796",
+            "date": "Sun, Aug 24",
+            "home_team": "São Paulo",
+            "away_team": "Atlético-MG",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "10",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732796"
+          },
+          {
+            "game_id": "736527",
+            "date": "Tue, Aug 19",
+            "home_team": "São Paulo",
+            "away_team": "Atlético Nacional",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/736527"
+          }
+        ],
+        "classement": {
+          "Gremio": {
+            "position": 13,
+            "points": 33
+          },
+          "Sao Paulo": {
+            "position": 8,
+            "points": 38
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Palmeiras",
+            "points": 58
+          },
+          {
+            "position": 2,
+            "team": "Flamengo",
+            "points": 55
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 52
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 46
+          },
+          {
+            "position": 5,
+            "team": "Botafogo",
+            "points": 43
+          },
+          {
+            "position": 6,
+            "team": "Bahia",
+            "points": 43
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 38
+          },
+          {
+            "position": 8,
+            "team": "São Paulo",
+            "points": 38
+          },
+          {
+            "position": 9,
+            "team": "Red Bull Bragantino",
+            "points": 36
+          },
+          {
+            "position": 10,
+            "team": "Ceará",
+            "points": 34
+          },
+          {
+            "position": 11,
+            "team": "Vasco da Gama",
+            "points": 33
+          },
+          {
+            "position": 12,
+            "team": "Corinthians",
+            "points": 33
+          },
+          {
+            "position": 13,
+            "team": "Grêmio",
+            "points": 33
+          },
+          {
+            "position": 14,
+            "team": "Atlético-MG",
+            "points": 32
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 32
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 28
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 25
+          },
+          {
+            "position": 18,
+            "team": "Fortaleza",
+            "points": 24
+          },
+          {
+            "position": 19,
+            "team": "Juventude",
+            "points": 23
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 16
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699519",
+            "date": "Wednesday, July 17, 2024",
+            "team1": "São Paulo",
+            "score": "1 - 0",
+            "team2": "Grêmio",
+            "title": "São Paulo VS Grêmio",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699519/gremio-sao-paulo",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "54.5%",
+                "45.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "19"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "7"
+              ]
+            }
+          },
+          {
+            "gameId": "699704",
+            "date": "Sunday, December 1, 2024",
+            "team1": "Grêmio",
+            "score": "2 - 1",
+            "team2": "São Paulo",
+            "title": "Grêmio VS São Paulo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699704/sao-paulo-gremio",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "38.6%",
+                "61.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "10",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "732676",
+            "date": "Saturday, May 17, 2025",
+            "team1": "São Paulo",
+            "score": "2 - 1",
+            "team2": "Grêmio",
+            "title": "São Paulo VS Grêmio",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732676/gremio-sao-paulo",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "60.2%",
+                "39.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "3"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/130.png",
+        "logo_away": "https://media.api-sports.io/football/teams/126.png",
+        "classement_home": 13,
+        "classement_away": 8,
+        "points_classement_home": 33,
+        "points_classement_away": 38,
+        "nom_classement_home": "Grêmio",
+        "nom_classement_away": "São Paulo",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.363,
+            "lambda_away": 0.984,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 45.46,
+            "X": 27.12,
+            "V2": 27.42
+          },
+          "double_chance": {
+            "1X": 72.58,
+            "12": 72.88,
+            "X2": 54.54
+          },
+          "over_under": {
+            "plus_de_0.5": 91.0,
+            "moins_de_0.5": 9.01,
+            "plus_de_1.5": 68.64,
+            "moins_de_1.5": 31.36,
+            "plus_de_2.5": 42.08,
+            "moins_de_2.5": 57.92,
+            "plus_de_3.5": 21.14,
+            "moins_de_3.5": 78.86,
+            "plus_de_4.5": 8.86,
+            "moins_de_4.5": 91.14,
+            "plus_de_5.5": 3.2,
+            "moins_de_5.5": 96.8
+          },
+          "btts": {
+            "oui": 46.99,
+            "non": 53.01
+          },
+          "resultat_total": {
+            "V1et+0.5": 45.46,
+            "1Xet+0.5": 63.58,
+            "V2et+0.5": 27.42,
+            "V1et+1.5": 32.46,
+            "1Xet+1.5": 50.57,
+            "V2et+1.5": 18.07,
+            "V1et+2.5": 23.56,
+            "1Xet+2.5": 28.79,
+            "V2et+2.5": 13.28,
+            "V1et+3.5": 10.48,
+            "1Xet+3.5": 15.72,
+            "V2et+3.5": 5.42,
+            "V1et+4.5": 5.31,
+            "1Xet+4.5": 6.01,
+            "V2et+4.5": 2.84,
+            "V1et+5.5": 1.76,
+            "1Xet+5.5": 2.46,
+            "V2et+5.5": 0.74
+          },
+          "scores_probables": {
+            "1-0": 13.01,
+            "1-1": 12.88,
+            "0-1": 9.35,
+            "0-0": 9.01,
+            "2-0": 8.9,
+            "2-1": 8.86,
+            "1-2": 6.27,
+            "0-2": 4.78,
+            "2-2": 4.54,
+            "3-0": 4.2
+          },
+          "buts_moyens_simules": {
+            "home": 1.37,
+            "away": 1.0,
+            "total": 2.37
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 72 %  \n**SCORES PROBABLES** : 0‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Gremio (domicile)** : moyenne 1,20 bt/match marqués, 1,00 bt concédés. En 10 matchs à domicile, il n’a inscrit que **4 buts** (0,40 bt/match) et n’en a encaissé que **4** (0,40 bt/match). La possession est généralement élevée (≈ 55‑65 %) mais les tirs cadrés restent modestes (≈ 4‑6 t/c).  \n- **São Paulo (extérieur)** : moyenne 0,80 bt/match marqués, 1,00 bt concédés. En 10 déplacements, il n’a inscrit que **2 buts** (0,20 bt/match) et a encaissé **4** (0,40 bt/match). La possession à l’extérieur est souvent inférieure (≈ 45‑55 %) et les tirs cadrés sont très faibles (≈ 2‑3 t/c).\n\n**2. Impact du facteur domicile/extérieur**  \n- Gremio montre une légère supériorité à domicile (meilleure possession, plus de tirs) mais reste très peu prolifique.  \n- São Paulo peine à marquer à l’extérieur, même contre des équipes moins bien classées.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Gremio** (5 derniers à domicile) : 1‑0, 1‑1, 3‑1, 1‑1, 0‑1 → 2 victoires, 2 nuls, 1 défaite, **4 buts marqués**, **4 encaissés**. Les tirs cadrés à domicile oscillent entre 4 et 7, avec un taux de conversion très bas.  \n- **São Paulo** (4 derniers à l’extérieur) : 2‑0 (victoire), 0‑1 (défaite), 0‑1 (défaite), 0‑1 (défaite) → 1 victoire, 3 défaites, **2 buts marqués**, **4 encaissés**. Les tirs cadrés à l’extérieur sont souvent ≤ 3, et le nombre de corners est également limité.\n\n**4. Contexte du championnat**  \n- Classement : Gremio 13ᵉ (33 pts) vs São Paulo 8ᵉ (38 pts). São Paulo lutte pour les places continentales, mais son manque de buts à l’extérieur le rend vulnérable.  \n- Les équipes du milieu de tableau (13‑15) affichent généralement des matchs à faible score (moyenne < 2,0 bt).\n\n**5. Confrontations directes**  \n- 3 dernières rencontres : São Paulo 1‑0, Gremio 2‑1, São Paulo 2‑1. Total : 5 bt marqués, 2 bt encaissés → **moyenne 2,33 bt/match**, légèrement au‑dessus de la moyenne habituelle, mais les deux victoires de São Paulo ont été obtenues avec un seul but d’écart.  \n\n**6. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Gremio domine à domicile (≈ 60 % en moyenne), São Paulo est souvent en dessous de 50 % à l’extérieur.  \n- **Tirs cadrés** : Gremio à domicile : 4‑7 t/c ; São Paulo à l’extérieur : 2‑3 t/c.  \n- **Corners** : Gremio obtient en moyenne 4‑6 corners à domicile, São Paulo seulement 2‑3 à l’extérieur.  \n- **Cartons** : Pas d’impact majeur sur le score attendu.  \n\nCes indicateurs montrent que les deux équipes créent peu d’occasions nettes et que les chances de convertir sont faibles.\n\n**7. Synthèse**  \n- Le match se jouera probablement autour d’une possession dominante de Gremio mais avec très peu de tirs dangereux.  \n- São Paulo, malgré un léger avantage historique, a du mal à marquer à l’extérieur et ne créera pas suffisamment d’occasions pour renverser la tendance.  \n- Historique des 10 derniers matchs à domicile de Gremio et à l’extérieur de São Paulo montre une moyenne combinée de **0,6 bt/match** pour chaque équipe, ce qui conduit naturellement à un total inférieur à 2,5 buts.\n\n**Conclusion** : La combinaison d’une défense solide (≈ 0,4 bt concédés/match) et d’une attaque très peu efficace (≤ 0,4 bt marqués/match) pour les deux équipes rend le scénario « moins de 2,5 buts » le plus probable. Les scores les plus plausibles sont un **nul 0‑0** (si la défense de Gremio tient) ou une **victoire serrée 1‑0** en faveur de Gremio grâce à son avantage de terrain.",
+        "confiance_pourcentage": 72,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 1‑0"
+      }
+    ]
+  }
+}
