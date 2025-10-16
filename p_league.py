@@ -1,6 +1,13 @@
+import requests
+from bs4 import BeautifulSoup
 import json
+from datetime import datetime, timedelta, timezone
+import re
 import os
-from datetime import datetime, timezone
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0"
+}
 
 LEAGUES = {
     "Premier League": {"code": "eng.1", "json": "p_league.json"},
@@ -34,47 +41,88 @@ LEAGUES = {
     "Venezuela - Primera Division": {"code": "ven.1", "json": "Venezuela_Primera_Division.json"}
 }
 
-# Convertir les dates type "Tuesday, October 14, 2025"
-def parse_date(date_str):
-    try:
-        return datetime.strptime(date_str, "%A, %B %d, %Y").replace(tzinfo=timezone.utc)
-    except ValueError:
-        return None
-
-# ✅ On rend tout UTC
-start_date = datetime.strptime("Saturday, October 11, 2025", "%A, %B %d, %Y").replace(tzinfo=timezone.utc)
-end_date = datetime.now(timezone.utc)
-
-print(f"🧹 Suppression des matchs du {start_date.strftime('%d %B %Y')} au {end_date.strftime('%d %B %Y')}...\n")
+# 🗓️ Définir la plage : du 11 octobre à hier
+start_date = datetime(2025, 10, 11, tzinfo=timezone.utc)
+end_date = datetime.now(timezone.utc) - timedelta(days=1)
 
 for league_name, league_info in LEAGUES.items():
-    json_file = league_info["json"]
+    BASE_URL = f"https://www.espn.com/soccer/schedule/_/date/{{date}}/league/{league_info['code']}"
+    JSON_FILE = league_info["json"]
 
-    if not os.path.exists(json_file):
-        print(f"⚠️ {league_name} : fichier {json_file} introuvable.")
-        continue
+    # Charger les anciens matchs
+    if os.path.exists(JSON_FILE):
+        with open(JSON_FILE, "r", encoding="utf-8") as f:
+            existing_matches = {match["gameId"]: match for match in json.load(f)}
+    else:
+        existing_matches = {}
 
-    with open(json_file, "r", encoding="utf-8") as f:
-        matches = json.load(f)
+    new_matches_total = 0
 
-    before_count = len(matches)
-    filtered_matches = []
+    # 🔁 Boucle sur chaque jour de la période
+    current_date = start_date
+    while current_date <= end_date:
+        date_str = current_date.strftime("%Y%m%d")
+        print(f"\n📅 Récupération des matchs du {date_str} pour {league_name}...")
 
-    for match in matches:
-        match_date = parse_date(match.get("date", ""))
-        if not match_date:
-            filtered_matches.append(match)
+        try:
+            res = requests.get(BASE_URL.format(date=date_str), headers=HEADERS)
+            soup = BeautifulSoup(res.content, "html.parser")
+        except Exception as e:
+            print(f"⚠️ Erreur de requête pour {league_name}: {e}")
+            current_date += timedelta(days=1)
             continue
 
-        # ❌ Supprimer les matchs dans la plage du 11 octobre → aujourd’hui
-        if not (start_date <= match_date <= end_date):
-            filtered_matches.append(match)
+        tables = soup.select("div.ResponsiveTable")
+        for table in tables:
+            date_title_tag = table.select_one("div.Table__Title")
+            date_text = date_title_tag.text.strip() if date_title_tag else date_str
 
-    after_count = len(filtered_matches)
+            rows = table.select("tbody > tr.Table__TR")
+            for row in rows:
+                try:
+                    away_team_tag = row.select_one("td.events__col span.Table__Team.away a.AnchorLink:last-child")
+                    home_team_tag = row.select_one("td.colspan__col span.Table__Team a.AnchorLink:last-child")
+                    score_tag = row.select_one("td.colspan__col a.AnchorLink.at")
 
-    with open(json_file, "w", encoding="utf-8") as f:
-        json.dump(filtered_matches, f, indent=2, ensure_ascii=False)
+                    if not away_team_tag or not home_team_tag or not score_tag:
+                        continue
 
-    print(f"✅ {league_name} : {before_count - after_count} matchs supprimés, {after_count} restants.")
+                    team1 = away_team_tag.text.strip()
+                    team2 = home_team_tag.text.strip()
+                    score = score_tag.text.strip()
 
-print("\n🎯 Nettoyage global terminé (UTC aligné).")
+                    if "USMNT" in team1 or "USWNT" in team1 or "USMNT" in team2 or "USWNT" in team2:
+                        continue
+                    if score.lower() == "v":
+                        continue
+
+                    match_url = score_tag["href"]
+                    match_id_match = re.search(r"gameId/(\d+)", match_url)
+                    if not match_id_match:
+                        continue
+
+                    game_id = match_id_match.group(1)
+                    if game_id not in existing_matches:
+                        match_data = {
+                            "gameId": game_id,
+                            "date": date_text,
+                            "team1": team1,
+                            "score": score,
+                            "team2": team2,
+                            "title": f"{team1} VS {team2}",
+                            "match_url": "https://www.espn.com" + match_url
+                        }
+                        existing_matches[game_id] = match_data
+                        new_matches_total += 1
+
+                except Exception as e:
+                    print(f"⚠️ Erreur lors du parsing pour {league_name} : {e}")
+                    continue
+
+        current_date += timedelta(days=1)
+
+    # Sauvegarde mise à jour
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(list(existing_matches.values()), f, indent=2, ensure_ascii=False)
+
+    print(f"✅ {league_name} mise à jour : {len(existing_matches)} matchs au total, +{new_matches_total} ajoutés.")
