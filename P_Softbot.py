@@ -2172,7 +2172,6 @@ teams_urls = {
         }
     # Ajoutez d'autres équipes si besoin
 }
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -3104,8 +3103,11 @@ def get_today_matches_filtered():
             if heure < 8:
                 continue
 
+            # --- AJOUT : récupère fixture_id ici ---
+            fixture_id = match['fixture'].get('id')
+
             if league_id in allowed_league_ids:
-                print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time}")
+                print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time} (fixture_id: {fixture_id})")
                 # Utiliser le mapping pour les noms ESPN
                 home_espn = get_espn_name(home_api)
                 away_espn = get_espn_name(away_api)
@@ -3116,11 +3118,41 @@ def get_today_matches_filtered():
                     team2_stats = process_team(away_api, return_data=True)
                     if team1_stats: team1_stats['nom'] = home_espn
                     if team2_stats: team2_stats['nom'] = away_espn
+                    # Construire un objet minimal du match principal incluant fixture_id
+                    match_obj_principal = {
+                        "fixture_id": fixture_id,
+                        "league": league,
+                        "country": country,
+                        "date": date,
+                        "time": time,
+                        "home_api": home_api,
+                        "away_api": away_api,
+                        "home_espn": home_espn,
+                        "away_espn": away_espn,
+                        "logo_home": logo_home,
+                        "logo_away": logo_away
+                    }
                     compare_teams_basic_stats(
                         team1_stats, team2_stats, home_api, away_api, date, time, league, country,
                         logo_home=logo_home, logo_away=logo_away, résultats=résultats
                     )
                 else:
+                    # Si une ou les deux équipes ne sont pas dans teams_urls, on essaie tout de même de stocker le match principal avec fixture_id
+                    match_obj_minimal = {
+                        "fixture_id": fixture_id,
+                        "league": league,
+                        "country": country,
+                        "date": date,
+                        "time": time,
+                        "home_api": home_api,
+                        "away_api": away_api,
+                        "home_espn": get_espn_name(home_api),
+                        "away_espn": get_espn_name(away_api),
+                        "logo_home": logo_home,
+                        "logo_away": logo_away,
+                        "note": "Analyse automatique non lancée (team URLs manquantes pour l'une des équipes)"
+                    }
+                    résultats.append(match_obj_minimal)
                     if home_espn in teams_urls:
                         process_team(home_api)
                     else:
@@ -3414,30 +3446,8 @@ def compare_teams_basic_stats(
     print(f"✈️ Série extérieur ({name2}) : {'-'.join(t2.get('serie_exterieur', []))}")
 
     # ✅ CRÉATION DE L'OBJET AVEC NOUVELLE STRUCTURE DES MATCHS + STATS DÉTAILLÉES
-    # Tentative de récupération du fixture id depuis les derniers matchs fournis si possible
-    fixture_id_candidate = None
-    # Si les matchs récents contiennent un game_id pour le match à venir (rare), on l'utilise ;
-    # sinon on conserve l'ancien comportement incrémental.
-    try:
-        # Rechercher un fixture id dans les données passées (ex. si last_matches_home contient l'entrée du même fixture)
-        # On parcourt last matches home/away pour trouver un match possédant un "game_id" correspondant à la date/teams.
-        for m in t1.get('matches', []) + t2.get('matches', []):
-            # Si l'objet match contient une clé 'game_id' et qu'elle semble numérique, on l'utilise comme candidate
-            gid = m.get('game_id')
-            if gid and isinstance(gid, (str, int)) and str(gid).isdigit():
-                fixture_id_candidate = int(gid)
-                break
-    except Exception:
-        fixture_id_candidate = None
-
-    # Si aucun fixture_id trouvé, on utilisera l'id auto-incrémental
-    if fixture_id_candidate:
-        prediction_id = fixture_id_candidate
-    else:
-        prediction_id = len(PREDICTIONS) + 1
-
     prediction_obj = {
-        "id": prediction_id,
+        "id": len(PREDICTIONS) + 1,
         "HomeTeam": name1,
         "AwayTeam": name2,
         "date": format_date_fr(match_date, match_time),
@@ -3499,12 +3509,7 @@ def compare_teams_basic_stats(
         "points_classement_away": pts_away,
         "nom_classement_home": nom_classement_home,
         "nom_classement_away": nom_classement_away,
-        "country_fr": f"{country} - {league}",
-        # ---------- CHAMPS DEMANDÉS : quatre champs vides ----------
-        "verdict": "",
-        "score": "",
-        "half-time": "",
-        "full-time": ""
+        "country_fr": f"{country} - {league}"
     }
 
     # 🎲 NOUVEAU : Calcul des probabilités statistiques Monte-Carlo (garde les données mais ne les inclut PAS dans le prompt)
@@ -3607,7 +3612,7 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
                 "🎯 Scores exacts les plus probables calculés statistiquement",
                 "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
                 "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
-                "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+                "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
                 "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
             ]
         },
@@ -3709,5 +3714,7 @@ def main():
     print(f"   ❌ ✨ MODIFICATION v8.3 : IA ne prédit plus corners et tirs cadrés (champs conservés dans structure)")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v8.3 MODIFIÉ - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enric
+    print("\n✨ Merci d'avoir utilisé le script v8.3 MODIFIÉ - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + confiance extraite + scores + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (CALCULÉES MAIS HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ !")
 
+if __name__ == "__main__":
+    main()
