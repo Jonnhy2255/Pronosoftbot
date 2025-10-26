@@ -2172,6 +2172,7 @@ teams_urls = {
         }
     # Ajoutez d'autres équipes si besoin
 }
+
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -3091,6 +3092,9 @@ def get_today_matches_filtered():
         print(f"\n📅 Matchs du jour ({today}) :\n")
         for match in data.get("response", []):
             league_id = match['league']['id']
+            # AJOUT : récupération fixture_id
+            fixture_id = match['fixture']['id']
+
             league = match['league']['name']
             country = match['league']['country']
             home_api = match['teams']['home']['name']
@@ -3103,56 +3107,36 @@ def get_today_matches_filtered():
             if heure < 8:
                 continue
 
-            # --- AJOUT : récupère fixture_id ici ---
-            fixture_id = match['fixture'].get('id')
-
             if league_id in allowed_league_ids:
-                print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time} (fixture_id: {fixture_id})")
+                print(f"🏆 [{country}] {league} : {home_api} vs {away_api} à {time}")
                 # Utiliser le mapping pour les noms ESPN
                 home_espn = get_espn_name(home_api)
                 away_espn = get_espn_name(away_api)
                 
+                # AJOUT : inclusion des champs demandés dans l'objet résultats
+                résultats.append({
+                    "fixture_id": fixture_id,
+                    "country": country,
+                    "league": league,
+                    "home_team": home_api,
+                    "away_team": away_api,
+                    "date": date,
+                    "time": time,
+                    "logo_home": logo_home,
+                    "logo_away": logo_away
+                })
+
                 if home_espn in teams_urls and away_espn in teams_urls:
                     print(f"\n🔎 Analyse automatique pour : {home_espn} & {away_espn}")
                     team1_stats = process_team(home_api, return_data=True)
                     team2_stats = process_team(away_api, return_data=True)
                     if team1_stats: team1_stats['nom'] = home_espn
                     if team2_stats: team2_stats['nom'] = away_espn
-                    # Construire un objet minimal du match principal incluant fixture_id
-                    match_obj_principal = {
-                        "fixture_id": fixture_id,
-                        "league": league,
-                        "country": country,
-                        "date": date,
-                        "time": time,
-                        "home_api": home_api,
-                        "away_api": away_api,
-                        "home_espn": home_espn,
-                        "away_espn": away_espn,
-                        "logo_home": logo_home,
-                        "logo_away": logo_away
-                    }
                     compare_teams_basic_stats(
                         team1_stats, team2_stats, home_api, away_api, date, time, league, country,
                         logo_home=logo_home, logo_away=logo_away, résultats=résultats
                     )
                 else:
-                    # Si une ou les deux équipes ne sont pas dans teams_urls, on essaie tout de même de stocker le match principal avec fixture_id
-                    match_obj_minimal = {
-                        "fixture_id": fixture_id,
-                        "league": league,
-                        "country": country,
-                        "date": date,
-                        "time": time,
-                        "home_api": home_api,
-                        "away_api": away_api,
-                        "home_espn": get_espn_name(home_api),
-                        "away_espn": get_espn_name(away_api),
-                        "logo_home": logo_home,
-                        "logo_away": logo_away,
-                        "note": "Analyse automatique non lancée (team URLs manquantes pour l'une des équipes)"
-                    }
-                    résultats.append(match_obj_minimal)
                     if home_espn in teams_urls:
                         process_team(home_api)
                     else:
@@ -3580,57 +3564,17 @@ def process_team(team_name, return_data=False):
     print("\n" + "-" * 60 + "\n")
     return data if return_data else None
 
-# ✅ MODIFIÉ : Fonction de sauvegarde avec NOUVEAU nom de fichier simple
-def sauvegarder_stats_brutes_json(predictions_simples, date_str):
-    total_predictions = len(predictions_simples)
-
-    for p in predictions_simples:
-        p['country_fr'] = p['league']
-
-    data_complete = {
-        "metadata": {
-            "date_generation": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            "date_matchs": date_str,
-            "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
-            "total_predictions": total_predictions,
-            "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
-            "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
-            "ia_model": "deepseek-r1-distill-llama-70b",
-            "groq_keys_count": len(groq_keys),
-            "monte_carlo": {
-                "enabled": True,
-                "iterations": 20000,
-                "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
-                "probabilites_calculees": ["1x2", "double_chance", "over_under", "btts", "resultat_total", "scores_probables"],
-                "inclus_dans_prompt_ia": False
-            },
-            "nouveautes_v8_3_modifiees": [
-                "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
-                "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
-                "🆚 Ajustement automatique selon les confrontations H2H",
-                "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
-                "🎯 Scores exacts les plus probables calculés statistiquement",
-                "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
-                "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
-                "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
-                "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
-            ]
-        },
-        "statistiques_brutes_avec_ia_hors_montecarlo": {
-            "count": len(predictions_simples),
-            "details": predictions_simples
-        }
-    }
-    
-    # ✅ NOUVEAU NOM DE FICHIER SIMPLE COMME DEMANDÉ
-    nom_fichier = f"prédiction-{date_str}-analyse-ia.json"
-    
-    with open(nom_fichier, "w", encoding="utf-8") as f:
-        json.dump(data_complete, f, ensure_ascii=False, indent=2)
-    print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie sauvegardées dans : {nom_fichier}")
-    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H enrichi avec stats + nouvelles fonctionnalités + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (hors prompt IA)")
-    
-    return nom_fichier
+# ✅ MODIFIÉ : Fonction de sauvegarde simplifiée pour écrire exactement la liste résultats
+def sauvegarder_stats_brutes_json(résultats, today):
+    # Écrire tous les résultats reçus tels quels dans un fichier JSON
+    filename = f"matchs_{today}.json"
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(résultats, f, ensure_ascii=False, indent=2)
+        print(f"✅ JSON sauvegardé : {filename}")
+    except Exception as e:
+        print(f"❌ Erreur lors de la sauvegarde du JSON : {e}")
+    return filename
 
 def save_failed_teams_json(failed_teams, date_str):
     chemin = f"teams_failed_{date_str}.json"
