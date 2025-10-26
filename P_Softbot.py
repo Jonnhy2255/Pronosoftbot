@@ -3414,8 +3414,30 @@ def compare_teams_basic_stats(
     print(f"✈️ Série extérieur ({name2}) : {'-'.join(t2.get('serie_exterieur', []))}")
 
     # ✅ CRÉATION DE L'OBJET AVEC NOUVELLE STRUCTURE DES MATCHS + STATS DÉTAILLÉES
+    # Tentative de récupération du fixture id depuis les derniers matchs fournis si possible
+    fixture_id_candidate = None
+    # Si les matchs récents contiennent un game_id pour le match à venir (rare), on l'utilise ;
+    # sinon on conserve l'ancien comportement incrémental.
+    try:
+        # Rechercher un fixture id dans les données passées (ex. si last_matches_home contient l'entrée du même fixture)
+        # On parcourt last matches home/away pour trouver un match possédant un "game_id" correspondant à la date/teams.
+        for m in t1.get('matches', []) + t2.get('matches', []):
+            # Si l'objet match contient une clé 'game_id' et qu'elle semble numérique, on l'utilise comme candidate
+            gid = m.get('game_id')
+            if gid and isinstance(gid, (str, int)) and str(gid).isdigit():
+                fixture_id_candidate = int(gid)
+                break
+    except Exception:
+        fixture_id_candidate = None
+
+    # Si aucun fixture_id trouvé, on utilisera l'id auto-incrémental
+    if fixture_id_candidate:
+        prediction_id = fixture_id_candidate
+    else:
+        prediction_id = len(PREDICTIONS) + 1
+
     prediction_obj = {
-        "id": len(PREDICTIONS) + 1,
+        "id": prediction_id,
         "HomeTeam": name1,
         "AwayTeam": name2,
         "date": format_date_fr(match_date, match_time),
@@ -3477,7 +3499,12 @@ def compare_teams_basic_stats(
         "points_classement_away": pts_away,
         "nom_classement_home": nom_classement_home,
         "nom_classement_away": nom_classement_away,
-        "country_fr": f"{country} - {league}"
+        "country_fr": f"{country} - {league}",
+        # ---------- CHAMPS DEMANDÉS : quatre champs vides ----------
+        "verdict": "",
+        "score": "",
+        "half-time": "",
+        "full-time": ""
     }
 
     # 🎲 NOUVEAU : Calcul des probabilités statistiques Monte-Carlo (garde les données mais ne les inclut PAS dans le prompt)
@@ -3580,7 +3607,7 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
                 "🎯 Scores exacts les plus probables calculés statistiquement",
                 "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
                 "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
-                "📁 MODIFICIATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+                "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
                 "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
             ]
         },
@@ -3682,7 +3709,5 @@ def main():
     print(f"   ❌ ✨ MODIFICATION v8.3 : IA ne prédit plus corners et tirs cadrés (champs conservés dans structure)")
     if IGNORED_ZERO_FORM_TEAMS:
         print(f"   🚫 {len(set(IGNORED_ZERO_FORM_TEAMS))} équipes ignorées pour forme nulle")
-    print("\n✨ Merci d'avoir utilisé le script v8.3 MODIFIÉ - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enrichi avec stats + confiance extraite + scores + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (CALCULÉES MAIS HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ !")
+    print("\n✨ Merci d'avoir utilisé le script v8.3 MODIFIÉ - Statistiques brutes complètes avec cotes et IA DeepSeek enrichie + retry + H2H enric
 
-if __name__ == "__main__":
-    main()
