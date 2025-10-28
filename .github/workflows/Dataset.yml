@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: 3.12
 
-      - name: Install requirements
-        run: pip install -r requirements.txt || true
-
-      - name: Run consolidation
-        run: python data.py
+      - name: Run consolidation script
+        run: |
+          echo "🔄 Démarrage de la consolidation"
+          python data.py >> consolidation.log 2>&1
+          echo "✅ Consolidation terminée"
