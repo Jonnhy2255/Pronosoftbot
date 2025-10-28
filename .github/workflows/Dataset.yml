@@ -1,0 +1,25 @@
+name: Consolidation quotidienne des prédictions
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # Tous les jours à 5h UTC
+  workflow_dispatch:       # Permet aussi un déclenchement manuel
+
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install requirements
+        run: pip install -r requirements.txt || true
+
+      - name: Run consolidation
+        run: python data.py
