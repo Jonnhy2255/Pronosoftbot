@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Script de consolidation des fichiers de prédiction quotidiens
-Récupère le fichier d'hier, nettoie les données et les ajoute à Analysesdata.json
-"""
-
 import json
 import os
 from datetime import datetime, timedelta
