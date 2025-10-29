@@ -3,10 +3,10 @@ name: Prepare RNN sequences and commit results
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * *'  # Exécution automatique chaque jour à 03h UTC
 
 permissions:
-  contents: write  # autorise le push dans le dépôt
+  contents: write  # Autorise le push vers le dépôt
 
 jobs:
   prepare:
@@ -25,13 +25,13 @@ jobs:
         run: |
           pip install numpy scikit-learn tensorflow
 
-      - name: Run RNN script
+      - name: Run RNN data preparation
         run: python RNN.py
 
       - name: Commit and push generated files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add hist_seq_X.npy hist_seq_y.npy hist_seq_feature_names.txt
+          git add hist_seq_X.npy hist_seq_y.npy hist_seq_ids.npy hist_seq_feature_names.txt || true
           git commit -m "Update RNN sequences [auto]" || echo "No changes to commit"
-          git push
+          git push || echo "Push skipped"
