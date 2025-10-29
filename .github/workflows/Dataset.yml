@@ -26,8 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      # Exécuter le script data.py
+      # Exécuter le script data.py avec la clé API injectée
       - name: Run data.py
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           echo "🔄 Début du script data.py"
           python data.py
@@ -56,4 +58,3 @@ jobs:
             echo "✅ Fichier Analysesdata.json mis à jour et poussé."
           else
             echo "ℹ️ Aucune modification à pousser."
-          fi
