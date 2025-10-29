@@ -32,6 +32,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add seq_output_X.npy seq_output_y_1x2_fulltime.npy
-          git commit -m "Update RNN sequences [auto]" || echo "No changes to commit"
-          git push
+          git add hist_seq_X.npy hist_seq_y.npy hist_seq_feature_names.txt
+git commit -m "Update RNN sequences [auto]" || echo "No changes to commit"
+git push
