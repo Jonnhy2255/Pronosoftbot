@@ -2,7 +2,7 @@ name: Prediction IA journalière
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Tous les jours à 1h du matin UTC
+    - cron: '0 1 * * *'  # Tous les jours à 1h du matin UTC
   workflow_dispatch:
 
 jobs:
