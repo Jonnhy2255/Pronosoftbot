@@ -2,7 +2,7 @@ name: Consolidation des prédictions football
 
 on:
   schedule:
-    - cron: "0 5 * * *"  # Tous les jours à 5h UTC
+    - cron: "0 2 * * *"  # Tous les jours à 5h UTC
   workflow_dispatch:      # Permet l'exécution manuelle
 
 jobs:
