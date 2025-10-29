@@ -5,9 +5,11 @@ from pathlib import Path
 from typing import Dict, List
 import requests
 
+
 class FootballDataConsolidator:
     """Classe pour consolider et nettoyer les données de matchs avec résultats réels"""
 
+    # Champs à conserver pour l'entraînement du RNN
     FIELDS_TO_KEEP = {
         'match_info': ['id', 'fixture_id', 'HomeTeam', 'AwayTeam', 'date', 'league'],
         'stats': [
@@ -26,7 +28,7 @@ class FootballDataConsolidator:
     def __init__(self, source_dir: str = ".", output_file: str = "Analysesdata.json", api_key: str = ""):
         self.source_dir = Path(source_dir)
         self.output_file = Path(output_file)
-        self.api_key = api_key
+        self.api_key = api_key  # Clé API pour récupérer scores réels
 
     def get_yesterday_filename(self) -> str:
         yesterday = datetime.now() - timedelta(days=1)
@@ -68,14 +70,15 @@ class FootballDataConsolidator:
                 home_score, away_score = map(int, score.split(' - '))
             except (ValueError, AttributeError):
                 home_score, away_score = 0, 0
-            cleaned_matches.append({
+            cleaned_match = {
                 'date': match.get('date', ''),
                 'home_team': match.get('home_team', ''),
                 'away_team': match.get('away_team', ''),
                 'score_home': home_score,
                 'score_away': away_score,
                 'stats': self.clean_match_stats(match.get('stats', {}))
-            })
+            }
+            cleaned_matches.append(cleaned_match)
         return cleaned_matches
 
     def clean_h2h(self, h2h_matches: List[Dict]) -> List[Dict]:
@@ -109,36 +112,72 @@ class FootballDataConsolidator:
         }
 
     def fetch_scores_from_api(self, fixture_id: int) -> dict:
-        """Récupère tous les matchs d'hier et filtre par fixture_id"""
+        """Récupère les scores réels à partir de l'API Football (format similaire à 1.2.py)."""
+        # Si pas de clé, renvoyer des scores neutres
         if not self.api_key:
-            return {"halftime": "0-0", "fulltime": "0-0"}
-        try:
-            yesterday = (datetime.utcnow() - timedelta(days=1)).strftime('%Y-%m-%d')
-            url = f"https://v3.football.api-sports.io/fixtures?date={yesterday}"
-            headers = {"x-apisports-key": self.api_key}
-            response = requests.get(url, headers=headers, timeout=10)
-            data = response.json().get("response", [])
-
-            # Filtrage pour le fixture_id
-            match = next((m for m in data if m.get("fixture", {}).get("id") == fixture_id), None)
-            if not match:
-                return {"halftime": "0-0", "fulltime": "0-0"}
-
-            scores = match.get("score", {})
             return {
-                "halftime": f"{scores.get('halftime', {}).get('home',0)}-{scores.get('halftime', {}).get('away',0)}",
-                "fulltime": f"{scores.get('fulltime', {}).get('home',0)}-{scores.get('fulltime', {}).get('away',0)}"
+                "halftime": {"home": 0, "away": 0},
+                "fulltime": {"home": 0, "away": 0},
+                "status": ""
             }
-        except Exception as e:
-            print(f"⚠️ Erreur API pour fixture {fixture_id}: {e}")
-            return {"halftime": "0-0", "fulltime": "0-0"}
+
+        url = f"https://v3.football.api-sports.io/fixtures?id={fixture_id}"
+        headers = {"x-apisports-key": self.api_key}
+        try:
+            response = requests.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            responses = data.get("response")
+            if not responses:
+                # Pas de fixture trouvée
+                return {
+                    "halftime": {"home": 0, "away": 0},
+                    "fulltime": {"home": 0, "away": 0},
+                    "status": ""
+                }
+
+            first = responses[0]
+            fixture = first.get("fixture", {})
+            scores = first.get("score", {})
+
+            # Extraction sûre des scores (entiers)
+            ht_home = scores.get("halftime", {}).get("home", 0) or 0
+            ht_away = scores.get("halftime", {}).get("away", 0) or 0
+            ft_home = scores.get("fulltime", {}).get("home", 0) or 0
+            ft_away = scores.get("fulltime", {}).get("away", 0) or 0
+
+            status = fixture.get("status", {}).get("long", "")
+
+            return {
+                "halftime": {"home": int(ht_home), "away": int(ht_away)},
+                "fulltime": {"home": int(ft_home), "away": int(ft_away)},
+                "status": status
+            }
+
+        except requests.exceptions.RequestException as e:
+            print(f"❌ Erreur API pour fixture {fixture_id}: {e}")
+            return {
+                "halftime": {"home": 0, "away": 0},
+                "fulltime": {"home": 0, "away": 0},
+                "status": ""
+            }
+        except (ValueError, TypeError) as e:
+            print(f"⚠️ Erreur parsing API pour fixture {fixture_id}: {e}")
+            return {
+                "halftime": {"home": 0, "away": 0},
+                "fulltime": {"home": 0, "away": 0},
+                "status": ""
+            }
 
     def clean_prediction(self, prediction: Dict) -> Dict:
         cleaned = {}
+        # Informations du match
         for field in self.FIELDS_TO_KEEP['match_info']:
             if field in prediction:
                 cleaned[field] = prediction[field]
 
+        # Stats home/away
         for side in ['home', 'away']:
             stats = prediction.get(f"stats_{side}", {})
             cleaned[f'stats_{side}'] = {
@@ -154,19 +193,31 @@ class FootballDataConsolidator:
                 'buts_ext_encaisses': stats.get('buts_ext_encaisses', 0)
             }
 
+        # Classement
         for field in self.FIELDS_TO_KEEP['classement']:
             if field in prediction:
                 cleaned[field] = prediction[field]
 
+        # Last matches
         cleaned['last_matches_home'] = self.clean_last_matches(prediction.get('last_matches_home', []))
         cleaned['last_matches_away'] = self.clean_last_matches(prediction.get('last_matches_away', []))
+
+        # H2H
         cleaned['h2h'] = self.clean_h2h(prediction.get('confrontations_saison_derniere', []))
 
-        fixture_id = prediction.get('fixture_id', 0)
-        actual_scores = self.fetch_scores_from_api(fixture_id)
+        # Scores réels et targets
+        fixture_id = prediction.get('fixture_id', 0) or prediction.get('id', 0)
+        actual_scores = self.fetch_scores_from_api(int(fixture_id) if fixture_id else 0)
         cleaned['actual_scores'] = actual_scores
-        home_score, away_score = map(int, actual_scores['fulltime'].split('-'))
-        cleaned['predict_targets'] = self.generate_predict_targets(home_score, away_score)
+
+        # Convertir en entiers pour generation des targets
+        try:
+            ft_home = int(actual_scores.get('fulltime', {}).get('home', 0))
+            ft_away = int(actual_scores.get('fulltime', {}).get('away', 0))
+        except (ValueError, TypeError):
+            ft_home, ft_away = 0, 0
+
+        cleaned['predict_targets'] = self.generate_predict_targets(ft_home, ft_away)
 
         return cleaned
 
@@ -175,8 +226,9 @@ class FootballDataConsolidator:
             return []
         try:
             with open(self.output_file, 'r', encoding='utf-8') as f:
-                return json.load(f).get('predictions', [])
-        except Exception as e:
+                data = json.load(f)
+                return data.get('predictions', [])
+        except (json.JSONDecodeError, IOError) as e:
             print(f"⚠️ Erreur lecture {self.output_file}: {e}")
             return []
 
@@ -204,7 +256,6 @@ class FootballDataConsolidator:
         try:
             with open(yesterday_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-
             raw_predictions = data.get('statistiques_brutes_avec_ia_hors_montecarlo', {}).get('details', [])
             if not raw_predictions:
                 print("⚠️ Aucun match trouvé")
@@ -226,14 +277,15 @@ class FootballDataConsolidator:
             self.save_consolidated_data(all_predictions)
             return True
 
-        except Exception as e:
+        except (json.JSONDecodeError, IOError) as e:
             print(f"❌ Erreur lors du traitement: {e}")
             return False
 
+
 def main():
-    print("="*60)
+    print("=" * 60)
     print("🔄 CONSOLIDATION DES MATCHS FOOTBALL AVEC SCORES RÉELS")
-    print("="*60)
+    print("=" * 60)
 
     api_key = os.environ.get("API_FOOTBALL_KEY", "")
     consolidator = FootballDataConsolidator(source_dir=".", output_file="Analysesdata.json", api_key=api_key)
@@ -243,7 +295,8 @@ def main():
         print("\n✅ Consolidation terminée avec succès!")
     else:
         print("\n❌ Échec de la consolidation")
-    print("="*60)
+    print("=" * 60)
+
 
 if __name__ == "__main__":
     main()
