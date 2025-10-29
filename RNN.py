@@ -1,17 +1,15 @@
 import json
 import numpy as np
+import os
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
-from collections import defaultdict
 from sklearn.preprocessing import StandardScaler
 
 # ---------- CONFIG ----------
-DATA_PATH = Path("Analysesdata.json")   # <== fichier JSON d'entrée
-LOOKBACK = 6                            # longueur de séquence (nombre de derniers matchs)
-FUSION_STRATEGY = "concat_pair"         # "concat_pair" | "concat_stack" | "interleave"
-PAD_VALUE = 0.0
-SAVE_PREFIX = "hist_seq"                # préfixe fichiers de sortie
-TARGET_TASK = "1x2_fulltime"            # nom de la tâche (pour cible)
+DATA_PATH = Path("Analysesdata.json")
+LOOKBACK = 6
+FUSION_STRATEGY = "concat_pair"
+SAVE_PREFIX = "hist_seq"
 INCLUDE_TEAM_ONEHOT = True
 # ---------------------------
 
@@ -23,7 +21,6 @@ HIST_MATCH_STATS_KEYS = [
     "saves_home", "saves_away",
     "yellow_cards_home", "yellow_cards_away",
 ]
-
 CATEGORICAL_FEATURES = ["HomeTeam", "AwayTeam", "league"]
 
 # ---------- utilitaires ----------
@@ -57,8 +54,7 @@ def build_team_onehot_maps(predictions: List[Dict[str, Any]]) -> Dict[str, List[
 def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any],
                           perspective: str, team_onehots: Dict[str, List[str]],
                           include_onehot: bool) -> Tuple[np.ndarray, List[str]]:
-    feat = []
-    names = []
+    feat, names = [], []
 
     def extract_from_entry(entry, team_role):
         if entry is None:
@@ -77,17 +73,14 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
     home_feats = extract_from_entry(home_entry, "home_entry")
     away_feats = extract_from_entry(away_entry, "away_entry")
 
-    if FUSION_STRATEGY in ["concat_pair", "concat_stack", "interleave"]:
-        for k in sorted(home_feats.keys()):
-            feat.append(float(home_feats[k]))
-            names.append(f"home_{k}")
-        for k in sorted(away_feats.keys()):
-            feat.append(float(away_feats[k]))
-            names.append(f"away_{k}")
+    for k in sorted(home_feats.keys()):
+        feat.append(float(home_feats[k]))
+        names.append(f"home_{k}")
+    for k in sorted(away_feats.keys()):
+        feat.append(float(away_feats[k]))
+        names.append(f"away_{k}")
 
-    is_target_home = 1.0 if perspective == "home" else 0.0
-    is_target_away = 1.0 if perspective == "away" else 0.0
-    feat.extend([is_target_home, is_target_away])
+    feat.extend([1.0 if perspective == "home" else 0.0, 1.0 if perspective == "away" else 0.0])
     names.extend(["perspective_is_home", "perspective_is_away"])
 
     if include_onehot and team_onehots:
@@ -115,27 +108,24 @@ def target_builder(match: Dict[str, Any]) -> np.ndarray:
 
 # ---------- assemblage séquences ----------
 
-def assemble_sequences(data: Dict[str, Any],
-                       lookback: int = LOOKBACK,
-                       fusion: str = FUSION_STRATEGY,
-                       include_onehot: bool = INCLUDE_TEAM_ONEHOT) -> Tuple[np.ndarray, np.ndarray, List[str]]:
+def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
+                       fusion=FUSION_STRATEGY, include_onehot=INCLUDE_TEAM_ONEHOT):
     preds = data.get("predictions", [])
     team_maps = build_team_onehot_maps(preds) if include_onehot else {}
-
-    seq_list = []
-    targ_list = []
-    feature_names_global = None
+    seq_list, targ_list, ids, feature_names_global = [], [], [], None
     all_timesteps = []
 
     for match in preds:
+        fid = match.get("fixture_id")
+        if not fid:
+            continue
         hist_home = get_last_matches_list(match, "home")[:lookback]
         hist_away = get_last_matches_list(match, "away")[:lookback]
 
         def pad(lst): return lst + [None]*(lookback - len(lst)) if len(lst) < lookback else lst[:lookback]
         hist_home, hist_away = pad(hist_home), pad(hist_away)
 
-        timesteps = []
-        names_for_timestep = None
+        timesteps, names_for_timestep = [], None
         for i in range(lookback):
             vec, names = build_timestep_vector(hist_home[i], hist_away[i],
                                                perspective="home",
@@ -146,8 +136,6 @@ def assemble_sequences(data: Dict[str, Any],
                 names_for_timestep = names
 
         seq = np.stack(timesteps, axis=0)
-
-        # Injecter one-hot effectif
         if include_onehot and team_maps:
             for t in range(seq.shape[0]):
                 for cat in CATEGORICAL_FEATURES:
@@ -162,12 +150,12 @@ def assemble_sequences(data: Dict[str, Any],
         all_timesteps.append(seq)
         seq_list.append(seq)
         targ_list.append(target_builder(match))
+        ids.append(fid)
         if feature_names_global is None:
             feature_names_global = names_for_timestep
 
     seq_len = seq_list[0].shape[0]
     n_feats = seq_list[0].shape[1]
-
     all_flat = np.concatenate([s.reshape(-1, n_feats) for s in all_timesteps], axis=0)
     cat_indices = [i for i, n in enumerate(feature_names_global)
                    if any(n.startswith(cat+"=") for cat in CATEGORICAL_FEATURES)]
@@ -183,28 +171,47 @@ def assemble_sequences(data: Dict[str, Any],
             X_array[i, :, j] = (X_array[i, :, j] - scaler.mean_[num_indices.index(j)]) / (scaler.scale_[num_indices.index(j)] + 1e-9)
 
     y_array = np.stack(targ_list, axis=0)
-    return X_array.astype(np.float32), y_array.astype(np.float32), feature_names_global
+    return X_array.astype(np.float32), y_array.astype(np.float32), feature_names_global, ids
 
-# ---------- sauvegarde ----------
+# ---------- fusion sans doublons ----------
 
-def save_outputs(X: np.ndarray, y: np.ndarray, feature_names: List[str], prefix: str = SAVE_PREFIX):
-    np.save(f"{prefix}_X.npy", X)
-    np.save(f"{prefix}_y.npy", y)
+def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX):
+    X_path, y_path, id_path = f"{prefix}_X.npy", f"{prefix}_y.npy", f"{prefix}_ids.npy"
+
+    if os.path.exists(X_path) and os.path.exists(y_path) and os.path.exists(id_path):
+        X_old = np.load(X_path)
+        y_old = np.load(y_path)
+        ids_old = np.load(id_path, allow_pickle=True).tolist()
+
+        new_indices = [i for i, fid in enumerate(ids_new) if fid not in ids_old]
+        if not new_indices:
+            print("Aucune nouvelle donnée à ajouter.")
+            return X_old, y_old, ids_old
+
+        X_combined = np.concatenate([X_old, X_new[new_indices]], axis=0)
+        y_combined = np.concatenate([y_old, y_new[new_indices]], axis=0)
+        ids_combined = ids_old + [ids_new[i] for i in new_indices]
+    else:
+        X_combined, y_combined, ids_combined = X_new, y_new, ids_new
+
+    np.save(X_path, X_combined)
+    np.save(y_path, y_combined)
+    np.save(id_path, np.array(ids_combined))
     with open(f"{prefix}_feature_names.txt", "w", encoding="utf-8") as f:
         for n in feature_names:
             f.write(n + "\n")
-    print(f"Sauvegardé {prefix}_X.npy (shape {X.shape}), {prefix}_y.npy (shape {y.shape})")
+
+    print(f"Fichiers mis à jour ({len(ids_combined)} séquences totales)")
+    return X_combined, y_combined, ids_combined
 
 # ---------- main ----------
 
 def main():
     data = load_json(DATA_PATH)
-    X, y, feature_names = assemble_sequences(data, lookback=LOOKBACK, fusion=FUSION_STRATEGY, include_onehot=INCLUDE_TEAM_ONEHOT)
+    X, y, feature_names, ids = assemble_sequences(data)
+    X, y, ids = merge_with_existing(X, y, ids, feature_names)
     print("Forme X:", X.shape)
     print("Forme y:", y.shape)
-    if feature_names:
-        print("Exemple de features:", feature_names[:30])
-    save_outputs(X, y, feature_names, prefix=SAVE_PREFIX)
 
 if __name__ == "__main__":
     main()
