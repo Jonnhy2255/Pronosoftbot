@@ -59,6 +59,7 @@ class FootballDataConsolidator:
                         cleaned[f"{key.lower().replace(' ', '_')}_home"] = int(value[0])
                         cleaned[f"{key.lower().replace(' ', '_')}_away"] = int(value[1])
                     except (ValueError, TypeError):
+                        # Ignorer valeurs non-int
                         pass
         return cleaned
 
@@ -67,7 +68,9 @@ class FootballDataConsolidator:
         for match in matches[:max_matches]:
             score = match.get('score', '0 - 0')
             try:
-                home_score, away_score = map(int, score.split(' - '))
+                # Accept both '0 - 0' and '0-0'
+                parts = score.replace(' ', '').split('-')
+                home_score, away_score = map(int, parts)
             except (ValueError, AttributeError):
                 home_score, away_score = 0, 0
             cleaned_match = {
@@ -86,7 +89,8 @@ class FootballDataConsolidator:
         for match in h2h_matches:
             score = match.get('score', '0 - 0')
             try:
-                home_score, away_score = map(int, score.split(' - '))
+                parts = score.replace(' ', '').split('-')
+                home_score, away_score = map(int, parts)
             except (ValueError, AttributeError):
                 home_score, away_score = 0, 0
             cleaned_h2h.append({
@@ -112,63 +116,91 @@ class FootballDataConsolidator:
         }
 
     def fetch_scores_from_api(self, fixture_id: int) -> dict:
-        """Récupère les scores réels à partir de l'API Football (format similaire à 1.2.py)."""
-        # Si pas de clé, renvoyer des scores neutres
-        if not self.api_key:
-            return {
-                "halftime": {"home": 0, "away": 0},
-                "fulltime": {"home": 0, "away": 0},
-                "status": ""
+        """
+        Récupère les scores réels à partir de l'API Football (format similaire à 1.2.py).
+        Retourne un dict:
+            {
+              "fixture_id": <int>,
+              "date": <string ISO> or "",
+              "home_team": <str> or "",
+              "away_team": <str> or "",
+              "halftime": {"home": int, "away": int},
+              "fulltime": {"home": int, "away": int},
+              "status": <str> or ""
             }
+        Les erreurs API sont affichées dans les logs (print).
+        """
+        default = {
+            "fixture_id": fixture_id,
+            "date": "",
+            "home_team": "",
+            "away_team": "",
+            "halftime": {"home": 0, "away": 0},
+            "fulltime": {"home": 0, "away": 0},
+            "status": ""
+        }
+
+        if not self.api_key:
+            print("⚠️ Pas de clé API fournie. Retour des scores par défaut (0-0).")
+            return default
 
         url = f"https://v3.football.api-sports.io/fixtures?id={fixture_id}"
         headers = {"x-apisports-key": self.api_key}
         try:
-            response = requests.get(url, headers=headers, timeout=10)
-            response.raise_for_status()
+            response = requests.get(url, headers=headers, timeout=15)
+            # Afficher statut HTTP si != 200
+            if response.status_code != 200:
+                try:
+                    err = response.json()
+                except Exception:
+                    err = response.text
+                print(f"❌ Erreur API [{response.status_code}] pour fixture {fixture_id}: {err}")
+                return default
+
             data = response.json()
+            # Vérifier structure attendue
+            resp_list = data.get("response", [])
+            if not resp_list:
+                print(f"⚠️ API retourné 'response' vide pour fixture {fixture_id}.")
+                return default
 
-            responses = data.get("response")
-            if not responses:
-                # Pas de fixture trouvée
-                return {
-                    "halftime": {"home": 0, "away": 0},
-                    "fulltime": {"home": 0, "away": 0},
-                    "status": ""
-                }
+            item = resp_list[0]
+            fixture = item.get("fixture", {}) or {}
+            teams = item.get("teams", {}) or {}
+            scores = item.get("score", {}) or {}
 
-            first = responses[0]
-            fixture = first.get("fixture", {})
-            scores = first.get("score", {})
+            # Extraire horaires / équipes
+            date = fixture.get("date", "")  # string ISO
+            home_name = teams.get("home", {}).get("name", "") if teams else ""
+            away_name = teams.get("away", {}).get("name", "") if teams else ""
 
-            # Extraction sûre des scores (entiers)
-            ht_home = scores.get("halftime", {}).get("home", 0) or 0
-            ht_away = scores.get("halftime", {}).get("away", 0) or 0
-            ft_home = scores.get("fulltime", {}).get("home", 0) or 0
-            ft_away = scores.get("fulltime", {}).get("away", 0) or 0
-
-            status = fixture.get("status", {}).get("long", "")
+            # Extraire scores - valeurs entières (si absent -> 0)
+            halftime_home = scores.get("halftime", {}).get("home", 0)
+            halftime_away = scores.get("halftime", {}).get("away", 0)
+            fulltime_home = scores.get("fulltime", {}).get("home", 0)
+            fulltime_away = scores.get("fulltime", {}).get("away", 0)
+            status_long = fixture.get("status", {}).get("long", "")
 
             return {
-                "halftime": {"home": int(ht_home), "away": int(ht_away)},
-                "fulltime": {"home": int(ft_home), "away": int(ft_away)},
-                "status": status
+                "fixture_id": fixture_id,
+                "date": date,
+                "home_team": home_name,
+                "away_team": away_name,
+                "halftime": {"home": int(halftime_home or 0), "away": int(halftime_away or 0)},
+                "fulltime": {"home": int(fulltime_home or 0), "away": int(fulltime_away or 0)},
+                "status": status_long
             }
 
         except requests.exceptions.RequestException as e:
-            print(f"❌ Erreur API pour fixture {fixture_id}: {e}")
-            return {
-                "halftime": {"home": 0, "away": 0},
-                "fulltime": {"home": 0, "away": 0},
-                "status": ""
-            }
-        except (ValueError, TypeError) as e:
-            print(f"⚠️ Erreur parsing API pour fixture {fixture_id}: {e}")
-            return {
-                "halftime": {"home": 0, "away": 0},
-                "fulltime": {"home": 0, "away": 0},
-                "status": ""
-            }
+            print(f"❌ Erreur de connexion / requête pour fixture {fixture_id} : {e}")
+            return default
+        except ValueError as e:
+            # JSON decoding error
+            print(f"❌ Réponse API invalide pour fixture {fixture_id}: {e}")
+            return default
+        except Exception as e:
+            print(f"❌ Erreur inattendue lors de l'appel API pour fixture {fixture_id}: {e}")
+            return default
 
     def clean_prediction(self, prediction: Dict) -> Dict:
         cleaned = {}
@@ -206,18 +238,19 @@ class FootballDataConsolidator:
         cleaned['h2h'] = self.clean_h2h(prediction.get('confrontations_saison_derniere', []))
 
         # Scores réels et targets
-        fixture_id = prediction.get('fixture_id', 0) or prediction.get('id', 0)
-        actual_scores = self.fetch_scores_from_api(int(fixture_id) if fixture_id else 0)
+        fixture_id = prediction.get('fixture_id', 0) or 0
+        actual_scores = self.fetch_scores_from_api(fixture_id)
         cleaned['actual_scores'] = actual_scores
 
-        # Convertir en entiers pour generation des targets
+        # Convertir fulltime en deux ints si possible
         try:
-            ft_home = int(actual_scores.get('fulltime', {}).get('home', 0))
-            ft_away = int(actual_scores.get('fulltime', {}).get('away', 0))
-        except (ValueError, TypeError):
-            ft_home, ft_away = 0, 0
+            ft = actual_scores.get('fulltime', {})
+            home_score = int(ft.get('home', 0))
+            away_score = int(ft.get('away', 0))
+        except Exception:
+            home_score, away_score = 0, 0
 
-        cleaned['predict_targets'] = self.generate_predict_targets(ft_home, ft_away)
+        cleaned['predict_targets'] = self.generate_predict_targets(home_score, away_score)
 
         return cleaned
 
