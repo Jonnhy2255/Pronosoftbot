@@ -3,7 +3,7 @@ name: Prepare RNN sequences and commit results
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 3 * * *'
 
 permissions:
   contents: write  # autorise le push dans le dépôt
