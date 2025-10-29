@@ -1,60 +1,42 @@
-name: Consolidation quotidienne des prédictions
+name: Football Data Consolidation
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # Tous les jours à 5h UTC (5h heure Côte d'Ivoire)
-  workflow_dispatch:       # Permet aussi le lancement manuel
-
-permissions:
-  contents: write          # Autorise le push sur le dépôt
+    # Tous les jours à 5h UTC (ajuster si tu veux heure locale)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # permet de déclencher manuellement
 
 jobs:
   consolidate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout du dépôt
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
-          ref: main  # Change en "master" si ta branche principale s'appelle ainsi
+      - name: 🔽 Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Configuration de Python
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
-      - name: Exécution du script de consolidation
+      - name: 📄 Install dependencies
+        # Si tu as des libs comme requests
         run: |
-          echo "🔄 Démarrage de la consolidation à $(date)"
-          python data.py >> consolidation.log 2>&1 || echo "❌ Erreur lors de l'exécution du script"
-          echo "✅ Fin de l'exécution du script"
+          python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Afficher le contenu du log
+      - name: 🌐 Set API Key
+        # API_FOOTBALL_KEY depuis les secrets
+        run: echo "API_FOOTBALL_KEY=${{ secrets.API_FOOTBALL_KEY }}" >> $GITHUB_ENV
+
+      - name: 🔄 Run consolidation script
         run: |
           echo "📄 --- Début du fichier consolidation.log ---"
-          cat consolidation.log || echo "⚠️ Aucun log trouvé"
+          python data.py >> consolidation.log 2>&1
           echo "📄 --- Fin du fichier consolidation.log ---"
 
-      - name: Commit et push des modifications
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Vérifie s'il y a eu des changements dans Analysesdata.json
-          git add Analysesdata.json || true
-
-          if git diff --cached --quiet; then
-            echo "ℹ️ Aucune modification détectée, aucun commit nécessaire."
-          else
-            git commit -m "🔄 Mise à jour quotidienne Analysesdata.json [$(date '+%Y-%m-%d %H:%M:%S')]"
-            git push
-            echo "✅ Données consolidées et poussées avec succès."
-          fi
-
-      - name: Sauvegarder le fichier de log
-        uses: actions/upload-artifact@v4
+      - name: 📤 Upload log artifact
+        uses: actions/upload-artifact@v3
         with:
           name: consolidation-log
           path: consolidation.log
