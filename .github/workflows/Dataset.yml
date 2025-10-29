@@ -1,40 +1,59 @@
-name: Consolidation Football Data
+name: Consolidation des prédictions football
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # Tous les jours à 05:00 UTC
-  workflow_dispatch:      # Permet de lancer manuellement le workflow
+    - cron: "0 5 * * *"  # Tous les jours à 5h UTC
+  workflow_dispatch:     # Permet d'exécuter manuellement
 
 jobs:
-  consolidate-and-push:
+  consolidate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔄 Checkout repository
-        uses: actions/checkout@v4
+      # Récupérer le code
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Python
+      # Setup Python
+      - name: Setup Python 3.12
         uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
+      # Installer les dépendances nécessaires
       - name: Install dependencies
-        # Si tu n’as pas requirements.txt, ignore cette étape ou ajoute pip install manuellement
         run: |
-          pip install -U pip
+          python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Run consolidation script
+      # Exécuter le script data.py
+      - name: Run data.py
         run: |
           echo "🔄 Début du script data.py"
           python data.py
           echo "✅ Script terminé"
 
-      - name: Commit and push updated data
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Afficher les logs
+      - name: Show consolidation log
+        run: |
+          if [ -f consolidation.log ]; then
+            echo "📄 --- Début du fichier consolidation.log ---"
+            cat consolidation.log
+            echo "📄 --- Fin du fichier consolidation.log ---"
+          else
+            echo "⚠️ Aucun log trouvé"
+          fi
+
+      # Commit & Push si Analysesdata.json a été modifié
+      - name: Commit and Push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add Analysesdata.json
-          git commit -m "Mise à jour automatique des données consolidées" || echo "ℹ️ Rien à commit"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "🔄 Mise à jour des données consolidées $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+            echo "✅ Fichier Analysesdata.json mis à jour et poussé."
+          else
+            echo "ℹ️ Aucune modification à pousser."
+          fi
