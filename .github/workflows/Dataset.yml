@@ -1,39 +1,40 @@
-name: Football Data Consolidation
+name: Consolidation Football Data
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # tous les jours à 5h UTC
-  workflow_dispatch:    # permet le déclenchement manuel
+    - cron: '0 5 * * *'  # Tous les jours à 05:00 UTC
+  workflow_dispatch:      # Permet de lancer manuellement le workflow
 
 jobs:
-  consolidate:
+  consolidate-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔽 Checkout repository
-        uses: actions/checkout@v3
+      - name: 🔄 Checkout repository
+        uses: actions/checkout@v4
 
-      - name: 🐍 Setup Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
-      - name: 📄 Install dependencies
+      - name: Install dependencies
+        # Si tu n’as pas requirements.txt, ignore cette étape ou ajoute pip install manuellement
         run: |
-          python -m pip install --upgrade pip
-          pip install requests
+          pip install -U pip
 
-      - name: 🌐 Set API Key
-        run: echo "API_FOOTBALL_KEY=${{ secrets.API_FOOTBALL_KEY }}" >> $GITHUB_ENV
-
-      - name: 🔄 Run consolidation script
+      - name: Run consolidation script
         run: |
-          echo "📄 --- Début du fichier consolidation.log ---"
-          python data.py >> consolidation.log 2>&1
-          echo "📄 --- Fin du fichier consolidation.log ---"
+          echo "🔄 Début du script data.py"
+          python data.py
+          echo "✅ Script terminé"
 
-      - name: 📤 Upload log artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: consolidation-log
-          path: consolidation.log
+      - name: Commit and push updated data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Analysesdata.json
+          git commit -m "Mise à jour automatique des données consolidées" || echo "ℹ️ Rien à commit"
+          git push
