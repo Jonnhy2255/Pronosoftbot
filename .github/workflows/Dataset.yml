@@ -36,25 +36,14 @@ jobs:
           echo "✅ Script terminé"
 
       # Afficher les logs
-      - name: Show consolidation log
-        run: |
-          if [ -f consolidation.log ]; then
-            echo "📄 --- Début du fichier consolidation.log ---"
-            cat consolidation.log
-            echo "📄 --- Fin du fichier consolidation.log ---"
-          else
-            echo "⚠️ Aucun log trouvé"
-          fi
-
-      # Commit & Push si Analysesdata.json a été modifié
       - name: Commit and Push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Analysesdata.json
-          if ! git diff --cached --quiet; then
-            git commit -m "🔄 Mise à jour des données consolidées $(date +'%Y-%m-%d %H:%M:%S')"
-            git push
-            echo "✅ Fichier Analysesdata.json mis à jour et poussé."
-          else
-            echo "ℹ️ Aucune modification à pousser."
+  run: |
+    git config user.name "github-actions[bot]"
+    git config user.email "github-actions[bot]@users.noreply.github.com"
+    git add Analysesdata.json
+    if ! git diff --cached --quiet; then
+      git commit -m "🔄 Mise à jour des données consolidées $(date +'%Y-%m-%d %H:%M:%S')"
+      git push
+      echo "✅ Fichier Analysesdata.json mis à jour et poussé."
+    else
+      echo "ℹ️ Aucune modification à pousser."
