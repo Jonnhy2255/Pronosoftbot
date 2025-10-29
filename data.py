@@ -99,16 +99,72 @@ class FootballDataConsolidator:
             })
         return cleaned_h2h
 
-    def generate_predict_targets(self, score_home: int, score_away: int) -> dict:
-        x1x2 = "1" if score_home > score_away else "2" if score_home < score_away else "X"
-        over_under = "over_2.5" if (score_home + score_away) > 2.5 else "under_2.5"
-        btts = "yes" if score_home > 0 and score_away > 0 else "no"
-        double_chance = "1X" if score_home > score_away else "X2" if score_home < score_away else "12"
+    def generate_predict_targets(self, halftime: dict, fulltime: dict) -> dict:
+        """
+        Génère toutes les options de pari validées selon les scores à la mi-temps et fin de match.
+        Retourne un dictionnaire :
+        {
+          "halftime": { ... },
+          "fulltime": { ... }
+        }
+        Chaque section contient :
+          - "1x2": [ "1" | "X" | "2" ]
+          - "double_chance": [ liste des combinaisons valides ]
+          - "over_under": [ liste complète des seuils valides selon le score ]
+          - "btts": [ "yes" | "no" ]
+        """
+
+        def _calc_targets(score_home: int, score_away: int) -> dict:
+            total_goals = score_home + score_away
+
+            # ---- 1x2 ----
+            if score_home > score_away:
+                res_1x2 = "1"
+            elif score_home < score_away:
+                res_1x2 = "2"
+            else:
+                res_1x2 = "X"
+
+            # ---- Double chance ----
+            if res_1x2 == "1":
+                double_chance_valid = ["1X", "12"]
+            elif res_1x2 == "2":
+                double_chance_valid = ["X2", "12"]
+            else:  # Draw
+                double_chance_valid = ["1X", "X2"]
+
+            # ---- Over/Under logique ----
+            thresholds = [2, 2.5, 3, 3.5]
+            over_under_valid = []
+            for t in thresholds:
+                if total_goals > t:
+                    over_under_valid.append(f"over_{str(t).replace('.', '_')}")
+                else:
+                    over_under_valid.append(f"under_{str(t).replace('.', '_')}")
+
+            # ---- BTTS ----
+            btts_valid = ["yes"] if (score_home > 0 and score_away > 0) else ["no"]
+
+            return {
+                "1x2": [res_1x2],
+                "double_chance": double_chance_valid,
+                "over_under": over_under_valid,
+                "btts": btts_valid
+            }
+
+        # Calcul mi-temps
+        ht_home = halftime.get("home", 0)
+        ht_away = halftime.get("away", 0)
+        halftime_targets = _calc_targets(ht_home, ht_away)
+
+        # Calcul score final
+        ft_home = fulltime.get("home", 0)
+        ft_away = fulltime.get("away", 0)
+        fulltime_targets = _calc_targets(ft_home, ft_away)
+
         return {
-            "1x2": x1x2,
-            "over_under": over_under,
-            "btts": btts,
-            "double_chance": double_chance
+            "halftime": halftime_targets,
+            "fulltime": fulltime_targets
         }
 
     def fetch_scores_from_api(self, fixture_id: int) -> dict:
@@ -192,10 +248,10 @@ class FootballDataConsolidator:
         actual_scores = self.fetch_scores_from_api(fixture_id)
         cleaned['actual_scores'] = actual_scores
 
-        ft = actual_scores.get('fulltime', {})
-        home_score = int(ft.get('home', 0))
-        away_score = int(ft.get('away', 0))
-        cleaned['predict_targets'] = self.generate_predict_targets(home_score, away_score)
+        # Nouveau calcul des targets utilisant mi-temps et score final
+        halftime_scores = actual_scores.get('halftime', {})
+        fulltime_scores = actual_scores.get('fulltime', {})
+        cleaned['predict_targets'] = self.generate_predict_targets(halftime_scores, fulltime_scores)
 
         return cleaned
 
