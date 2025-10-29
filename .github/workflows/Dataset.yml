@@ -2,9 +2,8 @@ name: Football Data Consolidation
 
 on:
   schedule:
-    # Tous les jours à 5h UTC (ajuster si tu veux heure locale)
-    - cron: '0 5 * * *'
-  workflow_dispatch: # permet de déclencher manuellement
+    - cron: '0 5 * * *'  # tous les jours à 5h UTC
+  workflow_dispatch:    # permet le déclenchement manuel
 
 jobs:
   consolidate:
@@ -20,13 +19,11 @@ jobs:
           python-version: 3.12
 
       - name: 📄 Install dependencies
-        # Si tu as des libs comme requests
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
       - name: 🌐 Set API Key
-        # API_FOOTBALL_KEY depuis les secrets
         run: echo "API_FOOTBALL_KEY=${{ secrets.API_FOOTBALL_KEY }}" >> $GITHUB_ENV
 
       - name: 🔄 Run consolidation script
@@ -36,7 +33,7 @@ jobs:
           echo "📄 --- Fin du fichier consolidation.log ---"
 
       - name: 📤 Upload log artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: consolidation-log
           path: consolidation.log
