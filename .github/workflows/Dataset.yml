@@ -3,7 +3,10 @@ name: Consolidation quotidienne des prédictions
 on:
   schedule:
     - cron: '0 5 * * *'  # Tous les jours à 5h UTC (5h heure Côte d'Ivoire)
-  workflow_dispatch:       # Permet de lancer manuellement depuis l'onglet Actions
+  workflow_dispatch:       # Permet aussi le lancement manuel
+
+permissions:
+  contents: write          # Autorise le push sur le dépôt
 
 jobs:
   consolidate:
@@ -15,6 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
+          ref: main  # Change en "master" si ta branche principale s'appelle ainsi
 
       - name: Configuration de Python
         uses: actions/setup-python@v4
@@ -23,22 +27,34 @@ jobs:
 
       - name: Exécution du script de consolidation
         run: |
-          echo "🔄 Démarrage de la consolidation quotidienne"
-          python data.py || echo "❌ Erreur lors de l'exécution du script"
-          echo "✅ Script exécuté, préparation du commit..."
+          echo "🔄 Démarrage de la consolidation à $(date)"
+          python data.py >> consolidation.log 2>&1 || echo "❌ Erreur lors de l'exécution du script"
+          echo "✅ Fin de l'exécution du script"
+
+      - name: Afficher le contenu du log
+        run: |
+          echo "📄 --- Début du fichier consolidation.log ---"
+          cat consolidation.log || echo "⚠️ Aucun log trouvé"
+          echo "📄 --- Fin du fichier consolidation.log ---"
 
       - name: Commit et push des modifications
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Ajouter uniquement les fichiers modifiés
+          # Vérifie s'il y a eu des changements dans Analysesdata.json
           git add Analysesdata.json || true
 
           if git diff --cached --quiet; then
-            echo "ℹ️ Aucune modification à committer"
+            echo "ℹ️ Aucune modification détectée, aucun commit nécessaire."
           else
-            git commit -m "🔄 Mise à jour quotidienne Analysesdata.json [$(date '+%Y-%m-%d %H:%M')]"
+            git commit -m "🔄 Mise à jour quotidienne Analysesdata.json [$(date '+%Y-%m-%d %H:%M:%S')]"
             git push
-            echo "✅ Données consolidées et poussées avec succès"
+            echo "✅ Données consolidées et poussées avec succès."
           fi
+
+      - name: Sauvegarder le fichier de log
+        uses: actions/upload-artifact@v4
+        with:
+          name: consolidation-log
+          path: consolidation.log
