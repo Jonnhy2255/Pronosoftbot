@@ -2,24 +2,43 @@ name: Consolidation quotidienne des prédictions
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # Tous les jours à 5h UTC
-  workflow_dispatch:       # Permet aussi un déclenchement manuel
+    - cron: '0 5 * * *'  # Tous les jours à 5h UTC (5h heure Côte d'Ivoire)
+  workflow_dispatch:       # Permet de lancer manuellement depuis l'onglet Actions
 
 jobs:
   consolidate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
-      - name: Set up Python
+      - name: Configuration de Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.12
 
-      - name: Run consolidation script
+      - name: Exécution du script de consolidation
         run: |
-          echo "🔄 Démarrage de la consolidation"
-          python data.py >> consolidation.log 2>&1
-          echo "✅ Consolidation terminée"
+          echo "🔄 Démarrage de la consolidation quotidienne"
+          python data.py || echo "❌ Erreur lors de l'exécution du script"
+          echo "✅ Script exécuté, préparation du commit..."
+
+      - name: Commit et push des modifications
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Ajouter uniquement les fichiers modifiés
+          git add Analysesdata.json || true
+
+          if git diff --cached --quiet; then
+            echo "ℹ️ Aucune modification à committer"
+          else
+            git commit -m "🔄 Mise à jour quotidienne Analysesdata.json [$(date '+%Y-%m-%d %H:%M')]"
+            git push
+            echo "✅ Données consolidées et poussées avec succès"
+          fi
