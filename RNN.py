@@ -13,7 +13,6 @@ SAVE_PREFIX = "hist_seq"
 INCLUDE_TEAM_ONEHOT = True
 # ---------------------------
 
-# Features historiques des matchs (stats + classement + points)
 HIST_MATCH_STATS_KEYS = [
     "possession_home", "possession_away",
     "shots_on_goal_home", "shots_on_goal_away",
@@ -27,7 +26,7 @@ HIST_MATCH_STATS_KEYS = [
 
 CATEGORICAL_FEATURES = ["HomeTeam", "AwayTeam", "league"]
 
-# ---------- utilitaires ----------
+# ---------- UTILITAIRES ----------
 def load_json(path: Path) -> Dict[str, Any]:
     with path.open(encoding="utf-8") as f:
         return json.load(f)
@@ -52,7 +51,7 @@ def build_team_onehot_maps(predictions: List[Dict[str, Any]]) -> Dict[str, List[
         maps[cat] = vals
     return maps
 
-# ---------- construction des vecteurs ----------
+# ---------- VECTEURS ----------
 def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any],
                           perspective: str, team_onehots: Dict[str, List[str]],
                           include_onehot: bool) -> Tuple[np.ndarray, List[str]]:
@@ -97,26 +96,32 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
 
     return np.array(feat, dtype=np.float32), names
 
-# ---------- cible ----------
-def target_builder(match: Dict[str, Any]) -> np.ndarray:
-    ft = match.get("actual_scores", {}).get("fulltime", {})
-    if not ft:
-        return np.array([0,0,0], dtype=np.float32)
-    home = safe_float(ft.get("home", 0))
-    away = safe_float(ft.get("away", 0))
-    if home > away:
-        return np.array([1,0,0], dtype=np.float32)
-    elif home == away:
-        return np.array([0,1,0], dtype=np.float32)
-    else:
-        return np.array([0,0,1], dtype=np.float32)
+# ---------- CIBLES ----------
+def target_builder(match: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Extrait toutes les cibles de prédiction du JSON.
+    """
+    targets = match.get("predict_targets", {})
+    ft = targets.get("fulltime", {})
 
-# ---------- assemblage séquences ----------
+    target_1x2 = ft.get("1x2", [])
+    target_double = ft.get("double_chance", [])
+    target_ou = ft.get("over_under", [])
+    target_btts = ft.get("btts", [])
+
+    return {
+        "1x2": target_1x2[0] if target_1x2 else None,
+        "double_chance": target_double,
+        "over_under": target_ou,
+        "btts": target_btts[0] if target_btts else None
+    }
+
+# ---------- ASSEMBLAGE ----------
 def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
                        fusion=FUSION_STRATEGY, include_onehot=INCLUDE_TEAM_ONEHOT):
     preds = data.get("predictions", [])
     team_maps = build_team_onehot_maps(preds) if include_onehot else {}
-    seq_list, targ_list, ids, feature_names_global = [], [], [], None
+    seq_list, ids, targets_list, feature_names_global = [], [], [], None
     all_timesteps = []
 
     for match in preds:
@@ -153,8 +158,8 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
 
         all_timesteps.append(seq)
         seq_list.append(seq)
-        targ_list.append(target_builder(match))
         ids.append(fid)
+        targets_list.append(target_builder(match))
         if feature_names_global is None:
             feature_names_global = names_for_timestep
 
@@ -174,48 +179,45 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
         for j in num_indices:
             X_array[i, :, j] = (X_array[i, :, j] - scaler.mean_[num_indices.index(j)]) / (scaler.scale_[num_indices.index(j)] + 1e-9)
 
-    y_array = np.stack(targ_list, axis=0)
-    return X_array.astype(np.float32), y_array.astype(np.float32), feature_names_global, ids
+    return X_array.astype(np.float32), targets_list, feature_names_global, ids
 
-# ---------- fusion avec ancien fichier (écrasement si vide/inexistant) ----------
-def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX):
-    X_path, y_path, id_path = f"{prefix}_X.npy", f"{prefix}_y.npy", f"{prefix}_ids.npy"
+# ---------- FUSION/ÉCRASEMENT ----------
+def merge_with_existing(X_new, targets_new, ids_new, feature_names, prefix=SAVE_PREFIX):
+    X_path, targets_path, id_path = f"{prefix}_X.npy", f"{prefix}_targets.json", f"{prefix}_ids.npy"
 
-    # Vérifie si les fichiers existent et sont non vides
-    files_exist = all(os.path.exists(p) and os.path.getsize(p) > 0 for p in [X_path, y_path, id_path])
+    files_exist = all(os.path.exists(p) and os.path.getsize(p) > 0 for p in [X_path, targets_path, id_path])
 
     if files_exist:
-        X_old = np.load(X_path)
-        y_old = np.load(y_path)
         ids_old = np.load(id_path, allow_pickle=True).tolist()
         new_indices = [i for i, fid in enumerate(ids_new) if fid not in ids_old]
         if not new_indices:
             print("Aucune nouvelle donnée à ajouter.")
-            return X_old, y_old, ids_old
+            return
+        X_old = np.load(X_path)
         X_combined = np.concatenate([X_old, X_new[new_indices]], axis=0)
-        y_combined = np.concatenate([y_old, y_new[new_indices]], axis=0)
+        targets_old = json.load(open(targets_path, encoding="utf-8"))
+        targets_combined = targets_old + [targets_new[i] for i in new_indices]
         ids_combined = ids_old + [ids_new[i] for i in new_indices]
     else:
-        # Fichiers inexistants ou vides → écrasement
-        X_combined, y_combined, ids_combined = X_new, y_new, ids_new
+        X_combined, targets_combined, ids_combined = X_new, targets_new, ids_new
 
     np.save(X_path, X_combined)
-    np.save(y_path, y_combined)
     np.save(id_path, np.array(ids_combined))
+    with open(targets_path, "w", encoding="utf-8") as f:
+        json.dump(targets_combined, f, ensure_ascii=False, indent=2)
     with open(f"{prefix}_feature_names.txt", "w", encoding="utf-8") as f:
         for n in feature_names:
             f.write(n + "\n")
 
     print(f"Fichiers mis à jour ({len(ids_combined)} séquences totales)")
-    return X_combined, y_combined, ids_combined
 
-# ---------- main ----------
+# ---------- MAIN ----------
 def main():
     data = load_json(DATA_PATH)
-    X, y, feature_names, ids = assemble_sequences(data)
-    X, y, ids = merge_with_existing(X, y, ids, feature_names)
+    X, targets, feature_names, ids = assemble_sequences(data)
+    merge_with_existing(X, targets, ids, feature_names)
     print("Forme X:", X.shape)
-    print("Forme y:", y.shape)
+    print("Exemple cible:", targets[0])
 
 if __name__ == "__main__":
     main()
