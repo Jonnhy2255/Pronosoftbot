@@ -97,24 +97,37 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
     return np.array(feat, dtype=np.float32), names
 
 # ---------- CIBLES ----------
-def target_builder(match: Dict[str, Any]) -> Dict[str, Any]:
+def target_builder(match: Dict[str, Any]) -> List[float]:
     """
-    Extrait toutes les cibles de prédiction du JSON.
+    Convertit les cibles en un vecteur numérique unique :
+    [1x2, double_chance, over_under, btts]
     """
     targets = match.get("predict_targets", {})
     ft = targets.get("fulltime", {})
 
-    target_1x2 = ft.get("1x2", [])
-    target_double = ft.get("double_chance", [])
-    target_ou = ft.get("over_under", [])
-    target_btts = ft.get("btts", [])
+    t1x2 = ft.get("1x2", [None])[0]
+    tdc = ft.get("double_chance", [None])[0]
+    tou = ft.get("over_under", [None])[0]
+    tbtts = ft.get("btts", [None])[0]
 
-    return {
-        "1x2": target_1x2[0] if target_1x2 else None,
-        "double_chance": target_double,
-        "over_under": target_ou,
-        "btts": target_btts[0] if target_btts else None
-    }
+    def encode(val):
+        if val is None:
+            return 0.0
+        if isinstance(val, str):
+            if val in ["1", "1X", "X1"]:
+                return 1.0
+            if val in ["X2", "2X", "2"]:
+                return 2.0
+            if val.lower() in ["over", "oui", "yes"]:
+                return 1.0
+            if val.lower() in ["under", "non", "no"]:
+                return 0.0
+        try:
+            return float(val)
+        except:
+            return 0.0
+
+    return [encode(t1x2), encode(tdc), encode(tou), encode(tbtts)]
 
 # ---------- ASSEMBLAGE ----------
 def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
@@ -179,13 +192,22 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
         for j in num_indices:
             X_array[i, :, j] = (X_array[i, :, j] - scaler.mean_[num_indices.index(j)]) / (scaler.scale_[num_indices.index(j)] + 1e-9)
 
-    return X_array.astype(np.float32), targets_list, feature_names_global, ids
+    y_array = np.array(targets_list, dtype=np.float32)
+    return X_array.astype(np.float32), y_array, feature_names_global, ids
 
 # ---------- FUSION/ÉCRASEMENT ----------
-def merge_with_existing(X_new, targets_new, ids_new, feature_names, prefix=SAVE_PREFIX):
-    X_path, targets_path, id_path = f"{prefix}_X.npy", f"{prefix}_targets.json", f"{prefix}_ids.npy"
+def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX):
+    X_path, y_path, id_path = f"{prefix}_X.npy", f"{prefix}_y.npy", f"{prefix}_ids.npy"
 
-    files_exist = all(os.path.exists(p) and os.path.getsize(p) > 0 for p in [X_path, targets_path, id_path])
+    # Si les fichiers existent mais sont vides → on les écrase
+    if all(os.path.exists(p) for p in [X_path, y_path, id_path]):
+        if os.path.getsize(X_path) == 0 or os.path.getsize(y_path) == 0 or os.path.getsize(id_path) == 0:
+            print("⚠️ Fichiers vides détectés → réinitialisation.")
+            os.remove(X_path)
+            os.remove(y_path)
+            os.remove(id_path)
+
+    files_exist = all(os.path.exists(p) for p in [X_path, y_path, id_path])
 
     if files_exist:
         ids_old = np.load(id_path, allow_pickle=True).tolist()
@@ -194,30 +216,29 @@ def merge_with_existing(X_new, targets_new, ids_new, feature_names, prefix=SAVE_
             print("Aucune nouvelle donnée à ajouter.")
             return
         X_old = np.load(X_path)
+        y_old = np.load(y_path)
         X_combined = np.concatenate([X_old, X_new[new_indices]], axis=0)
-        targets_old = json.load(open(targets_path, encoding="utf-8"))
-        targets_combined = targets_old + [targets_new[i] for i in new_indices]
+        y_combined = np.concatenate([y_old, y_new[new_indices]], axis=0)
         ids_combined = ids_old + [ids_new[i] for i in new_indices]
     else:
-        X_combined, targets_combined, ids_combined = X_new, targets_new, ids_new
+        X_combined, y_combined, ids_combined = X_new, y_new, ids_new
 
     np.save(X_path, X_combined)
+    np.save(y_path, y_combined)
     np.save(id_path, np.array(ids_combined))
-    with open(targets_path, "w", encoding="utf-8") as f:
-        json.dump(targets_combined, f, ensure_ascii=False, indent=2)
     with open(f"{prefix}_feature_names.txt", "w", encoding="utf-8") as f:
         for n in feature_names:
             f.write(n + "\n")
 
-    print(f"Fichiers mis à jour ({len(ids_combined)} séquences totales)")
+    print(f"✅ Fichiers mis à jour ({len(ids_combined)} séquences totales)")
+    print(f"→ X.shape = {X_combined.shape}, y.shape = {y_combined.shape}")
 
 # ---------- MAIN ----------
 def main():
     data = load_json(DATA_PATH)
-    X, targets, feature_names, ids = assemble_sequences(data)
-    merge_with_existing(X, targets, ids, feature_names)
-    print("Forme X:", X.shape)
-    print("Exemple cible:", targets[0])
+    X, y, feature_names, ids = assemble_sequences(data)
+    merge_with_existing(X, y, ids, feature_names)
+    print("Exemple cible (y[0]):", y[0])
 
 if __name__ == "__main__":
     main()
