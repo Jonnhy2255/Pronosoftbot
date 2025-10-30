@@ -63,14 +63,11 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
             return {k: 0.0 for k in HIST_MATCH_STATS_KEYS + ["score_home", "score_away", "result_view", "was_home"]}
         stats = entry.get("stats", {}) or {}
         out = {}
-        # Stats historiques
         for k in HIST_MATCH_STATS_KEYS:
             if k in stats:
                 out[k] = safe_float(stats.get(k, 0.0))
             else:
-                # Pour classement et points
                 out[k] = safe_float(entry.get(k, 0.0))
-        # Scores et résultat
         sh = safe_float(entry.get("score_home", 0))
         sa = safe_float(entry.get("score_away", 0))
         out["score_home"] = sh
@@ -89,11 +86,9 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
         feat.append(float(away_feats[k]))
         names.append(f"away_{k}")
 
-    # Perspective
     feat.extend([1.0 if perspective == "home" else 0.0, 1.0 if perspective == "away" else 0.0])
     names.extend(["perspective_is_home", "perspective_is_away"])
 
-    # One-hot
     if include_onehot and team_onehots:
         for cat in CATEGORICAL_FEATURES:
             for c in team_onehots.get(cat, []):
@@ -163,7 +158,6 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
         if feature_names_global is None:
             feature_names_global = names_for_timestep
 
-    # Standardisation
     seq_len = seq_list[0].shape[0]
     n_feats = seq_list[0].shape[1]
     all_flat = np.concatenate([s.reshape(-1, n_feats) for s in all_timesteps], axis=0)
@@ -183,11 +177,14 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
     y_array = np.stack(targ_list, axis=0)
     return X_array.astype(np.float32), y_array.astype(np.float32), feature_names_global, ids
 
-# ---------- fusion avec ancien fichier ----------
+# ---------- fusion avec ancien fichier (écrasement si vide/inexistant) ----------
 def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX):
     X_path, y_path, id_path = f"{prefix}_X.npy", f"{prefix}_y.npy", f"{prefix}_ids.npy"
 
-    if os.path.exists(X_path) and os.path.exists(y_path) and os.path.exists(id_path):
+    # Vérifie si les fichiers existent et sont non vides
+    files_exist = all(os.path.exists(p) and os.path.getsize(p) > 0 for p in [X_path, y_path, id_path])
+
+    if files_exist:
         X_old = np.load(X_path)
         y_old = np.load(y_path)
         ids_old = np.load(id_path, allow_pickle=True).tolist()
@@ -199,6 +196,7 @@ def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX
         y_combined = np.concatenate([y_old, y_new[new_indices]], axis=0)
         ids_combined = ids_old + [ids_new[i] for i in new_indices]
     else:
+        # Fichiers inexistants ou vides → écrasement
         X_combined, y_combined, ids_combined = X_new, y_new, ids_new
 
     np.save(X_path, X_combined)
@@ -219,4 +217,5 @@ def main():
     print("Forme X:", X.shape)
     print("Forme y:", y.shape)
 
-if __name__ ==
+if __name__ == "__main__":
+    main()
