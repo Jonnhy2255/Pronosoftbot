@@ -13,6 +13,7 @@ SAVE_PREFIX = "hist_seq"
 INCLUDE_TEAM_ONEHOT = True
 # ---------------------------
 
+# Features historiques des matchs (stats + classement + points)
 HIST_MATCH_STATS_KEYS = [
     "possession_home", "possession_away",
     "shots_on_goal_home", "shots_on_goal_away",
@@ -20,11 +21,13 @@ HIST_MATCH_STATS_KEYS = [
     "corner_kicks_home", "corner_kicks_away",
     "saves_home", "saves_away",
     "yellow_cards_home", "yellow_cards_away",
+    "classement_home", "classement_away",
+    "points_classement_home", "points_classement_away"
 ]
+
 CATEGORICAL_FEATURES = ["HomeTeam", "AwayTeam", "league"]
 
 # ---------- utilitaires ----------
-
 def load_json(path: Path) -> Dict[str, Any]:
     with path.open(encoding="utf-8") as f:
         return json.load(f)
@@ -50,7 +53,6 @@ def build_team_onehot_maps(predictions: List[Dict[str, Any]]) -> Dict[str, List[
     return maps
 
 # ---------- construction des vecteurs ----------
-
 def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any],
                           perspective: str, team_onehots: Dict[str, List[str]],
                           include_onehot: bool) -> Tuple[np.ndarray, List[str]]:
@@ -61,12 +63,19 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
             return {k: 0.0 for k in HIST_MATCH_STATS_KEYS + ["score_home", "score_away", "result_view", "was_home"]}
         stats = entry.get("stats", {}) or {}
         out = {}
+        # Stats historiques
         for k in HIST_MATCH_STATS_KEYS:
-            out[k] = safe_float(stats.get(k, 0.0))
-        out["score_home"] = safe_float(entry.get("score_home", 0))
-        out["score_away"] = safe_float(entry.get("score_away", 0))
+            if k in stats:
+                out[k] = safe_float(stats.get(k, 0.0))
+            else:
+                # Pour classement et points
+                out[k] = safe_float(entry.get(k, 0.0))
+        # Scores et résultat
+        sh = safe_float(entry.get("score_home", 0))
+        sa = safe_float(entry.get("score_away", 0))
+        out["score_home"] = sh
+        out["score_away"] = sa
         out["was_home"] = 1.0 if team_role == "home_entry" else 0.0
-        sh, sa = out["score_home"], out["score_away"]
         out["result_view"] = 1.0 if (sh > sa if team_role == "home_entry" else sa > sh) else (0.0 if sh == sa else -1.0)
         return out
 
@@ -80,9 +89,11 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
         feat.append(float(away_feats[k]))
         names.append(f"away_{k}")
 
+    # Perspective
     feat.extend([1.0 if perspective == "home" else 0.0, 1.0 if perspective == "away" else 0.0])
     names.extend(["perspective_is_home", "perspective_is_away"])
 
+    # One-hot
     if include_onehot and team_onehots:
         for cat in CATEGORICAL_FEATURES:
             for c in team_onehots.get(cat, []):
@@ -92,7 +103,6 @@ def build_timestep_vector(home_entry: Dict[str, Any], away_entry: Dict[str, Any]
     return np.array(feat, dtype=np.float32), names
 
 # ---------- cible ----------
-
 def target_builder(match: Dict[str, Any]) -> np.ndarray:
     ft = match.get("actual_scores", {}).get("fulltime", {})
     if not ft:
@@ -107,7 +117,6 @@ def target_builder(match: Dict[str, Any]) -> np.ndarray:
         return np.array([0,0,1], dtype=np.float32)
 
 # ---------- assemblage séquences ----------
-
 def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
                        fusion=FUSION_STRATEGY, include_onehot=INCLUDE_TEAM_ONEHOT):
     preds = data.get("predictions", [])
@@ -154,6 +163,7 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
         if feature_names_global is None:
             feature_names_global = names_for_timestep
 
+    # Standardisation
     seq_len = seq_list[0].shape[0]
     n_feats = seq_list[0].shape[1]
     all_flat = np.concatenate([s.reshape(-1, n_feats) for s in all_timesteps], axis=0)
@@ -173,8 +183,7 @@ def assemble_sequences(data: Dict[str, Any], lookback=LOOKBACK,
     y_array = np.stack(targ_list, axis=0)
     return X_array.astype(np.float32), y_array.astype(np.float32), feature_names_global, ids
 
-# ---------- fusion sans doublons ----------
-
+# ---------- fusion avec ancien fichier ----------
 def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX):
     X_path, y_path, id_path = f"{prefix}_X.npy", f"{prefix}_y.npy", f"{prefix}_ids.npy"
 
@@ -182,12 +191,10 @@ def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX
         X_old = np.load(X_path)
         y_old = np.load(y_path)
         ids_old = np.load(id_path, allow_pickle=True).tolist()
-
         new_indices = [i for i, fid in enumerate(ids_new) if fid not in ids_old]
         if not new_indices:
             print("Aucune nouvelle donnée à ajouter.")
             return X_old, y_old, ids_old
-
         X_combined = np.concatenate([X_old, X_new[new_indices]], axis=0)
         y_combined = np.concatenate([y_old, y_new[new_indices]], axis=0)
         ids_combined = ids_old + [ids_new[i] for i in new_indices]
@@ -205,7 +212,6 @@ def merge_with_existing(X_new, y_new, ids_new, feature_names, prefix=SAVE_PREFIX
     return X_combined, y_combined, ids_combined
 
 # ---------- main ----------
-
 def main():
     data = load_json(DATA_PATH)
     X, y, feature_names, ids = assemble_sequences(data)
@@ -213,5 +219,4 @@ def main():
     print("Forme X:", X.shape)
     print("Forme y:", y.shape)
 
-if __name__ == "__main__":
-    main()
+if __name__ ==
