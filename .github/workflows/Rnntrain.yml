@@ -1,9 +1,7 @@
 name: Prepare RNN sequences and commit results
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 3 * * *'  # Exécution automatique chaque jour à 03h UTC
+  workflow_dispatch:  # Exécution manuelle seulement
 
 permissions:
   contents: write  # Autorise le push vers le dépôt
