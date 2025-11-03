@@ -9,6 +9,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0"
 }
 
+# === Toutes les ligues avec leurs fichiers JSON ===
 LEAGUES = {
     "Premier League": {"code": "eng.1", "json": "p_league.json"},
     "LaLiga": {"code": "esp.1", "json": "laliga.json"},
@@ -38,9 +39,11 @@ LEAGUES = {
     "Switzerland - Super League": {"code": "sui.1", "json": "Switzerland_Super_League.json"},
     "Turkey - Super Lig": {"code": "tur.1", "json": "Turkey_Super_Lig.json"},
     "USA - Major League Soccer": {"code": "usa.1", "json": "USA_Major_League_Soccer.json"},
-    "Venezuela - Primera Division": {"code": "ven.1", "json": "Venezuela_Primera_Division.json"}
+    "Venezuela - Primera Division": {"code": "ven.1", "json": "Venezuela_Primera_Division.json"},
+    "UEFA Champions League": {"code": "uefa.champions", "json": "UEFA_Champions_League.json"},
+    "UEFA Europa League": {"code": "uefa.europa", "json": "UEFA_Europa_League.json"},
+    "FIFA Club World Cup": {"code": "fifa.cwc", "json": "FIFA_Club_World_Cup.json"}
 }
-
 
 def safe_load_json(json_path: str):
     """Charge un fichier JSON même vide ou corrompu."""
@@ -59,14 +62,13 @@ def safe_load_json(json_path: str):
         print(f"⚠️ Fichier {json_path} vide ou invalide, recréé.")
         return {}
 
-
-# Dates à traiter : avant-hier et hier (UTC)
+# === Dates à traiter ===
 dates_to_fetch = [
     (datetime.now(timezone.utc) - timedelta(days=2)).strftime("%Y%m%d"),
     (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y%m%d")
 ]
 
-
+# === Boucle sur toutes les ligues ===
 for league_name, league_info in LEAGUES.items():
     BASE_URL = f"https://www.espn.com/soccer/schedule/_/date/{{date}}/league/{league_info['code']}"
     JSON_FILE = league_info["json"]
@@ -75,13 +77,12 @@ for league_name, league_info in LEAGUES.items():
     total_new = 0
 
     for date_str in dates_to_fetch:
-        print(f"\n📅 Récupération des matchs du {date_str} pour {league_name}...")
-
+        print(f"\n📅 {league_name} - récupération matchs du {date_str}")
         try:
             res = requests.get(BASE_URL.format(date=date_str), headers=HEADERS, timeout=15)
             soup = BeautifulSoup(res.content, "html.parser")
         except Exception as e:
-            print(f"⚠️ Erreur de requête pour {league_name}: {e}")
+            print(f"⚠️ Erreur réseau {league_name} ({date_str}): {e}")
             continue
 
         tables = soup.select("div.ResponsiveTable")
@@ -94,19 +95,15 @@ for league_name, league_info in LEAGUES.items():
             rows = table.select("tbody > tr.Table__TR")
             for row in rows:
                 try:
-                    away_team_tag = row.select_one("td.events__col span.Table__Team.away a.AnchorLink:last-child")
-                    home_team_tag = row.select_one("td.colspan__col span.Table__Team a.AnchorLink:last-child")
-                    score_tag = row.select_one("td.colspan__col a.AnchorLink.at")
-
-                    if not away_team_tag or not home_team_tag or not score_tag:
+                    teams = row.select("span.Table__Team a.AnchorLink:last-child")
+                    score_tag = row.select_one("a.AnchorLink.at")
+                    if len(teams) != 2 or not score_tag:
                         continue
 
-                    team1 = away_team_tag.text.strip()
-                    team2 = home_team_tag.text.strip()
+                    team1 = teams[0].text.strip()
+                    team2 = teams[1].text.strip()
                     score = score_tag.text.strip()
 
-                    if "USMNT" in team1 or "USWNT" in team1 or "USMNT" in team2 or "USWNT" in team2:
-                        continue
                     if score.lower() == "v":
                         continue
 
@@ -117,7 +114,7 @@ for league_name, league_info in LEAGUES.items():
 
                     game_id = match_id_match.group(1)
                     if game_id in existing_matches:
-                        continue  # déjà présent
+                        continue
 
                     match_data = {
                         "gameId": game_id,
@@ -131,17 +128,16 @@ for league_name, league_info in LEAGUES.items():
 
                     new_matches[game_id] = match_data
                     existing_matches[game_id] = match_data
-
                 except Exception as e:
-                    print(f"⚠️ Erreur parsing {league_name}: {e}")
+                    print(f"⚠️ Parsing {league_name} ({date_str}): {e}")
                     continue
 
         total_new += len(new_matches)
-        print(f"✅ {league_name}: {len(new_matches)} nouveaux matchs ajoutés pour {date_str}.")
+        print(f"✅ {league_name}: {len(new_matches)} nouveaux matchs pour {date_str}")
 
     try:
         with open(JSON_FILE, "w", encoding="utf-8") as f:
             json.dump(list(existing_matches.values()), f, indent=2, ensure_ascii=False)
-        print(f"💾 {league_name} sauvegardé : {len(existing_matches)} matchs au total (+{total_new}).")
+        print(f"💾 {league_name} sauvegardé : {len(existing_matches)} matchs (+{total_new} nouveaux).")
     except Exception as e:
-        print(f"⚠️ Erreur d’écriture dans {JSON_FILE}: {e}")
+        print(f"⚠️ Erreur écriture {JSON_FILE}: {e}")
