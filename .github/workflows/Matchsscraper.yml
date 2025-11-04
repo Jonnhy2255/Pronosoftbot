@@ -31,7 +31,7 @@ jobs:
 
       # 5️⃣ Lancer le script de mise à jour
       - name: 🔄 Lancer ligues.py
-        run: python ligues.py
+        run: python p-league.py
 
       # 6️⃣ Commit et push uniquement si des fichiers ont changé
       - name: 🆙 Commit et Push si changements
