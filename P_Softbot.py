@@ -68,66 +68,26 @@ team_name_mapping = {
     "remo": "Remo",
 }
 
+# ------------------------------------------------------------
+# Ajout des ligues demandées (IDs extraits depuis leagues.json)
+# ------------------------------------------------------------
+# UEFA Champions League (id=2)
+# UEFA Europa League (id=3)
+# FIFA Club World Cup (Coupe du Monde des Clubs) (id=15)
+#
+# On ajoute ici des entrées dans classement_ligue_mapping si on veut
+# que le scraper de classement puisse récupérer le classement (URL ESPN)
+# pour ces compétitions. Pour la CL/EL/Club World Cup, ESPN a des pages
+# de standings pour les compétitions à phases de groupe mais elles peuvent
+# être différentes. J'ajoute des placeholders avec odds_id par défaut.
+# Adaptez les URL ESPN si vous avez des pages spécifiques.
+
 classement_ligue_mapping = {
-    "Colombia": {
-        "Primera A": {
-            "url": "https://www.espn.com/soccer/standings/_/league/col.1",
-            "odds_id": "none",
-            "data_json": "Colombia_Primera_A.json"
-        }
-    },
-    "France": {
-        "Ligue 1": {
-            "url": "https://www.espn.com/soccer/standings/_/league/fra.1",
-            "odds_id": "soccer_france_ligue_one",
-            "data_json": "France_Ligue_1.json"
-        }
-    },
-    "Belgium": {
-        "Jupiler Pro League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/bel.1",
-            "odds_id": "soccer_belgium_first_div",
-            "data_json": "Belgium_Jupiler_Pro_League.json"
-        }
-    },
-    "England": {
-        "Premier League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
-            "odds_id": "soccer_epl",
-            "data_json": "p_league.json"
-        },
-        "National League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/eng.5",
-            "odds_id": "none",
-            "data_json": "England_National_League.json"
-        }
-    },
-    "Netherlands": {
-        "Eredivisie": {
-            "url": "https://www.espn.com/soccer/standings/_/league/ned.1",
-            "odds_id": "soccer_netherlands_eredivisie",
-            "data_json": "Netherlands_Eredivisie.json"
-        }
-    },
-    "Portugal": {
-        "Primeira Liga": {
-            "url": "https://www.espn.com/soccer/standings/_/league/por.1",
-            "odds_id": "soccer_portugal_primeira_liga",
-            "data_json": "Portugal_Primeira_Liga.json"
-        }
-    },
-    "Spain": {
-        "La Liga": {
-            "url": "https://www.espn.com/soccer/standings/_/league/esp.1",
-            "odds_id": "soccer_spain_la_liga",
-            "data_json": "laliga.json"
-        }
-    },
-    "Germany": {
-        "Bundesliga": {
-            "url": "https://www.espn.com/soccer/standings/_/league/ger.1",
-            "odds_id": "soccer_germany_bundesliga",
-            "data_json": "bundesliga.json"
+    "Argentina": {
+        "Primera Nacional": {
+            "url": "https://www.espn.com/soccer/standings/_/league/arg.2",
+            "odds_id": "soccer_argentina_primera_division",
+            "data_json": "Argentina_Primera_Nacional.json"
         }
     },
     "Austria": {
@@ -137,11 +97,11 @@ classement_ligue_mapping = {
             "data_json": "Austria_Bundesliga.json"
         }
     },
-    "Italy": {
-        "Serie A": {
-            "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
-            "odds_id": "soccer_italy_serie_a",
-            "data_json": "Italy_Serie_A.json"
+    "Belgium": {
+        "Jupiler Pro League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/bel.1",
+            "odds_id": "soccer_belgium_first_div",
+            "data_json": "Belgium_Jupiler_Pro_League.json"
         }
     },
     "Brazil": {
@@ -156,46 +116,11 @@ classement_ligue_mapping = {
             "data_json": "Brazil_Serie_B.json"
         }
     },
-    "Turkey": {
-        "Süper Lig": {
-            "url": "https://www.espn.com/soccer/standings/_/league/tur.1",
-            "odds_id": "soccer_turkey_super_league",
-            "data_json": "Turkey_Super_Lig.json"
-        }
-    },
-    "Mexico": {
-        "Liga MX": {
-            "url": "https://www.espn.com/soccer/standings/_/league/mex.1",
-            "odds_id": "soccer_mexico_ligamx",
-            "data_json": "Mexico_Liga_MX.json"
-        }
-    },
-    "USA": {
-        "Major League Soccer": {
-            "url": "https://www.espn.com/soccer/standings/_/league/usa.1",
-            "odds_id": "soccer_usa_mls",
-            "data_json": "USA_Major_League_Soccer.json"
-        }
-    },
-    "Japan": {
-        "J1 League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/jpn.1",
-            "odds_id": "soccer_japan_j_league",
-            "data_json": "Japan_J1_League.json"
-        }
-    },
-    "Saudi-Arabia": {
-        "Pro League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/ksa.1",
-            "odds_id": "none",
-            "data_json": "Saudi_Arabia_Pro_League.json"
-        }
-    },
-    "Switzerland": {
-        "Super League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/sui.1",
-            "odds_id": "soccer_switzerland_superleague",
-            "data_json": "Switzerland_Super_League.json"
+    "Chile": {
+        "Primera División": {
+            "url": "https://www.espn.com/soccer/standings/_/league/chi.1",
+            "odds_id": "soccer_chile_campeonato",
+            "data_json": "Chile_Primera_Division.json"
         }
     },
     "China": {
@@ -205,11 +130,37 @@ classement_ligue_mapping = {
             "data_json": "China_Super_League.json"
         }
     },
-    "Russia": {
-        "Premier League": {
-            "url": "https://www.espn.com/soccer/standings/_/league/rus.1",
+    "Colombia": {
+        "Primera A": {
+            "url": "https://www.espn.com/soccer/standings/_/league/col.1",
             "odds_id": "none",
-            "data_json": "Russia_Premier_League.json"
+            "data_json": "Colombia_Primera_A.json"
+        }
+    },
+    "England": {
+        "National League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/eng.5",
+            "odds_id": "none",
+            "data_json": "England_National_League.json"
+        },
+        "Premier League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/eng.1",
+            "odds_id": "soccer_epl",
+            "data_json": "p_league.json"
+        }
+    },
+    "France": {
+        "Ligue 1": {
+            "url": "https://www.espn.com/soccer/standings/_/league/fra.1",
+            "odds_id": "soccer_france_ligue_one",
+            "data_json": "France_Ligue_1.json"
+        }
+    },
+    "Germany": {
+        "Bundesliga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ger.1",
+            "odds_id": "soccer_germany_bundesliga",
+            "data_json": "bundesliga.json"
         }
     },
     "Greece": {
@@ -219,32 +170,32 @@ classement_ligue_mapping = {
             "data_json": "Greece_Super_League_1.json"
         }
     },
-    "Chile": {
-        "Primera División": {
-            "url": "https://www.espn.com/soccer/standings/_/league/chi.1",
-            "odds_id": "soccer_chile_campeonato",
-            "data_json": "Chile_Primera_Division.json"
+    "Italy": {
+        "Serie A": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ita.1",
+            "odds_id": "soccer_italy_serie_a",
+            "data_json": "Italy_Serie_A.json"
         }
     },
-    "Peru": {
-        "Primera División": {
-            "url": "https://www.espn.com/soccer/standings/_/league/per.1",
-            "odds_id": "none",
-            "data_json": "Peru_Primera_Division.json"
+    "Japan": {
+        "J1 League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/jpn.1",
+            "odds_id": "soccer_japan_j_league",
+            "data_json": "Japan_J1_League.json"
         }
     },
-    "Sweden": {
-        "Allsvenskan": {
-            "url": "https://www.espn.com/soccer/standings/_/league/swe.1",
-            "odds_id": "soccer_sweden_allsvenskan",
-            "data_json": "Sweden_Allsvenskan.json"
+    "Mexico": {
+        "Liga MX": {
+            "url": "https://www.espn.com/soccer/standings/_/league/mex.1",
+            "odds_id": "soccer_mexico_ligamx",
+            "data_json": "Mexico_Liga_MX.json"
         }
     },
-    "Argentina": {
-        "Primera Nacional": {
-            "url": "https://www.espn.com/soccer/standings/_/league/arg.2",
-            "odds_id": "soccer_argentina_primera_division",
-            "data_json": "Argentina_Primera_Nacional.json"
+    "Netherlands": {
+        "Eredivisie": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ned.1",
+            "odds_id": "soccer_netherlands_eredivisie",
+            "data_json": "Netherlands_Eredivisie.json"
         }
     },
     "Paraguay": {
@@ -254,11 +205,18 @@ classement_ligue_mapping = {
             "data_json": "Paraguay_Division_Profesional.json"
         }
     },
-    "Venezuela": {
+    "Peru": {
         "Primera División": {
-            "url": "https://www.espn.com/soccer/standings/_/league/ven.1",
+            "url": "https://www.espn.com/soccer/standings/_/league/per.1",
             "odds_id": "none",
-            "data_json": "Venezuela_Primera_Division.json"
+            "data_json": "Peru_Primera_Division.json"
+        }
+    },
+    "Portugal": {
+        "Primeira Liga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/por.1",
+            "odds_id": "soccer_portugal_primeira_liga",
+            "data_json": "Portugal_Primeira_Liga.json"
         }
     },
     "Romania": {
@@ -266,6 +224,81 @@ classement_ligue_mapping = {
             "url": "https://www.espn.com/soccer/standings/_/league/rou.1",
             "odds_id": "none",
             "data_json": "Romania_Liga_I.json"
+        }
+    },
+    "Russia": {
+        "Premier League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/rus.1",
+            "odds_id": "none",
+            "data_json": "Russia_Premier_League.json"
+        }
+    },
+    "Saudi-Arabia": {
+        "Pro League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ksa.1",
+            "odds_id": "none",
+            "data_json": "Saudi_Arabia_Pro_League.json"
+        }
+    },
+    "Spain": {
+        "La Liga": {
+            "url": "https://www.espn.com/soccer/standings/_/league/esp.1",
+            "odds_id": "soccer_spain_la_liga",
+            "data_json": "laliga.json"
+        }
+    },
+    "Sweden": {
+        "Allsvenskan": {
+            "url": "https://www.espn.com/soccer/standings/_/league/swe.1",
+            "odds_id": "soccer_sweden_allsvenskan",
+            "data_json": "Sweden_Allsvenskan.json"
+        }
+    },
+    "Switzerland": {
+        "Super League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/sui.1",
+            "odds_id": "soccer_switzerland_superleague",
+            "data_json": "Switzerland_Super_League.json"
+        }
+    },
+    "Turkey": {
+        "Süper Lig": {
+            "url": "https://www.espn.com/soccer/standings/_/league/tur.1",
+            "odds_id": "soccer_turkey_super_league",
+            "data_json": "Turkey_Super_Lig.json"
+        }
+    },
+    "USA": {
+        "Major League Soccer": {
+            "url": "https://www.espn.com/soccer/standings/_/league/usa.1",
+            "odds_id": "soccer_usa_mls",
+            "data_json": "USA_Major_League_Soccer.json"
+        }
+    },
+    "Venezuela": {
+        "Primera División": {
+            "url": "https://www.espn.com/soccer/standings/_/league/ven.1",
+            "odds_id": "none",
+            "data_json": "Venezuela_Primera_Division.json"
+        }
+    },
+    "World": {
+        "FIFA Club World Cup": {
+            "url": "https://www.espn.com/soccer/standings/_/league/fifa.cwc",
+            "odds_id": "soccer_club_world_cup",
+            "data_json": "FIFA_Club_World_Cup.json",
+            
+        },
+        "UEFA Champions League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/uefa.champions",
+            "odds_id": "soccer_uefa_champs_league",
+            "data_json": "UEFA_Champions_League.json"
+
+        },
+        "UEFA Europa League": {
+            "url": "https://www.espn.com/soccer/standings/_/league/uefa.europa",
+            "odds_id": "soccer_uefa_europa_league",
+            "data_json": "UEFA_Europa_League.json"
         }
     }
 }
@@ -2172,7 +2205,6 @@ teams_urls = {
         }
     # Ajoutez d'autres équipes si besoin
 }
-
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 PREDICTIONS = []
@@ -2199,7 +2231,7 @@ def get_match_stats(game_id):
 
         stats_section = soup.find("section", {"data-testid": "prism-LayoutCard"})
         stats_divs = stats_section.find_all("div", class_="LOSQp") if stats_section else []
-        
+
         stats = {}
         for div in stats_divs:
             stat_name_tag = div.find("span", class_="OkRBU")
@@ -2267,7 +2299,7 @@ def ajuster_lambda_h2h(lambda_home, lambda_away, h2h_data):
     """
     if not h2h_data:
         return lambda_home, lambda_away
-    
+
     total_home = total_away = 0
     count = 0
     for m in h2h_data:
@@ -2300,24 +2332,25 @@ def simulation_match_montecarlo(stats_home, stats_away, h2h_data=None, n=20000):
     """
     Simulation Monte-Carlo avancée : combine modèle Poisson + calibrage international + H2H.
     Basée uniquement sur les statistiques (sans IA ni cotes).
-    Retourne les probabilités 1X2, double chance, over/under, résultat+total.
+    Retourne les probabilités 1X2, double chance, over/under, BTTS,
+    résultat+total (incluant X2/1X conditionnels), et scores probables.
     """
     print(f"🎲 Démarrage simulation Monte-Carlo avec {n} itérations...")
-    
+
     # ⚽ Moyennes de buts internationales (pondérées FIFA/UEFA)
     base_home_avg = 1.52
     base_away_avg = 1.18
-    
+
     # ⚙️ Calibrage selon les stats des équipes
     lambda_home = (stats_home["moyenne_marques"] + stats_away["moyenne_encaisses"]) / 2
     lambda_away = (stats_away["moyenne_marques"] + stats_home["moyenne_encaisses"]) / 2
-    
+
     # Normalisation par la moyenne internationale
     lambda_home = (lambda_home + base_home_avg) / 2
     lambda_away = (lambda_away + base_away_avg) / 2
 
     print(f"🔢 λ initial: Home={lambda_home:.2f}, Away={lambda_away:.2f}")
-    
+
     # 🆚 Ajustement selon les H2H si disponibles
     if h2h_data:
         lambda_home, lambda_away = ajuster_lambda_h2h(lambda_home, lambda_away, h2h_data)
@@ -2366,9 +2399,17 @@ def simulation_match_montecarlo(stats_home, stats_away, h2h_data=None, n=20000):
         cond_v1 = np.sum((buts_home > buts_away) & (totals > s)) / n * 100
         cond_1x = np.sum(((buts_home >= buts_away) | (buts_home == buts_away)) & (totals > s)) / n * 100
         cond_v2 = np.sum((buts_home < buts_away) & (totals > s)) / n * 100
+
+        # Ajouts demandés : inclure probabilités des combinaisons avec double chance X2/1X
+        cond_x2 = np.sum(((buts_home == buts_away) | (buts_home < buts_away)) & (totals > s)) / n * 100
+        cond_12 = np.sum(((buts_home > buts_away) | (buts_home < buts_away)) & (totals > s)) / n * 100
+
         res_total_combo[f"V1et+{s}"] = round(cond_v1, 2)
         res_total_combo[f"1Xet+{s}"] = round(cond_1x, 2)
         res_total_combo[f"V2et+{s}"] = round(cond_v2, 2)
+        # nouveaux champs pour double chance conditionnelle
+        res_total_combo[f"X2et+{s}"] = round(cond_x2, 2)
+        res_total_combo[f"12et+{s}"] = round(cond_12, 2)
 
     # --- Scores exacts les plus probables ---
     unique_scores, counts = np.unique(list(zip(buts_home, buts_away)), axis=0, return_counts=True)
@@ -2448,14 +2489,14 @@ ANALYSE DE MATCH - {date}
     if odds and odds != {}:
         bookmaker = odds.get('bookmaker', 'N/A')
         prompt += f"Bookmaker : {bookmaker}\n"
-        
+
         h2h = odds.get('h2h', {})
         if h2h:
             prompt += "- 1X2 : "
             for outcome, cote in h2h.items():
                 prompt += f"{outcome} : {cote} | "
             prompt += "\n"
-        
+
         totals = odds.get('totals', {})
         if totals:
             prompt += "- Total 2.5 : "
@@ -2479,9 +2520,9 @@ ANALYSE DE MATCH - {date}
                 status = match['status']
                 game_id = match.get('game_id', 'N/A')
                 url = match.get('url', 'N/A')
-                
+
                 prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status}) [ID: {game_id}]\n"
-                
+
                 # ✅ NOUVEAU : Ajout des statistiques détaillées du match
                 match_stats = match.get('stats', {})
                 if match_stats:
@@ -2507,9 +2548,9 @@ ANALYSE DE MATCH - {date}
                 status = match['status']
                 game_id = match.get('game_id', 'N/A')
                 url = match.get('url', 'N/A')
-                
+
                 prompt += f"  {i}. {date_match} | {team1} vs {team2} : {score} [{competition}] ({status}) [ID: {game_id}]\n"
-                
+
                 # ✅ NOUVEAU : Ajout des statistiques détaillées du match
                 match_stats = match.get('stats', {})
                 if match_stats:
@@ -2530,14 +2571,14 @@ ANALYSE DE MATCH - {date}
             position = team_data.get('position', 'N/A')
             team_name = team_data.get('team', 'N/A')
             points = team_data.get('points', 'N/A')
-            
+
             # Marquer les équipes du match en cours
             marker = ""
             if team_name == home:
                 marker = " ← DOMICILE"
             elif team_name == away:
                 marker = " ← EXTÉRIEUR"
-            
+
             prompt += f"  {position}. {team_name} ({points} pts){marker}\n"
     else:
         prompt += "  Classement complet non disponible\n"
@@ -2554,9 +2595,9 @@ ANALYSE DE MATCH - {date}
             competition_h2h = match.get('competition', 'N/A')
             source_h2h = match.get('source', 'N/A')
             game_id_h2h = match.get('gameId', 'N/A')
-            
+
             prompt += f"  {i}. {date_h2h} | {team1_h2h} vs {team2_h2h} : {score_h2h} [{competition_h2h}] (Source: {source_h2h}) [ID: {game_id_h2h}]\n"
-            
+
             # ✅ NOUVEAU : Ajout des statistiques détaillées H2H
             h2h_stats = match.get('stats', {})
             if h2h_stats:
@@ -2616,7 +2657,7 @@ def extract_confidence_percentage(analyse_ia):
     """
     if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    
+
     # Patterns pour le format avec ** (nouveau format)
     patterns_with_stars = [
         r'\*\*CONFIANCE\*\*\s*:\s*(\d+)\s*%',
@@ -2624,7 +2665,7 @@ def extract_confidence_percentage(analyse_ia):
         r'\*\*confiance\*\*\s*:\s*(\d+)\s*%',
         r'\*\*CONFIANCE\*\*\s*:\s*(\d+)\s*\%',
     ]
-    
+
     # Patterns pour le format simple (ancien format)
     patterns_simple = [
         r'CONFIANCE\s*:\s*(\d+)%',
@@ -2634,7 +2675,7 @@ def extract_confidence_percentage(analyse_ia):
         r'(\d+)%\s*de\s*confiance',
         r'confiance\s*de\s*(\d+)%'
     ]
-    
+
     # Essayer d'abord les patterns avec **
     for pattern in patterns_with_stars:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2646,7 +2687,7 @@ def extract_confidence_percentage(analyse_ia):
                     return percentage
             except ValueError:
                 continue
-    
+
     # Puis essayer les patterns simples
     for pattern in patterns_simple:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2658,7 +2699,7 @@ def extract_confidence_percentage(analyse_ia):
                     return percentage
             except ValueError:
                 continue
-    
+
     print("⚠️ Pourcentage de confiance non trouvé dans l'analyse IA")
     return None
 
@@ -2670,21 +2711,21 @@ def extract_prediction_principale(analyse_ia):
     """
     if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    
+
     # Patterns pour le format avec **
     patterns_with_stars = [
         r'\*\*PRÉDICTION PRINCIPALE\*\*\s*:\s*([^\n\r]+)',
         r'\*\*Prédiction principale\*\*\s*:\s*([^\n\r]+)',
         r'\*\*PREDICTION PRINCIPALE\*\*\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Patterns pour le format simple
     patterns_simple = [
         r'PRÉDICTION PRINCIPALE\s*:\s*([^\n\r]+)',
         r'Prédiction principale\s*:\s*([^\n\r]+)',
         r'PREDICTION PRINCIPALE\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Essayer d'abord les patterns avec **
     for pattern in patterns_with_stars:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2692,7 +2733,7 @@ def extract_prediction_principale(analyse_ia):
             prediction = match.group(1).strip()
             print(f"🎯 Prédiction principale extraite (format **) : {prediction}")
             return prediction
-    
+
     # Puis essayer les patterns simples
     for pattern in patterns_simple:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2700,7 +2741,7 @@ def extract_prediction_principale(analyse_ia):
             prediction = match.group(1).strip()
             print(f"🎯 Prédiction principale extraite (format simple) : {prediction}")
             return prediction
-    
+
     print("⚠️ Prédiction principale non trouvée dans l'analyse IA")
     return None
 
@@ -2711,21 +2752,21 @@ def extract_corners_prevu(analyse_ia):
     """
     if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    
+
     # Patterns pour le format avec **
     patterns_with_stars = [
         r'\*\*CORNERS PRÉVUS\*\*\s*:\s*([^\n\r]+)',
         r'\*\*Corners prévus\*\*\s*:\s*([^\n\r]+)',
         r'\*\*CORNERS PREVUS\*\*\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Patterns pour le format simple
     patterns_simple = [
         r'CORNERS PRÉVUS\s*:\s*([^\n\r]+)',
         r'Corners prévus\s*:\s*([^\n\r]+)',
         r'CORNERS PREVUS\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Essayer d'abord les patterns avec **
     for pattern in patterns_with_stars:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2733,7 +2774,7 @@ def extract_corners_prevu(analyse_ia):
             corners = match.group(1).strip()
             print(f"📐 Corners prévus extraits (format **) : {corners}")
             return corners
-    
+
     # Puis essayer les patterns simples
     for pattern in patterns_simple:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2741,7 +2782,7 @@ def extract_corners_prevu(analyse_ia):
             corners = match.group(1).strip()
             print(f"📐 Corners prévus extraits (format simple) : {corners}")
             return corners
-    
+
     print("⚠️ Corners prévus non trouvés dans l'analyse IA")
     return None
 
@@ -2752,21 +2793,21 @@ def extract_tirs_cadres_prevu(analyse_ia):
     """
     if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    
+
     # Patterns pour le format avec **
     patterns_with_stars = [
         r'\*\*TIRS CADRÉS PRÉVUS\*\*\s*:\s*([^\n\r]+)',
         r'\*\*Tirs cadrés prévus\*\*\s*:\s*([^\n\r]+)',
         r'\*\*TIRS CADRES PREVUS\*\*\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Patterns pour le format simple
     patterns_simple = [
         r'TIRS CADRÉS PRÉVUS\s*:\s*([^\n\r]+)',
         r'Tirs cadrés prévus\s*:\s*([^\n\r]+)',
         r'TIRS CADRES PREVUS\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Essayer d'abord les patterns avec **
     for pattern in patterns_with_stars:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2774,7 +2815,7 @@ def extract_tirs_cadres_prevu(analyse_ia):
             tirs = match.group(1).strip()
             print(f"🎯 Tirs cadrés prévus extraits (format **) : {tirs}")
             return tirs
-    
+
     # Puis essayer les patterns simples
     for pattern in patterns_simple:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2782,7 +2823,7 @@ def extract_tirs_cadres_prevu(analyse_ia):
             tirs = match.group(1).strip()
             print(f"🎯 Tirs cadrés prévus extraits (format simple) : {tirs}")
             return tirs
-    
+
     print("⚠️ Tirs cadrés prévus non trouvés dans l'analyse IA")
     return None
 
@@ -2793,21 +2834,21 @@ def extract_scores_probables(analyse_ia):
     """
     if not analyse_ia or isinstance(analyse_ia, str) and analyse_ia.startswith("❌"):
         return None
-    
+
     # Patterns pour le format avec **
     patterns_with_stars = [
         r'\*\*SCORES PROBABLES\*\*\s*:\s*([^\n\r]+)',
         r'\*\*Scores probables\*\*\s*:\s*([^\n\r]+)',
         r'\*\*SCORES PROBABLES\*\*\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Patterns pour le format simple
     patterns_simple = [
         r'SCORES PROBABLES\s*:\s*([^\n\r]+)',
         r'Scores probables\s*:\s*([^\n\r]+)',
         r'SCORES PROBABLES\s*:\s*([^\n\r]+)',
     ]
-    
+
     # Essayer d'abord les patterns avec **
     for pattern in patterns_with_stars:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2815,7 +2856,7 @@ def extract_scores_probables(analyse_ia):
             scores = match.group(1).strip()
             print(f"⚽ Scores probables extraits (format **) : {scores}")
             return scores
-    
+
     # Puis essayer les patterns simples
     for pattern in patterns_simple:
         match = re.search(pattern, analyse_ia, re.IGNORECASE)
@@ -2823,7 +2864,7 @@ def extract_scores_probables(analyse_ia):
             scores = match.group(1).strip()
             print(f"⚽ Scores probables extraits (format simple) : {scores}")
             return scores
-    
+
     print("⚠️ Scores probables non trouvés dans l'analyse IA")
     return None
 
@@ -2919,15 +2960,15 @@ class ClassementScraper:
             response = requests.get(self.url, headers=self.headers)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
-            
+
             # 1. Extraire les noms d'équipes
             team_divs = soup.select('.team-link .hide-mobile a')
             team_names = [tag.text.strip() for tag in team_divs]
-            
+
             # 2. Extraire les points (8e cellule de chaque ligne dans le 2e tableau)
             stat_rows = soup.select('.Table__Scroller .Table__TBODY > tr')
             team_points = []
-            
+
             for row in stat_rows:
                 cells = row.find_all("td")
                 if len(cells) >= 8:
@@ -2936,10 +2977,10 @@ class ClassementScraper:
                     except ValueError:
                         points = None
                     team_points.append(points)
-            
+
             # 3. Combiner équipes + points et créer le dictionnaire de positions
             teams_data = list(zip(team_names, team_points))
-            
+
             print(f"🏆 Classement extrait de {self.url}:")
             for i, (team, pts) in enumerate(teams_data, start=1):
                 if team and pts is not None:
@@ -2957,11 +2998,11 @@ class ClassementScraper:
     def get_position(self, team_query):
         # Utiliser le mapping pour convertir le nom API vers le nom ESPN
         mapped_team_name = team_name_mapping.get(team_query, team_query)
-        
+
         # Recherche exacte d'abord
         if mapped_team_name.lower() in self.teams_positions:
             return self.teams_positions[mapped_team_name.lower()]
-        
+
         # Recherche partielle ensuite
         for key, (position, full_name, points) in self.teams_positions.items():
             if mapped_team_name.lower() in key or key in mapped_team_name.lower():
@@ -2978,24 +3019,24 @@ def get_team_classement_position(country, league, team_name):
     if not league_info:
         print(f"⚠️ Informations de ligue introuvables pour {country} - {league}")
         return None, None, None, []
-    
+
     url = league_info["url"]
     odds_id = league_info["odds_id"]
-    
+
     print(f"🔍 Recherche classement pour {team_name} dans {country} - {league} (odds_id: {odds_id})")
     scraper = ClassementScraper(url)
     scraper.scrape_table()
-    
+
     # Utiliser le mapping pour convertir le nom API vers le nom ESPN
     mapped_team_name = team_name_mapping.get(team_name, team_name)
     position, full_name, points = scraper.get_position(mapped_team_name)
     full_standings = scraper.get_full_standings()
-    
+
     if position:
         print(f"✅ {full_name} trouvé à la position {position} avec {points} points")
     else:
         print(f"❌ {team_name} (mappé: {mapped_team_name}) non trouvé dans le classement")
-    
+
     return position, full_name, points, full_standings
 
 def get_espn_name(api_team_name):
@@ -3023,36 +3064,36 @@ def get_h2h_confrontations(home_team_espn, away_team_espn):
     définis dans classement_ligue_mapping avec récupération des statistiques détaillées via gameId
     """
     confrontations = []
-    
+
     # Parcourir tous les pays et ligues dans classement_ligue_mapping
     for country, leagues in classement_ligue_mapping.items():
         for league_name, league_info in leagues.items():
             data_json = league_info.get("data_json", "none")
-            
+
             # Ignorer si pas de fichier JSON défini
             if data_json == "none" or not data_json:
                 continue
-            
+
             if not os.path.exists(data_json):
                 print(f"⚠️ Fichier {data_json} ({league_name}) non trouvé")
                 continue
-            
+
             try:
                 with open(data_json, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                
+
                 matchs_trouvés = 0
                 # Parcourir tous les matchs dans le fichier JSON
                 for match in data:
                     team1 = match.get("team1", "")
                     team2 = match.get("team2", "")
-                    
+
                     # Vérifier si les deux équipes correspondent (dans un sens ou l'autre)
                     if ((team1 == home_team_espn and team2 == away_team_espn) or 
                         (team1 == away_team_espn and team2 == home_team_espn)):
-                        
+
                         match["source"] = league_name  # Ajouter la source du championnat
-                        
+
                         # ✅ NOUVEAU : Récupérer les statistiques détaillées si gameId disponible
                         game_id = match.get("gameId", "N/A")
                         if game_id != "N/A":
@@ -3063,16 +3104,16 @@ def get_h2h_confrontations(home_team_espn, away_team_espn):
                                 print(f"📊 {len(h2h_stats)} statistiques H2H récupérées pour {team1} vs {team2}")
                         else:
                             match["stats"] = {}
-                        
+
                         confrontations.append(match)
                         matchs_trouvés += 1
-                
+
                 if matchs_trouvés > 0:
                     print(f"🆚 {matchs_trouvés} confrontation(s) trouvée(s) dans {league_name}")
-            
+
             except Exception as e:
                 print(f"❌ Erreur lors de la lecture de {data_json} ({league_name}) : {e}")
-    
+
     print(f"🆚 Total : {len(confrontations)} confrontation(s) directe(s) trouvée(s) pour {home_team_espn} vs {away_team_espn}")
     return confrontations
 
@@ -3083,7 +3124,7 @@ def get_today_matches_filtered():
         "date": today,
         "timezone": "Africa/Abidjan"
     }
-    allowed_league_ids = [72, 265, 281, 218, 113, 129, 250, 252, 299, 283, 43, 239, 61, 144, 39, 88, 94, 140, 197, 203, 98, 383, 207, 169, 235, 262, 307, 71, 253, 78, 135]
+    allowed_league_ids = [72, 3, 2, 15, 265, 281, 218, 113, 129, 250, 252, 299, 283, 43, 239, 61, 144, 39, 88, 94, 140, 197, 203, 98, 383, 207, 169, 235, 262, 307, 71, 253, 78, 135]
     résultats = []
     try:
         response = requests.get(url, headers=api_headers, params=params)
@@ -3109,7 +3150,7 @@ def get_today_matches_filtered():
                 # Utiliser le mapping pour les noms ESPN
                 home_espn = get_espn_name(home_api)
                 away_espn = get_espn_name(away_api)
-                
+
                 # Récupérer fixture_id du match actuel (API-Football)
                 fixture_id = match.get('fixture', {}).get('id')
 
@@ -3132,12 +3173,12 @@ def get_today_matches_filtered():
                         process_team(away_api)
                     else:
                         FAILED_TEAMS.add(away_api)
-        
+
         # ✅ CORRECTION 1 : Récupérer le chemin retourné par sauvegarder_stats_brutes_json
         if résultats:
             chemin = sauvegarder_stats_brutes_json(résultats, today)  # ✅ Récupérer le chemin
             git_commit_and_push(chemin)  # ✅ Utiliser le bon chemin
-        
+
         if FAILED_TEAMS:
             save_failed_teams_json(FAILED_TEAMS, today)
         if IGNORED_ZERO_FORM_TEAMS:
@@ -3150,12 +3191,12 @@ def get_match_result_for_team(team_name, score, team1, team2):
         home_score, away_score = map(int, score.split(' - '))
     except Exception:
         return None
-    
+
     # Utiliser le mapping pour comparer correctement
     mapped_team_name = team_name_mapping.get(team_name, team_name)
     mapped_team1 = team_name_mapping.get(team1, team1)
     mapped_team2 = team_name_mapping.get(team2, team2)
-    
+
     if mapped_team_name == mapped_team1:
         return 'W' if home_score > away_score else 'D' if home_score == away_score else 'L'
     elif mapped_team_name == mapped_team2:
@@ -3167,12 +3208,12 @@ def extract_goals(team_name, score, team1, team2):
         home_score, away_score = map(int, score.split(' - '))
     except Exception:
         return None, None, None
-    
+
     # Utiliser le mapping pour comparer correctement
     mapped_team_name = team_name_mapping.get(team_name, team_name)
     mapped_team1 = team_name_mapping.get(team1, team1)
     mapped_team2 = team_name_mapping.get(team2, team2)
-    
+
     if mapped_team_name == mapped_team1:
         return home_score, away_score, True
     elif mapped_team_name == mapped_team2:
@@ -3196,7 +3237,7 @@ def scrape_team_data(team_name, action):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         matches = soup.find_all('tr', class_='Table__TR')
-        
+
         # ✅ NOUVELLE STRUCTURE - Objet au lieu de liste
         valid_results = []
         form_6 = []
@@ -3268,7 +3309,7 @@ def scrape_team_data(team_name, action):
                     match_obj["url"] = "N/A"
 
                 valid_results.append(match_obj)
-                
+
                 # Calculer les formes et stats avec la nouvelle structure
                 result = get_match_result_for_team(espn_team_name, score, team1, team2)
                 if result:
@@ -3293,19 +3334,19 @@ def scrape_team_data(team_name, action):
                     else:
                         buts_ext_marques += buts_m
                         buts_ext_encaisses += buts_e
-            
+
             if len(valid_results) >= 10:
                 break
-        
+
         nb_matchs = len(valid_results)
         if nb_matchs == 0:
             print("Aucun match trouvé.")
             FAILED_TEAMS.add(team_name)
             return []
-        
+
         total_marques = buts_dom_marques + buts_ext_marques
         total_encaisses = buts_dom_encaisses + buts_ext_encaisses
-        
+
         print(f"\n🗓️ {action.capitalize()} pour {espn_team_name} :")
         for match_obj in valid_results:
             print(f"ID: {match_obj['game_id']} | {match_obj['date']} | {match_obj['home_team']} vs {match_obj['away_team']} : {match_obj['score']} [{match_obj['competition']}] ({match_obj['status']})")
@@ -3316,10 +3357,10 @@ def scrape_team_data(team_name, action):
                     print(f"    - {stat_name}: {val1} - {val2}")
                 if len(match_obj['stats']) > 3:
                     print(f"    - ... et {len(match_obj['stats']) - 3} autres stats")
-        
+
         total_points_6 = get_form_points(form_6)
         total_points_10 = get_form_points(form_10[:10])  # sécurité si <10
-        
+
         print(f"\n📊 Forme courte (6 derniers matchs) : {' '.join(form_6)} (Total points : {total_points_6})")
         print(f"📊 Forme longue (10 derniers matchs) : {' '.join(form_10[:10])} (Total points : {total_points_10})")
         print(f"⚽ Buts marqués à domicile : {buts_dom_marques}")
@@ -3393,10 +3434,10 @@ def compare_teams_basic_stats(
     print(f"\n💰 Récupération des cotes...")
     home_espn = get_espn_name(name1)
     away_espn = get_espn_name(name2)
-    
+
     league_info = classement_ligue_mapping.get(country, {}).get(league)
     odds_id = league_info.get("odds_id", "none") if league_info else "none"
-    
+
     odds_data = get_odds_for_match(odds_id, name1, name2, home_espn, away_espn)
 
     # 🆚 Récupération des confrontations directes avec STATISTIQUES DÉTAILLÉES
@@ -3405,7 +3446,7 @@ def compare_teams_basic_stats(
     print(f"\n📅 Match prévu le {match_date} à {match_time}")
     print(f"🏆 Compétition : [{country}] {league}")
     print(f"⚔️ {name1} vs {name2}")
-    
+
     print(f"\n🤝 Statistiques brutes :")
     print(f"{name1} ➤ Moy. buts marqués : {t1['moyenne_marques']:.2f} | Moy. encaissés : {t1['moyenne_encaisses']:.2f}")
     print(f"{name2} ➤ Moy. buts marqués : {t2['moyenne_marques']:.2f} | Moy. encaissés : {t2['moyenne_encaisses']:.2f}")
@@ -3517,26 +3558,26 @@ def compare_teams_basic_stats(
     prediction_obj["corners_prevu"] = corners_prevu  # ✅ Gardé mais IA ne prédit plus
     prediction_obj["tirs_cadres_prevu"] = tirs_cadres_prevu  # ✅ Gardé mais IA ne prédit plus
     prediction_obj["scores_probables"] = scores_probables  # ✅ Nouveau champ
-    
+
     print(f"\n🧠 Analyse IA DeepSeek :\n{'='*60}")
     print(analyse_ia)
     print(f"{'='*60}")
-    
+
     # ✅ AFFICHAGE DES EXTRACTIONS
     if confiance_pourcentage is not None:
         print(f"\n📊 Pourcentage de confiance extrait : {confiance_pourcentage}%")
     else:
         print(f"\n⚠️ Pourcentage de confiance non détecté dans l'analyse")
-    
+
     if prediction_principale:
         print(f"🎯 Prédiction principale extraite : {prediction_principale}")
-    
+
     if corners_prevu:
         print(f"📐 Corners prévus extraits (présent mais IA ne prédit plus) : {corners_prevu}")
-    
+
     if tirs_cadres_prevu:
         print(f"🎯 Tirs cadrés prévus extraits (présent mais IA ne prédit plus) : {tirs_cadres_prevu}")
-    
+
     if scores_probables:
         print(f"⚽ Scores probables extraits : {scores_probables}")
 
@@ -3593,15 +3634,15 @@ def sauvegarder_stats_brutes_json(predictions_simples, date_str):
             "details": predictions_simples
         }
     }
-    
+
     # ✅ NOUVEAU NOM DE FICHIER SIMPLE COMME DEMANDÉ
     nom_fichier = f"prédiction-{date_str}-analyse-ia.json"
-    
+
     with open(nom_fichier, "w", encoding="utf-8") as f:
         json.dump(data_complete, f, ensure_ascii=False, indent=2)
     print(f"✅ Statistiques brutes complètes avec cotes et analyse IA enrichie sauvegardées dans : {nom_fichier}")
-    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie + retry + H2H enrichi avec stats + nouvelles fonctionnalités + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (hors prompt IA)")
-    
+    print(f"📊 Total: {total_predictions} analyses complètes avec cotes + IA DeepSeek enrichie sauvegardées")
+
     return nom_fichier
 
 def save_failed_teams_json(failed_teams, date_str):
@@ -3610,6 +3651,7 @@ def save_failed_teams_json(failed_teams, date_str):
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"❗ Liste des équipes sans données sauvegardée dans : {chemin}")
+    return chemin
 
 def save_ignored_teams_json(ignored_teams, date_str):
     chemin = f"teams_ignored_zero_form_{date_str}.json"
@@ -3617,17 +3659,38 @@ def save_ignored_teams_json(ignored_teams, date_str):
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"🛑 Équipes ignorées pour forme nulle sauvegardées dans : {chemin}")
+    return chemin
 
-def git_commit_and_push(filepath):
+def git_commit_and_push(filepath=None):
+    """
+    Modifié pour pousser TOUS les fichiers JSON générés dans le repo (dans le répertoire courant).
+    Si filepath est fourni, on l'ajoute aussi (compatibilité).
+    """
     try:
         subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=True)
-        subprocess.run(["git", "add", filepath], check=True)
-        subprocess.run(["git", "commit", "-m", f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.3 MODIFIÉE : STATS BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES ESPN + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ"], check=True)
+
+        # Trouver tous les fichiers JSON récents (ici : tous *.json dans le répertoire courant)
+        json_files = [f for f in os.listdir(".") if f.endswith(".json")]
+
+        if filepath and filepath not in json_files:
+            json_files.append(filepath)
+
+        if not json_files:
+            print("ℹ️ Aucun fichier JSON trouvé à ajouter.")
+            return
+
+        # Ajouter tous les fichiers JSON trouvés
+        subprocess.run(["git", "add"] + json_files, check=True)
+
+        commit_message = f"📊 Statistiques brutes complètes du {datetime.now().strftime('%Y-%m-%d')} - Version 8.3 MODIFIÉE : push de tous les fichiers JSON générés"
+        subprocess.run(["git", "commit", "-m", commit_message], check=True)
         subprocess.run(["git", "push"], check=True)
-        print("✅ Statistiques brutes complètes avec cotes et analyse IA enrichie + stats détaillées ESPN + H2H enrichi + nouvelles fonctionnalités + extraction améliorée 2 formats + PROBABILITÉS MONTE-CARLO (hors prompt IA) + nom fichier simplifié poussées avec succès sur GitHub.")
+        print("✅ Tous les fichiers JSON générés poussés avec succès sur GitHub.")
     except subprocess.CalledProcessError as e:
         print(f"❌ Erreur Git : {e}")
+    except Exception as e:
+        print(f"❌ Erreur inattendue lors du push Git : {e}")
 
 def main():
     print("📊 Bienvenue dans l'analyse v8.3 MODIFIÉE : STATISTIQUES BRUTES COMPLÈTES + ANALYSE IA DEEPSEEK ENRICHIE + RETRY + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (HORS PROMPT IA) + NOM FICHIER SIMPLIFIÉ !")
