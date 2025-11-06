@@ -1,0 +1,4331 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-06 02:44:52",
+    "date_matchs": "2025-11-06",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 4,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 4,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1435976,
+        "HomeTeam": "Al Riyadh",
+        "AwayTeam": "Damac",
+        "date": "6 novembre 2025 à 17:30:00 UTC",
+        "league": "Saudi-Arabia - Pro League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 10,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 14,
+          "total_marques": 9,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 2.25,
+          "form_6": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 2,
+          "total_points_10": 3,
+          "total_points": 2,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 11,
+          "total_marques": 8,
+          "total_encaisses": 18
+        },
+        "last_matches_home": [
+          {
+            "game_id": "755959",
+            "date": "Thu, Oct 30",
+            "home_team": "Al Ahli",
+            "away_team": "Al Riyadh",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.1%",
+                "31.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755959"
+          },
+          {
+            "game_id": "759172",
+            "date": "Mon, Oct 27",
+            "home_team": "Al Fateh",
+            "away_team": "Al Riyadh",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.8%",
+                "39.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "3"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759172"
+          },
+          {
+            "game_id": "755949",
+            "date": "Thu, Oct 23",
+            "home_team": "Al Riyadh",
+            "away_team": "Al Kholood",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.3%",
+                "67.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755949"
+          },
+          {
+            "game_id": "755946",
+            "date": "Sun, Oct 19",
+            "home_team": "Al Khaleej",
+            "away_team": "Al Riyadh",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "8"
+              ],
+              "Shot Attempts": [
+                "17",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "12"
+              ],
+              "Saves": [
+                "7",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755946"
+          },
+          {
+            "game_id": "755937",
+            "date": "Sat, Sep 27",
+            "home_team": "Al Riyadh",
+            "away_team": "Neom SC",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.8%",
+                "55.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755937"
+          },
+          {
+            "game_id": "736498",
+            "date": "Wed, Sep 24",
+            "home_team": "Al Jubail",
+            "away_team": "Al Riyadh",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.4%",
+                "52.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "6",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "0",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736498"
+          },
+          {
+            "game_id": "755930",
+            "date": "Sat, Sep 20",
+            "home_team": "Al Nassr",
+            "away_team": "Al Riyadh",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "16",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755930"
+          },
+          {
+            "game_id": "755919",
+            "date": "Sun, Sep 14",
+            "home_team": "Al Riyadh",
+            "away_team": "Al Najma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.7%",
+                "64.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "7",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755919"
+          },
+          {
+            "game_id": "755907",
+            "date": "Fri, Aug 29",
+            "home_team": "Al Hilal",
+            "away_team": "Al Riyadh",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.4%",
+                "37.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "2"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755907"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "755965",
+            "date": "Thu, Oct 30",
+            "home_team": "Damac",
+            "away_team": "Al Fateh",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.8%",
+                "50.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755965"
+          },
+          {
+            "game_id": "755956",
+            "date": "Sat, Oct 25",
+            "home_team": "Al Shabab",
+            "away_team": "Damac",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.2%",
+                "37.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "21",
+                "5"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755956"
+          },
+          {
+            "game_id": "755947",
+            "date": "Sun, Oct 19",
+            "home_team": "Al Taawoun",
+            "away_team": "Damac",
+            "score": "6 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755947"
+          },
+          {
+            "game_id": "755935",
+            "date": "Fri, Sep 26",
+            "home_team": "Damac",
+            "away_team": "Al Ettifaq",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.3%",
+                "45.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755935"
+          },
+          {
+            "game_id": "736496",
+            "date": "Tue, Sep 23",
+            "home_team": "Al Najma",
+            "away_team": "Damac",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.5%",
+                "53.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736496"
+          },
+          {
+            "game_id": "755923",
+            "date": "Thu, Sep 18",
+            "home_team": "Al Kholood",
+            "away_team": "Damac",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755923"
+          },
+          {
+            "game_id": "755920",
+            "date": "Sun, Sep 14",
+            "home_team": "Damac",
+            "away_team": "Neom SC",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40%",
+                "60%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755920"
+          },
+          {
+            "game_id": "755904",
+            "date": "Thu, Aug 28",
+            "home_team": "Damac",
+            "away_team": "Al Hazem",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "9"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/755904"
+          }
+        ],
+        "classement": {
+          "Al Riyadh": {
+            "position": 12,
+            "points": 7
+          },
+          "Damac": {
+            "position": 17,
+            "points": 3
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Al Nassr",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Al Taawoun",
+            "points": 18
+          },
+          {
+            "position": 3,
+            "team": "Al Hilal",
+            "points": 17
+          },
+          {
+            "position": 4,
+            "team": "Al Qadsiah",
+            "points": 14
+          },
+          {
+            "position": 5,
+            "team": "Al Ahli",
+            "points": 13
+          },
+          {
+            "position": 6,
+            "team": "Neom SC",
+            "points": 13
+          },
+          {
+            "position": 7,
+            "team": "Al Khaleej",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Al Ittihad",
+            "points": 11
+          },
+          {
+            "position": 9,
+            "team": "Al Kholood",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Al Fayha",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Al Ettifaq",
+            "points": 8
+          },
+          {
+            "position": 12,
+            "team": "Al Riyadh",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Al Shabab",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Al Hazem",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "Al Fateh",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Al Okhdood",
+            "points": 4
+          },
+          {
+            "position": 17,
+            "team": "Damac",
+            "points": 3
+          },
+          {
+            "position": 18,
+            "team": "Al Najma",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "716000",
+            "date": "Friday, November 1, 2024",
+            "team1": "Damac",
+            "score": "2 - 2",
+            "team2": "Al Riyadh",
+            "title": "Damac VS Al Riyadh",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/716000/al-riyadh-damac",
+            "source": "Pro League",
+            "stats": {
+              "Possession": [
+                "59.3%",
+                "40.7%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "3"
+              ],
+              "Shot Attempts": [
+                "23",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "9"
+              ]
+            }
+          },
+          {
+            "gameId": "716154",
+            "date": "Saturday, April 5, 2025",
+            "team1": "Al Riyadh",
+            "score": "0 - 0",
+            "team2": "Damac",
+            "title": "Al Riyadh VS Damac",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/716154/damac-al-riyadh",
+            "source": "Pro League",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10511.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2956.png",
+        "classement_home": 12,
+        "classement_away": 17,
+        "points_classement_home": 7,
+        "points_classement_away": 3,
+        "nom_classement_home": "Al Riyadh",
+        "nom_classement_away": "Damac",
+        "country_fr": "Saudi-Arabia - Pro League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.487,
+            "lambda_away": 1.289,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 41.64,
+            "X": 25.24,
+            "V2": 33.12
+          },
+          "double_chance": {
+            "1X": 66.88,
+            "12": 74.76,
+            "X2": 58.36
+          },
+          "over_under": {
+            "plus_de_0.5": 93.79,
+            "moins_de_0.5": 6.21,
+            "plus_de_1.5": 76.47,
+            "moins_de_1.5": 23.53,
+            "plus_de_2.5": 52.72,
+            "moins_de_2.5": 47.28,
+            "plus_de_3.5": 30.62,
+            "moins_de_3.5": 69.38,
+            "plus_de_4.5": 14.86,
+            "moins_de_4.5": 85.14,
+            "plus_de_5.5": 6.45,
+            "moins_de_5.5": 93.55
+          },
+          "btts": {
+            "oui": 55.96,
+            "non": 44.04
+          },
+          "resultat_total": {
+            "V1et+0.5": 41.64,
+            "1Xet+0.5": 60.68,
+            "V2et+0.5": 33.12,
+            "X2et+0.5": 52.14,
+            "12et+0.5": 74.76,
+            "V1et+1.5": 32.38,
+            "1Xet+1.5": 51.41,
+            "V2et+1.5": 25.06,
+            "X2et+1.5": 44.09,
+            "12et+1.5": 57.44,
+            "V1et+2.5": 25.78,
+            "1Xet+2.5": 33.04,
+            "V2et+2.5": 19.68,
+            "X2et+2.5": 26.94,
+            "12et+2.5": 45.46,
+            "V1et+3.5": 13.58,
+            "1Xet+3.5": 20.84,
+            "V2et+3.5": 9.78,
+            "X2et+3.5": 17.04,
+            "12et+3.5": 23.36,
+            "V1et+4.5": 7.73,
+            "1Xet+4.5": 9.24,
+            "V2et+4.5": 5.62,
+            "X2et+4.5": 7.13,
+            "12et+4.5": 13.36,
+            "V1et+5.5": 3.01,
+            "1Xet+5.5": 4.52,
+            "V2et+5.5": 1.93,
+            "X2et+5.5": 3.44,
+            "12et+5.5": 4.94
+          },
+          "scores_probables": {
+            "1-1": 11.77,
+            "1-0": 9.26,
+            "2-1": 8.84,
+            "0-1": 8.06,
+            "1-2": 7.5,
+            "2-0": 6.6,
+            "0-0": 6.21,
+            "2-2": 5.76,
+            "0-2": 5.38,
+            "3-1": 4.54
+          },
+          "buts_moyens_simules": {
+            "home": 1.49,
+            "away": 1.3,
+            "total": 2.78
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 71%  \n**SCORES PROBABLES** : 1‑0 ou 1‑1  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des équipes**  \n- **Al Riyadh (domicile)** : 12ᵉ avec 7 pts. Moyenne = 1,00 but marqué / match, 0,80 but encaissé à domicile (5 marqués, 4 encaissés en 5 matchs).  \n- **Damac (extérieur)** : 17ᵉ avec 3 pts. Moyenne = 0,80 but marqué / match, 2,20 buts encaissés à l’extérieur (4 marqués, 11 encaissés en 5 matchs).  \n\nAl Riyadh montre une défense solide à domicile (moins d’un but concédé en moyenne) tandis que Damac concède largement à l’extérieur. Les deux équipes sont peu prolifiques en attaque.\n\n**2. Impact du facteur domicile/extérieur**  \n- Al Riyadh a remporté 2 de ses 3 derniers matchs à domicile (1‑0, 1‑0) et n’a encaissé que 1 but dans ces deux victoires.  \n- Damac n’a obtenu que 2 points à l’extérieur (deux nuls 1‑1) et a perdu 3 fois, dont une lourde défaite 6‑1.  \n\nLe facteur domicile favorise clairement Al Riyadh, mais la capacité offensive de Damac à l’extérieur reste très limitée.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n\n| Équipe | 5 derniers matchs (détails) | Possession moyenne | tirs cadrés / tentatives | corners |\n|--------|----------------------------|--------------------|--------------------------|---------|\n| **Al Riyadh (domicile)** | 1‑1, 1‑0, 1‑0, 1‑4, 2‑3 | 45 % (≈) | 4‑6 tirs cadrés, 12‑18 tentatives | 5‑9 |\n| **Damac (extérieur)** | 1‑1, 1‑1, 6‑1, 1‑3, 2‑1, 2‑1 | 48 % (≈) | 3‑5 tirs cadrés, 9‑14 tentatives | 3‑7 |\n\n- Al Riyadh domine la possession à domicile mais ne transforme pas toujours ses occasions (moyenne ≈ 4 tirs cadrés par match).  \n- Damac, même à l’extérieur, garde une possession équilibrée mais génère peu de tirs cadrés (≈ 3‑4) et subit de nombreux tirs adverses.  \n\nCes indicateurs confirment une tendance à des matchs à faible nombre de buts.\n\n**4. Contexte du championnat**  \n- Le classement montre une grande différence de points entre les deux équipes (7 pts vs 3 pts). Al Riyadh lutte pour sortir du bas du tableau, tandis que Damac se bat contre la relégation.  \n- Les deux équipes sont parmi les moins efficaces offensivement (12ᵉ et 17ᵉ sur 18).  \n\n**5. Confrontations directes**  \n- Saison précédente : 2‑2 (match très ouvert) et 0‑0 (match très fermé). La moyenne des deux rencontres est 1‑1, soit 2 buts au total, ce qui reste sous la barre des 2,5 buts.  \n\n**6. Évaluation des cotes**  \n- Aucune cote fournie, mais les indicateurs internes (défense d’Al Riyadh à domicile, faiblesse offensive de Damac à l’extérieur) pointent vers un total de buts inférieur à 2,5.\n\n**7. Synthèse**  \n- **Total de buts attendu** : Al Riyadh ≈ 1,0 + Damac ≈ 0,8 ≈ 1,8 buts.  \n- **Probabilité de BTTS** : faible (Al Riyadh a marqué dans 3/5 matchs à domicile, Damac n’a marqué que 2 fois à l’extérieur).  \n- **Scénario le plus plausible** : Al Riyadh marque le seul but (1‑0) ou les deux équipes marquent chacune (1‑1).  \n\nAinsi, la prédiction la plus fiable est **« Moins de 2.5 buts »** avec une confiance de **71 %**, les scores les plus probables étant **1‑0** ou **1‑1**.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 1‑1"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1451214,
+        "HomeTeam": "Nice",
+        "AwayTeam": "SC Freiburg",
+        "date": "6 novembre 2025 à 17:45:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Nice": 2.72,
+            "SC Freiburg": 2.79,
+            "Draw": 3.46
+          },
+          "totals": {
+            "Over": 1.95,
+            "Under": 2.0
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 11,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 12,
+          "total_marques": 14,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 17,
+          "total_points": 9,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 4,
+          "total_marques": 14,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          {
+            "game_id": "746508",
+            "date": "Sat, Nov 1",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Nice",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.5%",
+                "23.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "28",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746508"
+          },
+          {
+            "game_id": "746498",
+            "date": "Wed, Oct 29",
+            "home_team": "Nice",
+            "away_team": "Lille",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.1%",
+                "67.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "21"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "13"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746498"
+          },
+          {
+            "game_id": "746487",
+            "date": "Sun, Oct 26",
+            "home_team": "Stade Rennais",
+            "away_team": "Nice",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746487"
+          },
+          {
+            "game_id": "757845",
+            "date": "Thu, Oct 23",
+            "home_team": "Celta Vigo",
+            "away_team": "Nice",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.9%",
+                "35.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "25",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757845"
+          },
+          {
+            "game_id": "746480",
+            "date": "Sat, Oct 18",
+            "home_team": "Nice",
+            "away_team": "Lyon",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.6%",
+                "69.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "5",
+                "29"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "16"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746480"
+          },
+          {
+            "game_id": "746472",
+            "date": "Sun, Oct 5",
+            "home_team": "AS Monaco",
+            "away_team": "Nice",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.5%",
+                "34.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "7"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746472"
+          },
+          {
+            "game_id": "757817",
+            "date": "Thu, Oct 2",
+            "home_team": "Fenerbahce",
+            "away_team": "Nice",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757817"
+          },
+          {
+            "game_id": "746465",
+            "date": "Sun, Sep 28",
+            "home_team": "Nice",
+            "away_team": "Paris FC",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746465"
+          },
+          {
+            "game_id": "757804",
+            "date": "Wed, Sep 24",
+            "home_team": "Nice",
+            "away_team": "AS Roma",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.9%",
+                "57.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "7",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757804"
+          },
+          {
+            "game_id": "746449",
+            "date": "Sat, Sep 20",
+            "home_team": "Brest",
+            "away_team": "Nice",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.8%",
+                "62.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746449"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "746794",
+            "date": "Sat, Nov 1",
+            "home_team": "1. FC Union Berlin",
+            "away_team": "SC Freiburg",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.8%",
+                "63.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "6",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746794"
+          },
+          {
+            "game_id": "758127",
+            "date": "Wed, Oct 29",
+            "home_team": "Fortuna Düsseldorf",
+            "away_team": "SC Freiburg",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758127"
+          },
+          {
+            "game_id": "746786",
+            "date": "Sun, Oct 26",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "SC Freiburg",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.3%",
+                "30.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746786"
+          },
+          {
+            "game_id": "757844",
+            "date": "Thu, Oct 23",
+            "home_team": "SC Freiburg",
+            "away_team": "FC Utrecht",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "14",
+                "11"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757844"
+          },
+          {
+            "game_id": "746774",
+            "date": "Sun, Oct 19",
+            "home_team": "SC Freiburg",
+            "away_team": "Eintracht Frankfurt",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746774"
+          },
+          {
+            "game_id": "746764",
+            "date": "Sun, Oct 5",
+            "home_team": "Borussia Mönchengladbach",
+            "away_team": "SC Freiburg",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53%",
+                "47%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746764"
+          },
+          {
+            "game_id": "757822",
+            "date": "Thu, Oct 2",
+            "home_team": "Bologna",
+            "away_team": "SC Freiburg",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.7%",
+                "45.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757822"
+          },
+          {
+            "game_id": "746758",
+            "date": "Sun, Sep 28",
+            "home_team": "SC Freiburg",
+            "away_team": "TSG Hoffenheim",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.5%",
+                "57.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "6",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746758"
+          },
+          {
+            "game_id": "757802",
+            "date": "Wed, Sep 24",
+            "home_team": "SC Freiburg",
+            "away_team": "FC Basel",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.3%",
+                "51.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757802"
+          },
+          {
+            "game_id": "746751",
+            "date": "Sat, Sep 20",
+            "home_team": "Werder Bremen",
+            "away_team": "SC Freiburg",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.6%",
+                "38.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "0"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746751"
+          }
+        ],
+        "classement": {
+          "Nice": {
+            "position": 33,
+            "points": 0
+          },
+          "SC Freiburg": {
+            "position": 6,
+            "points": 7
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Midtjylland",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Braga",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Lyon",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Dinamo Zagreb",
+            "points": 7
+          },
+          {
+            "position": 5,
+            "team": "Viktoria Plzen",
+            "points": 7
+          },
+          {
+            "position": 6,
+            "team": "SC Freiburg",
+            "points": 7
+          },
+          {
+            "position": 7,
+            "team": "Ferencvaros",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "SK Brann",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Celta Vigo",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Aston Villa",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Lille",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Go Ahead Eagles",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Young Boys",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Fenerbahce",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "FC Porto",
+            "points": 6
+          },
+          {
+            "position": 16,
+            "team": "Real Betis",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Nottingham Forest",
+            "points": 4
+          },
+          {
+            "position": 18,
+            "team": "Bologna",
+            "points": 4
+          },
+          {
+            "position": 19,
+            "team": "Racing Genk",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "PAOK Salonika",
+            "points": 4
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 4
+          },
+          {
+            "position": 22,
+            "team": "Panathinaikos",
+            "points": 3
+          },
+          {
+            "position": 23,
+            "team": "AS Roma",
+            "points": 3
+          },
+          {
+            "position": 24,
+            "team": "FC Basel",
+            "points": 3
+          },
+          {
+            "position": 25,
+            "team": "Feyenoord Rotterdam",
+            "points": 3
+          },
+          {
+            "position": 26,
+            "team": "Ludogorets Razgrad",
+            "points": 3
+          },
+          {
+            "position": 27,
+            "team": "SK Sturm Graz",
+            "points": 3
+          },
+          {
+            "position": 28,
+            "team": "FCSB",
+            "points": 3
+          },
+          {
+            "position": 29,
+            "team": "VfB Stuttgart",
+            "points": 3
+          },
+          {
+            "position": 30,
+            "team": "Red Star Belgrade",
+            "points": 1
+          },
+          {
+            "position": 31,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 32,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 0
+          },
+          {
+            "position": 34,
+            "team": "RB Salzburg",
+            "points": 0
+          },
+          {
+            "position": 35,
+            "team": "FC Utrecht",
+            "points": 0
+          },
+          {
+            "position": 36,
+            "team": "Rangers",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/84.png",
+        "logo_away": "https://media.api-sports.io/football/teams/160.png",
+        "classement_home": 33,
+        "classement_away": 6,
+        "points_classement_home": 0,
+        "points_classement_away": 7,
+        "nom_classement_home": "Nice",
+        "nom_classement_away": "SC Freiburg",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.31,
+            "lambda_away": 1.365,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 35.35,
+            "X": 25.97,
+            "V2": 38.67
+          },
+          "double_chance": {
+            "1X": 61.32,
+            "12": 74.03,
+            "X2": 64.64
+          },
+          "over_under": {
+            "plus_de_0.5": 93.06,
+            "moins_de_0.5": 6.94,
+            "plus_de_1.5": 74.11,
+            "moins_de_1.5": 25.89,
+            "plus_de_2.5": 49.33,
+            "moins_de_2.5": 50.67,
+            "plus_de_3.5": 27.92,
+            "moins_de_3.5": 72.08,
+            "plus_de_4.5": 13.36,
+            "moins_de_4.5": 86.65,
+            "plus_de_5.5": 5.6,
+            "moins_de_5.5": 94.4
+          },
+          "btts": {
+            "oui": 53.97,
+            "non": 46.03
+          },
+          "resultat_total": {
+            "V1et+0.5": 35.35,
+            "1Xet+0.5": 54.38,
+            "V2et+0.5": 38.67,
+            "X2et+0.5": 57.7,
+            "12et+0.5": 74.03,
+            "V1et+1.5": 26.12,
+            "1Xet+1.5": 45.14,
+            "V2et+1.5": 28.97,
+            "X2et+1.5": 47.99,
+            "12et+1.5": 55.08,
+            "V1et+2.5": 20.32,
+            "1Xet+2.5": 26.92,
+            "V2et+2.5": 22.42,
+            "X2et+2.5": 29.0,
+            "12et+2.5": 42.74,
+            "V1et+3.5": 10.02,
+            "1Xet+3.5": 16.61,
+            "V2et+3.5": 11.3,
+            "X2et+3.5": 17.9,
+            "12et+3.5": 21.33,
+            "V1et+4.5": 5.7,
+            "1Xet+4.5": 6.96,
+            "V2et+4.5": 6.4,
+            "X2et+4.5": 7.65,
+            "12et+4.5": 12.1,
+            "V1et+5.5": 2.15,
+            "1Xet+5.5": 3.4,
+            "V2et+5.5": 2.2,
+            "X2et+5.5": 3.45,
+            "12et+5.5": 4.35
+          },
+          "scores_probables": {
+            "1-1": 12.44,
+            "0-1": 9.71,
+            "1-0": 9.24,
+            "1-2": 8.14,
+            "2-1": 7.82,
+            "0-0": 6.94,
+            "0-2": 6.55,
+            "2-0": 5.8,
+            "2-2": 5.34,
+            "1-3": 3.91
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.37,
+            "total": 2.66
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 0‑0 ou 1‑0 (victoire de SC Freiburg)  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des équipes**  \n- **Nice** : 33ᵉ du groupe avec 0 point, moyenne 1,40 buts marqués et 1,70 buts encaissés. En 4 derniers matchs à domicile (W‑W‑D‑L) ils ont inscrit 7 buts et concédé 5 → 1,75 buts marqués / 1,25 buts encaissés par match à domicile.  \n- **SC Freiburg** : 6ᵉ du groupe avec 7 points, moyenne 1,40 buts marqués et 0,80 buts encaissés. En 6 derniers déplacements (D‑W‑L‑D‑D‑W) ils ont marqué 7 buts et encaissé 4 → 1,17 buts marqués / 0,67 buts encaissés par match à l’extérieur.  \n\nFreiburg montre une défense très solide à l’extérieur (moins d’un but concédé en moyenne) alors que Nice concède davantage, même à domicile.\n\n**2. Impact du facteur domicile/extérieur**  \n- Nice bénéficie d’un léger avantage de terrain (plus de tirs et de corners à domicile dans les matchs récents), mais son taux de conversion reste moyen (ex. 2‑0 contre Lille avec 4 tirs cadrés, 2‑0 contre PSG avec 2 tirs cadrés).  \n- Freiburg garde son efficacité défensive à l’extérieur (ex. 0‑0 contre Union Berlin, 0‑0 contre Mönchengladbach) et arrive à marquer au moins un but dans 5 de ses 6 derniers déplacements.\n\n**3. Formes récentes et tendances**  \n- Nice : séquence L‑W‑W‑L‑W‑D → 10 points sur 6, mais les victoires sont souvent à faible score (2‑0, 2‑0, 2‑1).  \n- Freiburg : séquence D‑W‑L‑D‑D‑W → 9 points sur 6, avec deux victoires 3‑0 (contre Werder) et 3‑1 (contre Union Berlin) mais aussi plusieurs matches à 0‑0 ou 1‑1, témoignant d’une capacité à garder le score bas.\n\n**4. Contexte du championnat**  \n- Nice est en bas du tableau, sous pression pour obtenir un point, ce qui peut les pousser à jouer plus prudemment.  \n- Freiburg, en milieu de tableau, a besoin de points mais n’est pas obligé de prendre des risques offensifs ; sa priorité reste la solidité défensive.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc aucune donnée historique à exploiter.\n\n**6. Évaluation des cotes**  \n- Over 2.5 buts à 1.95 (51 % implicite) vs Under 2.5 buts à 2.00 (50 %). Le marché est quasiment équilibré, mais la tendance défensive de Freiburg et le fait que Nice concède plus de 1 but à domicile penchent légèrement en faveur du *under*.\n\n**7. Analyse détaillée des statistiques des matchs récents**  \n- **Possession** : Nice domine souvent (ex. 76 % contre PSG) mais ne traduit pas toujours cela en buts (seulement 1 but).  \n- **Tirs cadrés** : Nice a eu des performances très variables (8 contre PSG, 4 contre Lille).  \n- **Corners** : Nice génère beaucoup de corners à domicile (ex. 11 contre PSG) mais cela ne se convertit pas systématiquement.  \n- **Freiburg** : Possession plus équilibrée, mais très efficace en défense (ex. 0‑0 contre Union Berlin avec seulement 2 tirs cadrés).  \n\nCes indicateurs montrent que le match risque d’être serré, avec peu d’occasions nettes et une forte probabilité que le total de buts reste inférieur à 2,5.\n\n**8. Synthèse**  \n- Défense de Freiburg : très solide à l’extérieur.  \n- Offense de Nice : capable de marquer, mais souvent à faible intensité.  \n- Historique récent montre plusieurs matches à 0‑0, 1‑0 ou 1‑1 pour les deux équipes.\n\n**Conclusion** : Le scénario le plus probable est un match à faible score, avec une forte probabilité que le total des buts reste en dessous de 2,5. Le résultat le plus fréquent dans ce type de rencontre est soit un nul 0‑0, soit une victoire de Freiburg 1‑0.  \n\n---  \n\n**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 0‑0 ou 1‑0.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 1‑0 (victoire de SC Freiburg)"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1451227,
+        "HomeTeam": "Real Betis",
+        "AwayTeam": "Lyon",
+        "date": "6 novembre 2025 à 20:00:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Lyon": 4.5,
+            "Real Betis": 1.81,
+            "Draw": 4.14
+          },
+          "totals": {
+            "Over": 1.75,
+            "Under": 2.25
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 2.3,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 21,
+          "total_points": 11,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 13,
+          "buts_ext_encaisses": 4,
+          "total_marques": 23,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 20,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 6,
+          "total_marques": 15,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "748250",
+            "date": "Sun, Nov 2",
+            "home_team": "Real Betis",
+            "away_team": "Mallorca",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748250"
+          },
+          {
+            "game_id": "759796",
+            "date": "Thu, Oct 30",
+            "home_team": "Palma del Río",
+            "away_team": "Real Betis",
+            "score": "1 - 7",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.4%",
+                "55.6%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "10"
+              ],
+              "Shot Attempts": [
+                "7",
+                "22"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759796"
+          },
+          {
+            "game_id": "748237",
+            "date": "Mon, Oct 27",
+            "home_team": "Real Betis",
+            "away_team": "Atlético Madrid",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.1%",
+                "42.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748237"
+          },
+          {
+            "game_id": "757833",
+            "date": "Thu, Oct 23",
+            "home_team": "Racing Genk",
+            "away_team": "Real Betis",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44%",
+                "56%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "3"
+              ],
+              "Shot Attempts": [
+                "5",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757833"
+          },
+          {
+            "game_id": "748225",
+            "date": "Sat, Oct 18",
+            "home_team": "Villarreal",
+            "away_team": "Real Betis",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.5%",
+                "60.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748225"
+          },
+          {
+            "game_id": "748220",
+            "date": "Sun, Oct 5",
+            "home_team": "Espanyol",
+            "away_team": "Real Betis",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "6"
+              ],
+              "Corner Kicks": [
+                "10",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748220"
+          },
+          {
+            "game_id": "757818",
+            "date": "Thu, Oct 2",
+            "home_team": "Ludogorets Razgrad",
+            "away_team": "Real Betis",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.4%",
+                "46.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757818"
+          },
+          {
+            "game_id": "748212",
+            "date": "Sun, Sep 28",
+            "home_team": "Real Betis",
+            "away_team": "Osasuna",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.6%",
+                "49.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748212"
+          },
+          {
+            "game_id": "757805",
+            "date": "Wed, Sep 24",
+            "home_team": "Real Betis",
+            "away_team": "Nottingham Forest",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.2%",
+                "43.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757805"
+          },
+          {
+            "game_id": "748185",
+            "date": "Fri, Sep 19",
+            "home_team": "Real Betis",
+            "away_team": "Real Sociedad",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.9%",
+                "50.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "21",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748185"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "746503",
+            "date": "Sun, Nov 2",
+            "home_team": "Brest",
+            "away_team": "Lyon",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.8%",
+                "50.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746503"
+          },
+          {
+            "game_id": "746499",
+            "date": "Wed, Oct 29",
+            "home_team": "Paris FC",
+            "away_team": "Lyon",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.1%",
+                "47.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746499"
+          },
+          {
+            "game_id": "746489",
+            "date": "Sun, Oct 26",
+            "home_team": "Lyon",
+            "away_team": "Strasbourg",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.9%",
+                "52.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746489"
+          },
+          {
+            "game_id": "757836",
+            "date": "Thu, Oct 23",
+            "home_team": "Lyon",
+            "away_team": "FC Basel",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.7%",
+                "39.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757836"
+          },
+          {
+            "game_id": "746480",
+            "date": "Sat, Oct 18",
+            "home_team": "Nice",
+            "away_team": "Lyon",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.6%",
+                "69.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "5",
+                "29"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "16"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746480"
+          },
+          {
+            "game_id": "746470",
+            "date": "Sun, Oct 5",
+            "home_team": "Lyon",
+            "away_team": "Toulouse",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.4%",
+                "30.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746470"
+          },
+          {
+            "game_id": "757825",
+            "date": "Thu, Oct 2",
+            "home_team": "Lyon",
+            "away_team": "RB Salzburg",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.9%",
+                "35.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757825"
+          },
+          {
+            "game_id": "746458",
+            "date": "Sun, Sep 28",
+            "home_team": "Lille",
+            "away_team": "Lyon",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746458"
+          },
+          {
+            "game_id": "757813",
+            "date": "Thu, Sep 25",
+            "home_team": "FC Utrecht",
+            "away_team": "Lyon",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.8%",
+                "62.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757813"
+          },
+          {
+            "game_id": "746452",
+            "date": "Fri, Sep 19",
+            "home_team": "Lyon",
+            "away_team": "Angers",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.8%",
+                "33.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746452"
+          }
+        ],
+        "classement": {
+          "Real Betis": {
+            "position": 16,
+            "points": 5
+          },
+          "Lyon": {
+            "position": 3,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Midtjylland",
+            "points": 9
+          },
+          {
+            "position": 2,
+            "team": "Braga",
+            "points": 9
+          },
+          {
+            "position": 3,
+            "team": "Lyon",
+            "points": 9
+          },
+          {
+            "position": 4,
+            "team": "Dinamo Zagreb",
+            "points": 7
+          },
+          {
+            "position": 5,
+            "team": "Viktoria Plzen",
+            "points": 7
+          },
+          {
+            "position": 6,
+            "team": "SC Freiburg",
+            "points": 7
+          },
+          {
+            "position": 7,
+            "team": "Ferencvaros",
+            "points": 7
+          },
+          {
+            "position": 8,
+            "team": "SK Brann",
+            "points": 6
+          },
+          {
+            "position": 9,
+            "team": "Celta Vigo",
+            "points": 6
+          },
+          {
+            "position": 10,
+            "team": "Aston Villa",
+            "points": 6
+          },
+          {
+            "position": 11,
+            "team": "Lille",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Go Ahead Eagles",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Young Boys",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Fenerbahce",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "FC Porto",
+            "points": 6
+          },
+          {
+            "position": 16,
+            "team": "Real Betis",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Nottingham Forest",
+            "points": 4
+          },
+          {
+            "position": 18,
+            "team": "Bologna",
+            "points": 4
+          },
+          {
+            "position": 19,
+            "team": "Racing Genk",
+            "points": 4
+          },
+          {
+            "position": 20,
+            "team": "PAOK Salonika",
+            "points": 4
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 4
+          },
+          {
+            "position": 22,
+            "team": "Panathinaikos",
+            "points": 3
+          },
+          {
+            "position": 23,
+            "team": "AS Roma",
+            "points": 3
+          },
+          {
+            "position": 24,
+            "team": "FC Basel",
+            "points": 3
+          },
+          {
+            "position": 25,
+            "team": "Feyenoord Rotterdam",
+            "points": 3
+          },
+          {
+            "position": 26,
+            "team": "Ludogorets Razgrad",
+            "points": 3
+          },
+          {
+            "position": 27,
+            "team": "SK Sturm Graz",
+            "points": 3
+          },
+          {
+            "position": 28,
+            "team": "FCSB",
+            "points": 3
+          },
+          {
+            "position": 29,
+            "team": "VfB Stuttgart",
+            "points": 3
+          },
+          {
+            "position": 30,
+            "team": "Red Star Belgrade",
+            "points": 1
+          },
+          {
+            "position": 31,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 32,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 0
+          },
+          {
+            "position": 34,
+            "team": "RB Salzburg",
+            "points": 0
+          },
+          {
+            "position": 35,
+            "team": "FC Utrecht",
+            "points": 0
+          },
+          {
+            "position": 36,
+            "team": "Rangers",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/543.png",
+        "logo_away": "https://media.api-sports.io/football/teams/80.png",
+        "classement_home": 16,
+        "classement_away": 3,
+        "points_classement_home": 5,
+        "points_classement_away": 9,
+        "nom_classement_home": "Real Betis",
+        "nom_classement_away": "Lyon",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.56,
+            "lambda_away": 1.19,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 45.82,
+            "X": 25.36,
+            "V2": 28.82
+          },
+          "double_chance": {
+            "1X": 71.18,
+            "12": 74.64,
+            "X2": 54.18
+          },
+          "over_under": {
+            "plus_de_0.5": 93.56,
+            "moins_de_0.5": 6.44,
+            "plus_de_1.5": 76.09,
+            "moins_de_1.5": 23.92,
+            "plus_de_2.5": 51.98,
+            "moins_de_2.5": 48.02,
+            "plus_de_3.5": 29.67,
+            "moins_de_3.5": 70.34,
+            "plus_de_4.5": 14.38,
+            "moins_de_4.5": 85.62,
+            "plus_de_5.5": 5.92,
+            "moins_de_5.5": 94.08
+          },
+          "btts": {
+            "oui": 55.22,
+            "non": 44.78
+          },
+          "resultat_total": {
+            "V1et+0.5": 45.82,
+            "1Xet+0.5": 64.74,
+            "V2et+0.5": 28.82,
+            "X2et+0.5": 47.74,
+            "12et+0.5": 74.64,
+            "V1et+1.5": 35.78,
+            "1Xet+1.5": 54.7,
+            "V2et+1.5": 21.38,
+            "X2et+1.5": 40.3,
+            "12et+1.5": 57.16,
+            "V1et+2.5": 28.26,
+            "1Xet+2.5": 35.17,
+            "V2et+2.5": 16.8,
+            "X2et+2.5": 23.71,
+            "12et+2.5": 45.06,
+            "V1et+3.5": 14.49,
+            "1Xet+3.5": 21.4,
+            "V2et+3.5": 8.27,
+            "X2et+3.5": 15.18,
+            "12et+3.5": 22.76,
+            "V1et+4.5": 8.16,
+            "1Xet+4.5": 9.44,
+            "V2et+4.5": 4.94,
+            "X2et+4.5": 6.22,
+            "12et+4.5": 13.11,
+            "V1et+5.5": 2.97,
+            "1Xet+5.5": 4.25,
+            "V2et+5.5": 1.67,
+            "X2et+5.5": 2.94,
+            "12et+5.5": 4.64
+          },
+          "scores_probables": {
+            "1-1": 12.01,
+            "1-0": 10.04,
+            "2-1": 9.68,
+            "2-0": 7.52,
+            "0-1": 7.44,
+            "1-2": 6.86,
+            "0-0": 6.44,
+            "2-2": 5.64,
+            "3-1": 4.78,
+            "0-2": 4.58
+          },
+          "buts_moyens_simules": {
+            "home": 1.56,
+            "away": 1.19,
+            "total": 2.75
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Real Betis)  \n**CONFIANCE** : 71%  \n**SCORES PROBABLES** : 2‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Real Betis (domicile)** : moyenne 2,30 buts marqués et 0,90 encaissés à domicile, 10 buts marqués pour 5 encaissés sur les 5 derniers matchs à domicile. Défense très solide (moins d’un but concédé en moyenne) et attaque très productive.  \n- **Lyon (extérieur)** : moyenne 1,50 buts marqués et 0,90 encaissés à l’extérieur, 7 buts marqués pour 6 encaissés sur les 5 derniers déplacements. L’attaque est moins prolifique que celle de Betis, la défense reste correcte mais a concédé davantage à l’extérieur.\n\n**2. Impact du facteur domicile/extérieur**  \n- Betis a une série à domicile très positive (W‑L‑W‑D‑W) et profite d’un public qui a déjà vu le club marquer 2 ou plus buts dans 7 de ses 10 derniers matchs à domicile.  \n- Lyon a une série à l’extérieur plus mitigée (D‑D‑L‑W‑W) et montre une tendance à des matchs à faible score lorsqu’il joue loin (0‑0, 0‑1, 0‑1 sur les trois derniers déplacements).\n\n**3. Forme récente et tendances détaillées**  \n- **Betis** : 6 derniers matchs à domicile – 4 victoires, 1 nul, 1 défaite. Les victoires ont été 3‑0, 7‑1, 2‑0, 2‑0 ; même les matchs nuls ou perdus restent serrés (0‑0, 0‑2). Les statistiques montrent une possession moyenne (≈ 50 %), un nombre élevé de tirs cadrés (8‑1 contre Mallorca, 10‑1 contre Palma del Río) et peu de cartons, signe d’une domination contrôlée.  \n- **Lyon** : 4 derniers matchs à l’extérieur – 2 victoires, 1 nul, 1 défaite. Les victoires se sont traduites par 1‑0 et 1‑0, le nul 0‑0. Les matchs à l’extérieur affichent une possession équilibrée (≈ 50 %) mais surtout très peu de tirs cadrés (3‑2 contre Brest, 2‑0 contre Utrecht).  \n\n**4. Contexte du championnat**  \n- Betis est 16ᵉ avec 5 points, loin du groupe des qualifiés, ce qui le pousse à chercher la victoire à domicile.  \n- Lyon, 3ᵉ avec 9 points, vise à consolider sa place en haut du tableau et possède la motivation de rester parmi les premiers. Toutefois, son manque de buts à l’extérieur le rend plus prudent.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc aucune donnée historique à pondérer.\n\n**6. Analyse des cotes**  \n- Cote Betis victoire = 1,81 (favori).  \n- Over 2.5 = 1,75 contre Under 2.5 = 2,25. La prime sur l’over indique que le marché s’attend à plus de 2,5 buts, ce qui concorde avec la capacité offensive de Betis à domicile.\n\n**7. Synthèse des statistiques détaillées**  \n- **Tirs cadrés** : Betis dépasse largement Lyon à domicile (ex. 8‑1 vs Mallorca, 10‑1 vs Palma del Río).  \n- **Corners** : Betis obtient régulièrement plus de corners (ex. 4‑5, 5‑8), signe d’une pression offensive constante.  \n- **Sauvetages** : Les gardiens de Betis sont peu sollicités (1‑5 contre Mallorca, 0‑5 contre Palma del Río), confirmant la solidité défensive.\n\n**8. Probabilité de BTTS / Over‑Under**  \n- Betis marque presque à chaque match à domicile, tandis que Lyon ne marque que 1‑2 buts sur ses 4 derniers déplacements. La probabilité que les deux équipes marquent est donc modérée (~45 %).  \n- Le total de buts attendu (Betis ≈ 2,3 + Lyon ≈ 1,5) = 3,8, ce qui dépasse largement le seuil de 2,5. Le scénario le plus fréquent sera Betis 2‑0 ou 2‑1, soit **plus de 2,5 buts** mais la victoire reste clairement du côté de Betis.\n\n**Conclusion**  \nCompte tenu de la puissance offensive de Betis à domicile, de la difficulté de Lyon à marquer à l’extérieur et des tendances de match (Betis >2 buts, Lyon souvent à 0‑1), la prédiction la plus fiable est une **victoire de Real Betis**, avec un score le plus probable de **2‑0** ou **2‑1**.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Victoire domicile (Real Betis)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 2‑1"
+      },
+      {
+        "id": 4,
+        "fixture_id": 1351353,
+        "HomeTeam": "Fluminense",
+        "AwayTeam": "Mirassol",
+        "date": "6 novembre 2025 à 22:30:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Fluminense": 1.94,
+            "Mirassol": 4.27,
+            "Draw": 3.44
+          },
+          "totals": {
+            "Over": 2.21,
+            "Under": 1.7
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 17,
+          "total_points": 9,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 8,
+          "total_marques": 12,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 18,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 16,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732891",
+            "date": "Sun, Nov 2",
+            "home_team": "Ceará",
+            "away_team": "Fluminense",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.4%",
+                "55.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "4"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732891"
+          },
+          {
+            "game_id": "732702",
+            "date": "Wed, Oct 29",
+            "home_team": "Fluminense",
+            "away_team": "Ceará",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.8%",
+                "41.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "12",
+                "6"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732702"
+          },
+          {
+            "game_id": "732886",
+            "date": "Sat, Oct 25",
+            "home_team": "Fluminense",
+            "away_team": "Internacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "21",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732886"
+          },
+          {
+            "game_id": "732874",
+            "date": "Mon, Oct 20",
+            "home_team": "Vasco da Gama",
+            "away_team": "Fluminense",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.8%",
+                "53.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732874"
+          },
+          {
+            "game_id": "732862",
+            "date": "Thu, Oct 16",
+            "home_team": "Fluminense",
+            "away_team": "Juventude",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.8%",
+                "33.2%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "6"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732862"
+          },
+          {
+            "game_id": "732714",
+            "date": "Wed, Oct 8",
+            "home_team": "Mirassol",
+            "away_team": "Fluminense",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732714"
+          },
+          {
+            "game_id": "732854",
+            "date": "Sat, Oct 4",
+            "home_team": "Fluminense",
+            "away_team": "Atlético-MG",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.8%",
+                "56.2%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732854"
+          },
+          {
+            "game_id": "732848",
+            "date": "Wed, Oct 1",
+            "home_team": "Sport",
+            "away_team": "Fluminense",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.6%",
+                "51.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732848"
+          },
+          {
+            "game_id": "732833",
+            "date": "Sun, Sep 28",
+            "home_team": "Fluminense",
+            "away_team": "Botafogo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.1%",
+                "52.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "8",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732833"
+          },
+          {
+            "game_id": "757089",
+            "date": "Tue, Sep 23",
+            "home_team": "Fluminense",
+            "away_team": "Lanús",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757089"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732894",
+            "date": "Sat, Nov 1",
+            "home_team": "Mirassol",
+            "away_team": "Botafogo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.5%",
+                "34.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732894"
+          },
+          {
+            "game_id": "732881",
+            "date": "Sat, Oct 25",
+            "home_team": "Sport",
+            "away_team": "Mirassol",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.6%",
+                "64.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732881"
+          },
+          {
+            "game_id": "732871",
+            "date": "Sun, Oct 19",
+            "home_team": "Mirassol",
+            "away_team": "São Paulo",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40%",
+                "60%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732871"
+          },
+          {
+            "game_id": "732867",
+            "date": "Wed, Oct 15",
+            "home_team": "Mirassol",
+            "away_team": "Internacional",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732867"
+          },
+          {
+            "game_id": "732714",
+            "date": "Wed, Oct 8",
+            "home_team": "Mirassol",
+            "away_team": "Fluminense",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732714"
+          },
+          {
+            "game_id": "732851",
+            "date": "Sat, Oct 4",
+            "home_team": "Corinthians",
+            "away_team": "Mirassol",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.3%",
+                "63.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "10",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732851"
+          },
+          {
+            "game_id": "732845",
+            "date": "Wed, Oct 1",
+            "home_team": "Mirassol",
+            "away_team": "Red Bull Bragantino",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.2%",
+                "38.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "12",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732845"
+          },
+          {
+            "game_id": "732830",
+            "date": "Sat, Sep 27",
+            "home_team": "Atlético-MG",
+            "away_team": "Mirassol",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.1%",
+                "69.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "26"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "11"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732830"
+          },
+          {
+            "game_id": "732829",
+            "date": "Sun, Sep 21",
+            "home_team": "Mirassol",
+            "away_team": "Juventude",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.3%",
+                "47.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "11"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732829"
+          },
+          {
+            "game_id": "732701",
+            "date": "Wed, Sep 17",
+            "home_team": "Botafogo",
+            "away_team": "Mirassol",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.4%",
+                "43.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732701"
+          }
+        ],
+        "classement": {
+          "Fluminense": {
+            "position": 7,
+            "points": 47
+          },
+          "Mirassol": {
+            "position": 4,
+            "points": 56
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Palmeiras",
+            "points": 65
+          },
+          {
+            "position": 2,
+            "team": "Flamengo",
+            "points": 65
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 63
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 56
+          },
+          {
+            "position": 5,
+            "team": "Bahia",
+            "points": 52
+          },
+          {
+            "position": 6,
+            "team": "Botafogo",
+            "points": 51
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 47
+          },
+          {
+            "position": 8,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 10,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "Atlético-MG",
+            "points": 40
+          },
+          {
+            "position": 12,
+            "team": "Red Bull Bragantino",
+            "points": 39
+          },
+          {
+            "position": 13,
+            "team": "Grêmio",
+            "points": 39
+          },
+          {
+            "position": 14,
+            "team": "Ceará",
+            "points": 38
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 36
+          },
+          {
+            "position": 16,
+            "team": "Vitória",
+            "points": 34
+          },
+          {
+            "position": 17,
+            "team": "Santos",
+            "points": 33
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 29
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 28
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/124.png",
+        "logo_away": "https://media.api-sports.io/football/teams/7848.png",
+        "classement_home": 7,
+        "classement_away": 4,
+        "points_classement_home": 47,
+        "points_classement_away": 56,
+        "nom_classement_home": "Fluminense",
+        "nom_classement_away": "Mirassol",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.335,
+            "lambda_away": 1.215,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 39.76,
+            "X": 26.72,
+            "V2": 33.52
+          },
+          "double_chance": {
+            "1X": 66.48,
+            "12": 73.28,
+            "X2": 60.24
+          },
+          "over_under": {
+            "plus_de_0.5": 92.2,
+            "moins_de_0.5": 7.8,
+            "plus_de_1.5": 72.25,
+            "moins_de_1.5": 27.75,
+            "plus_de_2.5": 46.89,
+            "moins_de_2.5": 53.11,
+            "plus_de_3.5": 25.07,
+            "moins_de_3.5": 74.92,
+            "plus_de_4.5": 11.67,
+            "moins_de_4.5": 88.33,
+            "plus_de_5.5": 4.69,
+            "moins_de_5.5": 95.31
+          },
+          "btts": {
+            "oui": 52.12,
+            "non": 47.88
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.76,
+            "1Xet+0.5": 58.68,
+            "V2et+0.5": 33.52,
+            "X2et+0.5": 52.43,
+            "12et+0.5": 73.28,
+            "V1et+1.5": 29.18,
+            "1Xet+1.5": 48.1,
+            "V2et+1.5": 24.15,
+            "X2et+1.5": 43.07,
+            "12et+1.5": 53.33,
+            "V1et+2.5": 22.34,
+            "1Xet+2.5": 28.58,
+            "V2et+2.5": 18.31,
+            "X2et+2.5": 24.56,
+            "12et+2.5": 40.64,
+            "V1et+3.5": 10.59,
+            "1Xet+3.5": 16.84,
+            "V2et+3.5": 8.24,
+            "X2et+3.5": 14.49,
+            "12et+3.5": 18.83,
+            "V1et+4.5": 5.8,
+            "1Xet+4.5": 6.94,
+            "V2et+4.5": 4.72,
+            "X2et+4.5": 5.87,
+            "12et+4.5": 10.52,
+            "V1et+5.5": 2.0,
+            "1Xet+5.5": 3.14,
+            "V2et+5.5": 1.55,
+            "X2et+5.5": 2.7,
+            "12et+5.5": 3.55
+          },
+          "scores_probables": {
+            "1-1": 12.68,
+            "1-0": 10.58,
+            "0-1": 9.36,
+            "2-1": 8.71,
+            "0-0": 7.8,
+            "1-2": 7.68,
+            "2-0": 6.84,
+            "0-2": 5.84,
+            "2-2": 5.1,
+            "3-1": 3.89
+          },
+          "buts_moyens_simules": {
+            "home": 1.34,
+            "away": 1.21,
+            "total": 2.55
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Fluminense)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Fluminense (domicile)** : très solide à l’arrière ; 9 buts marqués et **1 seul encaissé** sur leurs 10 derniers matchs à domicile, avec une série actuelle de **W‑W‑W‑W‑W‑D**. Leur moyenne de buts à domicile (1,20) est suffisante lorsqu’ils affrontent des équipes qui peinent à marquer à l’extérieur.  \n- **Mirassol (extérieur)** : bonne attaque globale (1,60 bpm) mais en déplacement leurs chiffres baissent : **5 buts marqués** et **8 encaissés** en dehors de leurs terrains, série récente **W‑L‑L‑D**. Leur défense à l’extérieur montre des failles (plus d’un but concédé dans 4 de leurs 6 derniers matchs à l’extérieur).\n\n**2. Impact du facteur domicile/extérieur**  \n- Fluminense bénéficie d’un **avantage maison** confirmé par leurs 5 victoires consécutives à domicile.  \n- Mirassol a du mal à reproduire son niveau offensif à l’extérieur ; leurs deux victoires à l’extérieur sont très rares (seulement 1‑2‑1 contre Sport).  \n\n**3. Forme récente & tendances (stats détaillées)**  \n| Équipe | 5 derniers matchs (domicile/extérieur) | Possession moyenne | tirs cadrés / tentatives | corners | buts marqués | buts encaissés |\n|--------|----------------------------------------|--------------------|--------------------------|---------|--------------|----------------|\n| **Fluminense (D)** | W (2‑0), W (1‑0), W (1‑0), W (3‑0), D (2‑2) | 55 % | 6,2 / 13,4 | 6,2 | 8 | 1 |\n| **Mirassol (E)** | D (0‑0), L (0‑1), D (1‑1), L (0‑3), W (2‑1) | 48 % | 5,2 / 12,6 | 5,8 | 4 | 6 |\n\n- **Fluminense** domine la possession et crée plus de tirs cadrés que Mirassol, tout en limitant les occasions adverses.  \n- **Mirassol** montre une possession inférieure et un ratio tirs cadrés/tentatives moindre à l’extérieur, signe d’une difficulté à créer des occasions dangereuses loin de son terrain.\n\n**4. Contexte du championnat**  \n- Fluminense est **7ᵉ** avec 47 pts, à 9 pts du 4ᵉ (Mirassol).  \n- Mirassol, bien que 4ᵉ, a besoin de points à l’extérieur pour rester dans la course. Leur priorité sera de contenir les attaques de Fluminense, mais leurs performances à l’extérieur (8 buts encaissés) indiquent qu’ils risquent de céder.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc l’analyse repose sur les performances récentes et les indicateurs de jeu.\n\n**6. Évaluation des cotes**  \n- **Fluminense 1.94** vs **Mirassol 4.27** : les bookmakers valorisent déjà la supériorité à domicile de Fluminense.  \n- Le **total < 2.5** à 1.70 est attractif, mais il dépend de la capacité de Mirassol à marquer, ce qui reste incertaine à l’extérieur.\n\n**7. Synthèse**  \n- La défense de Fluminense à domicile est l’un des meilleurs du championnat (0,9 bpa).  \n- Mirassol a concédé **8 buts** en déplacement récemment, et ne marque que **0,8 bpa** à l’extérieur.  \n- Les deux dernières confrontations (Fluminense 2‑1 à l’extérieur, Fluminense 3‑0 à domicile) montrent une tendance à des scores serrés, souvent 1‑0 ou 2‑0 en faveur de Fluminense.\n\n**Conclusion** : La combinaison d’une défense à domicile quasi‑imperméable, d’une attaque capable de débloquer le jeu (1‑2 bpm) et d’une faiblesse offensive de Mirassol à l’extérieur conduit à prédire une **victoire de Fluminense**, très probablement par le score **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Fluminense)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      }
+    ]
+  }
+}
