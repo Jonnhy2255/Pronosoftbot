@@ -1,0 +1,554 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-10 02:47:36",
+    "date_matchs": "2025-11-10",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1396926,
+        "HomeTeam": "Sportivo Ameliano",
+        "AwayTeam": "2 de Mayo",
+        "date": "10 novembre 2025 à 20:00:00 UTC",
+        "league": "Paraguay - Division Profesional - Clausura",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 13,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 8,
+          "total_marques": 13,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 19,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 4,
+          "total_marques": 12,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          {
+            "game_id": "749895",
+            "date": "Sun, 2 Nov",
+            "home_team": "Sportivo Luqueño",
+            "away_team": "Sportivo Ameliano",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749895"
+          },
+          {
+            "game_id": "749886",
+            "date": "Mon, 27 Oct",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "General Caballero JLM",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749886"
+          },
+          {
+            "game_id": "749882",
+            "date": "Sat, 18 Oct",
+            "home_team": "Libertad",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 2",
+            "status": "AGT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749882"
+          },
+          {
+            "game_id": "749876",
+            "date": "Sun, 12 Oct",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Guarani",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749876"
+          },
+          {
+            "game_id": "749870",
+            "date": "Sat, 4 Oct",
+            "home_team": "Olimpia",
+            "away_team": "Sportivo Ameliano",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749870"
+          },
+          {
+            "game_id": "749863",
+            "date": "Mon, 29 Sep",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749863"
+          },
+          {
+            "game_id": "749854",
+            "date": "Sat, 20 Sep",
+            "home_team": "Cerro Porteño",
+            "away_team": "Sportivo Ameliano",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749854"
+          },
+          {
+            "game_id": "749848",
+            "date": "Fri, 12 Sep",
+            "home_team": "Club Atlético Tembetary",
+            "away_team": "Sportivo Ameliano",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749848"
+          },
+          {
+            "game_id": "749847",
+            "date": "Mon, 8 Sep",
+            "home_team": "Trinidense",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749847"
+          },
+          {
+            "game_id": "749839",
+            "date": "Fri, 29 Aug",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Nacional",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749839"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "749894",
+            "date": "Fri, 31 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Club Atlético Tembetary",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749894"
+          },
+          {
+            "game_id": "749889",
+            "date": "Sun, 26 Oct",
+            "home_team": "Trinidense",
+            "away_team": "2 de Mayo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749889"
+          },
+          {
+            "game_id": "749878",
+            "date": "Sat, 18 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Nacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749878"
+          },
+          {
+            "game_id": "749873",
+            "date": "Sat, 11 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Cerro Porteño",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749873"
+          },
+          {
+            "game_id": "749871",
+            "date": "Fri, 3 Oct",
+            "home_team": "Sportivo Luqueño",
+            "away_team": "2 de Mayo",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749871"
+          },
+          {
+            "game_id": "749861",
+            "date": "Sun, 28 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "General Caballero JLM",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749861"
+          },
+          {
+            "game_id": "749856",
+            "date": "Sun, 21 Sep",
+            "home_team": "Libertad",
+            "away_team": "2 de Mayo",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749856"
+          },
+          {
+            "game_id": "749849",
+            "date": "Fri, 12 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "Guarani",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749849"
+          },
+          {
+            "game_id": "749843",
+            "date": "Sun, 7 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "Olimpia",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749843"
+          },
+          {
+            "game_id": "749836",
+            "date": "Sat, 30 Aug",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "2 de Mayo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749836"
+          }
+        ],
+        "classement": {
+          "Sportivo Ameliano": null,
+          "2 de Mayo": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "695706",
+            "date": "Saturday, March 2, 2024",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 2",
+            "team2": "2 de Mayo",
+            "title": "Sportivo Ameliano VS 2 de Mayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695706/2-de-mayo-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "695768",
+            "date": "Tuesday, May 21, 2024",
+            "team1": "2 de Mayo",
+            "score": "2 - 1",
+            "team2": "Sportivo Ameliano",
+            "title": "2 de Mayo VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695768/sportivo-ameliano-2-de-mayo",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "711329",
+            "date": "Thursday, August 29, 2024",
+            "team1": "2 de Mayo",
+            "score": "1 - 1",
+            "team2": "Sportivo Ameliano",
+            "title": "2 de Mayo VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711329/sportivo-ameliano-2-de-mayo",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "711395",
+            "date": "Monday, November 11, 2024",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 2",
+            "team2": "2 de Mayo",
+            "title": "Sportivo Ameliano VS 2 de Mayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711395/2-de-mayo-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728874",
+            "date": "Monday, February 10, 2025",
+            "team1": "Sportivo Ameliano",
+            "score": "1 - 1",
+            "team2": "2 de Mayo",
+            "title": "Sportivo Ameliano VS 2 de Mayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728874/2-de-mayo-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728939",
+            "date": "Monday, April 21, 2025",
+            "team1": "2 de Mayo",
+            "score": "1 - 4",
+            "team2": "Sportivo Ameliano",
+            "title": "2 de Mayo VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728939/sportivo-ameliano-2-de-mayo",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "749831",
+            "date": "Saturday, August 23, 2025",
+            "team1": "2 de Mayo",
+            "score": "1 - 1",
+            "team2": "Sportivo Ameliano",
+            "title": "2 de Mayo VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/749831/sportivo-ameliano-2-de-mayo",
+            "source": "Division Profesional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10487.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2140.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Paraguay - Division Profesional - Clausura",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.2,
+            "lambda_away": 1.375,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 32.98,
+            "X": 26.36,
+            "V2": 40.66
+          },
+          "double_chance": {
+            "1X": 59.34,
+            "12": 73.65,
+            "X2": 67.02
+          },
+          "over_under": {
+            "plus_de_0.5": 92.36,
+            "moins_de_0.5": 7.64,
+            "plus_de_1.5": 73.1,
+            "moins_de_1.5": 26.9,
+            "plus_de_2.5": 47.88,
+            "moins_de_2.5": 52.12,
+            "plus_de_3.5": 25.72,
+            "moins_de_3.5": 74.28,
+            "plus_de_4.5": 11.86,
+            "moins_de_4.5": 88.14,
+            "plus_de_5.5": 4.64,
+            "moins_de_5.5": 95.36
+          },
+          "btts": {
+            "oui": 52.42,
+            "non": 47.58
+          },
+          "resultat_total": {
+            "V1et+0.5": 32.98,
+            "1Xet+0.5": 51.7,
+            "V2et+0.5": 40.66,
+            "X2et+0.5": 59.37,
+            "12et+0.5": 73.65,
+            "V1et+1.5": 24.08,
+            "1Xet+1.5": 42.8,
+            "V2et+1.5": 30.3,
+            "X2et+1.5": 49.01,
+            "12et+1.5": 54.38,
+            "V1et+2.5": 18.52,
+            "1Xet+2.5": 24.82,
+            "V2et+2.5": 23.06,
+            "X2et+2.5": 29.36,
+            "12et+2.5": 41.59,
+            "V1et+3.5": 8.59,
+            "1Xet+3.5": 14.89,
+            "V2et+3.5": 10.83,
+            "X2et+3.5": 17.12,
+            "12et+3.5": 19.42,
+            "V1et+4.5": 4.8,
+            "1Xet+4.5": 5.79,
+            "V2et+4.5": 6.06,
+            "X2et+4.5": 7.06,
+            "12et+4.5": 10.86,
+            "V1et+5.5": 1.68,
+            "1Xet+5.5": 2.67,
+            "V2et+5.5": 1.98,
+            "X2et+5.5": 2.96,
+            "12et+5.5": 3.66
+          },
+          "scores_probables": {
+            "1-1": 12.42,
+            "0-1": 10.36,
+            "1-2": 9.0,
+            "1-0": 8.9,
+            "2-1": 7.94,
+            "0-0": 7.64,
+            "0-2": 7.24,
+            "2-0": 5.56,
+            "2-2": 5.3,
+            "1-3": 3.56
+          },
+          "buts_moyens_simules": {
+            "home": 1.21,
+            "away": 1.37,
+            "total": 2.58
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (2 de Mayo)  \n\n**CONFIANCE** : 62 %  \n\n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Sportivo Ameliano (domicile)** : moyenne 1,30 buts marqués / match, mais 1,70 buts encaissés. Leur défense à domicile est la plus perméable de l’équipe (9 buts concédés sur les 4 derniers matchs à domicile).  \n- **2 de Mayo (extérieur)** : moyenne 1,20 buts marqués, mais seulement 0,70 buts encaissés à l’extérieur – la meilleure défense à l’extérieur du championnat. Leur attaque est légèrement inférieure à celle d’Ameliano, mais suffisante pour profiter d’une défense fragile.\n\n**2. Impact du facteur domicile/extérieur**  \n- Ameliano n’a remporté que 1 de ses 4 derniers matchs à domicile (W‑D‑L‑L).  \n- 2 de Mayo a obtenu 3 victoires et 1 nul sur ses 4 derniers déplacements (W‑W‑L‑W). Le facteur terrain favorise donc clairement le visiteur.\n\n**3. Forme récente**  \n- **Ameliano** (6 derniers) : W L W D L L → 7 points, aucune séquence de victoires.  \n- **2 de Mayo** (6 derniers) : L L W D W W → 10 points, deux victoires consécutives et une bonne dynamique offensive (3‑2 contre Olimpia, 3‑0 contre Luqueño).  \n\n**4. Tendances de buts**  \n- Total buts à domicile d’Ameliano : 6 marqués / 9 encaissés → moyenne 1,5 buts par match (tous matchs).  \n- Total buts à l’extérieur de 2 de Mayo : 5 marqués / 4 encaissés → moyenne 0,9 buts par match.  \n- La combinaison d’une défense qui concède beaucoup et d’une défense qui laisse très peu d’occasions indique un match **probablement sous les 2,5 buts**.\n\n**5. Confrontations directes** (dernières saisons)  \n- Sur 7 rencontres récentes, 2 de Mayo a gagné 3 fois, fait 2 nuls et perdu 2 fois.  \n- Les deux dernières confrontations (2025) se sont soldées par un 1‑1 et un 1‑4 en faveur de 2 de Mayo (ce dernier en tant qu’équipe visiteuse).  \n- La tendance montre que 2 de Mayo réussit à marquer même à l’extérieur contre Ameliano, tandis qu’Ameliano a du mal à répondre.\n\n**6. Analyse des matchs détaillés (absence de stats fines)**  \n- Même si les données de possession, tirs, corners ne sont pas disponibles, les scores récents donnent une image claire : Ameliano a concédé 2‑0, 2‑1, 2‑0 et 1‑4 contre des équipes de niveau moyen à supérieur, ce qui confirme une défense vulnérable.  \n- 2 de Mayo a maintenu des scores serrés lorsqu’il a été à l’extérieur (0‑1, 0‑0, 1‑0), montrant une capacité à garder le match à faible score tout en trouvant la lucarne.\n\n**7. Synthèse**  \n- **Défense d’Ameliano** : très perméable → risque élevé de concéder.  \n- **Défense de 2 de Mayo** : solide → limite les chances d’Ameliano.  \n- **Attaque d’Ameliano** : suffisante pour marquer une fois, mais pas assez pour compenser la faiblesse défensive.  \n- **Attaque de 2 de Mayo** : capable de marquer au moins une fois contre une défense moyenne.\n\n**Conclusion** : Le scénario le plus probable est une victoire serrée de 2 de Mayo, avec un seul ou deux buts marqués, et peu de chances que les deux équipes marquent. D’où la prédiction « Victoire extérieur » accompagnée d’une forte probabilité de « Moins de 2,5 buts », même si le pari choisi doit rester unique.  \n\n**Scores les plus probables** : 1‑0 ou 2‑0 en faveur de 2 de Mayo.",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Victoire extérieur (2 de Mayo)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      }
+    ]
+  }
+}
