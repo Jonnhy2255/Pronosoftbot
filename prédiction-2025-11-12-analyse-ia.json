@@ -1,0 +1,1158 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-12 02:41:25",
+    "date_matchs": "2025-11-12",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1351198,
+        "HomeTeam": "Atletico-MG",
+        "AwayTeam": "Fortaleza EC",
+        "date": "12 novembre 2025 à 23:30:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 18,
+          "total_points": 14,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 7,
+          "total_marques": 16,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 12,
+          "total_points": 6,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 9,
+          "total_encaisses": 14
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732919",
+            "date": "Sat, Nov 8",
+            "home_team": "Sport",
+            "away_team": "Atlético-MG",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.8%",
+                "69.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "7",
+                "20"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732919"
+          },
+          {
+            "game_id": "732900",
+            "date": "Wed, Nov 5",
+            "home_team": "Atlético-MG",
+            "away_team": "Bahia",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.6%",
+                "39.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "23",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732900"
+          },
+          {
+            "game_id": "732896",
+            "date": "Sun, Nov 2",
+            "home_team": "Internacional",
+            "away_team": "Atlético-MG",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.4%",
+                "23.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "2"
+              ],
+              "Shot Attempts": [
+                "21",
+                "6"
+              ],
+              "Yellow Cards": [
+                "7",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732896"
+          },
+          {
+            "game_id": "759131",
+            "date": "Tue, Oct 28",
+            "home_team": "Atlético-MG",
+            "away_team": "Independiente del Valle",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759131"
+          },
+          {
+            "game_id": "732888",
+            "date": "Sat, Oct 25",
+            "home_team": "Atlético-MG",
+            "away_team": "Ceará",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "6",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732888"
+          },
+          {
+            "game_id": "759129",
+            "date": "Tue, Oct 21",
+            "home_team": "Independiente del Valle",
+            "away_team": "Atlético-MG",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.3%",
+                "48.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759129"
+          },
+          {
+            "game_id": "732876",
+            "date": "Sat, Oct 18",
+            "home_team": "Corinthians",
+            "away_team": "Atlético-MG",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62%",
+                "38%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732876"
+          },
+          {
+            "game_id": "732860",
+            "date": "Wed, Oct 15",
+            "home_team": "Atlético-MG",
+            "away_team": "Cruzeiro",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "23",
+                "4"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732860"
+          },
+          {
+            "game_id": "732720",
+            "date": "Wed, Oct 8",
+            "home_team": "Atlético-MG",
+            "away_team": "Sport",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "19"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732720"
+          },
+          {
+            "game_id": "732854",
+            "date": "Sat, Oct 4",
+            "home_team": "Fluminense",
+            "away_team": "Atlético-MG",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.8%",
+                "56.2%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732854"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732916",
+            "date": "Sun, Nov 9",
+            "home_team": "Fortaleza",
+            "away_team": "Grêmio",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.5%",
+                "46.5%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "6"
+              ],
+              "Shot Attempts": [
+                "22",
+                "21"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732916"
+          },
+          {
+            "game_id": "732907",
+            "date": "Thu, Nov 6",
+            "home_team": "Ceará",
+            "away_team": "Fortaleza",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.8%",
+                "38.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732907"
+          },
+          {
+            "game_id": "732893",
+            "date": "Sat, Nov 1",
+            "home_team": "Santos",
+            "away_team": "Fortaleza",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.7%",
+                "32.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "8"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "7",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732893"
+          },
+          {
+            "game_id": "732885",
+            "date": "Sat, Oct 25",
+            "home_team": "Fortaleza",
+            "away_team": "Flamengo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "19.5%",
+                "80.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "5",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "11"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732885"
+          },
+          {
+            "game_id": "732875",
+            "date": "Sat, Oct 18",
+            "home_team": "Cruzeiro",
+            "away_team": "Fortaleza",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.9%",
+                "45.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732875"
+          },
+          {
+            "game_id": "732863",
+            "date": "Wed, Oct 15",
+            "home_team": "Fortaleza",
+            "away_team": "Vasco da Gama",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55%",
+                "45%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "27",
+                "6"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "10",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732863"
+          },
+          {
+            "game_id": "732858",
+            "date": "Sun, Oct 5",
+            "home_team": "Juventude",
+            "away_team": "Fortaleza",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.5%",
+                "51.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732858"
+          },
+          {
+            "game_id": "732840",
+            "date": "Thu, Oct 2",
+            "home_team": "Fortaleza",
+            "away_team": "São Paulo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.6%",
+                "25.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732840"
+          },
+          {
+            "game_id": "732838",
+            "date": "Sat, Sep 27",
+            "home_team": "Fortaleza",
+            "away_team": "Sport",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.9%",
+                "47.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732838"
+          },
+          {
+            "game_id": "732828",
+            "date": "Sat, Sep 20",
+            "home_team": "Palmeiras",
+            "away_team": "Fortaleza",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.9%",
+                "34.1%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "5"
+              ],
+              "Shot Attempts": [
+                "23",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732828"
+          }
+        ],
+        "classement": {
+          "Atletico-MG": {
+            "position": 9,
+            "points": 43
+          },
+          "Fortaleza EC": {
+            "position": 19,
+            "points": 30
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Palmeiras",
+            "points": 68
+          },
+          {
+            "position": 2,
+            "team": "Flamengo",
+            "points": 68
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "Bahia",
+            "points": 53
+          },
+          {
+            "position": 6,
+            "team": "Botafogo",
+            "points": 52
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Atlético-MG",
+            "points": 43
+          },
+          {
+            "position": 10,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "Red Bull Bragantino",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Ceará",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Vitória",
+            "points": 35
+          },
+          {
+            "position": 17,
+            "team": "Santos",
+            "points": 33
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 32
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 30
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699451",
+            "date": "Sunday, June 23, 2024",
+            "team1": "Atlético-MG",
+            "score": "1 - 1",
+            "team2": "Fortaleza",
+            "title": "Atlético-MG VS Fortaleza",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699451/fortaleza-atletico-mg",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "66.7%",
+                "33.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "21",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            }
+          },
+          {
+            "gameId": "699645",
+            "date": "Wednesday, October 16, 2024",
+            "team1": "Fortaleza",
+            "score": "1 - 1",
+            "team2": "Atlético-MG",
+            "title": "Fortaleza VS Atlético-MG",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699645/atletico-mg-fortaleza",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "46.1%",
+                "53.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1062.png",
+        "logo_away": "https://media.api-sports.io/football/teams/154.png",
+        "classement_home": 9,
+        "classement_away": 19,
+        "points_classement_home": 43,
+        "points_classement_away": 30,
+        "nom_classement_home": "Atlético-MG",
+        "nom_classement_away": "Fortaleza",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.433,
+            "lambda_away": 1.055,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 45.98,
+            "X": 26.58,
+            "V2": 27.44
+          },
+          "double_chance": {
+            "1X": 72.56,
+            "12": 73.41,
+            "X2": 54.02
+          },
+          "over_under": {
+            "plus_de_0.5": 91.94,
+            "moins_de_0.5": 8.06,
+            "plus_de_1.5": 71.26,
+            "moins_de_1.5": 28.74,
+            "plus_de_2.5": 45.05,
+            "moins_de_2.5": 54.95,
+            "plus_de_3.5": 23.44,
+            "moins_de_3.5": 76.56,
+            "plus_de_4.5": 10.44,
+            "moins_de_4.5": 89.56,
+            "plus_de_5.5": 3.96,
+            "moins_de_5.5": 96.04
+          },
+          "btts": {
+            "oui": 49.7,
+            "non": 50.3
+          },
+          "resultat_total": {
+            "V1et+0.5": 45.98,
+            "1Xet+0.5": 64.5,
+            "V2et+0.5": 27.44,
+            "X2et+0.5": 45.96,
+            "12et+0.5": 73.41,
+            "V1et+1.5": 33.74,
+            "1Xet+1.5": 52.26,
+            "V2et+1.5": 19.0,
+            "X2et+1.5": 37.52,
+            "12et+1.5": 52.73,
+            "V1et+2.5": 25.06,
+            "1Xet+2.5": 30.46,
+            "V2et+2.5": 14.58,
+            "X2et+2.5": 19.99,
+            "12et+2.5": 39.65,
+            "V1et+3.5": 11.86,
+            "1Xet+3.5": 17.26,
+            "V2et+3.5": 6.18,
+            "X2et+3.5": 11.58,
+            "12et+3.5": 18.04,
+            "V1et+4.5": 6.28,
+            "1Xet+4.5": 7.04,
+            "V2et+4.5": 3.4,
+            "X2et+4.5": 4.15,
+            "12et+4.5": 9.68,
+            "V1et+5.5": 2.07,
+            "1Xet+5.5": 2.83,
+            "V2et+5.5": 1.12,
+            "X2et+5.5": 1.88,
+            "12et+5.5": 3.2
+          },
+          "scores_probables": {
+            "1-1": 13.12,
+            "1-0": 12.24,
+            "2-1": 9.04,
+            "2-0": 8.67,
+            "0-1": 8.44,
+            "0-0": 8.06,
+            "1-2": 6.75,
+            "2-2": 4.64,
+            "0-2": 4.41,
+            "3-0": 4.17
+          },
+          "buts_moyens_simules": {
+            "home": 1.43,
+            "away": 1.05,
+            "total": 2.48
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire domicile (Atletico‑MG)  \n- **CONFIANCE** : 78 %  \n- **SCORES PROBABLES** : 2‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Atletico‑MG** : 9ᵉ au classement (43 pts). Moyenne 1,60 buts marqués et 1,00 but encaissé. En 5 derniers matchs à domicile : 4 victoires, 1 nul, 11 buts marqués, seulement 3 encaissés → défense très solide à domicile.  \n- **Fortaleza EC** : 19ᵉ (30 pts). Moyenne 0,90 buts marqués et 1,40 buts encaissés. En 5 derniers déplacements : 2 victoires, 1 nul, 5 buts marqués, 8 encaissés → attaque peu efficace à l’extérieur et défense fragile.\n\n**2. Impact du facteur domicile / extérieur**  \n- Atletico‑MG a une **taux de concession à domicile de 0,27 but/match** (3 buts en 11 matchs).  \n- Fortaleza concède **1,60 but/match à l’extérieur** (8 buts en 5 matchs).  \nLe déséquilibre favorise nettement le domicile.\n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Atletico‑MG** (6 derniers) : W W D W W D → 14 pts, aucune défaite.  \n  - Points forts observés : possession souvent >55 % (ex. 60,6 % vs Bahia), tirs cadrés élevés (7‑4 vs Bahia, 7‑4 vs Independiente), nombreux corners (13 vs Bahia).  \n  - Défense : très peu de tirs adverses cadrés (ex. 1‑1 vs Cruzeiro, 1‑0 vs Ceará).  \n- **Fortaleza** (6 derniers) : D D D W L L → 6 pts, deux défaites consécutives.  \n  - Même lorsqu’ils marquent (ex. 2‑2 vs Grêmio), ils laissent passer **plus de 20 tirs** et concèdent souvent plus de 6 tirs cadrés (ex. 9‑6 vs Grêmio).  \n  - Leur capacité à créer des occasions est irrégulière (possessions oscillant entre 19 % et 74 %).  \n\n**4. Contexte du championnat**  \n- Atletico‑MG se situe dans le top‑10, à 5 pts du 6ᵉ (Vasco).  \n- Fortaleza lutte en zone de relégation (19ᵉ, 30 pts) et a besoin de points, mais son moral est bas après une série de défaites à l’extérieur.  \n\n**5. Confrontations directes (saison précédente)**  \n- Deux matchs : 1‑1 à domicile et 1‑1 à l’extérieur.  \n- Statistiques : Atletico‑MG dominant la possession (66,7 % puis 46,1 %) et les tirs cadrés (8‑3 puis 5‑1).  \n- Malgré les égalités, la supériorité technique d’Atletico‑MG est évidente.  \n\n**6. Analyse des statistiques détaillées des matchs passés**  \n- **Possession** : Atletico‑MG dépasse souvent les 55 % (ex. 60,6 % vs Bahia, 61,1 % vs Cruzeiro). Fortaleza, en déplacement, oscille entre 40 % et 55 %.  \n- **Tirs cadrés** : Atletico‑MG réalise en moyenne 5‑6 tirs cadrés à domicile, tandis que leurs adversaires n’en enregistrent que 1‑2. Fortaleza ne dépasse généralement pas 4 tirs cadrés à l’extérieur.  \n- **Corners** : Atletico‑MG génère régulièrement plus de 5 corners, signe d’une pression offensive constante.  \n\n**7. Synthèse**  \n- L’écart entre la solidité défensive d’Atletico‑MG à domicile (0,27 buts concédés/match) et la faiblesse offensive de Fortaleza à l’extérieur (0,90 buts marqués/match) rend très probable une victoire de l’équipe locale.  \n- Le nombre de buts total devrait se situer autour de 2‑3 buts, d’où les scores les plus plausibles : **2‑0** (clean‑sheet probable) ou **2‑1** (si Fortaleza parvient à marquer).  \n\n**Conclusion** : La meilleure mise est sur la **victoire domicile d’Atletico‑MG** avec une confiance de **78 %**, les scores les plus attendus étant **2‑0 ou 2‑1**.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire domicile (Atletico‑MG)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 2‑1"
+      }
+    ]
+  }
+}
