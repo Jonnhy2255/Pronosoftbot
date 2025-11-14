@@ -1,0 +1,1194 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-14 02:42:14",
+    "date_matchs": "2025-11-14",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1353623,
+        "HomeTeam": "Paysandu",
+        "AwayTeam": "Amazonas",
+        "date": "14 novembre 2025 à 23:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 1,
+          "total_points_10": 5,
+          "total_points": 1,
+          "serie_domicile": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 8,
+          "total_marques": 12,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 11,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 8,
+          "total_marques": 9,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "733567",
+            "date": "Sun, 9 Nov",
+            "home_team": "Paysandu",
+            "away_team": "Coritiba",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733567"
+          },
+          {
+            "game_id": "733551",
+            "date": "Fri, 31 Oct",
+            "home_team": "Atlético Goianiense",
+            "away_team": "Paysandu",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.4%",
+                "43.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733551"
+          },
+          {
+            "game_id": "733546",
+            "date": "Sat, 25 Oct",
+            "home_team": "Paysandu",
+            "away_team": "Avaí",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50%",
+                "50%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733546"
+          },
+          {
+            "game_id": "733535",
+            "date": "Mon, 20 Oct",
+            "home_team": "Ferroviária",
+            "away_team": "Paysandu",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.2%",
+                "46.8%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733535"
+          },
+          {
+            "game_id": "733526",
+            "date": "Tue, 14 Oct",
+            "home_team": "Paysandu",
+            "away_team": "Remo",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733526"
+          },
+          {
+            "game_id": "733512",
+            "date": "Wed, 8 Oct",
+            "home_team": "Botafogo-SP",
+            "away_team": "Paysandu",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733512"
+          },
+          {
+            "game_id": "733506",
+            "date": "Thu, 2 Oct",
+            "home_team": "Paysandu",
+            "away_team": "Cuiabá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.5%",
+                "37.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "20",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733506"
+          },
+          {
+            "game_id": "733489",
+            "date": "Sun, 28 Sep",
+            "home_team": "Criciúma",
+            "away_team": "Paysandu",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.7%",
+                "43.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "16",
+                "18"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733489"
+          },
+          {
+            "game_id": "733486",
+            "date": "Tue, 23 Sep",
+            "home_team": "Paysandu",
+            "away_team": "Novorizontino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.5%",
+                "46.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733486"
+          },
+          {
+            "game_id": "733476",
+            "date": "Sat, 20 Sep",
+            "home_team": "Goiás",
+            "away_team": "Paysandu",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733476"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "733561",
+            "date": "Mon, 10 Nov",
+            "home_team": "Botafogo-SP",
+            "away_team": "Amazonas",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.4%",
+                "56.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "7",
+                "19"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733561"
+          },
+          {
+            "game_id": "733549",
+            "date": "Sun, 2 Nov",
+            "home_team": "Amazonas",
+            "away_team": "Cuiabá",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.6%",
+                "46.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733549"
+          },
+          {
+            "game_id": "733540",
+            "date": "Tue, 28 Oct",
+            "home_team": "Athletico Paranaense",
+            "away_team": "Amazonas",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.4%",
+                "45.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733540"
+          },
+          {
+            "game_id": "733529",
+            "date": "Sat, 18 Oct",
+            "home_team": "Amazonas",
+            "away_team": "Novorizontino",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.5%",
+                "45.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733529"
+          },
+          {
+            "game_id": "733527",
+            "date": "Sun, 12 Oct",
+            "home_team": "Vila Nova",
+            "away_team": "Amazonas",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733527"
+          },
+          {
+            "game_id": "733509",
+            "date": "Wed, 8 Oct",
+            "home_team": "Amazonas",
+            "away_team": "Criciúma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.6%",
+                "56.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "7"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733509"
+          },
+          {
+            "game_id": "733499",
+            "date": "Fri, 3 Oct",
+            "home_team": "Athletic",
+            "away_team": "Amazonas",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.2%",
+                "43.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "22",
+                "23"
+              ],
+              "Yellow Cards": [
+                "1",
+                "6"
+              ],
+              "Corner Kicks": [
+                "9",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733499"
+          },
+          {
+            "game_id": "733495",
+            "date": "Mon, 29 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Chapecoense",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.4%",
+                "42.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "20",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733495"
+          },
+          {
+            "game_id": "733485",
+            "date": "Thu, 25 Sep",
+            "home_team": "Operario PR",
+            "away_team": "Amazonas",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.6%",
+                "40.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733485"
+          },
+          {
+            "game_id": "733469",
+            "date": "Sat, 20 Sep",
+            "home_team": "Amazonas",
+            "away_team": "Volta Redonda",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.5%",
+                "68.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "18"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/733469"
+          }
+        ],
+        "classement": {
+          "Paysandu": {
+            "position": 20,
+            "points": 27
+          },
+          "Amazonas": {
+            "position": 18,
+            "points": 35
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coritiba",
+            "points": 64
+          },
+          {
+            "position": 2,
+            "team": "Athletico Paranaense",
+            "points": 59
+          },
+          {
+            "position": 3,
+            "team": "Remo",
+            "points": 59
+          },
+          {
+            "position": 4,
+            "team": "Chapecoense",
+            "points": 58
+          },
+          {
+            "position": 5,
+            "team": "Criciúma",
+            "points": 58
+          },
+          {
+            "position": 6,
+            "team": "Goiás",
+            "points": 58
+          },
+          {
+            "position": 7,
+            "team": "Novorizontino",
+            "points": 57
+          },
+          {
+            "position": 8,
+            "team": "CRB",
+            "points": 53
+          },
+          {
+            "position": 9,
+            "team": "Avaí",
+            "points": 52
+          },
+          {
+            "position": 10,
+            "team": "Atlético Goianiense",
+            "points": 51
+          },
+          {
+            "position": 11,
+            "team": "Cuiabá",
+            "points": 50
+          },
+          {
+            "position": 12,
+            "team": "Vila Nova",
+            "points": 46
+          },
+          {
+            "position": 13,
+            "team": "América Mineiro",
+            "points": 45
+          },
+          {
+            "position": 14,
+            "team": "Operario PR",
+            "points": 44
+          },
+          {
+            "position": 15,
+            "team": "Botafogo-SP",
+            "points": 41
+          },
+          {
+            "position": 16,
+            "team": "Athletic",
+            "points": 40
+          },
+          {
+            "position": 17,
+            "team": "Ferroviária",
+            "points": 40
+          },
+          {
+            "position": 18,
+            "team": "Amazonas",
+            "points": 35
+          },
+          {
+            "position": 19,
+            "team": "Volta Redonda",
+            "points": 34
+          },
+          {
+            "position": 20,
+            "team": "Paysandu",
+            "points": 27
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699955",
+            "date": "Saturday, May 18, 2024",
+            "team1": "Amazonas",
+            "score": "1 - 1",
+            "team2": "Paysandu",
+            "title": "Amazonas VS Paysandu",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699955/paysandu-amazonas",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "34.7%",
+                "65.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "700152",
+            "date": "Thursday, September 5, 2024",
+            "team1": "Paysandu",
+            "score": "0 - 1",
+            "team2": "Amazonas",
+            "title": "Paysandu VS Amazonas",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/700152/amazonas-paysandu",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "69.8%",
+                "30.2%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "26",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "13",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "733382",
+            "date": "Wednesday, July 23, 2025",
+            "team1": "Amazonas",
+            "score": "1 - 1",
+            "team2": "Paysandu",
+            "title": "Amazonas VS Paysandu",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733382/paysandu-amazonas",
+            "source": "Serie B",
+            "stats": {
+              "Possession": [
+                "67.8%",
+                "32.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/149.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10862.png",
+        "classement_home": 20,
+        "classement_away": 18,
+        "points_classement_home": 27,
+        "points_classement_away": 35,
+        "nom_classement_home": "Paysandu",
+        "nom_classement_away": "Amazonas",
+        "country_fr": "Brazil - Serie B",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.256,
+            "lambda_away": 1.204,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 37.48,
+            "X": 27.82,
+            "V2": 34.7
+          },
+          "double_chance": {
+            "1X": 65.3,
+            "12": 72.18,
+            "X2": 62.52
+          },
+          "over_under": {
+            "plus_de_0.5": 91.19,
+            "moins_de_0.5": 8.81,
+            "plus_de_1.5": 70.19,
+            "moins_de_1.5": 29.81,
+            "plus_de_2.5": 44.38,
+            "moins_de_2.5": 55.62,
+            "plus_de_3.5": 23.08,
+            "moins_de_3.5": 76.92,
+            "plus_de_4.5": 10.2,
+            "moins_de_4.5": 89.8,
+            "plus_de_5.5": 3.94,
+            "moins_de_5.5": 96.06
+          },
+          "btts": {
+            "oui": 50.05,
+            "non": 49.95
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.48,
+            "1Xet+0.5": 56.49,
+            "V2et+0.5": 34.7,
+            "X2et+0.5": 53.71,
+            "12et+0.5": 72.18,
+            "V1et+1.5": 26.74,
+            "1Xet+1.5": 45.75,
+            "V2et+1.5": 24.44,
+            "X2et+1.5": 43.44,
+            "12et+1.5": 51.18,
+            "V1et+2.5": 20.17,
+            "1Xet+2.5": 26.0,
+            "V2et+2.5": 18.37,
+            "X2et+2.5": 24.2,
+            "12et+2.5": 38.54,
+            "V1et+3.5": 8.87,
+            "1Xet+3.5": 14.7,
+            "V2et+3.5": 8.38,
+            "X2et+3.5": 14.22,
+            "12et+3.5": 17.25,
+            "V1et+4.5": 4.57,
+            "1Xet+4.5": 5.54,
+            "V2et+4.5": 4.66,
+            "X2et+4.5": 5.63,
+            "12et+4.5": 9.23,
+            "V1et+5.5": 1.48,
+            "1Xet+5.5": 2.45,
+            "V2et+5.5": 1.5,
+            "X2et+5.5": 2.46,
+            "12et+5.5": 2.97
+          },
+          "scores_probables": {
+            "1-1": 13.17,
+            "1-0": 10.74,
+            "0-1": 10.26,
+            "0-0": 8.81,
+            "2-1": 8.36,
+            "1-2": 7.6,
+            "2-0": 6.58,
+            "0-2": 6.07,
+            "2-2": 4.86,
+            "3-1": 3.38
+          },
+          "buts_moyens_simules": {
+            "home": 1.25,
+            "away": 1.2,
+            "total": 2.45
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Double chance X2 (nul ou victoire d’Amazónas)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑1 ou 1‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Paysandu** (20ᵉ, 27 pts) : moyenne 1,20 buts marqués / 1,70 buts encaissés. En 5 matchs à domicile, ils n’ont inscrit que **5 buts** et en ont laissé **9**. Leur défense est très perméable et leur attaque peine à produire.  \n- **Amazonas** (18ᵉ, 35 pts) : moyenne 0,90 buts marqués / 1,20 buts encaissés. En 5 déplacements récents, ils n’ont marqué que **3 buts** et en ont concédé **8**. Leur capacité offensive est moindre que celle de Paysandu, mais ils sont légèrement plus solides défensivement.\n\n**2. Impact du facteur domicile/extérieur**  \n- Paysandu montre une **faible efficacité à domicile** (5‑9) et une série de résultats à domicile (L‑L‑L‑D‑L).  \n- Amazonas a une **performance extérieure très inégale** (3‑8) mais a tout de même récolté 7 points sur les 6 derniers matchs, dont deux victoires à l’extérieur (vs Botafogo‑SP, vs Cuiabá).  \n\n**3. Forme récente et tendances (analyse détaillée des 10 derniers matchs)**  \n\n| Équipe | Possession moyenne | Tirs cadrés / tentatives | Corners moyen | Points sur 6 derniers |\n|--------|-------------------|--------------------------|---------------|-----------------------|\n| **Paysandu** | 53 % | 4,6 / 13,9 | 4,6 | 1 pt (L L L D L L) |\n| **Amazonas** | 48 % | 3,8 / 12,5 | 4,9 | 7 pts (L W L D L W) |\n\n- **Paysandu** : même lorsqu’ils dominent la possession (ex. vs Coritiba 51,6 %), ils ne créent que **1‑2 tirs cadrés** et peinent à convertir. Leurs seules victoires récentes ont été très serrées (1‑0 contre Atlético Goianiense).  \n- **Amazonas** : même avec une possession légèrement inférieure, ils obtiennent souvent plus de tirs cadrés que leurs adversaires (ex. vs Athletico Paraná 9‑3 tirs cadrés) et savent profiter de leurs occasions, comme le 2‑0 contre Cuiabá.  \n\n**4. Contexte du championnat**  \n- Les deux équipes évoluent en bas du tableau, mais **Amazonas possède 8 points d’avance**, indiquant une meilleure capacité à récupérer des points, même à l’extérieur.  \n- La différence de points reflète une **meilleure gestion des matchs serrés** (ex. 2‑1 contre Operário PR, 1‑0 contre Volta Redonda).\n\n**5. Confrontations directes (saison précédente & actuelle)**  \n- 3 rencontres : 1‑1, 0‑1 (victoire d’Amazónas), 1‑1.  \n- Amazonas domine la possession (65‑70 %) et crée plus d’occasions (ex. 8 tirs cadrés vs 5 à domicile).  \n- Les deux matchs nuls ont été **1‑1**, montrant que les deux équipes peuvent marquer, mais rarement plus d’un but chacune.\n\n**6. Tendances de buts**  \n- Moyenne combinée des buts par match : 1,20 + 0,90 = 2,10 → **inférieure à 2,5**.  \n- Sur les 10 derniers matchs de chaque équipe, **8 rencontres se sont soldées à 0‑1, 1‑0 ou 1‑1**, soit **moins de 2,5 buts** dans 80 % des cas.  \n\n**7. Synthèse**  \n- Amazonas a l’avantage psychologique (meilleure forme, supériorité en possession et en tirs cadrés) et un léger bord en points.  \n- Paysandu, malgré le statut de domicile, montre une défense très vulnérable et une attaque inefficace.  \n- Le profil des deux équipes (faible score, peu de tirs) conduit à **un match à faible nombre de buts**, avec une forte probabilité que l’extérieur ne perde pas (double chance X2).  \n\n**Conclusion** : Le scénario le plus probable est un match très serré, avec **0‑1** (victoire d’Amazónas) ou **1‑1** (match nul). La double chance X2 couvre les deux issues les plus probables tout en offrant la meilleure probabilité de succès (≈ 68 %).",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Double chance X2 (nul ou victoire d’Amazónas)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 1‑1"
+      }
+    ]
+  }
+}
