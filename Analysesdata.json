@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "total_matches": 144,
-    "last_update": "2025-11-13T03:11:11.810359",
+    "total_matches": 145,
+    "last_update": "2025-11-15T03:02:49.386211",
     "description": "Données consolidées pour entraînement RNN"
   },
   "predictions": [
@@ -79358,6 +79358,616 @@
           "double_chance": [
             "1X",
             "12"
+          ],
+          "over_under": [
+            "under_2",
+            "under_2_5",
+            "under_3",
+            "under_3_5"
+          ],
+          "btts": [
+            "no"
+          ]
+        },
+        "fulltime": {
+          "1x2": [
+            "X"
+          ],
+          "double_chance": [
+            "1X",
+            "X2"
+          ],
+          "over_under": [
+            "over_2",
+            "over_2_5",
+            "over_3",
+            "over_3_5"
+          ],
+          "btts": [
+            "yes"
+          ]
+        }
+      }
+    },
+    {
+      "id": 1,
+      "fixture_id": 1353623,
+      "HomeTeam": "Paysandu",
+      "AwayTeam": "Amazonas",
+      "date": "14 novembre 2025 à 23:00:00 UTC",
+      "league": "Brazil - Serie B",
+      "stats_home": {
+        "moyenne_marques": 1.2,
+        "moyenne_encaisses": 1.7,
+        "form_6_numeric": [
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "form_10_numeric": [
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        "total_points_6": 1,
+        "total_points_10": 5,
+        "buts_dom_marques": 5,
+        "buts_dom_encaisses": 9,
+        "buts_ext_marques": 7,
+        "buts_ext_encaisses": 8
+      },
+      "stats_away": {
+        "moyenne_marques": 0.9,
+        "moyenne_encaisses": 1.2,
+        "form_6_numeric": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "form_10_numeric": [
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "total_points_6": 7,
+        "total_points_10": 11,
+        "buts_dom_marques": 6,
+        "buts_dom_encaisses": 4,
+        "buts_ext_marques": 3,
+        "buts_ext_encaisses": 8
+      },
+      "classement_home": 20,
+      "classement_away": 18,
+      "points_classement_home": 27,
+      "points_classement_away": 35,
+      "last_matches_home": [
+        {
+          "date": "Sun, 9 Nov",
+          "home_team": "Paysandu",
+          "away_team": "Coritiba",
+          "score_home": 1,
+          "score_away": 2,
+          "stats": {
+            "possession_home": 0.516,
+            "possession_away": 0.484,
+            "shots_on_goal_home": 1,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 11,
+            "shot_attempts_away": 5,
+            "corner_kicks_home": 4,
+            "corner_kicks_away": 3,
+            "saves_home": 0,
+            "saves_away": 0,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Fri, 31 Oct",
+          "home_team": "Atlético Goianiense",
+          "away_team": "Paysandu",
+          "score_home": 2,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.564,
+            "possession_away": 0.436,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 3,
+            "shot_attempts_home": 20,
+            "shot_attempts_away": 17,
+            "corner_kicks_home": 7,
+            "corner_kicks_away": 5,
+            "saves_home": 2,
+            "saves_away": 4,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 4
+          }
+        },
+        {
+          "date": "Sat, 25 Oct",
+          "home_team": "Paysandu",
+          "away_team": "Avaí",
+          "score_home": 1,
+          "score_away": 2,
+          "stats": {
+            "possession_home": 0.5,
+            "possession_away": 0.5,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 4,
+            "shot_attempts_home": 18,
+            "shot_attempts_away": 13,
+            "corner_kicks_home": 5,
+            "corner_kicks_away": 4,
+            "saves_home": 2,
+            "saves_away": 4,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 4
+          }
+        },
+        {
+          "date": "Mon, 20 Oct",
+          "home_team": "Ferroviária",
+          "away_team": "Paysandu",
+          "score_home": 2,
+          "score_away": 2,
+          "stats": {
+            "possession_home": 0.532,
+            "possession_away": 0.46799999999999997,
+            "shots_on_goal_home": 10,
+            "shots_on_goal_away": 3,
+            "shot_attempts_home": 20,
+            "shot_attempts_away": 7,
+            "corner_kicks_home": 7,
+            "corner_kicks_away": 2,
+            "saves_home": 1,
+            "saves_away": 7,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 1
+          }
+        },
+        {
+          "date": "Tue, 14 Oct",
+          "home_team": "Paysandu",
+          "away_team": "Remo",
+          "score_home": 2,
+          "score_away": 3,
+          "stats": {
+            "possession_home": 0.542,
+            "possession_away": 0.45799999999999996,
+            "shots_on_goal_home": 6,
+            "shots_on_goal_away": 4,
+            "shot_attempts_home": 16,
+            "shot_attempts_away": 17,
+            "corner_kicks_home": 5,
+            "corner_kicks_away": 3,
+            "saves_home": 1,
+            "saves_away": 4,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Wed, 8 Oct",
+          "home_team": "Botafogo-SP",
+          "away_team": "Paysandu",
+          "score_home": 1,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.527,
+            "possession_away": 0.473,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 20,
+            "shot_attempts_away": 10,
+            "corner_kicks_home": 6,
+            "corner_kicks_away": 2,
+            "saves_home": 2,
+            "saves_away": 4,
+            "yellow_cards_home": 3,
+            "yellow_cards_away": 1
+          }
+        },
+        {
+          "date": "Thu, 2 Oct",
+          "home_team": "Paysandu",
+          "away_team": "Cuiabá",
+          "score_home": 1,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.625,
+            "possession_away": 0.375,
+            "shots_on_goal_home": 7,
+            "shots_on_goal_away": 5,
+            "shot_attempts_home": 20,
+            "shot_attempts_away": 14,
+            "corner_kicks_home": 5,
+            "corner_kicks_away": 2,
+            "saves_home": 4,
+            "saves_away": 6,
+            "yellow_cards_home": 3,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Sun, 28 Sep",
+          "home_team": "Criciúma",
+          "away_team": "Paysandu",
+          "score_home": 2,
+          "score_away": 4,
+          "stats": {
+            "possession_home": 0.5670000000000001,
+            "possession_away": 0.433,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 8,
+            "shot_attempts_home": 16,
+            "shot_attempts_away": 18,
+            "corner_kicks_home": 5,
+            "corner_kicks_away": 5,
+            "saves_home": 4,
+            "saves_away": 3,
+            "yellow_cards_home": 0,
+            "yellow_cards_away": 0
+          }
+        },
+        {
+          "date": "Tue, 23 Sep",
+          "home_team": "Paysandu",
+          "away_team": "Novorizontino",
+          "score_home": 0,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.535,
+            "possession_away": 0.465,
+            "shots_on_goal_home": 1,
+            "shots_on_goal_away": 4,
+            "shot_attempts_home": 11,
+            "shot_attempts_away": 17,
+            "corner_kicks_home": 4,
+            "corner_kicks_away": 6,
+            "saves_home": 2,
+            "saves_away": 1,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Sat, 20 Sep",
+          "home_team": "Goiás",
+          "away_team": "Paysandu",
+          "score_home": 1,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.5820000000000001,
+            "possession_away": 0.418,
+            "shots_on_goal_home": 7,
+            "shots_on_goal_away": 5,
+            "shot_attempts_home": 19,
+            "shot_attempts_away": 10,
+            "corner_kicks_home": 5,
+            "corner_kicks_away": 3,
+            "saves_home": 5,
+            "saves_away": 6,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 2
+          }
+        }
+      ],
+      "last_matches_away": [
+        {
+          "date": "Mon, 10 Nov",
+          "home_team": "Botafogo-SP",
+          "away_team": "Amazonas",
+          "score_home": 1,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.434,
+            "possession_away": 0.5660000000000001,
+            "shots_on_goal_home": 3,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 7,
+            "shot_attempts_away": 19,
+            "corner_kicks_home": 6,
+            "corner_kicks_away": 4,
+            "saves_home": 2,
+            "saves_away": 2,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Sun, 2 Nov",
+          "home_team": "Amazonas",
+          "away_team": "Cuiabá",
+          "score_home": 2,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.536,
+            "possession_away": 0.46399999999999997,
+            "shots_on_goal_home": 4,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 15,
+            "shot_attempts_away": 7,
+            "corner_kicks_home": 7,
+            "corner_kicks_away": 0,
+            "saves_home": 2,
+            "saves_away": 2,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Tue, 28 Oct",
+          "home_team": "Athletico Paranaense",
+          "away_team": "Amazonas",
+          "score_home": 2,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.544,
+            "possession_away": 0.456,
+            "shots_on_goal_home": 9,
+            "shots_on_goal_away": 3,
+            "shot_attempts_home": 19,
+            "shot_attempts_away": 10,
+            "corner_kicks_home": 4,
+            "corner_kicks_away": 3,
+            "saves_home": 3,
+            "saves_away": 7,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Sat, 18 Oct",
+          "home_team": "Amazonas",
+          "away_team": "Novorizontino",
+          "score_home": 0,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.545,
+            "possession_away": 0.455,
+            "shots_on_goal_home": 3,
+            "shots_on_goal_away": 5,
+            "shot_attempts_home": 17,
+            "shot_attempts_away": 10,
+            "corner_kicks_home": 8,
+            "corner_kicks_away": 4,
+            "saves_home": 5,
+            "saves_away": 3,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Sun, 12 Oct",
+          "home_team": "Vila Nova",
+          "away_team": "Amazonas",
+          "score_home": 1,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.59,
+            "possession_away": 0.41,
+            "shots_on_goal_home": 2,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 11,
+            "shot_attempts_away": 10,
+            "corner_kicks_home": 6,
+            "corner_kicks_away": 1,
+            "saves_home": 2,
+            "saves_away": 1,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 2
+          }
+        },
+        {
+          "date": "Wed, 8 Oct",
+          "home_team": "Amazonas",
+          "away_team": "Criciúma",
+          "score_home": 2,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.436,
+            "possession_away": 0.564,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 3,
+            "shot_attempts_home": 16,
+            "shot_attempts_away": 13,
+            "corner_kicks_home": 3,
+            "corner_kicks_away": 2,
+            "saves_home": 2,
+            "saves_away": 2,
+            "yellow_cards_home": 3,
+            "yellow_cards_away": 7
+          }
+        },
+        {
+          "date": "Fri, 3 Oct",
+          "home_team": "Athletic",
+          "away_team": "Amazonas",
+          "score_home": 2,
+          "score_away": 2,
+          "stats": {
+            "possession_home": 0.562,
+            "possession_away": 0.43799999999999994,
+            "shots_on_goal_home": 5,
+            "shots_on_goal_away": 7,
+            "shot_attempts_home": 22,
+            "shot_attempts_away": 23,
+            "corner_kicks_home": 9,
+            "corner_kicks_away": 9,
+            "saves_home": 5,
+            "saves_away": 3,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 6
+          }
+        },
+        {
+          "date": "Mon, 29 Sep",
+          "home_team": "Amazonas",
+          "away_team": "Chapecoense",
+          "score_home": 1,
+          "score_away": 3,
+          "stats": {
+            "possession_home": 0.574,
+            "possession_away": 0.426,
+            "shots_on_goal_home": 3,
+            "shots_on_goal_away": 7,
+            "shot_attempts_home": 20,
+            "shot_attempts_away": 20,
+            "corner_kicks_home": 8,
+            "corner_kicks_away": 5,
+            "saves_home": 5,
+            "saves_away": 2,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 4
+          }
+        },
+        {
+          "date": "Thu, 25 Sep",
+          "home_team": "Operario PR",
+          "away_team": "Amazonas",
+          "score_home": 2,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.596,
+            "possession_away": 0.40399999999999997,
+            "shots_on_goal_home": 6,
+            "shots_on_goal_away": 4,
+            "shot_attempts_home": 14,
+            "shot_attempts_away": 7,
+            "corner_kicks_home": 2,
+            "corner_kicks_away": 5,
+            "saves_home": 3,
+            "saves_away": 4,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 5
+          }
+        },
+        {
+          "date": "Sat, 20 Sep",
+          "home_team": "Amazonas",
+          "away_team": "Volta Redonda",
+          "score_home": 1,
+          "score_away": 0,
+          "stats": {
+            "possession_home": 0.315,
+            "possession_away": 0.685,
+            "shots_on_goal_home": 3,
+            "shots_on_goal_away": 3,
+            "shot_attempts_home": 13,
+            "shot_attempts_away": 18,
+            "corner_kicks_home": 3,
+            "corner_kicks_away": 8,
+            "saves_home": 3,
+            "saves_away": 2,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 4
+          }
+        }
+      ],
+      "h2h": [
+        {
+          "date": "Saturday, May 18, 2024",
+          "team1": "Amazonas",
+          "team2": "Paysandu",
+          "score_home": 1,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.34700000000000003,
+            "possession_away": 0.653,
+            "shots_on_goal_home": 8,
+            "shots_on_goal_away": 5,
+            "shot_attempts_home": 15,
+            "shot_attempts_away": 13,
+            "corner_kicks_home": 6,
+            "corner_kicks_away": 9,
+            "saves_home": 4,
+            "saves_away": 6,
+            "yellow_cards_home": 2,
+            "yellow_cards_away": 5
+          }
+        },
+        {
+          "date": "Thursday, September 5, 2024",
+          "team1": "Paysandu",
+          "team2": "Amazonas",
+          "score_home": 0,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.698,
+            "possession_away": 0.302,
+            "shots_on_goal_home": 6,
+            "shots_on_goal_away": 5,
+            "shot_attempts_home": 26,
+            "shot_attempts_away": 8,
+            "corner_kicks_home": 13,
+            "corner_kicks_away": 2,
+            "saves_home": 4,
+            "saves_away": 6,
+            "yellow_cards_home": 1,
+            "yellow_cards_away": 5
+          }
+        },
+        {
+          "date": "Wednesday, July 23, 2025",
+          "team1": "Amazonas",
+          "team2": "Paysandu",
+          "score_home": 1,
+          "score_away": 1,
+          "stats": {
+            "possession_home": 0.6779999999999999,
+            "possession_away": 0.322,
+            "shots_on_goal_home": 4,
+            "shots_on_goal_away": 2,
+            "shot_attempts_home": 22,
+            "shot_attempts_away": 11,
+            "corner_kicks_home": 13,
+            "corner_kicks_away": 3,
+            "saves_home": 1,
+            "saves_away": 4,
+            "yellow_cards_home": 4,
+            "yellow_cards_away": 1
+          }
+        }
+      ],
+      "actual_scores": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "status": "Match Finished"
+      },
+      "predict_targets": {
+        "halftime": {
+          "1x2": [
+            "X"
+          ],
+          "double_chance": [
+            "1X",
+            "X2"
           ],
           "over_under": [
             "under_2",
