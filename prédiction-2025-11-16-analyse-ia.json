@@ -1,0 +1,1192 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-16 02:48:33",
+    "date_matchs": "2025-11-16",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1478038,
+        "HomeTeam": "RB Bragantino",
+        "AwayTeam": "Atletico-MG",
+        "date": "16 novembre 2025 à 22:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 11,
+          "total_points": 6,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 11,
+          "total_marques": 10,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 19,
+          "total_points": 14,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 14,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 4,
+          "total_marques": 19,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732911",
+            "date": "Sat, Nov 8",
+            "home_team": "São Paulo",
+            "away_team": "Red Bull Bragantino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.2%",
+                "34.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732911"
+          },
+          {
+            "game_id": "732903",
+            "date": "Wed, Nov 5",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Corinthians",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "7",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732903"
+          },
+          {
+            "game_id": "732890",
+            "date": "Sun, Nov 2",
+            "home_team": "Bahia",
+            "away_team": "Red Bull Bragantino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.3%",
+                "30.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732890"
+          },
+          {
+            "game_id": "732882",
+            "date": "Sun, Oct 26",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Vasco da Gama",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.1%",
+                "47.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732882"
+          },
+          {
+            "game_id": "732872",
+            "date": "Mon, Oct 20",
+            "home_team": "Juventude",
+            "away_team": "Red Bull Bragantino",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.2%",
+                "56.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732872"
+          },
+          {
+            "game_id": "732866",
+            "date": "Wed, Oct 15",
+            "home_team": "Palmeiras",
+            "away_team": "Red Bull Bragantino",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.7%",
+                "38.3%"
+              ],
+              "Shots on Goal": [
+                "12",
+                "2"
+              ],
+              "Shot Attempts": [
+                "26",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732866"
+          },
+          {
+            "game_id": "732857",
+            "date": "Sat, Oct 4",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Grêmio",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.1%",
+                "41.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "28",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732857"
+          },
+          {
+            "game_id": "732845",
+            "date": "Wed, Oct 1",
+            "home_team": "Mirassol",
+            "away_team": "Red Bull Bragantino",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.2%",
+                "38.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "12",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732845"
+          },
+          {
+            "game_id": "732835",
+            "date": "Sun, Sep 28",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Santos",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "8",
+                "18"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732835"
+          },
+          {
+            "game_id": "732821",
+            "date": "Sun, Sep 21",
+            "home_team": "Cruzeiro",
+            "away_team": "Red Bull Bragantino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.1%",
+                "39.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "6",
+                "7"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732821"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732740",
+            "date": "Wed, Nov 12",
+            "home_team": "Atlético-MG",
+            "away_team": "Fortaleza",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.5%",
+                "41.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732740"
+          },
+          {
+            "game_id": "732919",
+            "date": "Sat, Nov 8",
+            "home_team": "Sport",
+            "away_team": "Atlético-MG",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.8%",
+                "69.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "7",
+                "20"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732919"
+          },
+          {
+            "game_id": "732900",
+            "date": "Wed, Nov 5",
+            "home_team": "Atlético-MG",
+            "away_team": "Bahia",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.6%",
+                "39.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "23",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732900"
+          },
+          {
+            "game_id": "732896",
+            "date": "Sun, Nov 2",
+            "home_team": "Internacional",
+            "away_team": "Atlético-MG",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.4%",
+                "23.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "2"
+              ],
+              "Shot Attempts": [
+                "21",
+                "6"
+              ],
+              "Yellow Cards": [
+                "7",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732896"
+          },
+          {
+            "game_id": "759131",
+            "date": "Tue, Oct 28",
+            "home_team": "Atlético-MG",
+            "away_team": "Independiente del Valle",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759131"
+          },
+          {
+            "game_id": "732888",
+            "date": "Sat, Oct 25",
+            "home_team": "Atlético-MG",
+            "away_team": "Ceará",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "6",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732888"
+          },
+          {
+            "game_id": "759129",
+            "date": "Tue, Oct 21",
+            "home_team": "Independiente del Valle",
+            "away_team": "Atlético-MG",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.3%",
+                "48.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/759129"
+          },
+          {
+            "game_id": "732876",
+            "date": "Sat, Oct 18",
+            "home_team": "Corinthians",
+            "away_team": "Atlético-MG",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62%",
+                "38%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732876"
+          },
+          {
+            "game_id": "732860",
+            "date": "Wed, Oct 15",
+            "home_team": "Atlético-MG",
+            "away_team": "Cruzeiro",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "23",
+                "4"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732860"
+          },
+          {
+            "game_id": "732720",
+            "date": "Wed, Oct 8",
+            "home_team": "Atlético-MG",
+            "away_team": "Sport",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "19"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732720"
+          }
+        ],
+        "classement": {
+          "RB Bragantino": {
+            "position": 11,
+            "points": 42
+          },
+          "Atletico-MG": {
+            "position": 9,
+            "points": 44
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 71
+          },
+          {
+            "position": 2,
+            "team": "Palmeiras",
+            "points": 68
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "Bahia",
+            "points": 53
+          },
+          {
+            "position": 6,
+            "team": "Botafogo",
+            "points": 52
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "Atlético-MG",
+            "points": 44
+          },
+          {
+            "position": 10,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "Red Bull Bragantino",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Ceará",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 35
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 32
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699425",
+            "date": "Tuesday, June 11, 2024",
+            "team1": "Red Bull Bragantino",
+            "score": "1 - 2",
+            "team2": "Atlético-MG",
+            "title": "Red Bull Bragantino VS Atlético-MG",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699425/atletico-mg-red-bull-bragantino",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "55.1%",
+                "44.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "10"
+              ],
+              "Yellow Cards": [
+                "5",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "699610",
+            "date": "Sunday, September 22, 2024",
+            "team1": "Atlético-MG",
+            "score": "3 - 0",
+            "team2": "Red Bull Bragantino",
+            "title": "Atlético-MG VS Red Bull Bragantino",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699610/red-bull-bragantino-atletico-mg",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "50.2%",
+                "49.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "732760",
+            "date": "Sunday, August 3, 2025",
+            "team1": "Atlético-MG",
+            "score": "2 - 1",
+            "team2": "Red Bull Bragantino",
+            "title": "Atlético-MG VS Red Bull Bragantino",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732760/red-bull-bragantino-atletico-mg",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "29",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "10",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/794.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1062.png",
+        "classement_home": 11,
+        "classement_away": 9,
+        "points_classement_home": 42,
+        "points_classement_away": 44,
+        "nom_classement_home": "Red Bull Bragantino",
+        "nom_classement_away": "Atlético-MG",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.371,
+            "lambda_away": 1.416,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 36.3,
+            "X": 24.94,
+            "V2": 38.76
+          },
+          "double_chance": {
+            "1X": 61.23,
+            "12": 75.06,
+            "X2": 63.7
+          },
+          "over_under": {
+            "plus_de_0.5": 93.46,
+            "moins_de_0.5": 6.54,
+            "plus_de_1.5": 76.12,
+            "moins_de_1.5": 23.88,
+            "plus_de_2.5": 52.98,
+            "moins_de_2.5": 47.02,
+            "plus_de_3.5": 30.49,
+            "moins_de_3.5": 69.51,
+            "plus_de_4.5": 15.26,
+            "moins_de_4.5": 84.74,
+            "plus_de_5.5": 6.52,
+            "moins_de_5.5": 93.48
+          },
+          "btts": {
+            "oui": 55.96,
+            "non": 44.04
+          },
+          "resultat_total": {
+            "V1et+0.5": 36.3,
+            "1Xet+0.5": 54.7,
+            "V2et+0.5": 38.76,
+            "X2et+0.5": 57.16,
+            "12et+0.5": 75.06,
+            "V1et+1.5": 27.94,
+            "1Xet+1.5": 46.34,
+            "V2et+1.5": 29.78,
+            "X2et+1.5": 48.18,
+            "12et+1.5": 57.72,
+            "V1et+2.5": 22.3,
+            "1Xet+2.5": 29.4,
+            "V2et+2.5": 23.58,
+            "X2et+2.5": 30.68,
+            "12et+2.5": 45.88,
+            "V1et+3.5": 11.22,
+            "1Xet+3.5": 18.32,
+            "V2et+3.5": 12.16,
+            "X2et+3.5": 19.26,
+            "12et+3.5": 23.39,
+            "V1et+4.5": 6.64,
+            "1Xet+4.5": 8.06,
+            "V2et+4.5": 7.2,
+            "X2et+4.5": 8.62,
+            "12et+4.5": 13.84,
+            "V1et+5.5": 2.44,
+            "1Xet+5.5": 3.86,
+            "V2et+5.5": 2.66,
+            "X2et+5.5": 4.08,
+            "12et+5.5": 5.1
+          },
+          "scores_probables": {
+            "1-1": 11.3,
+            "0-1": 8.98,
+            "2-1": 8.43,
+            "1-0": 8.36,
+            "1-2": 8.28,
+            "0-0": 6.54,
+            "0-2": 6.19,
+            "2-2": 5.68,
+            "2-0": 5.65,
+            "1-3": 4.03
+          },
+          "buts_moyens_simules": {
+            "home": 1.37,
+            "away": 1.42,
+            "total": 2.78
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Atletico‑MG)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑2 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **RB Bragantino** : moyenne 1,00 but marqué / 1,70 encaissé, 11ᵉ au classement (42 pts). À domicile, 5 buts marqués et 6 encaissés sur les 6 derniers matchs, soit une production offensive très limitée et une défense qui laisse passer presque deux buts par rencontre.  \n- **Atletico‑MG** : moyenne 1,90 but marqué / 1,00 encaissé, 9ᵉ au classement (44 pts). En déplacement, 5 buts marqués et 4 encaissés sur les 5 derniers matchs à l’extérieur, montrant une bonne capacité à marquer loin de chez soi tout en restant solide défensivement.\n\n**2. Impact du facteur domicile/extérieur**  \n- Bragantino a une forme à domicile mitigée : 2 V, 2 N, 2 D sur les 6 dernières rencontres à domicile, avec une moyenne de 1,17 buts marqués et 1,5 buts encaissés.  \n- Atletico‑MG, même en déplacement, conserve une forme positive (3 V, 2 N, 1 D sur les 6 derniers matchs à l’extérieur) et montre une capacité à garder la cage inviolée (0‑0 contre Internacional, 1‑0 contre Ceará).  \n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Bragantino** : lorsqu’ils ont gagné (vs Corinthians 2‑1, vs Grêmio 1‑0) ils dominaient la possession (≈58 %) et les tirs cadrés (6‑4, 7‑1). Mais leurs défaites récentes (0‑3 vs Vasco, 1‑2 vs Cruzeiro) sont caractérisées par un faible nombre de tirs cadrés (1‑5, 3‑6) et une perte de la possession.  \n- **Atletico‑MG** : leurs victoires récentes (4‑2 vs Sport, 3‑0 vs Bahia, 3‑1 vs Independiente) sont accompagnées d’une forte capacité à créer des occasions même avec une possession parfois basse (ex. 30,8 % contre Sport). Leur défense reste solide, ne concédant que 0‑0 contre Internacional et 1‑0 contre Ceará.  \n\n**4. Contexte du championnat**  \n- Les deux équipes sont très proches au classement (9ᵉ/44 pts vs 11ᵉ/42 pts). Atletico‑MG bénéficie d’un léger avantage en points et d’une meilleure différence de buts (+ 44‑30 = +14 contre + 42‑38 = +4).  \n- Les équipes du top 8 (Flamengo, Palmeiras, Cruzeiro…) affichent des écarts de points plus importants, ce qui montre que la lutte pour les places européennes se joue entre les équipes du milieu de tableau où la forme récente est décisive.\n\n**5. Confrontations directes**  \n- Les trois derniers duels (juin 2024, sept 2024, août 2025) se soldent tous par des victoires d’Atletico‑MG (2‑1, 3‑0, 2‑1).  \n- Statistiques H2H : Atletico‑MG domine la possession (≈58 % en moyenne) et les tirs cadrés (≈9‑5), tandis que Bragantino ne parvient jamais à dépasser 5 tirs cadrés.  \n\n**6. Tendances de buts**  \n- Sur les 10 derniers matchs de Bragantino, le total de buts par rencontre est de 2,2 ; chez Atletico‑MG, il est de 2,5 .  \n- Les trois dernières rencontres entre les deux équipes ont toutes dépassé 2,5 buts (2‑1, 3‑0, 2‑1).  \n\n**7. Synthèse**  \nAtletico‑MG possède une meilleure attaque (presque deux fois plus de buts marqués en moyenne) et une défense plus fiable, surtout à l’extérieur. Leur forme actuelle (5 V/1 D sur les 6 derniers matchs) contraste fortement avec la série de 3 défaites consécutives de Bragantino. Les confrontations directes récentes confirment une supériorité claire d’Atletico‑MG.  \n\n**Conclusion** : le scénario le plus probable est une victoire d’Atletico‑MG, avec deux buts marqués et un ou zéro but concédé, d’où les scores les plus probables : **0‑2** ou **1‑2**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Atletico‑MG)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑2 ou 1‑2"
+      }
+    ]
+  }
+}
