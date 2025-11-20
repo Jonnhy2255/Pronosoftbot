@@ -1,0 +1,3501 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-20 02:29:38",
+    "date_matchs": "2025-11-20",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1478015,
+        "HomeTeam": "Juventude",
+        "AwayTeam": "Cruzeiro",
+        "date": "20 novembre 2025 à 19:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "Winamax (FR)",
+          "h2h": {
+            "Cruzeiro": 1.68,
+            "Juventude": 3.85,
+            "Draw": 3.35
+          },
+          "totals": {}
+        },
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 11,
+          "total_points": 9,
+          "serie_domicile": [
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 9,
+          "total_marques": 10,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 17,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 3,
+          "total_marques": 9,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732910",
+            "date": "Sat, Nov 8",
+            "home_team": "Vasco da Gama",
+            "away_team": "Juventude",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732910"
+          },
+          {
+            "game_id": "732902",
+            "date": "Wed, Nov 5",
+            "home_team": "Sport",
+            "away_team": "Juventude",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732902"
+          },
+          {
+            "game_id": "732895",
+            "date": "Sun, Nov 2",
+            "home_team": "Juventude",
+            "away_team": "Palmeiras",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.7%",
+                "49.3%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "10"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732895"
+          },
+          {
+            "game_id": "732884",
+            "date": "Sun, Oct 26",
+            "home_team": "Grêmio",
+            "away_team": "Juventude",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "20",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732884"
+          },
+          {
+            "game_id": "732872",
+            "date": "Mon, Oct 20",
+            "home_team": "Juventude",
+            "away_team": "Red Bull Bragantino",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.2%",
+                "56.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732872"
+          },
+          {
+            "game_id": "732862",
+            "date": "Thu, Oct 16",
+            "home_team": "Fluminense",
+            "away_team": "Juventude",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.8%",
+                "33.2%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "6"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732862"
+          },
+          {
+            "game_id": "732705",
+            "date": "Sat, Oct 11",
+            "home_team": "Palmeiras",
+            "away_team": "Juventude",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.5%",
+                "33.5%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732705"
+          },
+          {
+            "game_id": "732858",
+            "date": "Sun, Oct 5",
+            "home_team": "Juventude",
+            "away_team": "Fortaleza",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.5%",
+                "51.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732858"
+          },
+          {
+            "game_id": "732843",
+            "date": "Tue, Sep 30",
+            "home_team": "Atlético-MG",
+            "away_team": "Juventude",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.1%",
+                "28.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732843"
+          },
+          {
+            "game_id": "732836",
+            "date": "Sat, Sep 27",
+            "home_team": "Juventude",
+            "away_team": "Internacional",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.9%",
+                "44.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732836"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732914",
+            "date": "Sun, Nov 9",
+            "home_team": "Cruzeiro",
+            "away_team": "Fluminense",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.4%",
+                "52.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732914"
+          },
+          {
+            "game_id": "732905",
+            "date": "Wed, Nov 5",
+            "home_team": "Grêmio",
+            "away_team": "Cruzeiro",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.9%",
+                "43.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "5",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732905"
+          },
+          {
+            "game_id": "732898",
+            "date": "Sat, Nov 1",
+            "home_team": "Cruzeiro",
+            "away_team": "Vitória",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.5%",
+                "54.5%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "7"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732898"
+          },
+          {
+            "game_id": "732883",
+            "date": "Sun, Oct 26",
+            "home_team": "Palmeiras",
+            "away_team": "Cruzeiro",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732883"
+          },
+          {
+            "game_id": "732875",
+            "date": "Sat, Oct 18",
+            "home_team": "Cruzeiro",
+            "away_team": "Fortaleza",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.9%",
+                "45.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732875"
+          },
+          {
+            "game_id": "732860",
+            "date": "Wed, Oct 15",
+            "home_team": "Atlético-MG",
+            "away_team": "Cruzeiro",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "23",
+                "4"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732860"
+          },
+          {
+            "game_id": "732850",
+            "date": "Sun, Oct 5",
+            "home_team": "Cruzeiro",
+            "away_team": "Sport",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "28",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732850"
+          },
+          {
+            "game_id": "732841",
+            "date": "Thu, Oct 2",
+            "home_team": "Flamengo",
+            "away_team": "Cruzeiro",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.7%",
+                "38.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732841"
+          },
+          {
+            "game_id": "732834",
+            "date": "Sat, Sep 27",
+            "home_team": "Vasco da Gama",
+            "away_team": "Cruzeiro",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "21"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "9"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732834"
+          },
+          {
+            "game_id": "732821",
+            "date": "Sun, Sep 21",
+            "home_team": "Cruzeiro",
+            "away_team": "Red Bull Bragantino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.1%",
+                "39.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "6",
+                "7"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732821"
+          }
+        ],
+        "classement": {
+          "Juventude": {
+            "position": 18,
+            "points": 32
+          },
+          "Cruzeiro": {
+            "position": 3,
+            "points": 64
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 71
+          },
+          {
+            "position": 2,
+            "team": "Palmeiras",
+            "points": 68
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "Botafogo",
+            "points": 55
+          },
+          {
+            "position": 6,
+            "team": "Bahia",
+            "points": 53
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "Red Bull Bragantino",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 10,
+            "team": "Atlético-MG",
+            "points": 44
+          },
+          {
+            "position": 11,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Ceará",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 35
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 32
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699534",
+            "date": "Wednesday, July 24, 2024",
+            "team1": "Cruzeiro",
+            "score": "2 - 0",
+            "team2": "Juventude",
+            "title": "Cruzeiro VS Juventude",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699534/juventude-cruzeiro",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "699727",
+            "date": "Sunday, December 8, 2024",
+            "team1": "Juventude",
+            "score": "0 - 1",
+            "team2": "Cruzeiro",
+            "title": "Juventude VS Cruzeiro",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699727/cruzeiro-juventude",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "21",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "7"
+              ]
+            }
+          },
+          {
+            "gameId": "732733",
+            "date": "Sunday, July 20, 2025",
+            "team1": "Cruzeiro",
+            "score": "4 - 0",
+            "team2": "Juventude",
+            "title": "Cruzeiro VS Juventude",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732733/juventude-cruzeiro",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "47.7%",
+                "52.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "16",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/152.png",
+        "logo_away": "https://media.api-sports.io/football/teams/135.png",
+        "classement_home": 18,
+        "classement_away": 3,
+        "points_classement_home": 32,
+        "points_classement_away": 64,
+        "nom_classement_home": "Juventude",
+        "nom_classement_away": "Cruzeiro",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.286,
+            "lambda_away": 1.04,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 42.39,
+            "X": 27.3,
+            "V2": 30.32
+          },
+          "double_chance": {
+            "1X": 69.68,
+            "12": 72.7,
+            "X2": 57.61
+          },
+          "over_under": {
+            "plus_de_0.5": 90.38,
+            "moins_de_0.5": 9.62,
+            "plus_de_1.5": 67.61,
+            "moins_de_1.5": 32.39,
+            "plus_de_2.5": 40.99,
+            "moins_de_2.5": 59.01,
+            "plus_de_3.5": 20.3,
+            "moins_de_3.5": 79.7,
+            "plus_de_4.5": 8.54,
+            "moins_de_4.5": 91.46,
+            "plus_de_5.5": 2.96,
+            "moins_de_5.5": 97.04
+          },
+          "btts": {
+            "oui": 46.63,
+            "non": 53.37
+          },
+          "resultat_total": {
+            "V1et+0.5": 42.39,
+            "1Xet+0.5": 60.06,
+            "V2et+0.5": 30.32,
+            "X2et+0.5": 47.98,
+            "12et+0.5": 72.7,
+            "V1et+1.5": 29.68,
+            "1Xet+1.5": 47.35,
+            "V2et+1.5": 20.26,
+            "X2et+1.5": 37.93,
+            "12et+1.5": 49.94,
+            "V1et+2.5": 21.47,
+            "1Xet+2.5": 26.28,
+            "V2et+2.5": 14.71,
+            "X2et+2.5": 19.52,
+            "12et+2.5": 36.18,
+            "V1et+3.5": 9.66,
+            "1Xet+3.5": 14.48,
+            "V2et+3.5": 5.82,
+            "X2et+3.5": 10.64,
+            "12et+3.5": 15.49,
+            "V1et+4.5": 4.81,
+            "1Xet+4.5": 5.46,
+            "V2et+4.5": 3.08,
+            "X2et+4.5": 3.74,
+            "12et+4.5": 7.89,
+            "V1et+5.5": 1.51,
+            "1Xet+5.5": 2.16,
+            "V2et+5.5": 0.8,
+            "X2et+5.5": 1.46,
+            "12et+5.5": 2.31
+          },
+          "scores_probables": {
+            "1-1": 12.86,
+            "1-0": 12.71,
+            "0-1": 10.06,
+            "0-0": 9.62,
+            "2-1": 8.48,
+            "2-0": 8.21,
+            "1-2": 7.0,
+            "0-2": 5.55,
+            "2-2": 4.15,
+            "3-1": 3.76
+          },
+          "buts_moyens_simules": {
+            "home": 1.28,
+            "away": 1.04,
+            "total": 2.32
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Cruzeiro)  \n**CONFIANCE** : 73%  \n**SCORES PROBABLES** : 0‑1 ou 0‑2  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Juventude** (18ᵉ) : moyenne 1,00 but marqué / match et 1,40 encaissé. En domicile, seuls **3 buts marqués** et **5 encaissés** lors de leurs 4 derniers matchs à domicile – une attaque très limitée et une défense qui laisse passer plus d’un but par rencontre.  \n- **Cruzeiro** (3ᵉ) : moyenne 0,90 but marqué / match mais **0,60 encaissé** – la meilleure défense du championnat. En déplacement, **2 buts marqués** et **3 encaissés** sur les 5 derniers matchs à l’extérieur, avec deux clean‑sheets (0‑0 vs Fluminense, 0‑0 vs Palmeiras).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Juventude peine à profiter de son terrain (taux de victoire à domicile très bas, 1 victoire sur les 6 dernières rencontres à domicile).  \n- Cruzeiro montre une solidité remarquable à l’extérieur : 2 victoires (1‑0 contre Grêmio, 1‑0 contre Fortaleza) et 2 nuls (0‑0, 0‑0) sur leurs 5 derniers déplacements.  \n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Juventude** : même lorsqu’ils marquent (ex. 1‑0 vs Bragantino), ils dominent peu la possession (43 % en moyenne) et leurs tirs cadrés restent inférieurs à 4 par match. Leur défense cède souvent des coups de pied arrêtés (corners fréquents) et des tirs adverses (ex. 7‑1 tirs cadrés contre Palmeiras).  \n- **Cruzeiro** : possède une possession moyenne élevée (≈55 %) même à l’extérieur, mais convertit très peu (≈4 tirs cadrés par match). Leur discipline défensive se traduit par très peu de tirs reçus (3‑4 en moyenne) et de corners concédés.  \n\n**4. Contexte du championnat**  \n- Cruzeiro lutte pour les places de tête (3ᵉ, 64 pts) et ne peut se permettre de perdre contre une équipe du bas du tableau.  \n- Juventude se bat pour éviter la relégation (18ᵉ, 32 pts) et a besoin de points, mais son manque de puissance offensive le rend dépendant d’une performance exceptionnelle à domicile, ce qui n’est pas le cas récemment.  \n\n**5. Confrontations directes**  \n- Les 3 derniers affrontements (saison 2024‑2025) ont tous été des victoires nettes de Cruzeiro (2‑0, 1‑0, 4‑0). Statistiquement, Cruzeiro domine la possession (≈50‑55 %), les tirs cadrés (5‑1) et les corners (8‑1) contre Juventude.  \n\n**6. Évaluation des cotes**  \n- Odds Cruzeiro 1.68 → probabilité implicite ≈ 59 %. Le profil statistique (défense solide, forme à l’extérieur, antécédents H2H) justifie une probabilité réelle supérieure à celle reflétée par les cotes, d’où une confiance de **≈ 73 %**.  \n\n**7. Tendances de buts**  \n- Moyenne combinée des deux équipes ≈ 1,9 but/match → très probable **moins de 2,5 buts**.  \n- BTTS est peu plausible : Juventude ne marque que 1 but sur leurs 6 derniers matchs à domicile, tandis que Cruzeiro ne marque que 2 buts en 5 déplacements.  \n\n**Conclusion** : Tous les indicateurs (forme, statistiques détaillées, H2H, contexte de classement et cotes) convergent vers une victoire serrée de Cruzeiro, très probablement 0‑1 ou 0‑2.",
+        "confiance_pourcentage": 73,
+        "prediction_principale": "Victoire extérieur (Cruzeiro)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 0‑2"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1478008,
+        "HomeTeam": "Bahia",
+        "AwayTeam": "Fortaleza EC",
+        "date": "20 novembre 2025 à 21:00:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bahia": 1.51,
+            "Fortaleza": 6.07,
+            "Draw": 4.63
+          },
+          "totals": {
+            "Over": 1.68,
+            "Under": 2.24
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 16,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 11,
+          "total_marques": 13,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 13,
+          "total_points": 7,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732917",
+            "date": "Sat, Nov 8",
+            "home_team": "Internacional",
+            "away_team": "Bahia",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.9%",
+                "63.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "16"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732917"
+          },
+          {
+            "game_id": "732900",
+            "date": "Wed, Nov 5",
+            "home_team": "Atlético-MG",
+            "away_team": "Bahia",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.6%",
+                "39.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "23",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732900"
+          },
+          {
+            "game_id": "732890",
+            "date": "Sun, Nov 2",
+            "home_team": "Bahia",
+            "away_team": "Red Bull Bragantino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.3%",
+                "30.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732890"
+          },
+          {
+            "game_id": "732880",
+            "date": "Sat, Oct 25",
+            "home_team": "São Paulo",
+            "away_team": "Bahia",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732880"
+          },
+          {
+            "game_id": "732728",
+            "date": "Wed, Oct 22",
+            "home_team": "Bahia",
+            "away_team": "Internacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "18",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732728"
+          },
+          {
+            "game_id": "732878",
+            "date": "Sun, Oct 19",
+            "home_team": "Bahia",
+            "away_team": "Grêmio",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "23",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732878"
+          },
+          {
+            "game_id": "732864",
+            "date": "Thu, Oct 16",
+            "home_team": "Vitória",
+            "away_team": "Bahia",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.3%",
+                "65.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "11"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732864"
+          },
+          {
+            "game_id": "732853",
+            "date": "Sun, Oct 5",
+            "home_team": "Bahia",
+            "away_team": "Flamengo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732853"
+          },
+          {
+            "game_id": "732842",
+            "date": "Wed, Oct 1",
+            "home_team": "Botafogo",
+            "away_team": "Bahia",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732842"
+          },
+          {
+            "game_id": "732831",
+            "date": "Sun, Sep 28",
+            "home_team": "Bahia",
+            "away_team": "Palmeiras",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.1%",
+                "46.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732831"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732740",
+            "date": "Wed, Nov 12",
+            "home_team": "Atlético-MG",
+            "away_team": "Fortaleza",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.5%",
+                "41.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732740"
+          },
+          {
+            "game_id": "732916",
+            "date": "Sun, Nov 9",
+            "home_team": "Fortaleza",
+            "away_team": "Grêmio",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.5%",
+                "46.5%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "6"
+              ],
+              "Shot Attempts": [
+                "22",
+                "21"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732916"
+          },
+          {
+            "game_id": "732907",
+            "date": "Thu, Nov 6",
+            "home_team": "Ceará",
+            "away_team": "Fortaleza",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.8%",
+                "38.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732907"
+          },
+          {
+            "game_id": "732893",
+            "date": "Sat, Nov 1",
+            "home_team": "Santos",
+            "away_team": "Fortaleza",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.7%",
+                "32.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "8"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "7",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732893"
+          },
+          {
+            "game_id": "732885",
+            "date": "Sat, Oct 25",
+            "home_team": "Fortaleza",
+            "away_team": "Flamengo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "19.5%",
+                "80.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "5",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "11"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732885"
+          },
+          {
+            "game_id": "732875",
+            "date": "Sat, Oct 18",
+            "home_team": "Cruzeiro",
+            "away_team": "Fortaleza",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.9%",
+                "45.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732875"
+          },
+          {
+            "game_id": "732863",
+            "date": "Wed, Oct 15",
+            "home_team": "Fortaleza",
+            "away_team": "Vasco da Gama",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55%",
+                "45%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "27",
+                "6"
+              ],
+              "Yellow Cards": [
+                "5",
+                "1"
+              ],
+              "Corner Kicks": [
+                "10",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732863"
+          },
+          {
+            "game_id": "732858",
+            "date": "Sun, Oct 5",
+            "home_team": "Juventude",
+            "away_team": "Fortaleza",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.5%",
+                "51.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732858"
+          },
+          {
+            "game_id": "732840",
+            "date": "Thu, Oct 2",
+            "home_team": "Fortaleza",
+            "away_team": "São Paulo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.6%",
+                "25.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732840"
+          },
+          {
+            "game_id": "732838",
+            "date": "Sat, Sep 27",
+            "home_team": "Fortaleza",
+            "away_team": "Sport",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.9%",
+                "47.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732838"
+          }
+        ],
+        "classement": {
+          "Bahia": {
+            "position": 6,
+            "points": 53
+          },
+          "Fortaleza EC": {
+            "position": 19,
+            "points": 31
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 71
+          },
+          {
+            "position": 2,
+            "team": "Palmeiras",
+            "points": 68
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "Botafogo",
+            "points": 55
+          },
+          {
+            "position": 6,
+            "team": "Bahia",
+            "points": 53
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "Red Bull Bragantino",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 10,
+            "team": "Atlético-MG",
+            "points": 44
+          },
+          {
+            "position": 11,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Ceará",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 35
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 32
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699422",
+            "date": "Thursday, June 13, 2024",
+            "team1": "Bahia",
+            "score": "1 - 0",
+            "team2": "Fortaleza",
+            "title": "Bahia VS Fortaleza",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699422/fortaleza-bahia",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "54.1%",
+                "45.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "21"
+              ],
+              "Yellow Cards": [
+                "6",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "699615",
+            "date": "Saturday, September 21, 2024",
+            "team1": "Fortaleza",
+            "score": "4 - 1",
+            "team2": "Bahia",
+            "title": "Fortaleza VS Bahia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699615/bahia-fortaleza",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "36.5%",
+                "63.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "732731",
+            "date": "Saturday, July 19, 2025",
+            "team1": "Fortaleza",
+            "score": "1 - 1",
+            "team2": "Bahia",
+            "title": "Fortaleza VS Bahia",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732731/bahia-fortaleza",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "35.5%",
+                "64.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "17"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/118.png",
+        "logo_away": "https://media.api-sports.io/football/teams/154.png",
+        "classement_home": 6,
+        "classement_away": 19,
+        "points_classement_home": 53,
+        "points_classement_away": 31,
+        "nom_classement_home": "Bahia",
+        "nom_classement_away": "Fortaleza",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.499,
+            "lambda_away": 1.09,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.91,
+            "X": 25.49,
+            "V2": 27.6
+          },
+          "double_chance": {
+            "1X": 72.4,
+            "12": 74.51,
+            "X2": 53.09
+          },
+          "over_under": {
+            "plus_de_0.5": 92.5,
+            "moins_de_0.5": 7.5,
+            "plus_de_1.5": 72.94,
+            "moins_de_1.5": 27.06,
+            "plus_de_2.5": 47.83,
+            "moins_de_2.5": 52.17,
+            "plus_de_3.5": 25.74,
+            "moins_de_3.5": 74.26,
+            "plus_de_4.5": 11.92,
+            "moins_de_4.5": 88.08,
+            "plus_de_5.5": 4.86,
+            "moins_de_5.5": 95.14
+          },
+          "btts": {
+            "oui": 51.43,
+            "non": 48.57
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.91,
+            "1Xet+0.5": 64.9,
+            "V2et+0.5": 27.6,
+            "X2et+0.5": 45.59,
+            "12et+0.5": 74.51,
+            "V1et+1.5": 35.53,
+            "1Xet+1.5": 53.52,
+            "V2et+1.5": 19.42,
+            "X2et+1.5": 37.4,
+            "12et+1.5": 54.94,
+            "V1et+2.5": 27.26,
+            "1Xet+2.5": 32.98,
+            "V2et+2.5": 14.85,
+            "X2et+2.5": 20.58,
+            "12et+2.5": 42.11,
+            "V1et+3.5": 13.44,
+            "1Xet+3.5": 19.16,
+            "V2et+3.5": 6.57,
+            "X2et+3.5": 12.29,
+            "12et+3.5": 20.02,
+            "V1et+4.5": 7.17,
+            "1Xet+4.5": 8.14,
+            "V2et+4.5": 3.78,
+            "X2et+4.5": 4.76,
+            "12et+4.5": 10.95,
+            "V1et+5.5": 2.73,
+            "1Xet+5.5": 3.7,
+            "V2et+5.5": 1.16,
+            "X2et+5.5": 2.14,
+            "12et+5.5": 3.89
+          },
+          "scores_probables": {
+            "1-1": 12.27,
+            "1-0": 11.38,
+            "2-1": 9.56,
+            "2-0": 8.28,
+            "0-1": 8.18,
+            "0-0": 7.5,
+            "1-2": 6.52,
+            "2-2": 4.74,
+            "3-1": 4.69,
+            "0-2": 4.56
+          },
+          "buts_moyens_simules": {
+            "home": 1.49,
+            "away": 1.09,
+            "total": 2.58
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire domicile (Bahia)  \n- **CONFIANCE** : 68 %  \n- **SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Bahia** : en 6e position (53 pts) avec une moyenne de 1,30 buts marqués et 1,20 buts encaissés. À domicile, ils affichent une série de 5 victoires consécutives, 9 buts marqués et **seulement 1 but encaissé**. Leurs matchs à domicile sont dominés par la possession (souvent >55 %) et un nombre élevé de tirs cadrés (ex. 10‑1 contre Grêmio).  \n- **Fortaleza** : 19e (31 pts), moyenne 1,10 buts marqués / 1,30 buts encaissés. À l’extérieur, ils n’ont inscrit que 7 buts et encaissé 7, avec une série de résultats majoritairement nuls/draws. Leur capacité offensive à l’extérieur est limitée, tandis que la défense concède régulièrement plus d’un but.\n\n**2. Impact du facteur domicile/extérieur**  \n- Bahia profite d’un avantage maison très marqué : défense quasi impénétrable (1 but encaissé en 5 matchs) et capacité à contrôler le jeu (possessions supérieures à 55 % dans la plupart des rencontres).  \n- Fortaleza montre une fragilité à l’extérieur : aucune victoire récente hors de chez eux, et leurs seuls points à l’extérieur proviennent de matchs très serrés (1‑1, 1‑0).\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Bahia** : victoires nettes (4‑0, 4‑0, 2‑1, 1‑0). Dominance en tirs cadrés (ex. 10‑1 vs Grêmio) et en corners (souvent >8). Peu de fautes (faible nombre de cartons).  \n- **Fortaleza** : matchs récents très ouverts (3‑3, 2‑2, 1‑1) mais aucune victoire à l’extérieur. Leurs tirs cadrés sont souvent inférieurs à ceux de leurs adversaires (ex. 5‑9 vs Santos).  \n\n**4. Contexte du championnat**  \n- Bahia se situe à 6e, à 18 points du leader, mais en lice pour une place en Copa Sudamericana. Ils ont tout à gagner en consolidant leurs points à domicile.  \n- Fortaleza lutte pour éviter la zone de relégation (19e). Leur priorité est la survie, mais ils n’ont pas la capacité de menacer les équipes du haut du tableau à l’extérieur.\n\n**5. Confrontations directes**  \n- Saison précédente : Bahia 1‑0 (domicile) – Fortaleza a montré une bonne défense mais a été dominé.  \n- 2024 (Fortaleza domicile) : 4‑1 victoire de Fortaleza – exception où Fortaleza a profité d’une forte possession (63,5 %).  \n- 2025 (Fortaleza domicile) : 1‑1 – match très équilibré, mais Bahia a tenu le score.  \n  La tendance globale montre que Bahia garde les matchs serrés à l’extérieur, tandis que Fortaleza ne parvient pas à s’imposer à domicile contre des équipes solides.\n\n**6. Évaluation des cotes**  \n- 1X2 : Bahia 1.51 (favori clair).  \n- Total 2.5 : Over 1.68 / Under 2.24. La cote Under (2.24) indique que le marché estime une probabilité raisonnable d’un match à faible score, cohérente avec la solidité défensive de Bahia à domicile.\n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Bahia domine la majorité de ses matchs à domicile (>55 %).  \n- **Tirs cadrés** : moyenne de 6‑7 par match, souvent double de celle de l’adversaire.  \n- **Corners** : >8 en moyenne, signe d’une pression offensive constante.  \n- **Fortaleza** : possession moyenne autour de 45‑50 % à l’extérieur, tirs cadrés souvent inférieurs à 5, ce qui limite les chances de marquer.\n\n**8. Synthèse**  \nTous les indicateurs (défense à domicile ultra‑solide, attaque suffisante pour marquer au moins un but, faiblesse offensive de Fortaleza à l’extérieur, historique de matchs à faible score) convergent vers une victoire de Bahia avec **moins de 2,5 buts** au total.  \n\n**Conclusion** : La prédiction la plus fiable est une victoire de Bahia, avec un score le plus probable de **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Bahia)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1478012,
+        "HomeTeam": "Corinthians",
+        "AwayTeam": "Sao Paulo",
+        "date": "20 novembre 2025 à 22:30:00 UTC",
+        "league": "Brazil - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Corinthians": 2.44,
+            "Sao Paulo": 3.35,
+            "Draw": 2.99
+          },
+          "totals": {
+            "Over": 2.55,
+            "Under": 1.54
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 13,
+          "total_points": 9,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 10,
+          "total_points": 7,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 5,
+          "total_marques": 10,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "732913",
+            "date": "Sun, Nov 9",
+            "home_team": "Corinthians",
+            "away_team": "Ceará",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "77.6%",
+                "22.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "7"
+              ],
+              "Corner Kicks": [
+                "9",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732913"
+          },
+          {
+            "game_id": "732903",
+            "date": "Wed, Nov 5",
+            "home_team": "Red Bull Bragantino",
+            "away_team": "Corinthians",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "7",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732903"
+          },
+          {
+            "game_id": "732899",
+            "date": "Sun, Nov 2",
+            "home_team": "Corinthians",
+            "away_team": "Grêmio",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732899"
+          },
+          {
+            "game_id": "732889",
+            "date": "Sat, Oct 25",
+            "home_team": "Vitória",
+            "away_team": "Corinthians",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42%",
+                "58%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "11"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732889"
+          },
+          {
+            "game_id": "732876",
+            "date": "Sat, Oct 18",
+            "home_team": "Corinthians",
+            "away_team": "Atlético-MG",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62%",
+                "38%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732876"
+          },
+          {
+            "game_id": "732865",
+            "date": "Wed, Oct 15",
+            "home_team": "Santos",
+            "away_team": "Corinthians",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.8%",
+                "62.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732865"
+          },
+          {
+            "game_id": "732851",
+            "date": "Sat, Oct 4",
+            "home_team": "Corinthians",
+            "away_team": "Mirassol",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.3%",
+                "63.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "10",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732851"
+          },
+          {
+            "game_id": "732849",
+            "date": "Wed, Oct 1",
+            "home_team": "Internacional",
+            "away_team": "Corinthians",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "5"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732849"
+          },
+          {
+            "game_id": "732832",
+            "date": "Sun, Sep 28",
+            "home_team": "Corinthians",
+            "away_team": "Flamengo",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.2%",
+                "51.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732832"
+          },
+          {
+            "game_id": "732826",
+            "date": "Sun, Sep 21",
+            "home_team": "Sport",
+            "away_team": "Corinthians",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.9%",
+                "59.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "19"
+              ],
+              "Yellow Cards": [
+                "6",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732826"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "732911",
+            "date": "Sat, Nov 8",
+            "home_team": "São Paulo",
+            "away_team": "Red Bull Bragantino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.2%",
+                "34.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732911"
+          },
+          {
+            "game_id": "732901",
+            "date": "Wed, Nov 5",
+            "home_team": "São Paulo",
+            "away_team": "Flamengo",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732901"
+          },
+          {
+            "game_id": "732892",
+            "date": "Sun, Nov 2",
+            "home_team": "Vasco da Gama",
+            "away_team": "São Paulo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.8%",
+                "38.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "6"
+              ],
+              "Shot Attempts": [
+                "24",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732892"
+          },
+          {
+            "game_id": "732880",
+            "date": "Sat, Oct 25",
+            "home_team": "São Paulo",
+            "away_team": "Bahia",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732880"
+          },
+          {
+            "game_id": "732871",
+            "date": "Sun, Oct 19",
+            "home_team": "Mirassol",
+            "away_team": "São Paulo",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40%",
+                "60%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732871"
+          },
+          {
+            "game_id": "732868",
+            "date": "Thu, Oct 16",
+            "home_team": "Grêmio",
+            "away_team": "São Paulo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.3%",
+                "63.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732868"
+          },
+          {
+            "game_id": "732856",
+            "date": "Sun, Oct 5",
+            "home_team": "São Paulo",
+            "away_team": "Palmeiras",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.1%",
+                "48.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732856"
+          },
+          {
+            "game_id": "732840",
+            "date": "Thu, Oct 2",
+            "home_team": "Fortaleza",
+            "away_team": "São Paulo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.6%",
+                "25.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732840"
+          },
+          {
+            "game_id": "732839",
+            "date": "Mon, Sep 29",
+            "home_team": "São Paulo",
+            "away_team": "Ceará",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.7%",
+                "39.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/732839"
+          },
+          {
+            "game_id": "757082",
+            "date": "Thu, Sep 25",
+            "home_team": "São Paulo",
+            "away_team": "Liga de Quito",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/757082"
+          }
+        ],
+        "classement": {
+          "Corinthians": {
+            "position": 13,
+            "points": 42
+          },
+          "Sao Paulo": {
+            "position": 9,
+            "points": 45
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Flamengo",
+            "points": 71
+          },
+          {
+            "position": 2,
+            "team": "Palmeiras",
+            "points": 68
+          },
+          {
+            "position": 3,
+            "team": "Cruzeiro",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Mirassol",
+            "points": 59
+          },
+          {
+            "position": 5,
+            "team": "Botafogo",
+            "points": 55
+          },
+          {
+            "position": 6,
+            "team": "Bahia",
+            "points": 53
+          },
+          {
+            "position": 7,
+            "team": "Fluminense",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "Red Bull Bragantino",
+            "points": 45
+          },
+          {
+            "position": 9,
+            "team": "São Paulo",
+            "points": 45
+          },
+          {
+            "position": 10,
+            "team": "Atlético-MG",
+            "points": 44
+          },
+          {
+            "position": 11,
+            "team": "Vasco da Gama",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Ceará",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Corinthians",
+            "points": 42
+          },
+          {
+            "position": 14,
+            "team": "Grêmio",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Internacional",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Santos",
+            "points": 36
+          },
+          {
+            "position": 17,
+            "team": "Vitória",
+            "points": 35
+          },
+          {
+            "position": 18,
+            "team": "Juventude",
+            "points": 32
+          },
+          {
+            "position": 19,
+            "team": "Fortaleza",
+            "points": 31
+          },
+          {
+            "position": 20,
+            "team": "Sport",
+            "points": 17
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699438",
+            "date": "Sunday, June 16, 2024",
+            "team1": "Corinthians",
+            "score": "2 - 2",
+            "team2": "São Paulo",
+            "title": "Corinthians VS São Paulo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699438/sao-paulo-corinthians",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "40.2%",
+                "59.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "7"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "9",
+                "5"
+              ],
+              "Saves": [
+                "6",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "699629",
+            "date": "Sunday, September 29, 2024",
+            "team1": "São Paulo",
+            "score": "3 - 1",
+            "team2": "Corinthians",
+            "title": "São Paulo VS Corinthians",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699629/corinthians-sao-paulo",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "53%",
+                "47%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "11"
+              ],
+              "Yellow Cards": [
+                "6",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "732737",
+            "date": "Saturday, July 19, 2025",
+            "team1": "São Paulo",
+            "score": "2 - 0",
+            "team2": "Corinthians",
+            "title": "São Paulo VS Corinthians",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/732737/corinthians-sao-paulo",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "48.6%",
+                "51.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/131.png",
+        "logo_away": "https://media.api-sports.io/football/teams/126.png",
+        "classement_home": 13,
+        "classement_away": 9,
+        "points_classement_home": 42,
+        "points_classement_away": 45,
+        "nom_classement_home": "Corinthians",
+        "nom_classement_away": "São Paulo",
+        "country_fr": "Brazil - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.506,
+            "lambda_away": 1.076,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.91,
+            "X": 25.58,
+            "V2": 27.51
+          },
+          "double_chance": {
+            "1X": 72.5,
+            "12": 74.41,
+            "X2": 53.09
+          },
+          "over_under": {
+            "plus_de_0.5": 92.29,
+            "moins_de_0.5": 7.71,
+            "plus_de_1.5": 72.25,
+            "moins_de_1.5": 27.75,
+            "plus_de_2.5": 46.78,
+            "moins_de_2.5": 53.22,
+            "plus_de_3.5": 25.7,
+            "moins_de_3.5": 74.3,
+            "plus_de_4.5": 11.92,
+            "moins_de_4.5": 88.08,
+            "plus_de_5.5": 4.81,
+            "moins_de_5.5": 95.18
+          },
+          "btts": {
+            "oui": 50.67,
+            "non": 49.33
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.91,
+            "1Xet+0.5": 64.78,
+            "V2et+0.5": 27.51,
+            "X2et+0.5": 45.38,
+            "12et+0.5": 74.41,
+            "V1et+1.5": 35.33,
+            "1Xet+1.5": 53.2,
+            "V2et+1.5": 19.05,
+            "X2et+1.5": 36.93,
+            "12et+1.5": 54.37,
+            "V1et+2.5": 26.14,
+            "1Xet+2.5": 32.08,
+            "V2et+2.5": 14.7,
+            "X2et+2.5": 20.65,
+            "12et+2.5": 40.84,
+            "V1et+3.5": 13.27,
+            "1Xet+3.5": 19.22,
+            "V2et+3.5": 6.48,
+            "X2et+3.5": 12.43,
+            "12et+3.5": 19.75,
+            "V1et+4.5": 7.38,
+            "1Xet+4.5": 8.39,
+            "V2et+4.5": 3.54,
+            "X2et+4.5": 4.55,
+            "12et+4.5": 10.91,
+            "V1et+5.5": 2.76,
+            "1Xet+5.5": 3.78,
+            "V2et+5.5": 1.03,
+            "X2et+5.5": 2.05,
+            "12et+5.5": 3.8
+          },
+          "scores_probables": {
+            "1-1": 11.92,
+            "1-0": 11.58,
+            "2-0": 9.19,
+            "2-1": 8.88,
+            "0-1": 8.46,
+            "0-0": 7.71,
+            "1-2": 6.76,
+            "2-2": 4.93,
+            "3-1": 4.48,
+            "0-2": 4.35
+          },
+          "buts_moyens_simules": {
+            "home": 1.49,
+            "away": 1.07,
+            "total": 2.56
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 1‑0 ou 0‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Corinthians (domicile)** : 7 buts marqués et seulement 3 encaissés à domicile (moy. 1,10 / 1,00). Leur défense à domicile est l’une des meilleures du championnat (2 buts encaissés en 5 derniers matchs à domicile).  \n- **São Paulo (extérieur)** : 4 buts marqués et 5 encaissés à l’extérieur (moy. 1,00 / 1,30). Leur défense à l’extérieur est plus perméable que celle de Corinthians et ils ne marquent que très peu en déplacement.  \n\n**2. Impact du facteur domicile / extérieur**  \n- Corinthians bénéficie d’un fort facteur domicile (possession moyenne élevée, plus de 9 corners en 5 derniers matchs à domicile).  \n- São Paulo a du mal à s’imposer à l’extérieur : 6 buts marqués et 6 encaissés sur leurs 5 dernières sorties, avec deux défaites nettes (0‑3 contre Mirassol, 0‑1 contre Bragantino).\n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Corinthians** : 4 victoires, 1 défaite sur leurs 5 derniers matchs à domicile (1‑0, 2‑0, 2‑1, 1‑0, 0‑1). Très peu de tirs cadrés (moy. ≈ 3‑4) mais une grande efficacité devant le but.  \n- **São Paulo** : 2 victoires, 1 nul, 2 défaites à l’extérieur. Leurs matchs à l’extérieur affichent souvent moins de 5 tirs cadrés et une moyenne de 1,2 but marqué / 1,2 but encaissé.  \n\n**4. Contexte du championnat**  \n- Corinthians 13ᵉ (42 pts) lutte contre la zone de relégation, ce qui les rend très prudents en défense à domicile.  \n- São Paulo 9ᵉ (45 pts) est en milieu de tableau, sans pression majeure, ce qui se traduit souvent par un jeu plus ouvert mais peu efficace à l’extérieur.\n\n**5. Confrontations directes récentes**  \n- 3 dernières rencontres : 2‑2, 1‑3 (défaite Corinthians), 0‑2 (défaite Corinthians). São Paulo a eu le dessus, mais les deux matchs ont produit **4 buts au total** et **une seule équipe a marqué les deux buts**. Aucun des trois n’a dépassé 2,5 buts.\n\n**6. Évaluation des cotes**  \n- Over 2.5 = 2.55 (impliquant ~38 % de probabilité) vs Under 2.5 = 1.54 (≈ 65 %). Le marché penche fortement vers un match à faible score, cohérent avec les moyennes de buts (≈ 2,2) et les tendances défensives.\n\n**7. Analyse approfondie des statistiques de matchs récents**  \n- **Possession** : Corinthians domine souvent (> 55 %) à domicile, mais crée peu d’occasions (≈ 4 tirs cadrés).  \n- **Tirs** : Les deux équipes affichent rarement plus de 5 tirs cadrés combinés (ex. 3‑3 vs Bragantino, 4‑2 vs Flamengo).  \n- **Corners** : Le nombre de corners reste bas (≈ 4‑6 total), signe d’un jeu moins ouvert.  \n- **Cartons** : Pas d’impact direct sur le nombre de buts, mais indique un jeu physique qui peut freiner les attaques.\n\n**8. Synthèse**  \n- Défenses solides, peu de tirs cadrés, historique de matchs à moins de 2,5 buts et cotes du marché.  \n- Même si le facteur domicile donne un léger avantage à Corinthians, le résultat le plus probable reste **un total de buts inférieur à 2,5**.\n\n**Conclusion** : La combinaison de la solidité défensive de Corinthians à domicile, la faiblesse offensive de São Paulo à l’extérieur, et les tendances du marché justifient la prédiction « Moins de 2.5 buts » avec une confiance de 68 %. Les scores les plus plausibles sont **1‑0** (victoire serrée de Corinthians) ou **0‑1** (victoire surprise de São Paulo), tous deux respectant la limite de 2,5 buts.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 0‑1"
+      }
+    ]
+  }
+}
