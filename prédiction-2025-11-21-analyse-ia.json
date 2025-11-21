@@ -1,0 +1,2772 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-21 02:41:49",
+    "date_matchs": "2025-11-21",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1387811,
+        "HomeTeam": "Nice",
+        "AwayTeam": "Marseille",
+        "date": "21 novembre 2025 à 19:45:00 UTC",
+        "league": "France - Ligue 1",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Marseille": 2.02,
+            "Nice": 3.81,
+            "Draw": 3.89
+          },
+          "totals": {
+            "Over": 1.76,
+            "Under": 2.23
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 11,
+          "total_points": 6,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 10,
+          "total_marques": 14,
+          "total_encaisses": 16
+        },
+        "stats_away": {
+          "moyenne_marques": 2.3,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 19,
+          "total_points": 7,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 15,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 5,
+          "total_marques": 23,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "746516",
+            "date": "Sun, Nov 9",
+            "home_team": "Metz",
+            "away_team": "Nice",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746516"
+          },
+          {
+            "game_id": "757855",
+            "date": "Thu, Nov 6",
+            "home_team": "Nice",
+            "away_team": "SC Freiburg",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.7%",
+                "40.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757855"
+          },
+          {
+            "game_id": "746508",
+            "date": "Sat, Nov 1",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Nice",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.5%",
+                "23.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "28",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746508"
+          },
+          {
+            "game_id": "746498",
+            "date": "Wed, Oct 29",
+            "home_team": "Nice",
+            "away_team": "Lille",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.1%",
+                "67.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "21"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "13"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746498"
+          },
+          {
+            "game_id": "746487",
+            "date": "Sun, Oct 26",
+            "home_team": "Stade Rennais",
+            "away_team": "Nice",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746487"
+          },
+          {
+            "game_id": "757845",
+            "date": "Thu, Oct 23",
+            "home_team": "Celta Vigo",
+            "away_team": "Nice",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.9%",
+                "35.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "25",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757845"
+          },
+          {
+            "game_id": "746480",
+            "date": "Sat, Oct 18",
+            "home_team": "Nice",
+            "away_team": "Lyon",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.6%",
+                "69.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "5",
+                "29"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "16"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746480"
+          },
+          {
+            "game_id": "746472",
+            "date": "Sun, Oct 5",
+            "home_team": "AS Monaco",
+            "away_team": "Nice",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.5%",
+                "34.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "7"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746472"
+          },
+          {
+            "game_id": "757817",
+            "date": "Thu, Oct 2",
+            "home_team": "Fenerbahce",
+            "away_team": "Nice",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757817"
+          },
+          {
+            "game_id": "746465",
+            "date": "Sun, Sep 28",
+            "home_team": "Nice",
+            "away_team": "Paris FC",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.5%",
+                "56.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746465"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "746519",
+            "date": "Sat, Nov 8",
+            "home_team": "Marseille",
+            "away_team": "Brest",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.7%",
+                "36.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "4"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746519"
+          },
+          {
+            "game_id": "757724",
+            "date": "Wed, Nov 5",
+            "home_team": "Marseille",
+            "away_team": "Atalanta",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.1%",
+                "46.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757724"
+          },
+          {
+            "game_id": "746502",
+            "date": "Sat, Nov 1",
+            "home_team": "AJ Auxerre",
+            "away_team": "Marseille",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.1%",
+                "50.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746502"
+          },
+          {
+            "game_id": "746495",
+            "date": "Wed, Oct 29",
+            "home_team": "Marseille",
+            "away_team": "Angers",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.3%",
+                "40.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746495"
+          },
+          {
+            "game_id": "746488",
+            "date": "Sat, Oct 25",
+            "home_team": "Lens",
+            "away_team": "Marseille",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.4%",
+                "68.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "17"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746488"
+          },
+          {
+            "game_id": "757706",
+            "date": "Wed, Oct 22",
+            "home_team": "Sporting CP",
+            "away_team": "Marseille",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.5%",
+                "47.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757706"
+          },
+          {
+            "game_id": "746478",
+            "date": "Sat, Oct 18",
+            "home_team": "Marseille",
+            "away_team": "Le Havre AC",
+            "score": "6 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.7%",
+                "26.3%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746478"
+          },
+          {
+            "game_id": "746471",
+            "date": "Sat, Oct 4",
+            "home_team": "Metz",
+            "away_team": "Marseille",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.5%",
+                "62.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "9"
+              ],
+              "Shot Attempts": [
+                "4",
+                "21"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746471"
+          },
+          {
+            "game_id": "757679",
+            "date": "Tue, Sep 30",
+            "home_team": "Marseille",
+            "away_team": "Ajax Amsterdam",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48%",
+                "52%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757679"
+          },
+          {
+            "game_id": "746461",
+            "date": "Fri, Sep 26",
+            "home_team": "Strasbourg",
+            "away_team": "Marseille",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40%",
+                "60%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "9"
+              ],
+              "Shot Attempts": [
+                "9",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "7",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746461"
+          }
+        ],
+        "classement": {
+          "Nice": {
+            "position": 9,
+            "points": 17
+          },
+          "Marseille": {
+            "position": 2,
+            "points": 25
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Paris Saint-Germain",
+            "points": 27
+          },
+          {
+            "position": 2,
+            "team": "Marseille",
+            "points": 25
+          },
+          {
+            "position": 3,
+            "team": "Lens",
+            "points": 25
+          },
+          {
+            "position": 4,
+            "team": "Strasbourg",
+            "points": 22
+          },
+          {
+            "position": 5,
+            "team": "Lille",
+            "points": 20
+          },
+          {
+            "position": 6,
+            "team": "AS Monaco",
+            "points": 20
+          },
+          {
+            "position": 7,
+            "team": "Lyon",
+            "points": 20
+          },
+          {
+            "position": 8,
+            "team": "Stade Rennais",
+            "points": 18
+          },
+          {
+            "position": 9,
+            "team": "Nice",
+            "points": 17
+          },
+          {
+            "position": 10,
+            "team": "Toulouse",
+            "points": 16
+          },
+          {
+            "position": 11,
+            "team": "Paris FC",
+            "points": 14
+          },
+          {
+            "position": 12,
+            "team": "Le Havre AC",
+            "points": 14
+          },
+          {
+            "position": 13,
+            "team": "Angers",
+            "points": 13
+          },
+          {
+            "position": 14,
+            "team": "Metz",
+            "points": 11
+          },
+          {
+            "position": 15,
+            "team": "Brest",
+            "points": 10
+          },
+          {
+            "position": 16,
+            "team": "Nantes",
+            "points": 10
+          },
+          {
+            "position": 17,
+            "team": "Lorient",
+            "points": 10
+          },
+          {
+            "position": 18,
+            "team": "AJ Auxerre",
+            "points": 7
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "706455",
+            "date": "Saturday, September 14, 2024",
+            "team1": "Marseille",
+            "score": "2 - 0",
+            "team2": "Nice",
+            "title": "Marseille VS Nice",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/706455/nice-marseille",
+            "source": "Ligue 1",
+            "stats": {
+              "Possession": [
+                "55.8%",
+                "44.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "706591",
+            "date": "Sunday, January 26, 2025",
+            "team1": "Nice",
+            "score": "2 - 0",
+            "team2": "Marseille",
+            "title": "Nice VS Marseille",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/706591/marseille-nice",
+            "source": "Ligue 1",
+            "stats": {
+              "Possession": [
+                "29.4%",
+                "70.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "12"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/84.png",
+        "logo_away": "https://media.api-sports.io/football/teams/81.png",
+        "classement_home": 9,
+        "classement_away": 2,
+        "points_classement_home": 17,
+        "points_classement_away": 25,
+        "nom_classement_home": "Nice",
+        "nom_classement_away": "Marseille",
+        "country_fr": "France - Ligue 1",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.456,
+            "lambda_away": 1.33,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.98,
+            "X": 24.78,
+            "V2": 34.24
+          },
+          "double_chance": {
+            "1X": 65.76,
+            "12": 75.22,
+            "X2": 59.03
+          },
+          "over_under": {
+            "plus_de_0.5": 93.73,
+            "moins_de_0.5": 6.27,
+            "plus_de_1.5": 76.28,
+            "moins_de_1.5": 23.72,
+            "plus_de_2.5": 52.69,
+            "moins_de_2.5": 47.31,
+            "plus_de_3.5": 30.07,
+            "moins_de_3.5": 69.93,
+            "plus_de_4.5": 15.0,
+            "moins_de_4.5": 85.0,
+            "plus_de_5.5": 6.48,
+            "moins_de_5.5": 93.52
+          },
+          "btts": {
+            "oui": 56.04,
+            "non": 43.96
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.98,
+            "1Xet+0.5": 59.48,
+            "V2et+0.5": 34.24,
+            "X2et+0.5": 52.76,
+            "12et+0.5": 75.22,
+            "V1et+1.5": 31.8,
+            "1Xet+1.5": 50.31,
+            "V2et+1.5": 25.97,
+            "X2et+1.5": 44.48,
+            "12et+1.5": 57.77,
+            "V1et+2.5": 25.34,
+            "1Xet+2.5": 32.1,
+            "V2et+2.5": 20.59,
+            "X2et+2.5": 27.35,
+            "12et+2.5": 45.93,
+            "V1et+3.5": 13.18,
+            "1Xet+3.5": 19.94,
+            "V2et+3.5": 10.13,
+            "X2et+3.5": 16.89,
+            "12et+3.5": 23.31,
+            "V1et+4.5": 7.62,
+            "1Xet+4.5": 9.05,
+            "V2et+4.5": 5.96,
+            "X2et+4.5": 7.38,
+            "12et+4.5": 13.58,
+            "V1et+5.5": 2.94,
+            "1Xet+5.5": 4.38,
+            "V2et+5.5": 2.1,
+            "X2et+5.5": 3.54,
+            "12et+5.5": 5.05
+          },
+          "scores_probables": {
+            "1-1": 11.75,
+            "1-0": 9.18,
+            "2-1": 8.74,
+            "0-1": 8.28,
+            "1-2": 8.22,
+            "2-0": 6.46,
+            "0-0": 6.27,
+            "0-2": 5.38,
+            "2-2": 5.33,
+            "3-1": 4.26
+          },
+          "buts_moyens_simules": {
+            "home": 1.47,
+            "away": 1.31,
+            "total": 2.78
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire extérieur (Marseille)  \n- **CONFIANCE** : 68%  \n- **SCORES PROBABLES** : 2‑1 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **Nice** (9ᵉ, 17 pts) : moyenne 1,40 buts marqués / 1,60 buts encaissés. À domicile, 7 buts marqués et 6 encaissés (≈ 1,0 but encaissé par match). Leur attaque est moyenne, la défense laisse passer plus d’un but par rencontre.  \n- **Marseille** (2ᵉ, 25 pts) : moyenne 2,30 buts marqués / 1,00 buts encaissés. En déplacement, 8 buts marqués et 5 encaissés (≈ 0,5 but encaissé par match). L’attaque est très puissante, la défense solide.\n\n**2. Impact du facteur domicile / extérieur**  \n- Nice a montré une certaine fragilité à domicile (6 pts sur 6 derniers matchs, 3 défaites).  \n- Marseille, même en déplacement, conserve une bonne solidité défensive (5 buts encaissés en 5 matches ext.) et continue de marquer régulièrement.\n\n**3. Forme récente & tendances détaillées**  \n- **Nice** (6 derniers matchs) : L L L W W L → 6 pts, avec seulement deux victoires et trois défaites.  \n- **Marseille** (6 derniers matchs) : W L W D L L → 7 pts, mais leurs victoires récentes (Brest 3‑0, Le Havre 6‑2, Metz 3‑0, Ajax 4‑0) montrent une capacité à créer de nombreux buts.  \n- Analyse des **statistiques détaillées** : Nice a souvent des possessions équilibrées (≈ 50 %) mais un nombre élevé de tirs contre (ex. Lille 8‑21). Marseille domine la possession (ex. Brest 63 %‑36 %) et le nombre de tirs cadrés (ex. Brest 7‑2).  \n\n**4. Contexte du championnat**  \n- Marseille est à 2ᵉ place, à deux points du leader, donc très motivé à garder la pression.  \n- Nice lutte dans le top‑10, mais à 8 points du 6ᵉ, ce qui limite la motivation à prendre des risques.\n\n**5. Confrontations directes (saison en cours)**  \n- Marseille 2‑0 Nice (sept. 2024) → victoire claire à l’extérieur.  \n- Nice 2‑0 Marseille (janv. 2025) → exception où Nice a très bien exploité le jeu à domicile.  \n- Les deux matchs montrent que chaque équipe peut gagner, mais la tendance globale (classement, forme) penche en faveur de Marseille.\n\n**6. Cotes**  \n- 1xBet propose Marseille à 2.02 contre Nice à 3.81. La cote relativement basse pour Marseille indique que le marché estime leur victoire comme la plus probable.\n\n**7. Analyse des tendances de buts**  \n- **Over 2.5** : 6 victoires de Marseille à l’extérieur avec plus de 2,5 buts (Brest, Le Havre, Metz, Ajax, Strasbourg, Angers).  \n- **BTTS** : 8 des 10 derniers matchs à domicile de Nice et 5 des 10 derniers matchs à l’extérieur de Marseille ont vu les deux équipes marquer.  \n- La combinaison “victoire de Marseille + plus de 2,5 buts” est très cohérente avec les données, mais la consigne ne permet qu’une seule prédiction. La victoire de Marseille intègre déjà la probabilité d’un score supérieur à 2,5.\n\n**8. Synthèse**  \n- Marseille possède une attaque supérieure (2,30 buts/match) et une défense plus solide à l’extérieur (0,5 but encaissé/match).  \n- Nice a du mal à contenir les équipes offensives et ne compense pas par une attaque suffisante.  \n- Le facteur domicile ne suffit pas à compenser le déséquilibre qualitatif.\n\n**Conclusion** : La prédiction la plus fiable est donc **une victoire de Marseille**. Les scores les plus probables, basés sur les moyennes combinées, sont **2‑1** (Marseille garde son avantage) ou **2‑0** (défense de Nice tenue).  \n\n---  \n\n*Cette analyse prend en compte toutes les statistiques fournies, les tendances récentes, le classement et les confrontations directes.*",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Marseille)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 2‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1396934,
+        "HomeTeam": "2 de Mayo",
+        "AwayTeam": "Deportivo Recoleta",
+        "date": "21 novembre 2025 à 22:30:00 UTC",
+        "league": "Paraguay - Division Profesional - Clausura",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 22,
+          "total_points": 10,
+          "serie_domicile": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 4,
+          "total_marques": 15,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 16,
+          "total_points": 7,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 9,
+          "total_marques": 19,
+          "total_encaisses": 15
+        },
+        "last_matches_home": [
+          {
+            "game_id": "749896",
+            "date": "Mon, 10 Nov",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "2 de Mayo",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749896"
+          },
+          {
+            "game_id": "749894",
+            "date": "Fri, 31 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Club Atlético Tembetary",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749894"
+          },
+          {
+            "game_id": "749889",
+            "date": "Sun, 26 Oct",
+            "home_team": "Trinidense",
+            "away_team": "2 de Mayo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749889"
+          },
+          {
+            "game_id": "749878",
+            "date": "Sat, 18 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Nacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749878"
+          },
+          {
+            "game_id": "749873",
+            "date": "Sat, 11 Oct",
+            "home_team": "2 de Mayo",
+            "away_team": "Cerro Porteño",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749873"
+          },
+          {
+            "game_id": "749871",
+            "date": "Fri, 3 Oct",
+            "home_team": "Sportivo Luqueño",
+            "away_team": "2 de Mayo",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749871"
+          },
+          {
+            "game_id": "749861",
+            "date": "Sun, 28 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "General Caballero JLM",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749861"
+          },
+          {
+            "game_id": "749856",
+            "date": "Sun, 21 Sep",
+            "home_team": "Libertad",
+            "away_team": "2 de Mayo",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749856"
+          },
+          {
+            "game_id": "749849",
+            "date": "Fri, 12 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "Guarani",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749849"
+          },
+          {
+            "game_id": "749843",
+            "date": "Sun, 7 Sep",
+            "home_team": "2 de Mayo",
+            "away_team": "Olimpia",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749843"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "749898",
+            "date": "Fri, 7 Nov",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Sportivo Luqueño",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749898"
+          },
+          {
+            "game_id": "749892",
+            "date": "Fri, 31 Oct",
+            "home_team": "General Caballero JLM",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749892"
+          },
+          {
+            "game_id": "749885",
+            "date": "Sun, 26 Oct",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Libertad",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749885"
+          },
+          {
+            "game_id": "749880",
+            "date": "Sun, 19 Oct",
+            "home_team": "Guarani",
+            "away_team": "Deportivo Recoleta",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749880"
+          },
+          {
+            "game_id": "749874",
+            "date": "Fri, 10 Oct",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Olimpia",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749874"
+          },
+          {
+            "game_id": "749866",
+            "date": "Sat, 4 Oct",
+            "home_team": "Cerro Porteño",
+            "away_team": "Deportivo Recoleta",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749866"
+          },
+          {
+            "game_id": "749863",
+            "date": "Mon, 29 Sep",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749863"
+          },
+          {
+            "game_id": "749858",
+            "date": "Sat, 20 Sep",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Club Atlético Tembetary",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749858"
+          },
+          {
+            "game_id": "749851",
+            "date": "Sun, 14 Sep",
+            "home_team": "Trinidense",
+            "away_team": "Deportivo Recoleta",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749851"
+          },
+          {
+            "game_id": "749845",
+            "date": "Sat, 6 Sep",
+            "home_team": "Nacional",
+            "away_team": "Deportivo Recoleta",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/749845"
+          }
+        ],
+        "classement": {
+          "2 de Mayo": null,
+          "Deportivo Recoleta": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728863",
+            "date": "Tuesday, January 28, 2025",
+            "team1": "Deportivo Recoleta",
+            "score": "0 - 2",
+            "team2": "2 de Mayo",
+            "title": "Deportivo Recoleta VS 2 de Mayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728863/2-de-mayo-deportivo-recoleta",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728927",
+            "date": "Thursday, April 10, 2025",
+            "team1": "2 de Mayo",
+            "score": "0 - 4",
+            "team2": "Deportivo Recoleta",
+            "title": "2 de Mayo VS Deportivo Recoleta",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728927/deportivo-recoleta-2-de-mayo",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "749836",
+            "date": "Saturday, August 30, 2025",
+            "team1": "Deportivo Recoleta",
+            "score": "2 - 0",
+            "team2": "2 de Mayo",
+            "title": "Deportivo Recoleta VS 2 de Mayo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/749836/2-de-mayo-deportivo-recoleta",
+            "source": "Division Profesional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/2140.png",
+        "logo_away": "https://media.api-sports.io/football/teams/10476.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Paraguay - Division Profesional - Clausura",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.383,
+            "lambda_away": 1.354,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 38.2,
+            "X": 25.52,
+            "V2": 36.29
+          },
+          "double_chance": {
+            "1X": 63.72,
+            "12": 74.48,
+            "X2": 61.8
+          },
+          "over_under": {
+            "plus_de_0.5": 93.47,
+            "moins_de_0.5": 6.53,
+            "plus_de_1.5": 75.46,
+            "moins_de_1.5": 24.54,
+            "plus_de_2.5": 51.4,
+            "moins_de_2.5": 48.6,
+            "plus_de_3.5": 29.67,
+            "moins_de_3.5": 70.34,
+            "plus_de_4.5": 14.56,
+            "moins_de_4.5": 85.44,
+            "plus_de_5.5": 6.27,
+            "moins_de_5.5": 93.73
+          },
+          "btts": {
+            "oui": 55.56,
+            "non": 44.44
+          },
+          "resultat_total": {
+            "V1et+0.5": 38.2,
+            "1Xet+0.5": 57.18,
+            "V2et+0.5": 36.29,
+            "X2et+0.5": 55.28,
+            "12et+0.5": 74.48,
+            "V1et+1.5": 29.02,
+            "1Xet+1.5": 48.0,
+            "V2et+1.5": 27.45,
+            "X2et+1.5": 46.44,
+            "12et+1.5": 56.46,
+            "V1et+2.5": 22.85,
+            "1Xet+2.5": 29.62,
+            "V2et+2.5": 21.78,
+            "X2et+2.5": 28.55,
+            "12et+2.5": 44.63,
+            "V1et+3.5": 11.76,
+            "1Xet+3.5": 18.53,
+            "V2et+3.5": 11.14,
+            "X2et+3.5": 17.9,
+            "12et+3.5": 22.9,
+            "V1et+4.5": 6.75,
+            "1Xet+4.5": 8.09,
+            "V2et+4.5": 6.46,
+            "X2et+4.5": 7.8,
+            "12et+4.5": 13.21,
+            "V1et+5.5": 2.53,
+            "1Xet+5.5": 3.88,
+            "V2et+5.5": 2.4,
+            "X2et+5.5": 3.74,
+            "12et+5.5": 4.92
+          },
+          "scores_probables": {
+            "1-1": 12.22,
+            "1-0": 9.18,
+            "0-1": 8.83,
+            "2-1": 8.43,
+            "1-2": 7.97,
+            "0-0": 6.53,
+            "2-0": 6.16,
+            "0-2": 5.67,
+            "2-2": 5.42,
+            "3-1": 4.0
+          },
+          "buts_moyens_simules": {
+            "home": 1.39,
+            "away": 1.35,
+            "total": 2.74
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE :** Victoire domicile (2 de Mayo)  \n**CONFIANCE :** 68 %  \n**SCORES PROBABLES :** 1‑0 ou 2‑0  \n\n**JUSTIFICATION :**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **2 de Mayo (domicile)** : moyenne 1,50 buts marqués et 0,70 buts encaissés. En 6 derniers matchs à domicile, ils n’ont perdu que 1 fois (L‑W‑D‑W‑W‑W) et n’ont concédé que 3 buts sur 6 rencontres (0,5 buts/match). Leur défense à domicile est donc très solide.  \n- **Deportivo Recoleta (extérieur)** : moyenne 1,90 buts marqués et 1,50 buts encaissés. En 6 derniers matchs à l’extérieur, ils affichent une forme très irrégulière (W‑L‑L‑W‑W‑L) avec 9 buts encaissés (1,5 buts/match). Leur défense est plus perméable que celle de 2 de Mayo.\n\n**2. Impact du facteur domicile/extérieur**  \nLe taux de buts encaissés à domicile de 2 de Mayo (0,70) est nettement inférieur à celui que subit Recoleta en déplacement (1,50). De plus, 2 de Mayo a marqué 7 buts à domicile contre seulement 3 encaissés, ce qui montre une nette supériorité sur son terrain.\n\n**3. Forme récente et tendances**  \n- **2 de Mayo** : sur les 10 derniers matchs, 8 victoires, 1 défaite, 1 nul (22 points). Leur dynamique offensive est soutenue (ex. 3‑2 contre Olimpia, 3‑0 contre Sportivo Luqueño).  \n- **Recoleta** : sur les 10 derniers matchs, 5 victoires, 4 défaites, 1 nul (16 points). Malgré une bonne capacité à marquer à l’extérieur (11 buts), ils ont concédé 9 buts, signe d’une défense fragile.\n\n**4. Confrontations directes**  \n- 28 janv. 2025 : Recoleta 0‑2 2 de Mayo  \n- 10 avril 2025 : 2 de Mayo 0‑4 Recoleta (exceptionnelle victoire à l’extérieur)  \n- 30 août 2025 : Recoleta 2‑0 2 de Mayo  \n\nSur les trois dernières rencontres, chaque équipe a gagné une fois, mais les deux défaites de Recoleta ont été nettes (2‑0 et 4‑0). La dernière rencontre à domicile de 2 de Mayo s’est soldée par une victoire 2‑0, montrant qu’ils peuvent garder le clean‑sheet chez eux.\n\n**5. Tendances de buts**  \n- Total moyen de buts par match combinés : (1,5 + 0,7 + 1,9 + 1,5) ÷ 2 ≈ 2,8 buts.  \n- Cependant, la défense de 2 de Mayo à domicile (0,70) tend à réduire le total. Les matchs récents de 2 de Mayo à domicile (ex. 1‑0, 2‑0, 0‑0) suggèrent souvent moins de 2,5 buts.\n\n**6. Synthèse**  \n- **Avantage décisif** : solidité défensive à domicile de 2 de Mayo.  \n- **Faiblesse de Recoleta** : incapacité à garder la cage inviolée à l’extérieur (1,5 buts encaissés en moyenne).  \n- **Probabilité de BTTS** : faible (les deux dernières matchs à domicile de 2 de Mayo se sont terminés 0‑0 ou 1‑0).  \n\n**Conclusion** : le scénario le plus probable est une victoire de 2 de Mayo, avec un score serré, soit 1‑0 ou 2‑0. Cette prédiction repose sur la combinaison d’une défense à domicile très efficace, d’une forme globale supérieure et d’un historique de confrontations où 2 de Mayo a su imposer son jeu à domicile.",
+        "confiance_pourcentage": null,
+        "prediction_principale": "** Victoire domicile (2 de Mayo)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "** 1‑0 ou 2‑0"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1339224,
+        "HomeTeam": "Deportes Iquique",
+        "AwayTeam": "Cobresal",
+        "date": "21 novembre 2025 à 23:00:00 UTC",
+        "league": "Chile - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cobresal": 3.15,
+            "Deportes Iquique": 2.14,
+            "Draw": 3.46
+          },
+          "totals": {
+            "Over": 1.65,
+            "Under": 2.17
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 2.0,
+          "form_6": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 9,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 10,
+          "total_marques": 12,
+          "total_encaisses": 20
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 15,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 12,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "731279",
+            "date": "Fri, 7 Nov",
+            "home_team": "Unión La Calera",
+            "away_team": "Deportes Iquique",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.9%",
+                "38.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "9",
+                "17"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731279"
+          },
+          {
+            "game_id": "731266",
+            "date": "Fri, 31 Oct",
+            "home_team": "Deportes Iquique",
+            "away_team": "La Serena",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.7%",
+                "37.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731266"
+          },
+          {
+            "game_id": "731258",
+            "date": "Sat, 25 Oct",
+            "home_team": "Huachipato",
+            "away_team": "Deportes Iquique",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61%",
+                "39%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731258"
+          },
+          {
+            "game_id": "731250",
+            "date": "Sat, 18 Oct",
+            "home_team": "Deportes Iquique",
+            "away_team": "O'Higgins",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.4%",
+                "57.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "20"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731250"
+          },
+          {
+            "game_id": "731241",
+            "date": "Fri, 26 Sep",
+            "home_team": "Colo Colo",
+            "away_team": "Deportes Iquique",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731241"
+          },
+          {
+            "game_id": "731236",
+            "date": "Sun, 31 Aug",
+            "home_team": "Deportes Iquique",
+            "away_team": "Deportes Limache",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.3%",
+                "38.7%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "25",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731236"
+          },
+          {
+            "game_id": "731226",
+            "date": "Sun, 24 Aug",
+            "home_team": "Deportes Iquique",
+            "away_team": "Ñublense",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.2%",
+                "55.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731226"
+          },
+          {
+            "game_id": "731221",
+            "date": "Fri, 15 Aug",
+            "home_team": "Unión Española",
+            "away_team": "Deportes Iquique",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "70.5%",
+                "29.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "14",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731221"
+          },
+          {
+            "game_id": "731213",
+            "date": "Fri, 8 Aug",
+            "home_team": "Palestino",
+            "away_team": "Deportes Iquique",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.8%",
+                "30.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731213"
+          },
+          {
+            "game_id": "731203",
+            "date": "Sat, 2 Aug",
+            "home_team": "Deportes Iquique",
+            "away_team": "Universidad Católica",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.6%",
+                "51.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731203"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "731272",
+            "date": "Sun, 9 Nov",
+            "home_team": "Cobresal",
+            "away_team": "Everton CD",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "79.8%",
+                "20.2%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "7"
+              ],
+              "Shot Attempts": [
+                "29",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731272"
+          },
+          {
+            "game_id": "731264",
+            "date": "Fri, 31 Oct",
+            "home_team": "Audax Italiano",
+            "away_team": "Cobresal",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731264"
+          },
+          {
+            "game_id": "731256",
+            "date": "Sun, 26 Oct",
+            "home_team": "Cobresal",
+            "away_team": "Unión Española",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.3%",
+                "49.7%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "8"
+              ],
+              "Shot Attempts": [
+                "18",
+                "21"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "6",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731256"
+          },
+          {
+            "game_id": "731251",
+            "date": "Sat, 18 Oct",
+            "home_team": "Deportes Limache",
+            "away_team": "Cobresal",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55%",
+                "45%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "21",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731251"
+          },
+          {
+            "game_id": "731240",
+            "date": "Sat, 13 Sep",
+            "home_team": "Cobresal",
+            "away_team": "Huachipato",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.2%",
+                "51.8%"
+              ],
+              "Shots on Goal": [
+                "12",
+                "11"
+              ],
+              "Shot Attempts": [
+                "22",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "6"
+              ],
+              "Saves": [
+                "9",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731240"
+          },
+          {
+            "game_id": "731185",
+            "date": "Sun, 7 Sep",
+            "home_team": "Cobresal",
+            "away_team": "Palestino",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.7%",
+                "60.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "23",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731185"
+          },
+          {
+            "game_id": "731233",
+            "date": "Sat, 30 Aug",
+            "home_team": "Universidad Católica",
+            "away_team": "Cobresal",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.4%",
+                "32.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "14"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731233"
+          },
+          {
+            "game_id": "731225",
+            "date": "Sat, 23 Aug",
+            "home_team": "Cobresal",
+            "away_team": "Unión La Calera",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.2%",
+                "37.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731225"
+          },
+          {
+            "game_id": "731220",
+            "date": "Sat, 16 Aug",
+            "home_team": "O'Higgins",
+            "away_team": "Cobresal",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.3%",
+                "42.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "11"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731220"
+          },
+          {
+            "game_id": "731208",
+            "date": "Sun, 10 Aug",
+            "home_team": "Cobresal",
+            "away_team": "Coquimbo Unido",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.9%",
+                "31.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "7"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/731208"
+          }
+        ],
+        "classement": {
+          "Deportes Iquique": {
+            "position": 16,
+            "points": 18
+          },
+          "Cobresal": {
+            "position": 6,
+            "points": 44
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Coquimbo Unido",
+            "points": 68
+          },
+          {
+            "position": 2,
+            "team": "Universidad Católica",
+            "points": 51
+          },
+          {
+            "position": 3,
+            "team": "O'Higgins",
+            "points": 50
+          },
+          {
+            "position": 4,
+            "team": "Universidad de Chile",
+            "points": 48
+          },
+          {
+            "position": 5,
+            "team": "Palestino",
+            "points": 45
+          },
+          {
+            "position": 6,
+            "team": "Cobresal",
+            "points": 44
+          },
+          {
+            "position": 7,
+            "team": "Audax Italiano",
+            "points": 43
+          },
+          {
+            "position": 8,
+            "team": "Colo Colo",
+            "points": 41
+          },
+          {
+            "position": 9,
+            "team": "Huachipato",
+            "points": 38
+          },
+          {
+            "position": 10,
+            "team": "Ñublense",
+            "points": 30
+          },
+          {
+            "position": 11,
+            "team": "Unión La Calera",
+            "points": 29
+          },
+          {
+            "position": 12,
+            "team": "La Serena",
+            "points": 27
+          },
+          {
+            "position": 13,
+            "team": "Everton CD",
+            "points": 26
+          },
+          {
+            "position": 14,
+            "team": "Deportes Limache",
+            "points": 22
+          },
+          {
+            "position": 15,
+            "team": "Unión Española",
+            "points": 21
+          },
+          {
+            "position": 16,
+            "team": "Deportes Iquique",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "696751",
+            "date": "Friday, March 15, 2024",
+            "team1": "Deportes Iquique",
+            "score": "1 - 0",
+            "team2": "Cobresal",
+            "title": "Deportes Iquique VS Cobresal",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/696751/cobresal-deportes-iquique",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "51.1%",
+                "48.9%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "3"
+              ],
+              "Shot Attempts": [
+                "27",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "9"
+              ]
+            }
+          },
+          {
+            "gameId": "696872",
+            "date": "Sunday, August 18, 2024",
+            "team1": "Cobresal",
+            "score": "2 - 1",
+            "team2": "Deportes Iquique",
+            "title": "Cobresal VS Deportes Iquique",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/696872/deportes-iquique-cobresal",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "40.1%",
+                "59.9%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "4"
+              ],
+              "Shot Attempts": [
+                "20",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "12"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "731160",
+            "date": "Monday, June 2, 2025",
+            "team1": "Cobresal",
+            "score": "2 - 1",
+            "team2": "Deportes Iquique",
+            "title": "Cobresal VS Deportes Iquique",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/731160/deportes-iquique-cobresal",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "49.5%",
+                "50.5%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "7"
+              ],
+              "Shot Attempts": [
+                "21",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "6",
+                "6"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/2319.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2331.png",
+        "classement_home": 16,
+        "classement_away": 6,
+        "points_classement_home": 18,
+        "points_classement_away": 44,
+        "nom_classement_home": "Deportes Iquique",
+        "nom_classement_away": "Cobresal",
+        "country_fr": "Chile - Primera División",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.427,
+            "lambda_away": 1.282,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.42,
+            "X": 25.9,
+            "V2": 33.67
+          },
+          "double_chance": {
+            "1X": 66.32,
+            "12": 74.1,
+            "X2": 59.58
+          },
+          "over_under": {
+            "plus_de_0.5": 93.36,
+            "moins_de_0.5": 6.64,
+            "plus_de_1.5": 75.67,
+            "moins_de_1.5": 24.34,
+            "plus_de_2.5": 50.77,
+            "moins_de_2.5": 49.24,
+            "plus_de_3.5": 28.58,
+            "moins_de_3.5": 71.41,
+            "plus_de_4.5": 13.65,
+            "moins_de_4.5": 86.35,
+            "plus_de_5.5": 5.58,
+            "moins_de_5.5": 94.42
+          },
+          "btts": {
+            "oui": 55.3,
+            "non": 44.7
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.42,
+            "1Xet+0.5": 59.69,
+            "V2et+0.5": 33.67,
+            "X2et+0.5": 52.94,
+            "12et+0.5": 74.1,
+            "V1et+1.5": 31.26,
+            "1Xet+1.5": 50.54,
+            "V2et+1.5": 25.13,
+            "X2et+1.5": 44.4,
+            "12et+1.5": 56.4,
+            "V1et+2.5": 24.34,
+            "1Xet+2.5": 31.07,
+            "V2et+2.5": 19.7,
+            "X2et+2.5": 26.42,
+            "12et+2.5": 44.04,
+            "V1et+3.5": 12.32,
+            "1Xet+3.5": 19.05,
+            "V2et+3.5": 9.54,
+            "X2et+3.5": 16.26,
+            "12et+3.5": 21.86,
+            "V1et+4.5": 6.96,
+            "1Xet+4.5": 8.34,
+            "V2et+4.5": 5.31,
+            "X2et+4.5": 6.69,
+            "12et+4.5": 12.27,
+            "V1et+5.5": 2.34,
+            "1Xet+5.5": 3.72,
+            "V2et+5.5": 1.86,
+            "X2et+5.5": 3.24,
+            "12et+5.5": 4.2
+          },
+          "scores_probables": {
+            "1-1": 12.54,
+            "1-0": 9.16,
+            "2-1": 8.89,
+            "0-1": 8.54,
+            "1-2": 7.72,
+            "2-0": 6.92,
+            "0-0": 6.64,
+            "0-2": 5.44,
+            "2-2": 5.34,
+            "3-1": 4.35
+          },
+          "buts_moyens_simules": {
+            "home": 1.42,
+            "away": 1.28,
+            "total": 2.71
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Cobresal)  \n**CONFIANCE** : 58 %  \n**SCORES PROBABLES** : 0‑1 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Défense** : Iquique concède en moyenne **2,00 buts** à domicile (10 buts en 5 matchs) ; Cobresal n’en encaisse que **1,30 buts** en moyenne, soit **0,65 buts** de moins à l’extérieur.  \n- **Attaque** : Les deux équipes affichent une moyenne identique de **1,20 buts** marqués, mais Iquique le fait surtout à domicile (7 buts en 5 matchs) tandis que Cobresal peine à marquer à l’extérieur (3 buts en 4 matchs).  \n- **Possession & création** : Iquique domine souvent la possession (>60 % dans 5 de ses 6 derniers matchs à domicile) mais convertit mal ses occasions (ex. 4 tirs cadrés contre 7 contre La Calera). Cobresal, même en déplacement, montre parfois une possession très élevée (79 % contre Everton) mais ses tirs cadrés restent modestes (environ 5‑7 par match).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Iquique a une **série à domicile** très irrégulière (L‑L‑W‑L‑D) et a encaissé **10 buts** à domicile sur les 5 derniers matchs.  \n- Cobresal, malgré une **série à l’extérieur** (W‑L‑L‑L) légèrement négative, a perdu seulement 2 des 6 derniers matchs à l’extérieur et garde une défense solide (6 buts encaissés en 4 matchs).  \n\n**3. Forme récente**  \n- **Iquique** (6 derniers) : 2 V, 1 N, 3 D → 7 points, mais 4 défaites dans les 10 derniers.  \n- **Cobresal** (6 derniers) : 4 V, 2 D → 12 points, dont 3 victoires consécutives (W‑W‑W).  \n\n**4. Contexte du championnat**  \n- Iquique est **16ᵉ** avec 18 points, loin de la zone de relégation mais loin des places de qualification.  \n- Cobresal est **6ᵉ** avec 44 points, en lutte pour les places continentales. La motivation de Cobresal à gagner à l’extérieur est donc plus forte.  \n\n**5. Confrontations directes** (3 dernières rencontres)  \n- 1‑0 Iquique (2024) – **victoire Iquique**  \n- 2‑1 Cobresal (2024) – **victoire Cobresal**  \n- 2‑1 Cobresal (2025) – **victoire Cobresal**  \nSur les 3 derniers duels, **Cobresal a gagné 2 fois** et les matchs ont été très serrés (4‑4 au total).  \n\n**6. Analyse des matchs détaillés**  \n- **Iquique** : même lorsqu’il possède la balle (>60 %), il ne crée que 4‑5 tirs cadrés en moyenne et concède souvent sur des contre‑attaques (ex. 2‑3 contre O’Higgins).  \n- **Cobresal** : à l’extérieur, il ne marque que **0‑1 but** dans 3 des 4 derniers matchs (ex. 1‑2 contre Everton, 1‑0 contre Unión La Calera). Ses tirs cadrés restent autour de 5‑7, ce qui indique une capacité à garder le score bas.  \n\n**7. Cotes**  \n- Victoire Cobresal : 3,15 (value raisonnable compte tenu de la forme supérieure).  \n- Total > 2,5 buts : 1,65 (relativement attractif) mais les deux équipes affichent une moyenne combinée de **≈2,0 buts** par match (Iquique 1,2 + Cobresal 0,75 à l’extérieur).  \n\n**8. Synthèse**  \n- La **défense de Cobresal** est la plus fiable des deux et il a montré qu’il pouvait gagner à l’extérieur avec un seul but.  \n- Iquique, malgré son avantage de terrain, concède trop et peine à transformer la possession en buts.  \n- Les confrontations récentes sont très équilibrées mais penchent légèrement en faveur de Cobresal (2‑1, 2‑1).  \n\n**Conclusion** : Le scénario le plus probable est une victoire serrée de Cobresal, avec un seul but marqué, soit en faveur de l’équipe visiteuse (0‑1) ou à l’avantage de l’équipe visiteuse mais avec réponse de Iquique (1‑0). Le nombre total de buts devrait rester **inférieur à 2,5**, ce qui renforce la confiance dans la prédiction de victoire extérieure.",
+        "confiance_pourcentage": 58,
+        "prediction_principale": "Victoire extérieur (Cobresal)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 1‑0"
+      }
+    ]
+  }
+}
