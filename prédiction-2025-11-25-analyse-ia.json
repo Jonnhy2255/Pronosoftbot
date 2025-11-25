@@ -1,0 +1,3291 @@
+{
+  "metadata": {
+    "date_generation": "2025-11-25 02:45:13",
+    "date_matchs": "2025-11-25",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1451094,
+        "HomeTeam": "Manchester City",
+        "AwayTeam": "Bayer Leverkusen",
+        "date": "25 novembre 2025 à 20:00:00 UTC",
+        "league": "World - UEFA Champions League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bayer Leverkusen": 13.1,
+            "Manchester City": 1.26,
+            "Draw": 6.98
+          },
+          "totals": {
+            "Over": 1.96,
+            "Under": 1.99
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 2.1,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 22,
+          "total_points": 12,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 6,
+          "total_marques": 21,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 2.5,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 15,
+          "total_points_10": 22,
+          "total_points": 15,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 12,
+          "buts_ext_encaisses": 9,
+          "total_marques": 25,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740712",
+            "date": "Sat, Nov 22",
+            "home_team": "Newcastle United",
+            "away_team": "Manchester City",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33%",
+                "67%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740712"
+          },
+          {
+            "game_id": "740702",
+            "date": "Sun, Nov 9",
+            "home_team": "Manchester City",
+            "away_team": "Liverpool",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.5%",
+                "51.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740702"
+          },
+          {
+            "game_id": "757718",
+            "date": "Wed, Nov 5",
+            "home_team": "Manchester City",
+            "away_team": "Borussia Dortmund",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.9%",
+                "50.1%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757718"
+          },
+          {
+            "game_id": "740691",
+            "date": "Sun, Nov 2",
+            "home_team": "Manchester City",
+            "away_team": "AFC Bournemouth",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740691"
+          },
+          {
+            "game_id": "759243",
+            "date": "Wed, Oct 29",
+            "home_team": "Swansea City",
+            "away_team": "Manchester City",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759243"
+          },
+          {
+            "game_id": "740677",
+            "date": "Sun, Oct 26",
+            "home_team": "Aston Villa",
+            "away_team": "Manchester City",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47%",
+                "53%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740677"
+          },
+          {
+            "game_id": "757694",
+            "date": "Tue, Oct 21",
+            "home_team": "Villarreal",
+            "away_team": "Manchester City",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.1%",
+                "65.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "11",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757694"
+          },
+          {
+            "game_id": "740671",
+            "date": "Sat, Oct 18",
+            "home_team": "Manchester City",
+            "away_team": "Everton",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.1%",
+                "28.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "5"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "11",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740671"
+          },
+          {
+            "game_id": "740659",
+            "date": "Sun, Oct 5",
+            "home_team": "Brentford",
+            "away_team": "Manchester City",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30%",
+                "70%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "6",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740659"
+          },
+          {
+            "game_id": "757686",
+            "date": "Wed, Oct 1",
+            "home_team": "AS Monaco",
+            "away_team": "Manchester City",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "28.7%",
+                "71.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757686"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "746810",
+            "date": "Sat, Nov 22",
+            "home_team": "VfL Wolfsburg",
+            "away_team": "Bayer Leverkusen",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.6%",
+                "62.4%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "3"
+              ],
+              "Shot Attempts": [
+                "21",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746810"
+          },
+          {
+            "game_id": "746799",
+            "date": "Sat, Nov 8",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "1. FC Heidenheim 1846",
+            "score": "6 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74%",
+                "26%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "0"
+              ],
+              "Shot Attempts": [
+                "25",
+                "1"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746799"
+          },
+          {
+            "game_id": "757720",
+            "date": "Wed, Nov 5",
+            "home_team": "Benfica",
+            "away_team": "Bayer Leverkusen",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.4%",
+                "46.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "21",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757720"
+          },
+          {
+            "game_id": "746792",
+            "date": "Sat, Nov 1",
+            "home_team": "Bayern Munich",
+            "away_team": "Bayer Leverkusen",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "10",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746792"
+          },
+          {
+            "game_id": "758130",
+            "date": "Wed, Oct 29",
+            "home_team": "SC Paderborn 07",
+            "away_team": "Bayer Leverkusen",
+            "score": "2 - 4",
+            "status": "AET",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758130"
+          },
+          {
+            "game_id": "746786",
+            "date": "Sun, Oct 26",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "SC Freiburg",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.3%",
+                "30.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746786"
+          },
+          {
+            "game_id": "757693",
+            "date": "Tue, Oct 21",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "Paris Saint-Germain",
+            "score": "2 - 7",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "29.1%",
+                "70.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "8"
+              ],
+              "Shot Attempts": [
+                "6",
+                "24"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757693"
+          },
+          {
+            "game_id": "746778",
+            "date": "Sat, Oct 18",
+            "home_team": "Mainz",
+            "away_team": "Bayer Leverkusen",
+            "score": "3 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.1%",
+                "57.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "8"
+              ],
+              "Shot Attempts": [
+                "12",
+                "20"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746778"
+          },
+          {
+            "game_id": "746766",
+            "date": "Sat, Oct 4",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "1. FC Union Berlin",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.8%",
+                "26.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "20",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746766"
+          },
+          {
+            "game_id": "757684",
+            "date": "Wed, Oct 1",
+            "home_team": "Bayer Leverkusen",
+            "away_team": "PSV Eindhoven",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.4%",
+                "53.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "6"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757684"
+          }
+        ],
+        "classement": {
+          "Manchester City": {
+            "position": 4,
+            "points": 10
+          },
+          "Bayer Leverkusen": {
+            "position": 21,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bayern Munich",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Arsenal",
+            "points": 12
+          },
+          {
+            "position": 3,
+            "team": "Internazionale",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "Manchester City",
+            "points": 10
+          },
+          {
+            "position": 5,
+            "team": "Paris Saint-Germain",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Newcastle United",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Real Madrid",
+            "points": 9
+          },
+          {
+            "position": 8,
+            "team": "Liverpool",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Galatasaray",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Tottenham Hotspur",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Barcelona",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Chelsea",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Sporting CP",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Borussia Dortmund",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "FK Qarabag",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Atalanta",
+            "points": 7
+          },
+          {
+            "position": 17,
+            "team": "Atlético Madrid",
+            "points": 6
+          },
+          {
+            "position": 18,
+            "team": "PSV Eindhoven",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "AS Monaco",
+            "points": 5
+          },
+          {
+            "position": 20,
+            "team": "Pafos",
+            "points": 5
+          },
+          {
+            "position": 21,
+            "team": "Bayer Leverkusen",
+            "points": 5
+          },
+          {
+            "position": 22,
+            "team": "Club Brugge",
+            "points": 4
+          },
+          {
+            "position": 23,
+            "team": "Eintracht Frankfurt",
+            "points": 4
+          },
+          {
+            "position": 24,
+            "team": "Napoli",
+            "points": 4
+          },
+          {
+            "position": 25,
+            "team": "Marseille",
+            "points": 3
+          },
+          {
+            "position": 26,
+            "team": "Juventus",
+            "points": 3
+          },
+          {
+            "position": 27,
+            "team": "Athletic Club",
+            "points": 3
+          },
+          {
+            "position": 28,
+            "team": "Union St.-Gilloise",
+            "points": 3
+          },
+          {
+            "position": 29,
+            "team": "Bodo/Glimt",
+            "points": 2
+          },
+          {
+            "position": 30,
+            "team": "Slavia Prague",
+            "points": 2
+          },
+          {
+            "position": 31,
+            "team": "Olympiacos",
+            "points": 2
+          },
+          {
+            "position": 32,
+            "team": "Villarreal",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "F.C. København",
+            "points": 1
+          },
+          {
+            "position": 34,
+            "team": "Kairat Almaty",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Benfica",
+            "points": 0
+          },
+          {
+            "position": 36,
+            "team": "Ajax Amsterdam",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/50.png",
+        "logo_away": "https://media.api-sports.io/football/teams/168.png",
+        "classement_home": 4,
+        "classement_away": 21,
+        "points_classement_home": 10,
+        "points_classement_away": 5,
+        "nom_classement_home": "Manchester City",
+        "nom_classement_away": "Bayer Leverkusen",
+        "country_fr": "World - UEFA Champions League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.71,
+            "lambda_away": 1.415,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 44.74,
+            "X": 23.37,
+            "V2": 31.9
+          },
+          "double_chance": {
+            "1X": 68.1,
+            "12": 76.63,
+            "X2": 55.26
+          },
+          "over_under": {
+            "plus_de_0.5": 95.49,
+            "moins_de_0.5": 4.5,
+            "plus_de_1.5": 81.87,
+            "moins_de_1.5": 18.13,
+            "plus_de_2.5": 60.68,
+            "moins_de_2.5": 39.32,
+            "plus_de_3.5": 38.34,
+            "moins_de_3.5": 61.67,
+            "plus_de_4.5": 21.26,
+            "moins_de_4.5": 78.74,
+            "plus_de_5.5": 10.2,
+            "moins_de_5.5": 89.8
+          },
+          "btts": {
+            "oui": 62.07,
+            "non": 37.94
+          },
+          "resultat_total": {
+            "V1et+0.5": 44.74,
+            "1Xet+0.5": 63.6,
+            "V2et+0.5": 31.9,
+            "X2et+0.5": 50.76,
+            "12et+0.5": 76.63,
+            "V1et+1.5": 37.22,
+            "1Xet+1.5": 56.09,
+            "V2et+1.5": 25.78,
+            "X2et+1.5": 44.64,
+            "12et+1.5": 63.0,
+            "V1et+2.5": 30.64,
+            "1Xet+2.5": 39.18,
+            "V2et+2.5": 21.5,
+            "X2et+2.5": 30.04,
+            "12et+2.5": 52.14,
+            "V1et+3.5": 17.9,
+            "1Xet+3.5": 26.45,
+            "V2et+3.5": 11.88,
+            "X2et+3.5": 20.43,
+            "12et+3.5": 29.79,
+            "V1et+4.5": 11.46,
+            "1Xet+4.5": 13.6,
+            "V2et+4.5": 7.66,
+            "X2et+4.5": 9.8,
+            "12et+4.5": 19.12,
+            "V1et+5.5": 5.1,
+            "1Xet+5.5": 7.24,
+            "V2et+5.5": 2.96,
+            "X2et+5.5": 5.1,
+            "12et+5.5": 8.06
+          },
+          "scores_probables": {
+            "1-1": 10.32,
+            "2-1": 9.05,
+            "1-2": 7.61,
+            "1-0": 7.51,
+            "2-0": 6.59,
+            "2-2": 6.4,
+            "0-1": 6.12,
+            "3-1": 4.96,
+            "0-0": 4.5,
+            "0-2": 4.28
+          },
+          "buts_moyens_simules": {
+            "home": 1.73,
+            "away": 1.42,
+            "total": 3.14
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Manchester City)  \n**CONFIANCE** : 80 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Manchester City (domicile)** : moyenne de **2,10 buts marqués** et **0,80 buts encaissés**. En 5 matchs à domicile, ils n’ont encaissé que **2 buts** tout en marquant **12**. Leur défense est l’une des plus solides du tournoi (seulement 2 buts encaissés à domicile).  \n- **Bayer Leverkusen (extérieur)** : moyenne de **2,50 buts marqués** mais **1,70 buts encaissés** à l’extérieur. En 5 matchs à l’extérieur, ils ont concédé **9 buts** (≈ 1,8 par match) tout en marquant **12**. Leur défense à l’extérieur est nettement plus perméable que celle de City.\n\n**2. Impact du facteur domicile/extérieur**  \n- City bénéficie d’une série à domicile de **W‑W‑W‑W** et d’un record de **12‑2** (buts marqués‑encaissés).  \n- Leverkusen a une série à l’extérieur de **W‑W‑L‑W‑W** mais a déjà concédé 9 buts en 5 déplacements, ce qui montre une vulnérabilité face à une défense compacte comme celle de City.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **City** : sur les 6 derniers matchs, 4 victoires, 1 défaite, 1 nul. Dans les 5 derniers matchs à domicile, ils ont dominé la possession (souvent > 55 %) et généré de nombreux tirs cadrés (ex. 11 SOG contre Dortmund). Leur capacité à convertir les occasions est confirmée par des scores de 3‑0, 4‑1, 3‑1.  \n- **Leverkusen** : sur les 6 derniers matchs, 5 victoires, 1 défaite. Les victoires à l’extérieur (ex. 3‑1 contre Wolfsburg, 6‑0 contre Heidenheim) sont souvent le résultat d’une supériorité de possession (≈ 60‑70 %) et d’un grand nombre de tirs (≥ 20 tentatives). Cependant, contre des équipes fortes (ex. 0‑3 à Munich, 2‑7 contre PSG) ils ont montré des failles défensives importantes.\n\n**4. Contexte du championnat**  \n- City occupe la **4ᵉ place** avec 10 points, à deux points du 2ᵉ. Ils sont en lice pour la qualification directe et ont besoin de consolider leurs performances à domicile.  \n- Leverkusen est **21ᵉ** avec 5 points, loin de la zone de relégation mais sans pression de qualification. Leur motivation est donc moindre que celle de City, qui joue pour les places européennes.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc aucune donnée historique à prendre en compte.\n\n**6. Évaluation des cotes**  \n- La cote de **1,26** pour la victoire de City indique une forte confiance du marché. La cote très élevée de **13,1** pour Leverkusen reflète la perception d’un déséquilibre.\n\n**7. Analyse des totaux**  \n- Les deux équipes combinent une moyenne de **4,60 buts** par match (2,10 + 2,50). Toutefois, la solidité défensive de City à domicile (0,80 GA) tend à réduire le nombre de buts réels. Le total de **2,5 buts** est donc légèrement en faveur du **« Moins de 2,5 »** (cote 1,99 vs 1,96), ce qui corrobore l’idée d’un score serré (1‑0 ou 2‑0).\n\n**8. Synthèse**  \n- La combinaison d’une défense à domicile quasi‑imperméable, d’une série de victoires à domicile et d’une motivation élevée fait de Manchester City le favori le plus fiable.  \n- Leverkusen, malgré son potentiel offensif, a du mal à marquer contre des défenses compactes et a concédé en moyenne presque 2 buts à l’extérieur, ce qui rend improbable un score élevé.\n\n**Conclusion** : La prédiction la plus sûre est **victoire de Manchester City à domicile**, très probablement avec un score **1‑0** ou **2‑0**, d’où une confiance de **80 %**.",
+        "confiance_pourcentage": 80,
+        "prediction_principale": "Victoire domicile (Manchester City)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1451096,
+        "HomeTeam": "Chelsea",
+        "AwayTeam": "Barcelona",
+        "date": "25 novembre 2025 à 20:00:00 UTC",
+        "league": "World - UEFA Champions League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Barcelona": 2.81,
+            "Chelsea": 2.4,
+            "Draw": 4.1
+          },
+          "totals": {
+            "Over": 2.04,
+            "Under": 1.91
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 2.4,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 25,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 12,
+          "buts_ext_encaisses": 5,
+          "total_marques": 24,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 2.7,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 19,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 18,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 11,
+          "total_marques": 27,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740707",
+            "date": "Sat, Nov 22",
+            "home_team": "Burnley",
+            "away_team": "Chelsea",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.2%",
+                "55.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "15"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740707"
+          },
+          {
+            "game_id": "740699",
+            "date": "Sat, Nov 8",
+            "home_team": "Chelsea",
+            "away_team": "Wolverhampton Wanderers",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.1%",
+                "35.9%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "0"
+              ],
+              "Shot Attempts": [
+                "20",
+                "3"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740699"
+          },
+          {
+            "game_id": "757716",
+            "date": "Wed, Nov 5",
+            "home_team": "FK Qarabag",
+            "away_team": "Chelsea",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.6%",
+                "61.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "8"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757716"
+          },
+          {
+            "game_id": "740690",
+            "date": "Sat, Nov 1",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "Chelsea",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.9%",
+                "52.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "9"
+              ],
+              "Shot Attempts": [
+                "3",
+                "15"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "8",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740690"
+          },
+          {
+            "game_id": "759244",
+            "date": "Wed, Oct 29",
+            "home_team": "Wolverhampton Wanderers",
+            "away_team": "Chelsea",
+            "score": "3 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759244"
+          },
+          {
+            "game_id": "740685",
+            "date": "Sat, Oct 25",
+            "home_team": "Chelsea",
+            "away_team": "Sunderland",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68.4%",
+                "31.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740685"
+          },
+          {
+            "game_id": "757701",
+            "date": "Wed, Oct 22",
+            "home_team": "Chelsea",
+            "away_team": "Ajax Amsterdam",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.6%",
+                "34.4%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "22",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "11",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757701"
+          },
+          {
+            "game_id": "740672",
+            "date": "Sat, Oct 18",
+            "home_team": "Nottingham Forest",
+            "away_team": "Chelsea",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.7%",
+                "50.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "17"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740672"
+          },
+          {
+            "game_id": "740660",
+            "date": "Sat, Oct 4",
+            "home_team": "Chelsea",
+            "away_team": "Liverpool",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.2%",
+                "46.8%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740660"
+          },
+          {
+            "game_id": "757675",
+            "date": "Tue, Sep 30",
+            "home_team": "Chelsea",
+            "away_team": "Benfica",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757675"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748272",
+            "date": "Sat, Nov 22",
+            "home_team": "Barcelona",
+            "away_team": "Athletic Club",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.6%",
+                "32.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748272"
+          },
+          {
+            "game_id": "748260",
+            "date": "Sun, Nov 9",
+            "home_team": "Celta Vigo",
+            "away_team": "Barcelona",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.6%",
+                "61.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "9"
+              ],
+              "Shot Attempts": [
+                "5",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748260"
+          },
+          {
+            "game_id": "757723",
+            "date": "Wed, Nov 5",
+            "home_team": "Club Brugge",
+            "away_team": "Barcelona",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "23.7%",
+                "76.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "23"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "0",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757723"
+          },
+          {
+            "game_id": "748247",
+            "date": "Sun, Nov 2",
+            "home_team": "Barcelona",
+            "away_team": "Elche",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49%",
+                "51%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748247"
+          },
+          {
+            "game_id": "748236",
+            "date": "Sun, Oct 26",
+            "home_team": "Real Madrid",
+            "away_team": "Barcelona",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.6%",
+                "68.4%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "6"
+              ],
+              "Shot Attempts": [
+                "23",
+                "15"
+              ],
+              "Yellow Cards": [
+                "5",
+                "3"
+              ],
+              "Corner Kicks": [
+                "12",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748236"
+          },
+          {
+            "game_id": "757690",
+            "date": "Tue, Oct 21",
+            "home_team": "Barcelona",
+            "away_team": "Olympiacos",
+            "score": "6 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.5%",
+                "27.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "14",
+                "5"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757690"
+          },
+          {
+            "game_id": "748228",
+            "date": "Sat, Oct 18",
+            "home_team": "Barcelona",
+            "away_team": "Girona",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68%",
+                "32%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "4"
+              ],
+              "Shot Attempts": [
+                "27",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "11",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748228"
+          },
+          {
+            "game_id": "748215",
+            "date": "Sun, Oct 5",
+            "home_team": "Sevilla",
+            "away_team": "Barcelona",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39%",
+                "61%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "13",
+                "17"
+              ],
+              "Yellow Cards": [
+                "7",
+                "5"
+              ],
+              "Corner Kicks": [
+                "7",
+                "6"
+              ],
+              "Saves": [
+                "7",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748215"
+          },
+          {
+            "game_id": "757687",
+            "date": "Wed, Oct 1",
+            "home_team": "Barcelona",
+            "away_team": "Paris Saint-Germain",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.9%",
+                "53.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "16"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "9"
+              ],
+              "Saves": [
+                "5",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757687"
+          },
+          {
+            "game_id": "748208",
+            "date": "Sun, Sep 28",
+            "home_team": "Barcelona",
+            "away_team": "Real Sociedad",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74.5%",
+                "25.5%"
+              ],
+              "Shots on Goal": [
+                "12",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "12",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748208"
+          }
+        ],
+        "classement": {
+          "Chelsea": {
+            "position": 12,
+            "points": 7
+          },
+          "Barcelona": {
+            "position": 11,
+            "points": 7
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bayern Munich",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Arsenal",
+            "points": 12
+          },
+          {
+            "position": 3,
+            "team": "Internazionale",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "Manchester City",
+            "points": 10
+          },
+          {
+            "position": 5,
+            "team": "Paris Saint-Germain",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Newcastle United",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Real Madrid",
+            "points": 9
+          },
+          {
+            "position": 8,
+            "team": "Liverpool",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Galatasaray",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Tottenham Hotspur",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Barcelona",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Chelsea",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Sporting CP",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Borussia Dortmund",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "FK Qarabag",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Atalanta",
+            "points": 7
+          },
+          {
+            "position": 17,
+            "team": "Atlético Madrid",
+            "points": 6
+          },
+          {
+            "position": 18,
+            "team": "PSV Eindhoven",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "AS Monaco",
+            "points": 5
+          },
+          {
+            "position": 20,
+            "team": "Pafos",
+            "points": 5
+          },
+          {
+            "position": 21,
+            "team": "Bayer Leverkusen",
+            "points": 5
+          },
+          {
+            "position": 22,
+            "team": "Club Brugge",
+            "points": 4
+          },
+          {
+            "position": 23,
+            "team": "Eintracht Frankfurt",
+            "points": 4
+          },
+          {
+            "position": 24,
+            "team": "Napoli",
+            "points": 4
+          },
+          {
+            "position": 25,
+            "team": "Marseille",
+            "points": 3
+          },
+          {
+            "position": 26,
+            "team": "Juventus",
+            "points": 3
+          },
+          {
+            "position": 27,
+            "team": "Athletic Club",
+            "points": 3
+          },
+          {
+            "position": 28,
+            "team": "Union St.-Gilloise",
+            "points": 3
+          },
+          {
+            "position": 29,
+            "team": "Bodo/Glimt",
+            "points": 2
+          },
+          {
+            "position": 30,
+            "team": "Slavia Prague",
+            "points": 2
+          },
+          {
+            "position": 31,
+            "team": "Olympiacos",
+            "points": 2
+          },
+          {
+            "position": 32,
+            "team": "Villarreal",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "F.C. København",
+            "points": 1
+          },
+          {
+            "position": 34,
+            "team": "Kairat Almaty",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Benfica",
+            "points": 0
+          },
+          {
+            "position": 36,
+            "team": "Ajax Amsterdam",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/49.png",
+        "logo_away": "https://media.api-sports.io/football/teams/529.png",
+        "classement_home": 12,
+        "classement_away": 11,
+        "points_classement_home": 7,
+        "points_classement_away": 7,
+        "nom_classement_home": "Chelsea",
+        "nom_classement_away": "Barcelona",
+        "country_fr": "World - UEFA Champions League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.785,
+            "lambda_away": 1.49,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 45.51,
+            "X": 22.64,
+            "V2": 31.85
+          },
+          "double_chance": {
+            "1X": 68.16,
+            "12": 77.35,
+            "X2": 54.49
+          },
+          "over_under": {
+            "plus_de_0.5": 96.48,
+            "moins_de_0.5": 3.52,
+            "plus_de_1.5": 84.12,
+            "moins_de_1.5": 15.88,
+            "plus_de_2.5": 63.29,
+            "moins_de_2.5": 36.71,
+            "plus_de_3.5": 40.68,
+            "moins_de_3.5": 59.32,
+            "plus_de_4.5": 22.78,
+            "moins_de_4.5": 77.22,
+            "plus_de_5.5": 11.27,
+            "moins_de_5.5": 88.73
+          },
+          "btts": {
+            "oui": 64.13,
+            "non": 35.86
+          },
+          "resultat_total": {
+            "V1et+0.5": 45.51,
+            "1Xet+0.5": 64.64,
+            "V2et+0.5": 31.85,
+            "X2et+0.5": 50.98,
+            "12et+0.5": 77.35,
+            "V1et+1.5": 38.56,
+            "1Xet+1.5": 57.69,
+            "V2et+1.5": 26.44,
+            "X2et+1.5": 45.56,
+            "12et+1.5": 65.0,
+            "V1et+2.5": 32.32,
+            "1Xet+2.5": 41.2,
+            "V2et+2.5": 22.09,
+            "X2et+2.5": 30.97,
+            "12et+2.5": 54.41,
+            "V1et+3.5": 19.28,
+            "1Xet+3.5": 28.16,
+            "V2et+3.5": 12.53,
+            "X2et+3.5": 21.41,
+            "12et+3.5": 31.8,
+            "V1et+4.5": 12.42,
+            "1Xet+4.5": 14.6,
+            "V2et+4.5": 8.18,
+            "X2et+4.5": 10.37,
+            "12et+4.5": 20.6,
+            "V1et+5.5": 5.6,
+            "1Xet+5.5": 7.79,
+            "V2et+5.5": 3.48,
+            "X2et+5.5": 5.67,
+            "12et+5.5": 9.08
+          },
+          "scores_probables": {
+            "1-1": 10.25,
+            "2-1": 9.27,
+            "1-2": 7.52,
+            "1-0": 6.95,
+            "2-2": 6.69,
+            "2-0": 6.24,
+            "0-1": 5.41,
+            "3-1": 5.14,
+            "0-2": 4.35,
+            "3-2": 3.86
+          },
+          "buts_moyens_simules": {
+            "home": 1.79,
+            "away": 1.47,
+            "total": 3.26
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE :** Plus de 2.5 buts  \n**CONFIANCE :** 78 %  \n**SCORES PROBABLES :** 3‑2 ou 2‑3  \n\n**JUSTIFICATION :**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Chelsea (domicile)** : très solide devant les buts (2,40 moy. marqués) et quasi‑imperméable à l’extérieur (0,90 moy. encaissés). En 10 matchs à domicile, 12 buts marqués contre seulement 4 encaissés → ratio = 3 : 1.  \n- **Barcelona (extérieur)** : l’une des meilleures équipes offensives du groupe (2,70 moy. marqués) mais défense plus perméable (1,70 moy. encaissés). En 10 matchs à l’extérieur, 9 buts marqués contre 11 encaissés → ratio = 0,8 : 1.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Chelsea bénéficie d’un avantage maison confirmé par une série à domicile de 4 victoires sur 5 (W‑L‑W‑W‑W).  \n- Barcelona montre une capacité à marquer même loin de chez elle (4‑0 à Athletic, 4‑2 à Celta, 3‑3 à Brugge).  \n\n**3. Forme récente & tendances (statistiques détaillées)**  \n- **Chelsea** : 5 victoires et 1 défaite sur les 6 derniers matchs, dont 4 victoires à domicile. Leurs matchs à domicile récents affichent une domination en possession (64 % contre Wolves) et un nombre élevé de tirs cadrés (8‑0 vs Wolves, 10‑1 vs Ajax). Même lorsqu’ils concèdent, ils gardent la pression (ex. 2‑2 à Qarabag, possession 38‑62 %).  \n- **Barcelona** : 4 victoires, 1 nul, 1 défaite sur les 6 derniers matchs, avec 3 victoires à l’extérieur. Leur attaque est très efficace hors du terrain (7 tirs cadrés contre Athletic, 9 contre Celta). Même les matchs où ils encaissent (3‑3 vs Brugge, 2‑4 vs Celta) restent très ouverts.  \n\n**4. Contexte du championnat**  \n- Les deux équipes occupent les mêmes points (7) et sont à la 11ᵉ/12ᵉ place, donc aucune pression de relégation ou de qualification qui pourrait inciter à un jeu ultra‑défensif. Elles chercheront à gagner pour grimper dans le tableau.  \n\n**5. Absence de confrontations directes**  \n- Aucun H2H disponible, donc on se base sur les performances internes et les tendances offensives.  \n\n**6. Évaluation des cotes**  \n- Over 2.5 = 2.04 (slightly favorisé) vs Under 2.5 = 1.91. La différence de 0,13 indique que le marché estime légèrement plus probable un total supérieur à 2,5 buts, ce qui concorde avec les moyennes combinées (2,40 + 2,70 ≈ 5,1 buts).  \n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Chelsea** : dans leurs 5 derniers matchs à domicile, ils ont totalisé 19 tirs cadrés contre seulement 3 concédés (ratio 6,3 : 1). Même lorsqu’ils sont dominés en possession (ex. 44 % vs Burnley), ils restent efficaces devant le but.  \n- **Barcelona** : leurs 5 derniers matchs à l’extérieur cumulent 31 tirs cadrés contre 12 encaissés (ratio 2,6 : 1). Ils créent de nombreuses occasions (ex. 19 tirs totaux vs Athletic) et convertissent régulièrement.  \n\n**8. Synthèse**  \n- Les deux équipes affichent des moyennes de buts très élevées et leurs récentes rencontres sont marquées par de nombreux tirs cadrés et peu de clean‑sheet.  \n- Même si Chelsea a une défense plus solide à domicile, Barcelona a prouvé qu’elle pouvait marquer 4 buts à l’extérieur.  \n- Le scénario le plus probable est donc un match avec **plus de 2,5 buts**, avec les deux équipes qui trouvent le filet.  \n\n**9. Scores les plus probables**  \n- **3‑2** (Chelsea légère avance, reflétant leur solidité à domicile et la capacité de Barcelona à répondre).  \n- **2‑3** (Barcelona l’emporte, tirant profit de son feu d’artifice offensif à l’extérieur).  \n\nCes deux scores respectent la prédiction principale « Plus de 2.5 buts » et illustrent la nature très ouverte de la rencontre.",
+        "confiance_pourcentage": null,
+        "prediction_principale": "** Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "** 3‑2 ou 2‑3"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1451098,
+        "HomeTeam": "Borussia Dortmund",
+        "AwayTeam": "Villarreal",
+        "date": "25 novembre 2025 à 20:00:00 UTC",
+        "league": "World - UEFA Champions League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Borussia Dortmund": 1.91,
+            "Villarreal": 4.17,
+            "Draw": 3.96
+          },
+          "totals": {
+            "Over": 1.74,
+            "Under": 2.27
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 16,
+          "total_points": 9,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 10,
+          "total_marques": 18,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 2.1,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 15,
+          "total_points_10": 17,
+          "total_points": 15,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 4,
+          "total_marques": 21,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "746815",
+            "date": "Sat, Nov 22",
+            "home_team": "Borussia Dortmund",
+            "away_team": "VfB Stuttgart",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.5%",
+                "54.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746815"
+          },
+          {
+            "game_id": "746807",
+            "date": "Sat, Nov 8",
+            "home_team": "Hamburg SV",
+            "away_team": "Borussia Dortmund",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.2%",
+                "54.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "9",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746807"
+          },
+          {
+            "game_id": "757718",
+            "date": "Wed, Nov 5",
+            "home_team": "Manchester City",
+            "away_team": "Borussia Dortmund",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.9%",
+                "50.1%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757718"
+          },
+          {
+            "game_id": "746791",
+            "date": "Fri, Oct 31",
+            "home_team": "FC Augsburg",
+            "away_team": "Borussia Dortmund",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.9%",
+                "53.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "1"
+              ],
+              "Shot Attempts": [
+                "9",
+                "5"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746791"
+          },
+          {
+            "game_id": "758131",
+            "date": "Tue, Oct 28",
+            "home_team": "Eintracht Frankfurt",
+            "away_team": "Borussia Dortmund",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/758131"
+          },
+          {
+            "game_id": "746787",
+            "date": "Sat, Oct 25",
+            "home_team": "Borussia Dortmund",
+            "away_team": "FC Cologne",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "70.4%",
+                "29.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "0"
+              ],
+              "Shot Attempts": [
+                "27",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "17",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746787"
+          },
+          {
+            "game_id": "757695",
+            "date": "Tue, Oct 21",
+            "home_team": "F.C. København",
+            "away_team": "Borussia Dortmund",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.7%",
+                "64.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757695"
+          },
+          {
+            "game_id": "746776",
+            "date": "Sat, Oct 18",
+            "home_team": "Bayern Munich",
+            "away_team": "Borussia Dortmund",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.8%",
+                "39.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746776"
+          },
+          {
+            "game_id": "746765",
+            "date": "Sat, Oct 4",
+            "home_team": "Borussia Dortmund",
+            "away_team": "RB Leipzig",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/746765"
+          },
+          {
+            "game_id": "757683",
+            "date": "Wed, Oct 1",
+            "home_team": "Borussia Dortmund",
+            "away_team": "Athletic Club",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.3%",
+                "47.7%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757683"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748271",
+            "date": "Sat, Nov 22",
+            "home_team": "Villarreal",
+            "away_team": "Mallorca",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.1%",
+                "41.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748271"
+          },
+          {
+            "game_id": "748263",
+            "date": "Sat, Nov 8",
+            "home_team": "Espanyol",
+            "away_team": "Villarreal",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.7%",
+                "45.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "14",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748263"
+          },
+          {
+            "game_id": "757717",
+            "date": "Wed, Nov 5",
+            "home_team": "Pafos",
+            "away_team": "Villarreal",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "5",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757717"
+          },
+          {
+            "game_id": "748249",
+            "date": "Sat, Nov 1",
+            "home_team": "Villarreal",
+            "away_team": "Rayo Vallecano",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.4%",
+                "52.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748249"
+          },
+          {
+            "game_id": "759752",
+            "date": "Wed, Oct 29",
+            "home_team": "Lucena CF",
+            "away_team": "Villarreal",
+            "score": "0 - 6",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759752"
+          },
+          {
+            "game_id": "748235",
+            "date": "Sat, Oct 25",
+            "home_team": "Valencia",
+            "away_team": "Villarreal",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.8%",
+                "43.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "8",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748235"
+          },
+          {
+            "game_id": "757694",
+            "date": "Tue, Oct 21",
+            "home_team": "Villarreal",
+            "away_team": "Manchester City",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.1%",
+                "65.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "11",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757694"
+          },
+          {
+            "game_id": "748225",
+            "date": "Sat, Oct 18",
+            "home_team": "Villarreal",
+            "away_team": "Real Betis",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.5%",
+                "60.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748225"
+          },
+          {
+            "game_id": "748214",
+            "date": "Sat, Oct 4",
+            "home_team": "Real Madrid",
+            "away_team": "Villarreal",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.5%",
+                "30.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "26",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748214"
+          },
+          {
+            "game_id": "757682",
+            "date": "Wed, Oct 1",
+            "home_team": "Villarreal",
+            "away_team": "Juventus",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.5%",
+                "55.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757682"
+          }
+        ],
+        "classement": {
+          "Borussia Dortmund": {
+            "position": 14,
+            "points": 7
+          },
+          "Villarreal": {
+            "position": 32,
+            "points": 1
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Bayern Munich",
+            "points": 12
+          },
+          {
+            "position": 2,
+            "team": "Arsenal",
+            "points": 12
+          },
+          {
+            "position": 3,
+            "team": "Internazionale",
+            "points": 12
+          },
+          {
+            "position": 4,
+            "team": "Manchester City",
+            "points": 10
+          },
+          {
+            "position": 5,
+            "team": "Paris Saint-Germain",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Newcastle United",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Real Madrid",
+            "points": 9
+          },
+          {
+            "position": 8,
+            "team": "Liverpool",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Galatasaray",
+            "points": 9
+          },
+          {
+            "position": 10,
+            "team": "Tottenham Hotspur",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Barcelona",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Chelsea",
+            "points": 7
+          },
+          {
+            "position": 13,
+            "team": "Sporting CP",
+            "points": 7
+          },
+          {
+            "position": 14,
+            "team": "Borussia Dortmund",
+            "points": 7
+          },
+          {
+            "position": 15,
+            "team": "FK Qarabag",
+            "points": 7
+          },
+          {
+            "position": 16,
+            "team": "Atalanta",
+            "points": 7
+          },
+          {
+            "position": 17,
+            "team": "Atlético Madrid",
+            "points": 6
+          },
+          {
+            "position": 18,
+            "team": "PSV Eindhoven",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "AS Monaco",
+            "points": 5
+          },
+          {
+            "position": 20,
+            "team": "Pafos",
+            "points": 5
+          },
+          {
+            "position": 21,
+            "team": "Bayer Leverkusen",
+            "points": 5
+          },
+          {
+            "position": 22,
+            "team": "Club Brugge",
+            "points": 4
+          },
+          {
+            "position": 23,
+            "team": "Eintracht Frankfurt",
+            "points": 4
+          },
+          {
+            "position": 24,
+            "team": "Napoli",
+            "points": 4
+          },
+          {
+            "position": 25,
+            "team": "Marseille",
+            "points": 3
+          },
+          {
+            "position": 26,
+            "team": "Juventus",
+            "points": 3
+          },
+          {
+            "position": 27,
+            "team": "Athletic Club",
+            "points": 3
+          },
+          {
+            "position": 28,
+            "team": "Union St.-Gilloise",
+            "points": 3
+          },
+          {
+            "position": 29,
+            "team": "Bodo/Glimt",
+            "points": 2
+          },
+          {
+            "position": 30,
+            "team": "Slavia Prague",
+            "points": 2
+          },
+          {
+            "position": 31,
+            "team": "Olympiacos",
+            "points": 2
+          },
+          {
+            "position": 32,
+            "team": "Villarreal",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "F.C. København",
+            "points": 1
+          },
+          {
+            "position": 34,
+            "team": "Kairat Almaty",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Benfica",
+            "points": 0
+          },
+          {
+            "position": 36,
+            "team": "Ajax Amsterdam",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/165.png",
+        "logo_away": "https://media.api-sports.io/football/teams/533.png",
+        "classement_home": 14,
+        "classement_away": 32,
+        "points_classement_home": 7,
+        "points_classement_away": 1,
+        "nom_classement_home": "Borussia Dortmund",
+        "nom_classement_away": "Villarreal",
+        "country_fr": "World - UEFA Champions League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.485,
+            "lambda_away": 1.49,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 37.58,
+            "X": 24.4,
+            "V2": 38.02
+          },
+          "double_chance": {
+            "1X": 61.98,
+            "12": 75.6,
+            "X2": 62.42
+          },
+          "over_under": {
+            "plus_de_0.5": 94.99,
+            "moins_de_0.5": 5.01,
+            "plus_de_1.5": 79.44,
+            "moins_de_1.5": 20.56,
+            "plus_de_2.5": 57.02,
+            "moins_de_2.5": 42.98,
+            "plus_de_3.5": 34.84,
+            "moins_de_3.5": 65.16,
+            "plus_de_4.5": 18.0,
+            "moins_de_4.5": 82.0,
+            "plus_de_5.5": 7.97,
+            "moins_de_5.5": 92.03
+          },
+          "btts": {
+            "oui": 59.92,
+            "non": 40.08
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.58,
+            "1Xet+0.5": 56.97,
+            "V2et+0.5": 38.02,
+            "X2et+0.5": 57.41,
+            "12et+0.5": 75.6,
+            "V1et+1.5": 29.72,
+            "1Xet+1.5": 49.11,
+            "V2et+1.5": 30.33,
+            "X2et+1.5": 49.72,
+            "12et+1.5": 60.04,
+            "V1et+2.5": 24.32,
+            "1Xet+2.5": 32.28,
+            "V2et+2.5": 24.74,
+            "X2et+2.5": 32.7,
+            "12et+2.5": 49.05,
+            "V1et+3.5": 13.47,
+            "1Xet+3.5": 21.44,
+            "V2et+3.5": 13.4,
+            "X2et+3.5": 21.37,
+            "12et+3.5": 26.88,
+            "V1et+4.5": 8.16,
+            "1Xet+4.5": 9.89,
+            "V2et+4.5": 8.1,
+            "X2et+4.5": 9.84,
+            "12et+4.5": 16.26,
+            "V1et+5.5": 3.2,
+            "1Xet+5.5": 4.92,
+            "V2et+5.5": 3.04,
+            "X2et+5.5": 4.78,
+            "12et+5.5": 6.24
+          },
+          "scores_probables": {
+            "1-1": 11.43,
+            "1-2": 8.44,
+            "2-1": 8.08,
+            "1-0": 7.86,
+            "0-1": 7.68,
+            "2-2": 6.24,
+            "0-2": 5.6,
+            "2-0": 5.4,
+            "0-0": 5.01,
+            "3-1": 4.3
+          },
+          "buts_moyens_simules": {
+            "home": 1.48,
+            "away": 1.49,
+            "total": 2.97
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 78 %  \n**SCORES PROBABLES** : 2‑2 ou 3‑2  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative**  \n- **Borussia Dortmund (domicile)** : moyenne 1,80 buts marqués et 1,50 buts encaissés. En 10 matchs à domicile, ils ont inscrit 9 buts et n’en ont concédés que 5 – une solidité défensive relative, mais leurs dernières rencontres à domicile (3‑3 contre Stuttgart, 4‑1 contre Athletic, 4‑1 contre Manchester City) montrent une capacité à produire de nombreux buts.  \n- **Villarreal (extérieur)** : moyenne 2,10 buts marqués et 1,10 buts encaissés. En 10 matchs à l’extérieur, ils ont marqué 11 buts et encaissé 4 – une défense très fiable, mais leurs performances récentes (victoires 2‑0, 2‑1, mais défaites 0‑2, 1‑3) indiquent qu’ils laissent souvent entrer des buts lorsqu’ils affrontent des équipes offensives.\n\n**2. Impact du facteur domicile/extérieur**  \n- Dortmund bénéficie d’un bon rendement à domicile (9 buts marqués, 5 encaissés).  \n- Villarreal, malgré une défense solide à l’extérieur (4 buts encaissés en 10 matchs), a déjà concédé 2‑3 buts contre des équipes de haut niveau (Manchester City, Real Madrid). Le choc avec une Dortmund en forme offensive augmente la probabilité de buts des deux côtés.\n\n**3. Forme récente et tendances**  \n- **Dortmund** : 6 derniers matchs – D D L W D W (9 pts). Les deux dernières victoires (vs Stuttgart 3‑3, vs Athletic 4‑1) montrent une tendance à des matchs à forte intensité offensive.  \n- **Villarreal** : 6 derniers matchs – W W L W W W (15 pts). Les deux dernières victoires à l’extérieur (2‑1 vs Mallorca, 2‑0 vs Espanyol) sont accompagnées de buts marqués, mais ils ont aussi concédé 2‑2 contre Betis et 2‑2 contre Juventus, preuve que les deux équipes marquent souvent.\n\n**4. Contexte du championnat**  \n- Dortmund occupe la 14ᵉ place avec 7 points, loin du sommet mais encore en lutte pour les places européennes. Ils ont besoin de points et misent sur leur attaque à domicile.  \n- Villarreal, 32ᵉ avec 1 point, lutte contre la relégation. Leur besoin de points les pousse à jouer offensivement même à l’extérieur, ce qui augmente le risque de concéder.\n\n**5. Statistiques détaillées des matchs récents**  \n- **Dortmund** : possession équilibrée (45‑55 %), tirs cadrés élevés (6‑6 contre Stuttgart), nombreux corners (6‑4). Indicateurs d’un jeu ouvert.  \n- **Villarreal** : possession souvent supérieure (ex. 58 % vs Mallorca), mais tirs cadrés similaires à l’adversaire (7‑3 vs Mallorca, 3‑3 vs Betis). Leur capacité à créer des occasions se traduit régulièrement par des buts.\n\n**6. Évaluation des cotes**  \n- Over 2.5 buts à 1,74 vs Under à 2,27 → le marché estime une probabilité d’environ 57 % pour plus de 2,5 buts, légèrement supérieure à la moyenne du marché.  \n\n**7. Synthèse**  \n- Les deux équipes ont des antécédents de matchs où les deux côtés marquent.  \n- Dortmund a une moyenne de buts à domicile supérieure à 1,5 et Villarreal a une moyenne de buts marqués à l’extérieur supérieure à 2,0.  \n- Le total attendu de buts (≈ 3,9) dépasse largement le seuil de 2,5.  \n\n**Conclusion** : La combinaison d’une Dortmund offensive à domicile, d’une Villarreal qui marque beaucoup à l’extérieur et des tendances récentes (BTTS fréquent, matchs à forte intensité) rend le “Plus de 2.5 buts” la prédiction la plus fiable. Les scores les plus probables, reflétant le BTTS, sont **2‑2** (équilibré) ou **3‑2** (légère supériorité de Dortmund).",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑2 ou 3‑2"
+      }
+    ]
+  }
+}
