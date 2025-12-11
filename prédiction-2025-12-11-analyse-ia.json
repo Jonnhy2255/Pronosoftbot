@@ -1,0 +1,1087 @@
+{
+  "metadata": {
+    "date_generation": "2025-12-11 22:45:26",
+    "date_matchs": "2025-12-11",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1451260,
+        "HomeTeam": "Celta Vigo",
+        "AwayTeam": "Bologna",
+        "date": "11 décembre 2025 à 20:00:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 16,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 13,
+          "buts_ext_encaisses": 5,
+          "total_marques": 16,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 21,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 3,
+          "total_marques": 18,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          {
+            "game_id": "757901",
+            "date": "Thu, Dec 11",
+            "home_team": "Celta Vigo",
+            "away_team": "Bologna",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "3",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757901"
+          },
+          {
+            "game_id": "748290",
+            "date": "Sun, Dec 7",
+            "home_team": "Real Madrid",
+            "away_team": "Celta Vigo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "23",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748290"
+          },
+          {
+            "game_id": "761021",
+            "date": "Thu, Dec 4",
+            "home_team": "Sant Andreu",
+            "away_team": "Celta Vigo",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/761021"
+          },
+          {
+            "game_id": "748281",
+            "date": "Sun, Nov 30",
+            "home_team": "Celta Vigo",
+            "away_team": "Espanyol",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.5%",
+                "39.5%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748281"
+          },
+          {
+            "game_id": "757874",
+            "date": "Thu, Nov 27",
+            "home_team": "Ludogorets Razgrad",
+            "away_team": "Celta Vigo",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.2%",
+                "56.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "7",
+                "19"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757874"
+          },
+          {
+            "game_id": "748273",
+            "date": "Sat, Nov 22",
+            "home_team": "Alavés",
+            "away_team": "Celta Vigo",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "5",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748273"
+          },
+          {
+            "game_id": "748260",
+            "date": "Sun, Nov 9",
+            "home_team": "Celta Vigo",
+            "away_team": "Barcelona",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.6%",
+                "61.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "9"
+              ],
+              "Shot Attempts": [
+                "5",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748260"
+          },
+          {
+            "game_id": "757853",
+            "date": "Thu, Nov 6",
+            "home_team": "Dinamo Zagreb",
+            "away_team": "Celta Vigo",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.4%",
+                "40.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757853"
+          },
+          {
+            "game_id": "748244",
+            "date": "Sun, Nov 2",
+            "home_team": "Levante",
+            "away_team": "Celta Vigo",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.7%",
+                "64.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748244"
+          },
+          {
+            "game_id": "759777",
+            "date": "Thu, Oct 30",
+            "home_team": "Puerto De Vega",
+            "away_team": "Celta Vigo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759777"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "757901",
+            "date": "Thu, Dec 11",
+            "home_team": "Celta Vigo",
+            "away_team": "Bologna",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.1%",
+                "49.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "3",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757901"
+          },
+          {
+            "game_id": "736923",
+            "date": "Sun, Dec 7",
+            "home_team": "Lazio",
+            "away_team": "Bologna",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "6"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736923"
+          },
+          {
+            "game_id": "759114",
+            "date": "Thu, Dec 4",
+            "home_team": "Bologna",
+            "away_team": "Parma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759114"
+          },
+          {
+            "game_id": "736909",
+            "date": "Mon, Dec 1",
+            "home_team": "Bologna",
+            "away_team": "Cremonese",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.4%",
+                "34.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "29",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "8"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736909"
+          },
+          {
+            "game_id": "757886",
+            "date": "Thu, Nov 27",
+            "home_team": "Bologna",
+            "away_team": "RB Salzburg",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "14",
+                "4"
+              ],
+              "Shot Attempts": [
+                "30",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757886"
+          },
+          {
+            "game_id": "736902",
+            "date": "Sat, Nov 22",
+            "home_team": "Udinese",
+            "away_team": "Bologna",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736902"
+          },
+          {
+            "game_id": "736892",
+            "date": "Sun, Nov 9",
+            "home_team": "Bologna",
+            "away_team": "Napoli",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736892"
+          },
+          {
+            "game_id": "757862",
+            "date": "Thu, Nov 6",
+            "home_team": "Bologna",
+            "away_team": "SK Brann",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.6%",
+                "45.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "11",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757862"
+          },
+          {
+            "game_id": "736874",
+            "date": "Sun, Nov 2",
+            "home_team": "Parma",
+            "away_team": "Bologna",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35%",
+                "65%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "6"
+              ],
+              "Shot Attempts": [
+                "7",
+                "22"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736874"
+          },
+          {
+            "game_id": "736872",
+            "date": "Wed, Oct 29",
+            "home_team": "Bologna",
+            "away_team": "Torino",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.2%",
+                "28.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736872"
+          }
+        ],
+        "classement": {
+          "Celta Vigo": {
+            "position": 19,
+            "points": 9
+          },
+          "Bologna": {
+            "position": 13,
+            "points": 11
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Lyon",
+            "points": 15
+          },
+          {
+            "position": 2,
+            "team": "FC Midtjylland",
+            "points": 15
+          },
+          {
+            "position": 3,
+            "team": "Aston Villa",
+            "points": 15
+          },
+          {
+            "position": 4,
+            "team": "Real Betis",
+            "points": 14
+          },
+          {
+            "position": 5,
+            "team": "SC Freiburg",
+            "points": 14
+          },
+          {
+            "position": 6,
+            "team": "Ferencvaros",
+            "points": 14
+          },
+          {
+            "position": 7,
+            "team": "Braga",
+            "points": 13
+          },
+          {
+            "position": 8,
+            "team": "FC Porto",
+            "points": 13
+          },
+          {
+            "position": 9,
+            "team": "VfB Stuttgart",
+            "points": 12
+          },
+          {
+            "position": 10,
+            "team": "AS Roma",
+            "points": 12
+          },
+          {
+            "position": 11,
+            "team": "Nottingham Forest",
+            "points": 11
+          },
+          {
+            "position": 12,
+            "team": "Fenerbahce",
+            "points": 11
+          },
+          {
+            "position": 13,
+            "team": "Bologna",
+            "points": 11
+          },
+          {
+            "position": 14,
+            "team": "Viktoria Plzen",
+            "points": 10
+          },
+          {
+            "position": 15,
+            "team": "Panathinaikos",
+            "points": 10
+          },
+          {
+            "position": 16,
+            "team": "Racing Genk",
+            "points": 10
+          },
+          {
+            "position": 17,
+            "team": "Red Star Belgrade",
+            "points": 10
+          },
+          {
+            "position": 18,
+            "team": "PAOK Salonika",
+            "points": 9
+          },
+          {
+            "position": 19,
+            "team": "Celta Vigo",
+            "points": 9
+          },
+          {
+            "position": 20,
+            "team": "Lille",
+            "points": 9
+          },
+          {
+            "position": 21,
+            "team": "Young Boys",
+            "points": 9
+          },
+          {
+            "position": 22,
+            "team": "SK Brann",
+            "points": 8
+          },
+          {
+            "position": 23,
+            "team": "Ludogorets Razgrad",
+            "points": 7
+          },
+          {
+            "position": 24,
+            "team": "Celtic",
+            "points": 7
+          },
+          {
+            "position": 25,
+            "team": "Dinamo Zagreb",
+            "points": 7
+          },
+          {
+            "position": 26,
+            "team": "FC Basel",
+            "points": 6
+          },
+          {
+            "position": 27,
+            "team": "FCSB",
+            "points": 6
+          },
+          {
+            "position": 28,
+            "team": "Go Ahead Eagles",
+            "points": 6
+          },
+          {
+            "position": 29,
+            "team": "SK Sturm Graz",
+            "points": 4
+          },
+          {
+            "position": 30,
+            "team": "Feyenoord Rotterdam",
+            "points": 3
+          },
+          {
+            "position": 31,
+            "team": "RB Salzburg",
+            "points": 3
+          },
+          {
+            "position": 32,
+            "team": "FC Utrecht",
+            "points": 1
+          },
+          {
+            "position": 33,
+            "team": "Rangers",
+            "points": 1
+          },
+          {
+            "position": 34,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Nice",
+            "points": 0
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/538.png",
+        "logo_away": "https://media.api-sports.io/football/teams/500.png",
+        "classement_home": 19,
+        "classement_away": 13,
+        "points_classement_home": 9,
+        "points_classement_away": 11,
+        "nom_classement_home": "Celta Vigo",
+        "nom_classement_away": "Bologna",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.36,
+            "lambda_away": 1.34,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 37.1,
+            "X": 25.68,
+            "V2": 37.21
+          },
+          "double_chance": {
+            "1X": 62.78,
+            "12": 74.32,
+            "X2": 62.9
+          },
+          "over_under": {
+            "plus_de_0.5": 93.42,
+            "moins_de_0.5": 6.59,
+            "plus_de_1.5": 75.28,
+            "moins_de_1.5": 24.72,
+            "plus_de_2.5": 51.07,
+            "moins_de_2.5": 48.94,
+            "plus_de_3.5": 28.63,
+            "moins_de_3.5": 71.37,
+            "plus_de_4.5": 13.51,
+            "moins_de_4.5": 86.49,
+            "plus_de_5.5": 5.62,
+            "moins_de_5.5": 94.38
+          },
+          "btts": {
+            "oui": 55.12,
+            "non": 44.89
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.1,
+            "1Xet+0.5": 56.2,
+            "V2et+0.5": 37.21,
+            "X2et+0.5": 56.31,
+            "12et+0.5": 74.32,
+            "V1et+1.5": 28.3,
+            "1Xet+1.5": 47.39,
+            "V2et+1.5": 27.89,
+            "X2et+1.5": 46.98,
+            "12et+1.5": 56.18,
+            "V1et+2.5": 22.22,
+            "1Xet+2.5": 29.22,
+            "V2et+2.5": 21.84,
+            "X2et+2.5": 28.84,
+            "12et+2.5": 44.06,
+            "V1et+3.5": 11.07,
+            "1Xet+3.5": 18.07,
+            "V2et+3.5": 10.56,
+            "X2et+3.5": 17.56,
+            "12et+3.5": 21.63,
+            "V1et+4.5": 6.25,
+            "1Xet+4.5": 7.61,
+            "V2et+4.5": 5.9,
+            "X2et+4.5": 7.26,
+            "12et+4.5": 12.16,
+            "V1et+5.5": 2.15,
+            "1Xet+5.5": 3.5,
+            "V2et+5.5": 2.12,
+            "X2et+5.5": 3.48,
+            "12et+5.5": 4.27
+          },
+          "scores_probables": {
+            "1-1": 12.1,
+            "0-1": 9.32,
+            "1-0": 8.81,
+            "1-2": 8.7,
+            "2-1": 8.18,
+            "0-0": 6.59,
+            "2-0": 6.08,
+            "0-2": 6.04,
+            "2-2": 5.64,
+            "3-1": 3.88
+          },
+          "buts_moyens_simules": {
+            "home": 1.36,
+            "away": 1.34,
+            "total": 2.7
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Bologna)  \n**CONFIANCE** : 71 %  \n**SCORES PROBABLES** : 2‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces et faiblesses**  \n- **Celta Vigo (domicile)** :  \n  - Moyenne buts marqués à domicile très basse : 3 buts en 6 matchs (0,5 bpm).  \n  - Moyenne buts encaissés à domicile élevée : 7 buts (1,17 bpa).  \n  - Série à domicile : L‑L‑L, aucune victoire récente à la maison.  \n  - Défense vulnérable face à des équipes qui tirent beaucoup (15 tirs cadrés contre eux lors du dernier affrontement).  \n\n- **Bologna (extérieur)** :  \n  - Moyenne buts marqués à l’extérieur : 9 buts en 6 matchs (1,5 bpm).  \n  - Moyenne buts encaissés à l’extérieur : 3 buts (0,5 bpa) – la meilleure défense parmi les équipes extérieures du groupe.  \n  - Série à l’extérieur : W‑D‑W‑W, aucune défaite récente à l’extérieur.  \n  - Capacité à créer des occasions : 15 tirs cadrés contre Celta lors du dernier match, dont 4 tirs cadrés en première période seulement.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Celta montre une réelle faiblesse à domicile (3‑7) tandis que Bologna est l’une des meilleures équipes à l’extérieur (9‑3). L’avantage du terrain ne compense pas la différence de forme et de solidité défensive.\n\n**3. Forme récente et tendances**  \n- **Celta** : 6 derniers matchs = L W D L L W (7 points). Les deux victoires récentes sont contre des équipes moyennes, mais elles sont intercalées de trois défaites, dont deux à domicile.  \n- **Bologna** : 6 derniers matchs = W D W L W W (13 points). Quatre victoires, une défaite isolée contre Lazio à domicile, et une solide performance contre Udinese (3‑0) à l’extérieur.  \n\n**4. Analyse des matchs détaillés** (derniers affrontements)  \n- **Celta vs Bologna (déjà joué le 11 déc)** : 1‑2, Bologna a dominé les tirs (15 tirs cadrés contre 1) et a contrôlé les corners (5‑0).  \n- **Bologna vs Udinese (0‑3)** : Bologna a marqué 3 buts tout en ne concédant aucun, montrant une capacité à exploiter les faiblesses défensives adverses.  \n- **Bologna vs Parma (2‑1)** et **Bologna vs Lazio (1‑1)** : Bologna a régulièrement trouvé le chemin des filets même lorsqu’il était sous pression.  \n\n**5. Contexte du championnat**  \n- Bologna occupe la 13ᵉ place (11 pts) – légèrement au-dessus de Celta (19ᵉ, 9 pts). La lutte pour les places européennes pousse Bologna à chercher les points, tandis que Celta lutte pour éviter la zone de relégation, ce qui les rend plus vulnérables sous pression.\n\n**6. Tendances de buts**  \n- Total de buts dans le dernier duel : 3 (over 2.5).  \n- Les deux équipes ont dépassé la moyenne de 2,5 buts lorsqu’elles se rencontrent (historique très limité mais le seul match disponible confirme cette tendance).  \n\n**7. Synthèse**  \n- Bologna possède une attaque plus efficace à l’extérieur et une défense qui concède très peu.  \n- Celta est en difficulté à domicile, tant offensivement (0,5 bpm) que défensivement (1,17 bpa).  \n- Le seul affrontement direct disponible se solde déjà par une victoire 2‑1 de Bologna, avec une domination nette en tirs et corners.  \n\n**Conclusion** : La combinaison d’une défense solide, d’une attaque efficace à l’extérieur et de la faiblesse avérée de Celta à domicile rend la victoire de Bologna la plus probable. Les scores les plus attendus sont 2‑0 (Bologna contrôle le match) ou 2‑1 (Celta trouve une occasion tardive).  \n\n---  \n\n**PRÉDICTION** : Victoire extérieur (Bologna) – Confiance 71 % – Scores probables 2‑0 ou 2‑1.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Victoire extérieur (Bologna)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 2‑1"
+      }
+    ]
+  }
+}
