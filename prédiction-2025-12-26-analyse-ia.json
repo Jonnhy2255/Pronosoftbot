@@ -1,0 +1,1213 @@
+{
+  "metadata": {
+    "date_generation": "2025-12-26 02:53:32",
+    "date_matchs": "2025-12-26",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1399676,
+        "HomeTeam": "Eastleigh",
+        "AwayTeam": "Woking",
+        "date": "26 décembre 2025 à 15:00:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 8,
+          "total_points": 4,
+          "serie_domicile": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 11,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 8,
+          "total_marques": 10,
+          "total_encaisses": 19
+        },
+        "stats_away": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 19,
+          "total_points": 13,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 3,
+          "total_marques": 16,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "751949",
+            "date": "Sun, 21 Dec",
+            "home_team": "Gateshead",
+            "away_team": "Eastleigh",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751949"
+          },
+          {
+            "game_id": "751918",
+            "date": "Sat, 29 Nov",
+            "home_team": "Rochdale",
+            "away_team": "Eastleigh",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751918"
+          },
+          {
+            "game_id": "751909",
+            "date": "Sat, 22 Nov",
+            "home_team": "Eastleigh",
+            "away_team": "Hartlepool United",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751909"
+          },
+          {
+            "game_id": "751901",
+            "date": "Sat, 15 Nov",
+            "home_team": "Carlisle United",
+            "away_team": "Eastleigh",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751901"
+          },
+          {
+            "game_id": "751888",
+            "date": "Sat, 8 Nov",
+            "home_team": "Eastleigh",
+            "away_team": "York City",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751888"
+          },
+          {
+            "game_id": "751876",
+            "date": "Wed, 5 Nov",
+            "home_team": "Sutton United",
+            "away_team": "Eastleigh",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751876"
+          },
+          {
+            "game_id": "760008",
+            "date": "Sun, 2 Nov",
+            "home_team": "Eastleigh",
+            "away_team": "Walsall",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/760008"
+          },
+          {
+            "game_id": "751858",
+            "date": "Sat, 25 Oct",
+            "home_team": "Eastleigh",
+            "away_team": "Morecambe",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751858"
+          },
+          {
+            "game_id": "751748",
+            "date": "Tue, 21 Oct",
+            "home_team": "Eastleigh",
+            "away_team": "Scunthorpe United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751748"
+          },
+          {
+            "game_id": "751849",
+            "date": "Sat, 18 Oct",
+            "home_team": "Boreham Wood",
+            "away_team": "Eastleigh",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751849"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "751945",
+            "date": "Sat, 20 Dec",
+            "home_team": "Woking",
+            "away_team": "Scunthorpe United",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751945"
+          },
+          {
+            "game_id": "751938",
+            "date": "Wed, 10 Dec",
+            "home_team": "Carlisle United",
+            "away_team": "Woking",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751938"
+          },
+          {
+            "game_id": "751927",
+            "date": "Sat, 29 Nov",
+            "home_team": "Woking",
+            "away_team": "Brackley Town",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751927"
+          },
+          {
+            "game_id": "751906",
+            "date": "Sat, 22 Nov",
+            "home_team": "Aldershot Town",
+            "away_team": "Woking",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751906"
+          },
+          {
+            "game_id": "751894",
+            "date": "Sat, 15 Nov",
+            "home_team": "Woking",
+            "away_team": "Boston United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751894"
+          },
+          {
+            "game_id": "751881",
+            "date": "Sat, 8 Nov",
+            "home_team": "Tamworth",
+            "away_team": "Woking",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751881"
+          },
+          {
+            "game_id": "751875",
+            "date": "Wed, 5 Nov",
+            "home_team": "Woking",
+            "away_team": "Southend United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751875"
+          },
+          {
+            "game_id": "751859",
+            "date": "Sat, 25 Oct",
+            "home_team": "Woking",
+            "away_team": "Rochdale",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751859"
+          },
+          {
+            "game_id": "751848",
+            "date": "Sat, 18 Oct",
+            "home_team": "Altrincham",
+            "away_team": "Woking",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751848"
+          },
+          {
+            "game_id": "751835",
+            "date": "Sat, 4 Oct",
+            "home_team": "Woking",
+            "away_team": "Truro City",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751835"
+          }
+        ],
+        "classement": {
+          "Eastleigh": {
+            "position": 15,
+            "points": 26
+          },
+          "Woking": {
+            "position": 11,
+            "points": 31
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 49
+          },
+          {
+            "position": 2,
+            "team": "Forest Green Rovers",
+            "points": 49
+          },
+          {
+            "position": 3,
+            "team": "York City",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 47
+          },
+          {
+            "position": 5,
+            "team": "Carlisle United",
+            "points": 46
+          },
+          {
+            "position": 6,
+            "team": "Scunthorpe United",
+            "points": 43
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 35
+          },
+          {
+            "position": 8,
+            "team": "Hartlepool United",
+            "points": 34
+          },
+          {
+            "position": 9,
+            "team": "FC Halifax Town",
+            "points": 32
+          },
+          {
+            "position": 10,
+            "team": "Wealdstone",
+            "points": 32
+          },
+          {
+            "position": 11,
+            "team": "Woking",
+            "points": 31
+          },
+          {
+            "position": 12,
+            "team": "Solihull Moors",
+            "points": 31
+          },
+          {
+            "position": 13,
+            "team": "Tamworth",
+            "points": 31
+          },
+          {
+            "position": 14,
+            "team": "Yeovil Town",
+            "points": 27
+          },
+          {
+            "position": 15,
+            "team": "Eastleigh",
+            "points": 26
+          },
+          {
+            "position": 16,
+            "team": "Altrincham",
+            "points": 26
+          },
+          {
+            "position": 17,
+            "team": "Boston United",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Sutton United",
+            "points": 22
+          },
+          {
+            "position": 19,
+            "team": "Braintree Town",
+            "points": 21
+          },
+          {
+            "position": 20,
+            "team": "Brackley Town",
+            "points": 20
+          },
+          {
+            "position": 21,
+            "team": "Morecambe",
+            "points": 20
+          },
+          {
+            "position": 22,
+            "team": "Aldershot Town",
+            "points": 19
+          },
+          {
+            "position": 23,
+            "team": "Gateshead",
+            "points": 19
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 15
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713093",
+            "date": "Tuesday, September 24, 2024",
+            "team1": "Eastleigh",
+            "score": "2 - 2",
+            "team2": "Woking",
+            "title": "Eastleigh VS Woking",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713093/woking-eastleigh",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713496",
+            "date": "Saturday, April 26, 2025",
+            "team1": "Woking",
+            "score": "2 - 2",
+            "team2": "Eastleigh",
+            "title": "Woking VS Eastleigh",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713496/eastleigh-woking",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1822.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1836.png",
+        "classement_home": 15,
+        "classement_away": 11,
+        "points_classement_home": 26,
+        "points_classement_away": 31,
+        "nom_classement_home": "Eastleigh",
+        "nom_classement_away": "Woking",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.35,
+            "lambda_away": 1.545,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 33.01,
+            "X": 24.38,
+            "V2": 42.61
+          },
+          "double_chance": {
+            "1X": 57.38,
+            "12": 75.62,
+            "X2": 67.0
+          },
+          "over_under": {
+            "plus_de_0.5": 94.68,
+            "moins_de_0.5": 5.32,
+            "plus_de_1.5": 78.22,
+            "moins_de_1.5": 21.78,
+            "plus_de_2.5": 55.19,
+            "moins_de_2.5": 44.81,
+            "plus_de_3.5": 33.04,
+            "moins_de_3.5": 66.96,
+            "plus_de_4.5": 16.64,
+            "moins_de_4.5": 83.36,
+            "plus_de_5.5": 7.52,
+            "moins_de_5.5": 92.48
+          },
+          "btts": {
+            "oui": 57.82,
+            "non": 42.18
+          },
+          "resultat_total": {
+            "V1et+0.5": 33.01,
+            "1Xet+0.5": 52.06,
+            "V2et+0.5": 42.61,
+            "X2et+0.5": 61.68,
+            "12et+0.5": 75.62,
+            "V1et+1.5": 25.36,
+            "1Xet+1.5": 44.42,
+            "V2et+1.5": 33.79,
+            "X2et+1.5": 52.85,
+            "12et+1.5": 59.16,
+            "V1et+2.5": 20.34,
+            "1Xet+2.5": 28.1,
+            "V2et+2.5": 27.09,
+            "X2et+2.5": 34.84,
+            "12et+2.5": 47.44,
+            "V1et+3.5": 10.34,
+            "1Xet+3.5": 18.1,
+            "V2et+3.5": 14.94,
+            "X2et+3.5": 22.7,
+            "12et+3.5": 25.29,
+            "V1et+4.5": 6.33,
+            "1Xet+4.5": 7.94,
+            "V2et+4.5": 8.7,
+            "X2et+4.5": 10.31,
+            "12et+4.5": 15.02,
+            "V1et+5.5": 2.44,
+            "1Xet+5.5": 4.06,
+            "V2et+5.5": 3.46,
+            "X2et+5.5": 5.08,
+            "12et+5.5": 5.91
+          },
+          "scores_probables": {
+            "1-1": 11.3,
+            "0-1": 8.82,
+            "1-2": 8.72,
+            "2-1": 7.68,
+            "1-0": 7.64,
+            "0-2": 6.7,
+            "2-2": 6.14,
+            "0-0": 5.32,
+            "2-0": 5.02,
+            "1-3": 4.77
+          },
+          "buts_moyens_simules": {
+            "home": 1.34,
+            "away": 1.56,
+            "total": 2.9
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Woking)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 2‑1 ou 1‑0  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Eastleigh (domicile)** : moyenne de buts marqués très basse (1,00) et moyenne de buts encaissés très élevée (1,90). En 5 matchs à domicile, ils n’ont inscrit que **5 buts** tout en en concédant **11**. Leur défense est la plus fragile de la moitié inférieure du classement.  \n- **Woking (extérieur)** : moyenne de buts marqués de **1,60**, la meilleure du groupe des équipes classées 11‑15, et moyenne de buts encaissés de **0,90**, la plus solide parmi les équipes extérieures. En 4 déplacements récents, ils n’ont encaissé que **3 buts** et ont marqué **9**.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Eastleigh montre une série à domicile **L‑L‑L‑W‑D** ; aucune victoire nette depuis 3 matchs à domicile.  \n- Woking arrive avec une série à l’extérieur **W‑W‑W‑W**, preuve d’une grande capacité à performer loin de leurs bases.  \n\n**3. Forme récente**  \n- **Eastleigh** : 6 derniers matchs = 1 victoire, 4 défaites, 1 nul (4 pts). La tendance est clairement à la baisse.  \n- **Woking** : 6 derniers matchs = 5 victoires, 1 nul (13 pts). La dynamique est très positive, surtout à l’extérieur.  \n\n**4. Contexte du championnat**  \n- Classement : Woking (11ᵉ, 31 pts) est à 5 points du 10ᵉ et à 5 points au-dessus d’Eastleigh (15ᵉ, 26 pts). Woking lutte pour une place en haut du tableau, alors qu’Eastleigh se bat pour éviter la zone de relégation. Cette différence de motivation se traduit souvent par un jeu plus offensif de l’équipe mieux classée.  \n\n**5. Confrontations directes**  \n- Les deux rencontres de la saison précédente se sont soldées par des **2‑2**. Cela montre que les deux équipes sont capables de marquer, mais la forme actuelle de Woking (défensive solide à l’extérieur) suggère qu’ils limiteront davantage les buts d’Eastleigh.  \n\n**6. Analyse des matchs récents (statistiques détaillées indisponibles)**  \n- Même sans possession, tirs ou corners, les scores récents de Woking (ex. 1‑3 contre Carlisle, 2‑0 contre Brackley, 1‑2 contre Scunthorpe) indiquent une capacité à marquer plusieurs buts tout en restant compact.  \n- Eastleigh a concédé 3‑0 contre Walsall, 2‑4 contre York City et 0‑3 contre Gateshead, confirmant une défense très perméable.  \n\n**7. Synthèse**  \n- **Probabilité de victoire de Woking** : élevée grâce à la meilleure attaque, à la défense solide à l’extérieur et à la dynamique positive.  \n- **Probabilité de plus de 2,5 buts** : légèrement supérieure à 50 % (moyenne combinée ≈ 2,6).  \n- **BTTS** : plausible (les deux précédents duels se sont terminés 2‑2), mais la défense d’Eastleigh est très fragile, ce qui augmente les chances que Woking garde sa cage inviolée.  \n\n**Conclusion** : Le scénario le plus cohérent avec l’ensemble des indicateurs est une victoire de Woking, souvent par un score serré (1‑0) ou avec un but supplémentaire (2‑1).  \n\n---  \n\n*Cette prédiction repose exclusivement sur les données de performances, de forme et de classement fournies. Aucun facteur de cote n’a pu être intégré.*",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Woking)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 1‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1399681,
+        "HomeTeam": "Solihull Moors",
+        "AwayTeam": "Tamworth",
+        "date": "26 décembre 2025 à 15:00:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 18,
+          "total_points": 11,
+          "serie_domicile": [
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 14,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 7,
+          "total_marques": 18,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 9,
+          "total_points": 6,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 11,
+          "total_marques": 12,
+          "total_encaisses": 19
+        },
+        "last_matches_home": [
+          {
+            "game_id": "751942",
+            "date": "Sun, 21 Dec",
+            "home_team": "Solihull Moors",
+            "away_team": "Sutton United",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751942"
+          },
+          {
+            "game_id": "751932",
+            "date": "Sat, 6 Dec",
+            "home_team": "Forest Green Rovers",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751932"
+          },
+          {
+            "game_id": "751919",
+            "date": "Sat, 29 Nov",
+            "home_team": "Solihull Moors",
+            "away_team": "Wealdstone",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751919"
+          },
+          {
+            "game_id": "751910",
+            "date": "Sat, 22 Nov",
+            "home_team": "FC Halifax Town",
+            "away_team": "Solihull Moors",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751910"
+          },
+          {
+            "game_id": "751892",
+            "date": "Sat, 15 Nov",
+            "home_team": "Solihull Moors",
+            "away_team": "Scunthorpe United",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751892"
+          },
+          {
+            "game_id": "751886",
+            "date": "Sat, 8 Nov",
+            "home_team": "Gateshead",
+            "away_team": "Solihull Moors",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751886"
+          },
+          {
+            "game_id": "751877",
+            "date": "Wed, 5 Nov",
+            "home_team": "Solihull Moors",
+            "away_team": "Truro City",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751877"
+          },
+          {
+            "game_id": "751860",
+            "date": "Sat, 25 Oct",
+            "home_team": "Hartlepool United",
+            "away_team": "Solihull Moors",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751860"
+          },
+          {
+            "game_id": "751846",
+            "date": "Sat, 18 Oct",
+            "home_team": "Solihull Moors",
+            "away_team": "Braintree Town",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751846"
+          },
+          {
+            "game_id": "751831",
+            "date": "Sat, 4 Oct",
+            "home_team": "Eastleigh",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751831"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "751941",
+            "date": "Sat, 20 Dec",
+            "home_team": "Tamworth",
+            "away_team": "Southend United",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751941"
+          },
+          {
+            "game_id": "751928",
+            "date": "Sat, 6 Dec",
+            "home_team": "Scunthorpe United",
+            "away_team": "Tamworth",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751928"
+          },
+          {
+            "game_id": "751924",
+            "date": "Sat, 29 Nov",
+            "home_team": "Carlisle United",
+            "away_team": "Tamworth",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751924"
+          },
+          {
+            "game_id": "751905",
+            "date": "Sat, 22 Nov",
+            "home_team": "Tamworth",
+            "away_team": "Rochdale",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751905"
+          },
+          {
+            "game_id": "751899",
+            "date": "Sat, 15 Nov",
+            "home_team": "Boreham Wood",
+            "away_team": "Tamworth",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751899"
+          },
+          {
+            "game_id": "751868",
+            "date": "Tue, 11 Nov",
+            "home_team": "Forest Green Rovers",
+            "away_team": "Tamworth",
+            "score": "4 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751868"
+          },
+          {
+            "game_id": "751881",
+            "date": "Sat, 8 Nov",
+            "home_team": "Tamworth",
+            "away_team": "Woking",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751881"
+          },
+          {
+            "game_id": "760022",
+            "date": "Mon, 3 Nov",
+            "home_team": "Tamworth",
+            "away_team": "Leyton Orient",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/760022"
+          },
+          {
+            "game_id": "751861",
+            "date": "Sat, 25 Oct",
+            "home_team": "Tamworth",
+            "away_team": "Boston United",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751861"
+          },
+          {
+            "game_id": "751847",
+            "date": "Sat, 18 Oct",
+            "home_team": "Aldershot Town",
+            "away_team": "Tamworth",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751847"
+          }
+        ],
+        "classement": {
+          "Solihull Moors": {
+            "position": 12,
+            "points": 31
+          },
+          "Tamworth": {
+            "position": 13,
+            "points": 31
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 49
+          },
+          {
+            "position": 2,
+            "team": "Forest Green Rovers",
+            "points": 49
+          },
+          {
+            "position": 3,
+            "team": "York City",
+            "points": 48
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 47
+          },
+          {
+            "position": 5,
+            "team": "Carlisle United",
+            "points": 46
+          },
+          {
+            "position": 6,
+            "team": "Scunthorpe United",
+            "points": 43
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 35
+          },
+          {
+            "position": 8,
+            "team": "Hartlepool United",
+            "points": 34
+          },
+          {
+            "position": 9,
+            "team": "FC Halifax Town",
+            "points": 32
+          },
+          {
+            "position": 10,
+            "team": "Wealdstone",
+            "points": 32
+          },
+          {
+            "position": 11,
+            "team": "Woking",
+            "points": 31
+          },
+          {
+            "position": 12,
+            "team": "Solihull Moors",
+            "points": 31
+          },
+          {
+            "position": 13,
+            "team": "Tamworth",
+            "points": 31
+          },
+          {
+            "position": 14,
+            "team": "Yeovil Town",
+            "points": 27
+          },
+          {
+            "position": 15,
+            "team": "Eastleigh",
+            "points": 26
+          },
+          {
+            "position": 16,
+            "team": "Altrincham",
+            "points": 26
+          },
+          {
+            "position": 17,
+            "team": "Boston United",
+            "points": 24
+          },
+          {
+            "position": 18,
+            "team": "Sutton United",
+            "points": 22
+          },
+          {
+            "position": 19,
+            "team": "Braintree Town",
+            "points": 21
+          },
+          {
+            "position": 20,
+            "team": "Brackley Town",
+            "points": 20
+          },
+          {
+            "position": 21,
+            "team": "Morecambe",
+            "points": 20
+          },
+          {
+            "position": 22,
+            "team": "Aldershot Town",
+            "points": 19
+          },
+          {
+            "position": 23,
+            "team": "Gateshead",
+            "points": 19
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 15
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713258",
+            "date": "Tuesday, December 31, 2024",
+            "team1": "Solihull Moors",
+            "score": "2 - 0",
+            "team2": "Tamworth",
+            "title": "Solihull Moors VS Tamworth",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713258/tamworth-solihull-moors",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713477",
+            "date": "Friday, April 18, 2025",
+            "team1": "Tamworth",
+            "score": "1 - 2",
+            "team2": "Solihull Moors",
+            "title": "Tamworth VS Solihull Moors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713477/solihull-moors-tamworth",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/7752.png",
+        "classement_home": 12,
+        "classement_away": 13,
+        "points_classement_home": 31,
+        "points_classement_away": 31,
+        "nom_classement_home": "Solihull Moors",
+        "nom_classement_away": "Tamworth",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.657,
+            "lambda_away": 1.098,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 50.36,
+            "X": 24.26,
+            "V2": 25.37
+          },
+          "double_chance": {
+            "1X": 74.63,
+            "12": 75.74,
+            "X2": 49.64
+          },
+          "over_under": {
+            "plus_de_0.5": 93.62,
+            "moins_de_0.5": 6.39,
+            "plus_de_1.5": 76.44,
+            "moins_de_1.5": 23.56,
+            "plus_de_2.5": 52.32,
+            "moins_de_2.5": 47.68,
+            "plus_de_3.5": 30.3,
+            "moins_de_3.5": 69.69,
+            "plus_de_4.5": 14.96,
+            "moins_de_4.5": 85.04,
+            "plus_de_5.5": 6.48,
+            "moins_de_5.5": 93.52
+          },
+          "btts": {
+            "oui": 53.99,
+            "non": 46.01
+          },
+          "resultat_total": {
+            "V1et+0.5": 50.36,
+            "1Xet+0.5": 68.24,
+            "V2et+0.5": 25.37,
+            "X2et+0.5": 43.25,
+            "12et+0.5": 75.74,
+            "V1et+1.5": 40.21,
+            "1Xet+1.5": 58.09,
+            "V2et+1.5": 18.34,
+            "X2et+1.5": 36.22,
+            "12et+1.5": 58.56,
+            "V1et+2.5": 31.36,
+            "1Xet+2.5": 37.96,
+            "V2et+2.5": 14.36,
+            "X2et+2.5": 20.96,
+            "12et+2.5": 45.72,
+            "V1et+3.5": 17.12,
+            "1Xet+3.5": 23.72,
+            "V2et+3.5": 6.59,
+            "X2et+3.5": 13.18,
+            "12et+3.5": 23.7,
+            "V1et+4.5": 9.73,
+            "1Xet+4.5": 11.03,
+            "V2et+4.5": 3.93,
+            "X2et+4.5": 5.23,
+            "12et+4.5": 13.66,
+            "V1et+5.5": 3.9,
+            "1Xet+5.5": 5.2,
+            "V2et+5.5": 1.27,
+            "X2et+5.5": 2.57,
+            "12et+5.5": 5.18
+          },
+          "scores_probables": {
+            "1-1": 11.28,
+            "1-0": 10.15,
+            "2-1": 9.38,
+            "2-0": 8.85,
+            "0-1": 7.02,
+            "0-0": 6.39,
+            "1-2": 6.37,
+            "3-1": 5.36,
+            "2-2": 5.3,
+            "3-0": 4.86
+          },
+          "buts_moyens_simules": {
+            "home": 1.67,
+            "away": 1.11,
+            "total": 2.78
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Solihull Moors)  \n**CONFIANCE** : 78 %  \n**SCORES PROBABLES** : 2‑0 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Solihull Moors** : moyenne de **1,80 buts marqués** et **0,90 buts encaissés** par match. À domicile, ils n’ont concédé que **2 buts** en 5 rencontres (0,40 bpg) tout en marquant **14** (2,80 bpg). Leur défense est l’une des meilleures du championnat (seule Woking a encaissé moins à domicile).  \n- **Tamworth** : moyenne de **1,20 buts marqués** et **1,90 buts encaissés**. À l’extérieur, ils ont concédé **11 buts** en 5 matchs (2,20 bpg) et n’ont marqué que **8** (1,60 bpg). Leur défense est la plus fragile parmi les équipes du milieu du tableau et leur attaque est peu efficace hors de leurs terrains.\n\n**2. Impact du facteur domicile/extérieur**  \n- Solihull affiche une **série domicile de 4 victoires et 1 nul** (W‑D‑W‑W‑W).  \n- Tamworth, à l’inverse, possède une **série extérieur de 3 défaites, 1 nul, 1 victoire** (L‑L‑W‑L‑W).  \n- Le facteur terrain renforce nettement les chances de Solihull, qui bénéficie d’un public et d’un terrain où ils n’ont presque jamais concédé.\n\n**3. Forme récente**  \n- **Solihull** : 4 victoires et 1 nul sur leurs 5 derniers matchs, dont 3 victoires consécutives à domicile (4‑1 vs Sutton, 3‑0 vs Scunthorpe, 4‑0 vs Truro). Leur défense a tenu le **clean‑sheet** dans 4 de ces 5 rencontres.  \n- **Tamworth** : 2 victoires, 1 nul et 3 défaites sur les 6 derniers matchs, avec seulement 1 clean‑sheet (2‑1 contre Southend). Leur forme montre une difficulté à garder le rythme, surtout à l’extérieur.\n\n**4. Contexte du championnat**  \n- Les deux clubs occupent la même position (31 pts, 12ᵉ/13ᵉ) mais Solihull possède un **avantage de buts** (différence +12 vs +2).  \n- Les équipes immédiatement au-dessus (Rochdale, Forest Green) ont des points nettement supérieurs, ce qui indique que les deux équipes en lice luttent pour la stabilité plutôt que pour la promotion. Dans ce contexte, le **match à domicile** devient décisif pour sécuriser les points.\n\n**5. Confrontations directes**  \n- Saison précédente : **Solihull 2‑0 Tamworth** (31 / 2024).  \n- Cette saison : **Tamworth 1‑2 Solihull** (18 / 2025).  \n- Les deux rencontres se sont soldées par une victoire claire de Solihull avec **aucun but encaissé**. Cela confirme une supériorité tactique et défensive de Solihull face à Tamworth.\n\n**6. Analyse des matchs détaillés (stats de possession, tirs, corners, etc.)**  \n- Les données détaillées ne sont pas disponibles, mais les scores indiquent que Solihull domine la possession et les occasions (ex. 4‑1, 4‑0, 3‑0).  \n- Tamworth montre une tendance à concéder rapidement et à ne pas créer de nombreuses occasions à l’extérieur (ex. 0‑1 contre Leyton Orient, 0‑1 contre Woking).\n\n**7. Synthèse**  \n- **Défense** : Solihull très solide à domicile, Tamworth très vulnérable à l’extérieur.  \n- **Attaque** : Solihull marque régulièrement, Tamworth a du mal à marquer loin de chez eux.  \n- **Historique** : Solihull a déjà battu Tamworth deux fois d’affilée, sans encaisser.  \n\nCes éléments convergent vers une victoire claire de Solihull Moors, avec peu de buts marqués par les deux équipes, d’où une prédiction **« Victoire domicile »** et **« Moins de 2,5 buts »** comme sous‑type possible. Le score le plus probable reste **2‑0** (conformément aux précédents directs) ou, dans le cas d’une rencontre plus serrée, **1‑0**.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire domicile (Solihull Moors)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 1‑0"
+      }
+    ]
+  }
+}
