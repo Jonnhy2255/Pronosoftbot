@@ -1,0 +1,3131 @@
+{
+  "metadata": {
+    "date_generation": "2025-12-28 03:06:04",
+    "date_matchs": "2025-12-28",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1378026,
+        "HomeTeam": "Cremonese",
+        "AwayTeam": "Napoli",
+        "date": "28 décembre 2025 à 14:00:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cremonese": 6.55,
+            "Napoli": 1.63,
+            "Draw": 4.03
+          },
+          "totals": {
+            "Over": 2.13,
+            "Under": 1.83
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 12,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "L",
+            "L",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 3,
+          "total_marques": 11,
+          "total_encaisses": 10
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 19,
+          "total_points": 10,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 5,
+          "total_marques": 13,
+          "total_encaisses": 8
+        },
+        "last_matches_home": [
+          {
+            "game_id": "736938",
+            "date": "Sat, Dec 20",
+            "home_team": "Lazio",
+            "away_team": "Cremonese",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.4%",
+                "42.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "9"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736938"
+          },
+          {
+            "game_id": "736924",
+            "date": "Sat, Dec 13",
+            "home_team": "Torino",
+            "away_team": "Cremonese",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.3%",
+                "53.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736924"
+          },
+          {
+            "game_id": "736921",
+            "date": "Sun, Dec 7",
+            "home_team": "Cremonese",
+            "away_team": "Lecce",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.7%",
+                "51.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736921"
+          },
+          {
+            "game_id": "736909",
+            "date": "Mon, Dec 1",
+            "home_team": "Bologna",
+            "away_team": "Cremonese",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.4%",
+                "34.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "29",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "8"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736909"
+          },
+          {
+            "game_id": "736897",
+            "date": "Sun, Nov 23",
+            "home_team": "Cremonese",
+            "away_team": "AS Roma",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50%",
+                "50%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736897"
+          },
+          {
+            "game_id": "736886",
+            "date": "Fri, Nov 7",
+            "home_team": "Pisa",
+            "away_team": "Cremonese",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.9%",
+                "62.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736886"
+          },
+          {
+            "game_id": "736880",
+            "date": "Sat, Nov 1",
+            "home_team": "Cremonese",
+            "away_team": "Juventus",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.9%",
+                "49.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736880"
+          },
+          {
+            "game_id": "736869",
+            "date": "Wed, Oct 29",
+            "home_team": "Genoa",
+            "away_team": "Cremonese",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736869"
+          },
+          {
+            "game_id": "736854",
+            "date": "Sat, Oct 25",
+            "home_team": "Cremonese",
+            "away_team": "Atalanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.6%",
+                "65.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "10"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736854"
+          },
+          {
+            "game_id": "736853",
+            "date": "Mon, Oct 20",
+            "home_team": "Cremonese",
+            "away_team": "Udinese",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "8"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736853"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401825161",
+            "date": "Mon, Dec 22",
+            "home_team": "Napoli",
+            "away_team": "Bologna",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401825161"
+          },
+          {
+            "game_id": "758975",
+            "date": "Thu, Dec 18",
+            "home_team": "Napoli",
+            "away_team": "AC Milan",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758975"
+          },
+          {
+            "game_id": "736933",
+            "date": "Sun, Dec 14",
+            "home_team": "Udinese",
+            "away_team": "Napoli",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "38.1%",
+                "61.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "18",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736933"
+          },
+          {
+            "game_id": "757754",
+            "date": "Wed, Dec 10",
+            "home_team": "Benfica",
+            "away_team": "Napoli",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.7%",
+                "60.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757754"
+          },
+          {
+            "game_id": "736917",
+            "date": "Sun, Dec 7",
+            "home_team": "Napoli",
+            "away_team": "Juventus",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.7%",
+                "50.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736917"
+          },
+          {
+            "game_id": "759120",
+            "date": "Wed, Dec 3",
+            "home_team": "Napoli",
+            "away_team": "Cagliari",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759120"
+          },
+          {
+            "game_id": "736913",
+            "date": "Sun, Nov 30",
+            "home_team": "AS Roma",
+            "away_team": "Napoli",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56%",
+                "44%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736913"
+          },
+          {
+            "game_id": "757728",
+            "date": "Tue, Nov 25",
+            "home_team": "Napoli",
+            "away_team": "FK Qarabag",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.9%",
+                "45.1%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "17",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757728"
+          },
+          {
+            "game_id": "736900",
+            "date": "Sat, Nov 22",
+            "home_team": "Napoli",
+            "away_team": "Atalanta",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736900"
+          },
+          {
+            "game_id": "736892",
+            "date": "Sun, Nov 9",
+            "home_team": "Bologna",
+            "away_team": "Napoli",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736892"
+          }
+        ],
+        "classement": {
+          "Cremonese": {
+            "position": 12,
+            "points": 21
+          },
+          "Napoli": {
+            "position": 4,
+            "points": 31
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 33
+          },
+          {
+            "position": 2,
+            "team": "AC Milan",
+            "points": 32
+          },
+          {
+            "position": 3,
+            "team": "Juventus",
+            "points": 32
+          },
+          {
+            "position": 4,
+            "team": "Napoli",
+            "points": 31
+          },
+          {
+            "position": 5,
+            "team": "AS Roma",
+            "points": 30
+          },
+          {
+            "position": 6,
+            "team": "Como",
+            "points": 27
+          },
+          {
+            "position": 7,
+            "team": "Bologna",
+            "points": 25
+          },
+          {
+            "position": 8,
+            "team": "Lazio",
+            "points": 24
+          },
+          {
+            "position": 9,
+            "team": "Atalanta",
+            "points": 22
+          },
+          {
+            "position": 10,
+            "team": "Udinese",
+            "points": 22
+          },
+          {
+            "position": 11,
+            "team": "Sassuolo",
+            "points": 21
+          },
+          {
+            "position": 12,
+            "team": "Cremonese",
+            "points": 21
+          },
+          {
+            "position": 13,
+            "team": "Torino",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Cagliari",
+            "points": 18
+          },
+          {
+            "position": 15,
+            "team": "Parma",
+            "points": 17
+          },
+          {
+            "position": 16,
+            "team": "Lecce",
+            "points": 16
+          },
+          {
+            "position": 17,
+            "team": "Genoa",
+            "points": 14
+          },
+          {
+            "position": 18,
+            "team": "Hellas Verona",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Pisa",
+            "points": 11
+          },
+          {
+            "position": 20,
+            "team": "Fiorentina",
+            "points": 9
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/520.png",
+        "logo_away": "https://media.api-sports.io/football/teams/492.png",
+        "classement_home": 12,
+        "classement_away": 4,
+        "points_classement_home": 21,
+        "points_classement_away": 31,
+        "nom_classement_home": "Cremonese",
+        "nom_classement_away": "Napoli",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.235,
+            "lambda_away": 1.165,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 37.76,
+            "X": 27.7,
+            "V2": 34.53
+          },
+          "double_chance": {
+            "1X": 65.47,
+            "12": 72.3,
+            "X2": 62.24
+          },
+          "over_under": {
+            "plus_de_0.5": 91.18,
+            "moins_de_0.5": 8.82,
+            "plus_de_1.5": 69.69,
+            "moins_de_1.5": 30.3,
+            "plus_de_2.5": 43.53,
+            "moins_de_2.5": 56.47,
+            "plus_de_3.5": 22.26,
+            "moins_de_3.5": 77.74,
+            "plus_de_4.5": 9.65,
+            "moins_de_4.5": 90.34,
+            "plus_de_5.5": 3.84,
+            "moins_de_5.5": 96.16
+          },
+          "btts": {
+            "oui": 49.28,
+            "non": 50.72
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.76,
+            "1Xet+0.5": 56.64,
+            "V2et+0.5": 34.53,
+            "X2et+0.5": 53.41,
+            "12et+0.5": 72.3,
+            "V1et+1.5": 26.92,
+            "1Xet+1.5": 45.8,
+            "V2et+1.5": 23.89,
+            "X2et+1.5": 42.77,
+            "12et+1.5": 50.82,
+            "V1et+2.5": 19.79,
+            "1Xet+2.5": 25.5,
+            "V2et+2.5": 18.02,
+            "X2et+2.5": 23.74,
+            "12et+2.5": 37.82,
+            "V1et+3.5": 8.92,
+            "1Xet+3.5": 14.64,
+            "V2et+3.5": 7.62,
+            "X2et+3.5": 13.34,
+            "12et+3.5": 16.54,
+            "V1et+4.5": 4.92,
+            "1Xet+4.5": 5.73,
+            "V2et+4.5": 3.92,
+            "X2et+4.5": 4.74,
+            "12et+4.5": 8.84,
+            "V1et+5.5": 1.72,
+            "1Xet+5.5": 2.54,
+            "V2et+5.5": 1.31,
+            "X2et+5.5": 2.12,
+            "12et+5.5": 3.03
+          },
+          "scores_probables": {
+            "1-1": 13.16,
+            "1-0": 10.84,
+            "0-1": 10.64,
+            "0-0": 8.82,
+            "2-1": 8.18,
+            "1-2": 7.91,
+            "2-0": 7.14,
+            "0-2": 5.86,
+            "2-2": 4.9,
+            "3-1": 3.1
+          },
+          "buts_moyens_simules": {
+            "home": 1.24,
+            "away": 1.17,
+            "total": 2.42
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire extérieur (Napoli)  \n- **CONFIANCE** : 78 %  \n- **SCORES PROBABLES** : 0‑2 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Cremonese** : 12ᵉ avec 21 pts, moyenne de buts marqués à domicile très basse (1,10) et seulement 6 buts inscrits en 6 matchs à domicile cette saison. Leur défense à domicile concède 1,00 but en moyenne, mais a encaissé 7 buts sur 6 matchs, montrant une certaine fragilité.  \n- **Napoli** : 4ᵉ avec 31 pts, moyenne de buts marqués (1,30) légèrement supérieure et défense très solide (0,80 but encaissé en moyenne). En déplacement, ils n’ont marqué que 1 but mais ont encaissé 5, ce qui reflète un manque de production offensive à l’extérieur, mais leurs 4 derniers matchs à l’extérieur (L‑L‑W‑L) incluent une victoire 2‑0 contre Bologna et une victoire 2‑0 contre AC Milan, montrant qu’ils peuvent être décisifs lorsqu’ils trouvent le chemin des filets.\n\n**2. Impact du facteur domicile/extérieur**  \n- La série à domicile de Cremonese (W‑L‑L‑D‑D) indique une irrégularité. Leur dernier match à domicile s’est soldé par un 0‑0 contre Lazio, preuve de difficultés offensives.  \n- Napoli a montré qu’il pouvait gagner à l’extérieur contre des équipes du top (Bologna, AC Milan) et a gardé sa cage inviolée dans ces rencontres, ce qui compense son faible rendement offensif à l’extérieur.\n\n**3. Forme récente et tendances**  \n- **Cremonese** : 6 derniers matchs – D L W W L L (7 pts). Sur les 10 derniers, seulement 12 pts, aucune séquence de victoires consécutives. Leur capacité à marquer est limitée (6 buts à domicile sur 6 matchs).  \n- **Napoli** : 6 derniers matchs – W W L L W D (10 pts). Sur les 10 derniers, 19 pts, incluant 4 victoires, 4 buts marqués lors de leurs deux dernières victoires à domicile et une victoire à l’extérieur contre Bologna (2‑0).  \n\n**4. Analyse détaillée des matchs récents**  \n\n| Équipe | Possession moyenne | Shots on target (moy) | Corners (moy) | Points forts |\n|--------|-------------------|-----------------------|---------------|--------------|\n| **Cremonese (domicile)** | 51 % | 2,2 | 4,5 | Bon contrôle du jeu contre Lazio (57 % de possession) mais très peu de tirs cadrés (2‑2) et aucun but. |\n| **Napoli (extérieur)** | 48 % | 5,5 | 6,8 | Grande efficacité devant le but contre Bologna (8 tirs cadrés, 2‑0) et AC Milan (5 tirs cadrés, 2‑0). |\n\nLes matchs de Napoli montrent une supériorité nette en tirs cadrés et en création d’occasions, même à l’extérieur. Cremonese, même lorsqu’elle domine la possession (ex. Lazio 0‑0), ne crée pas de occasions dangereuses (2 tirs cadrés contre 2).\n\n**5. Contexte du championnat**  \n- Napoli lutte pour les places européennes (4ᵉ) et doit consolider son avance.  \n- Cremonese se bat pour la survie (12ᵉ, même points que Sassuolo). Leur priorité est de sécuriser des points à domicile, mais leurs performances récentes ne laissent guère d’espoir d’obtenir un résultat positif contre une équipe du top 5.\n\n**6. Confrontations directes**  \n- Aucun H2H disponible, mais la différence de niveau (classement, forme) est suffisante pour trancher.\n\n**7. Analyse des cotes**  \n- Cote Napoli 1,63 vs 6,55 pour Cremonese indique une forte probabilité de victoire selon le marché.  \n- Le total Over 2,5 à 2,13 reflète l’attente de plus de deux buts, ce qui correspond à la capacité de Napoli à marquer au moins deux buts contre des équipes de milieu de tableau.\n\n**8. Synthèse**  \n- **Probabilité de victoire Napoli** : élevée (plus de 70 %).  \n- **BTTS** : peu probable, la défense de Napoli concède rarement (0,80 but/match) et Cremonese a du mal à marquer à domicile (6 buts en 6 matchs).  \n- **Total de buts** : légèrement au-dessus de 2,5 grâce aux deux buts de Napoli, mais le risque d’un score 0‑2 reste présent.\n\n**Conclusion** : La combinaison de la forme supérieure de Napoli, de sa solidité défensive, de ses performances offensives à l’extérieur et de la faiblesse offensive de Cremonese conduit à privilégier une victoire de l’équipe visiteuse. Les scores les plus plausibles sont 0‑2 ou 1‑2.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire extérieur (Napoli)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑2 ou 1‑2"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1378025,
+        "HomeTeam": "Bologna",
+        "AwayTeam": "Sassuolo",
+        "date": "28 décembre 2025 à 17:00:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Bologna": 1.82,
+            "Sassuolo": 5.06,
+            "Draw": 3.72
+          },
+          "totals": {
+            "Over": 2.08,
+            "Under": 1.87
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 17,
+          "total_points": 8,
+          "serie_domicile": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 4,
+          "total_marques": 16,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 12,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 5,
+          "total_marques": 13,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401825161",
+            "date": "Mon, Dec 22",
+            "home_team": "Napoli",
+            "away_team": "Bologna",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401825161"
+          },
+          {
+            "game_id": "758976",
+            "date": "Fri, Dec 19",
+            "home_team": "Bologna",
+            "away_team": "Internazionale",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.6%",
+                "58.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "8"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/758976"
+          },
+          {
+            "game_id": "736931",
+            "date": "Sun, Dec 14",
+            "home_team": "Bologna",
+            "away_team": "Juventus",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.6%",
+                "49.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736931"
+          },
+          {
+            "game_id": "757901",
+            "date": "Thu, Dec 11",
+            "home_team": "Celta Vigo",
+            "away_team": "Bologna",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50%",
+                "50%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "3",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757901"
+          },
+          {
+            "game_id": "736923",
+            "date": "Sun, Dec 7",
+            "home_team": "Lazio",
+            "away_team": "Bologna",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "6"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736923"
+          },
+          {
+            "game_id": "759114",
+            "date": "Thu, Dec 4",
+            "home_team": "Bologna",
+            "away_team": "Parma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759114"
+          },
+          {
+            "game_id": "736909",
+            "date": "Mon, Dec 1",
+            "home_team": "Bologna",
+            "away_team": "Cremonese",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.4%",
+                "34.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "29",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "8"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736909"
+          },
+          {
+            "game_id": "757886",
+            "date": "Thu, Nov 27",
+            "home_team": "Bologna",
+            "away_team": "RB Salzburg",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "14",
+                "4"
+              ],
+              "Shot Attempts": [
+                "30",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757886"
+          },
+          {
+            "game_id": "736902",
+            "date": "Sat, Nov 22",
+            "home_team": "Udinese",
+            "away_team": "Bologna",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736902"
+          },
+          {
+            "game_id": "736892",
+            "date": "Sun, Nov 9",
+            "home_team": "Bologna",
+            "away_team": "Napoli",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736892"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "736936",
+            "date": "Sun, Dec 21",
+            "home_team": "Sassuolo",
+            "away_team": "Torino",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53%",
+                "47%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "7",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736936"
+          },
+          {
+            "game_id": "736927",
+            "date": "Sun, Dec 14",
+            "home_team": "AC Milan",
+            "away_team": "Sassuolo",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.8%",
+                "41.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736927"
+          },
+          {
+            "game_id": "736915",
+            "date": "Sat, Dec 6",
+            "home_team": "Sassuolo",
+            "away_team": "Fiorentina",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.1%",
+                "59.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736915"
+          },
+          {
+            "game_id": "736908",
+            "date": "Fri, Nov 28",
+            "home_team": "Como",
+            "away_team": "Sassuolo",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.1%",
+                "36.9%"
+              ],
+              "Shots on Goal": [
+                "13",
+                "5"
+              ],
+              "Shot Attempts": [
+                "18",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "11"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736908"
+          },
+          {
+            "game_id": "736899",
+            "date": "Mon, Nov 24",
+            "home_team": "Sassuolo",
+            "away_team": "Pisa",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.6%",
+                "37.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "22",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736899"
+          },
+          {
+            "game_id": "736893",
+            "date": "Sun, Nov 9",
+            "home_team": "Atalanta",
+            "away_team": "Sassuolo",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.5%",
+                "32.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736893"
+          },
+          {
+            "game_id": "736878",
+            "date": "Mon, Nov 3",
+            "home_team": "Sassuolo",
+            "away_team": "Genoa",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736878"
+          },
+          {
+            "game_id": "736871",
+            "date": "Thu, Oct 30",
+            "home_team": "Cagliari",
+            "away_team": "Sassuolo",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.6%",
+                "54.4%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736871"
+          },
+          {
+            "game_id": "736858",
+            "date": "Sun, Oct 26",
+            "home_team": "Sassuolo",
+            "away_team": "AS Roma",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41%",
+                "59%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "8"
+              ],
+              "Shot Attempts": [
+                "11",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "7"
+              ],
+              "Saves": [
+                "7",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736858"
+          },
+          {
+            "game_id": "736845",
+            "date": "Sat, Oct 18",
+            "home_team": "Lecce",
+            "away_team": "Sassuolo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.5%",
+                "48.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736845"
+          }
+        ],
+        "classement": {
+          "Bologna": {
+            "position": 7,
+            "points": 25
+          },
+          "Sassuolo": {
+            "position": 11,
+            "points": 21
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 33
+          },
+          {
+            "position": 2,
+            "team": "AC Milan",
+            "points": 32
+          },
+          {
+            "position": 3,
+            "team": "Juventus",
+            "points": 32
+          },
+          {
+            "position": 4,
+            "team": "Napoli",
+            "points": 31
+          },
+          {
+            "position": 5,
+            "team": "AS Roma",
+            "points": 30
+          },
+          {
+            "position": 6,
+            "team": "Como",
+            "points": 27
+          },
+          {
+            "position": 7,
+            "team": "Bologna",
+            "points": 25
+          },
+          {
+            "position": 8,
+            "team": "Lazio",
+            "points": 24
+          },
+          {
+            "position": 9,
+            "team": "Atalanta",
+            "points": 22
+          },
+          {
+            "position": 10,
+            "team": "Udinese",
+            "points": 22
+          },
+          {
+            "position": 11,
+            "team": "Sassuolo",
+            "points": 21
+          },
+          {
+            "position": 12,
+            "team": "Cremonese",
+            "points": 21
+          },
+          {
+            "position": 13,
+            "team": "Torino",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Cagliari",
+            "points": 18
+          },
+          {
+            "position": 15,
+            "team": "Parma",
+            "points": 17
+          },
+          {
+            "position": 16,
+            "team": "Lecce",
+            "points": 16
+          },
+          {
+            "position": 17,
+            "team": "Genoa",
+            "points": 14
+          },
+          {
+            "position": 18,
+            "team": "Hellas Verona",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Pisa",
+            "points": 11
+          },
+          {
+            "position": 20,
+            "team": "Fiorentina",
+            "points": 9
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/500.png",
+        "logo_away": "https://media.api-sports.io/football/teams/488.png",
+        "classement_home": 7,
+        "classement_away": 11,
+        "points_classement_home": 25,
+        "points_classement_away": 21,
+        "nom_classement_home": "Bologna",
+        "nom_classement_away": "Sassuolo",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.46,
+            "lambda_away": 1.19,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 43.14,
+            "X": 26.1,
+            "V2": 30.76
+          },
+          "double_chance": {
+            "1X": 69.24,
+            "12": 73.9,
+            "X2": 56.86
+          },
+          "over_under": {
+            "plus_de_0.5": 92.84,
+            "moins_de_0.5": 7.16,
+            "plus_de_1.5": 74.33,
+            "moins_de_1.5": 25.66,
+            "plus_de_2.5": 49.25,
+            "moins_de_2.5": 50.75,
+            "plus_de_3.5": 27.7,
+            "moins_de_3.5": 72.3,
+            "plus_de_4.5": 13.04,
+            "moins_de_4.5": 86.96,
+            "plus_de_5.5": 5.36,
+            "moins_de_5.5": 94.64
+          },
+          "btts": {
+            "oui": 53.42,
+            "non": 46.58
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.14,
+            "1Xet+0.5": 62.08,
+            "V2et+0.5": 30.76,
+            "X2et+0.5": 49.7,
+            "12et+0.5": 73.9,
+            "V1et+1.5": 33.25,
+            "1Xet+1.5": 52.19,
+            "V2et+1.5": 22.14,
+            "X2et+1.5": 41.09,
+            "12et+1.5": 55.39,
+            "V1et+2.5": 25.47,
+            "1Xet+2.5": 32.04,
+            "V2et+2.5": 17.21,
+            "X2et+2.5": 23.78,
+            "12et+2.5": 42.68,
+            "V1et+3.5": 12.91,
+            "1Xet+3.5": 19.48,
+            "V2et+3.5": 8.22,
+            "X2et+3.5": 14.79,
+            "12et+3.5": 21.12,
+            "V1et+4.5": 7.08,
+            "1Xet+4.5": 8.24,
+            "V2et+4.5": 4.79,
+            "X2et+4.5": 5.96,
+            "12et+4.5": 11.87,
+            "V1et+5.5": 2.62,
+            "1Xet+5.5": 3.79,
+            "V2et+5.5": 1.57,
+            "X2et+5.5": 2.73,
+            "12et+5.5": 4.19
+          },
+          "scores_probables": {
+            "1-1": 12.37,
+            "1-0": 9.9,
+            "2-1": 8.95,
+            "0-1": 8.61,
+            "2-0": 7.78,
+            "0-0": 7.16,
+            "1-2": 6.94,
+            "2-2": 5.41,
+            "0-2": 4.94,
+            "3-1": 4.55
+          },
+          "buts_moyens_simules": {
+            "home": 1.46,
+            "away": 1.19,
+            "total": 2.65
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Bologna)  \n**CONFIANCE** : 62 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Bologna** : 7ᵉ du classement (25 pts). Moyenne de buts marqués 1,60 / match, encaissés 1,10. À domicile, 10 buts marqués et 7 encaissés en 6 matchs (1,67 / 1,17). Défense solide, peu de buts concédés.  \n- **Sassuolo** : 11ᵉ (21 pts). Moyenne de buts marqués 1,30, encaissés 1,20. En déplacement, 7 buts marqués et 7 encaissés en 7 matchs (1,00 / 1,00). Attaque moins efficace à l’extérieur, défense moyenne.\n\n**2. Impact du facteur domicile/extérieur**  \n- Bologna a une meilleure différence de buts à domicile (+0,50) que Sassuolo à l’extérieur (0,00).  \n- Historique à domicile de Bologna montre 3 victoires, 2 nuls, 1 défaite sur leurs 6 derniers matchs à domicile, tandis que Sassuolo ne compte que 2 victoires, 2 nuls, 3 défaites à l’extérieur.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Bologna** (6 derniers à domicile) :  \n  - BTTS : 3/6 (50 %) – les matchs contre Inter (1‑1), Parma (2‑1) et Cremonese (1‑3) ont vu les deux équipes marquer.  \n  - Total >2,5 buts : 3/6 (50 %).  \n  - Possession moyenne ≈ 48 % – équipe capable de se défendre en contre‑attaque.  \n  - Tirs cadrés à domicile : 4‑5 en moyenne, indiquant une bonne efficacité offensive.  \n\n- **Sassuolo** (7 derniers à l’extérieur) :  \n  - BTTS : 2/7 (≈ 29 %) – seulement contre Milan (2‑2) et Cagliari (2‑1).  \n  - Total >2,5 buts : 4/7 (≈ 57 %).  \n  - Possession à l’extérieur : souvent supérieure à 55 % (ex. Milan 58,8 %), mais conversion faible (moyenne 1,0 but/partie).  \n  - Tirs cadrés à l’extérieur : 1‑2 en moyenne, signe d’une attaque peu percutante.\n\n**4. Contexte du championnat**  \n- Bologna se situe à 2 places du 5ᵉ (qualification européenne) et à 4 points du 6ᵉ (Lazio). Un point supplémentaire consolide leur position.  \n- Sassuolo lutte pour s’éloigner de la zone de relégation (12 points derrière le 10ᵉ). Leur priorité est la stabilité, mais leurs performances à l’extérieur restent irrégulières.\n\n**5. Confrontations directes**  \n- Aucun H2H récent disponible, donc aucune donnée supplémentaire à prendre en compte.\n\n**6. Évaluation des cotes**  \n- 1X2 : Bologna 1,82 – indique que le marché estime Bologna comme favori, mais pas écrasante.  \n- Total 2,5 buts : Over 2,08 / Under 1,87 – le marché penche légèrement vers le *under*, cohérent avec la défense solide de Bologna à domicile et la difficulté de Sassuolo à marquer à l’extérieur.\n\n**7. Synthèse**  \n- Bologna possède une défense plus fiable à domicile (1,17 but encaissé en moyenne) que Sassuolo ne montre aucune faiblesse particulière en défense à l’extérieur, mais son attaque y est peu prolifique (1,0 but/partie).  \n- La probabilité que Sassuolo marque est donc modérée (≈ 30‑35 %).  \n- Bologna a une bonne capacité à marquer à domicile (≈ 1,7 but/match) et a déjà battu des équipes de calibre similaire.  \n\n**Conclusion** : Le scénario le plus probable est une victoire serrée de Bologna, avec un score de 1‑0 ou 2‑1. Cette prédiction s’appuie sur la supériorité globale de Bologna à domicile, la faiblesse offensive de Sassuolo à l’extérieur et les cotes qui favorisent légèrement le *under* mais restent compatibles avec une victoire de Bologna.",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Victoire domicile (Bologna)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑1"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1396380,
+        "HomeTeam": "Sporting CP",
+        "AwayTeam": "Rio Ave",
+        "date": "28 décembre 2025 à 20:30:00 UTC",
+        "league": "Portugal - Primeira Liga",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.8,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 23,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 16,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 12,
+          "buts_ext_encaisses": 9,
+          "total_marques": 28,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 13,
+          "total_points": 6,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 8,
+          "total_marques": 13,
+          "total_encaisses": 14
+        },
+        "last_matches_home": [
+          {
+            "game_id": "750372",
+            "date": "Tue, Dec 23",
+            "home_team": "Vitória de Guimaraes",
+            "away_team": "Sporting CP",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.6%",
+                "56.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750372"
+          },
+          {
+            "game_id": "762058",
+            "date": "Thu, Dec 18",
+            "home_team": "Santa Clara",
+            "away_team": "Sporting CP",
+            "score": "2 - 3",
+            "status": "AET",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762058"
+          },
+          {
+            "game_id": "750366",
+            "date": "Sat, Dec 13",
+            "home_team": "Sporting CP",
+            "away_team": "AVS",
+            "score": "6 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.1%",
+                "32.9%"
+              ],
+              "Shots on Goal": [
+                "14",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750366"
+          },
+          {
+            "game_id": "757744",
+            "date": "Tue, Dec 9",
+            "home_team": "Bayern Munich",
+            "away_team": "Sporting CP",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.6%",
+                "38.4%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "0"
+              ],
+              "Shot Attempts": [
+                "23",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757744"
+          },
+          {
+            "game_id": "750355",
+            "date": "Fri, Dec 5",
+            "home_team": "Benfica",
+            "away_team": "Sporting CP",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750355"
+          },
+          {
+            "game_id": "750346",
+            "date": "Sun, Nov 30",
+            "home_team": "Sporting CP",
+            "away_team": "Estrela",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.6%",
+                "37.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "5"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750346"
+          },
+          {
+            "game_id": "757741",
+            "date": "Wed, Nov 26",
+            "home_team": "Sporting CP",
+            "away_team": "Club Brugge",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.5%",
+                "54.5%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757741"
+          },
+          {
+            "game_id": "760103",
+            "date": "Sat, Nov 22",
+            "home_team": "Sporting CP",
+            "away_team": "Marinhense",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/760103"
+          },
+          {
+            "game_id": "750336",
+            "date": "Sat, Nov 8",
+            "home_team": "Santa Clara",
+            "away_team": "Sporting CP",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "26.4%",
+                "73.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "5",
+                "21"
+              ],
+              "Yellow Cards": [
+                "5",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "12"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750336"
+          },
+          {
+            "game_id": "757710",
+            "date": "Tue, Nov 4",
+            "home_team": "Juventus",
+            "away_team": "Sporting CP",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.7%",
+                "50.3%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "1"
+              ],
+              "Shot Attempts": [
+                "18",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757710"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750380",
+            "date": "Sat, Dec 20",
+            "home_team": "Gil Vicente",
+            "away_team": "Rio Ave",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.4%",
+                "45.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "23",
+                "3"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750380"
+          },
+          {
+            "game_id": "750364",
+            "date": "Sat, Dec 13",
+            "home_team": "Rio Ave",
+            "away_team": "Vitória de Guimaraes",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.8%",
+                "57.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750364"
+          },
+          {
+            "game_id": "750357",
+            "date": "Sat, Dec 6",
+            "home_team": "AVS",
+            "away_team": "Rio Ave",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.3%",
+                "64.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "9",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "6"
+              ],
+              "Corner Kicks": [
+                "3",
+                "11"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750357"
+          },
+          {
+            "game_id": "750348",
+            "date": "Sun, Nov 30",
+            "home_team": "Rio Ave",
+            "away_team": "Santa Clara",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.9%",
+                "42.1%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "9",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750348"
+          },
+          {
+            "game_id": "750340",
+            "date": "Sat, Nov 8",
+            "home_team": "Alverca",
+            "away_team": "Rio Ave",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.7%",
+                "43.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750340"
+          },
+          {
+            "game_id": "750328",
+            "date": "Sat, Nov 1",
+            "home_team": "Rio Ave",
+            "away_team": "Estoril",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.7%",
+                "59.3%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "6"
+              ],
+              "Shot Attempts": [
+                "2",
+                "24"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750328"
+          },
+          {
+            "game_id": "750321",
+            "date": "Sat, Oct 25",
+            "home_team": "Estrela",
+            "away_team": "Rio Ave",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.8%",
+                "43.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750321"
+          },
+          {
+            "game_id": "759153",
+            "date": "Sun, Oct 19",
+            "home_team": "Sintrense",
+            "away_team": "Rio Ave",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759153"
+          },
+          {
+            "game_id": "750315",
+            "date": "Sun, Oct 5",
+            "home_team": "Rio Ave",
+            "away_team": "Tondela",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.3%",
+                "52.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750315"
+          },
+          {
+            "game_id": "750306",
+            "date": "Sun, Sep 28",
+            "home_team": "FC Famalicao",
+            "away_team": "Rio Ave",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.1%",
+                "41.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "28",
+                "5"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "11",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750306"
+          }
+        ],
+        "classement": {
+          "Sporting CP": {
+            "position": 2,
+            "points": 38
+          },
+          "Rio Ave": {
+            "position": 11,
+            "points": 17
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Porto",
+            "points": 43
+          },
+          {
+            "position": 2,
+            "team": "Sporting CP",
+            "points": 38
+          },
+          {
+            "position": 3,
+            "team": "Benfica",
+            "points": 35
+          },
+          {
+            "position": 4,
+            "team": "Gil Vicente",
+            "points": 26
+          },
+          {
+            "position": 5,
+            "team": "Braga",
+            "points": 25
+          },
+          {
+            "position": 6,
+            "team": "FC Famalicao",
+            "points": 23
+          },
+          {
+            "position": 7,
+            "team": "Moreirense",
+            "points": 21
+          },
+          {
+            "position": 8,
+            "team": "Vitória de Guimaraes",
+            "points": 21
+          },
+          {
+            "position": 9,
+            "team": "Estoril",
+            "points": 20
+          },
+          {
+            "position": 10,
+            "team": "Estrela",
+            "points": 18
+          },
+          {
+            "position": 11,
+            "team": "Rio Ave",
+            "points": 17
+          },
+          {
+            "position": 12,
+            "team": "Alverca",
+            "points": 17
+          },
+          {
+            "position": 13,
+            "team": "C.D. Nacional",
+            "points": 16
+          },
+          {
+            "position": 14,
+            "team": "Santa Clara",
+            "points": 16
+          },
+          {
+            "position": 15,
+            "team": "Casa Pia",
+            "points": 13
+          },
+          {
+            "position": 16,
+            "team": "Arouca",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "Tondela",
+            "points": 9
+          },
+          {
+            "position": 18,
+            "team": "AVS",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712616",
+            "date": "Friday, August 9, 2024",
+            "team1": "Sporting CP",
+            "score": "3 - 1",
+            "team2": "Rio Ave",
+            "title": "Sporting CP VS Rio Ave",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712616/rio-ave-sporting-cp",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "59.4%",
+                "40.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "27",
+                "4"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "712763",
+            "date": "Saturday, January 18, 2025",
+            "team1": "Rio Ave",
+            "score": "0 - 3",
+            "team2": "Sporting CP",
+            "title": "Rio Ave VS Sporting CP",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712763/sporting-cp-rio-ave",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "45.6%",
+                "54.4%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "13"
+              ],
+              "Shot Attempts": [
+                "2",
+                "29"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "8"
+              ],
+              "Saves": [
+                "11",
+                "0"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/228.png",
+        "logo_away": "https://media.api-sports.io/football/teams/226.png",
+        "classement_home": 2,
+        "classement_away": 11,
+        "points_classement_home": 38,
+        "points_classement_away": 17,
+        "nom_classement_home": "Sporting CP",
+        "nom_classement_away": "Rio Ave",
+        "country_fr": "Portugal - Primeira Liga",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.763,
+            "lambda_away": 1.269,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 48.92,
+            "X": 23.82,
+            "V2": 27.26
+          },
+          "double_chance": {
+            "1X": 72.74,
+            "12": 76.18,
+            "X2": 51.08
+          },
+          "over_under": {
+            "plus_de_0.5": 95.04,
+            "moins_de_0.5": 4.96,
+            "plus_de_1.5": 80.69,
+            "moins_de_1.5": 19.3,
+            "plus_de_2.5": 57.89,
+            "moins_de_2.5": 42.11,
+            "plus_de_3.5": 35.75,
+            "moins_de_3.5": 64.25,
+            "plus_de_4.5": 18.67,
+            "moins_de_4.5": 81.33,
+            "plus_de_5.5": 8.48,
+            "moins_de_5.5": 91.52
+          },
+          "btts": {
+            "oui": 59.3,
+            "non": 40.7
+          },
+          "resultat_total": {
+            "V1et+0.5": 48.92,
+            "1Xet+0.5": 67.79,
+            "V2et+0.5": 27.26,
+            "X2et+0.5": 46.12,
+            "12et+0.5": 76.18,
+            "V1et+1.5": 40.65,
+            "1Xet+1.5": 59.52,
+            "V2et+1.5": 21.18,
+            "X2et+1.5": 40.04,
+            "12et+1.5": 61.82,
+            "V1et+2.5": 33.06,
+            "1Xet+2.5": 40.74,
+            "V2et+2.5": 17.15,
+            "X2et+2.5": 24.83,
+            "12et+2.5": 50.21,
+            "V1et+3.5": 19.42,
+            "1Xet+3.5": 27.1,
+            "V2et+3.5": 8.65,
+            "X2et+3.5": 16.33,
+            "12et+3.5": 28.07,
+            "V1et+4.5": 11.62,
+            "1Xet+4.5": 13.26,
+            "V2et+4.5": 5.41,
+            "X2et+4.5": 7.05,
+            "12et+4.5": 17.03,
+            "V1et+5.5": 4.92,
+            "1Xet+5.5": 6.56,
+            "V2et+5.5": 1.92,
+            "X2et+5.5": 3.56,
+            "12et+5.5": 6.83
+          },
+          "scores_probables": {
+            "1-1": 11.19,
+            "2-1": 9.23,
+            "1-0": 8.27,
+            "2-0": 7.59,
+            "1-2": 6.88,
+            "0-1": 6.08,
+            "2-2": 6.04,
+            "3-1": 5.69,
+            "0-0": 4.96,
+            "3-0": 4.41
+          },
+          "buts_moyens_simules": {
+            "home": 1.76,
+            "away": 1.25,
+            "total": 3.02
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Sporting CP)  \n**CONFIANCE** : 82 %  \n**SCORES PROBABLES** : 2‑0 ou 3‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Sporting CP** : 2ᵉ du classement avec 38 pts, moyenne de **2,80 buts marqués** et **0,90 encaissés**. En 4 derniers matchs à domicile, aucune défaite et **0 but concédé** (16 buts marqués / 0 encaissé).  \n- **Rio Ave** : 11ᵉ avec 17 pts, moyenne de **1,30 buts marqués** et **1,40 encaissés** à l’extérieur. En 6 derniers déplacements, 3 matches nuls, 2 défaites et 1 victoire, avec **9 buts marqués** et **8 encaissés**.\n\n**2. Impact du facteur domicile/extérieur**  \n- Sporting bénéficie d’une **solidité défensive à domicile exceptionnelle** (0 but encaissé sur les 4 derniers matchs).  \n- Rio Ave montre une **instabilité en défense à l’extérieur** (plus d’un but encaissé en moyenne) et peine à créer des occasions décisives loin de ses bases.\n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Sporting CP** : victoires écrasantes (6‑0 vs AVS, 4‑0 vs Estrela, 4‑0 vs Estrela) avec une possession supérieure à 60 % dans 3 des 5 derniers matchs, très forte pression (shots on target 5‑14).  \n- **Rio Ave** : performances irrégulières à l’extérieur – draws 2‑2 (Gil Vicente) et 1‑1 (Santa Clara), lourde défaite 0‑4 (Estoril), mais quelques bons moments (2‑0 vs Tondela). Leur possession moyenne à l’extérieur (≈55 %) n’est pas traduite en buts, et ils concèdent souvent plus de tirs que leurs adversaires (ex. 23 tirs contre 5 de Gil Vicente).\n\n**4. Contexte du championnat**  \n- Sporting lutte pour la deuxième place et ne peut se permettre de lâcher prise.  \n- Rio Ave, à mi‑saison, vise la stabilité et n’a aucune pression de relégation immédiate, ce qui se traduit souvent par un jeu plus prudent à l’extérieur.\n\n**5. Confrontations directes**  \n- Saison précédente : Sporting 3‑1 à domicile.  \n- Cette saison : Rio Ave 0‑3 à domicile.  \n- Dans les deux rencontres, **Sporting a marqué au moins 3 buts** et **Rio Ave n’a jamais trouvé le filet**.\n\n**6. Analyse des statistiques détaillées**  \n- **Possession** : Sporting domine (56‑70 % dans la plupart des matchs) contre Rio Ave qui oscille autour de 45‑55 % à l’extérieur.  \n- **Tirs** : Sporting réalise en moyenne **≈12 tirs (≈6 cadrés)** par match à domicile, alors que Rio Ave ne dépasse pas **≈6 tirs** à l’extérieur.  \n- **Corners** : Sporting obtient souvent plus de 5 corners, signe d’une pression offensive constante.  \n- **Sauvegardes** : Rio Ave a été très sollicité (ex. 3‑1 contre Gil Vicente) alors que Sporting a très peu de tirs à défendre.\n\n**7. Synthèse**  \nTous les indicateurs (classement, moyenne de buts, forme, statistiques de possession et de tirs, historique direct) convergent vers une **domination nette de Sporting CP à domicile**. Le risque que Rio Ave marque reste limité (historique de 0 but à domicile contre Sporting et faibles performances offensives à l’extérieur). Le score le plus probable se situe entre **2‑0** et **3‑0**, reflétant la capacité de Sporting à marquer plusieurs buts tout en maintenant une défense quasi‑imperméable.  \n\n**Conclusion** : la meilleure mise est **Victoire domicile (Sporting CP)** avec une forte confiance de 82 %, les scores les plus attendus étant **2‑0** ou **3‑0**.",
+        "confiance_pourcentage": 82,
+        "prediction_principale": "Victoire domicile (Sporting CP)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑0"
+      }
+    ]
+  }
+}
