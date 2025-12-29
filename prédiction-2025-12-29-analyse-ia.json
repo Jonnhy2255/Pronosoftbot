@@ -1,0 +1,2125 @@
+{
+  "metadata": {
+    "date_generation": "2025-12-29 03:05:33",
+    "date_matchs": "2025-12-29",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1378031,
+        "HomeTeam": "AS Roma",
+        "AwayTeam": "Genoa",
+        "date": "29 décembre 2025 à 19:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "AS Roma": 1.71,
+            "Genoa": 6.25,
+            "Draw": 3.7
+          },
+          "totals": {
+            "Over": 2.45,
+            "Under": 1.65
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 18,
+          "total_points": 9,
+          "serie_domicile": [
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 5,
+          "total_marques": 14,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 11,
+          "total_points": 7,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 11,
+          "total_marques": 13,
+          "total_encaisses": 19
+        },
+        "last_matches_home": [
+          {
+            "game_id": "736939",
+            "date": "Sat, Dec 20",
+            "home_team": "Juventus",
+            "away_team": "AS Roma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736939"
+          },
+          {
+            "game_id": "736925",
+            "date": "Mon, Dec 15",
+            "home_team": "AS Roma",
+            "away_team": "Como",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.6%",
+                "47.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736925"
+          },
+          {
+            "game_id": "757902",
+            "date": "Thu, Dec 11",
+            "home_team": "Celtic",
+            "away_team": "AS Roma",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57%",
+                "43%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757902"
+          },
+          {
+            "game_id": "736922",
+            "date": "Sun, Dec 7",
+            "home_team": "Cagliari",
+            "away_team": "AS Roma",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.7%",
+                "53.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736922"
+          },
+          {
+            "game_id": "736913",
+            "date": "Sun, Nov 30",
+            "home_team": "AS Roma",
+            "away_team": "Napoli",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56%",
+                "44%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "8",
+                "7"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736913"
+          },
+          {
+            "game_id": "757876",
+            "date": "Thu, Nov 27",
+            "home_team": "AS Roma",
+            "away_team": "FC Midtjylland",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54%",
+                "46%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757876"
+          },
+          {
+            "game_id": "736897",
+            "date": "Sun, Nov 23",
+            "home_team": "Cremonese",
+            "away_team": "AS Roma",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50%",
+                "50%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736897"
+          },
+          {
+            "game_id": "736885",
+            "date": "Sun, Nov 9",
+            "home_team": "AS Roma",
+            "away_team": "Udinese",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736885"
+          },
+          {
+            "game_id": "757865",
+            "date": "Thu, Nov 6",
+            "home_team": "Rangers",
+            "away_team": "AS Roma",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.6%",
+                "60.4%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757865"
+          },
+          {
+            "game_id": "736876",
+            "date": "Sun, Nov 2",
+            "home_team": "AC Milan",
+            "away_team": "AS Roma",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.9%",
+                "63.1%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "6"
+              ],
+              "Shot Attempts": [
+                "17",
+                "20"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "7",
+                "8"
+              ],
+              "Saves": [
+                "7",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736876"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "736942",
+            "date": "Sun, Dec 21",
+            "home_team": "Genoa",
+            "away_team": "Atalanta",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "29.3%",
+                "70.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "6",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "10"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736942"
+          },
+          {
+            "game_id": "736929",
+            "date": "Sun, Dec 14",
+            "home_team": "Genoa",
+            "away_team": "Internazionale",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.8%",
+                "64.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "8"
+              ],
+              "Shot Attempts": [
+                "5",
+                "18"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736929"
+          },
+          {
+            "game_id": "736918",
+            "date": "Mon, Dec 8",
+            "home_team": "Udinese",
+            "away_team": "Genoa",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "23",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736918"
+          },
+          {
+            "game_id": "759121",
+            "date": "Wed, Dec 3",
+            "home_team": "Atalanta",
+            "away_team": "Genoa",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759121"
+          },
+          {
+            "game_id": "736907",
+            "date": "Sat, Nov 29",
+            "home_team": "Genoa",
+            "away_team": "Hellas Verona",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.2%",
+                "39.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736907"
+          },
+          {
+            "game_id": "736903",
+            "date": "Sat, Nov 22",
+            "home_team": "Cagliari",
+            "away_team": "Genoa",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.8%",
+                "50.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736903"
+          },
+          {
+            "game_id": "736891",
+            "date": "Sun, Nov 9",
+            "home_team": "Genoa",
+            "away_team": "Fiorentina",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.3%",
+                "58.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736891"
+          },
+          {
+            "game_id": "736878",
+            "date": "Mon, Nov 3",
+            "home_team": "Sassuolo",
+            "away_team": "Genoa",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736878"
+          },
+          {
+            "game_id": "736869",
+            "date": "Wed, Oct 29",
+            "home_team": "Genoa",
+            "away_team": "Cremonese",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.2%",
+                "45.8%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736869"
+          },
+          {
+            "game_id": "736857",
+            "date": "Sun, Oct 26",
+            "home_team": "Torino",
+            "away_team": "Genoa",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/736857"
+          }
+        ],
+        "classement": {
+          "AS Roma": {
+            "position": 5,
+            "points": 30
+          },
+          "Genoa": {
+            "position": 17,
+            "points": 14
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 36
+          },
+          {
+            "position": 2,
+            "team": "AC Milan",
+            "points": 35
+          },
+          {
+            "position": 3,
+            "team": "Napoli",
+            "points": 34
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 32
+          },
+          {
+            "position": 5,
+            "team": "AS Roma",
+            "points": 30
+          },
+          {
+            "position": 6,
+            "team": "Como",
+            "points": 27
+          },
+          {
+            "position": 7,
+            "team": "Bologna",
+            "points": 26
+          },
+          {
+            "position": 8,
+            "team": "Lazio",
+            "points": 24
+          },
+          {
+            "position": 9,
+            "team": "Sassuolo",
+            "points": 22
+          },
+          {
+            "position": 10,
+            "team": "Atalanta",
+            "points": 22
+          },
+          {
+            "position": 11,
+            "team": "Udinese",
+            "points": 22
+          },
+          {
+            "position": 12,
+            "team": "Cremonese",
+            "points": 21
+          },
+          {
+            "position": 13,
+            "team": "Torino",
+            "points": 20
+          },
+          {
+            "position": 14,
+            "team": "Cagliari",
+            "points": 18
+          },
+          {
+            "position": 15,
+            "team": "Parma",
+            "points": 17
+          },
+          {
+            "position": 16,
+            "team": "Lecce",
+            "points": 16
+          },
+          {
+            "position": 17,
+            "team": "Genoa",
+            "points": 14
+          },
+          {
+            "position": 18,
+            "team": "Hellas Verona",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Pisa",
+            "points": 11
+          },
+          {
+            "position": 20,
+            "team": "Fiorentina",
+            "points": 9
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712147",
+            "date": "Sunday, September 15, 2024",
+            "team1": "Genoa",
+            "score": "1 - 1",
+            "team2": "AS Roma",
+            "title": "Genoa VS AS Roma",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712147/as-roma-genoa",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "48.7%",
+                "51.3%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "6"
+              ],
+              "Shot Attempts": [
+                "20",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "712314",
+            "date": "Friday, January 17, 2025",
+            "team1": "AS Roma",
+            "score": "3 - 1",
+            "team2": "Genoa",
+            "title": "AS Roma VS Genoa",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712314/genoa-as-roma",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/497.png",
+        "logo_away": "https://media.api-sports.io/football/teams/495.png",
+        "classement_home": 5,
+        "classement_away": 17,
+        "points_classement_home": 30,
+        "points_classement_away": 14,
+        "nom_classement_home": "AS Roma",
+        "nom_classement_away": "Genoa",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.647,
+            "lambda_away": 1.076,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 50.79,
+            "X": 24.38,
+            "V2": 24.82
+          },
+          "double_chance": {
+            "1X": 75.18,
+            "12": 75.61,
+            "X2": 49.21
+          },
+          "over_under": {
+            "plus_de_0.5": 93.34,
+            "moins_de_0.5": 6.66,
+            "plus_de_1.5": 75.22,
+            "moins_de_1.5": 24.78,
+            "plus_de_2.5": 51.27,
+            "moins_de_2.5": 48.74,
+            "plus_de_3.5": 29.32,
+            "moins_de_3.5": 70.68,
+            "plus_de_4.5": 14.31,
+            "moins_de_4.5": 85.69,
+            "plus_de_5.5": 5.79,
+            "moins_de_5.5": 94.21
+          },
+          "btts": {
+            "oui": 53.01,
+            "non": 46.99
+          },
+          "resultat_total": {
+            "V1et+0.5": 50.79,
+            "1Xet+0.5": 68.52,
+            "V2et+0.5": 24.82,
+            "X2et+0.5": 42.55,
+            "12et+0.5": 75.61,
+            "V1et+1.5": 39.94,
+            "1Xet+1.5": 57.66,
+            "V2et+1.5": 17.56,
+            "X2et+1.5": 35.28,
+            "12et+1.5": 57.5,
+            "V1et+2.5": 31.2,
+            "1Xet+2.5": 37.51,
+            "V2et+2.5": 13.76,
+            "X2et+2.5": 20.06,
+            "12et+2.5": 44.96,
+            "V1et+3.5": 16.7,
+            "1Xet+3.5": 23.0,
+            "V2et+3.5": 6.32,
+            "X2et+3.5": 12.62,
+            "12et+3.5": 23.01,
+            "V1et+4.5": 9.4,
+            "1Xet+4.5": 10.53,
+            "V2et+4.5": 3.78,
+            "X2et+4.5": 4.91,
+            "12et+4.5": 13.18,
+            "V1et+5.5": 3.48,
+            "1Xet+5.5": 4.61,
+            "V2et+5.5": 1.18,
+            "X2et+5.5": 2.32,
+            "12et+5.5": 4.66
+          },
+          "scores_probables": {
+            "1-1": 11.42,
+            "1-0": 10.85,
+            "2-1": 9.54,
+            "2-0": 8.74,
+            "0-1": 7.26,
+            "0-0": 6.66,
+            "1-2": 6.14,
+            "3-1": 5.4,
+            "2-2": 5.18,
+            "3-0": 4.96
+          },
+          "buts_moyens_simules": {
+            "home": 1.65,
+            "away": 1.07,
+            "total": 2.72
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (AS Roma)  \n**CONFIANCE** : 73%  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **AS Roma** : 5ᵉ du classement (30 pts), défense très solide (0,70 buts encaissés en moyenne, seulement 2 buts encaissés à domicile cette saison). L’attaque est modérée mais efficace (1,40 buts/match) et a déjà inscrit 5 buts à domicile.  \n- **Genoa** : 17ᵉ (14 pts), la défense est la plus vulnérable du championnat (1,90 buts encaissés en moyenne, 11 buts concédés à l’extérieur). L’attaque est légèrement meilleure à l’extérieur (1,30 buts/match, 8 buts marqués à l’extérieur) mais elle s’appuie souvent sur des matchs très ouverts (ex. 3‑3 contre Cagliari).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Roma possède une série à domicile de **W‑L‑W‑W** et n’a encaissé que 2 buts chez elle.  \n- Genoa, en déplacement, a concédé 11 buts en 5 matchs récents, dont une défaite 0‑4 contre Atalanta.  \n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **Roma** : sur les 10 derniers matchs, 6 victoires, 4 défaites, 15 buts marqués, 6 encaissés. 4 clean‑sheet (Celtic, Udinese, Rangers, une victoire 2‑0 contre Cagliari).  \n- **Genoa** : sur les 10 derniers déplacements, 2 victoires, 2 nuls, 6 défaites, 12 buts marqués, 20 encaissés. La défense a cédé en moyenne 2 buts par match à l’extérieur.  \n\n**4. Contexte du championnat**  \n- Roma lutte pour les places européennes, besoin de points.  \n- Genoa se bat pour la survie, mais la différence de points (16 pts) rend difficile de prendre confiance contre une équipe du top 5.  \n\n**5. Confrontations directes**  \n- Saison précédente : victoire 3‑1 à domicile pour Roma et match nul 1‑1 à l’extérieur. Roma a clairement dominé les duels, avec plus de tirs (16 vs 7) et une meilleure possession (≈53 %).  \n\n**6. Évaluation des cotes**  \n- Cote Roma victoire 1.71 (faible, indique une forte probabilité).  \n- Cote Under 2.5 buts 1.65, ce qui reflète la tendance des matchs de Roma à être peu prolifiques et très solides défensivement.  \n\n**7. Analyse approfondie des statistiques détaillées**  \n- **Possession** : Roma domine généralement (>50 %) contre des équipes moyennes, ce qui limite les occasions de Genoa.  \n- **Tirs cadrés** : Roma a régulièrement plus de tirs cadrés que ses adversaires (ex. 9‑5 vs Juventus, 4‑1 vs Como).  \n- **Corners** : Roma crée plus de corners, signe d’une pression offensive régulière.  \n- **Cartons** : aucune différence majeure, donc pas d’impact disciplinaire attendu.  \n\n**8. Synthèse**  \nTous les indicateurs (classement, défense à domicile, forme récente, head‑to‑head, cotes) convergent vers une victoire de l’AS Roma, très probablement avec un score serré et sans que les deux équipes marquent.  \n\n**9. Choix de la prédiction**  \n- **Victoire domicile** est la meilleure option parmi les choix autorisés.  \n- Les deux scores les plus probables, basés sur les tendances de buts marqués/encaissés, sont **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 73,
+        "prediction_principale": "Victoire domicile (AS Roma)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1396377,
+        "HomeTeam": "FC Porto",
+        "AwayTeam": "AVS",
+        "date": "29 décembre 2025 à 20:15:00 UTC",
+        "league": "Portugal - Primeira Liga",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.3,
+          "moyenne_encaisses": 0.4,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 18,
+          "total_points_10": 28,
+          "total_points": 18,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 16,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 1,
+          "total_marques": 23,
+          "total_encaisses": 4
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 10,
+          "total_points": 5,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 12,
+          "total_marques": 14,
+          "total_encaisses": 19
+        },
+        "last_matches_home": [
+          {
+            "game_id": "750375",
+            "date": "Mon, Dec 22",
+            "home_team": "Alverca",
+            "away_team": "FC Porto",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.8%",
+                "60.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750375"
+          },
+          {
+            "game_id": "762053",
+            "date": "Thu, Dec 18",
+            "home_team": "FC Porto",
+            "away_team": "FC Famalicao",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762053"
+          },
+          {
+            "game_id": "750371",
+            "date": "Mon, Dec 15",
+            "home_team": "FC Porto",
+            "away_team": "Estrela",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.5%",
+                "34.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "21",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750371"
+          },
+          {
+            "game_id": "757903",
+            "date": "Thu, Dec 11",
+            "home_team": "FC Porto",
+            "away_team": "Malmö FF",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.2%",
+                "40.8%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757903"
+          },
+          {
+            "game_id": "750361",
+            "date": "Sun, Dec 7",
+            "home_team": "Tondela",
+            "away_team": "FC Porto",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "25.7%",
+                "74.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "11",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750361"
+          },
+          {
+            "game_id": "750350",
+            "date": "Sun, Nov 30",
+            "home_team": "FC Porto",
+            "away_team": "Estoril",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.3%",
+                "51.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750350"
+          },
+          {
+            "game_id": "757870",
+            "date": "Thu, Nov 27",
+            "home_team": "FC Porto",
+            "away_team": "Nice",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.7%",
+                "44.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "6",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757870"
+          },
+          {
+            "game_id": "760107",
+            "date": "Sat, Nov 22",
+            "home_team": "FC Porto",
+            "away_team": "Sintrense",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/760107"
+          },
+          {
+            "game_id": "750338",
+            "date": "Sun, Nov 9",
+            "home_team": "FC Famalicao",
+            "away_team": "FC Porto",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.7%",
+                "54.3%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "19"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750338"
+          },
+          {
+            "game_id": "757851",
+            "date": "Thu, Nov 6",
+            "home_team": "FC Utrecht",
+            "away_team": "FC Porto",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "25.3%",
+                "74.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "8"
+              ],
+              "Shot Attempts": [
+                "11",
+                "19"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "2",
+                "7"
+              ],
+              "Saves": [
+                "7",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/757851"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750376",
+            "date": "Sun, Dec 21",
+            "home_team": "AVS",
+            "away_team": "C.D. Nacional",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.4%",
+                "63.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "16",
+                "19"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "9",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750376"
+          },
+          {
+            "game_id": "762054",
+            "date": "Wed, Dec 17",
+            "home_team": "Vitória de Guimaraes",
+            "away_team": "AVS",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762054"
+          },
+          {
+            "game_id": "750366",
+            "date": "Sat, Dec 13",
+            "home_team": "Sporting CP",
+            "away_team": "AVS",
+            "score": "6 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.1%",
+                "32.9%"
+              ],
+              "Shots on Goal": [
+                "14",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750366"
+          },
+          {
+            "game_id": "750357",
+            "date": "Sat, Dec 6",
+            "home_team": "AVS",
+            "away_team": "Rio Ave",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.3%",
+                "64.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "8"
+              ],
+              "Shot Attempts": [
+                "9",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "6"
+              ],
+              "Corner Kicks": [
+                "3",
+                "11"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750357"
+          },
+          {
+            "game_id": "750353",
+            "date": "Fri, Nov 28",
+            "home_team": "Vitória de Guimaraes",
+            "away_team": "AVS",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46%",
+                "54%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750353"
+          },
+          {
+            "game_id": "760108",
+            "date": "Sat, Nov 22",
+            "home_team": "AVS",
+            "away_team": "Viseu",
+            "score": "0 - 0",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/760108"
+          },
+          {
+            "game_id": "750341",
+            "date": "Sun, Nov 9",
+            "home_team": "AVS",
+            "away_team": "Gil Vicente",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "1",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750341"
+          },
+          {
+            "game_id": "750331",
+            "date": "Sun, Nov 2",
+            "home_team": "AVS",
+            "away_team": "Tondela",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55%",
+                "45%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "10"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750331"
+          },
+          {
+            "game_id": "750324",
+            "date": "Sat, Oct 25",
+            "home_team": "Santa Clara",
+            "away_team": "AVS",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.1%",
+                "39.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750324"
+          },
+          {
+            "game_id": "759159",
+            "date": "Sat, Oct 18",
+            "home_team": "AD Fornos Algodres",
+            "away_team": "AVS",
+            "score": "0 - 7",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/759159"
+          }
+        ],
+        "classement": {
+          "FC Porto": {
+            "position": 1,
+            "points": 43
+          },
+          "AVS": {
+            "position": 18,
+            "points": 4
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "FC Porto",
+            "points": 43
+          },
+          {
+            "position": 2,
+            "team": "Sporting CP",
+            "points": 41
+          },
+          {
+            "position": 3,
+            "team": "Benfica",
+            "points": 36
+          },
+          {
+            "position": 4,
+            "team": "Gil Vicente",
+            "points": 27
+          },
+          {
+            "position": 5,
+            "team": "Braga",
+            "points": 26
+          },
+          {
+            "position": 6,
+            "team": "FC Famalicao",
+            "points": 23
+          },
+          {
+            "position": 7,
+            "team": "Vitória de Guimaraes",
+            "points": 22
+          },
+          {
+            "position": 8,
+            "team": "Moreirense",
+            "points": 21
+          },
+          {
+            "position": 9,
+            "team": "Estoril",
+            "points": 20
+          },
+          {
+            "position": 10,
+            "team": "Estrela",
+            "points": 18
+          },
+          {
+            "position": 11,
+            "team": "Rio Ave",
+            "points": 17
+          },
+          {
+            "position": 12,
+            "team": "Alverca",
+            "points": 17
+          },
+          {
+            "position": 13,
+            "team": "C.D. Nacional",
+            "points": 16
+          },
+          {
+            "position": 14,
+            "team": "Santa Clara",
+            "points": 16
+          },
+          {
+            "position": 15,
+            "team": "Casa Pia",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Arouca",
+            "points": 14
+          },
+          {
+            "position": 17,
+            "team": "Tondela",
+            "points": 9
+          },
+          {
+            "position": 18,
+            "team": "AVS",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712680",
+            "date": "Monday, October 28, 2024",
+            "team1": "AVS",
+            "score": "0 - 5",
+            "team2": "FC Porto",
+            "title": "AVS VS FC Porto",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712680/fc-porto-avs",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "41%",
+                "59%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "7"
+              ],
+              "Shot Attempts": [
+                "5",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            }
+          },
+          {
+            "gameId": "712835",
+            "date": "Saturday, March 15, 2025",
+            "team1": "FC Porto",
+            "score": "2 - 0",
+            "team2": "AVS",
+            "title": "FC Porto VS AVS",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712835/avs-fc-porto",
+            "source": "Primeira Liga",
+            "stats": {
+              "Possession": [
+                "68.3%",
+                "31.7%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "8"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/212.png",
+        "logo_away": "https://media.api-sports.io/football/teams/21595.png",
+        "classement_home": 1,
+        "classement_away": 18,
+        "points_classement_home": 43,
+        "points_classement_away": 4,
+        "nom_classement_home": "FC Porto",
+        "nom_classement_away": "AVS",
+        "country_fr": "Portugal - Primeira Liga",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.688,
+            "lambda_away": 1.259,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 47.58,
+            "X": 24.08,
+            "V2": 28.35
+          },
+          "double_chance": {
+            "1X": 71.65,
+            "12": 75.92,
+            "X2": 52.42
+          },
+          "over_under": {
+            "plus_de_0.5": 94.52,
+            "moins_de_0.5": 5.48,
+            "plus_de_1.5": 79.12,
+            "moins_de_1.5": 20.88,
+            "plus_de_2.5": 56.74,
+            "moins_de_2.5": 43.26,
+            "plus_de_3.5": 34.28,
+            "moins_de_3.5": 65.72,
+            "plus_de_4.5": 17.72,
+            "moins_de_4.5": 82.28,
+            "plus_de_5.5": 8.14,
+            "moins_de_5.5": 91.86
+          },
+          "btts": {
+            "oui": 58.5,
+            "non": 41.5
+          },
+          "resultat_total": {
+            "V1et+0.5": 47.58,
+            "1Xet+0.5": 66.18,
+            "V2et+0.5": 28.35,
+            "X2et+0.5": 46.95,
+            "12et+0.5": 75.92,
+            "V1et+1.5": 38.71,
+            "1Xet+1.5": 57.31,
+            "V2et+1.5": 21.82,
+            "X2et+1.5": 40.42,
+            "12et+1.5": 60.52,
+            "V1et+2.5": 31.44,
+            "1Xet+2.5": 39.12,
+            "V2et+2.5": 17.61,
+            "X2et+2.5": 25.3,
+            "12et+2.5": 49.05,
+            "V1et+3.5": 17.75,
+            "1Xet+3.5": 25.44,
+            "V2et+3.5": 8.83,
+            "X2et+3.5": 16.53,
+            "12et+3.5": 26.58,
+            "V1et+4.5": 10.64,
+            "1Xet+4.5": 12.39,
+            "V2et+4.5": 5.34,
+            "X2et+4.5": 7.09,
+            "12et+4.5": 15.97,
+            "V1et+5.5": 4.42,
+            "1Xet+5.5": 6.18,
+            "V2et+5.5": 1.96,
+            "X2et+5.5": 3.72,
+            "12et+5.5": 6.39
+          },
+          "scores_probables": {
+            "1-1": 10.91,
+            "2-1": 9.61,
+            "1-0": 8.86,
+            "2-0": 7.28,
+            "1-2": 7.1,
+            "0-1": 6.54,
+            "2-2": 5.94,
+            "0-0": 5.48,
+            "3-1": 5.3,
+            "0-2": 4.2
+          },
+          "buts_moyens_simules": {
+            "home": 1.69,
+            "away": 1.26,
+            "total": 2.95
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 78 %  \n**SCORES PROBABLES** : 2‑0 ou 3‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces / faiblesses)**  \n- **FC Porto** : leader du championnat (43 pts), moyenne de **2,30 buts marqués** et **0,40 buts encaissés** à domicile. En 6 derniers matchs, aucune défaite et 5 victoires consécutives. En 10 derniers matchs, 9 victoires et 1 nul. En domicile, 16 buts marqués pour seulement 3 encaissés.  \n- **AVS** : dernier du tableau (4 pts), moyenne de **1,40 buts marqués** et **1,90 buts encaissés** à l’extérieur. Forme très irrégulière (5 points sur 6 matchs, 10 points sur 10 matchs). En déplacement, 8 buts marqués contre 12 encaissés.\n\n**2. Impact du facteur domicile / extérieur**  \nPorto joue à domicile avec une série de 6 victoires consécutives, tandis qu’AVS a du mal à obtenir des points à l’extérieur (seulement 2 victoires sur 6 déplacements). L’avantage du terrain renforce la probabilité d’un résultat offensif pour Porto.\n\n**3. Formes récentes et tendances (statistiques détaillées)**  \n- **Porto** : dans les 5 derniers matchs à domicile, le nombre de tirs cadrés varie de 5 à 11, avec une possession moyenne supérieure à 55 %. Le ratio tirs‑cadrés / tirs totaux est très élevé (ex. 11‑2 contre Malmö, 7‑1 contre Estrela). Les buts marqués à domicile sont souvent multiples (3‑0, 4‑1, 2‑1).  \n- **AVS** : leurs matchs à l’extérieur montrent une faible capacité à créer des occasions dangereuses (ex. 3‑6 tirs cadrés contre Nacional, 5‑8 contre Rio Ave). Leur défense concède régulièrement (ex. 6‑0 contre Sporting, 2‑0 contre Vitória). Même lorsqu’ils marquent, c’est rarement plus d’un but.\n\n**4. Contexte du championnat**  \nPorto est à 2 points du deuxième (Sporting) et ne peut se permettre de perdre. AVS, quant à lui, lutte contre la relégation et n’a aucune marge de manœuvre, ce qui les pousse à jouer de manière défensive mais sans succès jusqu’à présent.\n\n**5. Confrontations directes**  \n- Saison précédente : 0‑5 (Porto)  \n- Saison en cours : 2‑0 (Porto)  \nDans les deux rencontres, Porto a inscrit **au moins deux buts** et a **gardé sa cage inviolée**. La tendance se confirme avec une domination du côté de Porto (possession > 60 %, tirs cadrés supérieurs à 8).\n\n**6. Analyse des statistiques détaillées**  \n- **Possession** : Porto domine (> 55 % en moyenne), AVS ne dépasse pas 40 % en déplacement.  \n- **Tirs cadrés** : Porto réalise en moyenne 7‑10 tirs cadrés par match à domicile, alors qu’AVS n’en obtient que 2‑5 à l’extérieur.  \n- **Corners** : Porto obtient régulièrement plus de 4 corners, signe d’une pression offensive constante.  \n- **Cartons** : Aucun facteur disciplinaire majeur qui pourrait freiner l’attaque de Porto.\n\n**7. Synthèse**  \nTous les indicateurs pointent vers une rencontre où Porto marque plusieurs buts tout en maintenant une défense quasi‑impénétrable. Le total de buts dépasse très souvent les 2,5 buts dans les matchs récents de Porto à domicile, alors qu’AVS a du mal à contenir l’attaque adverse.\n\n**Conclusion** : La prédiction la plus fiable est **« Plus de 2.5 buts »** avec une forte probabilité que le score final soit **2‑0** ou **3‑0** en faveur de FC Porto.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑0"
+      }
+    ]
+  }
+}
