@@ -52,7 +52,6 @@ FOOTBALL_LEAGUES = {
   "FIFA_Club_World_Cup": { "id": "fifa.cwc" }
 }
     # Ajoute ici d'autres ligues si nécessaire
-}
 
 # HOCKEY NHL
 NHL_URL = "https://www.espn.com/nhl/teams"
