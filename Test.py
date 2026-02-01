@@ -18,14 +18,39 @@ FOOTBALL_OUTPUT_DIR = "data/football/teams"
 FOOTBALL_OUTPUT_FILE = "football_teams.json"
 
 FOOTBALL_LEAGUES = {
-    "England_Premier_League": { "id": "eng.1" },
-    "Spain_Laliga": { "id": "esp.1" },
-    "Germany_Bundesliga": { "id": "ger.1" },
-    "France_Ligue_1": { "id": "fra.1" },
-    "Italy_Serie_A": { "id": "ita.1" },
-    "UEFA_Champions_League": { "id": "uefa.champions" },
-    "UEFA_Europa_League": { "id": "uefa.europa" },
-    "FIFA_Club_World_Cup": { "id": "fifa.cwc" }
+  "England_Premier_League": { "id": "eng.1" },
+  "Spain_Laliga": { "id": "esp.1" },
+  "Germany_Bundesliga": { "id": "ger.1" },
+  "Argentina_Primera_Nacional": { "id": "arg.2" },
+  "Austria_Bundesliga": { "id": "aut.1" },
+  "Belgium_Jupiler_Pro_League": { "id": "bel.1" },
+  "Brazil_Serie_A": { "id": "bra.1" },
+  "Brazil_Serie_B": { "id": "bra.2" },
+  "Chile_Primera_Division": { "id": "chi.1" },
+  "China_Super_League": { "id": "chn.1" },
+  "Colombia_Primera_A": { "id": "col.1" },
+  "England_National_League": { "id": "eng.5" },
+  "France_Ligue_1": { "id": "fra.1" },
+  "Greece_Super_League_1": { "id": "gre.1" },
+  "Italy_Serie_A": { "id": "ita.1" },
+  "Japan_J1_League": { "id": "jpn.1" },
+  "Mexico_Liga_MX": { "id": "mex.1" },
+  "Netherlands_Eredivisie": { "id": "ned.1" },
+  "Paraguay_Division_Profesional": { "id": "par.1" },
+  "Peru_Primera_Division": { "id": "per.1" },
+  "Portugal_Primeira_Liga": { "id": "por.1" },
+  "Romania_Liga_I": { "id": "rou.1" },
+  "Russia_Premier_League": { "id": "rus.1" },
+  "Saudi_Arabia_Pro_League": { "id": "ksa.1" },
+  "Sweden_Allsvenskan": { "id": "swe.1" },
+  "Switzerland_Super_League": { "id": "sui.1" },
+  "Turkey_Super_Lig": { "id": "tur.1" },
+  "USA_Major_League_Soccer": { "id": "usa.1" },
+  "Venezuela_Primera_Division": { "id": "ven.1" },
+  "UEFA_Champions_League": { "id": "uefa.champions" },
+  "UEFA_Europa_League": { "id": "uefa.europa" },
+  "FIFA_Club_World_Cup": { "id": "fifa.cwc" }
+}
     # Ajoute ici d'autres ligues si nécessaire
 }
 
