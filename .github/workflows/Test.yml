@@ -7,7 +7,7 @@ on:
     - cron: '30 0 * * *'
 
 jobs:
-  scrape-teams:
+  scrape-nhl-games-of-day:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,8 +32,7 @@ jobs:
       # 4️⃣ Créer les dossiers nécessaires si absents
       - name: Create data folders
         run: |
-          mkdir -p data/football/teams
-          mkdir -p data/hockey/teams
+          mkdir -p data/hockey
 
       # 5️⃣ 🔥 Rebase AVANT toute écriture
       - name: Sync with remote main
@@ -42,20 +41,13 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
 
-      # 6️⃣ Exécution du scraper
-      - name: Run teams scraper
+      # 6️⃣ Exécution du scraper NHL du jour
+      - name: Run NHL games of day scraper
         run: python Test.py
 
-      # 7️⃣ Commit & push des résultats football
-      - name: Commit and push football results
+      # 7️⃣ Commit & push des résultats NHL (matchs du jour)
+      - name: Commit and push NHL games of day
         run: |
-          git add data/football/teams/football_teams.json
-          git commit -m "Update football teams JSON" || echo "No changes to commit"
-          git push origin main
-
-      # 8️⃣ Commit & push des résultats hockey
-      - name: Commit and push hockey results
-        run: |
-          git add data/hockey/teams/hockey_NHL_teams.json
-          git commit -m "Update NHL teams JSON" || echo "No changes to commit"
+          git add data/hockey/games_of_day_nhl.json
+          git commit -m "Update NHL games of the day (upcoming)" || echo "No changes to commit"
           git push origin main
