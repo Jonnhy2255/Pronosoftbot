@@ -3,17 +3,23 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import json
 import os
+import re
 
 URL = "https://www.espn.com/nhl/schedule"
 OUTPUT_PATH = "data/hockey/games_of_day_nhl.json"
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+}
+
+def clean_team_name_from_url(url):
+    # /nhl/team/_/name/la/los-angeles-kings
+    return url.split("/")[-1].replace("-", " ").title()
+
 def get_today_upcoming_games():
-    res = requests.get(URL, headers={
-        "User-Agent": "Mozilla/5.0"
-    })
+    res = requests.get(URL, headers=HEADERS)
     soup = BeautifulSoup(res.text, "html.parser")
 
-    # Format ESPN : Sunday, February 1, 2026
     today_str = datetime.now().strftime("%A, %B %d, %Y").replace(" 0", " ")
 
     results = []
@@ -23,10 +29,7 @@ def get_today_upcoming_games():
         if not title:
             continue
 
-        table_date = title.text.strip()
-
-        # Uniquement les matchs du jour
-        if table_date != today_str:
+        if title.text.strip() != today_str:
             continue
 
         table = table_block.select_one("table")
@@ -34,34 +37,53 @@ def get_today_upcoming_games():
             continue
 
         headers = [th.text.strip().lower() for th in table.select("thead th")]
-
-        # On garde seulement les tableaux avec TIME (matchs non joués)
         if "time" not in headers:
-            continue
+            continue  # matchs déjà joués
 
         for row in table.select("tbody tr"):
-            team_links = row.select(".Table__Team a:last-child")
-            if len(team_links) != 2:
+            teams = row.select(".Table__Team")
+            if len(teams) != 2:
                 continue
 
-            away = team_links[0].text.strip()
-            home = team_links[1].text.strip()
+            # Away
+            away_link = teams[0].select_one("a[href*='/nhl/team']")
+            away_logo = teams[0].select_one("img")
+            away_name = clean_team_name_from_url(away_link["href"])
+            away_logo_url = away_logo["src"] if away_logo else None
+
+            # Home
+            home_link = teams[1].select_one("a[href*='/nhl/team']")
+            home_logo = teams[1].select_one("img")
+            home_name = clean_team_name_from_url(home_link["href"])
+            home_logo_url = home_logo["src"] if home_logo else None
 
             time_cell = row.select_one(".date__col a")
-            time = time_cell.text.strip() if time_cell else None
+            if not time_cell:
+                continue
 
-            game_link = row.select_one(".date__col a")
+            time = time_cell.text.strip()
+
+            # gameId
             game_id = None
-
-            if game_link and "gameId" in game_link["href"]:
-                game_id = game_link["href"].split("gameId/")[1].split("/")[0]
+            match = re.search(r"gameId/(\d+)", time_cell["href"])
+            if match:
+                game_id = match.group(1)
 
             results.append({
-                "date": table_date,
+                "league": "NHL",
+                "date": today_str,
                 "time": time,
-                "home": home,
-                "away": away,
-                "gameId": game_id
+                "gameId": game_id,
+                "teams": {
+                    "away": {
+                        "name": away_name,
+                        "logo": away_logo_url
+                    },
+                    "home": {
+                        "name": home_name,
+                        "logo": home_logo_url
+                    }
+                }
             })
 
     return results
@@ -77,4 +99,4 @@ if __name__ == "__main__":
     games = get_today_upcoming_games()
     save_to_json(games, OUTPUT_PATH)
 
-    print(f"\n✅ {len(games)} matchs NHL du jour enregistrés avec noms complets dans : {OUTPUT_PATH}\n")
+    print(f"\n✅ {len(games)} matchs NHL du jour enregistrés dans : {OUTPUT_PATH}\n")
