@@ -43,7 +43,8 @@ jobs:
 
       # 6️⃣ Exécution du scraper NHL du jour
       - name: Run NHL games of day scraper
-        run: python Test.py
+        run: |
+          python scripts/NHL/games_of_days_nhl.py
 
       # 7️⃣ Commit & push des résultats NHL (matchs du jour)
       - name: Commit and push NHL games of day
