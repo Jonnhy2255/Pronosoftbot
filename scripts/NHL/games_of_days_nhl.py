@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import json
 import os
+import re
 
 # ================= CONFIG =================
-BASE_URL = "https://www.espn.com/nhl/schedule/_/date/"
+BASE_URL = "https://www.espn.com/nhl/schedule"
 OUTPUT_PATH = "data/hockey/games_of_day_nhl.json"
 
 HEADERS = {
@@ -14,25 +15,16 @@ HEADERS = {
 # ==========================================
 
 
-def get_today_url():
-    today = datetime.now().strftime("%Y%m%d")
-    return BASE_URL + today, today
-
-
-def clean_text(text: str) -> str:
-    return text.replace("\n", "").strip()
-
-
 def parse_team_from_url(team_href: str) -> dict:
     """
-    Exemple ESPN :
+    Exemple:
     /nhl/team/_/name/bos/boston-bruins
     """
     team_href = team_href.rstrip("/")
     parts = team_href.split("/")
 
-    team_id = parts[-2]          # bos
-    slug = parts[-1]             # boston-bruins
+    team_id = parts[-2]
+    slug = parts[-1]
     name = slug.replace("-", " ").title()
 
     return {
@@ -43,53 +35,72 @@ def parse_team_from_url(team_href: str) -> dict:
     }
 
 
+def convert_espn_date(date_text: str) -> str:
+    """
+    ESPN example:
+    'Tuesday, February 4'
+    """
+    date_text = re.sub(r"^[A-Za-z]+,\s*", "", date_text)
+    date_obj = datetime.strptime(date_text, "%B %d")
+    date_obj = date_obj.replace(year=datetime.now().year)
+
+    return date_obj.strftime("%Y%m%d")
+
+
 def get_games_of_day():
-    url, today_str = get_today_url()
-    response = requests.get(url, headers=HEADERS, timeout=15)
+    today_str = datetime.now().strftime("%Y%m%d")
+    response = requests.get(BASE_URL, headers=HEADERS, timeout=15)
     response.raise_for_status()
 
     soup = BeautifulSoup(response.text, "html.parser")
     games = []
 
-    # Tables ESPN contenant les matchs
-    tables = soup.select("table.Table")
+    sections = soup.select("section")
 
-    for table in tables:
-        headers = [th.get_text(strip=True).lower() for th in table.select("thead th")]
-
-        # On garde uniquement les tables avec colonne TIME (matchs à venir)
-        if "time" not in headers:
+    for section in sections:
+        title = section.select_one("h2.Table__Title")
+        if not title:
             continue
 
-        rows = table.select("tbody tr")
+        espn_date = convert_espn_date(title.get_text(strip=True))
 
-        for row in rows:
-            team_links = row.select(".Table__Team a[href*='/nhl/team']")
-            if len(team_links) < 2:
+        # 🔥 On garde UNIQUEMENT les matchs du jour
+        if espn_date != today_str:
+            continue
+
+        tables = section.select("table.Table")
+
+        for table in tables:
+            headers = [th.get_text(strip=True).lower() for th in table.select("thead th")]
+            if "time" not in headers:
                 continue
 
-            away_team = parse_team_from_url(team_links[0]["href"])
-            home_team = parse_team_from_url(team_links[1]["href"])
+            rows = table.select("tbody tr")
 
-            # Heure + lien du match
-            time_cell = row.select_one("td.date__col a")
-            if not time_cell:
-                continue
+            for row in rows:
+                teams = row.select(".Table__Team a[href*='/nhl/team']")
+                if len(teams) < 2:
+                    continue
 
-            match_time = clean_text(time_cell.get_text())
-            match_url = "https://www.espn.com" + time_cell["href"]
+                away_team = parse_team_from_url(teams[0]["href"])
+                home_team = parse_team_from_url(teams[1]["href"])
 
-            game = {
-                "date": today_str,
-                "time": match_time,
-                "match": f"{away_team['name']} v {home_team['name']}",
-                "score": "v",
-                "away": away_team,
-                "home": home_team,
-                "match_url": match_url
-            }
+                time_cell = row.select_one("td.date__col a")
+                if not time_cell:
+                    continue
 
-            games.append(game)
+                match_time = time_cell.get_text(strip=True)
+                match_url = "https://www.espn.com" + time_cell["href"]
+
+                games.append({
+                    "date": espn_date,
+                    "time": match_time,
+                    "match": f"{away_team['name']} v {home_team['name']}",
+                    "score": "v",
+                    "away": away_team,
+                    "home": home_team,
+                    "match_url": match_url
+                })
 
     return {
         "source": "ESPN",
@@ -109,4 +120,4 @@ def save_json(data: dict):
 if __name__ == "__main__":
     data = get_games_of_day()
     save_json(data)
-    print(f"✅ {data['games_count']} matchs NHL à venir enregistrés dans {OUTPUT_PATH}")
+    print(f"✅ {data['games_count']} matchs NHL DU JOUR enregistrés dans {OUTPUT_PATH}")
