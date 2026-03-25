@@ -1,0 +1,638 @@
+{
+  "metadata": {
+    "date_generation": "2026-03-25 03:37:02",
+    "date_matchs": "2026-03-25",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1399877,
+        "HomeTeam": "Wealdstone",
+        "AwayTeam": "Yeovil Town",
+        "date": "25 mars 2026 à 19:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 12,
+          "total_points": 9,
+          "serie_domicile": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 8,
+          "total_marques": 16,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.9,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 10,
+          "total_points": 9,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 9,
+          "total_marques": 13,
+          "total_encaisses": 19
+        },
+        "last_matches_home": [
+          {
+            "game_id": "752134",
+            "date": "Sat, 21 Mar",
+            "home_team": "Forest Green Rovers",
+            "away_team": "Wealdstone",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752134"
+          },
+          {
+            "game_id": "752020",
+            "date": "Tue, 17 Mar",
+            "home_team": "Gateshead",
+            "away_team": "Wealdstone",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752020"
+          },
+          {
+            "game_id": "752126",
+            "date": "Sat, 14 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Solihull Moors",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752126"
+          },
+          {
+            "game_id": "752008",
+            "date": "Tue, 10 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Tamworth",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752008"
+          },
+          {
+            "game_id": "752115",
+            "date": "Sat, 7 Mar",
+            "home_team": "Braintree Town",
+            "away_team": "Wealdstone",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752115"
+          },
+          {
+            "game_id": "752025",
+            "date": "Tue, 3 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Morecambe",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752025"
+          },
+          {
+            "game_id": "752089",
+            "date": "Tue, 24 Feb",
+            "home_team": "Wealdstone",
+            "away_team": "Brackley Town",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752089"
+          },
+          {
+            "game_id": "752072",
+            "date": "Sat, 21 Feb",
+            "home_team": "Sutton United",
+            "away_team": "Wealdstone",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752072"
+          },
+          {
+            "game_id": "752064",
+            "date": "Sat, 14 Feb",
+            "home_team": "Wealdstone",
+            "away_team": "York City",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752064"
+          },
+          {
+            "game_id": "752052",
+            "date": "Tue, 10 Feb",
+            "home_team": "Altrincham",
+            "away_team": "Wealdstone",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752052"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "752140",
+            "date": "Sat, 21 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Morecambe",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752140"
+          },
+          {
+            "game_id": "752016",
+            "date": "Tue, 17 Mar",
+            "home_team": "Woking",
+            "away_team": "Yeovil Town",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752016"
+          },
+          {
+            "game_id": "752123",
+            "date": "Sat, 14 Mar",
+            "home_team": "Boston United",
+            "away_team": "Yeovil Town",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752123"
+          },
+          {
+            "game_id": "752113",
+            "date": "Sat, 7 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Scunthorpe United",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752113"
+          },
+          {
+            "game_id": "752035",
+            "date": "Tue, 3 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Tamworth",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752035"
+          },
+          {
+            "game_id": "752093",
+            "date": "Wed, 25 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Sutton United",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752093"
+          },
+          {
+            "game_id": "752080",
+            "date": "Sat, 21 Feb",
+            "home_team": "Carlisle United",
+            "away_team": "Yeovil Town",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752080"
+          },
+          {
+            "game_id": "752005",
+            "date": "Tue, 17 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Aldershot Town",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752005"
+          },
+          {
+            "game_id": "752062",
+            "date": "Sat, 14 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Rochdale",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752062"
+          },
+          {
+            "game_id": "752055",
+            "date": "Wed, 11 Feb",
+            "home_team": "Boreham Wood",
+            "away_team": "Yeovil Town",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752055"
+          }
+        ],
+        "classement": {
+          "Wealdstone": {
+            "position": 12,
+            "points": 48
+          },
+          "Yeovil Town": {
+            "position": 17,
+            "points": 44
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 94
+          },
+          {
+            "position": 2,
+            "team": "York City",
+            "points": 92
+          },
+          {
+            "position": 3,
+            "team": "Carlisle United",
+            "points": 81
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 77
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 73
+          },
+          {
+            "position": 6,
+            "team": "Forest Green Rovers",
+            "points": 68
+          },
+          {
+            "position": 7,
+            "team": "FC Halifax Town",
+            "points": 62
+          },
+          {
+            "position": 8,
+            "team": "Southend United",
+            "points": 61
+          },
+          {
+            "position": 9,
+            "team": "Hartlepool United",
+            "points": 57
+          },
+          {
+            "position": 10,
+            "team": "Woking",
+            "points": 52
+          },
+          {
+            "position": 11,
+            "team": "Boston United",
+            "points": 48
+          },
+          {
+            "position": 12,
+            "team": "Wealdstone",
+            "points": 48
+          },
+          {
+            "position": 13,
+            "team": "Tamworth",
+            "points": 48
+          },
+          {
+            "position": 14,
+            "team": "Altrincham",
+            "points": 47
+          },
+          {
+            "position": 15,
+            "team": "Sutton United",
+            "points": 46
+          },
+          {
+            "position": 16,
+            "team": "Solihull Moors",
+            "points": 44
+          },
+          {
+            "position": 17,
+            "team": "Yeovil Town",
+            "points": 44
+          },
+          {
+            "position": 18,
+            "team": "Aldershot Town",
+            "points": 42
+          },
+          {
+            "position": 19,
+            "team": "Eastleigh",
+            "points": 42
+          },
+          {
+            "position": 20,
+            "team": "Gateshead",
+            "points": 40
+          },
+          {
+            "position": 21,
+            "team": "Brackley Town",
+            "points": 38
+          },
+          {
+            "position": 22,
+            "team": "Braintree Town",
+            "points": 35
+          },
+          {
+            "position": 23,
+            "team": "Morecambe",
+            "points": 34
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 28
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713129",
+            "date": "Saturday, October 19, 2024",
+            "team1": "Wealdstone",
+            "score": "0 - 3",
+            "team2": "Yeovil Town",
+            "title": "Wealdstone VS Yeovil Town",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713129/yeovil-town-wealdstone",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713342",
+            "date": "Saturday, February 15, 2025",
+            "team1": "Yeovil Town",
+            "score": "1 - 2",
+            "team2": "Wealdstone",
+            "title": "Yeovil Town VS Wealdstone",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713342/wealdstone-yeovil-town",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "751871",
+            "date": "Tuesday, November 4, 2025",
+            "team1": "Yeovil Town",
+            "score": "0 - 2",
+            "team2": "Wealdstone",
+            "title": "Yeovil Town VS Wealdstone",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/751871/wealdstone-yeovil-town",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/8663.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1377.png",
+        "classement_home": 12,
+        "classement_away": 17,
+        "points_classement_home": 48,
+        "points_classement_away": 44,
+        "nom_classement_home": "Wealdstone",
+        "nom_classement_away": "Yeovil Town",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.44,
+            "lambda_away": 1.51,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 35.93,
+            "X": 24.4,
+            "V2": 39.68
+          },
+          "double_chance": {
+            "1X": 60.32,
+            "12": 75.6,
+            "X2": 64.08
+          },
+          "over_under": {
+            "plus_de_0.5": 94.84,
+            "moins_de_0.5": 5.16,
+            "plus_de_1.5": 78.98,
+            "moins_de_1.5": 21.02,
+            "plus_de_2.5": 56.09,
+            "moins_de_2.5": 43.91,
+            "plus_de_3.5": 34.16,
+            "moins_de_3.5": 65.84,
+            "plus_de_4.5": 17.24,
+            "moins_de_4.5": 82.76,
+            "plus_de_5.5": 7.73,
+            "moins_de_5.5": 92.27
+          },
+          "btts": {
+            "oui": 58.76,
+            "non": 41.24
+          },
+          "resultat_total": {
+            "V1et+0.5": 35.93,
+            "1Xet+0.5": 55.16,
+            "V2et+0.5": 39.68,
+            "X2et+0.5": 58.91,
+            "12et+0.5": 75.6,
+            "V1et+1.5": 28.14,
+            "1Xet+1.5": 47.37,
+            "V2et+1.5": 31.61,
+            "X2et+1.5": 50.84,
+            "12et+1.5": 59.74,
+            "V1et+2.5": 22.55,
+            "1Xet+2.5": 30.6,
+            "V2et+2.5": 25.49,
+            "X2et+2.5": 33.54,
+            "12et+2.5": 48.04,
+            "V1et+3.5": 12.06,
+            "1Xet+3.5": 20.11,
+            "V2et+3.5": 14.04,
+            "X2et+3.5": 22.1,
+            "12et+3.5": 26.1,
+            "V1et+4.5": 7.16,
+            "1Xet+4.5": 9.01,
+            "V2et+4.5": 8.22,
+            "X2et+4.5": 10.08,
+            "12et+4.5": 15.38,
+            "V1et+5.5": 2.6,
+            "1Xet+5.5": 4.46,
+            "V2et+5.5": 3.28,
+            "X2et+5.5": 5.12,
+            "12et+5.5": 5.88
+          },
+          "scores_probables": {
+            "1-1": 11.18,
+            "1-2": 8.43,
+            "0-1": 8.07,
+            "2-1": 8.06,
+            "1-0": 7.79,
+            "2-2": 6.2,
+            "0-2": 6.12,
+            "2-0": 5.58,
+            "0-0": 5.16,
+            "1-3": 4.56
+          },
+          "buts_moyens_simules": {
+            "home": 1.42,
+            "away": 1.51,
+            "total": 2.94
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Wealdstone)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 2‑1 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Wealdstone** (12ᵉ, 48 pts) : moyenne 1,60 btg marqués / 1,80 btg encaissés. À domicile, ils ont inscrit **12 btg** et encaissé **10** (≈ 2,0 btg marqués et 1,7 btg encaissés par match). Leur attaque est l’une des plus productives du groupe milieu‑tableau.  \n- **Yeovil Town** (17ᵉ, 44 pts) : moyenne 1,30 btg marqués / 1,90 btg encaissés. En déplacement, ils n’ont marqué que **3 btg** et encaissé **9** (≈ 0,5 btg marqués et 1,5 btg encaissés), ce qui montre une très faible capacité offensive à l’extérieur.\n\n**2. Impact du facteur domicile/extérieur**  \n- Wealdstone a une série à domicile **W‑W‑L‑W‑L** (4 victoires / 1 défaite sur leurs 5 derniers matchs à domicile).  \n- Yeovil cumule une série à l’extérieur **L‑L‑L‑L** (4 défaites consécutives). Leur moral à l’extérieur est donc très fragile.\n\n**3. Forme récente**  \n- **Wealdstone** (6 derniers) : L L W W W L → 9 pts, avec trois victoires consécutives avant la dernière défaite.  \n- **Yeovil** (6 derniers) : W L L L W W → 9 pts, mais les deux dernières victoires sont intercalées de trois revers, dont deux lourds (0‑3 contre Scunthorpe).  \n\n**4. Tendances de buts**  \n- À domicile, Wealdstone a réalisé des scores élevés (5‑1, 4‑1, 3‑2) ; leur moyenne à domicile sur les 6 derniers matchs est **≈ 2,7 btg marqués**.  \n- Yeovil à l’extérieur a souvent été limité à 0‑1‑2 btg (ex. 0‑1 à Woking, 2‑1 à Boston United, 3‑2 à Sutton). Leur moyenne à l’extérieur sur les 5 derniers déplacements est **≈ 1,6 btg marqués**.\n\n**5. Contexte du championnat**  \n- Les deux équipes sont très proches au classement (48 pts vs 44 pts). La différence de points n’est pas décisive, mais la position de Wealdstone (12ᵉ) les place légèrement au-dessus de la zone de relégation, alors que Yeovil (17ᵉ) lutte pour s’en éloigner. Cette dynamique pousse Wealdstone à viser les trois points à domicile.\n\n**6. Confrontations directes**  \n- Sur les 3 dernières rencontres, Wealdstone a gagné **2** fois (2‑1, 2‑0) et perdu une fois (0‑3). Deux des trois matchs se sont joués à Yeovil, où les visiteurs ont tout de même trouvé la faille. Cela montre que Wealdstone possède un avantage psychologique et tactique sur Yeovil.\n\n**7. BTTS / Plus de 2,5 btg**  \n- **BTTS** : Yeovil a marqué à l’extérieur dans seulement 2 des 5 derniers matchs (40 %). Wealdstone, en revanche, a encaissé dans 4 des 6 derniers matchs à domicile. Le risque que les deux équipes marquent est donc modéré (≈ 45 %).  \n- **+2,5 btg** : La combinaison d’une attaque à domicile très active (≈ 2,7 btg) et d’une défense adverse qui concède près de 2 btg à l’extérieur rend le dépassement de 2,5 btg plausible, mais pas certain. Le profil le plus fréquent reste **2 btg** au total (ex. 2‑0, 2‑1).\n\n**8. Synthèse**  \n- Le facteur domicile, la meilleure efficacité offensive à domicile et la mauvaise forme à l’extérieur de Yeovil font pencher la balance en faveur d’une victoire de Wealdstone.  \n- Le score le plus probable reflète la capacité de Wealdstone à marquer plusieurs buts tout en gardant Yeovil limité à un but ou aucun.\n\n**Conclusion** : La prédiction la plus fiable est une **victoire domicile** de Wealdstone, avec une confiance de **68 %**, les scores les plus probables étant **2‑1** ou **3‑1**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Wealdstone)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 3‑1"
+      }
+    ]
+  }
+}
