@@ -1,0 +1,1481 @@
+{
+  "metadata": {
+    "date_generation": "2026-03-27 03:48:58",
+    "date_matchs": "2026-03-27",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1504698,
+        "HomeTeam": "Vissel Kobe",
+        "AwayTeam": "Sanfrecce Hiroshima",
+        "date": "27 mars 2026 à 10:00:00 UTC",
+        "league": "Japan - J1 League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5714285714285714,
+          "moyenne_encaisses": 0.8571428571428571,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 12,
+          "total_points": 11,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 3,
+          "total_marques": 11,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.5714285714285714,
+          "moyenne_encaisses": 1.4285714285714286,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 10,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401859324",
+            "date": "Sun, Mar 22",
+            "home_team": "Cerezo Osaka",
+            "away_team": "Vissel Kobe",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.4%",
+                "49.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "7",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859324"
+          },
+          {
+            "game_id": "401859313",
+            "date": "Wed, Mar 18",
+            "home_team": "Vissel Kobe",
+            "away_team": "Gamba Osaka",
+            "score": "2 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.9%",
+                "55.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "8"
+              ],
+              "Shot Attempts": [
+                "15",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859313"
+          },
+          {
+            "game_id": "401859305",
+            "date": "Sat, Mar 14",
+            "home_team": "Nagoya Grampus",
+            "away_team": "Vissel Kobe",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.9%",
+                "47.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "9"
+              ],
+              "Shot Attempts": [
+                "15",
+                "21"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859305"
+          },
+          {
+            "game_id": "401859287",
+            "date": "Fri, Feb 27",
+            "home_team": "Vissel Kobe",
+            "away_team": "Avispa Fukuoka",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.2%",
+                "23.8%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859287"
+          },
+          {
+            "game_id": "401859280",
+            "date": "Sat, Feb 21",
+            "home_team": "Shimizu S-Pulse",
+            "away_team": "Vissel Kobe",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.1%",
+                "47.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "6"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "9",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859280"
+          },
+          {
+            "game_id": "401859270",
+            "date": "Fri, Feb 13",
+            "home_team": "Vissel Kobe",
+            "away_team": "V-Varen Nagasaki",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859270"
+          },
+          {
+            "game_id": "401859262",
+            "date": "Fri, Feb 6",
+            "home_team": "Kyoto Sanga",
+            "away_team": "Vissel Kobe",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "13"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859262"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401859320",
+            "date": "Sun, Mar 22",
+            "home_team": "Shimizu S-Pulse",
+            "away_team": "Sanfrecce Hiroshima",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.3%",
+                "54.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "15"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859320"
+          },
+          {
+            "game_id": "401859312",
+            "date": "Wed, Mar 18",
+            "home_team": "Nagoya Grampus",
+            "away_team": "Sanfrecce Hiroshima",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44%",
+                "56%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859312"
+          },
+          {
+            "game_id": "401859306",
+            "date": "Sat, Mar 14",
+            "home_team": "Sanfrecce Hiroshima",
+            "away_team": "Gamba Osaka",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.6%",
+                "49.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859306"
+          },
+          {
+            "game_id": "401859288",
+            "date": "Fri, Feb 27",
+            "home_team": "Sanfrecce Hiroshima",
+            "away_team": "Kyoto Sanga",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.4%",
+                "53.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "21",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "10",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859288"
+          },
+          {
+            "game_id": "401859286",
+            "date": "Sun, Feb 22",
+            "home_team": "Cerezo Osaka",
+            "away_team": "Sanfrecce Hiroshima",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "4"
+              ],
+              "Shot Attempts": [
+                "8",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "6"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859286"
+          },
+          {
+            "game_id": "401859271",
+            "date": "Sat, Feb 14",
+            "home_team": "Sanfrecce Hiroshima",
+            "away_team": "Fagiano Okayama",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.7%",
+                "28.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859271"
+          },
+          {
+            "game_id": "401859263",
+            "date": "Fri, Feb 6",
+            "home_team": "V-Varen Nagasaki",
+            "away_team": "Sanfrecce Hiroshima",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.2%",
+                "43.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "18"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859263"
+          }
+        ],
+        "classement": {
+          "Vissel Kobe": {
+            "position": 13,
+            "points": 14
+          },
+          "Sanfrecce Hiroshima": {
+            "position": 17,
+            "points": 13
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "FC Tokyo",
+            "points": 22
+          },
+          {
+            "position": 3,
+            "team": "Machida Zelvia",
+            "points": 16
+          },
+          {
+            "position": 4,
+            "team": "Tokyo Verdy 1969",
+            "points": 15
+          },
+          {
+            "position": 5,
+            "team": "Urawa Red Diamonds",
+            "points": 13
+          },
+          {
+            "position": 6,
+            "team": "Kawasaki Frontale",
+            "points": 11
+          },
+          {
+            "position": 7,
+            "team": "Yokohama F. Marinos",
+            "points": 10
+          },
+          {
+            "position": 8,
+            "team": "Kashiwa Reysol",
+            "points": 9
+          },
+          {
+            "position": 9,
+            "team": "Mito Hollyhock",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "JEF United Ichihara-Chiba",
+            "points": 8
+          },
+          {
+            "position": 11,
+            "team": "Kyoto Sanga",
+            "points": 5
+          },
+          {
+            "position": 13,
+            "team": "Vissel Kobe",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Shimizu S-Pulse",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Nagoya Grampus",
+            "points": 13
+          },
+          {
+            "position": 16,
+            "team": "V-Varen Nagasaki",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "Sanfrecce Hiroshima",
+            "points": 13
+          },
+          {
+            "position": 18,
+            "team": "Fagiano Okayama",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Cerezo Osaka",
+            "points": 11
+          },
+          {
+            "position": 20,
+            "team": "Avispa Fukuoka",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "697169",
+            "date": "Saturday, March 16, 2024",
+            "team1": "Vissel Kobe",
+            "score": "0 - 0",
+            "team2": "Sanfrecce Hiroshima",
+            "title": "Vissel Kobe VS Sanfrecce Hiroshima",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/697169/sanfrecce-hiroshima-vissel-kobe",
+            "source": "J1 League",
+            "stats": {}
+          },
+          {
+            "gameId": "697348",
+            "date": "Friday, July 5, 2024",
+            "team1": "Sanfrecce Hiroshima",
+            "score": "1 - 3",
+            "team2": "Vissel Kobe",
+            "title": "Sanfrecce Hiroshima VS Vissel Kobe",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/697348/vissel-kobe-sanfrecce-hiroshima",
+            "source": "J1 League",
+            "stats": {}
+          },
+          {
+            "gameId": "725456",
+            "date": "Wednesday, July 2, 2025",
+            "team1": "Vissel Kobe",
+            "score": "1 - 0",
+            "team2": "Sanfrecce Hiroshima",
+            "title": "Vissel Kobe VS Sanfrecce Hiroshima",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/725456/sanfrecce-hiroshima-vissel-kobe",
+            "source": "J1 League",
+            "stats": {
+              "Possession": [
+                "51.3%",
+                "48.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "725713",
+            "date": "Wednesday, August 20, 2025",
+            "team1": "Sanfrecce Hiroshima",
+            "score": "0 - 1",
+            "team2": "Vissel Kobe",
+            "title": "Sanfrecce Hiroshima VS Vissel Kobe",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/725713/vissel-kobe-sanfrecce-hiroshima",
+            "source": "J1 League",
+            "stats": {
+              "Possession": [
+                "45.3%",
+                "54.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "14",
+                "15"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/289.png",
+        "logo_away": "https://media.api-sports.io/football/teams/282.png",
+        "classement_home": 13,
+        "classement_away": 17,
+        "points_classement_home": 14,
+        "points_classement_away": 13,
+        "nom_classement_home": "Vissel Kobe",
+        "nom_classement_away": "Sanfrecce Hiroshima",
+        "country_fr": "Japan - J1 League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.358,
+            "lambda_away": 1.168,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.66,
+            "X": 27.26,
+            "V2": 32.08
+          },
+          "double_chance": {
+            "1X": 67.92,
+            "12": 72.74,
+            "X2": 59.34
+          },
+          "over_under": {
+            "plus_de_0.5": 91.73,
+            "moins_de_0.5": 8.27,
+            "plus_de_1.5": 71.92,
+            "moins_de_1.5": 28.08,
+            "plus_de_2.5": 46.12,
+            "moins_de_2.5": 53.89,
+            "plus_de_3.5": 25.1,
+            "moins_de_3.5": 74.9,
+            "plus_de_4.5": 11.26,
+            "moins_de_4.5": 88.74,
+            "plus_de_5.5": 4.47,
+            "moins_de_5.5": 95.53
+          },
+          "btts": {
+            "oui": 51.28,
+            "non": 48.72
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.66,
+            "1Xet+0.5": 59.65,
+            "V2et+0.5": 32.08,
+            "X2et+0.5": 51.07,
+            "12et+0.5": 72.74,
+            "V1et+1.5": 30.12,
+            "1Xet+1.5": 49.1,
+            "V2et+1.5": 22.82,
+            "X2et+1.5": 41.8,
+            "12et+1.5": 52.94,
+            "V1et+2.5": 22.7,
+            "1Xet+2.5": 28.85,
+            "V2et+2.5": 17.26,
+            "X2et+2.5": 23.41,
+            "12et+2.5": 39.97,
+            "V1et+3.5": 11.08,
+            "1Xet+3.5": 17.22,
+            "V2et+3.5": 7.88,
+            "X2et+3.5": 14.03,
+            "12et+3.5": 18.95,
+            "V1et+4.5": 5.92,
+            "1Xet+4.5": 6.83,
+            "V2et+4.5": 4.43,
+            "X2et+4.5": 5.34,
+            "12et+4.5": 10.35,
+            "V1et+5.5": 2.08,
+            "1Xet+5.5": 3.0,
+            "V2et+5.5": 1.47,
+            "X2et+5.5": 2.38,
+            "12et+5.5": 3.56
+          },
+          "scores_probables": {
+            "1-1": 12.84,
+            "1-0": 10.54,
+            "0-1": 9.26,
+            "2-1": 8.3,
+            "0-0": 8.27,
+            "1-2": 7.45,
+            "2-0": 7.41,
+            "0-2": 5.55,
+            "2-2": 5.23,
+            "3-1": 3.96
+          },
+          "buts_moyens_simules": {
+            "home": 1.36,
+            "away": 1.17,
+            "total": 2.53
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Plus de 2.5 buts  \n**CONFIANCE** : 80%  \n**SCORES PROBABLES** : 2‑1 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Vissel Kobe (domicile)** : 13ᵉ avec 14 pts, moyenne de buts marqués 1,57 et très bonne défense (0,86 buts encaissés par match). À domicile, ils n’ont encaissé que 3 buts en 5 matchs (0,6 bpa) et ont inscrit 6 buts.  \n- **Sanfrecce Hiroshima (extérieur)** : 17ᵉ avec 13 pts, même moyenne offensive (1,57) mais défense plus fragile (1,43 bpa). En déplacement, ils ont concédé 7 buts en 7 matchs (1,0 bpa) et marqué 7.\n\n**2. Impact du facteur domicile/extérieur**  \n- Kobe montre une solidité défensive à domicile (0,86 bpa global, 0,6 bpa à domicile).  \n- Hiroshima a tendance à concéder davantage à l’extérieur (1,0 bpa) tout en restant capable de marquer.\n\n**3. Forme récente & tendances (stats détaillées)**  \n- **Kobe** (5 derniers matchs à domicile) : 1‑1, 2‑2, 2‑1, 1‑1, 2‑0 → **BTTS** dans 4/4 rencontres, total de buts moyen = 2,75.  \n  - Possession moyenne ≈ 52 %, tirs cadrés ≈ 4‑5 par match, corners ≈ 6‑7.  \n- **Hiroshima** (7 derniers déplacements) : 3‑1, 1‑2, 2‑0, 2‑1, 2‑1, 1‑1, 3‑1 → **BTTS** dans 6/7 rencontres, total de buts moyen = 3,14.  \n  - Possession moyenne ≈ 53 %, tirs cadrés ≈ 5‑6 par match, efficacité élevée (plus de buts que de tirs cadrés).\n\n**4. Contexte du championnat**  \n- Les deux équipes évoluent dans la partie basse du tableau (13ᵉ/17ᵉ). Elles ont besoin de points, ce qui les pousse à jouer de manière ouverte plutôt que défensive.  \n- Les équipes autour (ex. Shimizu S‑Pulse, Nagoya Grampus) affichent également des matchs à forte teneur offensive, indiquant une tendance générale du championnat à dépasser 2,5 buts.\n\n**5. Confrontations directes** (dernières saisons)  \n- 4 rencontres : 0‑0, 3‑1 (Kobe), 1‑0 (Kobe), 0‑1 (Kobe).  \n- Kobe a remporté 3 des 4, mais chaque match a produit **au moins 1 but** et 3 des 4 ont eu **plus de 2 buts**.  \n\n**6. Synthèse**  \n- Les deux équipes marquent régulièrement (1,57 bpm) et concèdent suffisamment (Kobe 0,86 bpa à domicile, Hiroshima 1,0 bpa à l’extérieur) pour que le total dépasse facilement les 2,5 buts.  \n- Le taux de **BTTS** très élevé (≥ 80 %) renforce la probabilité d’un match à plus de 2,5 buts.  \n- La légère supériorité de Kobe à domicile (défense plus solide) suggère que le score le plus fréquent sera un **2‑1** en faveur de Kobe, mais un **3‑1** (Hiroshima marquant malgré la défaite) reste plausible.\n\n**Conclusion** : Le pari le plus fiable est **“Plus de 2.5 buts”** avec une confiance de 80 %, les scores les plus probables étant **2‑1** ou **3‑1**.",
+        "confiance_pourcentage": 80,
+        "prediction_principale": "Plus de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 3‑1"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1505031,
+        "HomeTeam": "Sportivo Ameliano",
+        "AwayTeam": "Libertad Asuncion",
+        "date": "27 mars 2026 à 23:30:00 UTC",
+        "league": "Paraguay - Division Profesional - Apertura",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 16,
+          "total_points": 6,
+          "serie_domicile": [
+            "D",
+            "L",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 2,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 4,
+          "total_marques": 10,
+          "total_encaisses": 6
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 13,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 10,
+          "buts_ext_encaisses": 4,
+          "total_marques": 18,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401848227",
+            "date": "Mon, 23 Mar",
+            "home_team": "Rubio Ñú",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848227"
+          },
+          {
+            "game_id": "401848224",
+            "date": "Thu, 19 Mar",
+            "home_team": "Trinidense",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848224"
+          },
+          {
+            "game_id": "401848217",
+            "date": "Sun, 15 Mar",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Guarani",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848217"
+          },
+          {
+            "game_id": "401848208",
+            "date": "Mon, 9 Mar",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848208"
+          },
+          {
+            "game_id": "401848202",
+            "date": "Sat, 28 Feb",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Club Olimpia",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848202"
+          },
+          {
+            "game_id": "401848197",
+            "date": "Wed, 25 Feb",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Cerro Porteño",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848197"
+          },
+          {
+            "game_id": "401848192",
+            "date": "Thu, 19 Feb",
+            "home_team": "Nacional",
+            "away_team": "Sportivo Ameliano",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848192"
+          },
+          {
+            "game_id": "401848187",
+            "date": "Sat, 14 Feb",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "2 de Mayo",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848187"
+          },
+          {
+            "game_id": "401848181",
+            "date": "Fri, 6 Feb",
+            "home_team": "Sportivo Luqueño",
+            "away_team": "Sportivo Ameliano",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848181"
+          },
+          {
+            "game_id": "401848176",
+            "date": "Sat, 31 Jan",
+            "home_team": "Sportivo Ameliano",
+            "away_team": "Sportivo San Lorenzo",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848176"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401848226",
+            "date": "Sat, 21 Mar",
+            "home_team": "Libertad",
+            "away_team": "Cerro Porteño",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848226"
+          },
+          {
+            "game_id": "401848220",
+            "date": "Wed, 18 Mar",
+            "home_team": "Libertad",
+            "away_team": "Nacional",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848220"
+          },
+          {
+            "game_id": "401848213",
+            "date": "Fri, 13 Mar",
+            "home_team": "2 de Mayo",
+            "away_team": "Libertad",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848213"
+          },
+          {
+            "game_id": "401848210",
+            "date": "Sat, 7 Mar",
+            "home_team": "Libertad",
+            "away_team": "Sportivo Luqueño",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848210"
+          },
+          {
+            "game_id": "401848206",
+            "date": "Mon, 2 Mar",
+            "home_team": "Sportivo San Lorenzo",
+            "away_team": "Libertad",
+            "score": "0 - 7",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848206"
+          },
+          {
+            "game_id": "401848196",
+            "date": "Wed, 25 Feb",
+            "home_team": "Club Olimpia",
+            "away_team": "Libertad",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848196"
+          },
+          {
+            "game_id": "401848191",
+            "date": "Fri, 20 Feb",
+            "home_team": "Libertad",
+            "away_team": "Rubio Ñú",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848191"
+          },
+          {
+            "game_id": "401848186",
+            "date": "Sun, 15 Feb",
+            "home_team": "Trinidense",
+            "away_team": "Libertad",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848186"
+          },
+          {
+            "game_id": "401848178",
+            "date": "Sun, 8 Feb",
+            "home_team": "Libertad",
+            "away_team": "Guarani",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848178"
+          },
+          {
+            "game_id": "401848175",
+            "date": "Mon, 2 Feb",
+            "home_team": "Deportivo Recoleta",
+            "away_team": "Libertad",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401848175"
+          }
+        ],
+        "classement": {
+          "Sportivo Ameliano": null,
+          "Libertad Asuncion": null
+        },
+        "classement_complet": [],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "695710",
+            "date": "Monday, March 11, 2024",
+            "team1": "Libertad",
+            "score": "4 - 1",
+            "team2": "Sportivo Ameliano",
+            "title": "Libertad VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695710/sportivo-ameliano-libertad",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "695778",
+            "date": "Sunday, May 26, 2024",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 1",
+            "team2": "Libertad",
+            "title": "Sportivo Ameliano VS Libertad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695778/libertad-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "711317",
+            "date": "Monday, August 19, 2024",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 0",
+            "team2": "Libertad",
+            "title": "Sportivo Ameliano VS Libertad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711317/libertad-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "711382",
+            "date": "Friday, October 25, 2024",
+            "team1": "Libertad",
+            "score": "1 - 2",
+            "team2": "Sportivo Ameliano",
+            "title": "Libertad VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/711382/sportivo-ameliano-libertad",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728882",
+            "date": "Sunday, February 16, 2025",
+            "team1": "Libertad",
+            "score": "2 - 0",
+            "team2": "Sportivo Ameliano",
+            "title": "Libertad VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728882/sportivo-ameliano-libertad",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "728948",
+            "date": "Sunday, April 27, 2025",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 0",
+            "team2": "Libertad",
+            "title": "Sportivo Ameliano VS Libertad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728948/libertad-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "749813",
+            "date": "Monday, August 4, 2025",
+            "team1": "Sportivo Ameliano",
+            "score": "0 - 4",
+            "team2": "Libertad",
+            "title": "Sportivo Ameliano VS Libertad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/749813/libertad-sportivo-ameliano",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "749882",
+            "date": "20251018",
+            "team1": "Libertad",
+            "score": "1 - 2",
+            "team2": "Sportivo Ameliano",
+            "title": "Libertad VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/749882/sportivo-ameliano-libertad",
+            "source": "Division Profesional",
+            "stats": {}
+          },
+          {
+            "gameId": "401848166",
+            "date": "20260127",
+            "team1": "Libertad",
+            "score": "1 - 0",
+            "team2": "Sportivo Ameliano",
+            "title": "Libertad VS Sportivo Ameliano",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401848166/sportivo-ameliano-libertad",
+            "source": "Division Profesional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10487.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1179.png",
+        "classement_home": null,
+        "classement_away": null,
+        "points_classement_home": null,
+        "points_classement_away": null,
+        "nom_classement_home": null,
+        "nom_classement_away": null,
+        "country_fr": "Paraguay - Division Profesional - Apertura",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.263,
+            "lambda_away": 1.178,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 38.67,
+            "X": 26.98,
+            "V2": 34.34
+          },
+          "double_chance": {
+            "1X": 65.66,
+            "12": 73.02,
+            "X2": 61.32
+          },
+          "over_under": {
+            "plus_de_0.5": 91.4,
+            "moins_de_0.5": 8.6,
+            "plus_de_1.5": 70.22,
+            "moins_de_1.5": 29.78,
+            "plus_de_2.5": 44.7,
+            "moins_de_2.5": 55.31,
+            "plus_de_3.5": 23.27,
+            "moins_de_3.5": 76.73,
+            "plus_de_4.5": 10.58,
+            "moins_de_4.5": 89.42,
+            "plus_de_5.5": 4.01,
+            "moins_de_5.5": 95.98
+          },
+          "btts": {
+            "oui": 49.98,
+            "non": 50.02
+          },
+          "resultat_total": {
+            "V1et+0.5": 38.67,
+            "1Xet+0.5": 57.06,
+            "V2et+0.5": 34.34,
+            "X2et+0.5": 52.73,
+            "12et+0.5": 73.02,
+            "V1et+1.5": 27.76,
+            "1Xet+1.5": 46.14,
+            "V2et+1.5": 24.08,
+            "X2et+1.5": 42.46,
+            "12et+1.5": 51.83,
+            "V1et+2.5": 20.79,
+            "1Xet+2.5": 26.56,
+            "V2et+2.5": 18.14,
+            "X2et+2.5": 23.9,
+            "12et+2.5": 38.93,
+            "V1et+3.5": 9.49,
+            "1Xet+3.5": 15.25,
+            "V2et+3.5": 8.02,
+            "X2et+3.5": 13.78,
+            "12et+3.5": 17.51,
+            "V1et+4.5": 5.2,
+            "1Xet+4.5": 6.1,
+            "V2et+4.5": 4.47,
+            "X2et+4.5": 5.38,
+            "12et+4.5": 9.68,
+            "V1et+5.5": 1.64,
+            "1Xet+5.5": 2.54,
+            "V2et+5.5": 1.47,
+            "X2et+5.5": 2.37,
+            "12et+5.5": 3.12
+          },
+          "scores_probables": {
+            "1-1": 12.62,
+            "1-0": 10.92,
+            "0-1": 10.26,
+            "0-0": 8.6,
+            "2-1": 8.48,
+            "1-2": 7.76,
+            "2-0": 6.97,
+            "0-2": 5.94,
+            "2-2": 4.86,
+            "3-1": 3.37
+          },
+          "buts_moyens_simules": {
+            "home": 1.27,
+            "away": 1.19,
+            "total": 2.46
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Libertad Asunción)  \n**CONFIANCE** : 66 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑1  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des équipes**  \n- **Sportivo Ameliano (domicile)** : moyenne 1,00 but marqué et 0,60 but encaissé. Sur ses 5 derniers matchs à domicile (D‑L‑L‑W‑W) il a inscrit 4 buts et n’a encaissé que 2, montrant une défense solide mais une attaque peu prolifique.  \n- **Libertad Asunción (extérieur)** : moyenne 1,80 but marqué et 1,20 but encaissé. Sur ses 5 derniers déplacements (W‑W‑L‑L‑L) il a marqué 10 buts tout en n’encaissant que 4, ce qui indique une capacité offensive supérieure mais une certaine irrégularité défensive récemment.\n\n**2. Impact du facteur domicile/extérieur**  \n- Ameliano bénéficie d’un bon ratio de buts encaissés à domicile (0,60) ; toutefois, son attaque à domicile reste moyenne (1,00).  \n- Libertad, même en déplacement, conserve une bonne production offensive (1,80) et ne concède que 1,20, ce qui reste supérieur à la moyenne d’Ameliano à domicile.\n\n**3. Forme récente**  \n- Ameliano : 6 points sur 6 matchs (W D D D L L) et 16 points sur 10 matchs, mais les deux dernières victoires à domicile (contre Guarani 0‑0 ? et Club Olimpia 0‑1) montrent une remontée tardive.  \n- Libertad : 12 points sur 6 matchs (L W W W W L) et 13 points sur 10 matchs, avec une séquence de 4 victoires consécutives avant deux revers récents. La forme offensive est nettement meilleure.\n\n**4. Confrontations directes**  \n- Historique des 9 derniers duels (2024‑2025) : Libertad a remporté 5 rencontres, Ameliano 2, 2 matchs nuls. Les scores les plus fréquents sont des victoires de Libertad 2‑0, 2‑1 ou 4‑1.  \n- Même si certains matchs se sont soldés par un nul (0‑0), la tendance globale penche clairement en faveur de Libertad.\n\n**5. Tendances de buts**  \n- Total moyen de buts attendus = 1,00 (Ameliano) + 1,80 (Libertad) ≈ 2,80 buts/match, ce qui dépasse la barre des 2,5 buts.  \n- Cependant, la défense d’Ameliano à domicile (0,60) et les trois dernières défaites de Libertad à l’extérieur (où ils n’ont encaissé que 4 buts) laissent la porte ouverte à un score serré.\n\n**6. Synthèse**  \n- Libertad possède une supériorité offensive claire et a historiquement dominé Ameliano.  \n- La solidité défensive d’Ameliano à domicile pourrait limiter le nombre de buts, mais il est probable que Libertad marque au moins une fois.  \n- Le scénario le plus plausible est une victoire de Libertad par une marge d’un but, avec un score de 1‑0 ou 2‑1.\n\n**Conclusion** : La prédiction la plus fiable est la **victoire extérieure de Libertad Asunción**, avec une confiance de **66 %** et les scores les plus probables **1‑0** ou **2‑1**.",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Victoire extérieur (Libertad Asunción)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑1"
+      }
+    ]
+  }
+}
