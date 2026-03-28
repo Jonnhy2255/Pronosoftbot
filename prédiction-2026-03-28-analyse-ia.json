@@ -1,0 +1,2262 @@
+{
+  "metadata": {
+    "date_generation": "2026-03-28 03:37:00",
+    "date_matchs": "2026-03-28",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 4,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 4,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1399882,
+        "HomeTeam": "Gateshead",
+        "AwayTeam": "Yeovil Town",
+        "date": "28 mars 2026 à 15:00:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 18,
+          "total_points": 11,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 6,
+          "total_marques": 15,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 13,
+          "total_points": 9,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 13,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          {
+            "game_id": "752145",
+            "date": "Tue, 24 Mar",
+            "home_team": "Gateshead",
+            "away_team": "York City",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752145"
+          },
+          {
+            "game_id": "752142",
+            "date": "Sat, 21 Mar",
+            "home_team": "Boreham Wood",
+            "away_team": "Gateshead",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752142"
+          },
+          {
+            "game_id": "752020",
+            "date": "Tue, 17 Mar",
+            "home_team": "Gateshead",
+            "away_team": "Wealdstone",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752020"
+          },
+          {
+            "game_id": "752124",
+            "date": "Sat, 14 Mar",
+            "home_team": "Gateshead",
+            "away_team": "Sutton United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752124"
+          },
+          {
+            "game_id": "751939",
+            "date": "Tue, 10 Mar",
+            "home_team": "Southend United",
+            "away_team": "Gateshead",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751939"
+          },
+          {
+            "game_id": "752109",
+            "date": "Sat, 7 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "Gateshead",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752109"
+          },
+          {
+            "game_id": "752041",
+            "date": "Wed, 4 Mar",
+            "home_team": "Gateshead",
+            "away_team": "Braintree Town",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752041"
+          },
+          {
+            "game_id": "752105",
+            "date": "Sat, 28 Feb",
+            "home_team": "Gateshead",
+            "away_team": "Forest Green Rovers",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752105"
+          },
+          {
+            "game_id": "752092",
+            "date": "Wed, 25 Feb",
+            "home_team": "Gateshead",
+            "away_team": "Morecambe",
+            "score": "4 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752092"
+          },
+          {
+            "game_id": "752073",
+            "date": "Sat, 21 Feb",
+            "home_team": "Truro City",
+            "away_team": "Gateshead",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752073"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "752155",
+            "date": "Wed, 25 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Yeovil Town",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752155"
+          },
+          {
+            "game_id": "752140",
+            "date": "Sat, 21 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Morecambe",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752140"
+          },
+          {
+            "game_id": "752016",
+            "date": "Tue, 17 Mar",
+            "home_team": "Woking",
+            "away_team": "Yeovil Town",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752016"
+          },
+          {
+            "game_id": "752123",
+            "date": "Sat, 14 Mar",
+            "home_team": "Boston United",
+            "away_team": "Yeovil Town",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752123"
+          },
+          {
+            "game_id": "752113",
+            "date": "Sat, 7 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Scunthorpe United",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752113"
+          },
+          {
+            "game_id": "752035",
+            "date": "Tue, 3 Mar",
+            "home_team": "Yeovil Town",
+            "away_team": "Tamworth",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752035"
+          },
+          {
+            "game_id": "752093",
+            "date": "Wed, 25 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Sutton United",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752093"
+          },
+          {
+            "game_id": "752080",
+            "date": "Sat, 21 Feb",
+            "home_team": "Carlisle United",
+            "away_team": "Yeovil Town",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752080"
+          },
+          {
+            "game_id": "752005",
+            "date": "Tue, 17 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Aldershot Town",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752005"
+          },
+          {
+            "game_id": "752062",
+            "date": "Sat, 14 Feb",
+            "home_team": "Yeovil Town",
+            "away_team": "Rochdale",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752062"
+          }
+        ],
+        "classement": {
+          "Gateshead": {
+            "position": 20,
+            "points": 40
+          },
+          "Yeovil Town": {
+            "position": 15,
+            "points": 47
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 95
+          },
+          {
+            "position": 2,
+            "team": "York City",
+            "points": 92
+          },
+          {
+            "position": 3,
+            "team": "Carlisle United",
+            "points": 81
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 77
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 74
+          },
+          {
+            "position": 6,
+            "team": "Forest Green Rovers",
+            "points": 68
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 62
+          },
+          {
+            "position": 8,
+            "team": "FC Halifax Town",
+            "points": 62
+          },
+          {
+            "position": 9,
+            "team": "Hartlepool United",
+            "points": 60
+          },
+          {
+            "position": 10,
+            "team": "Woking",
+            "points": 53
+          },
+          {
+            "position": 11,
+            "team": "Tamworth",
+            "points": 51
+          },
+          {
+            "position": 12,
+            "team": "Boston United",
+            "points": 48
+          },
+          {
+            "position": 13,
+            "team": "Wealdstone",
+            "points": 48
+          },
+          {
+            "position": 14,
+            "team": "Altrincham",
+            "points": 47
+          },
+          {
+            "position": 15,
+            "team": "Yeovil Town",
+            "points": 47
+          },
+          {
+            "position": 16,
+            "team": "Sutton United",
+            "points": 46
+          },
+          {
+            "position": 17,
+            "team": "Solihull Moors",
+            "points": 45
+          },
+          {
+            "position": 18,
+            "team": "Aldershot Town",
+            "points": 42
+          },
+          {
+            "position": 19,
+            "team": "Eastleigh",
+            "points": 42
+          },
+          {
+            "position": 20,
+            "team": "Gateshead",
+            "points": 40
+          },
+          {
+            "position": 21,
+            "team": "Brackley Town",
+            "points": 38
+          },
+          {
+            "position": 22,
+            "team": "Braintree Town",
+            "points": 35
+          },
+          {
+            "position": 23,
+            "team": "Morecambe",
+            "points": 34
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 29
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713006",
+            "date": "Saturday, August 24, 2024",
+            "team1": "Gateshead",
+            "score": "3 - 1",
+            "team2": "Yeovil Town",
+            "title": "Gateshead VS Yeovil Town",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713006/yeovil-town-gateshead",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713297",
+            "date": "Friday, January 17, 2025",
+            "team1": "Yeovil Town",
+            "score": "0 - 0",
+            "team2": "Gateshead",
+            "title": "Yeovil Town VS Gateshead",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713297/gateshead-yeovil-town",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "751724",
+            "date": "Monday, August 25, 2025",
+            "team1": "Yeovil Town",
+            "score": "3 - 4",
+            "team2": "Gateshead",
+            "title": "Yeovil Town VS Gateshead",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/751724/gateshead-yeovil-town",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1823.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1377.png",
+        "classement_home": 20,
+        "classement_away": 15,
+        "points_classement_home": 40,
+        "points_classement_away": 47,
+        "nom_classement_home": "Gateshead",
+        "nom_classement_away": "Yeovil Town",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.605,
+            "lambda_away": 1.325,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 43.79,
+            "X": 24.48,
+            "V2": 31.72
+          },
+          "double_chance": {
+            "1X": 68.27,
+            "12": 75.52,
+            "X2": 56.21
+          },
+          "over_under": {
+            "plus_de_0.5": 94.97,
+            "moins_de_0.5": 5.03,
+            "plus_de_1.5": 79.28,
+            "moins_de_1.5": 20.72,
+            "plus_de_2.5": 56.58,
+            "moins_de_2.5": 43.42,
+            "plus_de_3.5": 34.05,
+            "moins_de_3.5": 65.95,
+            "plus_de_4.5": 17.39,
+            "moins_de_4.5": 82.61,
+            "plus_de_5.5": 7.67,
+            "moins_de_5.5": 92.33
+          },
+          "btts": {
+            "oui": 59.51,
+            "non": 40.49
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.79,
+            "1Xet+0.5": 63.24,
+            "V2et+0.5": 31.72,
+            "X2et+0.5": 51.18,
+            "12et+0.5": 75.52,
+            "V1et+1.5": 35.2,
+            "1Xet+1.5": 54.66,
+            "V2et+1.5": 24.62,
+            "X2et+1.5": 44.08,
+            "12et+1.5": 59.82,
+            "V1et+2.5": 28.74,
+            "1Xet+2.5": 36.56,
+            "V2et+2.5": 20.01,
+            "X2et+2.5": 27.83,
+            "12et+2.5": 48.76,
+            "V1et+3.5": 15.84,
+            "1Xet+3.5": 23.66,
+            "V2et+3.5": 10.39,
+            "X2et+3.5": 18.21,
+            "12et+3.5": 26.23,
+            "V1et+4.5": 9.33,
+            "1Xet+4.5": 11.04,
+            "V2et+4.5": 6.35,
+            "X2et+4.5": 8.06,
+            "12et+4.5": 15.68,
+            "V1et+5.5": 3.7,
+            "1Xet+5.5": 5.41,
+            "V2et+5.5": 2.26,
+            "X2et+5.5": 3.97,
+            "12et+5.5": 5.96
+          },
+          "scores_probables": {
+            "1-1": 11.64,
+            "2-1": 9.33,
+            "1-0": 8.59,
+            "1-2": 7.6,
+            "0-1": 7.1,
+            "2-0": 6.46,
+            "2-2": 6.11,
+            "3-1": 5.13,
+            "0-0": 5.03,
+            "0-2": 4.61
+          },
+          "buts_moyens_simules": {
+            "home": 1.6,
+            "away": 1.34,
+            "total": 2.94
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Gateshead)  \n**CONFIANCE** : 66%  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Gateshead** (20ᵉ, 40 pts) : moyenne 1,50 buts marqués / 1,40 buts encaissés. À domicile, 10 buts marqués et 8 encaissés en 6 matchs, soit une légère supériorité offensive et une défense raisonnablement solide.  \n- **Yeovil Town** (15ᵉ, 47 pts) : moyenne 1,30 buts marqués / 1,60 buts encaissés. En déplacement, seulement 3 buts marqués contre 6 encaissés, ce qui montre une difficulté à créer et à tenir le résultat à l’extérieur.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Série à domicile de Gateshead (W‑W‑D‑W‑L‑D) : 3 victoires, 2 matches nuls, 1 défaite.  \n- Série à l’extérieur de Yeovil (W‑L‑L‑L) : 1 victoire, 3 défaites.  \nLe facteur terrain favorise clairement Gateshead, qui joue devant ses supporters et bénéficie d’une meilleure confiance à domicile.\n\n**3. Forme récente**  \n- **Gateshead** (6 derniers matchs) : W L W D D W → 11 pts, avec 5 victoires ou nuls sur 6.  \n- **Yeovil** (6 derniers matchs) : W W L L L W → 9 pts, mais 3 défaites consécutives à l’extérieur avant la dernière victoire.  \n\n**4. Tendances de buts**  \n- Gateshead marque en moyenne 1,5 but par match et a dépassé les 2,5 buts dans 5 de ses 10 derniers matchs (ex. 3‑1, 4‑4).  \n- Yeovil ne marque que 3 buts en 6 déplacements récents, mais concède souvent (6 buts encaissés).  \n\n**5. Contexte du championnat**  \n- Yeovil est à mi‑table (15ᵉ) avec 47 pts, tandis que Gateshead lutte en bas du tableau (20ᵉ, 40 pts).  \n- Les équipes du bas de tableau qui jouent à domicile ont historiquement de meilleures chances de gagner contre des équipes du milieu de tableau lorsqu’elles sont en forme, ce qui est le cas de Gateshead.\n\n**6. Confrontations directes** (3 derniers matchs)  \n- 2024 : Gateshead 3‑1 Yeovil  \n- 2025 (janv.) : Yeovil 0‑0 Gateshead  \n- 2025 (août) : Yeovil 3‑4 Gateshead  \nSur 3 rencontres, Gateshead a inscrit 7 buts contre 5 pour Yeovil et a remporté 2 victoires, montrant une légère supériorité historique.\n\n**7. Analyse des matchs détaillés** (absence de stats de possession, tirs, corners)  \n- Même sans les métriques détaillées, les scores récents indiquent que Gateshead a tendance à gagner avec un ou deux buts d’écart à domicile, tandis que Yeovil a du mal à marquer à l’extérieur.  \n- Les matchs de Gateshead à domicile comportent rarement plus de 3 buts encaissés (seul le 4‑4 contre Morecambe est une exception).  \n\n**8. Synthèse**  \n- **Probabilité de victoire de Gateshead** : élevée grâce à la forme à domicile, la meilleure défense à domicile et la faiblesse offensive de Yeovil à l’extérieur.  \n- **Probabilité de plus de 2,5 buts** : modérée (environ 45 %) – les deux équipes peuvent marquer, mais Yeovil a du mal à trouver le filet à l’extérieur.  \n- **BTTS** : légèrement inférieur à 50 % (environ 42 %) – Gateshead marque souvent, Yeovil ne marque pas souvent à l’extérieur.  \n\n**Conclusion** : La combinaison la plus plausible est une victoire de Gateshead avec une marge d’un à deux buts, d’où la prédiction « Victoire domicile » avec un score le plus probable de **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Victoire domicile (Gateshead)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1399885,
+        "HomeTeam": "Solihull Moors",
+        "AwayTeam": "Altrincham",
+        "date": "28 mars 2026 à 15:00:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 2.4,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "D"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 4,
+          "total_points": 3,
+          "serie_domicile": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 14,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 10,
+          "total_marques": 12,
+          "total_encaisses": 24
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 17,
+          "total_points": 10,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 9,
+          "total_marques": 13,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "752154",
+            "date": "Wed, 25 Mar",
+            "home_team": "Truro City",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752154"
+          },
+          {
+            "game_id": "752137",
+            "date": "Sat, 21 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "FC Halifax Town",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752137"
+          },
+          {
+            "game_id": "752037",
+            "date": "Tue, 17 Mar",
+            "home_team": "Brackley Town",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752037"
+          },
+          {
+            "game_id": "752126",
+            "date": "Sat, 14 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Solihull Moors",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752126"
+          },
+          {
+            "game_id": "752109",
+            "date": "Sat, 7 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "Gateshead",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752109"
+          },
+          {
+            "game_id": "752103",
+            "date": "Sat, 28 Feb",
+            "home_team": "Scunthorpe United",
+            "away_team": "Solihull Moors",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752103"
+          },
+          {
+            "game_id": "752083",
+            "date": "Sat, 21 Feb",
+            "home_team": "Solihull Moors",
+            "away_team": "Hartlepool United",
+            "score": "3 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752083"
+          },
+          {
+            "game_id": "752060",
+            "date": "Sat, 14 Feb",
+            "home_team": "Braintree Town",
+            "away_team": "Solihull Moors",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752060"
+          },
+          {
+            "game_id": "752050",
+            "date": "Tue, 10 Feb",
+            "home_team": "Solihull Moors",
+            "away_team": "Eastleigh",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752050"
+          },
+          {
+            "game_id": "752029",
+            "date": "Sat, 31 Jan",
+            "home_team": "Solihull Moors",
+            "away_team": "York City",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752029"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "752146",
+            "date": "Tue, 24 Mar",
+            "home_team": "Boston United",
+            "away_team": "Altrincham",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752146"
+          },
+          {
+            "game_id": "752143",
+            "date": "Sat, 21 Mar",
+            "home_team": "Altrincham",
+            "away_team": "Southend United",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752143"
+          },
+          {
+            "game_id": "752130",
+            "date": "Sat, 14 Mar",
+            "home_team": "Scunthorpe United",
+            "away_team": "Altrincham",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752130"
+          },
+          {
+            "game_id": "752117",
+            "date": "Sat, 7 Mar",
+            "home_team": "Altrincham",
+            "away_team": "Truro City",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752117"
+          },
+          {
+            "game_id": "752100",
+            "date": "Sat, 28 Feb",
+            "home_team": "Brackley Town",
+            "away_team": "Altrincham",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752100"
+          },
+          {
+            "game_id": "752085",
+            "date": "Tue, 24 Feb",
+            "home_team": "Tamworth",
+            "away_team": "Altrincham",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752085"
+          },
+          {
+            "game_id": "752075",
+            "date": "Sat, 21 Feb",
+            "home_team": "Altrincham",
+            "away_team": "Braintree Town",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752075"
+          },
+          {
+            "game_id": "752052",
+            "date": "Tue, 10 Feb",
+            "home_team": "Altrincham",
+            "away_team": "Wealdstone",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752052"
+          },
+          {
+            "game_id": "752039",
+            "date": "Sat, 7 Feb",
+            "home_team": "Altrincham",
+            "away_team": "Yeovil Town",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752039"
+          },
+          {
+            "game_id": "751986",
+            "date": "Tue, 3 Feb",
+            "home_team": "Altrincham",
+            "away_team": "Morecambe",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/751986"
+          }
+        ],
+        "classement": {
+          "Solihull Moors": {
+            "position": 17,
+            "points": 45
+          },
+          "Altrincham": {
+            "position": 14,
+            "points": 47
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Rochdale",
+            "points": 95
+          },
+          {
+            "position": 2,
+            "team": "York City",
+            "points": 92
+          },
+          {
+            "position": 3,
+            "team": "Carlisle United",
+            "points": 81
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 77
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 74
+          },
+          {
+            "position": 6,
+            "team": "Forest Green Rovers",
+            "points": 68
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 62
+          },
+          {
+            "position": 8,
+            "team": "FC Halifax Town",
+            "points": 62
+          },
+          {
+            "position": 9,
+            "team": "Hartlepool United",
+            "points": 60
+          },
+          {
+            "position": 10,
+            "team": "Woking",
+            "points": 53
+          },
+          {
+            "position": 11,
+            "team": "Tamworth",
+            "points": 51
+          },
+          {
+            "position": 12,
+            "team": "Boston United",
+            "points": 48
+          },
+          {
+            "position": 13,
+            "team": "Wealdstone",
+            "points": 48
+          },
+          {
+            "position": 14,
+            "team": "Altrincham",
+            "points": 47
+          },
+          {
+            "position": 15,
+            "team": "Yeovil Town",
+            "points": 47
+          },
+          {
+            "position": 16,
+            "team": "Sutton United",
+            "points": 46
+          },
+          {
+            "position": 17,
+            "team": "Solihull Moors",
+            "points": 45
+          },
+          {
+            "position": 18,
+            "team": "Aldershot Town",
+            "points": 42
+          },
+          {
+            "position": 19,
+            "team": "Eastleigh",
+            "points": 42
+          },
+          {
+            "position": 20,
+            "team": "Gateshead",
+            "points": 40
+          },
+          {
+            "position": 21,
+            "team": "Brackley Town",
+            "points": 38
+          },
+          {
+            "position": 22,
+            "team": "Braintree Town",
+            "points": 35
+          },
+          {
+            "position": 23,
+            "team": "Morecambe",
+            "points": 34
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 29
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713164",
+            "date": "Saturday, November 9, 2024",
+            "team1": "Solihull Moors",
+            "score": "3 - 3",
+            "team2": "Altrincham",
+            "title": "Solihull Moors VS Altrincham",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713164/altrincham-solihull-moors",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713382",
+            "date": "Tuesday, March 25, 2025",
+            "team1": "Altrincham",
+            "score": "1 - 1",
+            "team2": "Solihull Moors",
+            "title": "Altrincham VS Solihull Moors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713382/solihull-moors-altrincham",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "751732",
+            "date": "Monday, August 25, 2025",
+            "team1": "Altrincham",
+            "score": "2 - 0",
+            "team2": "Solihull Moors",
+            "title": "Altrincham VS Solihull Moors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/751732/solihull-moors-altrincham",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1834.png",
+        "logo_away": "https://media.api-sports.io/football/teams/4700.png",
+        "classement_home": 17,
+        "classement_away": 14,
+        "points_classement_home": 45,
+        "points_classement_away": 47,
+        "nom_classement_home": "Solihull Moors",
+        "nom_classement_away": "Altrincham",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.456,
+            "lambda_away": 1.488,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 37.08,
+            "X": 24.28,
+            "V2": 38.63
+          },
+          "double_chance": {
+            "1X": 61.37,
+            "12": 75.72,
+            "X2": 62.92
+          },
+          "over_under": {
+            "plus_de_0.5": 94.76,
+            "moins_de_0.5": 5.24,
+            "plus_de_1.5": 79.53,
+            "moins_de_1.5": 20.47,
+            "plus_de_2.5": 56.5,
+            "moins_de_2.5": 43.5,
+            "plus_de_3.5": 34.36,
+            "moins_de_3.5": 65.64,
+            "plus_de_4.5": 17.96,
+            "moins_de_4.5": 82.04,
+            "plus_de_5.5": 8.18,
+            "moins_de_5.5": 91.82
+          },
+          "btts": {
+            "oui": 59.68,
+            "non": 40.33
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.08,
+            "1Xet+0.5": 56.12,
+            "V2et+0.5": 38.63,
+            "X2et+0.5": 57.67,
+            "12et+0.5": 75.72,
+            "V1et+1.5": 29.56,
+            "1Xet+1.5": 48.6,
+            "V2et+1.5": 30.94,
+            "X2et+1.5": 49.98,
+            "12et+1.5": 60.49,
+            "V1et+2.5": 23.88,
+            "1Xet+2.5": 31.51,
+            "V2et+2.5": 24.98,
+            "X2et+2.5": 32.62,
+            "12et+2.5": 48.86,
+            "V1et+3.5": 12.98,
+            "1Xet+3.5": 20.62,
+            "V2et+3.5": 13.74,
+            "X2et+3.5": 21.38,
+            "12et+3.5": 26.72,
+            "V1et+4.5": 7.92,
+            "1Xet+4.5": 9.62,
+            "V2et+4.5": 8.34,
+            "X2et+4.5": 10.05,
+            "12et+4.5": 16.26,
+            "V1et+5.5": 3.21,
+            "1Xet+5.5": 4.92,
+            "V2et+5.5": 3.26,
+            "X2et+5.5": 4.96,
+            "12et+5.5": 6.46
+          },
+          "scores_probables": {
+            "1-1": 11.4,
+            "1-2": 8.41,
+            "2-1": 8.33,
+            "0-1": 7.7,
+            "1-0": 7.53,
+            "0-2": 5.95,
+            "2-2": 5.93,
+            "2-0": 5.68,
+            "0-0": 5.24,
+            "1-3": 4.36
+          },
+          "buts_moyens_simules": {
+            "home": 1.46,
+            "away": 1.5,
+            "total": 2.96
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Altrincham)  \n**CONFIANCE** : 66 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Solihull Moors** (17ᵉ, 45 pts) : très mauvaise dynamique à domicile – 5 défaites consécutives, seulement 6 buts marqués et 14 encaissés sur leurs 10 matchs à domicile (0,6 bpm, 2,33 bpa). Leur moyenne globale (1,20 bpm / 2,40 bpa) montre une défense très fragile et une attaque peu efficace.  \n- **Altrincham** (14ᵉ, 47 pts) : meilleure solidité à l’extérieur – 6 buts marqués et 9 encaissés en 10 déplacements (0,6 bpm, 1,5 bpa). Moyenne globale plus équilibrée (1,30 bpm / 1,20 bpa) et une forme récente nettement supérieure.\n\n**2. Impact du facteur domicile/extérieur**  \nLe facteur domicile ne profite plus à Solihull Moors (série L‑L‑L‑L‑L). Altrincham, malgré une série extérieure « D‑L‑W‑L », a montré qu’il pouvait gagner à l’extérieur (victoires 2‑0 vs Truro, 2‑0 vs Brackley, 5‑1 vs Tamworth).  \n\n**3. Forme récente**  \n- **Solihull** (6 derniers) : D L D L L D → 3 pts, aucune victoire. Les matchs récents comportent surtout des défaites avec 3 ou 4 buts encaissés (0‑3 vs Halifax, 3‑4 vs Hartlepool, 2‑3 vs Eastleigh).  \n- **Altrincham** (6 derniers) : D W L W W L → 10 pts, dont 3 victoires consécutives (2‑0 vs Truro, 2‑0 vs Brackley, 5‑1 vs Tamworth). Leur unique défaite récente a été 0‑1 contre Yeovil, preuve d’une défense généralement solide.\n\n**4. Contexte du championnat**  \nAltrincham se situe à la 14ᵉ place, à deux points du 13ᵉ et à seulement trois du 12ᵉ, donc en lutte pour les places de milieu de tableau. Solihull, 17ᵉ, lutte contre la relégation. Cette différence de motivation et de pression se reflète dans la forme : Altrincham veut consolider sa position, Solihull doit absolument éviter la chute, mais leurs performances à domicile ne le permettent pas.\n\n**5. Confrontations directes**  \n- 2024‑2025 : 3‑3, 1‑1 (tous deux matchs nuls)  \n- 2025‑2026 : 2‑0 victoire d’Altrincham  \nCes trois rencontres montrent que les deux équipes peuvent se marquer, mais Altrincham a déjà remporté le duel le plus récent.\n\n**6. Analyse des matchs détaillés (absence de stats de possession, tirs, corners)**  \nLes données détaillées ne sont pas disponibles, mais les scores récents donnent des indices :  \n- Solihull concède régulièrement 3‑4 buts lorsqu’il perd.  \n- Altrincham a souvent gardé la cage inviolée (victoires 1‑0, 2‑0, 5‑1) ou n’a encaissé qu’un seul but.  \n\n**7. Synthèse des tendances**  \n- **BTTS** : peu probable. Solihull marque rarement à domicile (0,6 bpm) alors qu’Altrincham a tendance à garder sa défense à zéro ou un but.  \n- **+2,5 buts** : la moyenne combinée attendue est d’environ 2,1 buts par match, donc le seuil de 2,5 reste incertain.  \n- **Double chance** : la sécurité serait « X2 », mais la forme et le contexte penchent clairement vers une victoire d’Altrincham.  \n\n**Conclusion**  \nCompte tenu de la mauvaise forme à domicile de Solihull, de la solidité défensive d’Altrincham à l’extérieur et de leurs performances récentes, la probabilité la plus élevée est une victoire d’Altrincham, souvent par une petite marge. Les scores les plus plausibles sont **1‑0** (victoire serrée) ou **2‑1** (but supplémentaire pour Altrincham).",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Victoire extérieur (Altrincham)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑1"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1498399,
+        "HomeTeam": "Atlanta",
+        "AwayTeam": "Ferro Carril Oeste",
+        "date": "28 mars 2026 à 16:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 4
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "D",
+            "W"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843715",
+            "date": "Sun, 22 Mar",
+            "home_team": "Temperley",
+            "away_team": "Atlanta",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843715"
+          },
+          {
+            "game_id": "401843692",
+            "date": "Tue, 17 Mar",
+            "home_team": "Atlanta",
+            "away_team": "Deportivo Maipú",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843692"
+          },
+          {
+            "game_id": "401843653",
+            "date": "Tue, 3 Mar",
+            "home_team": "Atlanta",
+            "away_team": "Patronato",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843653"
+          },
+          {
+            "game_id": "401843633",
+            "date": "Sun, 22 Feb",
+            "home_team": "Colegiales",
+            "away_team": "Atlanta",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843633"
+          },
+          {
+            "game_id": "401843619",
+            "date": "Mon, 16 Feb",
+            "home_team": "Atlanta",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843619"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843722",
+            "date": "Sat, 21 Mar",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "Los Andes",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843722"
+          },
+          {
+            "game_id": "401843697",
+            "date": "Sat, 14 Mar",
+            "home_team": "Godoy Cruz Antonio Tomba",
+            "away_team": "Ferro Carril Oeste",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843697"
+          },
+          {
+            "game_id": "401843655",
+            "date": "Sat, 28 Feb",
+            "home_team": "Colón (Santa Fe)",
+            "away_team": "Ferro Carril Oeste",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843655"
+          },
+          {
+            "game_id": "401843648",
+            "date": "Sat, 21 Feb",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843648"
+          },
+          {
+            "game_id": "401843631",
+            "date": "Sat, 14 Feb",
+            "home_team": "San Telmo",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843631"
+          }
+        ],
+        "classement": {
+          "Atlanta": {
+            "position": 28,
+            "points": 8
+          },
+          "Ferro Carril Oeste": {
+            "position": 15,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Racing (Córdoba)",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Defensores de Belgrano",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Acassuso",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Almirante Brown",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "team": "Colón (Santa Fe)",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "All Boys",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Los Andes",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "Ciudad de Bolívar",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Deportivo Madryn",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "San Telmo",
+            "points": 5
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Chaco For Ever",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 0
+          },
+          {
+            "position": 21,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 22,
+            "team": "Atletico Rafaela",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Tristán Suárez",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 10
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 8
+          },
+          {
+            "position": 28,
+            "team": "Atlanta",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "San Martín (San Juan)",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "Güemes",
+            "points": 7
+          },
+          {
+            "position": 31,
+            "team": "Patronato",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Almagro",
+            "points": 5
+          },
+          {
+            "position": 33,
+            "team": "Quilmes",
+            "points": 5
+          },
+          {
+            "position": 34,
+            "team": "Chacarita Juniors",
+            "points": 5
+          },
+          {
+            "position": 35,
+            "team": "Deportivo Maipú",
+            "points": 4
+          },
+          {
+            "position": 36,
+            "team": "Colegiales",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728411",
+            "date": "Tuesday, April 22, 2025",
+            "team1": "Ferro Carril Oeste",
+            "score": "0 - 1",
+            "team2": "Atlanta",
+            "title": "Ferro Carril Oeste VS Atlanta",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728411/atlanta-ferro-carril-oeste",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728716",
+            "date": "Saturday, August 23, 2025",
+            "team1": "Atlanta",
+            "score": "2 - 1",
+            "team2": "Ferro Carril Oeste",
+            "title": "Atlanta VS Ferro Carril Oeste",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728716/ferro-carril-oeste-atlanta",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1948.png",
+        "logo_away": "https://media.api-sports.io/football/teams/470.png",
+        "classement_home": 28,
+        "classement_away": 15,
+        "points_classement_home": 8,
+        "points_classement_away": 5,
+        "nom_classement_home": "Atlanta",
+        "nom_classement_away": "Ferro Carril Oeste",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.263,
+            "lambda_away": 1.034,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 41.0,
+            "X": 28.36,
+            "V2": 30.64
+          },
+          "double_chance": {
+            "1X": 69.36,
+            "12": 71.64,
+            "X2": 59.0
+          },
+          "over_under": {
+            "plus_de_0.5": 89.91,
+            "moins_de_0.5": 10.09,
+            "plus_de_1.5": 66.8,
+            "moins_de_1.5": 33.2,
+            "plus_de_2.5": 40.19,
+            "moins_de_2.5": 59.81,
+            "plus_de_3.5": 19.55,
+            "moins_de_3.5": 80.46,
+            "plus_de_4.5": 7.94,
+            "moins_de_4.5": 92.06,
+            "plus_de_5.5": 3.0,
+            "moins_de_5.5": 97.0
+          },
+          "btts": {
+            "oui": 46.41,
+            "non": 53.59
+          },
+          "resultat_total": {
+            "V1et+0.5": 41.0,
+            "1Xet+0.5": 59.28,
+            "V2et+0.5": 30.64,
+            "X2et+0.5": 48.9,
+            "12et+0.5": 71.64,
+            "V1et+1.5": 28.17,
+            "1Xet+1.5": 46.44,
+            "V2et+1.5": 20.36,
+            "X2et+1.5": 38.63,
+            "12et+1.5": 48.53,
+            "V1et+2.5": 20.4,
+            "1Xet+2.5": 25.46,
+            "V2et+2.5": 14.73,
+            "X2et+2.5": 19.79,
+            "12et+2.5": 35.12,
+            "V1et+3.5": 8.72,
+            "1Xet+3.5": 13.78,
+            "V2et+3.5": 5.76,
+            "X2et+3.5": 10.82,
+            "12et+3.5": 14.48,
+            "V1et+4.5": 4.41,
+            "1Xet+4.5": 5.1,
+            "V2et+4.5": 2.84,
+            "X2et+4.5": 3.52,
+            "12et+4.5": 7.25,
+            "V1et+5.5": 1.48,
+            "1Xet+5.5": 2.17,
+            "V2et+5.5": 0.82,
+            "X2et+5.5": 1.51,
+            "12et+5.5": 2.31
+          },
+          "scores_probables": {
+            "1-1": 13.2,
+            "1-0": 12.84,
+            "0-1": 10.27,
+            "0-0": 10.09,
+            "2-1": 8.35,
+            "2-0": 7.78,
+            "1-2": 7.12,
+            "0-2": 5.63,
+            "2-2": 4.38,
+            "3-1": 3.33
+          },
+          "buts_moyens_simules": {
+            "home": 1.25,
+            "away": 1.04,
+            "total": 2.28
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Atlanta)  \n**CONFIANCE** : 62 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Atlanta (domicile)** : 28ᵉ du tableau avec 8 pts, mais possède la meilleure solidité défensive à domicile (0,80 buts encaissés en moyenne, 1 but encaissé sur les 6 derniers matchs à domicile). L’attaque à domicile est correcte (1,00 but/match) et a déjà inscrit 4 buts à domicile cette saison.  \n- **Ferro Carril Oeste (extérieur)** : 15ᵉ avec 5 pts. En déplacement, la moyenne de buts encaissés monte à 1,20 et la moyenne de buts marqués reste à 1,00. Leur défense à l’extérieur a déjà concédé 3 buts en 5 matchs, soit la pire des deux équipes.  \n\n**2. Impact du facteur domicile/extérieur**  \nLe facteur domicile favorise nettement Atlanta : ils n’ont encaissé qu’un seul but chez eux, alors que Ferro a déjà concédé 3 buts à l’extérieur récemment.  \n\n**3. Forme récente**  \n- **Atlanta** : L‑W‑D‑L‑W (7 pts). Deux victoires à domicile (2‑1 contre Temperley, 3‑1 contre Deportivo Maipú) montrent une capacité à marquer plusieurs buts lorsqu’ils sont en forme. Le dernier match à domicile s’est soldé par un 0‑0, confirmant la solidité défensive.  \n- **Ferro** : L‑L‑D‑D‑W (5 pts). À l’extérieur, ils ont perdu 0‑2 contre Los Andes et 1‑2 contre Godoy Cruz, puis ont rebondi avec un 2‑0 contre San Telmo. Leur forme est donc inconstante, surtout en défense.  \n\n**4. Contexte du championnat**  \nLes deux équipes évoluent en bas du tableau, mais Atlanta se situe légèrement au-dessus de Ferro (8 pts vs 5 pts). Aucun des deux clubs ne menace la montée, ce qui réduit la pression mais incite Atlanta à chercher les trois points à domicile pour tenter de remonter.  \n\n**5. Confrontations directes**  \nLes deux rencontres de la saison précédente se sont soldées par des victoires d’Atlanta (1‑0 et 2‑1). Cela indique une supériorité tactique d’Atlanta sur Ferro, surtout à domicile.  \n\n**6. Tendances de buts**  \n- Total de buts à domicile d’Atlanta : 4 marqués / 1 encaissé → match très souvent ≤ 2,5 buts.  \n- Total de buts à l’extérieur de Ferro : 4 marqués / 3 encaissés → également tendance à des scores bas.  \n\n**7. BTTS / Plus‑2,5**  \nProbabilité que les deux équipes marquent est faible (Atlanta n’a encaissé qu’un but à domicile, Ferro a concédé 3 à l’extérieur). Le nombre total de buts attendu est donc inférieur à 2,5.  \n\n**8. Synthèse**  \nTous les indicateurs (défense à domicile d’Atlanta, forme récente, historique direct, faiblesse offensive de Ferro à l’extérieur) convergent vers une victoire d’Atlanta, très probablement avec un score serré (1‑0 ou 2‑0).  \n\n---  \n\n**Conclusion** : La meilleure mise est **Victoire domicile (Atlanta)** avec une confiance de **62 %**, les scores les plus probables étant **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Victoire domicile (Atlanta)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 4,
+        "fixture_id": 1498404,
+        "HomeTeam": "Colegiales",
+        "AwayTeam": "San Miguel",
+        "date": "28 mars 2026 à 23:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 3,
+          "total_points": 3,
+          "serie_domicile": [
+            "W"
+          ],
+          "buts_dom_marques": 1,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 8,
+          "total_marques": 3,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.1666666666666667,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 8,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 4,
+          "total_marques": 6,
+          "total_encaisses": 7
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843719",
+            "date": "Sun, 22 Mar",
+            "home_team": "Patronato",
+            "away_team": "Colegiales",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843719"
+          },
+          {
+            "game_id": "401843695",
+            "date": "Sun, 15 Mar",
+            "home_team": "Gimnasia y Esgrima (Jujuy)",
+            "away_team": "Colegiales",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843695"
+          },
+          {
+            "game_id": "401843658",
+            "date": "Sun, 1 Mar",
+            "home_team": "Midland",
+            "away_team": "Colegiales",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843658"
+          },
+          {
+            "game_id": "401843633",
+            "date": "Sun, 22 Feb",
+            "home_team": "Colegiales",
+            "away_team": "Atlanta",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843633"
+          },
+          {
+            "game_id": "401843624",
+            "date": "Sat, 14 Feb",
+            "home_team": "Gimnasia y Tiro (Salta)",
+            "away_team": "Colegiales",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843624"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843717",
+            "date": "Sat, 21 Mar",
+            "home_team": "San Miguel",
+            "away_team": "Racing (Córdoba)",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843717"
+          },
+          {
+            "game_id": "401843703",
+            "date": "Sat, 14 Mar",
+            "home_team": "San Miguel",
+            "away_team": "San Telmo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843703"
+          },
+          {
+            "game_id": "401843660",
+            "date": "Sat, 28 Feb",
+            "home_team": "San Miguel",
+            "away_team": "Chaco For Ever",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843660"
+          },
+          {
+            "game_id": "401843648",
+            "date": "Sat, 21 Feb",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843648"
+          },
+          {
+            "game_id": "401846924",
+            "date": "Tue, 17 Feb",
+            "home_team": "Aldosivi",
+            "away_team": "San Miguel",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401846924"
+          },
+          {
+            "game_id": "401843630",
+            "date": "Fri, 13 Feb",
+            "home_team": "San Miguel",
+            "away_team": "Central Norte",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843630"
+          }
+        ],
+        "classement": {
+          "Colegiales": {
+            "position": 36,
+            "points": 4
+          },
+          "San Miguel": {
+            "position": 5,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Racing (Córdoba)",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Defensores de Belgrano",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Acassuso",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Almirante Brown",
+            "points": 8
+          },
+          {
+            "position": 7,
+            "team": "Colón (Santa Fe)",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "All Boys",
+            "points": 7
+          },
+          {
+            "position": 10,
+            "team": "Los Andes",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "Ciudad de Bolívar",
+            "points": 6
+          },
+          {
+            "position": 12,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Deportivo Madryn",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "San Telmo",
+            "points": 5
+          },
+          {
+            "position": 15,
+            "team": "Ferro Carril Oeste",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Chaco For Ever",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 0
+          },
+          {
+            "position": 21,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 22,
+            "team": "Atletico Rafaela",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Tristán Suárez",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 10
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 8
+          },
+          {
+            "position": 28,
+            "team": "Atlanta",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "San Martín (San Juan)",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "Güemes",
+            "points": 7
+          },
+          {
+            "position": 31,
+            "team": "Patronato",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Almagro",
+            "points": 5
+          },
+          {
+            "position": 33,
+            "team": "Quilmes",
+            "points": 5
+          },
+          {
+            "position": 34,
+            "team": "Chacarita Juniors",
+            "points": 5
+          },
+          {
+            "position": 35,
+            "team": "Deportivo Maipú",
+            "points": 4
+          },
+          {
+            "position": 36,
+            "team": "Colegiales",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "728358",
+            "date": "Sunday, March 30, 2025",
+            "team1": "Colegiales",
+            "score": "0 - 0",
+            "team2": "San Miguel",
+            "title": "Colegiales VS San Miguel",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728358/san-miguel-colegiales",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728669",
+            "date": "Saturday, August 2, 2025",
+            "team1": "San Miguel",
+            "score": "2 - 1",
+            "team2": "Colegiales",
+            "title": "San Miguel VS Colegiales",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728669/colegiales-san-miguel",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/8377.png",
+        "logo_away": "https://media.api-sports.io/football/teams/8379.png",
+        "classement_home": 36,
+        "classement_away": 5,
+        "points_classement_home": 4,
+        "points_classement_away": 9,
+        "nom_classement_home": "Colegiales",
+        "nom_classement_away": "San Miguel",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.171,
+            "lambda_away": 1.129,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 37.16,
+            "X": 28.38,
+            "V2": 34.47
+          },
+          "double_chance": {
+            "1X": 65.53,
+            "12": 71.62,
+            "X2": 62.84
+          },
+          "over_under": {
+            "plus_de_0.5": 89.94,
+            "moins_de_0.5": 10.06,
+            "plus_de_1.5": 66.92,
+            "moins_de_1.5": 33.08,
+            "plus_de_2.5": 40.07,
+            "moins_de_2.5": 59.93,
+            "plus_de_3.5": 20.16,
+            "moins_de_3.5": 79.84,
+            "plus_de_4.5": 8.43,
+            "moins_de_4.5": 91.56,
+            "plus_de_5.5": 3.08,
+            "moins_de_5.5": 96.92
+          },
+          "btts": {
+            "oui": 46.43,
+            "non": 53.57
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.16,
+            "1Xet+0.5": 55.47,
+            "V2et+0.5": 34.47,
+            "X2et+0.5": 52.78,
+            "12et+0.5": 71.62,
+            "V1et+1.5": 25.5,
+            "1Xet+1.5": 43.81,
+            "V2et+1.5": 23.11,
+            "X2et+1.5": 41.42,
+            "12et+1.5": 48.6,
+            "V1et+2.5": 18.42,
+            "1Xet+2.5": 23.51,
+            "V2et+2.5": 16.56,
+            "X2et+2.5": 21.64,
+            "12et+2.5": 34.98,
+            "V1et+3.5": 8.09,
+            "1Xet+3.5": 13.18,
+            "V2et+3.5": 6.98,
+            "X2et+3.5": 12.06,
+            "12et+3.5": 15.07,
+            "V1et+4.5": 4.08,
+            "1Xet+4.5": 4.82,
+            "V2et+4.5": 3.62,
+            "X2et+4.5": 4.35,
+            "12et+4.5": 7.7,
+            "V1et+5.5": 1.3,
+            "1Xet+5.5": 2.03,
+            "V2et+5.5": 1.05,
+            "X2et+5.5": 1.78,
+            "12et+5.5": 2.34
+          },
+          "scores_probables": {
+            "1-1": 13.23,
+            "1-0": 11.66,
+            "0-1": 11.36,
+            "0-0": 10.06,
+            "2-1": 7.75,
+            "1-2": 7.17,
+            "2-0": 7.07,
+            "0-2": 6.55,
+            "2-2": 4.35,
+            "3-1": 3.16
+          },
+          "buts_moyens_simules": {
+            "home": 1.18,
+            "away": 1.12,
+            "total": 2.3
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Double chance X2 (nul ou victoire extérieur)  \n**CONFIANCE** : 71%  \n**SCORES PROBABLES** : 0‑0 ou 0‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Colegiales** (36ᵉ, 4 pts) : très faible en attaque (0,60 but/match) et, malgré une moyenne de 1,60 but encaissé, ils n’ont **pas concédé de but à domicile** cette saison (0 but encaissé à domicile). Leur capacité offensive à domicile se limite à **1 but inscrit** sur l’ensemble des matchs à domicile.  \n- **San Miguel** (5ᵉ, 9 pts) : meilleure attaque (1,00 but/match) et défense moyenne (1,17 but encaissé). En déplacement, ils ont encaissé **4 buts** et marqué **1 but**, ce qui montre une certaine vulnérabilité défensive à l’extérieur mais une capacité à marquer.\n\n**2. Impact du facteur domicile/extérieur**  \n- Colegiales bénéficie d’un **avantage défensif à domicile** (0 but encaissé) mais cet avantage est largement compensé par leur quasi‑absence offensive.  \n- San Miguel, même en déplacement, a déjà trouvé le chemin des filets (ex. 2‑0 contre Chaco For Ever) et a montré qu’il peut obtenir un point à l’extérieur (1‑1 contre San Telmo, 1‑1 contre Ferro Carril Oeste).\n\n**3. Forme récente**  \n- **Colegiales** : L L L W L → 1 victoire sur 5, aucune marqueur à domicile depuis plusieurs matchs.  \n- **San Miguel** : L D W D L W → 2 victoires, 2 nuls, 2 défaites, avec une tendance à **marquer au moins un but** dans 4 de leurs 6 derniers matchs (dont 2 à l’extérieur).  \n\n**4. Contexte du championnat**  \n- San Miguel occupe la **5ᵉ place** avec 9 pts, loin derrière les leaders mais nettement au‑dessus de Colegiales qui sont **36ᵉ** avec seulement 4 pts. La différence de points et de classement indique une supériorité qualitative et une motivation à consolider leur place dans le haut du tableau.\n\n**5. Confrontations directes**  \n- Saison précédente : 0‑0 (domicile) et 2‑1 (victoire extérieur pour San Miguel). Le seul match nul montre que les deux équipes peuvent rester sans but, tandis que la victoire de San Miguel confirme leur capacité à gagner à l’extérieur.\n\n**6. Analyse des matchs détaillés (absence de stats avancées)**  \n- Les données de possession, tirs, corners ne sont pas disponibles. Toutefois, les scores récents indiquent que **les matchs sont généralement peu prolifiques** (majorité de scores 1‑0, 1‑1, 2‑0). Cela renforce l’idée d’un total de buts **inférieur à 2,5**.\n\n**7. Synthèse**  \n- **BTTS** : improbable (Colegiales marque très rarement).  \n- **Plus de 2,5 buts** : très improbable compte tenu des moyennes de buts (0,60 et 1,00) et du faible nombre de buts à domicile de Colegiales.  \n- **Victoire extérieure** : plausible mais le risque de draw reste présent (défense solide à domicile de Colegiales).  \n- **Double chance X2** couvre à la fois la victoire de San Miguel et le scénario de match nul, offrant la meilleure probabilité globale.\n\n**8. Scores les plus probables**  \n- **0‑0** : reflète la solidité défensive de Colegiales à domicile et la difficulté de San Miguel à marquer à l’extérieur.  \n- **0‑1** : San Miguel trouve la faille (historique 2‑1 à l’extérieur) et remporte le match.\n\nCes deux scores sont cohérents avec la prédiction « Double chance X2 » et le profil de jeu des deux équipes.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Double chance X2 (nul ou victoire extérieur)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 0‑1"
+      }
+    ]
+  }
+}
