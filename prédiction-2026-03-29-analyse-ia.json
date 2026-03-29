@@ -1,0 +1,2771 @@
+{
+  "metadata": {
+    "date_generation": "2026-03-29 03:54:48",
+    "date_matchs": "2026-03-29",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 4,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 4,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1498409,
+        "HomeTeam": "Los Andes",
+        "AwayTeam": "Temperley",
+        "date": "29 mars 2026 à 18:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 0.4,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 6,
+          "total_points": 6,
+          "serie_domicile": [
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 0,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 1,
+          "total_marques": 3,
+          "total_encaisses": 2
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8333333333333334,
+          "moyenne_encaisses": 0.6666666666666666,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 9,
+          "total_points": 9,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 3,
+          "total_marques": 5,
+          "total_encaisses": 4
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843722",
+            "date": "Sat, 21 Mar",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "Los Andes",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843722"
+          },
+          {
+            "game_id": "401843698",
+            "date": "Sat, 14 Mar",
+            "home_team": "Los Andes",
+            "away_team": "Central Norte",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843698"
+          },
+          {
+            "game_id": "401843663",
+            "date": "Sat, 28 Feb",
+            "home_team": "Los Andes",
+            "away_team": "Defensores de Belgrano",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843663"
+          },
+          {
+            "game_id": "401843634",
+            "date": "Sun, 22 Feb",
+            "home_team": "Ciudad de Bolívar",
+            "away_team": "Los Andes",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843634"
+          },
+          {
+            "game_id": "401843627",
+            "date": "Sun, 15 Feb",
+            "home_team": "Los Andes",
+            "away_team": "Almirante Brown",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843627"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843715",
+            "date": "Sun, 22 Mar",
+            "home_team": "Temperley",
+            "away_team": "Atlanta",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843715"
+          },
+          {
+            "game_id": "401843696",
+            "date": "Sun, 15 Mar",
+            "home_team": "Gimnasia y Tiro (Salta)",
+            "away_team": "Temperley",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843696"
+          },
+          {
+            "game_id": "401843654",
+            "date": "Sun, 1 Mar",
+            "home_team": "Atletico Rafaela",
+            "away_team": "Temperley",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843654"
+          },
+          {
+            "game_id": "401843642",
+            "date": "Sun, 22 Feb",
+            "home_team": "Temperley",
+            "away_team": "Agropecuario",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843642"
+          },
+          {
+            "game_id": "401843616",
+            "date": "Sat, 14 Feb",
+            "home_team": "Tristán Suárez",
+            "away_team": "Temperley",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843616"
+          },
+          {
+            "game_id": "401846920",
+            "date": "Fri, 6 Feb",
+            "home_team": "Barracas Central",
+            "away_team": "Temperley",
+            "score": "2 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401846920"
+          }
+        ],
+        "classement": {
+          "Los Andes": {
+            "position": 11,
+            "points": 7
+          },
+          "Temperley": {
+            "position": 26,
+            "points": 9
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Racing (Córdoba)",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Defensores de Belgrano",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Acassuso",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Ferro Carril Oeste",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Colón (Santa Fe)",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Almirante Brown",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "All Boys",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "Los Andes",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Ciudad de Bolívar",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Deportivo Madryn",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "San Telmo",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Chaco For Ever",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Tristán Suárez",
+            "points": 0
+          },
+          {
+            "position": 21,
+            "team": "Nueva Chicago",
+            "points": 12
+          },
+          {
+            "position": 22,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 23,
+            "team": "Atletico Rafaela",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 10
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 10
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 8
+          },
+          {
+            "position": 28,
+            "team": "Almagro",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "Atlanta",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "San Martín (San Juan)",
+            "points": 8
+          },
+          {
+            "position": 31,
+            "team": "Güemes",
+            "points": 7
+          },
+          {
+            "position": 32,
+            "team": "Patronato",
+            "points": 6
+          },
+          {
+            "position": 33,
+            "team": "Quilmes",
+            "points": 5
+          },
+          {
+            "position": 34,
+            "team": "Chacarita Juniors",
+            "points": 5
+          },
+          {
+            "position": 35,
+            "team": "Deportivo Maipú",
+            "points": 4
+          },
+          {
+            "position": 36,
+            "team": "Colegiales",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/483.png",
+        "logo_away": "https://media.api-sports.io/football/teams/454.png",
+        "classement_home": 11,
+        "classement_away": 26,
+        "points_classement_home": 7,
+        "points_classement_away": 9,
+        "nom_classement_home": "Los Andes",
+        "nom_classement_away": "Temperley",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.077,
+            "lambda_away": 0.898,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 39.26,
+            "X": 31.33,
+            "V2": 29.42
+          },
+          "double_chance": {
+            "1X": 70.58,
+            "12": 68.67,
+            "X2": 60.74
+          },
+          "over_under": {
+            "plus_de_0.5": 85.74,
+            "moins_de_0.5": 14.26,
+            "plus_de_1.5": 58.36,
+            "moins_de_1.5": 41.64,
+            "plus_de_2.5": 31.41,
+            "moins_de_2.5": 68.59,
+            "plus_de_3.5": 13.54,
+            "moins_de_3.5": 86.46,
+            "plus_de_4.5": 5.04,
+            "moins_de_4.5": 94.96,
+            "plus_de_5.5": 1.65,
+            "moins_de_5.5": 98.35
+          },
+          "btts": {
+            "oui": 38.83,
+            "non": 61.17
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.26,
+            "1Xet+0.5": 56.32,
+            "V2et+0.5": 29.42,
+            "X2et+0.5": 46.48,
+            "12et+0.5": 68.67,
+            "V1et+1.5": 24.3,
+            "1Xet+1.5": 41.36,
+            "V2et+1.5": 16.99,
+            "X2et+1.5": 34.06,
+            "12et+1.5": 41.29,
+            "V1et+2.5": 16.18,
+            "1Xet+2.5": 19.81,
+            "V2et+2.5": 11.6,
+            "X2et+2.5": 15.23,
+            "12et+2.5": 27.78,
+            "V1et+3.5": 5.89,
+            "1Xet+3.5": 9.52,
+            "V2et+3.5": 4.01,
+            "X2et+3.5": 7.64,
+            "12et+3.5": 9.9,
+            "V1et+4.5": 2.76,
+            "1Xet+4.5": 3.13,
+            "V2et+4.5": 1.92,
+            "X2et+4.5": 2.28,
+            "12et+4.5": 4.68,
+            "V1et+5.5": 0.77,
+            "1Xet+5.5": 1.14,
+            "V2et+5.5": 0.51,
+            "X2et+5.5": 0.88,
+            "12et+5.5": 1.28
+          },
+          "scores_probables": {
+            "1-0": 14.96,
+            "0-0": 14.26,
+            "1-1": 13.44,
+            "0-1": 12.42,
+            "2-0": 8.12,
+            "2-1": 7.41,
+            "1-2": 5.85,
+            "0-2": 5.4,
+            "2-2": 3.26,
+            "3-0": 2.88
+          },
+          "buts_moyens_simules": {
+            "home": 1.08,
+            "away": 0.89,
+            "total": 1.96
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 78 %  \n**SCORES PROBABLES** : 0‑0 ou 0‑1 (Temperley)  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative**  \n- **Los Andes** (domicile) : moyenne 0,60 but/match, seulement 0 but inscrit à domicile sur leurs 5 derniers matchs, 1 but encaissé. Leur défense est solide (0,40 but concédé en moyenne) mais l’attaque est très anémique.  \n- **Temperley** (extérieur) : moyenne 0,83 but/match, 2 buts marqués et 3 encaissés lors de leurs 5 derniers déplacements. Leur attaque est légèrement supérieure à celle de Los Andes, mais ils laissent aussi passer plus de buts.  \n\n**2. Impact du facteur domicile/extérieur**  \nLos Andes n’a jamais trouvé le fond des filets à domicile récemment, ce qui montre une difficulté à créer des occasions sur leur propre terrain. Temperley, même en déplacement, parvient à marquer (0,4 but/match) et à garder le score raisonnablement bas (0,67 but encaissé/match).  \n\n**3. Forme récente**  \n- Los Andes : W D L D D → 6 pts sur 6 matchs, aucune victoire nette à domicile.  \n- Temperley : W D L W D D → 9 pts sur 6 matchs, deux victoires récentes, dont une 2‑1 à domicile.  \n\nTemperley montre une dynamique légèrement meilleure et possède la capacité de marquer, même à l’extérieur.  \n\n**4. Contexte du championnat**  \nLos Andes occupe la 11ᵉ place avec 7 points, très proche du bas du tableau. Temperley est 26ᵉ avec 9 points, mais malgré la mauvaise position, ils ont obtenu plus de points que Los Andes grâce à leurs deux victoires récentes. Le classement indique que les deux équipes luttent pour éviter la zone de relégation, ce qui tend à rendre les rencontres prudentes et à limiter les buts.  \n\n**5. Confrontations directes**  \nAucune donnée H2H disponible, donc aucune influence historique à prendre en compte.  \n\n**6. Tendances de buts**  \n- Total moyen de buts combinés par match :  \n  - Los Andes : 0,60 + 0,40 = 1,00  \n  - Temperley : 0,83 + 0,67 = 1,50  \n  - Moyenne combinée ≈ 1,25 but/match.  \n  - Une moyenne inférieure à 2,5 buts indique une forte probabilité que le match se solde sous les 2,5 buts.  \n\n**7. Synthèse**  \n- L’attaque de Los Andes est la plus faible des deux (0 but à domicile récemment).  \n- Temperley a déjà marqué à l’extérieur, mais leurs matchs restent serrés (ex. 2‑1, 0‑0, 1‑0).  \n- Les deux équipes affichent une défense relativement compacte et une tendance à des scores bas.  \n\n**Conclusion** : La combinaison d’une attaque à domicile inefficace pour Los Andes et d’une défense modérée pour Temperley rend très probable un total de buts inférieur à 2,5. Le scénario le plus plausible est un match nul 0‑0 ou une victoire très étroite 0‑1 en faveur de Temperley.  \n\n> **Recommandation** : miser sur « Moins de 2.5 buts » avec une confiance de 78 %, en gardant à l’esprit les scores les plus probables 0‑0 ou 0‑1.",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑0 ou 0‑1 (Temperley)"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1498411,
+        "HomeTeam": "Nueva Chicago",
+        "AwayTeam": "All Boys",
+        "date": "29 mars 2026 à 18:30:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "W"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 10,
+          "total_points": 10,
+          "serie_domicile": [
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 2,
+          "total_marques": 6,
+          "total_encaisses": 3
+        },
+        "stats_away": {
+          "moyenne_marques": 0.8,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 7,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 3,
+          "total_marques": 4,
+          "total_encaisses": 4
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843720",
+            "date": "Mon, 23 Mar",
+            "home_team": "Nueva Chicago",
+            "away_team": "Gimnasia y Tiro (Salta)",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843720"
+          },
+          {
+            "game_id": "401843702",
+            "date": "Sun, 15 Mar",
+            "home_team": "San Martín (Tucumán)",
+            "away_team": "Nueva Chicago",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843702"
+          },
+          {
+            "game_id": "401843651",
+            "date": "Sat, 28 Feb",
+            "home_team": "Agropecuario",
+            "away_team": "Nueva Chicago",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843651"
+          },
+          {
+            "game_id": "401843646",
+            "date": "Sat, 21 Feb",
+            "home_team": "Nueva Chicago",
+            "away_team": "Tristán Suárez",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843646"
+          },
+          {
+            "game_id": "401843626",
+            "date": "Sun, 15 Feb",
+            "home_team": "Güemes",
+            "away_team": "Nueva Chicago",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843626"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843710",
+            "date": "Sun, 22 Mar",
+            "home_team": "Central Norte",
+            "away_team": "All Boys",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843710"
+          },
+          {
+            "game_id": "401843693",
+            "date": "Sat, 14 Mar",
+            "home_team": "All Boys",
+            "away_team": "Deportivo Madryn",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843693"
+          },
+          {
+            "game_id": "401843668",
+            "date": "Sun, 1 Mar",
+            "home_team": "All Boys",
+            "away_team": "Ciudad de Bolívar",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843668"
+          },
+          {
+            "game_id": "401843638",
+            "date": "Sun, 22 Feb",
+            "home_team": "Almirante Brown",
+            "away_team": "All Boys",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843638"
+          },
+          {
+            "game_id": "401843620",
+            "date": "Sat, 14 Feb",
+            "home_team": "All Boys",
+            "away_team": "Mitre (Santiago del Estero)",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843620"
+          }
+        ],
+        "classement": {
+          "Nueva Chicago": {
+            "position": 21,
+            "points": 12
+          },
+          "All Boys": {
+            "position": 10,
+            "points": 7
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Racing (Córdoba)",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Defensores de Belgrano",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Acassuso",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Ferro Carril Oeste",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Colón (Santa Fe)",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Almirante Brown",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "All Boys",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "Los Andes",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Ciudad de Bolívar",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Deportivo Madryn",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "San Telmo",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Chaco For Ever",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Tristán Suárez",
+            "points": 0
+          },
+          {
+            "position": 21,
+            "team": "Nueva Chicago",
+            "points": 12
+          },
+          {
+            "position": 22,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 23,
+            "team": "Atletico Rafaela",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 10
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 10
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 8
+          },
+          {
+            "position": 28,
+            "team": "Almagro",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "Atlanta",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "San Martín (San Juan)",
+            "points": 8
+          },
+          {
+            "position": 31,
+            "team": "Güemes",
+            "points": 7
+          },
+          {
+            "position": 32,
+            "team": "Patronato",
+            "points": 6
+          },
+          {
+            "position": 33,
+            "team": "Quilmes",
+            "points": 5
+          },
+          {
+            "position": 34,
+            "team": "Chacarita Juniors",
+            "points": 5
+          },
+          {
+            "position": 35,
+            "team": "Deportivo Maipú",
+            "points": 4
+          },
+          {
+            "position": 36,
+            "team": "Colegiales",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/484.png",
+        "logo_away": "https://media.api-sports.io/football/teams/464.png",
+        "classement_home": 21,
+        "classement_away": 10,
+        "points_classement_home": 12,
+        "points_classement_away": 7,
+        "nom_classement_home": "Nueva Chicago",
+        "nom_classement_away": "All Boys",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.26,
+            "lambda_away": 0.94,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 43.22,
+            "X": 28.97,
+            "V2": 27.82
+          },
+          "double_chance": {
+            "1X": 72.18,
+            "12": 71.04,
+            "X2": 56.78
+          },
+          "over_under": {
+            "plus_de_0.5": 89.14,
+            "moins_de_0.5": 10.85,
+            "plus_de_1.5": 65.01,
+            "moins_de_1.5": 34.99,
+            "plus_de_2.5": 37.58,
+            "moins_de_2.5": 62.42,
+            "plus_de_3.5": 17.58,
+            "moins_de_3.5": 82.42,
+            "plus_de_4.5": 7.18,
+            "moins_de_4.5": 92.82,
+            "plus_de_5.5": 2.48,
+            "moins_de_5.5": 97.52
+          },
+          "btts": {
+            "oui": 44.22,
+            "non": 55.78
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.22,
+            "1Xet+0.5": 61.33,
+            "V2et+0.5": 27.82,
+            "X2et+0.5": 45.92,
+            "12et+0.5": 71.04,
+            "V1et+1.5": 29.8,
+            "1Xet+1.5": 47.91,
+            "V2et+1.5": 17.1,
+            "X2et+1.5": 35.21,
+            "12et+1.5": 46.9,
+            "V1et+2.5": 20.7,
+            "1Xet+2.5": 25.12,
+            "V2et+2.5": 12.46,
+            "X2et+2.5": 16.89,
+            "12et+2.5": 33.16,
+            "V1et+3.5": 8.48,
+            "1Xet+3.5": 12.9,
+            "V2et+3.5": 4.69,
+            "X2et+3.5": 9.11,
+            "12et+3.5": 13.16,
+            "V1et+4.5": 4.25,
+            "1Xet+4.5": 4.8,
+            "V2et+4.5": 2.38,
+            "X2et+4.5": 2.92,
+            "12et+4.5": 6.62,
+            "V1et+5.5": 1.24,
+            "1Xet+5.5": 1.8,
+            "V2et+5.5": 0.68,
+            "X2et+5.5": 1.23,
+            "12et+5.5": 1.93
+          },
+          "scores_probables": {
+            "1-1": 13.69,
+            "1-0": 13.42,
+            "0-0": 10.85,
+            "0-1": 10.72,
+            "2-0": 9.1,
+            "2-1": 8.58,
+            "1-2": 6.24,
+            "0-2": 4.64,
+            "2-2": 3.87,
+            "3-0": 3.64
+          },
+          "buts_moyens_simules": {
+            "home": 1.26,
+            "away": 0.94,
+            "total": 2.2
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Nueva Chicago)  \n\n**CONFIANCE** : 68 %  \n\n**SCORES PROBABLES** : 1‑0 ou 0‑0  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Nueva Chicago** (21ᵉ, 12 pts) : moyenne 1,20 buts marqués / 0,60 buts encaissés. La défense est très solide, surtout à domicile : seulement **1 but encaissé** en 5 matchs à domicile (3 marqués, 1 encaissé).  \n- **All Boys** (10ᵉ, 7 pts) : moyenne 0,80 buts marqués / 0,80 buts encaissés. En déplacement, ils n’ont inscrit que **1 but** et en ont concédé **3** lors de leurs 5 derniers matchs à l’extérieur. Leur attaque est donc peu efficace hors de leurs bases.\n\n**2. Impact du facteur domicile/extérieur**  \n- La série à domicile de Nueva Chicago est **W‑D**, montrant qu’ils ne perdent jamais à la maison.  \n- All Boys enchaîne **deux défaites consécutives** à l’extérieur, signe d’une difficulté à s’imposer loin de leurs supporters.\n\n**3. Forme récente & tendances**  \n- **Nueva Chicago** : W L W D W (10 pts sur 6) → 4 victoires, 1 nul, 1 défaite, aucune perte de points majeurs.  \n- **All Boys** : L W D L W (7 pts sur 6) → 2 victoires, 1 nul, 3 défaites, dont les deux dernières à l’extérieur.  \n\nLes cinq derniers matchs détaillés de chaque équipe confirment ces tendances :  \n- Nueva Chicago a gagné 2‑0 à Agropecuario, 1‑0 à Güemes et a tenu le nul 0‑0 contre Tristán Suárez.  \n- All Boys a gagné 1‑0 contre Deportivo Madryn et a fait deux matchs à zéro (0‑0 vs Ciudad de Bolívar, 1‑0 vs Central Norte), mais a perdu 2‑1 à Almirante Brown à l’extérieur.\n\n**4. Contexte du championnat**  \n- Le classement montre une grande disparité : Nueva Chicago est proche du bas du tableau (21ᵉ) mais possède **plus de points (12) que All Boys (7)** malgré leur position plus haute.  \n- All Boys, même en 10ᵉ place, ne bénéficie que d’un petit écart de points et montre des performances irrégulières, surtout à l’extérieur.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc l’analyse repose uniquement sur les performances actuelles.\n\n**6. Analyse des statistiques détaillées (possessions, tirs, corners)**  \n- Les données détaillées ne sont pas fournies, mais les scores précédents (majoritairement 1‑0, 0‑0, 0‑2) indiquent des matchs peu prolifiques en tirs et en corners, typiques d’équipes avec des défenses compactes et des attaques modestes.\n\n**7. Synthèse**  \n- **Défense de Nueva Chicago** : très efficace à domicile (0,60 buts encaissés en moyenne).  \n- **Attaque d’All Boys** : faible à l’extérieur (0,80 buts marqués en moyenne, seulement 1 but inscrit en 5 matchs à l’extérieur).  \n- Le profil du match pointe donc vers **un petit nombre de buts**, avec un léger avantage pour l’équipe locale.\n\n**Conclusion** : La combinaison d’une défense solide à domicile, d’une attaque extérieure peu menaçante et d’une forme récente favorable à Nueva Chicago rend la victoire à domicile la probabilité la plus élevée, tout en restant dans un cadre de **moins de 2,5 buts**. Les scores les plus plausibles sont **1‑0** (victoire serrée) ou **0‑0** (match sans but).",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Nueva Chicago)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 0‑0"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1498414,
+        "HomeTeam": "San Telmo",
+        "AwayTeam": "Quilmes",
+        "date": "29 mars 2026 à 19:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.6,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 5,
+          "total_points": 5,
+          "serie_domicile": [
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 3,
+          "total_marques": 8,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 0.6,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 4,
+          "total_points": 4,
+          "serie_exterieur": [
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 0,
+          "buts_ext_marques": 0,
+          "buts_ext_encaisses": 3,
+          "total_marques": 3,
+          "total_encaisses": 3
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843716",
+            "date": "Sun, 22 Mar",
+            "home_team": "San Telmo",
+            "away_team": "Colón (Santa Fe)",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843716"
+          },
+          {
+            "game_id": "401843703",
+            "date": "Sat, 14 Mar",
+            "home_team": "San Miguel",
+            "away_team": "San Telmo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843703"
+          },
+          {
+            "game_id": "401843659",
+            "date": "Sun, 1 Mar",
+            "home_team": "San Telmo",
+            "away_team": "Acassuso",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843659"
+          },
+          {
+            "game_id": "401843635",
+            "date": "Sun, 22 Feb",
+            "home_team": "Chaco For Ever",
+            "away_team": "San Telmo",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843635"
+          },
+          {
+            "game_id": "401843631",
+            "date": "Sat, 14 Feb",
+            "home_team": "San Telmo",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843631"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843711",
+            "date": "Sat, 21 Mar",
+            "home_team": "Almagro",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843711"
+          },
+          {
+            "game_id": "401843700",
+            "date": "Sat, 14 Mar",
+            "home_team": "Quilmes",
+            "away_team": "Patronato",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843700"
+          },
+          {
+            "game_id": "401843667",
+            "date": "Sun, 1 Mar",
+            "home_team": "Gimnasia y Esgrima (Jujuy)",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843667"
+          },
+          {
+            "game_id": "401843644",
+            "date": "Sat, 21 Feb",
+            "home_team": "Quilmes",
+            "away_team": "Midland",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843644"
+          },
+          {
+            "game_id": "401843619",
+            "date": "Mon, 16 Feb",
+            "home_team": "Atlanta",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843619"
+          }
+        ],
+        "classement": {
+          "San Telmo": {
+            "position": 15,
+            "points": 5
+          },
+          "Quilmes": {
+            "position": 33,
+            "points": 5
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Racing (Córdoba)",
+            "points": 11
+          },
+          {
+            "position": 3,
+            "team": "Defensores de Belgrano",
+            "points": 11
+          },
+          {
+            "position": 4,
+            "team": "Acassuso",
+            "points": 9
+          },
+          {
+            "position": 5,
+            "team": "San Miguel",
+            "points": 9
+          },
+          {
+            "position": 6,
+            "team": "Ferro Carril Oeste",
+            "points": 9
+          },
+          {
+            "position": 7,
+            "team": "Colón (Santa Fe)",
+            "points": 8
+          },
+          {
+            "position": 8,
+            "team": "Almirante Brown",
+            "points": 8
+          },
+          {
+            "position": 9,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 8
+          },
+          {
+            "position": 10,
+            "team": "All Boys",
+            "points": 7
+          },
+          {
+            "position": 11,
+            "team": "Los Andes",
+            "points": 7
+          },
+          {
+            "position": 12,
+            "team": "Ciudad de Bolívar",
+            "points": 6
+          },
+          {
+            "position": 13,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 6
+          },
+          {
+            "position": 14,
+            "team": "Deportivo Madryn",
+            "points": 6
+          },
+          {
+            "position": 15,
+            "team": "San Telmo",
+            "points": 5
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 5
+          },
+          {
+            "position": 17,
+            "team": "Chaco For Ever",
+            "points": 5
+          },
+          {
+            "position": 18,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 2
+          },
+          {
+            "position": 19,
+            "team": "Tristán Suárez",
+            "points": 0
+          },
+          {
+            "position": 21,
+            "team": "Nueva Chicago",
+            "points": 12
+          },
+          {
+            "position": 22,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 23,
+            "team": "Atletico Rafaela",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 10
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 10
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Agropecuario",
+            "points": 8
+          },
+          {
+            "position": 28,
+            "team": "Almagro",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "Atlanta",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "San Martín (San Juan)",
+            "points": 8
+          },
+          {
+            "position": 31,
+            "team": "Güemes",
+            "points": 7
+          },
+          {
+            "position": 32,
+            "team": "Patronato",
+            "points": 6
+          },
+          {
+            "position": 33,
+            "team": "Quilmes",
+            "points": 5
+          },
+          {
+            "position": 34,
+            "team": "Chacarita Juniors",
+            "points": 5
+          },
+          {
+            "position": 35,
+            "team": "Deportivo Maipú",
+            "points": 4
+          },
+          {
+            "position": 36,
+            "team": "Colegiales",
+            "points": 4
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/1932.png",
+        "logo_away": "https://media.api-sports.io/football/teams/480.png",
+        "classement_home": 15,
+        "classement_away": 33,
+        "points_classement_home": 5,
+        "points_classement_away": 5,
+        "nom_classement_home": "San Telmo",
+        "nom_classement_away": "Quilmes",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.31,
+            "lambda_away": 1.19,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 39.22,
+            "X": 27.17,
+            "V2": 33.61
+          },
+          "double_chance": {
+            "1X": 66.39,
+            "12": 72.83,
+            "X2": 60.78
+          },
+          "over_under": {
+            "plus_de_0.5": 91.76,
+            "moins_de_0.5": 8.24,
+            "plus_de_1.5": 71.24,
+            "moins_de_1.5": 28.75,
+            "plus_de_2.5": 45.09,
+            "moins_de_2.5": 54.91,
+            "plus_de_3.5": 23.88,
+            "moins_de_3.5": 76.12,
+            "plus_de_4.5": 10.76,
+            "moins_de_4.5": 89.24,
+            "plus_de_5.5": 4.14,
+            "moins_de_5.5": 95.86
+          },
+          "btts": {
+            "oui": 50.58,
+            "non": 49.42
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.22,
+            "1Xet+0.5": 58.14,
+            "V2et+0.5": 33.61,
+            "X2et+0.5": 52.54,
+            "12et+0.5": 72.83,
+            "V1et+1.5": 28.46,
+            "1Xet+1.5": 47.38,
+            "V2et+1.5": 23.86,
+            "X2et+1.5": 42.79,
+            "12et+1.5": 52.32,
+            "V1et+2.5": 21.23,
+            "1Xet+2.5": 27.1,
+            "V2et+2.5": 17.99,
+            "X2et+2.5": 23.86,
+            "12et+2.5": 39.22,
+            "V1et+3.5": 9.97,
+            "1Xet+3.5": 15.84,
+            "V2et+3.5": 8.04,
+            "X2et+3.5": 13.9,
+            "12et+3.5": 18.0,
+            "V1et+4.5": 5.32,
+            "1Xet+4.5": 6.24,
+            "V2et+4.5": 4.52,
+            "X2et+4.5": 5.44,
+            "12et+4.5": 9.85,
+            "V1et+5.5": 1.8,
+            "1Xet+5.5": 2.71,
+            "V2et+5.5": 1.42,
+            "X2et+5.5": 2.34,
+            "12et+5.5": 3.22
+          },
+          "scores_probables": {
+            "1-1": 13.06,
+            "1-0": 10.76,
+            "0-1": 9.74,
+            "0-0": 8.24,
+            "2-1": 8.18,
+            "1-2": 7.74,
+            "2-0": 7.22,
+            "0-2": 5.88,
+            "2-2": 4.96,
+            "3-1": 3.6
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.18,
+            "total": 2.49
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (San Telmo)  \n**CONFIANCE** : 62 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des équipes**  \n- **San Telmo** (15ᵉ, 5 pts) : moyenne 1,60 buts marqués / 1,80 buts encaissés. En 5 matchs à domicile, ils n’ont inscrit que **5 buts** (1,00 b/j) et en ont concédé **6** (1,20 b/j). Leur attaque est modeste mais légèrement supérieure à celle de Quilmes.  \n- **Quilmes** (33ᵉ, 5 pts) : moyenne 0,60 buts marqués / 0,60 buts encaissés. En déplacement, ils n’ont **pas marqué** (0 buts) et n’ont encaissé que **3 buts** (0,60 b/j). Leur défense est la plus solide du tableau, mais l’absence de buts à l’extérieur montre une très faible capacité offensive.\n\n**2. Impact du facteur domicile/extérieur**  \n- Le domicile donne à San Telmo un léger avantage offensif (ils ont déjà trouvé le filet à domicile) alors que Quilmes peine à marquer à l’extérieur (0 buts).  \n- La différence de buts encaissés à domicile (1,20 b/j) contre les 0,60 b/j de Quilmes à l’extérieur indique que San Telmo ne sera pas facilement dépassé.\n\n**3. Forme récente**  \n- San Telmo : W D L D L – 5 pts sur 6 matchs, aucune série de victoires, mais le dernier match à domicile était une victoire 3‑1 contre Colón.  \n- Quilmes : L W L D L – 4 pts sur 6 matchs, en déplacement ils ont perdu 1‑0, fait 0‑0, puis 1‑0, montrant une tendance à ne pas marquer.\n\n**4. Tendances de buts**  \n- Les deux équipes affichent des moyennes de buts très basses (1,60 et 0,60).  \n- Historique à domicile de San Telmo : 5 buts marqués en 5 matchs → 1 but/jour.  \n- Historique à l’extérieur de Quilmes : 0 buts marqués en 5 matchs → 0 but/jour.  \n- Cela conduit à une forte probabilité que le total de buts du match soit **inférieur à 2,5** et que **les deux équipes ne marquent pas** (BTTS non).\n\n**5. Contexte du championnat**  \n- San Telmo occupe la 15ᵉ place, loin des zones de relégation directe mais loin des places de promotion. Leur priorité est de sécuriser des points à domicile.  \n- Quilmes, 33ᵉ, lutte contre la relégation et a besoin de points, mais son incapacité à marquer à l’extérieur limite ses chances de gagner.\n\n**6. Absence de H2H**  \n- Aucun affrontement direct disponible, donc aucune donnée supplémentaire à intégrer.\n\n**7. Synthèse**  \n- Le match devrait rester très serré, avec peu d’occasions de but.  \n- La combinaison d’une légère supériorité offensive à domicile pour San Telmo et de l’incapacité offensive de Quilmes à l’extérieur rend **une victoire 1‑0 ou 2‑0 de San Telmo** la meilleure lecture.  \n\n**Conclusion** : La prédiction la plus fiable est une **victoire domicile** de San Telmo, avec une confiance de **62 %** et les scores les plus probables **1‑0** ou **2‑0**.",
+        "confiance_pourcentage": 62,
+        "prediction_principale": "Victoire domicile (San Telmo)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      },
+      {
+        "id": 4,
+        "fixture_id": 1506063,
+        "HomeTeam": "Deportivo Pasto",
+        "AwayTeam": "Atletico Nacional",
+        "date": "29 mars 2026 à 23:20:00 UTC",
+        "league": "Colombia - Primera A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 18,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 10,
+          "total_marques": 15,
+          "total_encaisses": 13
+        },
+        "stats_away": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 18,
+          "total_points": 12,
+          "serie_exterieur": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 7,
+          "total_marques": 17,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401850836",
+            "date": "Tue, Mar 24",
+            "home_team": "Fortaleza CEIF",
+            "away_team": "Deportivo Pasto",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.7%",
+                "45.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "6",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850836"
+          },
+          {
+            "game_id": "401850821",
+            "date": "Wed, Mar 18",
+            "home_team": "Deportivo Pasto",
+            "away_team": "Boyacá Chicó",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68%",
+                "32%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "0"
+              ],
+              "Shot Attempts": [
+                "17",
+                "2"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850821"
+          },
+          {
+            "game_id": "401850808",
+            "date": "Fri, Mar 13",
+            "home_team": "Once Caldas",
+            "away_team": "Deportivo Pasto",
+            "score": "4 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.6%",
+                "50.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "12",
+                "21"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "7"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850808"
+          },
+          {
+            "game_id": "401850801",
+            "date": "Mon, Mar 9",
+            "home_team": "Deportivo Pasto",
+            "away_team": "América de Cali",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.3%",
+                "67.7%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "14"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850801"
+          },
+          {
+            "game_id": "401850794",
+            "date": "Sun, Mar 1",
+            "home_team": "Deportivo Pasto",
+            "away_team": "Cúcuta Deportivo",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.7%",
+                "47.3%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850794"
+          },
+          {
+            "game_id": "401850787",
+            "date": "Fri, Feb 20",
+            "home_team": "Deportivo Pereira",
+            "away_team": "Deportivo Pasto",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.7%",
+                "58.3%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "7"
+              ],
+              "Shot Attempts": [
+                "11",
+                "22"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850787"
+          },
+          {
+            "game_id": "401850771",
+            "date": "Sat, Feb 14",
+            "home_team": "Deportivo Pasto",
+            "away_team": "Internacional de Bogotá",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.1%",
+                "38.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850771"
+          },
+          {
+            "game_id": "401850760",
+            "date": "Tue, Feb 10",
+            "home_team": "Llaneros",
+            "away_team": "Deportivo Pasto",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.1%",
+                "33.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "7",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850760"
+          },
+          {
+            "game_id": "401850749",
+            "date": "Fri, Feb 6",
+            "home_team": "Deportivo Pasto",
+            "away_team": "Bucaramanga",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.8%",
+                "52.2%"
+              ],
+              "Shots on Goal": [
+                "0",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "6"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850749"
+          },
+          {
+            "game_id": "401850742",
+            "date": "Sun, Feb 1",
+            "home_team": "Deportivo Cali",
+            "away_team": "Deportivo Pasto",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48%",
+                "52%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "6"
+              ],
+              "Yellow Cards": [
+                "6",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850742"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401850831",
+            "date": "Sat, Mar 21",
+            "home_team": "Atlético Nacional",
+            "away_team": "Internacional de Bogotá",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.1%",
+                "28.9%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "22",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850831"
+          },
+          {
+            "game_id": "401850820",
+            "date": "Tue, Mar 17",
+            "home_team": "Millonarios",
+            "away_team": "Atlético Nacional",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.3%",
+                "50.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "20",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850820"
+          },
+          {
+            "game_id": "401850809",
+            "date": "Fri, Mar 13",
+            "home_team": "Atlético Nacional",
+            "away_team": "Llaneros",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.6%",
+                "44.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "18"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850809"
+          },
+          {
+            "game_id": "401850737",
+            "date": "Tue, Mar 10",
+            "home_team": "Atlético Junior",
+            "away_team": "Atlético Nacional",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.5%",
+                "67.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "4",
+                "16"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850737"
+          },
+          {
+            "game_id": "401850807",
+            "date": "Sat, Mar 7",
+            "home_team": "Águilas Doradas",
+            "away_team": "Atlético Nacional",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.5%",
+                "64.5%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "7"
+              ],
+              "Shot Attempts": [
+                "9",
+                "18"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "5",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850807"
+          },
+          {
+            "game_id": "401842615",
+            "date": "Wed, Mar 4",
+            "home_team": "Atlético Nacional",
+            "away_team": "Millonarios",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.4%",
+                "26.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "11",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401842615"
+          },
+          {
+            "game_id": "401850797",
+            "date": "Sun, Mar 1",
+            "home_team": "Deportes Tolima",
+            "away_team": "Atlético Nacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.3%",
+                "36.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850797"
+          },
+          {
+            "game_id": "401850753",
+            "date": "Wed, Feb 25",
+            "home_team": "Independiente Santa Fe",
+            "away_team": "Atlético Nacional",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.6%",
+                "60.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850753"
+          },
+          {
+            "game_id": "401850783",
+            "date": "Sat, Feb 21",
+            "home_team": "Atlético Nacional",
+            "away_team": "Alianza FC",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.4%",
+                "51.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850783"
+          },
+          {
+            "game_id": "401850774",
+            "date": "Sun, Feb 15",
+            "home_team": "Deportivo Cali",
+            "away_team": "Atlético Nacional",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.2%",
+                "58.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "13",
+                "15"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "5",
+                "9"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850774"
+          }
+        ],
+        "classement": {
+          "Deportivo Pasto": {
+            "position": 2,
+            "points": 27
+          },
+          "Atletico Nacional": {
+            "position": 1,
+            "points": 27
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Atlético Nacional",
+            "points": 27
+          },
+          {
+            "position": 2,
+            "team": "Deportivo Pasto",
+            "points": 27
+          },
+          {
+            "position": 3,
+            "team": "Deportes Tolima",
+            "points": 23
+          },
+          {
+            "position": 4,
+            "team": "Once Caldas",
+            "points": 23
+          },
+          {
+            "position": 5,
+            "team": "Atlético Junior",
+            "points": 22
+          },
+          {
+            "position": 6,
+            "team": "América de Cali",
+            "points": 21
+          },
+          {
+            "position": 7,
+            "team": "Internacional de Bogotá",
+            "points": 21
+          },
+          {
+            "position": 8,
+            "team": "Millonarios",
+            "points": 20
+          },
+          {
+            "position": 9,
+            "team": "Bucaramanga",
+            "points": 19
+          },
+          {
+            "position": 10,
+            "team": "Deportivo Cali",
+            "points": 19
+          },
+          {
+            "position": 11,
+            "team": "Águilas Doradas",
+            "points": 19
+          },
+          {
+            "position": 12,
+            "team": "Independiente Santa Fe",
+            "points": 18
+          },
+          {
+            "position": 13,
+            "team": "Llaneros",
+            "points": 16
+          },
+          {
+            "position": 14,
+            "team": "Fortaleza CEIF",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Independiente Medellín",
+            "points": 13
+          },
+          {
+            "position": 16,
+            "team": "Cúcuta Deportivo",
+            "points": 11
+          },
+          {
+            "position": 17,
+            "team": "Alianza FC",
+            "points": 11
+          },
+          {
+            "position": 18,
+            "team": "Jaguares de Córdoba",
+            "points": 11
+          },
+          {
+            "position": 19,
+            "team": "Boyacá Chicó",
+            "points": 8
+          },
+          {
+            "position": 20,
+            "team": "Deportivo Pereira",
+            "points": 6
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "693706",
+            "date": "Sunday, March 24, 2024",
+            "team1": "Atlético Nacional",
+            "score": "1 - 0",
+            "team2": "Deportivo Pasto",
+            "title": "Atlético Nacional VS Deportivo Pasto",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/693706/deportivo-pasto-atletico-nacional",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "48.1%",
+                "51.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "2"
+              ],
+              "Shot Attempts": [
+                "12",
+                "8"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "714338",
+            "date": "Saturday, October 5, 2024",
+            "team1": "Deportivo Pasto",
+            "score": "1 - 2",
+            "team2": "Atlético Nacional",
+            "title": "Deportivo Pasto VS Atlético Nacional",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/714338/atletico-nacional-deportivo-pasto",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "56.8%",
+                "43.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "24",
+                "8"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "723679",
+            "date": "Sunday, November 24, 2024",
+            "team1": "Deportivo Pasto",
+            "score": "0 - 1",
+            "team2": "Atlético Nacional",
+            "title": "Deportivo Pasto VS Atlético Nacional",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/723679/atletico-nacional-deportivo-pasto",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "61.4%",
+                "38.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "12",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "723963",
+            "date": "Thursday, December 5, 2024",
+            "team1": "Atlético Nacional",
+            "score": "2 - 1",
+            "team2": "Deportivo Pasto",
+            "title": "Atlético Nacional VS Deportivo Pasto",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/723963/deportivo-pasto-atletico-nacional",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "67.2%",
+                "32.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "25",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "730464",
+            "date": "Tuesday, April 29, 2025",
+            "team1": "Atlético Nacional",
+            "score": "3 - 0",
+            "team2": "Deportivo Pasto",
+            "title": "Atlético Nacional VS Deportivo Pasto",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/730464/deportivo-pasto-atletico-nacional",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "67%",
+                "33%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "0"
+              ],
+              "Shot Attempts": [
+                "21",
+                "1"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "750730",
+            "date": "20251018",
+            "team1": "Deportivo Pasto",
+            "score": "2 - 2",
+            "team2": "Atlético Nacional",
+            "title": "Deportivo Pasto VS Atlético Nacional",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/750730/atletico-nacional-deportivo-pasto",
+            "source": "Primera A",
+            "stats": {
+              "Possession": [
+                "60.1%",
+                "39.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "23",
+                "11"
+              ],
+              "Yellow Cards": [
+                "7",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1126.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1137.png",
+        "classement_home": 2,
+        "classement_away": 1,
+        "points_classement_home": 27,
+        "points_classement_away": 27,
+        "nom_classement_home": "Deportivo Pasto",
+        "nom_classement_away": "Atlético Nacional",
+        "country_fr": "Colombia - Primera A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.402,
+            "lambda_away": 1.289,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 40.01,
+            "X": 25.48,
+            "V2": 34.52
+          },
+          "double_chance": {
+            "1X": 65.48,
+            "12": 74.52,
+            "X2": 60.0
+          },
+          "over_under": {
+            "plus_de_0.5": 93.16,
+            "moins_de_0.5": 6.84,
+            "plus_de_1.5": 74.75,
+            "moins_de_1.5": 25.25,
+            "plus_de_2.5": 50.77,
+            "moins_de_2.5": 49.24,
+            "plus_de_3.5": 28.92,
+            "moins_de_3.5": 71.08,
+            "plus_de_4.5": 13.94,
+            "moins_de_4.5": 86.06,
+            "plus_de_5.5": 5.7,
+            "moins_de_5.5": 94.3
+          },
+          "btts": {
+            "oui": 54.32,
+            "non": 45.68
+          },
+          "resultat_total": {
+            "V1et+0.5": 40.01,
+            "1Xet+0.5": 58.64,
+            "V2et+0.5": 34.52,
+            "X2et+0.5": 53.15,
+            "12et+0.5": 74.52,
+            "V1et+1.5": 30.56,
+            "1Xet+1.5": 49.18,
+            "V2et+1.5": 25.56,
+            "X2et+1.5": 44.2,
+            "12et+1.5": 56.12,
+            "V1et+2.5": 24.07,
+            "1Xet+2.5": 30.84,
+            "V2et+2.5": 19.93,
+            "X2et+2.5": 26.7,
+            "12et+2.5": 44.0,
+            "V1et+3.5": 12.32,
+            "1Xet+3.5": 19.08,
+            "V2et+3.5": 9.84,
+            "X2et+3.5": 16.6,
+            "12et+3.5": 22.16,
+            "V1et+4.5": 6.97,
+            "1Xet+4.5": 8.2,
+            "V2et+4.5": 5.74,
+            "X2et+4.5": 6.97,
+            "12et+4.5": 12.71,
+            "V1et+5.5": 2.46,
+            "1Xet+5.5": 3.69,
+            "V2et+5.5": 2.01,
+            "X2et+5.5": 3.24,
+            "12et+5.5": 4.47
+          },
+          "scores_probables": {
+            "1-1": 11.86,
+            "1-0": 9.45,
+            "0-1": 8.96,
+            "2-1": 8.58,
+            "1-2": 7.64,
+            "0-0": 6.84,
+            "2-0": 6.48,
+            "0-2": 5.64,
+            "2-2": 5.54,
+            "3-1": 4.11
+          },
+          "buts_moyens_simules": {
+            "home": 1.41,
+            "away": 1.29,
+            "total": 2.7
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Deportivo Pasto)  \n**CONFIANCE** : 58 %  \n**SCORES PROBABLES** : 1‑0 ou 2‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Défense** : Pasto est l’une des meilleures équipes à domicile (8 buts encaissés en 6 matchs, soit 0,5 but/match). Nacional, en revanche, concède 7 buts à l’extérieur (1,17 but/match).  \n- **Attaque** : Les deux équipes affichent une moyenne similaire hors‑terrain/domicile (≈ 1,3 but/match). Pasto a 8 buts à domicile, Nacional 8 buts à l’extérieur.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Pasto profite d’un fort facteur domicile (série à domicile W‑W‑W‑D‑D, 8 buts marqués, 3 encaissés).  \n- Nacional montre une forme irrégulière à l’extérieur (série L‑W‑W‑L‑W‑L) et a concédé plus du double de buts que Pasto à domicile.  \n\n**3. Forme récente**  \n- **Pasto** : 5 victoires, 1 nul, 0 défaite sur ses 6 derniers matchs, dont 4 victoires à domicile.  \n- **Nacional** : 4 victoires, 2 défaites sur les 6 derniers, avec deux revers à l’extérieur (contre Millonarios et Deportivo Cali).  \n\n**4. Contexte du championnat**  \n- Les deux clubs sont à égalité de points (27) mais Nacional mène grâce à la différence de buts et à un meilleur bilan à l’extérieur.  \n- Pasto, deuxième, a besoin de consolider son avance à domicile ; Nacional veut creuser l’écart.  \n\n**5. Confrontations directes (6 dernières rencontres)**  \n- Nacional a gagné 4 fois, Pasto 1 fois, 1 match s’est terminé 2‑2.  \n- Même si le bilan penche en faveur de Nacional, les deux dernières confrontations (2024‑2025) ont montré que Pasto peut garder le match très serré (défait 1‑0, 2‑1).  \n\n**6. Analyse détaillée des matchs récents**  \n- **Pasto à domicile** : possession souvent supérieure (ex. 68 % vs Boyacá Chicó), tirs cadrés élevés (4‑0, 3‑2) et très peu de buts encaissés (3 en 6 matchs).  \n- **Nacional à l’extérieur** : performances très variables – domination totale contre Internacional de Bogotá (71 % de possession, 8‑1 tirs cadrés) mais défaites contre Millonarios (49 % de possession, 7‑1 tirs cadrés) et Deportivo Cali (41 % de possession, 4‑6 tirs cadrés).  \n\n**7. Synthèse**  \n- La solidité défensive de Pasto à domicile (0,5 but concédé/match) combinée à une attaque capable de marquer au moins un but rend probable une victoire 1‑0 ou 2‑0.  \n- Le fait que Nacional concède davantage à l’extérieur (plus d’un but par match) et a déjà perdu deux fois récemment à l’extérieur renforce l’idée d’une rencontre à faible score où le domicile l’emporte.  \n\n**8. Choix du pari**  \n- Le scénario le plus cohérent avec toutes les données est **“Victoire domicile”**.  \n- Le nombre total de buts devrait rester **inférieur à 2,5**, mais la prédiction principale demandée est le résultat du match.  \n\n**Conclusion** : Deportivo Pasto devrait s’imposer à domicile, très probablement 1‑0 ou 2‑0, avec une confiance de 58 %.",
+        "confiance_pourcentage": 58,
+        "prediction_principale": "Victoire domicile (Deportivo Pasto)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 2‑0"
+      }
+    ]
+  }
+}
