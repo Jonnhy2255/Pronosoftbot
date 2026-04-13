@@ -1,0 +1,1180 @@
+{
+  "metadata": {
+    "date_generation": "2026-04-13 04:20:22",
+    "date_matchs": "2026-04-13",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 1,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 1,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1378178,
+        "HomeTeam": "Fiorentina",
+        "AwayTeam": "Lazio",
+        "date": "13 avril 2026 à 18:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Fiorentina": 2.46,
+            "Lazio": 3.5,
+            "Draw": 3.09
+          },
+          "totals": {
+            "Over": 2.3,
+            "Under": 1.72
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 17,
+          "total_points": 13,
+          "serie_domicile": [
+            "D",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 8,
+          "total_marques": 13,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 14,
+          "total_points": 11,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "D",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 5,
+          "total_marques": 11,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401862917",
+            "date": "Thu, Apr 9",
+            "home_team": "Crystal Palace",
+            "away_team": "Fiorentina",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862917"
+          },
+          {
+            "game_id": "737091",
+            "date": "Sat, Apr 4",
+            "home_team": "Hellas Verona",
+            "away_team": "Fiorentina",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "21",
+                "5"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737091"
+          },
+          {
+            "game_id": "737079",
+            "date": "Sun, Mar 22",
+            "home_team": "Fiorentina",
+            "away_team": "Internazionale",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40%",
+                "60%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737079"
+          },
+          {
+            "game_id": "401862849",
+            "date": "Thu, Mar 19",
+            "home_team": "Raków Czestochowa",
+            "away_team": "Fiorentina",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.4%",
+                "50.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "7"
+              ],
+              "Shot Attempts": [
+                "14",
+                "21"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862849"
+          },
+          {
+            "game_id": "737065",
+            "date": "Mon, Mar 16",
+            "home_team": "Cremonese",
+            "away_team": "Fiorentina",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.9%",
+                "52.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "13",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737065"
+          },
+          {
+            "game_id": "401862846",
+            "date": "Thu, Mar 12",
+            "home_team": "Fiorentina",
+            "away_team": "Raków Czestochowa",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862846"
+          },
+          {
+            "game_id": "737059",
+            "date": "Sun, Mar 8",
+            "home_team": "Fiorentina",
+            "away_team": "Parma",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.1%",
+                "43.9%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "0"
+              ],
+              "Shot Attempts": [
+                "12",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737059"
+          },
+          {
+            "game_id": "737048",
+            "date": "Mon, Mar 2",
+            "home_team": "Udinese",
+            "away_team": "Fiorentina",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35%",
+                "65%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "10",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737048"
+          },
+          {
+            "game_id": "401854534",
+            "date": "Thu, Feb 26",
+            "home_team": "Fiorentina",
+            "away_team": "Jagiellonia Bialystok",
+            "score": "2 - 4",
+            "status": "AET",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.2%",
+                "49.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "10"
+              ],
+              "Shot Attempts": [
+                "22",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "3"
+              ],
+              "Saves": [
+                "6",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401854534"
+          },
+          {
+            "game_id": "737040",
+            "date": "Mon, Feb 23",
+            "home_team": "Fiorentina",
+            "away_team": "Pisa",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.4%",
+                "43.6%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737040"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "737093",
+            "date": "Sat, Apr 4",
+            "home_team": "Lazio",
+            "away_team": "Parma",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.9%",
+                "39.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "4"
+              ],
+              "Shot Attempts": [
+                "7",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737093"
+          },
+          {
+            "game_id": "737082",
+            "date": "Sun, Mar 22",
+            "home_team": "Bologna",
+            "away_team": "Lazio",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.6%",
+                "46.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737082"
+          },
+          {
+            "game_id": "737071",
+            "date": "Sun, Mar 15",
+            "home_team": "Lazio",
+            "away_team": "AC Milan",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.2%",
+                "58.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "17"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737071"
+          },
+          {
+            "game_id": "737056",
+            "date": "Mon, Mar 9",
+            "home_team": "Lazio",
+            "away_team": "Sassuolo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.2%",
+                "49.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "4"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737056"
+          },
+          {
+            "game_id": "762434",
+            "date": "Wed, Mar 4",
+            "home_team": "Lazio",
+            "away_team": "Atalanta",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.1%",
+                "50.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "6",
+                "10"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/762434"
+          },
+          {
+            "game_id": "737044",
+            "date": "Sun, Mar 1",
+            "home_team": "Torino",
+            "away_team": "Lazio",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "44.6%",
+                "55.4%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "13",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737044"
+          },
+          {
+            "game_id": "737041",
+            "date": "Sat, Feb 21",
+            "home_team": "Cagliari",
+            "away_team": "Lazio",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "41.7%",
+                "58.3%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "3"
+              ],
+              "Shot Attempts": [
+                "11",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "6"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737041"
+          },
+          {
+            "game_id": "737031",
+            "date": "Sat, Feb 14",
+            "home_team": "Lazio",
+            "away_team": "Atalanta",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.9%",
+                "50.1%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "5"
+              ],
+              "Shot Attempts": [
+                "18",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737031"
+          },
+          {
+            "game_id": "762428",
+            "date": "Wed, Feb 11",
+            "home_team": "Bologna",
+            "away_team": "Lazio",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762428"
+          },
+          {
+            "game_id": "737017",
+            "date": "Sun, Feb 8",
+            "home_team": "Juventus",
+            "away_team": "Lazio",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.9%",
+                "37.1%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "34",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737017"
+          }
+        ],
+        "classement": {
+          "Fiorentina": {
+            "position": 16,
+            "points": 32
+          },
+          "Lazio": {
+            "position": 9,
+            "points": 44
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 75
+          },
+          {
+            "position": 2,
+            "team": "Napoli",
+            "points": 66
+          },
+          {
+            "position": 3,
+            "team": "AC Milan",
+            "points": 63
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 60
+          },
+          {
+            "position": 5,
+            "team": "Como",
+            "points": 58
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 57
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 53
+          },
+          {
+            "position": 8,
+            "team": "Bologna",
+            "points": 48
+          },
+          {
+            "position": 9,
+            "team": "Lazio",
+            "points": 44
+          },
+          {
+            "position": 10,
+            "team": "Udinese",
+            "points": 43
+          },
+          {
+            "position": 11,
+            "team": "Sassuolo",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Torino",
+            "points": 39
+          },
+          {
+            "position": 13,
+            "team": "Genoa",
+            "points": 36
+          },
+          {
+            "position": 14,
+            "team": "Parma",
+            "points": 36
+          },
+          {
+            "position": 15,
+            "team": "Cagliari",
+            "points": 33
+          },
+          {
+            "position": 16,
+            "team": "Fiorentina",
+            "points": 32
+          },
+          {
+            "position": 17,
+            "team": "Cremonese",
+            "points": 27
+          },
+          {
+            "position": 18,
+            "team": "Lecce",
+            "points": 27
+          },
+          {
+            "position": 19,
+            "team": "Hellas Verona",
+            "points": 18
+          },
+          {
+            "position": 20,
+            "team": "Pisa",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712155",
+            "date": "Sunday, September 22, 2024",
+            "team1": "Fiorentina",
+            "score": "2 - 1",
+            "team2": "Lazio",
+            "title": "Fiorentina VS Lazio",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712155/lazio-fiorentina",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "46.2%",
+                "53.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "3",
+                "10"
+              ],
+              "Saves": [
+                "5",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "712329",
+            "date": "Sunday, January 26, 2025",
+            "team1": "Lazio",
+            "score": "1 - 2",
+            "team2": "Fiorentina",
+            "title": "Lazio VS Fiorentina",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712329/fiorentina-lazio",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "70.1%",
+                "29.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "22",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "14",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            }
+          },
+          {
+            "gameId": "736966",
+            "date": "Wednesday, January 7, 2026",
+            "team1": "Lazio",
+            "score": "2 - 2",
+            "team2": "Fiorentina",
+            "title": "Lazio VS Fiorentina",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/736966/fiorentina-lazio",
+            "source": "Serie A",
+            "stats": {
+              "Possession": [
+                "48.8%",
+                "51.2%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "17",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "5"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/502.png",
+        "logo_away": "https://media.api-sports.io/football/teams/487.png",
+        "classement_home": 16,
+        "classement_away": 9,
+        "points_classement_home": 32,
+        "points_classement_away": 44,
+        "nom_classement_home": "Fiorentina",
+        "nom_classement_away": "Lazio",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.406,
+            "lambda_away": 1.283,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 39.31,
+            "X": 25.53,
+            "V2": 35.16
+          },
+          "double_chance": {
+            "1X": 64.84,
+            "12": 74.47,
+            "X2": 60.69
+          },
+          "over_under": {
+            "plus_de_0.5": 93.21,
+            "moins_de_0.5": 6.79,
+            "plus_de_1.5": 75.04,
+            "moins_de_1.5": 24.96,
+            "plus_de_2.5": 50.96,
+            "moins_de_2.5": 49.04,
+            "plus_de_3.5": 28.77,
+            "moins_de_3.5": 71.23,
+            "plus_de_4.5": 13.61,
+            "moins_de_4.5": 86.38,
+            "plus_de_5.5": 5.64,
+            "moins_de_5.5": 94.36
+          },
+          "btts": {
+            "oui": 54.68,
+            "non": 45.32
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.31,
+            "1Xet+0.5": 58.05,
+            "V2et+0.5": 35.16,
+            "X2et+0.5": 53.9,
+            "12et+0.5": 74.47,
+            "V1et+1.5": 29.8,
+            "1Xet+1.5": 48.54,
+            "V2et+1.5": 26.5,
+            "X2et+1.5": 45.24,
+            "12et+1.5": 56.31,
+            "V1et+2.5": 23.38,
+            "1Xet+2.5": 30.21,
+            "V2et+2.5": 20.75,
+            "X2et+2.5": 27.59,
+            "12et+2.5": 44.12,
+            "V1et+3.5": 11.6,
+            "1Xet+3.5": 18.44,
+            "V2et+3.5": 10.34,
+            "X2et+3.5": 17.18,
+            "12et+3.5": 21.93,
+            "V1et+4.5": 6.39,
+            "1Xet+4.5": 7.78,
+            "V2et+4.5": 5.84,
+            "X2et+4.5": 7.22,
+            "12et+4.5": 12.23,
+            "V1et+5.5": 2.28,
+            "1Xet+5.5": 3.67,
+            "V2et+5.5": 1.97,
+            "X2et+5.5": 3.36,
+            "12et+5.5": 4.26
+          },
+          "scores_probables": {
+            "1-1": 11.9,
+            "1-0": 9.5,
+            "0-1": 8.66,
+            "2-1": 8.47,
+            "1-2": 8.06,
+            "0-0": 6.79,
+            "2-0": 6.43,
+            "0-2": 5.75,
+            "2-2": 5.46,
+            "3-1": 4.12
+          },
+          "buts_moyens_simules": {
+            "home": 1.4,
+            "away": 1.3,
+            "total": 2.7
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Moins de 2.5 buts  \n**CONFIANCE** : 66%  \n**SCORES PROBABLES** : 1‑0 ou 0‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative (forces/faiblesses)**  \n- **Fiorentina (domicile)** : 16ᵉ, 32 pts, moyenne 1,30 bt but/mtc et 1,40 bt encaissés. En 6 matchs à domicile, 6 buts marqués et 6 encaissés → défense moyenne, attaque peu prolifique.  \n- **Lazio (extérieur)** : 9ᵉ, 44 pts, moyenne 1,10 bt but/mtc et 1,10 bt encaissés. En 5 matchs à l’extérieur, 5 buts marqués et 5 encaissés → équilibre très serré, peu de flambée offensive.\n\n**2. Impact du facteur domicile/extérieur**  \n- Fiorentina ne montre aucune différence marquée entre son jeu à domicile et à l’extérieur (6 bt marqués / 6 bc encaissés à domicile).  \n- Lazio a une légère baisse de performance à l’extérieur (seulement 1 victoire en 5 matchs, 3 nuls). Le facteur domicile ne donne donc pas un avantage décisif à Fiorentina.\n\n**3. Forme récente & tendances (stats détaillées)**  \n- **Fiorentina** : 5 derniers matchs à domicile → D‑W‑D‑L‑W (2 V, 2 N, 1 D). Les victoires (4‑1 vs Cremonese, 2‑1 vs Raków) ont été accompagnées d’un grand nombre de tirs (≥13) et de corners, mais les défaites et nuls restent très serrés (0‑0, 0‑3 à Udinese).  \n- **Lazio** : 5 derniers matchs à l’extérieur → W‑L‑D‑D‑D (1 V, 1 D, 3 N). Les victoires (2‑0 vs Bologna, 1‑0 vs AC Milan) ont été obtenues avec très peu de tirs cadrés (≤3) et une possession souvent inférieure, signe d’une capacité à gagner sur la solidité défensive plutôt que sur l’attaque.  \n\n**4. Contexte du championnat**  \n- Lazio se situe à 9ᵉ avec 44 pts, à 12 points du leader, donc en lutte pour une place européenne.  \n- Fiorentina, reléguée à la 16ᵉ, lutte contre la relégation. Les deux équipes sont donc motivées, mais aucune n’a besoin de prendre de gros risques offensifs.\n\n**5. Confrontations directes**  \n- Saison précédente : 2‑1 victoire Fiorentina, 2‑1 victoire Lazio, 2‑2 match nul. Les trois rencontres ont totalisé 5 bt (≤ 2,5 bt par match) et les deux équipes ont marqué à chaque fois, mais le dernier duel (2‑2) montre que le total peut rester sous 3 bt.\n\n**6. Évaluation des cotes**  \n- Over 2,5 bt à 2,30 vs Under 2,5 bt à 1,72. La cote Under est nettement plus basse, reflétant la perception du marché d’un match à faible score.\n\n**7. Analyse approfondie des stats détaillées**  \n- **Possession** : moyenne autour de 50 % pour les deux équipes, aucune domination claire.  \n- **Tirs cadrés** : Fiorentina a souvent plus de tirs cadrés à domicile (ex. 6‑1 vs Hellas Verona) mais les matchs récents à domicile montrent une moyenne de 2‑3 tirs cadrés seulement. Lazio ne dépasse généralement pas 3 tirs cadrés à l’extérieur (ex. 1‑1 vs Parma, 2‑0 vs Bologna).  \n- **Corners** : les deux équipes obtiennent peu de corners en moyenne (≈ 4‑5 par match), indice d’un jeu moins orienté vers le danger.  \n\n**8. Synthèse**  \n- Les deux équipes affichent des moyennes de buts très proches (≈ 1 bt/match chacune) et une défense qui concède à peu près le même nombre.  \n- Le total attendu de buts est donc d’environ 2 bt, ce qui rend le **moins de 2,5 bt** le scénario le plus probable.  \n- Le BTTS (Both Teams To Score) est plausible mais la probabilité que les deux équipes marquent simultanément reste inférieure à 40 % (les matchs récents montrent plusieurs nuls 0‑0 ou 1‑0).  \n- Les scores les plus fréquents dans ce type de rencontre sont **1‑0** (victoire serrée de Fiorentina) ou **0‑0** (défense solide des deux côtés).  \n\n**Conclusion** : Le pari « Moins de 2,5 buts » offre le meilleur rapport risque/rendement avec une confiance de 66 %. Les issues les plus probables sont un 1‑0 en faveur de Fiorentina ou un 0‑0.",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Moins de 2.5 buts",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 0‑0"
+      }
+    ]
+  }
+}
