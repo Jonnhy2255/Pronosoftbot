@@ -1,0 +1,4851 @@
+{
+  "metadata": {
+    "date_generation": "2026-04-14 04:10:18",
+    "date_matchs": "2026-04-14",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 5,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 5,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1399816,
+        "HomeTeam": "Woking",
+        "AwayTeam": "Solihull Moors",
+        "date": "14 avril 2026 à 18:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 17,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 15,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 3,
+          "total_marques": 20,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.2,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 10,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 11,
+          "total_marques": 12,
+          "total_encaisses": 17
+        },
+        "last_matches_home": [
+          {
+            "game_id": "752196",
+            "date": "Sat, 11 Apr",
+            "home_team": "Woking",
+            "away_team": "Morecambe",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752196"
+          },
+          {
+            "game_id": "752190",
+            "date": "Mon, 6 Apr",
+            "home_team": "Braintree Town",
+            "away_team": "Woking",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752190"
+          },
+          {
+            "game_id": "752175",
+            "date": "Fri, 3 Apr",
+            "home_team": "Woking",
+            "away_team": "Eastleigh",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752175"
+          },
+          {
+            "game_id": "752063",
+            "date": "Tue, 31 Mar",
+            "home_team": "Woking",
+            "away_team": "Altrincham",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752063"
+          },
+          {
+            "game_id": "752160",
+            "date": "Sat, 28 Mar",
+            "home_team": "York City",
+            "away_team": "Woking",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752160"
+          },
+          {
+            "game_id": "752152",
+            "date": "Wed, 25 Mar",
+            "home_team": "Southend United",
+            "away_team": "Woking",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752152"
+          },
+          {
+            "game_id": "752139",
+            "date": "Sat, 21 Mar",
+            "home_team": "Woking",
+            "away_team": "Aldershot Town",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752139"
+          },
+          {
+            "game_id": "752016",
+            "date": "Tue, 17 Mar",
+            "home_team": "Woking",
+            "away_team": "Yeovil Town",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752016"
+          },
+          {
+            "game_id": "752125",
+            "date": "Sat, 14 Mar",
+            "home_team": "Brackley Town",
+            "away_team": "Woking",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752125"
+          },
+          {
+            "game_id": "752046",
+            "date": "Tue, 10 Mar",
+            "home_team": "Woking",
+            "away_team": "Boreham Wood",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752046"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "752194",
+            "date": "Sat, 11 Apr",
+            "home_team": "Southend United",
+            "away_team": "Solihull Moors",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752194"
+          },
+          {
+            "game_id": "752184",
+            "date": "Mon, 6 Apr",
+            "home_team": "Solihull Moors",
+            "away_team": "Boreham Wood",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752184"
+          },
+          {
+            "game_id": "752174",
+            "date": "Fri, 3 Apr",
+            "home_team": "Tamworth",
+            "away_team": "Solihull Moors",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752174"
+          },
+          {
+            "game_id": "752165",
+            "date": "Sat, 28 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "Altrincham",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752165"
+          },
+          {
+            "game_id": "752154",
+            "date": "Wed, 25 Mar",
+            "home_team": "Truro City",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752154"
+          },
+          {
+            "game_id": "752137",
+            "date": "Sat, 21 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "FC Halifax Town",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752137"
+          },
+          {
+            "game_id": "752037",
+            "date": "Tue, 17 Mar",
+            "home_team": "Brackley Town",
+            "away_team": "Solihull Moors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752037"
+          },
+          {
+            "game_id": "752126",
+            "date": "Sat, 14 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Solihull Moors",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752126"
+          },
+          {
+            "game_id": "752109",
+            "date": "Sat, 7 Mar",
+            "home_team": "Solihull Moors",
+            "away_team": "Gateshead",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752109"
+          },
+          {
+            "game_id": "752103",
+            "date": "Sat, 28 Feb",
+            "home_team": "Scunthorpe United",
+            "away_team": "Solihull Moors",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752103"
+          }
+        ],
+        "classement": {
+          "Woking": {
+            "position": 10,
+            "points": 59
+          },
+          "Solihull Moors": {
+            "position": 13,
+            "points": 52
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "York City",
+            "points": 104
+          },
+          {
+            "position": 2,
+            "team": "Rochdale",
+            "points": 102
+          },
+          {
+            "position": 3,
+            "team": "Carlisle United",
+            "points": 89
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 84
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 81
+          },
+          {
+            "position": 6,
+            "team": "Forest Green Rovers",
+            "points": 78
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 72
+          },
+          {
+            "position": 8,
+            "team": "FC Halifax Town",
+            "points": 67
+          },
+          {
+            "position": 9,
+            "team": "Hartlepool United",
+            "points": 62
+          },
+          {
+            "position": 10,
+            "team": "Woking",
+            "points": 59
+          },
+          {
+            "position": 11,
+            "team": "Tamworth",
+            "points": 58
+          },
+          {
+            "position": 12,
+            "team": "Wealdstone",
+            "points": 54
+          },
+          {
+            "position": 13,
+            "team": "Solihull Moors",
+            "points": 52
+          },
+          {
+            "position": 14,
+            "team": "Boston United",
+            "points": 52
+          },
+          {
+            "position": 15,
+            "team": "Altrincham",
+            "points": 51
+          },
+          {
+            "position": 16,
+            "team": "Yeovil Town",
+            "points": 51
+          },
+          {
+            "position": 17,
+            "team": "Gateshead",
+            "points": 50
+          },
+          {
+            "position": 18,
+            "team": "Sutton United",
+            "points": 47
+          },
+          {
+            "position": 19,
+            "team": "Aldershot Town",
+            "points": 46
+          },
+          {
+            "position": 20,
+            "team": "Eastleigh",
+            "points": 46
+          },
+          {
+            "position": 21,
+            "team": "Brackley Town",
+            "points": 39
+          },
+          {
+            "position": 22,
+            "team": "Morecambe",
+            "points": 38
+          },
+          {
+            "position": 23,
+            "team": "Braintree Town",
+            "points": 36
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 31
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713138",
+            "date": "Wednesday, October 23, 2024",
+            "team1": "Solihull Moors",
+            "score": "2 - 1",
+            "team2": "Woking",
+            "title": "Solihull Moors VS Woking",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713138/woking-solihull-moors",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713353",
+            "date": "Wednesday, February 19, 2025",
+            "team1": "Woking",
+            "score": "1 - 0",
+            "team2": "Solihull Moors",
+            "title": "Woking VS Solihull Moors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713353/solihull-moors-woking",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "751821",
+            "date": "Tuesday, September 30, 2025",
+            "team1": "Solihull Moors",
+            "score": "0 - 3",
+            "team2": "Woking",
+            "title": "Solihull Moors VS Woking",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/751821/woking-solihull-moors",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/1836.png",
+        "logo_away": "https://media.api-sports.io/football/teams/1834.png",
+        "classement_home": 10,
+        "classement_away": 13,
+        "points_classement_home": 59,
+        "points_classement_away": 52,
+        "nom_classement_home": "Woking",
+        "nom_classement_away": "Solihull Moors",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.582,
+            "lambda_away": 1.211,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 46.4,
+            "X": 24.52,
+            "V2": 29.08
+          },
+          "double_chance": {
+            "1X": 70.93,
+            "12": 75.48,
+            "X2": 53.6
+          },
+          "over_under": {
+            "plus_de_0.5": 93.84,
+            "moins_de_0.5": 6.16,
+            "plus_de_1.5": 77.2,
+            "moins_de_1.5": 22.8,
+            "plus_de_2.5": 53.06,
+            "moins_de_2.5": 46.94,
+            "plus_de_3.5": 30.54,
+            "moins_de_3.5": 69.46,
+            "plus_de_4.5": 15.22,
+            "moins_de_4.5": 84.78,
+            "plus_de_5.5": 6.19,
+            "moins_de_5.5": 93.81
+          },
+          "btts": {
+            "oui": 55.88,
+            "non": 44.12
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.4,
+            "1Xet+0.5": 64.77,
+            "V2et+0.5": 29.08,
+            "X2et+0.5": 47.44,
+            "12et+0.5": 75.48,
+            "V1et+1.5": 37.22,
+            "1Xet+1.5": 55.6,
+            "V2et+1.5": 21.6,
+            "X2et+1.5": 39.98,
+            "12et+1.5": 58.83,
+            "V1et+2.5": 29.3,
+            "1Xet+2.5": 36.18,
+            "V2et+2.5": 16.88,
+            "X2et+2.5": 23.76,
+            "12et+2.5": 46.18,
+            "V1et+3.5": 15.52,
+            "1Xet+3.5": 22.41,
+            "V2et+3.5": 8.12,
+            "X2et+3.5": 15.01,
+            "12et+3.5": 23.65,
+            "V1et+4.5": 9.03,
+            "1Xet+4.5": 10.32,
+            "V2et+4.5": 4.9,
+            "X2et+4.5": 6.18,
+            "12et+4.5": 13.92,
+            "V1et+5.5": 3.32,
+            "1Xet+5.5": 4.61,
+            "V2et+5.5": 1.58,
+            "X2et+5.5": 2.87,
+            "12et+5.5": 4.9
+          },
+          "scores_probables": {
+            "1-1": 11.48,
+            "2-1": 9.59,
+            "1-0": 9.18,
+            "2-0": 7.92,
+            "0-1": 7.47,
+            "1-2": 7.1,
+            "0-0": 6.16,
+            "2-2": 5.6,
+            "3-1": 5.02,
+            "0-2": 4.73
+          },
+          "buts_moyens_simules": {
+            "home": 1.59,
+            "away": 1.21,
+            "total": 2.8
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire domicile (Woking)  \n**CONFIANCE** : 71 %  \n**SCORES PROBABLES** : 2‑0 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Woking** : 10ᵉ du classement (59 pts). Moyenne de buts marqués 2,00 / match, moyenne de buts encaissés 1,20 / match. En domicile, ils ont inscrit **15 buts** et n’ont encaissé que **9** (ratio ≈ 1,67).  \n- **Solihull Moors** : 13ᵉ (52 pts). Moyenne de buts marqués 1,20 / match, moyenne de buts encaissés 1,70 / match. En déplacement, ils n’ont marqué que **6 buts** et en ont concédé **11** (ratio ≈ 0,55).  \n\nWoking montre une capacité offensive nettement supérieure et une défense plus solide à domicile, tandis que Solihull peine à marquer à l’extérieur et concède fréquemment.\n\n**2. Impact du facteur domicile/extérieur**  \n- Historique à domicile de Woking (15‑9) indique une forte différence entre leurs performances à domicile et à l’extérieur.  \n- Solihull, avec seulement 6 buts marqués et 11 encaissés à l’extérieur, a du mal à s’imposer hors de son terrain.  \n\nLe facteur terrain favorise donc fortement Woking.\n\n**3. Forme récente**  \n- **Woking (6 derniers)** : W D D D L D → 7 pts (forme stable, aucune défaite consécutive).  \n- **Solihull (6 derniers)** : D W L W D L → 8 pts (plus irrégulière, deux défaites récentes).  \n\nSur les 10 derniers matchs, Woking a accumulé **17 pts** contre **10 pts** pour Solihull, ce qui confirme une meilleure dynamique.\n\n**4. Tendances de buts**  \n- Woking a enregistré **5 buts** en une seule rencontre (5‑1) et a dépassé les 2,5 buts dans 6 de ses 10 derniers matchs à domicile.  \n- Solihull n’a dépassé les 2,5 buts qu’une fois à l’extérieur (4‑1 contre Boreham Wood, mais c’était à domicile).  \n\nLa probabilité d’un total de buts supérieur à 2,5 est élevée, mais la prédiction principale doit rester « victoire domicile » pour respecter la consigne.\n\n**5. Contexte du championnat**  \n- Woking se situe à 10ᵉ, à 2 pts du 9ᵉ (Hartlepool) et à 5 pts du 8ᵉ (FC Halifax). Une victoire à domicile consolide leur place dans le top‑10.  \n- Solihull, à 13ᵉ, lutte pour s’éloigner de la zone de danger (12ᵉ‑14ᵉ). Une défaite ne menace pas immédiatement la relégation, mais ils ont besoin de points à l’extérieur, ce qui n’est pas leur point fort.\n\n**6. Confrontations directes récentes**  \n- 3 dernières rencontres : Woking a gagné **2** fois (1‑0 à domicile, 3‑0 à l’extérieur) et perdu une fois (2‑1 à l’extérieur).  \n- Le bilan favorise clairement Woking (2‑1) et montre que les rencontres sont souvent à score limité mais en faveur du domicile.\n\n**7. Analyse des matchs détaillés (absence de stats avancées)**  \n- Les fiches détaillées ne contiennent pas de données de possession, tirs ou corners, mais les scores montrent que Woking crée régulièrement des occasions (ex. 5‑1, 3‑3, 3‑2).  \n- Solihull a eu des performances offensives limitées à l’extérieur (0‑0, 0‑1, 1‑1) et a concédé plusieurs buts (5‑1, 3‑3).\n\n**8. Synthèse**  \nTous les indicateurs (buts marqués/encaissés, forme, domicile, historique H2H) pointent vers une victoire de Woking à domicile, avec plusieurs buts marqués. La probabilité d’un score 2‑0 ou 3‑1 est la plus élevée compte tenu de la capacité offensive de Woking et de la faiblesse défensive de Solihull à l’extérieur.  \n\n---  \n\n**Conclusion** : La meilleure lecture du match est une **victoire de Woking** avec une confiance de **71 %**, les scores les plus plausibles étant **2‑0** ou **3‑1**.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Victoire domicile (Woking)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑1"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1399888,
+        "HomeTeam": "Wealdstone",
+        "AwayTeam": "Boston United",
+        "date": "14 avril 2026 à 18:45:00 UTC",
+        "league": "England - National League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 2.4,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 15,
+          "total_points": 6,
+          "serie_domicile": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 18,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 11,
+          "total_marques": 24,
+          "total_encaisses": 16
+        },
+        "stats_away": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W",
+            "L",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 13,
+          "total_points": 8,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 10,
+          "total_marques": 13,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          {
+            "game_id": "752192",
+            "date": "Sat, 11 Apr",
+            "home_team": "Rochdale",
+            "away_team": "Wealdstone",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752192"
+          },
+          {
+            "game_id": "752181",
+            "date": "Mon, 6 Apr",
+            "home_team": "Wealdstone",
+            "away_team": "Aldershot Town",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752181"
+          },
+          {
+            "game_id": "752173",
+            "date": "Fri, 3 Apr",
+            "home_team": "Boreham Wood",
+            "away_team": "Wealdstone",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752173"
+          },
+          {
+            "game_id": "752097",
+            "date": "Tue, 31 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Hartlepool United",
+            "score": "7 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752097"
+          },
+          {
+            "game_id": "752155",
+            "date": "Wed, 25 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Yeovil Town",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752155"
+          },
+          {
+            "game_id": "752134",
+            "date": "Sat, 21 Mar",
+            "home_team": "Forest Green Rovers",
+            "away_team": "Wealdstone",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752134"
+          },
+          {
+            "game_id": "752020",
+            "date": "Tue, 17 Mar",
+            "home_team": "Gateshead",
+            "away_team": "Wealdstone",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752020"
+          },
+          {
+            "game_id": "752126",
+            "date": "Sat, 14 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Solihull Moors",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752126"
+          },
+          {
+            "game_id": "752008",
+            "date": "Tue, 10 Mar",
+            "home_team": "Wealdstone",
+            "away_team": "Tamworth",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752008"
+          },
+          {
+            "game_id": "752115",
+            "date": "Sat, 7 Mar",
+            "home_team": "Braintree Town",
+            "away_team": "Wealdstone",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752115"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "752203",
+            "date": "Sat, 11 Apr",
+            "home_team": "Boston United",
+            "away_team": "Truro City",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752203"
+          },
+          {
+            "game_id": "752180",
+            "date": "Mon, 6 Apr",
+            "home_team": "Brackley Town",
+            "away_team": "Boston United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752180"
+          },
+          {
+            "game_id": "752177",
+            "date": "Fri, 3 Apr",
+            "home_team": "Boston United",
+            "away_team": "York City",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752177"
+          },
+          {
+            "game_id": "752146",
+            "date": "Tue, 24 Mar",
+            "home_team": "Boston United",
+            "away_team": "Altrincham",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752146"
+          },
+          {
+            "game_id": "752133",
+            "date": "Sat, 21 Mar",
+            "home_team": "Carlisle United",
+            "away_team": "Boston United",
+            "score": "6 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752133"
+          },
+          {
+            "game_id": "752123",
+            "date": "Sat, 14 Mar",
+            "home_team": "Boston United",
+            "away_team": "Yeovil Town",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752123"
+          },
+          {
+            "game_id": "752108",
+            "date": "Sat, 7 Mar",
+            "home_team": "Rochdale",
+            "away_team": "Boston United",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752108"
+          },
+          {
+            "game_id": "752099",
+            "date": "Tue, 3 Mar",
+            "home_team": "Boston United",
+            "away_team": "Woking",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752099"
+          },
+          {
+            "game_id": "752088",
+            "date": "Tue, 24 Feb",
+            "home_team": "Forest Green Rovers",
+            "away_team": "Boston United",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752088"
+          },
+          {
+            "game_id": "752082",
+            "date": "Sat, 21 Feb",
+            "home_team": "Boston United",
+            "away_team": "Tamworth",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/752082"
+          }
+        ],
+        "classement": {
+          "Wealdstone": {
+            "position": 12,
+            "points": 54
+          },
+          "Boston United": {
+            "position": 14,
+            "points": 52
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "York City",
+            "points": 104
+          },
+          {
+            "position": 2,
+            "team": "Rochdale",
+            "points": 102
+          },
+          {
+            "position": 3,
+            "team": "Carlisle United",
+            "points": 89
+          },
+          {
+            "position": 4,
+            "team": "Boreham Wood",
+            "points": 84
+          },
+          {
+            "position": 5,
+            "team": "Scunthorpe United",
+            "points": 81
+          },
+          {
+            "position": 6,
+            "team": "Forest Green Rovers",
+            "points": 78
+          },
+          {
+            "position": 7,
+            "team": "Southend United",
+            "points": 72
+          },
+          {
+            "position": 8,
+            "team": "FC Halifax Town",
+            "points": 67
+          },
+          {
+            "position": 9,
+            "team": "Hartlepool United",
+            "points": 62
+          },
+          {
+            "position": 10,
+            "team": "Woking",
+            "points": 59
+          },
+          {
+            "position": 11,
+            "team": "Tamworth",
+            "points": 58
+          },
+          {
+            "position": 12,
+            "team": "Wealdstone",
+            "points": 54
+          },
+          {
+            "position": 13,
+            "team": "Solihull Moors",
+            "points": 52
+          },
+          {
+            "position": 14,
+            "team": "Boston United",
+            "points": 52
+          },
+          {
+            "position": 15,
+            "team": "Altrincham",
+            "points": 51
+          },
+          {
+            "position": 16,
+            "team": "Yeovil Town",
+            "points": 51
+          },
+          {
+            "position": 17,
+            "team": "Gateshead",
+            "points": 50
+          },
+          {
+            "position": 18,
+            "team": "Sutton United",
+            "points": 47
+          },
+          {
+            "position": 19,
+            "team": "Aldershot Town",
+            "points": 46
+          },
+          {
+            "position": 20,
+            "team": "Eastleigh",
+            "points": 46
+          },
+          {
+            "position": 21,
+            "team": "Brackley Town",
+            "points": 39
+          },
+          {
+            "position": 22,
+            "team": "Morecambe",
+            "points": 38
+          },
+          {
+            "position": 23,
+            "team": "Braintree Town",
+            "points": 36
+          },
+          {
+            "position": 24,
+            "team": "Truro City",
+            "points": 31
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "713251",
+            "date": "Tuesday, April 1, 2025",
+            "team1": "Wealdstone",
+            "score": "1 - 0",
+            "team2": "Boston United",
+            "title": "Wealdstone VS Boston United",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713251/boston-united-wealdstone",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "713471",
+            "date": "Friday, April 18, 2025",
+            "team1": "Boston United",
+            "score": "2 - 0",
+            "team2": "Wealdstone",
+            "title": "Boston United VS Wealdstone",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/713471/wealdstone-boston-united",
+            "source": "National League",
+            "stats": {}
+          },
+          {
+            "gameId": "751726",
+            "date": "Monday, August 25, 2025",
+            "team1": "Boston United",
+            "score": "2 - 1",
+            "team2": "Wealdstone",
+            "title": "Boston United VS Wealdstone",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/751726/wealdstone-boston-united",
+            "source": "National League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/8663.png",
+        "logo_away": "https://media.api-sports.io/football/teams/8146.png",
+        "classement_home": 12,
+        "classement_away": 14,
+        "points_classement_home": 54,
+        "points_classement_away": 52,
+        "nom_classement_home": "Wealdstone",
+        "nom_classement_away": "Boston United",
+        "country_fr": "England - National League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.746,
+            "lambda_away": 1.168,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 51.28,
+            "X": 23.36,
+            "V2": 25.35
+          },
+          "double_chance": {
+            "1X": 74.65,
+            "12": 76.63,
+            "X2": 48.72
+          },
+          "over_under": {
+            "plus_de_0.5": 94.65,
+            "moins_de_0.5": 5.35,
+            "plus_de_1.5": 79.15,
+            "moins_de_1.5": 20.85,
+            "plus_de_2.5": 56.37,
+            "moins_de_2.5": 43.63,
+            "plus_de_3.5": 33.48,
+            "moins_de_3.5": 66.52,
+            "plus_de_4.5": 17.04,
+            "moins_de_4.5": 82.96,
+            "plus_de_5.5": 7.61,
+            "moins_de_5.5": 92.38
+          },
+          "btts": {
+            "oui": 56.77,
+            "non": 43.23
+          },
+          "resultat_total": {
+            "V1et+0.5": 51.28,
+            "1Xet+0.5": 69.3,
+            "V2et+0.5": 25.35,
+            "X2et+0.5": 43.36,
+            "12et+0.5": 76.63,
+            "V1et+1.5": 42.28,
+            "1Xet+1.5": 60.29,
+            "V2et+1.5": 18.86,
+            "X2et+1.5": 36.88,
+            "12et+1.5": 61.14,
+            "V1et+2.5": 33.79,
+            "1Xet+2.5": 41.13,
+            "V2et+2.5": 15.24,
+            "X2et+2.5": 22.58,
+            "12et+2.5": 49.04,
+            "V1et+3.5": 18.86,
+            "1Xet+3.5": 26.19,
+            "V2et+3.5": 7.3,
+            "X2et+3.5": 14.63,
+            "12et+3.5": 26.15,
+            "V1et+4.5": 11.18,
+            "1Xet+4.5": 12.58,
+            "V2et+4.5": 4.46,
+            "X2et+4.5": 5.86,
+            "12et+4.5": 15.64,
+            "V1et+5.5": 4.69,
+            "1Xet+5.5": 6.08,
+            "V2et+5.5": 1.54,
+            "X2et+5.5": 2.93,
+            "12et+5.5": 6.22
+          },
+          "scores_probables": {
+            "1-1": 10.68,
+            "2-1": 9.9,
+            "1-0": 9.01,
+            "2-0": 8.48,
+            "0-1": 6.49,
+            "1-2": 6.48,
+            "2-2": 5.94,
+            "3-1": 5.5,
+            "0-0": 5.35,
+            "3-0": 5.04
+          },
+          "buts_moyens_simules": {
+            "home": 1.76,
+            "away": 1.17,
+            "total": 2.93
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : Victoire domicile (Wealdstone)  \n- **CONFIANCE** : 68%  \n- **SCORES PROBABLES** : 2‑0 ou 3‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Wealdstone** : moyenne de **2,40 buts marqués** et **1,60 encaissés** sur l’ensemble de la saison. En domicile, ils ont inscrit **18 buts** tout en n’encaissant que **5**, soit une solidité défensive exceptionnelle (0,71 but concédé en moyenne à domicile).  \n- **Boston United** : moyenne de **1,30 buts marqués** et **1,60 encaissés**. À l’extérieur, ils n’ont marqué que **6 buts** tout en concédant **10** (1,67 but encaissé en moyenne à l’extérieur). Leur attaque est donc peu efficace hors de leurs bases et la défense est vulnérable.\n\n**2. Impact du facteur domicile/extérieur**  \n- Le facteur domicile favorise fortement Wealdstone (série à domicile : W‑W‑L‑W‑W).  \n- Boston montre une série à l’extérieur mitigée (D‑L‑L‑W) et un historique de peu de buts à l’extérieur.\n\n**3. Forme récente**  \n- **Wealdstone** (6 derniers) : L‑W‑L‑W‑L‑L → 2 victoires, 4 défaites, mais les deux victoires récentes (6 avril 3‑0 contre Aldershot, 11 avril 2‑1 contre Rochdale) ont été nettes et à domicile.  \n- **Boston United** (6 derniers) : W‑D‑L‑D‑L‑W → 3 victoires, 2 nuls, 1 défaite, mais leurs seules victoires récentes (6 avril 1‑0 vs Truro, 21 mars 2‑1 vs Yeovil) n’ont pas été à l’extérieur. Leur dernier match à l’extérieur (21 mars 6‑2 contre Carlisle) montre qu’ils peuvent concéder beaucoup quand l’adversaire est fort.\n\n**4. Contexte du championnat**  \n- Classement très serré entre les deux équipes (12ᵉ vs 14ᵉ, seulement 2 points d’écart).  \n- Les équipes autour (Solihull Moors, Altrincham) affichent des performances similaires, mais Wealdstone possède un net avantage à domicile qui peut faire la différence dans la lutte pour les places de milieu de tableau.\n\n**5. Confrontations directes** (saison précédente)  \n- Trois rencontres récentes : 1‑0 (Wealdstone), 2‑0 (Boston), 2‑1 (Boston). Boston a légèrement mieux performé, mais chaque match a été à faible score et les victoires de Boston sont venues à l’extérieur, ce qui montre que le résultat n’est pas figé.  \n\n**6. Analyse des statistiques détaillées des matchs passés**  \n- Les données de possession, tirs, corners ne sont pas disponibles, mais les scores des 10 derniers matchs de Wealdstone montrent une capacité à marquer plusieurs buts (ex. 7‑0 vs Hartlepool, 5‑1 vs Solihull).  \n- Boston, en revanche, a souvent des scores serrés ou nuls à l’extérieur (ex. 0‑0 vs Tamworth, 2‑2 vs Altrincham) et ne dépasse pas les 2 buts marqués en déplacement.\n\n**7. Synthèse**  \n- **Wealdstone** combine une attaque prolifique à domicile et une défense très solide.  \n- **Boston United** possède une défense fragile à l’extérieur et une attaque qui peine à trouver le chemin des filets loin de chez eux.  \n- Même si les confrontations directes sont équilibrées, le facteur domicile et les statistiques globales penchent nettement en faveur d’une victoire de Wealdstone.  \n\n**8. Choix de la prédiction**  \nParmi les options proposées, la plus fiable est **« Victoire domicile »**. La probabilité d’un score supérieur à 2‑0 est élevée, d’où les deux scores les plus probables : **2‑0** ou **3‑1**.  \n\n---  \n\n*Cette prédiction repose uniquement sur les données fournies (moyennes, forme, historique à domicile/extérieur et confrontations directes). Aucun facteur externe (blessures, météo, suspensions) n’a été pris en compte.*",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire domicile (Wealdstone)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑1"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1534910,
+        "HomeTeam": "Atletico Madrid",
+        "AwayTeam": "Barcelona",
+        "date": "14 avril 2026 à 19:00:00 UTC",
+        "league": "World - UEFA Champions League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Atlético Madrid": 3.81,
+            "Barcelona": 1.88,
+            "Draw": 4.52
+          },
+          "totals": {
+            "Over": 1.86,
+            "Under": 2.1
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 15,
+          "total_points": 6,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 10,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 11,
+          "total_marques": 18,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 2.8,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 15,
+          "total_points_10": 25,
+          "total_points": 15,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 24,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 4,
+          "buts_ext_encaisses": 2,
+          "total_marques": 28,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "748450",
+            "date": "Sat, Apr 11",
+            "home_team": "Sevilla",
+            "away_team": "Atlético Madrid",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32%",
+                "68%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "11",
+                "13"
+              ],
+              "Yellow Cards": [
+                "4",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748450"
+          },
+          {
+            "game_id": "401862887",
+            "date": "Wed, Apr 8",
+            "home_team": "Barcelona",
+            "away_team": "Atlético Madrid",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862887"
+          },
+          {
+            "game_id": "748434",
+            "date": "Sat, Apr 4",
+            "home_team": "Atlético Madrid",
+            "away_team": "Barcelona",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33.1%",
+                "66.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "8"
+              ],
+              "Shot Attempts": [
+                "6",
+                "22"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748434"
+          },
+          {
+            "game_id": "748433",
+            "date": "Sun, Mar 22",
+            "home_team": "Real Madrid",
+            "away_team": "Atlético Madrid",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.4%",
+                "47.6%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "5",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748433"
+          },
+          {
+            "game_id": "401862580",
+            "date": "Wed, Mar 18",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "Atlético Madrid",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.3%",
+                "48.7%"
+              ],
+              "Shots on Goal": [
+                "11",
+                "6"
+              ],
+              "Shot Attempts": [
+                "18",
+                "18"
+              ],
+              "Yellow Cards": [
+                "4",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "8"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862580"
+          },
+          {
+            "game_id": "748423",
+            "date": "Sat, Mar 14",
+            "home_team": "Atlético Madrid",
+            "away_team": "Getafe",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "65.5%",
+                "34.5%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748423"
+          },
+          {
+            "game_id": "401862579",
+            "date": "Tue, Mar 10",
+            "home_team": "Atlético Madrid",
+            "away_team": "Tottenham Hotspur",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "11",
+                "11"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862579"
+          },
+          {
+            "game_id": "748410",
+            "date": "Sat, Mar 7",
+            "home_team": "Atlético Madrid",
+            "away_team": "Real Sociedad",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.2%",
+                "47.8%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "3"
+              ],
+              "Shot Attempts": [
+                "24",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "8",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748410"
+          },
+          {
+            "game_id": "401859850",
+            "date": "Tue, Mar 3",
+            "home_team": "Barcelona",
+            "away_team": "Atlético Madrid",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "2"
+              ],
+              "Shot Attempts": [
+                "21",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "15",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859850"
+          },
+          {
+            "game_id": "748394",
+            "date": "Sat, Feb 28",
+            "home_team": "Real Oviedo",
+            "away_team": "Atlético Madrid",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.7%",
+                "62.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "1"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748394"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748449",
+            "date": "Sat, Apr 11",
+            "home_team": "Barcelona",
+            "away_team": "Espanyol",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "76.9%",
+                "23.1%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "2"
+              ],
+              "Shot Attempts": [
+                "20",
+                "10"
+              ],
+              "Yellow Cards": [
+                "3",
+                "6"
+              ],
+              "Corner Kicks": [
+                "7",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748449"
+          },
+          {
+            "game_id": "401862887",
+            "date": "Wed, Apr 8",
+            "home_team": "Barcelona",
+            "away_team": "Atlético Madrid",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862887"
+          },
+          {
+            "game_id": "748434",
+            "date": "Sat, Apr 4",
+            "home_team": "Atlético Madrid",
+            "away_team": "Barcelona",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "33.1%",
+                "66.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "8"
+              ],
+              "Shot Attempts": [
+                "6",
+                "22"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748434"
+          },
+          {
+            "game_id": "748432",
+            "date": "Sun, Mar 22",
+            "home_team": "Barcelona",
+            "away_team": "Rayo Vallecano",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.2%",
+                "38.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "15",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748432"
+          },
+          {
+            "game_id": "401862582",
+            "date": "Wed, Mar 18",
+            "home_team": "Barcelona",
+            "away_team": "Newcastle United",
+            "score": "7 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.8%",
+                "37.2%"
+              ],
+              "Shots on Goal": [
+                "13",
+                "5"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862582"
+          },
+          {
+            "game_id": "748415",
+            "date": "Sun, Mar 15",
+            "home_team": "Barcelona",
+            "away_team": "Sevilla",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.3%",
+                "38.7%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748415"
+          },
+          {
+            "game_id": "401862577",
+            "date": "Tue, Mar 10",
+            "home_team": "Newcastle United",
+            "away_team": "Barcelona",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.6%",
+                "54.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "9",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862577"
+          },
+          {
+            "game_id": "748409",
+            "date": "Sat, Mar 7",
+            "home_team": "Athletic Club",
+            "away_team": "Barcelona",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "29.5%",
+                "70.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748409"
+          },
+          {
+            "game_id": "401859850",
+            "date": "Tue, Mar 3",
+            "home_team": "Barcelona",
+            "away_team": "Atlético Madrid",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71%",
+                "29%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "2"
+              ],
+              "Shot Attempts": [
+                "21",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "15",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401859850"
+          },
+          {
+            "game_id": "748402",
+            "date": "Sat, Feb 28",
+            "home_team": "Barcelona",
+            "away_team": "Villarreal",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "73.6%",
+                "26.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "19",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748402"
+          }
+        ],
+        "classement": {
+          "Atletico Madrid": {
+            "position": 14,
+            "points": 13
+          },
+          "Barcelona": {
+            "position": 5,
+            "points": 16
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Arsenal",
+            "points": 24
+          },
+          {
+            "position": 2,
+            "team": "Bayern Munich",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "Liverpool",
+            "points": 18
+          },
+          {
+            "position": 4,
+            "team": "Tottenham Hotspur",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "Barcelona",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Chelsea",
+            "points": 16
+          },
+          {
+            "position": 7,
+            "team": "Sporting CP",
+            "points": 16
+          },
+          {
+            "position": 8,
+            "team": "Manchester City",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Real Madrid",
+            "points": 15
+          },
+          {
+            "position": 10,
+            "team": "Internazionale",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "Paris Saint-Germain",
+            "points": 14
+          },
+          {
+            "position": 12,
+            "team": "Newcastle United",
+            "points": 14
+          },
+          {
+            "position": 13,
+            "team": "Juventus",
+            "points": 13
+          },
+          {
+            "position": 14,
+            "team": "Atlético Madrid",
+            "points": 13
+          },
+          {
+            "position": 15,
+            "team": "Atalanta",
+            "points": 13
+          },
+          {
+            "position": 16,
+            "team": "Bayer Leverkusen",
+            "points": 12
+          },
+          {
+            "position": 17,
+            "team": "Borussia Dortmund",
+            "points": 11
+          },
+          {
+            "position": 18,
+            "team": "Olympiacos",
+            "points": 11
+          },
+          {
+            "position": 19,
+            "team": "Club Brugge",
+            "points": 10
+          },
+          {
+            "position": 20,
+            "team": "Galatasaray",
+            "points": 10
+          },
+          {
+            "position": 21,
+            "team": "AS Monaco",
+            "points": 10
+          },
+          {
+            "position": 22,
+            "team": "FK Qarabag",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Bodo/Glimt",
+            "points": 9
+          },
+          {
+            "position": 24,
+            "team": "Benfica",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Marseille",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "Pafos",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Union St.-Gilloise",
+            "points": 9
+          },
+          {
+            "position": 28,
+            "team": "PSV Eindhoven",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "Athletic Club",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "Napoli",
+            "points": 8
+          },
+          {
+            "position": 31,
+            "team": "F.C. København",
+            "points": 8
+          },
+          {
+            "position": 32,
+            "team": "Ajax Amsterdam",
+            "points": 6
+          },
+          {
+            "position": 33,
+            "team": "Eintracht Frankfurt",
+            "points": 4
+          },
+          {
+            "position": 34,
+            "team": "Slavia Prague",
+            "points": 3
+          },
+          {
+            "position": 35,
+            "team": "Villarreal",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Kairat Almaty",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704830",
+            "date": "Saturday, December 21, 2024",
+            "team1": "Barcelona",
+            "score": "1 - 2",
+            "team2": "Atlético Madrid",
+            "title": "Barcelona VS Atlético Madrid",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704830/atletico-madrid-barcelona",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "62.7%",
+                "37.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "5"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "11",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            }
+          },
+          {
+            "gameId": "704930",
+            "date": "Sunday, March 16, 2025",
+            "team1": "Atlético Madrid",
+            "score": "2 - 4",
+            "team2": "Barcelona",
+            "title": "Atlético Madrid VS Barcelona",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704930/barcelona-atletico-madrid",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "33.9%",
+                "66.1%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "6"
+              ],
+              "Shot Attempts": [
+                "7",
+                "13"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "0"
+              ]
+            }
+          },
+          {
+            "gameId": "748331",
+            "date": "Tuesday, December 2, 2025",
+            "team1": "Barcelona",
+            "score": "3 - 1",
+            "team2": "Atlético Madrid",
+            "title": "Barcelona VS Atlético Madrid",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/748331/atletico-madrid-barcelona",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "19",
+                "7"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "748434",
+            "date": "Saturday, April 4, 2026",
+            "team1": "Atlético Madrid",
+            "score": "1 - 2",
+            "team2": "Barcelona",
+            "title": "Atlético Madrid VS Barcelona",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/748434/barcelona-atletico-madrid",
+            "source": "La Liga",
+            "stats": {
+              "Possession": [
+                "33.1%",
+                "66.9%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "8"
+              ],
+              "Shot Attempts": [
+                "6",
+                "22"
+              ],
+              "Yellow Cards": [
+                "6",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "9"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            }
+          },
+          {
+            "gameId": "401862887",
+            "date": "Wednesday, April 8, 2026",
+            "team1": "Barcelona",
+            "score": "0 - 2",
+            "team2": "Atlético Madrid",
+            "title": "Barcelona VS Atlético Madrid",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401862887/atletico-madrid-barcelona",
+            "source": "UEFA Champions League",
+            "stats": {
+              "Possession": [
+                "58.3%",
+                "41.7%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "3"
+              ],
+              "Shot Attempts": [
+                "18",
+                "5"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "1",
+                "7"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/530.png",
+        "logo_away": "https://media.api-sports.io/football/teams/529.png",
+        "classement_home": 14,
+        "classement_away": 5,
+        "points_classement_home": 13,
+        "points_classement_away": 16,
+        "nom_classement_home": "Atlético Madrid",
+        "nom_classement_away": "Barcelona",
+        "country_fr": "World - UEFA Champions League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.451,
+            "lambda_away": 1.788,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 32.1,
+            "X": 22.94,
+            "V2": 44.96
+          },
+          "double_chance": {
+            "1X": 55.04,
+            "12": 77.05,
+            "X2": 67.9
+          },
+          "over_under": {
+            "plus_de_0.5": 96.16,
+            "moins_de_0.5": 3.84,
+            "plus_de_1.5": 83.62,
+            "moins_de_1.5": 16.38,
+            "plus_de_2.5": 63.02,
+            "moins_de_2.5": 36.98,
+            "plus_de_3.5": 40.35,
+            "moins_de_3.5": 59.65,
+            "plus_de_4.5": 22.06,
+            "moins_de_4.5": 77.94,
+            "plus_de_5.5": 10.72,
+            "moins_de_5.5": 89.28
+          },
+          "btts": {
+            "oui": 64.05,
+            "non": 35.94
+          },
+          "resultat_total": {
+            "V1et+0.5": 32.1,
+            "1Xet+0.5": 51.2,
+            "V2et+0.5": 44.96,
+            "X2et+0.5": 64.07,
+            "12et+0.5": 77.05,
+            "V1et+1.5": 26.17,
+            "1Xet+1.5": 45.28,
+            "V2et+1.5": 38.34,
+            "X2et+1.5": 57.44,
+            "12et+1.5": 64.51,
+            "V1et+2.5": 21.98,
+            "1Xet+2.5": 30.9,
+            "V2et+2.5": 32.12,
+            "X2et+2.5": 41.04,
+            "12et+2.5": 54.1,
+            "V1et+3.5": 12.21,
+            "1Xet+3.5": 21.13,
+            "V2et+3.5": 19.22,
+            "X2et+3.5": 28.14,
+            "12et+3.5": 31.43,
+            "V1et+4.5": 7.85,
+            "1Xet+4.5": 10.14,
+            "V2et+4.5": 11.92,
+            "X2et+4.5": 14.22,
+            "12et+4.5": 19.78,
+            "V1et+5.5": 3.18,
+            "1Xet+5.5": 5.46,
+            "V2et+5.5": 5.25,
+            "X2et+5.5": 7.54,
+            "12et+5.5": 8.43
+          },
+          "scores_probables": {
+            "1-1": 10.18,
+            "1-2": 9.18,
+            "2-1": 7.72,
+            "2-2": 6.63,
+            "0-1": 6.62,
+            "0-2": 6.22,
+            "1-0": 5.92,
+            "1-3": 5.6,
+            "2-0": 4.2,
+            "2-3": 3.88
+          },
+          "buts_moyens_simules": {
+            "home": 1.46,
+            "away": 1.77,
+            "total": 3.23
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Barcelona)  \n**CONFIANCE** : 71%  \n**SCORES PROBABLES** : 2‑0 ou 2‑1  \n\n**JUSTIFICATION**\n\n### 1. Analyse comparative des forces / faiblesses  \n|                     | Atlético Madrid (domicile) | Barcelona (extérieur) |\n|---------------------|----------------------------|-----------------------|\n| **Moyenne buts marqués** | 1,80 | **2,80** |\n| **Moyenne buts encaissés** | 1,70 | **1,00** |\n| **Possession moyenne (derniers matchs)** | 55 % (ex. 65 % vs Getafe, 58 % vs Tottenham) | 62 % (ex. 77 % vs Espanyol, 71 % vs Villarreal) |\n| **Tirs cadrés / tentatives** | 5‑6 cadrés / 12‑15 tentatives (ex. 7‑5 vs Barça) | 8‑10 cadrés / 18‑22 tentatives (ex. 10‑2 vs Espanyol) |\n| **Corners** | 5‑8 par match (ex. 10 vs Getafe) | 5‑7 par match (ex. 7‑5 vs Espanyol) |\n| **Cartons** | 2‑4 jaunes par match | 1‑3 jaunes par match |\n\n- **Offensive** : Barcelona possède une puissance offensive nettement supérieure (2,80 buts/match) et réalise régulièrement plus de tirs cadrés que l’Atlético.  \n- **Défensive** : L’Atlético concède 1,70 buts à domicile, contre seulement 1,00 but pour Barcelona à l’extérieur. La défense barcelonaise est donc plus solide.  \n- **Contrôle du jeu** : Barcelona domine la possession et crée davantage d’occasions (plus de tirs et de corners).  \n\n### 2. Impact du facteur domicile / extérieur  \n- **Atlético à domicile** : 4 derniers matchs à domicile = L‑W‑W‑W, avec 10 buts marqués et 6 encaissés. Le dernier match à domicile (Sevilla 2‑1) montre une amélioration de la solidité défensive.  \n- **Barcelona à l’extérieur** : 3 derniers matchs à l’extérieur = W‑D‑W, 4 buts marqués, 2 encaissés. La capacité à garder la cage inviolée est confirmée.  \n\nLe facteur domicile apporte un léger avantage à l’Atlético, mais il n’est pas suffisant pour compenser la différence de qualité offensive et défensive.\n\n### 3. Forme récente et tendances (analyse des matchs détaillés)  \n- **Atlético** :  \n  - Victoire 2‑1 contre Séville (maîtrise du milieu de terrain, 2 tirs cadrés).  \n  - Défaite 1‑2 contre Barcelone (dominance du ballon adverse, 8 tirs cadrés).  \n  - Victoire 2‑0 contre Barcelone (maîtrise du jeu, très peu de tirs adverses).  \n  - Défaite 3‑2 contre Real Madrid (défense fragile face à une attaque puissante).  \n  - Points forts : capacité à marquer contre des équipes fortes, mais défense parfois perforée (6 tirs cadrés subis contre Barcelone).  \n\n- **Barcelona** :  \n  - Victoire 4‑1 contre Espanyol (possession 77 %, 10 tirs cadrés).  \n  - Victoire 0‑2 contre Atlético (défense solide, seulement 5 tirs au total).  \n  - Victoire 2‑4 contre Atlético (attaque très efficace, 22 tirs au total).  \n  - Points forts : très bon taux de conversion (8‑10 tirs cadrés par match) et capacité à garder la cage propre à l’extérieur.  \n\n### 4. Contexte du championnat  \n- Barcelona occupe la 5ᵉ place (16 pts) alors que l’Atlético est 14ᵉ (13 pts). La différence de points et de classement indique une équipe globalement plus forte et plus motivée à consolider une place en haut du tableau.  \n\n### 5. Confrontations directes récentes  \n- Sur les 5 dernières rencontres, Barcelona a gagné 3 fois (2‑4, 3‑1, 1‑2) et perdu 2 fois (1‑2, 0‑2).  \n- Les deux dernières confrontations (avril 2026) montrent une alternance : Barcelona 2‑4 à l’Atlético puis Atlético 2‑0 à Barcelone.  \n- Statistiques H2H : Barcelona domine la possession (66 % en moyenne) et les tirs (22 contre 6 en avril 2026).  \n\n### 6. Évaluation des cotes  \n- **Victoire Barcelona** à 1,88 (faible risque selon le marché).  \n- **Over 2.5** à 1,86 vs **Under 2.5** à 2,10. La majorité des rencontres récentes entre les deux équipes (3‑2, 2‑4, 2‑0) dépassent 2,5 buts, ce qui rend l’option *plus de 2,5* légèrement plus attractive que le *moins de 2,5*.  \n\n### 7. Synthèse et décision  \n- La supériorité offensive de Barcelona, sa défense solide à l’extérieur et son meilleur classement font pencher la balance en faveur d’une victoire barcelonaise.  \n- Le nombre de buts attendus dépasse les 2,5 (probabilité élevée d’au moins 2 buts de Barcelona).  \n- Les deux scores les plus probables, en fonction des tendances de buts marqués/encaissés, sont **2‑0** (Barcelona domine sans répondre) ou **2‑1** (Barcelona marque deux, Atlético trouve la faille).  \n\n**Conclusion** : La prédiction la plus fiable est une **victoire de Barcelona** avec une confiance de **71 %**, les scores les plus probables étant **2‑0** ou **2‑1**.",
+        "confiance_pourcentage": 71,
+        "prediction_principale": "Victoire extérieur (Barcelona)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 2‑1"
+      },
+      {
+        "id": 4,
+        "fixture_id": 1534912,
+        "HomeTeam": "Liverpool",
+        "AwayTeam": "Paris Saint Germain",
+        "date": "14 avril 2026 à 19:00:00 UTC",
+        "league": "World - UEFA Champions League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Liverpool": 2.47,
+            "Paris Saint Germain": 2.64,
+            "Draw": 4.33
+          },
+          "totals": {
+            "Over": 2.09,
+            "Under": 1.86
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.7,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 13,
+          "total_points": 7,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 12,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 12,
+          "total_marques": 17,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 2.7,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 15,
+          "total_points_10": 25,
+          "total_points": 15,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 16,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 2,
+          "total_marques": 27,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740911",
+            "date": "Sat, Apr 11",
+            "home_team": "Liverpool",
+            "away_team": "Fulham",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53%",
+                "47%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "19"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "9"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740911"
+          },
+          {
+            "game_id": "401862885",
+            "date": "Wed, Apr 8",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Liverpool",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74%",
+                "26%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "0"
+              ],
+              "Shot Attempts": [
+                "18",
+                "3"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862885"
+          },
+          {
+            "game_id": "401864077",
+            "date": "Sat, Apr 4",
+            "home_team": "Manchester City",
+            "away_team": "Liverpool",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401864077"
+          },
+          {
+            "game_id": "740898",
+            "date": "Sat, Mar 21",
+            "home_team": "Brighton & Hove Albion",
+            "away_team": "Liverpool",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47%",
+                "53%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "5",
+                "5"
+              ],
+              "Corner Kicks": [
+                "4",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740898"
+          },
+          {
+            "game_id": "401862668",
+            "date": "Wed, Mar 18",
+            "home_team": "Liverpool",
+            "away_team": "Galatasaray",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.1%",
+                "37.9%"
+              ],
+              "Shots on Goal": [
+                "16",
+                "1"
+              ],
+              "Shot Attempts": [
+                "32",
+                "4"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "11"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862668"
+          },
+          {
+            "game_id": "740891",
+            "date": "Sun, Mar 15",
+            "home_team": "Liverpool",
+            "away_team": "Tottenham Hotspur",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "63.3%",
+                "36.7%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "17",
+                "13"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "6",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740891"
+          },
+          {
+            "game_id": "401862667",
+            "date": "Tue, Mar 10",
+            "home_team": "Galatasaray",
+            "away_team": "Liverpool",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.2%",
+                "53.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "15",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "7",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862667"
+          },
+          {
+            "game_id": "401861584",
+            "date": "Fri, Mar 6",
+            "home_team": "Wolverhampton Wanderers",
+            "away_team": "Liverpool",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401861584"
+          },
+          {
+            "game_id": "740885",
+            "date": "Tue, Mar 3",
+            "home_team": "Wolverhampton Wanderers",
+            "away_team": "Liverpool",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "34.2%",
+                "65.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "4",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "11"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740885"
+          },
+          {
+            "game_id": "740872",
+            "date": "Sat, Feb 28",
+            "home_team": "Liverpool",
+            "away_team": "West Ham United",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.1%",
+                "50.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "11"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740872"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401862885",
+            "date": "Wed, Apr 8",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Liverpool",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "74%",
+                "26%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "0"
+              ],
+              "Shot Attempts": [
+                "18",
+                "3"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862885"
+          },
+          {
+            "game_id": "746662",
+            "date": "Fri, Apr 3",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Toulouse",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.8%",
+                "28.2%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "17",
+                "5"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746662"
+          },
+          {
+            "game_id": "746651",
+            "date": "Sat, Mar 21",
+            "home_team": "Nice",
+            "away_team": "Paris Saint-Germain",
+            "score": "0 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "25.8%",
+                "74.2%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "10"
+              ],
+              "Shot Attempts": [
+                "6",
+                "17"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "5"
+              ],
+              "Saves": [
+                "5",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746651"
+          },
+          {
+            "game_id": "401862648",
+            "date": "Tue, Mar 17",
+            "home_team": "Chelsea",
+            "away_team": "Paris Saint-Germain",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.4%",
+                "54.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "18",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "9",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "9"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862648"
+          },
+          {
+            "game_id": "401862646",
+            "date": "Wed, Mar 11",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Chelsea",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.2%",
+                "41.8%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "4"
+              ],
+              "Shot Attempts": [
+                "9",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "2",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862646"
+          },
+          {
+            "game_id": "746635",
+            "date": "Fri, Mar 6",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "AS Monaco",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.1%",
+                "27.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "20",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746635"
+          },
+          {
+            "game_id": "746619",
+            "date": "Sat, Feb 28",
+            "home_team": "Le Havre AC",
+            "away_team": "Paris Saint-Germain",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "32.3%",
+                "67.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "9"
+              ],
+              "Shot Attempts": [
+                "10",
+                "22"
+              ],
+              "Yellow Cards": [
+                "3",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "7",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746619"
+          },
+          {
+            "game_id": "401858763",
+            "date": "Wed, Feb 25",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "AS Monaco",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.6%",
+                "27.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "10"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401858763"
+          },
+          {
+            "game_id": "746617",
+            "date": "Sat, Feb 21",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Metz",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.1%",
+                "32.9%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "17",
+                "3"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746617"
+          },
+          {
+            "game_id": "401858758",
+            "date": "Tue, Feb 17",
+            "home_team": "AS Monaco",
+            "away_team": "Paris Saint-Germain",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "19.6%",
+                "80.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "10"
+              ],
+              "Shot Attempts": [
+                "7",
+                "30"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "1",
+                "8"
+              ],
+              "Saves": [
+                "7",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401858758"
+          }
+        ],
+        "classement": {
+          "Liverpool": {
+            "position": 3,
+            "points": 18
+          },
+          "Paris Saint Germain": {
+            "position": 11,
+            "points": 14
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Arsenal",
+            "points": 24
+          },
+          {
+            "position": 2,
+            "team": "Bayern Munich",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "Liverpool",
+            "points": 18
+          },
+          {
+            "position": 4,
+            "team": "Tottenham Hotspur",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "Barcelona",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Chelsea",
+            "points": 16
+          },
+          {
+            "position": 7,
+            "team": "Sporting CP",
+            "points": 16
+          },
+          {
+            "position": 8,
+            "team": "Manchester City",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Real Madrid",
+            "points": 15
+          },
+          {
+            "position": 10,
+            "team": "Internazionale",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "Paris Saint-Germain",
+            "points": 14
+          },
+          {
+            "position": 12,
+            "team": "Newcastle United",
+            "points": 14
+          },
+          {
+            "position": 13,
+            "team": "Juventus",
+            "points": 13
+          },
+          {
+            "position": 14,
+            "team": "Atlético Madrid",
+            "points": 13
+          },
+          {
+            "position": 15,
+            "team": "Atalanta",
+            "points": 13
+          },
+          {
+            "position": 16,
+            "team": "Bayer Leverkusen",
+            "points": 12
+          },
+          {
+            "position": 17,
+            "team": "Borussia Dortmund",
+            "points": 11
+          },
+          {
+            "position": 18,
+            "team": "Olympiacos",
+            "points": 11
+          },
+          {
+            "position": 19,
+            "team": "Club Brugge",
+            "points": 10
+          },
+          {
+            "position": 20,
+            "team": "Galatasaray",
+            "points": 10
+          },
+          {
+            "position": 21,
+            "team": "AS Monaco",
+            "points": 10
+          },
+          {
+            "position": 22,
+            "team": "FK Qarabag",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Bodo/Glimt",
+            "points": 9
+          },
+          {
+            "position": 24,
+            "team": "Benfica",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Marseille",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "Pafos",
+            "points": 9
+          },
+          {
+            "position": 27,
+            "team": "Union St.-Gilloise",
+            "points": 9
+          },
+          {
+            "position": 28,
+            "team": "PSV Eindhoven",
+            "points": 8
+          },
+          {
+            "position": 29,
+            "team": "Athletic Club",
+            "points": 8
+          },
+          {
+            "position": 30,
+            "team": "Napoli",
+            "points": 8
+          },
+          {
+            "position": 31,
+            "team": "F.C. København",
+            "points": 8
+          },
+          {
+            "position": 32,
+            "team": "Ajax Amsterdam",
+            "points": 6
+          },
+          {
+            "position": 33,
+            "team": "Eintracht Frankfurt",
+            "points": 4
+          },
+          {
+            "position": 34,
+            "team": "Slavia Prague",
+            "points": 3
+          },
+          {
+            "position": 35,
+            "team": "Villarreal",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Kairat Almaty",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "733600",
+            "date": "Wednesday, March 5, 2025",
+            "team1": "Paris Saint-Germain",
+            "score": "0 - 1",
+            "team2": "Liverpool",
+            "title": "Paris Saint-Germain VS Liverpool",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733600/liverpool-paris-saint-germain",
+            "source": "UEFA Champions League",
+            "stats": {
+              "Possession": [
+                "70.4%",
+                "29.6%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "1"
+              ],
+              "Shot Attempts": [
+                "27",
+                "2"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "14",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "9"
+              ]
+            }
+          },
+          {
+            "gameId": "733605",
+            "date": "Tuesday, March 11, 2025",
+            "team1": "Liverpool",
+            "score": "0 - 1",
+            "team2": "Paris Saint-Germain",
+            "title": "Liverpool VS Paris Saint-Germain",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/733605/paris-saint-germain-liverpool",
+            "source": "UEFA Champions League",
+            "stats": {
+              "Shots on Goal": [
+                "0",
+                "0"
+              ],
+              "Shot Attempts": [
+                "0",
+                "0"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "0",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "0"
+              ]
+            }
+          },
+          {
+            "gameId": "401862885",
+            "date": "Wednesday, April 8, 2026",
+            "team1": "Paris Saint-Germain",
+            "score": "2 - 0",
+            "team2": "Liverpool",
+            "title": "Paris Saint-Germain VS Liverpool",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401862885/liverpool-paris-saint-germain",
+            "source": "UEFA Champions League",
+            "stats": {
+              "Possession": [
+                "74%",
+                "26%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "0"
+              ],
+              "Shot Attempts": [
+                "18",
+                "3"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/40.png",
+        "logo_away": "https://media.api-sports.io/football/teams/85.png",
+        "classement_home": 3,
+        "classement_away": 11,
+        "points_classement_home": 18,
+        "points_classement_away": 14,
+        "nom_classement_home": "Liverpool",
+        "nom_classement_away": "Paris Saint-Germain",
+        "country_fr": "World - UEFA Champions League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.32,
+            "lambda_away": 1.494,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 32.75,
+            "X": 25.42,
+            "V2": 41.82
+          },
+          "double_chance": {
+            "1X": 58.18,
+            "12": 74.58,
+            "X2": 67.25
+          },
+          "over_under": {
+            "plus_de_0.5": 94.22,
+            "moins_de_0.5": 5.78,
+            "plus_de_1.5": 77.39,
+            "moins_de_1.5": 22.62,
+            "plus_de_2.5": 53.42,
+            "moins_de_2.5": 46.58,
+            "plus_de_3.5": 31.42,
+            "moins_de_3.5": 68.58,
+            "plus_de_4.5": 15.84,
+            "moins_de_4.5": 84.16,
+            "plus_de_5.5": 6.58,
+            "moins_de_5.5": 93.42
+          },
+          "btts": {
+            "oui": 57.53,
+            "non": 42.48
+          },
+          "resultat_total": {
+            "V1et+0.5": 32.75,
+            "1Xet+0.5": 52.39,
+            "V2et+0.5": 41.82,
+            "X2et+0.5": 61.46,
+            "12et+0.5": 74.58,
+            "V1et+1.5": 24.96,
+            "1Xet+1.5": 44.6,
+            "V2et+1.5": 32.78,
+            "X2et+1.5": 52.42,
+            "12et+1.5": 57.74,
+            "V1et+2.5": 19.76,
+            "1Xet+2.5": 27.3,
+            "V2et+2.5": 26.11,
+            "X2et+2.5": 33.66,
+            "12et+2.5": 45.86,
+            "V1et+3.5": 9.63,
+            "1Xet+3.5": 17.18,
+            "V2et+3.5": 14.24,
+            "X2et+3.5": 21.8,
+            "12et+3.5": 23.88,
+            "V1et+4.5": 5.82,
+            "1Xet+4.5": 7.36,
+            "V2et+4.5": 8.47,
+            "X2et+4.5": 10.01,
+            "12et+4.5": 14.3,
+            "V1et+5.5": 2.04,
+            "1Xet+5.5": 3.58,
+            "V2et+5.5": 3.0,
+            "X2et+5.5": 4.54,
+            "12et+5.5": 5.04
+          },
+          "scores_probables": {
+            "1-1": 12.09,
+            "0-1": 9.04,
+            "1-2": 8.74,
+            "2-1": 7.9,
+            "1-0": 7.78,
+            "0-2": 6.67,
+            "2-2": 6.01,
+            "0-0": 5.78,
+            "2-0": 5.21,
+            "1-3": 4.54
+          },
+          "buts_moyens_simules": {
+            "home": 1.31,
+            "away": 1.51,
+            "total": 2.82
+          }
+        },
+        "analyse_ia": "❌ Échec définitif après 5 tentatives. Dernière erreur : 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+        "confiance_pourcentage": null,
+        "prediction_principale": null,
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": null
+      },
+      {
+        "id": 5,
+        "fixture_id": 1512561,
+        "HomeTeam": "ADT",
+        "AwayTeam": "Alianza Lima",
+        "date": "14 avril 2026 à 20:15:00 UTC",
+        "league": "Peru - Primera División",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.3333333333333333,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 9,
+          "total_points": 6,
+          "serie_domicile": [
+            "D",
+            "L",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 6,
+          "total_marques": 9,
+          "total_encaisses": 12
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 0.6,
+          "form_6": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 18,
+          "total_points": 13,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 3,
+          "total_marques": 11,
+          "total_encaisses": 6
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401857444",
+            "date": "Sat, 4 Apr",
+            "home_team": "Cienciano del Cusco",
+            "away_team": "ADT",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.6%",
+                "56.4%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "16"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857444"
+          },
+          {
+            "game_id": "401857433",
+            "date": "Fri, 20 Mar",
+            "home_team": "ADT",
+            "away_team": "Melgar",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "16"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857433"
+          },
+          {
+            "game_id": "401857431",
+            "date": "Sat, 14 Mar",
+            "home_team": "Sport Huancayo",
+            "away_team": "ADT",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.9%",
+                "47.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "5"
+              ],
+              "Shot Attempts": [
+                "5",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857431"
+          },
+          {
+            "game_id": "401857418",
+            "date": "Sun, 8 Mar",
+            "home_team": "ADT",
+            "away_team": "Juan Pablo II",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "71.9%",
+                "28.1%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "25",
+                "9"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "12",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857418"
+          },
+          {
+            "game_id": "401857406",
+            "date": "Fri, 27 Feb",
+            "home_team": "Alianza Atlético",
+            "away_team": "ADT",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.3%",
+                "44.7%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "10",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "0",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857406"
+          },
+          {
+            "game_id": "401857397",
+            "date": "Sun, 22 Feb",
+            "home_team": "ADT",
+            "away_team": "UTC",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.6%",
+                "41.4%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "10"
+              ],
+              "Shot Attempts": [
+                "16",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "6"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "8",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857397"
+          },
+          {
+            "game_id": "401857391",
+            "date": "Sat, 14 Feb",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "ADT",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52.5%",
+                "47.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "6"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857391"
+          },
+          {
+            "game_id": "401857385",
+            "date": "Sat, 7 Feb",
+            "home_team": "ADT",
+            "away_team": "Sport Boys",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.4%",
+                "45.6%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857385"
+          },
+          {
+            "game_id": "401850341",
+            "date": "Sun, 1 Feb",
+            "home_team": "Universitario",
+            "away_team": "ADT",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.1%",
+                "45.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "14",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "5"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401850341"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401857450",
+            "date": "Sun, 5 Apr",
+            "home_team": "Universitario",
+            "away_team": "Alianza Lima",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.2%",
+                "48.8%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "10",
+                "11"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857450"
+          },
+          {
+            "game_id": "401857434",
+            "date": "Sat, 21 Mar",
+            "home_team": "Alianza Lima",
+            "away_team": "Juan Pablo II",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "0"
+              ],
+              "Shot Attempts": [
+                "14",
+                "1"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857434"
+          },
+          {
+            "game_id": "401857424",
+            "date": "Sat, 14 Mar",
+            "home_team": "Deportivo Garcilaso",
+            "away_team": "Alianza Lima",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "31.8%",
+                "68.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "7",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857424"
+          },
+          {
+            "game_id": "401857417",
+            "date": "Tue, 10 Mar",
+            "home_team": "Alianza Lima",
+            "away_team": "Melgar",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.6%",
+                "50.4%"
+              ],
+              "Shots on Goal": [
+                "10",
+                "6"
+              ],
+              "Shot Attempts": [
+                "22",
+                "12"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857417"
+          },
+          {
+            "game_id": "401857408",
+            "date": "Sat, 28 Feb",
+            "home_team": "UTC",
+            "away_team": "Alianza Lima",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45%",
+                "55%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857408"
+          },
+          {
+            "game_id": "401857398",
+            "date": "Sat, 21 Feb",
+            "home_team": "Alianza Lima",
+            "away_team": "Sport Boys",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.1%",
+                "39.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "15",
+                "7"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "10",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857398"
+          },
+          {
+            "game_id": "401857393",
+            "date": "Sun, 15 Feb",
+            "home_team": "Alianza Atlético",
+            "away_team": "Alianza Lima",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42%",
+                "58%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "9",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857393"
+          },
+          {
+            "game_id": "401842635",
+            "date": "Thu, 12 Feb",
+            "home_team": "Alianza Lima",
+            "away_team": "2 de Mayo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.7%",
+                "41.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "22",
+                "18"
+              ],
+              "Yellow Cards": [
+                "3",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401842635"
+          },
+          {
+            "game_id": "401857386",
+            "date": "Sun, 8 Feb",
+            "home_team": "Alianza Lima",
+            "away_team": "Comerciantes Unidos",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.6%",
+                "32.4%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "1"
+              ],
+              "Shot Attempts": [
+                "21",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401857386"
+          },
+          {
+            "game_id": "401842612",
+            "date": "Thu, 5 Feb",
+            "home_team": "2 de Mayo",
+            "away_team": "Alianza Lima",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.5%",
+                "57.5%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401842612"
+          }
+        ],
+        "classement": {
+          "ADT": {
+            "position": 14,
+            "points": 9
+          },
+          "Alianza Lima": {
+            "position": 2,
+            "points": 20
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Los Chankas",
+            "points": 23
+          },
+          {
+            "position": 2,
+            "team": "Alianza Lima",
+            "points": 20
+          },
+          {
+            "position": 3,
+            "team": "Cienciano del Cusco",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Universitario",
+            "points": 18
+          },
+          {
+            "position": 5,
+            "team": "UTC",
+            "points": 14
+          },
+          {
+            "position": 6,
+            "team": "Cusco FC",
+            "points": 13
+          },
+          {
+            "position": 7,
+            "team": "Juan Pablo II",
+            "points": 13
+          },
+          {
+            "position": 8,
+            "team": "Comerciantes Unidos",
+            "points": 12
+          },
+          {
+            "position": 9,
+            "team": "Sporting Cristal",
+            "points": 11
+          },
+          {
+            "position": 10,
+            "team": "Alianza Atlético",
+            "points": 11
+          },
+          {
+            "position": 11,
+            "team": "Melgar",
+            "points": 11
+          },
+          {
+            "position": 12,
+            "team": "Deportivo Garcilaso",
+            "points": 10
+          },
+          {
+            "position": 13,
+            "team": "Deportivo Moquegua",
+            "points": 10
+          },
+          {
+            "position": 14,
+            "team": "ADT",
+            "points": 9
+          },
+          {
+            "position": 15,
+            "team": "Sport Huancayo",
+            "points": 8
+          },
+          {
+            "position": 16,
+            "team": "Sport Boys",
+            "points": 8
+          },
+          {
+            "position": 17,
+            "team": "Atlético Grau",
+            "points": 7
+          },
+          {
+            "position": 18,
+            "team": "FC Cajamarca",
+            "points": 5
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "699082",
+            "date": "Friday, March 1, 2024",
+            "team1": "ADT",
+            "score": "2 - 0",
+            "team2": "Alianza Lima",
+            "title": "ADT VS Alianza Lima",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/699082/alianza-lima-adt",
+            "source": "Primera División",
+            "stats": {}
+          },
+          {
+            "gameId": "715051",
+            "date": "Saturday, August 10, 2024",
+            "team1": "Alianza Lima",
+            "score": "0 - 0",
+            "team2": "ADT",
+            "title": "Alianza Lima VS ADT",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/715051/adt-alianza-lima",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "68.8%",
+                "31.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "20",
+                "4"
+              ],
+              "Yellow Cards": [
+                "0",
+                "0"
+              ],
+              "Corner Kicks": [
+                "4",
+                "0"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            }
+          },
+          {
+            "gameId": "731968",
+            "date": "Saturday, March 29, 2025",
+            "team1": "ADT",
+            "score": "3 - 0",
+            "team2": "Alianza Lima",
+            "title": "ADT VS Alianza Lima",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/731968/alianza-lima-adt",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "59%",
+                "41%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "754539",
+            "date": "Saturday, August 16, 2025",
+            "team1": "Alianza Lima",
+            "score": "3 - 1",
+            "team2": "ADT",
+            "title": "Alianza Lima VS ADT",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/754539/adt-alianza-lima",
+            "source": "Primera División",
+            "stats": {
+              "Possession": [
+                "60.8%",
+                "39.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "1"
+              ],
+              "Shot Attempts": [
+                "24",
+                "3"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "7",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/10492.png",
+        "logo_away": "https://media.api-sports.io/football/teams/2553.png",
+        "classement_home": 14,
+        "classement_away": 2,
+        "points_classement_home": 9,
+        "points_classement_away": 20,
+        "nom_classement_home": "ADT",
+        "nom_classement_away": "Alianza Lima",
+        "country_fr": "Peru - Primera División",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.286,
+            "lambda_away": 1.056,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 41.77,
+            "X": 28.06,
+            "V2": 30.16
+          },
+          "double_chance": {
+            "1X": 69.84,
+            "12": 71.94,
+            "X2": 58.23
+          },
+          "over_under": {
+            "plus_de_0.5": 90.22,
+            "moins_de_0.5": 9.78,
+            "plus_de_1.5": 68.15,
+            "moins_de_1.5": 31.85,
+            "plus_de_2.5": 41.68,
+            "moins_de_2.5": 58.32,
+            "plus_de_3.5": 21.5,
+            "moins_de_3.5": 78.5,
+            "plus_de_4.5": 9.2,
+            "moins_de_4.5": 90.8,
+            "plus_de_5.5": 3.46,
+            "moins_de_5.5": 96.54
+          },
+          "btts": {
+            "oui": 47.05,
+            "non": 52.95
+          },
+          "resultat_total": {
+            "V1et+0.5": 41.77,
+            "1Xet+0.5": 60.05,
+            "V2et+0.5": 30.16,
+            "X2et+0.5": 48.44,
+            "12et+0.5": 71.94,
+            "V1et+1.5": 29.68,
+            "1Xet+1.5": 47.96,
+            "V2et+1.5": 20.18,
+            "X2et+1.5": 38.46,
+            "12et+1.5": 49.87,
+            "V1et+2.5": 21.58,
+            "1Xet+2.5": 26.96,
+            "V2et+2.5": 14.72,
+            "X2et+2.5": 20.09,
+            "12et+2.5": 36.3,
+            "V1et+3.5": 9.93,
+            "1Xet+3.5": 15.3,
+            "V2et+3.5": 6.19,
+            "X2et+3.5": 11.56,
+            "12et+3.5": 16.12,
+            "V1et+4.5": 5.06,
+            "1Xet+4.5": 5.85,
+            "V2et+4.5": 3.36,
+            "X2et+4.5": 4.15,
+            "12et+4.5": 8.42,
+            "V1et+5.5": 1.65,
+            "1Xet+5.5": 2.44,
+            "V2et+5.5": 1.02,
+            "X2et+5.5": 1.81,
+            "12et+5.5": 2.67
+          },
+          "scores_probables": {
+            "1-1": 12.9,
+            "1-0": 12.08,
+            "0-1": 9.98,
+            "0-0": 9.78,
+            "2-1": 8.2,
+            "2-0": 8.1,
+            "1-2": 6.66,
+            "0-2": 5.47,
+            "2-2": 4.58,
+            "3-1": 3.8
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.06,
+            "total": 2.36
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Alianza Lima)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 1‑0 ou 0‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **ADT** : 14ᵉ du classement (9 pts). Moyenne de buts marqués 1,00 et encaissés 1,33. À domicile, ils ont inscrit 9 buts et encaissé 8 buts sur leurs 5 derniers matchs à domicile (GF ≈ 1,8, GA ≈ 1,6). Leur défense est donc assez perméable, mais ils peinent à être très prolifiques.  \n- **Alianza Lima** : 2ᵉ du classement (20 pts). Moyenne de buts marqués 1,10 et encaissés 0,60, la meilleure défense du championnat. En déplacement, ils n’ont marqué que 2 buts et encaissé 3 buts sur les 5 derniers matchs (GF ≈ 0,4, GA ≈ 0,6). Leur solidité défensive à l’extérieur est la clé.\n\n**2. Impact du facteur domicile/extérieur**  \n- ADT bénéficie d’un léger avantage à domicile (plus de tirs et de corners, possession souvent supérieure), mais leurs résultats à domicile restent mitigés (2 V, 2 N, 1 D).  \n- Alianza Lima montre une capacité à gagner à l’extérieur avec des scores serrés (1‑0, 1‑0, 1‑0) et à garder sa cage inviolée dans 3 des 5 derniers déplacements.\n\n**3. Forme récente et tendances (statistiques détaillées)**  \n- **ADT** :  \n  - vs Cienciano (dom) 3‑2 : 6 tirs cadrés, 10 tentatives, 4 corners.  \n  - vs Melgar (dom) 1‑1 : 7 tirs cadrés, 17 tentatives, 3 corners.  \n  - vs Juan Pablo II (dom) 2‑3 : 9 tirs cadrés, 25 tentatives, 12 corners (défense exposée).  \n  - vs UTC (dom) 2‑2 : 7 tirs cadrés, 16 tentatives, 7 corners (défense vulnérable).  \n  - vs Sport Boys (dom) 1‑0 : 7 tirs cadrés, 17 tentatives, 4 corners (bonne maîtrise).  \n  → ADT crée des occasions mais concède régulièrement, surtout contre des équipes plus offensives.\n\n- **Alianza Lima** :  \n  - vs Universitario (ext) 1‑0 : 5 tirs cadrés, 10 tentatives, 3 corners, aucune contre‑attaque dangereuse.  \n  - vs UTC (ext) 1‑0 : 4 tirs cadrés, 8 tentatives, 4 corners, défense très solide.  \n  - vs Sport Boys (ext) 1‑0 : 4 tirs cadrés, 15 tentatives, 10 corners, domination en possession (60 %).  \n  - vs 2 de Mayo (ext) 0‑1 : 2 tirs cadrés, 13 tentatives, 3 corners, rare faute défensive.  \n  - vs Alianza Atlético (ext) 0‑0 : 4 tirs cadrés, 9 tentatives, 1 corner, aucune occasion nette.  \n  → Alianza Lima conserve une défense compacte à l’extérieur tout en se contentant de peu de tirs cadrés, suffisants pour marquer le minimum.\n\n**4. Contexte du championnat**  \n- ADT lutte pour sortir de la zone de relégation, ce qui peut les pousser à prendre des risques, mais leur manque de points indique une difficulté à convertir ces risques en victoires.  \n- Alianza Lima, à 2ᵉ, vise la première place ; ils privilégient la solidité défensive à l’extérieur pour ne pas perdre de points face à une équipe inférieure.\n\n**5. Confrontations directes**  \n- Historique récent (2024‑2025) : ADT a battu Alianza Lima 2‑0 (2024) et 3‑0 (2025), mais a aussi concédé 3‑1 (2025) et 0‑0 (2024).  \n- Les matchs à domicile d’ADT contre Alianza Lima montrent une capacité à surprendre, mais les dernières rencontres (2025) ont été dominées par Alianza Lima (3‑1 à l’extérieur). La tendance actuelle de l’équipe de Lima à gagner avec un seul but est plus pertinente que les rares victoires d’ADT.\n\n**6. Synthèse**  \n- La défense d’Alianza Lima à l’extérieur est la plus solide du championnat (0,60 buts encaissés en moyenne).  \n- ADT a du mal à marquer plus d’un but à domicile contre des défenses organisées (seuls 2 buts contre Cienciano, 1 but contre Sport Boys).  \n- Les deux équipes affichent des matchs à faible score ; la probabilité d’un total > 2,5 buts est faible (≈ 22 %).  \n- BTTS « oui » est peu probable (Alianza Lima ne marque que 0,4 but en moyenne à l’extérieur).  \n\n**Conclusion** : Le scénario le plus cohérent est une victoire serrée d’Alianza Lima, généralement 1‑0, avec une forte chance que le match se termine sans plus d’un but (moins de 2,5 buts) et sans que les deux équipes marquent.  \n\n---  \n\n**PRÉDICTION PRINCIPALE** : Victoire extérieur (Alianza Lima)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 1‑0 ou 0‑0  \n\n---",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Alianza Lima)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑0 ou 0‑0"
+      }
+    ]
+  }
+}
