@@ -1,0 +1,3597 @@
+{
+  "metadata": {
+    "date_generation": "2026-04-16 04:14:43",
+    "date_matchs": "2026-04-16",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 3,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 3,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1535338,
+        "HomeTeam": "Celta Vigo",
+        "AwayTeam": "SC Freiburg",
+        "date": "16 avril 2026 à 16:45:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "Winamax (FR)",
+          "h2h": {
+            "Celta Vigo": 1.82,
+            "SC Freiburg": 3.85,
+            "Draw": 3.6
+          },
+          "totals": {}
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "W",
+            "D"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 14,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 10,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 7,
+          "total_marques": 14,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 16,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 15,
+          "buts_dom_encaisses": 9,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 4,
+          "total_marques": 18,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "748448",
+            "date": "Sun, Apr 12",
+            "home_team": "Celta Vigo",
+            "away_team": "Real Oviedo",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "68%",
+                "32%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748448"
+          },
+          {
+            "game_id": "401862900",
+            "date": "Thu, Apr 9",
+            "home_team": "SC Freiburg",
+            "away_team": "Celta Vigo",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862900"
+          },
+          {
+            "game_id": "748440",
+            "date": "Sun, Apr 5",
+            "home_team": "Valencia",
+            "away_team": "Celta Vigo",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "42.2%",
+                "57.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "13",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "0"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748440"
+          },
+          {
+            "game_id": "748431",
+            "date": "Sun, Mar 22",
+            "home_team": "Celta Vigo",
+            "away_team": "Alavés",
+            "score": "3 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.3%",
+                "44.7%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748431"
+          },
+          {
+            "game_id": "401862876",
+            "date": "Thu, Mar 19",
+            "home_team": "Lyon",
+            "away_team": "Celta Vigo",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "35.3%",
+                "64.7%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "8"
+              ],
+              "Shot Attempts": [
+                "4",
+                "14"
+              ],
+              "Yellow Cards": [
+                "0",
+                "5"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "6",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862876"
+          },
+          {
+            "game_id": "748417",
+            "date": "Sun, Mar 15",
+            "home_team": "Real Betis",
+            "away_team": "Celta Vigo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.7%",
+                "48.3%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "19",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748417"
+          },
+          {
+            "game_id": "401862872",
+            "date": "Thu, Mar 12",
+            "home_team": "Celta Vigo",
+            "away_team": "Lyon",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "28.7%",
+                "71.3%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "5",
+                "20"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "0",
+                "7"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862872"
+          },
+          {
+            "game_id": "748411",
+            "date": "Fri, Mar 6",
+            "home_team": "Celta Vigo",
+            "away_team": "Real Madrid",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.7%",
+                "63.3%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "1",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748411"
+          },
+          {
+            "game_id": "748400",
+            "date": "Sun, Mar 1",
+            "home_team": "Girona",
+            "away_team": "Celta Vigo",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.9%",
+                "43.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "10",
+                "6"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/748400"
+          },
+          {
+            "game_id": "401858784",
+            "date": "Thu, Feb 26",
+            "home_team": "Celta Vigo",
+            "away_team": "PAOK Salonika",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.4%",
+                "44.6%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "0"
+              ],
+              "Shot Attempts": [
+                "14",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401858784"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "746972",
+            "date": "Sun, Apr 12",
+            "home_team": "Mainz",
+            "away_team": "SC Freiburg",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.9%",
+                "49.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "10",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "3"
+              ],
+              "Corner Kicks": [
+                "6",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746972"
+          },
+          {
+            "game_id": "401862900",
+            "date": "Thu, Apr 9",
+            "home_team": "SC Freiburg",
+            "away_team": "Celta Vigo",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862900"
+          },
+          {
+            "game_id": "746966",
+            "date": "Sat, Apr 4",
+            "home_team": "SC Freiburg",
+            "away_team": "Bayern Munich",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "30.2%",
+                "69.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "9"
+              ],
+              "Shot Attempts": [
+                "13",
+                "21"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "8"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746966"
+          },
+          {
+            "game_id": "746955",
+            "date": "Sun, Mar 22",
+            "home_team": "St. Pauli",
+            "away_team": "SC Freiburg",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.1%",
+                "50.9%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "6"
+              ],
+              "Shot Attempts": [
+                "12",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746955"
+          },
+          {
+            "game_id": "401862873",
+            "date": "Thu, Mar 19",
+            "home_team": "SC Freiburg",
+            "away_team": "Racing Genk",
+            "score": "5 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "46.4%",
+                "53.6%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "3"
+              ],
+              "Shot Attempts": [
+                "15",
+                "13"
+              ],
+              "Yellow Cards": [
+                "5",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862873"
+          },
+          {
+            "game_id": "746945",
+            "date": "Sun, Mar 15",
+            "home_team": "SC Freiburg",
+            "away_team": "1. FC Union Berlin",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "72.9%",
+                "27.1%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746945"
+          },
+          {
+            "game_id": "401862769",
+            "date": "Thu, Mar 12",
+            "home_team": "Racing Genk",
+            "away_team": "SC Freiburg",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "49.5%",
+                "50.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "5"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "7"
+              ],
+              "Saves": [
+                "2",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862769"
+          },
+          {
+            "game_id": "746934",
+            "date": "Sat, Mar 7",
+            "home_team": "SC Freiburg",
+            "away_team": "Bayer Leverkusen",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.4%",
+                "52.6%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "5"
+              ],
+              "Shot Attempts": [
+                "21",
+                "17"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746934"
+          },
+          {
+            "game_id": "746928",
+            "date": "Sun, Mar 1",
+            "home_team": "Eintracht Frankfurt",
+            "away_team": "SC Freiburg",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "62.9%",
+                "37.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "2"
+              ],
+              "Shot Attempts": [
+                "15",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "6"
+              ],
+              "Saves": [
+                "2",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746928"
+          },
+          {
+            "game_id": "746923",
+            "date": "Sun, Feb 22",
+            "home_team": "SC Freiburg",
+            "away_team": "Borussia Mönchengladbach",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.1%",
+                "62.9%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "10",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/746923"
+          }
+        ],
+        "classement": {
+          "Celta Vigo": {
+            "position": 16,
+            "points": 13
+          },
+          "SC Freiburg": {
+            "position": 7,
+            "points": 17
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Lyon",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Aston Villa",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "FC Midtjylland",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Real Betis",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "FC Porto",
+            "points": 17
+          },
+          {
+            "position": 6,
+            "team": "Braga",
+            "points": 17
+          },
+          {
+            "position": 7,
+            "team": "SC Freiburg",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "AS Roma",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Racing Genk",
+            "points": 16
+          },
+          {
+            "position": 10,
+            "team": "Bologna",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "VfB Stuttgart",
+            "points": 15
+          },
+          {
+            "position": 12,
+            "team": "Ferencvaros",
+            "points": 15
+          },
+          {
+            "position": 13,
+            "team": "Nottingham Forest",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Viktoria Plzen",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Red Star Belgrade",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Celta Vigo",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "PAOK Salonika",
+            "points": 12
+          },
+          {
+            "position": 18,
+            "team": "Lille",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Fenerbahce",
+            "points": 12
+          },
+          {
+            "position": 20,
+            "team": "Panathinaikos",
+            "points": 12
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 11
+          },
+          {
+            "position": 22,
+            "team": "Ludogorets Razgrad",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Dinamo Zagreb",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "SK Brann",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Young Boys",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "SK Sturm Graz",
+            "points": 7
+          },
+          {
+            "position": 27,
+            "team": "FCSB",
+            "points": 7
+          },
+          {
+            "position": 28,
+            "team": "Go Ahead Eagles",
+            "points": 7
+          },
+          {
+            "position": 29,
+            "team": "Feyenoord Rotterdam",
+            "points": 6
+          },
+          {
+            "position": 30,
+            "team": "FC Basel",
+            "points": 6
+          },
+          {
+            "position": 31,
+            "team": "RB Salzburg",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Rangers",
+            "points": 4
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 3
+          },
+          {
+            "position": 34,
+            "team": "FC Utrecht",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "401862900",
+            "date": "Thursday, April 9, 2026",
+            "team1": "SC Freiburg",
+            "score": "3 - 0",
+            "team2": "Celta Vigo",
+            "title": "SC Freiburg VS Celta Vigo",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401862900/celta-vigo-sc-freiburg",
+            "source": "UEFA Europa League",
+            "stats": {
+              "Possession": [
+                "51.9%",
+                "48.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "0"
+              ],
+              "Shot Attempts": [
+                "13",
+                "4"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "3",
+                "0"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/538.png",
+        "logo_away": "https://media.api-sports.io/football/teams/160.png",
+        "classement_home": 16,
+        "classement_away": 7,
+        "points_classement_home": 13,
+        "points_classement_away": 17,
+        "nom_classement_home": "Celta Vigo",
+        "nom_classement_away": "SC Freiburg",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.67,
+            "lambda_away": 1.245,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 47.36,
+            "X": 24.32,
+            "V2": 28.31
+          },
+          "double_chance": {
+            "1X": 71.69,
+            "12": 75.68,
+            "X2": 52.64
+          },
+          "over_under": {
+            "plus_de_0.5": 94.31,
+            "moins_de_0.5": 5.69,
+            "plus_de_1.5": 78.66,
+            "moins_de_1.5": 21.34,
+            "plus_de_2.5": 55.91,
+            "moins_de_2.5": 44.09,
+            "plus_de_3.5": 33.81,
+            "moins_de_3.5": 66.19,
+            "plus_de_4.5": 17.47,
+            "moins_de_4.5": 82.52,
+            "plus_de_5.5": 7.7,
+            "moins_de_5.5": 92.3
+          },
+          "btts": {
+            "oui": 57.7,
+            "non": 42.3
+          },
+          "resultat_total": {
+            "V1et+0.5": 47.36,
+            "1Xet+0.5": 66.0,
+            "V2et+0.5": 28.31,
+            "X2et+0.5": 46.94,
+            "12et+0.5": 75.68,
+            "V1et+1.5": 38.13,
+            "1Xet+1.5": 56.76,
+            "V2et+1.5": 21.9,
+            "X2et+1.5": 40.53,
+            "12et+1.5": 60.02,
+            "V1et+2.5": 30.64,
+            "1Xet+2.5": 38.25,
+            "V2et+2.5": 17.66,
+            "X2et+2.5": 25.26,
+            "12et+2.5": 48.3,
+            "V1et+3.5": 17.24,
+            "1Xet+3.5": 24.84,
+            "V2et+3.5": 8.96,
+            "X2et+3.5": 16.57,
+            "12et+3.5": 26.2,
+            "V1et+4.5": 10.26,
+            "1Xet+4.5": 11.86,
+            "V2et+4.5": 5.62,
+            "X2et+4.5": 7.21,
+            "12et+4.5": 15.88,
+            "V1et+5.5": 4.05,
+            "1Xet+5.5": 5.64,
+            "V2et+5.5": 2.05,
+            "X2et+5.5": 3.65,
+            "12et+5.5": 6.1
+          },
+          "scores_probables": {
+            "1-1": 11.03,
+            "1-0": 9.24,
+            "2-1": 9.23,
+            "2-0": 7.48,
+            "1-2": 6.84,
+            "0-1": 6.42,
+            "2-2": 6.01,
+            "0-0": 5.69,
+            "3-1": 5.2,
+            "0-2": 4.23
+          },
+          "buts_moyens_simules": {
+            "home": 1.68,
+            "away": 1.25,
+            "total": 2.92
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : BTTS oui (Both Teams To Score)  \n**CONFIANCE** : 68%  \n**SCORES PROBABLES** : 2‑1 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Celta Vigo** : moyenne 1,40 but marqué et 1,70 but encaissé. À domicile, ils ne marquent que 6 buts en 5 matchs (1,2 bt/match) mais concèdent 10 buts (2,0 bt/match). Leur défense à domicile est donc fragile.  \n- **SC Freiburg** : moyenne 1,80 bt marqué et 1,30 bt encaissé. En déplacement, ils n’ont inscrit que 3 buts en 4 matchs (0,75 bt/match) mais n’ont encaissé que 4 buts (1,0 bt/match). Leur défense à l’extérieur est solide, l’attaque est moins prolifique mais efficace.\n\n**2. Impact du facteur domicile/extérieur**  \n- Celta bénéficie d’un facteur domicile (côté public, familiarité du terrain) qui a parfois permis de renverser des défaites, mais leurs derniers matchs à domicile montrent une tendance à concéder davantage que à marquer.  \n- Freiburg a montré une bonne capacité à garder ses cages propres à l’extérieur (1 bt encaissé en moyenne) et à arracher des points même lorsqu’il ne marque pas beaucoup.\n\n**3. Forme récente & tendances (statistiques détaillées)**  \n- **Celta** (5 derniers à domicile) : 0‑3, 3‑2, 3‑4, 1‑1, 1‑1 – ils ont **marqué dans 4 sur 5** matchs à domicile, mais ont aussi **encaissé dans 4 sur 5**.  \n- **Freiburg** (4 derniers à l’extérieur) : 1‑0, 3‑0, 2‑3, 2‑1 – ils ont **marqué dans 4 sur 4** matchs à l’extérieur et **encaissé dans 2 sur 4**.  \n\nCes deux équipes ont donc un profil « marqueur » et « vulnérable », ce qui augmente fortement la probabilité que les deux inscrivent.\n\n**4. Contexte du championnat**  \n- Freiburg occupe la 7ᵉ place (17 pts) contre Celta 16ᵉ (13 pts). La différence de points et de classement reflète une meilleure forme globale de Freiburg, mais le match se joue à Vigo, où les équipes de bas de tableau ont souvent tendance à être plus ouvertes (plus de buts).  \n\n**5. Confrontations directes**  \n- Dernier affrontement (9 avril 2026) : Freiburg 3‑0 Celta. Freiburg a dominé en possession (51,9 % vs 48,1 %) et a été nettement plus efficace devant le but (7 tirs cadrés contre 0). Cette rencontre montre que Freiburg est capable de marquer plusieurs buts contre Celta, tandis que Celta a du mal à répondre.\n\n**6. Évaluation des cotes**  \n- Les cotes de Winamax (Celta 1.82 – Freiburg 3.85 – Nul 3.60) favorisent Celta, mais elles sous‑évaluent la capacité des deux équipes à marquer (cotes élevées pour le nul et la victoire de Freiburg). Le marché semble ignorer la faiblesse défensive de Celta à domicile.\n\n**7. Analyse approfondie des stats des matchs passés**  \n- **Possession** : Celta a souvent dominé (ex. 68 % vs Oviedo) mais n’a pas converti en buts. Freiburg, même avec moins de possession, crée des occasions décisives (ex. 7 tirs cadrés contre 0 à Celta).  \n- **Tirs cadrés** : Celta a été très limité à domicile (ex. 0‑7 contre Freiburg). Freiburg, même à l’extérieur, arrive régulièrement à produire des tirs cadrés (ex. 3‑3 contre Mainz).  \n- **Corners** : Celta obtient plus de corners à domicile, signe d’une pression offensive, mais cela ne se traduit pas toujours en buts.  \n\nCes indicateurs confirment que les deux équipes génèrent des occasions et que leurs défenses laissent passer des buts.\n\n**8. Synthèse**  \n- Les deux équipes marquent régulièrement (Celta 6 bt en 5 matchs à domicile, Freiburg 3 bt en 4 matchs à l’extérieur) et concèdent également (Celta 10 bt, Freiburg 4 bt).  \n- La probabilité que les deux équipes trouvent le filet est donc élevée, supérieure à 60 %.  \n- Le résultat final (victoire ou défaite) reste incertain, mais le pari « BTTS oui » maximise la valeur compte tenu des données.\n\n**Conclusion** : Le pari le plus fiable pour ce match est **BTTS oui**, avec une confiance de **68 %** et les scores les plus probables **2‑1** (victoire de Celta) ou **1‑2** (victoire de Freiburg).",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "BTTS oui (Both Teams To Score)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 1‑2"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1535339,
+        "HomeTeam": "Aston Villa",
+        "AwayTeam": "Bologna",
+        "date": "16 avril 2026 à 19:00:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Aston Villa": 1.6,
+            "Bologna": 6.04,
+            "Draw": 4.43
+          },
+          "totals": {
+            "Over": 1.76,
+            "Under": 2.23
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.3,
+          "moyenne_encaisses": 1.5,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 14,
+          "total_points": 13,
+          "serie_domicile": [
+            "W",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 13,
+          "total_encaisses": 15
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 19,
+          "total_points": 12,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 4,
+          "total_marques": 14,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740914",
+            "date": "Sun, Apr 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740914"
+          },
+          {
+            "game_id": "401862902",
+            "date": "Thu, Apr 9",
+            "home_team": "Bologna",
+            "away_team": "Aston Villa",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862902"
+          },
+          {
+            "game_id": "740896",
+            "date": "Sun, Mar 22",
+            "home_team": "Aston Villa",
+            "away_team": "West Ham United",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.9%",
+                "41.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "23",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "1"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740896"
+          },
+          {
+            "game_id": "401862759",
+            "date": "Thu, Mar 19",
+            "home_team": "Aston Villa",
+            "away_team": "Lille",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52%",
+                "48%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "8",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "5",
+                "5"
+              ],
+              "Saves": [
+                "3",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862759"
+          },
+          {
+            "game_id": "740892",
+            "date": "Sun, Mar 15",
+            "home_team": "Manchester United",
+            "away_team": "Aston Villa",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "52%",
+                "48%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "9"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "6",
+                "6"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740892"
+          },
+          {
+            "game_id": "401862754",
+            "date": "Thu, Mar 12",
+            "home_team": "Lille",
+            "away_team": "Aston Villa",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "48.8%",
+                "51.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "7",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "2"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862754"
+          },
+          {
+            "game_id": "740876",
+            "date": "Wed, Mar 4",
+            "home_team": "Aston Villa",
+            "away_team": "Chelsea",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "43.1%",
+                "56.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "8"
+              ],
+              "Shot Attempts": [
+                "9",
+                "15"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740876"
+          },
+          {
+            "game_id": "740868",
+            "date": "Fri, Feb 27",
+            "home_team": "Wolverhampton Wanderers",
+            "away_team": "Aston Villa",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "39.2%",
+                "60.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "0",
+                "5"
+              ],
+              "Saves": [
+                "4",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740868"
+          },
+          {
+            "game_id": "740862",
+            "date": "Sat, Feb 21",
+            "home_team": "Aston Villa",
+            "away_team": "Leeds United",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "66.8%",
+                "33.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "14"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740862"
+          },
+          {
+            "game_id": "401850911",
+            "date": "Sat, Feb 14",
+            "home_team": "Aston Villa",
+            "away_team": "Newcastle United",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401850911"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "737101",
+            "date": "Sun, Apr 12",
+            "home_team": "Bologna",
+            "away_team": "Lecce",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "64.4%",
+                "35.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "1"
+              ],
+              "Shot Attempts": [
+                "12",
+                "6"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "7"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737101"
+          },
+          {
+            "game_id": "401862902",
+            "date": "Thu, Apr 9",
+            "home_team": "Bologna",
+            "away_team": "Aston Villa",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862902"
+          },
+          {
+            "game_id": "737092",
+            "date": "Sun, Apr 5",
+            "home_team": "Cremonese",
+            "away_team": "Bologna",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "37.2%",
+                "62.8%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "9",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737092"
+          },
+          {
+            "game_id": "737082",
+            "date": "Sun, Mar 22",
+            "home_team": "Bologna",
+            "away_team": "Lazio",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.6%",
+                "46.4%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "9"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "2",
+                "1"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737082"
+          },
+          {
+            "game_id": "401862874",
+            "date": "Thu, Mar 19",
+            "home_team": "AS Roma",
+            "away_team": "Bologna",
+            "score": "3 - 4",
+            "status": "AET",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.7%",
+                "39.3%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "9"
+              ],
+              "Shot Attempts": [
+                "24",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "5"
+              ],
+              "Corner Kicks": [
+                "8",
+                "4"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862874"
+          },
+          {
+            "game_id": "737068",
+            "date": "Sun, Mar 15",
+            "home_team": "Sassuolo",
+            "away_team": "Bologna",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "54.5%",
+                "45.5%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "3"
+              ],
+              "Shot Attempts": [
+                "9",
+                "16"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737068"
+          },
+          {
+            "game_id": "401862871",
+            "date": "Thu, Mar 12",
+            "home_team": "Bologna",
+            "away_team": "AS Roma",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.4%",
+                "48.6%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "2"
+              ],
+              "Shot Attempts": [
+                "13",
+                "8"
+              ],
+              "Yellow Cards": [
+                "3",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "0",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862871"
+          },
+          {
+            "game_id": "737061",
+            "date": "Sun, Mar 8",
+            "home_team": "Bologna",
+            "away_team": "Hellas Verona",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "67.4%",
+                "32.6%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "5"
+              ],
+              "Shot Attempts": [
+                "19",
+                "15"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "2",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737061"
+          },
+          {
+            "game_id": "737047",
+            "date": "Mon, Mar 2",
+            "home_team": "Pisa",
+            "away_team": "Bologna",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.6%",
+                "59.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "1"
+              ],
+              "Shot Attempts": [
+                "6",
+                "8"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "4"
+              ],
+              "Saves": [
+                "0",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/737047"
+          },
+          {
+            "game_id": "401858778",
+            "date": "Thu, Feb 26",
+            "home_team": "Bologna",
+            "away_team": "SK Brann",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60.8%",
+                "39.2%"
+              ],
+              "Shots on Goal": [
+                "5",
+                "3"
+              ],
+              "Shot Attempts": [
+                "16",
+                "7"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "13",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401858778"
+          }
+        ],
+        "classement": {
+          "Aston Villa": {
+            "position": 2,
+            "points": 21
+          },
+          "Bologna": {
+            "position": 10,
+            "points": 15
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Lyon",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Aston Villa",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "FC Midtjylland",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Real Betis",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "FC Porto",
+            "points": 17
+          },
+          {
+            "position": 6,
+            "team": "Braga",
+            "points": 17
+          },
+          {
+            "position": 7,
+            "team": "SC Freiburg",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "AS Roma",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Racing Genk",
+            "points": 16
+          },
+          {
+            "position": 10,
+            "team": "Bologna",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "VfB Stuttgart",
+            "points": 15
+          },
+          {
+            "position": 12,
+            "team": "Ferencvaros",
+            "points": 15
+          },
+          {
+            "position": 13,
+            "team": "Nottingham Forest",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Viktoria Plzen",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Red Star Belgrade",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Celta Vigo",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "PAOK Salonika",
+            "points": 12
+          },
+          {
+            "position": 18,
+            "team": "Lille",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Fenerbahce",
+            "points": 12
+          },
+          {
+            "position": 20,
+            "team": "Panathinaikos",
+            "points": 12
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 11
+          },
+          {
+            "position": 22,
+            "team": "Ludogorets Razgrad",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Dinamo Zagreb",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "SK Brann",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Young Boys",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "SK Sturm Graz",
+            "points": 7
+          },
+          {
+            "position": 27,
+            "team": "FCSB",
+            "points": 7
+          },
+          {
+            "position": 28,
+            "team": "Go Ahead Eagles",
+            "points": 7
+          },
+          {
+            "position": 29,
+            "team": "Feyenoord Rotterdam",
+            "points": 6
+          },
+          {
+            "position": 30,
+            "team": "FC Basel",
+            "points": 6
+          },
+          {
+            "position": 31,
+            "team": "RB Salzburg",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Rangers",
+            "points": 4
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 3
+          },
+          {
+            "position": 34,
+            "team": "FC Utrecht",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "720457",
+            "date": "Tuesday, October 22, 2024",
+            "team1": "Aston Villa",
+            "score": "2 - 0",
+            "team2": "Bologna",
+            "title": "Aston Villa VS Bologna",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/720457/bologna-aston-villa",
+            "source": "UEFA Champions League",
+            "stats": {
+              "Possession": [
+                "53.3%",
+                "46.7%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "4"
+              ],
+              "Shot Attempts": [
+                "16",
+                "12"
+              ],
+              "Yellow Cards": [
+                "1",
+                "4"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "4",
+                "4"
+              ]
+            }
+          },
+          {
+            "gameId": "757808",
+            "date": "Thursday, September 25, 2025",
+            "team1": "Aston Villa",
+            "score": "1 - 0",
+            "team2": "Bologna",
+            "title": "Aston Villa VS Bologna",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/757808/bologna-aston-villa",
+            "source": "UEFA Europa League",
+            "stats": {
+              "Possession": [
+                "47.1%",
+                "52.9%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "7"
+              ],
+              "Shot Attempts": [
+                "12",
+                "17"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "8",
+                "3"
+              ],
+              "Saves": [
+                "7",
+                "3"
+              ]
+            }
+          },
+          {
+            "gameId": "401862902",
+            "date": "Thursday, April 9, 2026",
+            "team1": "Bologna",
+            "score": "1 - 3",
+            "team2": "Aston Villa",
+            "title": "Bologna VS Aston Villa",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401862902/aston-villa-bologna",
+            "source": "UEFA Europa League",
+            "stats": {
+              "Possession": [
+                "58%",
+                "42%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "19",
+                "8"
+              ],
+              "Yellow Cards": [
+                "2",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "1",
+                "3"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/66.png",
+        "logo_away": "https://media.api-sports.io/football/teams/500.png",
+        "classement_home": 2,
+        "classement_away": 10,
+        "points_classement_home": 21,
+        "points_classement_away": 15,
+        "nom_classement_home": "Aston Villa",
+        "nom_classement_away": "Bologna",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.377,
+            "lambda_away": 1.268,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 39.57,
+            "X": 26.16,
+            "V2": 34.28
+          },
+          "double_chance": {
+            "1X": 65.72,
+            "12": 73.84,
+            "X2": 60.43
+          },
+          "over_under": {
+            "plus_de_0.5": 92.9,
+            "moins_de_0.5": 7.1,
+            "plus_de_1.5": 73.76,
+            "moins_de_1.5": 26.24,
+            "plus_de_2.5": 49.46,
+            "moins_de_2.5": 50.54,
+            "plus_de_3.5": 27.38,
+            "moins_de_3.5": 72.62,
+            "plus_de_4.5": 12.74,
+            "moins_de_4.5": 87.26,
+            "plus_de_5.5": 5.3,
+            "moins_de_5.5": 94.7
+          },
+          "btts": {
+            "oui": 53.89,
+            "non": 46.11
+          },
+          "resultat_total": {
+            "V1et+0.5": 39.57,
+            "1Xet+0.5": 58.62,
+            "V2et+0.5": 34.28,
+            "X2et+0.5": 53.32,
+            "12et+0.5": 73.84,
+            "V1et+1.5": 29.74,
+            "1Xet+1.5": 48.78,
+            "V2et+1.5": 24.98,
+            "X2et+1.5": 44.03,
+            "12et+1.5": 54.72,
+            "V1et+2.5": 23.24,
+            "1Xet+2.5": 29.9,
+            "V2et+2.5": 19.55,
+            "X2et+2.5": 26.22,
+            "12et+2.5": 42.78,
+            "V1et+3.5": 11.26,
+            "1Xet+3.5": 17.94,
+            "V2et+3.5": 9.44,
+            "X2et+3.5": 16.11,
+            "12et+3.5": 20.7,
+            "V1et+4.5": 6.17,
+            "1Xet+4.5": 7.33,
+            "V2et+4.5": 5.4,
+            "X2et+4.5": 6.56,
+            "12et+4.5": 11.58,
+            "V1et+5.5": 2.21,
+            "1Xet+5.5": 3.37,
+            "V2et+5.5": 1.92,
+            "X2et+5.5": 3.08,
+            "12et+5.5": 4.14
+          },
+          "scores_probables": {
+            "1-1": 12.38,
+            "1-0": 9.84,
+            "0-1": 9.3,
+            "2-1": 8.82,
+            "1-2": 7.68,
+            "0-0": 7.1,
+            "2-0": 6.5,
+            "2-2": 5.51,
+            "0-2": 5.43,
+            "3-1": 4.03
+          },
+          "buts_moyens_simules": {
+            "home": 1.38,
+            "away": 1.27,
+            "total": 2.64
+          }
+        },
+        "analyse_ia": "❌ Échec définitif après 5 tentatives. Dernière erreur : 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+        "confiance_pourcentage": null,
+        "prediction_principale": null,
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": null
+      },
+      {
+        "id": 3,
+        "fixture_id": 1535341,
+        "HomeTeam": "Nottingham Forest",
+        "AwayTeam": "FC Porto",
+        "date": "16 avril 2026 à 19:00:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 10,
+          "total_points": 9,
+          "serie_domicile": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 6,
+          "total_marques": 11,
+          "total_encaisses": 11
+        },
+        "stats_away": {
+          "moyenne_marques": 2.0,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 21,
+          "total_points": 14,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 6,
+          "total_marques": 20,
+          "total_encaisses": 10
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740914",
+            "date": "Sun, Apr 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "40.8%",
+                "59.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "5"
+              ],
+              "Shot Attempts": [
+                "15",
+                "12"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "7",
+                "3"
+              ],
+              "Saves": [
+                "5",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740914"
+          },
+          {
+            "game_id": "401862901",
+            "date": "Thu, Apr 9",
+            "home_team": "FC Porto",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862901"
+          },
+          {
+            "game_id": "740904",
+            "date": "Sun, Mar 22",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "Nottingham Forest",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "58.9%",
+                "41.1%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "7"
+              ],
+              "Shot Attempts": [
+                "14",
+                "8"
+              ],
+              "Yellow Cards": [
+                "1",
+                "2"
+              ],
+              "Corner Kicks": [
+                "13",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740904"
+          },
+          {
+            "game_id": "401862875",
+            "date": "Thu, Mar 19",
+            "home_team": "FC Midtjylland",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.6%",
+                "48.4%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "8"
+              ],
+              "Shot Attempts": [
+                "12",
+                "20"
+              ],
+              "Yellow Cards": [
+                "4",
+                "2"
+              ],
+              "Corner Kicks": [
+                "4",
+                "11"
+              ],
+              "Saves": [
+                "7",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862875"
+          },
+          {
+            "game_id": "740893",
+            "date": "Sun, Mar 15",
+            "home_team": "Nottingham Forest",
+            "away_team": "Fulham",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "45.8%",
+                "54.2%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "1"
+              ],
+              "Shot Attempts": [
+                "11",
+                "6"
+              ],
+              "Yellow Cards": [
+                "2",
+                "3"
+              ],
+              "Corner Kicks": [
+                "5",
+                "4"
+              ],
+              "Saves": [
+                "1",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740893"
+          },
+          {
+            "game_id": "401862770",
+            "date": "Thu, Mar 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "FC Midtjylland",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.5%",
+                "42.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "2"
+              ],
+              "Shot Attempts": [
+                "22",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "1",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862770"
+          },
+          {
+            "game_id": "740882",
+            "date": "Wed, Mar 4",
+            "home_team": "Manchester City",
+            "away_team": "Nottingham Forest",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "69.9%",
+                "30.1%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "21",
+                "9"
+              ],
+              "Yellow Cards": [
+                "0",
+                "4"
+              ],
+              "Corner Kicks": [
+                "6",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740882"
+          },
+          {
+            "game_id": "740866",
+            "date": "Sun, Mar 1",
+            "home_team": "Brighton & Hove Albion",
+            "away_team": "Nottingham Forest",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.5%",
+                "46.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "4"
+              ],
+              "Shot Attempts": [
+                "14",
+                "13"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "4"
+              ],
+              "Saves": [
+                "3",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740866"
+          },
+          {
+            "game_id": "401858780",
+            "date": "Thu, Feb 26",
+            "home_team": "Nottingham Forest",
+            "away_team": "Fenerbahce",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "53.8%",
+                "46.2%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "4"
+              ],
+              "Shot Attempts": [
+                "13",
+                "11"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "3"
+              ],
+              "Saves": [
+                "3",
+                "3"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401858780"
+          },
+          {
+            "game_id": "740863",
+            "date": "Sun, Feb 22",
+            "home_team": "Nottingham Forest",
+            "away_team": "Liverpool",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "47.2%",
+                "52.8%"
+              ],
+              "Shots on Goal": [
+                "2",
+                "4"
+              ],
+              "Shot Attempts": [
+                "18",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "0"
+              ],
+              "Corner Kicks": [
+                "7",
+                "2"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/740863"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "750499",
+            "date": "Sun, Apr 12",
+            "home_team": "Estoril",
+            "away_team": "FC Porto",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "55.1%",
+                "44.9%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "5"
+              ],
+              "Shot Attempts": [
+                "9",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "1"
+              ],
+              "Corner Kicks": [
+                "1",
+                "8"
+              ],
+              "Saves": [
+                "3",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750499"
+          },
+          {
+            "game_id": "401862901",
+            "date": "Thu, Apr 9",
+            "home_team": "FC Porto",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862901"
+          },
+          {
+            "game_id": "750492",
+            "date": "Sat, Apr 4",
+            "home_team": "FC Porto",
+            "away_team": "FC Famalicao",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "6"
+              ],
+              "Shot Attempts": [
+                "8",
+                "11"
+              ],
+              "Yellow Cards": [
+                "5",
+                "4"
+              ],
+              "Corner Kicks": [
+                "4",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "1"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750492"
+          },
+          {
+            "game_id": "750487",
+            "date": "Sun, Mar 22",
+            "home_team": "Braga",
+            "away_team": "FC Porto",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "61.9%",
+                "38.1%"
+              ],
+              "Shots on Goal": [
+                "1",
+                "3"
+              ],
+              "Shot Attempts": [
+                "6",
+                "12"
+              ],
+              "Yellow Cards": [
+                "4",
+                "5"
+              ],
+              "Corner Kicks": [
+                "3",
+                "5"
+              ],
+              "Saves": [
+                "1",
+                "0"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750487"
+          },
+          {
+            "game_id": "401862756",
+            "date": "Thu, Mar 19",
+            "home_team": "FC Porto",
+            "away_team": "VfB Stuttgart",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "36.2%",
+                "63.8%"
+              ],
+              "Shots on Goal": [
+                "4",
+                "6"
+              ],
+              "Shot Attempts": [
+                "10",
+                "20"
+              ],
+              "Yellow Cards": [
+                "3",
+                "3"
+              ],
+              "Corner Kicks": [
+                "4",
+                "11"
+              ],
+              "Saves": [
+                "6",
+                "2"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862756"
+          },
+          {
+            "game_id": "750475",
+            "date": "Sun, Mar 15",
+            "home_team": "FC Porto",
+            "away_team": "Moreirense",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "57.6%",
+                "42.4%"
+              ],
+              "Shots on Goal": [
+                "9",
+                "2"
+              ],
+              "Shot Attempts": [
+                "17",
+                "3"
+              ],
+              "Yellow Cards": [
+                "1",
+                "1"
+              ],
+              "Corner Kicks": [
+                "4",
+                "1"
+              ],
+              "Saves": [
+                "2",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750475"
+          },
+          {
+            "game_id": "401862752",
+            "date": "Thu, Mar 12",
+            "home_team": "VfB Stuttgart",
+            "away_team": "FC Porto",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "60%",
+                "40%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "6"
+              ],
+              "Shot Attempts": [
+                "14",
+                "14"
+              ],
+              "Yellow Cards": [
+                "2",
+                "4"
+              ],
+              "Corner Kicks": [
+                "1",
+                "3"
+              ],
+              "Saves": [
+                "4",
+                "6"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/401862752"
+          },
+          {
+            "game_id": "750463",
+            "date": "Sun, Mar 8",
+            "home_team": "Benfica",
+            "away_team": "FC Porto",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "59.5%",
+                "40.5%"
+              ],
+              "Shots on Goal": [
+                "6",
+                "6"
+              ],
+              "Shot Attempts": [
+                "20",
+                "14"
+              ],
+              "Yellow Cards": [
+                "3",
+                "7"
+              ],
+              "Corner Kicks": [
+                "8",
+                "2"
+              ],
+              "Saves": [
+                "4",
+                "5"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750463"
+          },
+          {
+            "game_id": "401854107",
+            "date": "Tue, Mar 3",
+            "home_team": "Sporting CP",
+            "away_team": "FC Porto",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401854107"
+          },
+          {
+            "game_id": "750457",
+            "date": "Fri, Feb 27",
+            "home_team": "FC Porto",
+            "away_team": "Arouca",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {
+              "Possession": [
+                "56.5%",
+                "43.5%"
+              ],
+              "Shots on Goal": [
+                "7",
+                "1"
+              ],
+              "Shot Attempts": [
+                "20",
+                "7"
+              ],
+              "Yellow Cards": [
+                "0",
+                "2"
+              ],
+              "Corner Kicks": [
+                "5",
+                "1"
+              ],
+              "Saves": [
+                "0",
+                "4"
+              ]
+            },
+            "url": "https://africa.espn.com/football/match/_/gameId/750457"
+          }
+        ],
+        "classement": {
+          "Nottingham Forest": {
+            "position": 13,
+            "points": 14
+          },
+          "FC Porto": {
+            "position": 5,
+            "points": 17
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Lyon",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Aston Villa",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "FC Midtjylland",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Real Betis",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "FC Porto",
+            "points": 17
+          },
+          {
+            "position": 6,
+            "team": "Braga",
+            "points": 17
+          },
+          {
+            "position": 7,
+            "team": "SC Freiburg",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "AS Roma",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Racing Genk",
+            "points": 16
+          },
+          {
+            "position": 10,
+            "team": "Bologna",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "VfB Stuttgart",
+            "points": 15
+          },
+          {
+            "position": 12,
+            "team": "Ferencvaros",
+            "points": 15
+          },
+          {
+            "position": 13,
+            "team": "Nottingham Forest",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Viktoria Plzen",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Red Star Belgrade",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Celta Vigo",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "PAOK Salonika",
+            "points": 12
+          },
+          {
+            "position": 18,
+            "team": "Lille",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Fenerbahce",
+            "points": 12
+          },
+          {
+            "position": 20,
+            "team": "Panathinaikos",
+            "points": 12
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 11
+          },
+          {
+            "position": 22,
+            "team": "Ludogorets Razgrad",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Dinamo Zagreb",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "SK Brann",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Young Boys",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "SK Sturm Graz",
+            "points": 7
+          },
+          {
+            "position": 27,
+            "team": "FCSB",
+            "points": 7
+          },
+          {
+            "position": 28,
+            "team": "Go Ahead Eagles",
+            "points": 7
+          },
+          {
+            "position": 29,
+            "team": "Feyenoord Rotterdam",
+            "points": 6
+          },
+          {
+            "position": 30,
+            "team": "FC Basel",
+            "points": 6
+          },
+          {
+            "position": 31,
+            "team": "RB Salzburg",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Rangers",
+            "points": 4
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 3
+          },
+          {
+            "position": 34,
+            "team": "FC Utrecht",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "757846",
+            "date": "Thursday, October 23, 2025",
+            "team1": "Nottingham Forest",
+            "score": "2 - 0",
+            "team2": "FC Porto",
+            "title": "Nottingham Forest VS FC Porto",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/757846/fc-porto-nottingham-forest",
+            "source": "UEFA Europa League",
+            "stats": {
+              "Possession": [
+                "50.8%",
+                "49.2%"
+              ],
+              "Shots on Goal": [
+                "3",
+                "2"
+              ],
+              "Shot Attempts": [
+                "8",
+                "10"
+              ],
+              "Yellow Cards": [
+                "2",
+                "2"
+              ],
+              "Corner Kicks": [
+                "3",
+                "8"
+              ],
+              "Saves": [
+                "1",
+                "1"
+              ]
+            }
+          },
+          {
+            "gameId": "401862901",
+            "date": "Thursday, April 9, 2026",
+            "team1": "FC Porto",
+            "score": "1 - 1",
+            "team2": "Nottingham Forest",
+            "title": "FC Porto VS Nottingham Forest",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/401862901/nottingham-forest-fc-porto",
+            "source": "UEFA Europa League",
+            "stats": {
+              "Possession": [
+                "51.8%",
+                "48.2%"
+              ],
+              "Shots on Goal": [
+                "8",
+                "2"
+              ],
+              "Shot Attempts": [
+                "16",
+                "6"
+              ],
+              "Yellow Cards": [
+                "1",
+                "0"
+              ],
+              "Corner Kicks": [
+                "5",
+                "2"
+              ],
+              "Saves": [
+                "2",
+                "7"
+              ]
+            }
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/65.png",
+        "logo_away": "https://media.api-sports.io/football/teams/212.png",
+        "classement_home": 13,
+        "classement_away": 5,
+        "points_classement_home": 14,
+        "points_classement_away": 17,
+        "nom_classement_home": "Nottingham Forest",
+        "nom_classement_away": "FC Porto",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.317,
+            "lambda_away": 1.235,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 38.78,
+            "X": 26.81,
+            "V2": 34.4
+          },
+          "double_chance": {
+            "1X": 65.6,
+            "12": 73.19,
+            "X2": 61.22
+          },
+          "over_under": {
+            "plus_de_0.5": 92.21,
+            "moins_de_0.5": 7.79,
+            "plus_de_1.5": 72.46,
+            "moins_de_1.5": 27.54,
+            "plus_de_2.5": 46.86,
+            "moins_de_2.5": 53.14,
+            "plus_de_3.5": 25.14,
+            "moins_de_3.5": 74.87,
+            "plus_de_4.5": 11.42,
+            "moins_de_4.5": 88.58,
+            "plus_de_5.5": 4.4,
+            "moins_de_5.5": 95.6
+          },
+          "btts": {
+            "oui": 52.1,
+            "non": 47.9
+          },
+          "resultat_total": {
+            "V1et+0.5": 38.78,
+            "1Xet+0.5": 57.8,
+            "V2et+0.5": 34.4,
+            "X2et+0.5": 53.42,
+            "12et+0.5": 73.19,
+            "V1et+1.5": 28.56,
+            "1Xet+1.5": 47.58,
+            "V2et+1.5": 24.87,
+            "X2et+1.5": 43.89,
+            "12et+1.5": 53.44,
+            "V1et+2.5": 21.51,
+            "1Xet+2.5": 27.69,
+            "V2et+2.5": 19.17,
+            "X2et+2.5": 25.35,
+            "12et+2.5": 40.68,
+            "V1et+3.5": 10.11,
+            "1Xet+3.5": 16.29,
+            "V2et+3.5": 8.85,
+            "X2et+3.5": 15.02,
+            "12et+3.5": 18.95,
+            "V1et+4.5": 5.51,
+            "1Xet+4.5": 6.5,
+            "V2et+4.5": 4.91,
+            "X2et+4.5": 5.9,
+            "12et+4.5": 10.42,
+            "V1et+5.5": 1.86,
+            "1Xet+5.5": 2.85,
+            "V2et+5.5": 1.56,
+            "X2et+5.5": 2.55,
+            "12et+5.5": 3.41
+          },
+          "scores_probables": {
+            "1-1": 12.84,
+            "1-0": 10.22,
+            "0-1": 9.54,
+            "2-1": 8.43,
+            "1-2": 7.94,
+            "0-0": 7.79,
+            "2-0": 7.06,
+            "0-2": 5.7,
+            "2-2": 5.18,
+            "3-1": 3.61
+          },
+          "buts_moyens_simules": {
+            "home": 1.32,
+            "away": 1.23,
+            "total": 2.55
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (FC Porto)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑2 ou 1‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces et faiblesses**  \n- **Nottingham Forest** (domicile) : moyenne de **1,10 buts marqués** et **1,10 buts encaissés** sur la saison, mais uniquement **2 buts marqués** et **5 buts concédés** à domicile (5 matchs). Leur capacité offensive à domicile est très limitée (0,4 buts/match).  \n- **FC Porto** (extérieur) : moyenne de **2,00 buts marqués** et **1,00 buts encaissés**. En déplacement, ils ont déjà inscrit **9 buts** et n’en ont concédés que **6** (5 matchs) → **1,8 buts/match** marqués, **1,2 buts/match** encaissés.  \n\n**2. Impact du facteur domicile/extérieur**  \n- Forest montre une série à domicile très fragile (D‑D‑L‑L‑L) et une faible production offensive.  \n- Porto, à l’inverse, possède une série à l’extérieur solide (W‑W‑W‑D‑L) et réalise régulièrement au moins deux réalisations offensives.  \n\n**3. Forme récente et tendances (stats détaillées)**  \n- **Forest** : sur les 6 derniers matchs, seuls 2 buts marqués (contre Aston Villa 1‑1 et Brighton 1‑2). Leurs tirs cadrés à domicile sont très faibles (ex. 2‑1 contre Aston Villa, 2‑1 contre Fulham).  \n- **Porto** : sur les 6 derniers matchs, 12 buts marqués, dont 3 contre Estoril (3‑1) et 3 contre Arouca (3‑1). Ils dominent la possession (55‑60 %) et les tirs cadrés (8‑2 contre Forest le 9 avril).  \n\n**4. Contexte du classement**  \n- Porto occupe la **5ᵉ place** (17 pts) avec une différence de points positive sur Forest (13ᵉ, 14 pts). Porto a encore à jouer pour une place européenne, ce qui renforce leur motivation.  \n- Forest lutte en bas du tableau et doit impérativement récupérer des points, mais leurs performances à domicile ne le laissent pas croire à une remontée rapide.  \n\n**5. Confrontations directes**  \n- Saison dernière : **Forest 2‑0 Porto** (maison).  \n- Cette saison : **Porto 1‑1 Forest** (à l’extérieur de Porto).  \n  - Le match à Nottingham a montré la supériorité de Porto en tirs (8‑2) et en possession (51,8 % vs 48,2 %).  \n  - L’écart de buts (2‑0) de la saison précédente reste le seul match où Forest a clairement dominé, mais c’était il y a plus d’un an et les effectifs ont évolué.  \n\n**6. Analyse des stats détaillées**  \n- **Possession** : Porto garde la balle plus longtemps (environ 55 % en moyenne), ce qui crée plus d’occasions.  \n- **Tirs au but** : Porto réalise en moyenne **8‑9 tirs cadrés** par match à l’extérieur, contre **2‑3** de Forest à domicile.  \n- **Corners** : Porto gagne souvent les corners (moyenne 4‑5 par match), signe d’une pression offensive constante.  \n- **Cartons** : Pas de différence majeure, donc le jeu restera ouvert.  \n\n**7. Synthèse**  \nTous les indicateurs (buts marqués, tirs cadrés, possession, forme récente) pointent vers une domination offensive de Porto. Forest peine à marquer à domicile et concède régulièrement. Le scénario le plus probable est une victoire de Porto avec deux buts, Forest peinant à répondre.  \n\n**8. Pourquoi pas BTTS / +2.5 buts ?**  \n- Les rencontres récentes de Forest à domicile montrent rarement plus d’un but total (ex. 1‑1, 0‑0, 0‑1).  \n- Bien que Porto marque souvent, leurs buts encaissés à l’extérieur restent modestes (1,2 buts/match).  \n- La probabilité d’un total supérieur à 2,5 buts reste inférieure à celle d’une victoire simple de Porto (environ 55 % vs 68 %).  \n\n**Conclusion** : La prédiction la plus fiable est **une victoire de FC Porto à Nottingham**, avec les scores les plus probables **0‑2** ou **1‑2**.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (FC Porto)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑2 ou 1‑2"
+      }
+    ]
+  }
+}
