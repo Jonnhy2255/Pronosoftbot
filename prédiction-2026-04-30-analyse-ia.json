@@ -1,0 +1,1368 @@
+{
+  "metadata": {
+    "date_generation": "2026-04-30 04:31:30",
+    "date_matchs": "2026-04-30",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 2,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 2,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1540872,
+        "HomeTeam": "Nottingham Forest",
+        "AwayTeam": "Aston Villa",
+        "date": "30 avril 2026 à 19:00:00 UTC",
+        "league": "World - UEFA Europa League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 19,
+          "total_points": 14,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 13,
+          "buts_ext_encaisses": 4,
+          "total_marques": 19,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "W",
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "total_points_6": 13,
+          "total_points_10": 19,
+          "total_points": 13,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 13,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 6,
+          "total_marques": 19,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740933",
+            "date": "Fri, Apr 24",
+            "home_team": "Sunderland",
+            "away_team": "Nottingham Forest",
+            "score": "0 - 5",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740933"
+          },
+          {
+            "game_id": "740917",
+            "date": "Sun, Apr 19",
+            "home_team": "Nottingham Forest",
+            "away_team": "Burnley",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740917"
+          },
+          {
+            "game_id": "401862905",
+            "date": "Thu, Apr 16",
+            "home_team": "Nottingham Forest",
+            "away_team": "FC Porto",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862905"
+          },
+          {
+            "game_id": "740914",
+            "date": "Sun, Apr 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740914"
+          },
+          {
+            "game_id": "401862901",
+            "date": "Thu, Apr 9",
+            "home_team": "FC Porto",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862901"
+          },
+          {
+            "game_id": "740904",
+            "date": "Sun, Mar 22",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "Nottingham Forest",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740904"
+          },
+          {
+            "game_id": "401862875",
+            "date": "Thu, Mar 19",
+            "home_team": "FC Midtjylland",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862875"
+          },
+          {
+            "game_id": "740893",
+            "date": "Sun, Mar 15",
+            "home_team": "Nottingham Forest",
+            "away_team": "Fulham",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740893"
+          },
+          {
+            "game_id": "401862770",
+            "date": "Thu, Mar 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "FC Midtjylland",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862770"
+          },
+          {
+            "game_id": "740882",
+            "date": "Wed, Mar 4",
+            "home_team": "Manchester City",
+            "away_team": "Nottingham Forest",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740882"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "740935",
+            "date": "Sat, Apr 25",
+            "home_team": "Fulham",
+            "away_team": "Aston Villa",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740935"
+          },
+          {
+            "game_id": "740919",
+            "date": "Sun, Apr 19",
+            "home_team": "Aston Villa",
+            "away_team": "Sunderland",
+            "score": "4 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740919"
+          },
+          {
+            "game_id": "401862906",
+            "date": "Thu, Apr 16",
+            "home_team": "Aston Villa",
+            "away_team": "Bologna",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862906"
+          },
+          {
+            "game_id": "740914",
+            "date": "Sun, Apr 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740914"
+          },
+          {
+            "game_id": "401862902",
+            "date": "Thu, Apr 9",
+            "home_team": "Bologna",
+            "away_team": "Aston Villa",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862902"
+          },
+          {
+            "game_id": "740896",
+            "date": "Sun, Mar 22",
+            "home_team": "Aston Villa",
+            "away_team": "West Ham United",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740896"
+          },
+          {
+            "game_id": "401862759",
+            "date": "Thu, Mar 19",
+            "home_team": "Aston Villa",
+            "away_team": "Lille",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862759"
+          },
+          {
+            "game_id": "740892",
+            "date": "Sun, Mar 15",
+            "home_team": "Manchester United",
+            "away_team": "Aston Villa",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740892"
+          },
+          {
+            "game_id": "401862754",
+            "date": "Thu, Mar 12",
+            "home_team": "Lille",
+            "away_team": "Aston Villa",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862754"
+          },
+          {
+            "game_id": "740876",
+            "date": "Wed, Mar 4",
+            "home_team": "Aston Villa",
+            "away_team": "Chelsea",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740876"
+          }
+        ],
+        "classement": {
+          "Nottingham Forest": {
+            "position": 13,
+            "points": 14
+          },
+          "Aston Villa": {
+            "position": 2,
+            "points": 21
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Lyon",
+            "points": 21
+          },
+          {
+            "position": 2,
+            "team": "Aston Villa",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "FC Midtjylland",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Real Betis",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "FC Porto",
+            "points": 17
+          },
+          {
+            "position": 6,
+            "team": "Braga",
+            "points": 17
+          },
+          {
+            "position": 7,
+            "team": "SC Freiburg",
+            "points": 17
+          },
+          {
+            "position": 8,
+            "team": "AS Roma",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Racing Genk",
+            "points": 16
+          },
+          {
+            "position": 10,
+            "team": "Bologna",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "VfB Stuttgart",
+            "points": 15
+          },
+          {
+            "position": 12,
+            "team": "Ferencvaros",
+            "points": 15
+          },
+          {
+            "position": 13,
+            "team": "Nottingham Forest",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Viktoria Plzen",
+            "points": 14
+          },
+          {
+            "position": 15,
+            "team": "Red Star Belgrade",
+            "points": 14
+          },
+          {
+            "position": 16,
+            "team": "Celta Vigo",
+            "points": 13
+          },
+          {
+            "position": 17,
+            "team": "PAOK Salonika",
+            "points": 12
+          },
+          {
+            "position": 18,
+            "team": "Lille",
+            "points": 12
+          },
+          {
+            "position": 19,
+            "team": "Fenerbahce",
+            "points": 12
+          },
+          {
+            "position": 20,
+            "team": "Panathinaikos",
+            "points": 12
+          },
+          {
+            "position": 21,
+            "team": "Celtic",
+            "points": 11
+          },
+          {
+            "position": 22,
+            "team": "Ludogorets Razgrad",
+            "points": 10
+          },
+          {
+            "position": 23,
+            "team": "Dinamo Zagreb",
+            "points": 10
+          },
+          {
+            "position": 24,
+            "team": "SK Brann",
+            "points": 9
+          },
+          {
+            "position": 25,
+            "team": "Young Boys",
+            "points": 9
+          },
+          {
+            "position": 26,
+            "team": "SK Sturm Graz",
+            "points": 7
+          },
+          {
+            "position": 27,
+            "team": "FCSB",
+            "points": 7
+          },
+          {
+            "position": 28,
+            "team": "Go Ahead Eagles",
+            "points": 7
+          },
+          {
+            "position": 29,
+            "team": "Feyenoord Rotterdam",
+            "points": 6
+          },
+          {
+            "position": 30,
+            "team": "FC Basel",
+            "points": 6
+          },
+          {
+            "position": 31,
+            "team": "RB Salzburg",
+            "points": 6
+          },
+          {
+            "position": 32,
+            "team": "Rangers",
+            "points": 4
+          },
+          {
+            "position": 33,
+            "team": "Nice",
+            "points": 3
+          },
+          {
+            "position": 34,
+            "team": "FC Utrecht",
+            "points": 1
+          },
+          {
+            "position": 35,
+            "team": "Malmö FF",
+            "points": 1
+          },
+          {
+            "position": 36,
+            "team": "Maccabi Tel-Aviv",
+            "points": 1
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704436",
+            "date": "Saturday, December 14, 2024",
+            "team1": "Nottingham Forest",
+            "score": "2 - 1",
+            "team2": "Aston Villa",
+            "title": "Nottingham Forest VS Aston Villa",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704436/aston-villa-nottingham-forest",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "704580",
+            "date": "Saturday, April 5, 2025",
+            "team1": "Aston Villa",
+            "score": "2 - 1",
+            "team2": "Nottingham Forest",
+            "title": "Aston Villa VS Nottingham Forest",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704580/nottingham-forest-aston-villa",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "740789",
+            "date": "Saturday, January 3, 2026",
+            "team1": "Aston Villa",
+            "score": "3 - 1",
+            "team2": "Nottingham Forest",
+            "title": "Aston Villa VS Nottingham Forest",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/740789/nottingham-forest-aston-villa",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "740914",
+            "date": "Sunday, April 12, 2026",
+            "team1": "Nottingham Forest",
+            "score": "1 - 1",
+            "team2": "Aston Villa",
+            "title": "Nottingham Forest VS Aston Villa",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/740914/aston-villa-nottingham-forest",
+            "source": "Premier League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/65.png",
+        "logo_away": "https://media.api-sports.io/football/teams/66.png",
+        "classement_home": 13,
+        "classement_away": 2,
+        "points_classement_home": 14,
+        "points_classement_away": 21,
+        "nom_classement_home": "Nottingham Forest",
+        "nom_classement_away": "Aston Villa",
+        "country_fr": "World - UEFA Europa League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.626,
+            "lambda_away": 1.204,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 47.06,
+            "X": 24.56,
+            "V2": 28.37
+          },
+          "double_chance": {
+            "1X": 71.63,
+            "12": 75.44,
+            "X2": 52.94
+          },
+          "over_under": {
+            "plus_de_0.5": 94.18,
+            "moins_de_0.5": 5.82,
+            "plus_de_1.5": 77.47,
+            "moins_de_1.5": 22.53,
+            "plus_de_2.5": 54.06,
+            "moins_de_2.5": 45.94,
+            "plus_de_3.5": 31.82,
+            "moins_de_3.5": 68.18,
+            "plus_de_4.5": 15.62,
+            "moins_de_4.5": 84.38,
+            "plus_de_5.5": 6.49,
+            "moins_de_5.5": 93.51
+          },
+          "btts": {
+            "oui": 56.48,
+            "non": 43.52
+          },
+          "resultat_total": {
+            "V1et+0.5": 47.06,
+            "1Xet+0.5": 65.81,
+            "V2et+0.5": 28.37,
+            "X2et+0.5": 47.12,
+            "12et+0.5": 75.44,
+            "V1et+1.5": 37.52,
+            "1Xet+1.5": 56.26,
+            "V2et+1.5": 21.21,
+            "X2et+1.5": 39.96,
+            "12et+1.5": 58.73,
+            "V1et+2.5": 29.74,
+            "1Xet+2.5": 37.04,
+            "V2et+2.5": 17.02,
+            "X2et+2.5": 24.32,
+            "12et+2.5": 46.76,
+            "V1et+3.5": 16.1,
+            "1Xet+3.5": 23.4,
+            "V2et+3.5": 8.42,
+            "X2et+3.5": 15.72,
+            "12et+3.5": 24.52,
+            "V1et+4.5": 9.26,
+            "1Xet+4.5": 10.62,
+            "V2et+4.5": 5.0,
+            "X2et+4.5": 6.36,
+            "12et+4.5": 14.26,
+            "V1et+5.5": 3.55,
+            "1Xet+5.5": 4.9,
+            "V2et+5.5": 1.59,
+            "X2et+5.5": 2.94,
+            "12et+5.5": 5.14
+          },
+          "scores_probables": {
+            "1-1": 11.44,
+            "1-0": 9.55,
+            "2-1": 9.26,
+            "2-0": 7.78,
+            "0-1": 7.16,
+            "1-2": 7.02,
+            "2-2": 5.95,
+            "0-0": 5.82,
+            "3-1": 5.11,
+            "3-0": 4.37
+          },
+          "buts_moyens_simules": {
+            "home": 1.63,
+            "away": 1.2,
+            "total": 2.83
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Aston Villa)  \n**CONFIANCE** : 58 %  \n**SCORES PROBABLES** : 2‑1 ou 1‑0  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Attaque** : Forest et Villa affichent la même moyenne de buts marqués (1,90 bt/match).  \n- **Défense** : Forest concède très peu à domicile (0,70 bt/match) ; Villa, en revanche, laisse 1,30 bt/match à l’extérieur.  \n- **Bilan défensif** : la solidité de Forest à domicile est l’atout principal, mais elle est contre‑balancée par la capacité de Villa à marquer même en déplacement (6 bt en 5 matchs ext.).\n\n**2. Impact du facteur domicile/extérieur**  \n- Forest bénéficie d’un bon historique à domicile (6 bt marqués / 3 bt encaissés).  \n- Villa a connu une série mitigée à l’extérieur (L‑D‑W‑L‑W) mais a tout de même inscrit 6 bt en 5 déplacements, dont un match très offensif (4‑3 contre Fulham).  \n\n**3. Forme récente**  \n- **Forest** : W W W D D W (14 pts sur 6) – dynamique, surtout à domicile.  \n- **Villa** : L W W D W W (13 pts sur 6) – forme solide, avec deux victoires consécutives à l’extérieur (4‑3 vs Fulham, 4‑0 vs Bologna).  \n\n**4. Contexte du championnat**  \n- Villa occupe la 2ᵉ place (21 pts) contre Forest 13ᵉ (14 pts).  \n- La différence de 7 pts indique une équipe globalement plus forte et motivée à consolider sa place en tête.\n\n**5. Confrontations directes** (saison en cours)  \n- 3 victoires récentes de Villa (2‑1, 2‑1, 3‑1) et 1 match nul (1‑1).  \n- Aucun match nul n’a été enregistré en faveur de Forest, ce qui montre une domination psychologique de Villa dans ce duel.\n\n**6. Tendances de buts**  \n- Les 4 derniers affrontements ont produit 9 bt, soit une moyenne de 2,25 bt/match, légèrement au‑dessus de 2,5 bt.  \n- Le match le plus récent (1‑1) montre que les deux équipes peuvent marquer, mais la tendance globale reste orientée vers plus de deux buts.\n\n**7. Synthèse**  \n- La défense de Forest à domicile est un point fort, mais la capacité offensive de Villa à marquer à l’extérieur (et les résultats directs) pèse davantage.  \n- Le profil le plus probable est une victoire serrée de Villa, souvent par un seul but d’écart (2‑1 ou 1‑0).  \n\n**Conclusion** : En combinant la supériorité de classement, la forme récente, les confrontations directes et la capacité offensive de Villa à l’extérieur, la prédiction la plus fiable est une victoire d’Aston Villa, avec une confiance de 58 % et les scores les plus probables 2‑1 ou 1‑0.",
+        "confiance_pourcentage": 58,
+        "prediction_principale": "Victoire extérieur (Aston Villa)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 1‑0"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1498487,
+        "HomeTeam": "All Boys",
+        "AwayTeam": "San Miguel",
+        "date": "30 avril 2026 à 23:30:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 0.4,
+          "moyenne_encaisses": 0.7,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "D",
+            "L",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 10,
+          "total_points": 3,
+          "serie_domicile": [
+            "D",
+            "D",
+            "W",
+            "D",
+            "W"
+          ],
+          "buts_dom_marques": 3,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 6,
+          "total_marques": 4,
+          "total_encaisses": 7
+        },
+        "stats_away": {
+          "moyenne_marques": 0.7,
+          "moyenne_encaisses": 1.3,
+          "form_6": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "L",
+            "D",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "total_points_6": 5,
+          "total_points_10": 10,
+          "total_points": 5,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "L"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 1,
+          "buts_ext_encaisses": 7,
+          "total_marques": 7,
+          "total_encaisses": 13
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843804",
+            "date": "Sat, 25 Apr",
+            "home_team": "San Telmo",
+            "away_team": "All Boys",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843804"
+          },
+          {
+            "game_id": "401843784",
+            "date": "Sat, 18 Apr",
+            "home_team": "All Boys",
+            "away_team": "Acassuso",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843784"
+          },
+          {
+            "game_id": "401843761",
+            "date": "Sun, 12 Apr",
+            "home_team": "Chaco For Ever",
+            "away_team": "All Boys",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843761"
+          },
+          {
+            "game_id": "401843750",
+            "date": "Sat, 4 Apr",
+            "home_team": "All Boys",
+            "away_team": "Ferro Carril Oeste",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843750"
+          },
+          {
+            "game_id": "401843733",
+            "date": "Sun, 29 Mar",
+            "home_team": "Nueva Chicago",
+            "away_team": "All Boys",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843733"
+          },
+          {
+            "game_id": "401843710",
+            "date": "Sun, 22 Mar",
+            "home_team": "Central Norte",
+            "away_team": "All Boys",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843710"
+          },
+          {
+            "game_id": "401843693",
+            "date": "Sat, 14 Mar",
+            "home_team": "All Boys",
+            "away_team": "Deportivo Madryn",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843693"
+          },
+          {
+            "game_id": "401843668",
+            "date": "Sun, 1 Mar",
+            "home_team": "All Boys",
+            "away_team": "Ciudad de Bolívar",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843668"
+          },
+          {
+            "game_id": "401843638",
+            "date": "Sun, 22 Feb",
+            "home_team": "Almirante Brown",
+            "away_team": "All Boys",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843638"
+          },
+          {
+            "game_id": "401843620",
+            "date": "Sat, 14 Feb",
+            "home_team": "All Boys",
+            "away_team": "Mitre (Santiago del Estero)",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843620"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843805",
+            "date": "Sat, 25 Apr",
+            "home_team": "San Miguel",
+            "away_team": "Los Andes",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843805"
+          },
+          {
+            "game_id": "401843792",
+            "date": "Sat, 18 Apr",
+            "home_team": "Godoy Cruz Antonio Tomba",
+            "away_team": "San Miguel",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843792"
+          },
+          {
+            "game_id": "401843773",
+            "date": "Sat, 11 Apr",
+            "home_team": "San Miguel",
+            "away_team": "Deportivo Morón",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843773"
+          },
+          {
+            "game_id": "401843755",
+            "date": "Sat, 4 Apr",
+            "home_team": "Colón (Santa Fe)",
+            "away_team": "San Miguel",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843755"
+          },
+          {
+            "game_id": "401843729",
+            "date": "Sat, 28 Mar",
+            "home_team": "Colegiales",
+            "away_team": "San Miguel",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843729"
+          },
+          {
+            "game_id": "401843717",
+            "date": "Sat, 21 Mar",
+            "home_team": "San Miguel",
+            "away_team": "Racing (Córdoba)",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843717"
+          },
+          {
+            "game_id": "401843703",
+            "date": "Sat, 14 Mar",
+            "home_team": "San Miguel",
+            "away_team": "San Telmo",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843703"
+          },
+          {
+            "game_id": "401843660",
+            "date": "Sat, 28 Feb",
+            "home_team": "San Miguel",
+            "away_team": "Chaco For Ever",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843660"
+          },
+          {
+            "game_id": "401843648",
+            "date": "Sat, 21 Feb",
+            "home_team": "Ferro Carril Oeste",
+            "away_team": "San Miguel",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843648"
+          },
+          {
+            "game_id": "401846924",
+            "date": "Tue, 17 Feb",
+            "home_team": "Aldosivi",
+            "away_team": "San Miguel",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401846924"
+          }
+        ],
+        "classement": {
+          "All Boys": {
+            "position": 15,
+            "points": 10
+          },
+          "San Miguel": {
+            "position": 10,
+            "points": 14
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Colón (Santa Fe)",
+            "points": 20
+          },
+          {
+            "position": 3,
+            "team": "Los Andes",
+            "points": 18
+          },
+          {
+            "position": 4,
+            "team": "Ciudad de Bolívar",
+            "points": 16
+          },
+          {
+            "position": 5,
+            "team": "Deportivo Madryn",
+            "points": 16
+          },
+          {
+            "position": 6,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 15
+          },
+          {
+            "position": 7,
+            "team": "Defensores de Belgrano",
+            "points": 15
+          },
+          {
+            "position": 8,
+            "team": "Racing (Córdoba)",
+            "points": 14
+          },
+          {
+            "position": 9,
+            "team": "Almirante Brown",
+            "points": 14
+          },
+          {
+            "position": 10,
+            "team": "San Miguel",
+            "points": 14
+          },
+          {
+            "position": 11,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 13
+          },
+          {
+            "position": 12,
+            "team": "Ferro Carril Oeste",
+            "points": 13
+          },
+          {
+            "position": 13,
+            "team": "San Telmo",
+            "points": 12
+          },
+          {
+            "position": 14,
+            "team": "Acassuso",
+            "points": 12
+          },
+          {
+            "position": 15,
+            "team": "All Boys",
+            "points": 10
+          },
+          {
+            "position": 16,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 10
+          },
+          {
+            "position": 17,
+            "team": "Central Norte",
+            "points": 9
+          },
+          {
+            "position": 18,
+            "team": "Chaco For Ever",
+            "points": 9
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 7
+          },
+          {
+            "position": 21,
+            "team": "Nueva Chicago",
+            "points": 22
+          },
+          {
+            "position": 22,
+            "team": "Atletico Rafaela",
+            "points": 20
+          },
+          {
+            "position": 23,
+            "team": "Atlanta",
+            "points": 17
+          },
+          {
+            "position": 24,
+            "team": "San Martín (Tucumán)",
+            "points": 16
+          },
+          {
+            "position": 25,
+            "team": "Temperley",
+            "points": 16
+          },
+          {
+            "position": 26,
+            "team": "Midland",
+            "points": 15
+          },
+          {
+            "position": 27,
+            "team": "San Martín (San Juan)",
+            "points": 15
+          },
+          {
+            "position": 28,
+            "team": "Quilmes",
+            "points": 13
+          },
+          {
+            "position": 29,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 13
+          },
+          {
+            "position": 30,
+            "team": "Deportivo Maipú",
+            "points": 12
+          },
+          {
+            "position": 31,
+            "team": "Chacarita Juniors",
+            "points": 12
+          },
+          {
+            "position": 32,
+            "team": "Agropecuario",
+            "points": 11
+          },
+          {
+            "position": 33,
+            "team": "Güemes",
+            "points": 11
+          },
+          {
+            "position": 34,
+            "team": "Patronato",
+            "points": 11
+          },
+          {
+            "position": 35,
+            "team": "Colegiales",
+            "points": 10
+          },
+          {
+            "position": 36,
+            "team": "Almagro",
+            "points": 10
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "694996",
+            "date": "Sunday, March 31, 2024",
+            "team1": "All Boys",
+            "score": "0 - 0",
+            "team2": "San Miguel",
+            "title": "All Boys VS San Miguel",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/694996/san-miguel-all-boys",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "695351",
+            "date": "Saturday, August 17, 2024",
+            "team1": "San Miguel",
+            "score": "2 - 1",
+            "team2": "All Boys",
+            "title": "San Miguel VS All Boys",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695351/all-boys-san-miguel",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728316",
+            "date": "Friday, March 14, 2025",
+            "team1": "All Boys",
+            "score": "2 - 1",
+            "team2": "San Miguel",
+            "title": "All Boys VS San Miguel",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728316/san-miguel-all-boys",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "728633",
+            "date": "Saturday, July 19, 2025",
+            "team1": "San Miguel",
+            "score": "1 - 0",
+            "team2": "All Boys",
+            "title": "San Miguel VS All Boys",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/728633/all-boys-san-miguel",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/464.png",
+        "logo_away": "https://media.api-sports.io/football/teams/8379.png",
+        "classement_home": 15,
+        "classement_away": 10,
+        "points_classement_home": 10,
+        "points_classement_away": 14,
+        "nom_classement_home": "All Boys",
+        "nom_classement_away": "San Miguel",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.195,
+            "lambda_away": 0.874,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 43.1,
+            "X": 29.6,
+            "V2": 27.3
+          },
+          "double_chance": {
+            "1X": 72.7,
+            "12": 70.4,
+            "X2": 56.9
+          },
+          "over_under": {
+            "plus_de_0.5": 87.14,
+            "moins_de_0.5": 12.86,
+            "plus_de_1.5": 60.98,
+            "moins_de_1.5": 39.02,
+            "plus_de_2.5": 34.47,
+            "moins_de_2.5": 65.53,
+            "plus_de_3.5": 15.48,
+            "moins_de_3.5": 84.52,
+            "plus_de_4.5": 5.8,
+            "moins_de_4.5": 94.2,
+            "plus_de_5.5": 1.98,
+            "moins_de_5.5": 98.02
+          },
+          "btts": {
+            "oui": 40.28,
+            "non": 59.72
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.1,
+            "1Xet+0.5": 59.84,
+            "V2et+0.5": 27.3,
+            "X2et+0.5": 44.04,
+            "12et+0.5": 70.4,
+            "V1et+1.5": 28.25,
+            "1Xet+1.5": 44.99,
+            "V2et+1.5": 15.99,
+            "X2et+1.5": 32.73,
+            "12et+1.5": 44.24,
+            "V1et+2.5": 19.24,
+            "1Xet+2.5": 23.1,
+            "V2et+2.5": 11.38,
+            "X2et+2.5": 15.22,
+            "12et+2.5": 30.62,
+            "V1et+3.5": 7.62,
+            "1Xet+3.5": 11.48,
+            "V2et+3.5": 4.0,
+            "X2et+3.5": 7.86,
+            "12et+3.5": 11.63,
+            "V1et+4.5": 3.44,
+            "1Xet+4.5": 3.88,
+            "V2et+4.5": 1.92,
+            "X2et+4.5": 2.37,
+            "12et+4.5": 5.36,
+            "V1et+5.5": 1.04,
+            "1Xet+5.5": 1.48,
+            "V2et+5.5": 0.5,
+            "X2et+5.5": 0.94,
+            "12et+5.5": 1.54
+          },
+          "scores_probables": {
+            "1-0": 14.84,
+            "1-1": 12.89,
+            "0-0": 12.86,
+            "0-1": 11.31,
+            "2-0": 9.01,
+            "2-1": 7.9,
+            "1-2": 5.91,
+            "0-2": 4.61,
+            "3-0": 3.72,
+            "2-2": 3.41
+          },
+          "buts_moyens_simules": {
+            "home": 1.19,
+            "away": 0.87,
+            "total": 2.06
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (San Miguel)  \n**CONFIANCE** : 58 %  \n**SCORES PROBABLES** : 0‑1 ou 0‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **All Boys** : très faible puissance offensive (0,40 but/match) et une défense relativement solide (0,70 but encaissé). En 5 derniers matchs à domicile, ils n’ont inscrit que **3 buts** et n’en ont laissé **qu’un** passer. Leur forme récente est médiocre (aucune victoire sur les 6 derniers matchs).  \n- **San Miguel** : meilleure attaque (0,70 but/match) mais défense très fragile à l’extérieur (1,30 but encaissé en moyenne, **7 buts** concédés en 5 dernières sorties). En déplacement, ils n’ont marqué que **1 but** et encaissé **7**. Leur forme est également irrégulière (2 défaites, 3 matches nuls, 1 victoire sur les 6 derniers).\n\n**2. Impact du facteur domicile/extérieur**  \nAll Boys bénéficie d’une bonne solidité défensive à domicile (seulement 1 but encaissé récemment). San Miguel, en revanche, montre une grande vulnérabilité lorsqu’il joue à l’extérieur, ce qui neutralise partiellement son avantage de classement.\n\n**3. Formes récentes et tendances**  \n- **All Boys** : séquence D‑D‑W‑D‑W à domicile, mais aucune victoire dans leurs 6 derniers matchs toutes compétitions.  \n- **San Miguel** : séquence D‑L‑D‑D‑L à l’extérieur, avec seulement une victoire (2‑1 contre Deportivo Morón) en leurs 5 dernières sorties.\n\n**4. Contexte du championnat**  \nSan Miguel occupe la 10ᵉ place (14 pts) contre All Boys 15ᵉ (10 pts). L’écart de points et la position supérieure de San Miguel suggèrent une motivation à récupérer des points, surtout contre une équipe qui lutte en bas du tableau.\n\n**5. Confrontations directes**  \nSur les 4 derniers affrontements (2 victoires San Miguel, 1 victoire All Boys, 1 match nul) les scores ont été très serrés (0‑0, 2‑1, 2‑1, 1‑0). Aucun des deux clubs n’a montré une capacité à marquer abondamment contre l’autre.\n\n**6. Tendances de buts**  \n- Moyenne combinée de buts attendus ≈ 0,40 + 0,70 = 1,10 but/match.  \n- Historique des 10 derniers matchs de chaque équipe montre **plus de 6 matches** avec **0 ou 1 but** total.  \n- Probabilité d’un total de **plus de 2,5 buts** est très faible (≈ 15 %).  \n\n**7. BTTS (Both Teams To Score)**  \nAll Boys a marqué seulement 3 buts à domicile sur leurs 5 derniers matchs, tandis que San Miguel n’a inscrit qu’1 but à l’extérieur. La probabilité que les deux équipes marquent est donc basse (≈ 20 %).  \n\n**8. Synthèse**  \n- Le facteur défense d’All Boys à domicile et la faiblesse offensive de San Miguel à l’extérieur tendent à limiter les buts.  \n- Le léger avantage de classement et la motivation de San Miguel compensent leur faiblesse défensive, rendant une victoire 1‑0 ou 2‑0 plausible.  \n\n**Conclusion** : Le scénario le plus probable est une victoire serrée de San Miguel, avec très peu de buts marqués.  \n\n---  \n\n**PRÉDICTION** : Victoire extérieur (San Miguel) – confiance 58 % – scores les plus probables 0‑1 ou 0‑2.",
+        "confiance_pourcentage": 58,
+        "prediction_principale": "Victoire extérieur (San Miguel)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 0‑2"
+      }
+    ]
+  }
+}
