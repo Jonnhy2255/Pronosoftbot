@@ -1,0 +1,4126 @@
+{
+  "metadata": {
+    "date_generation": "2026-05-04 04:40:16",
+    "date_matchs": "2026-05-04",
+    "version_algorithme": "8.3 - STATISTIQUES BRUTES + FORMES 6/10 + POINTS CLASSEMENT + COTES + ANALYSE IA DEEPSEEK ENRICHIE + MATCHS COMPLETS AVEC STATS DÉTAILLÉES + CLASSEMENT COMPLET + H2H ENRICHI AVEC STATS + CONFIANCE EXTRAITE + SCORES + RETRY IA + EXTRACTION AMÉLIORÉE 2 FORMATS + PROBABILITÉS MONTE-CARLO (NON INCLUSES DANS PROMPT IA)",
+    "total_predictions": 7,
+    "mode": "stats_brutes_avec_cotes_et_ia_complete_enrichie_retry_nouvelle_structure_avec_stats_detaillees_h2h_enrichi_confiance_extraite_scores_extraction_amelioree_2_formats_montecarlo_hors_prompt",
+    "note": "Collecte des statistiques brutes complètes : moyennes, formes récentes (6 et 10 matchs), séries domicile/extérieur, classements avec points + cotes des bookmakers + analyse IA DeepSeek ENRICHIE avec matchs détaillés (nouvelle structure objet avec game_id, date, home_team, away_team, score, status, competition + STATS DÉTAILLÉES ESPN) + classement complet + confrontations directes H2H élargies AVEC STATS DÉTAILLÉES + pourcentage confiance EXTRAIT AUTOMATIQUEMENT + 2 scores probables + retry automatique IA + suppression 'match nul' + EXTRACTION AMÉLIORÉE support des 2 formats (**FORMAT** et FORMAT simple) + PROBABILITÉS MONTE-CARLO autonomes (calculées mais NON incluses dans le prompt IA)",
+    "ia_model": "deepseek-r1-distill-llama-70b",
+    "groq_keys_count": 2,
+    "monte_carlo": {
+      "enabled": true,
+      "iterations": 20000,
+      "calibrage": "moyennes_internationales + statistiques_équipes + ajustement_h2h",
+      "probabilites_calculees": [
+        "1x2",
+        "double_chance",
+        "over_under",
+        "btts",
+        "resultat_total",
+        "scores_probables"
+      ],
+      "inclus_dans_prompt_ia": false
+    },
+    "nouveautes_v8_3_modifiees": [
+      "🎲 Module de probabilités Monte-Carlo intégré (20 000 simulations)",
+      "🔢 Calibrage avec moyennes internationales FIFA/UEFA",
+      "🆚 Ajustement automatique selon les confrontations H2H",
+      "📊 Probabilités 1X2, Double Chance, Over/Under (0.5→5.5), BTTS",
+      "🎯 Scores exacts les plus probables calculés statistiquement",
+      "❌ MODIFICIATION : Probabilités Monte-Carlo NON incluses dans le prompt IA",
+      "❌ MODIFICIATION : IA ne prédit plus corners et tirs cadrés (champs gardés dans structure)",
+      "📁 MODIFICATION : Nom de fichier simplifié prédiction-YYYY-MM-DD-analyse-ia.json",
+      "✅ Maintien de toutes les autres fonctionnalités avancées v8.2"
+    ]
+  },
+  "statistiques_brutes_avec_ia_hors_montecarlo": {
+    "count": 7,
+    "details": [
+      {
+        "id": 1,
+        "fixture_id": 1379313,
+        "HomeTeam": "Chelsea",
+        "AwayTeam": "Nottingham Forest",
+        "date": "4 mai 2026 à 14:00:00 UTC",
+        "league": "England - Premier League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Chelsea": 1.76,
+            "Nottingham Forest": 4.93,
+            "Draw": 4.12
+          },
+          "totals": {
+            "Over": 1.81,
+            "Under": 2.17
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 2.1,
+          "form_6": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 9,
+          "total_points": 6,
+          "serie_domicile": [
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 8,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 13,
+          "total_marques": 14,
+          "total_encaisses": 21
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 0.5,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 14,
+          "total_points_10": 21,
+          "total_points": 14,
+          "serie_exterieur": [
+            "W",
+            "D",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 11,
+          "buts_ext_encaisses": 2,
+          "total_marques": 18,
+          "total_encaisses": 5
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401867653",
+            "date": "Sun, Apr 26",
+            "home_team": "Chelsea",
+            "away_team": "Leeds United",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401867653"
+          },
+          {
+            "game_id": "740928",
+            "date": "Tue, Apr 21",
+            "home_team": "Brighton & Hove Albion",
+            "away_team": "Chelsea",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740928"
+          },
+          {
+            "game_id": "740922",
+            "date": "Sat, Apr 18",
+            "home_team": "Chelsea",
+            "away_team": "Manchester United",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740922"
+          },
+          {
+            "game_id": "740909",
+            "date": "Sun, Apr 12",
+            "home_team": "Chelsea",
+            "away_team": "Manchester City",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740909"
+          },
+          {
+            "game_id": "401864076",
+            "date": "Sat, Apr 4",
+            "home_team": "Chelsea",
+            "away_team": "Port Vale",
+            "score": "7 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401864076"
+          },
+          {
+            "game_id": "740899",
+            "date": "Sat, Mar 21",
+            "home_team": "Everton",
+            "away_team": "Chelsea",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740899"
+          },
+          {
+            "game_id": "401862648",
+            "date": "Tue, Mar 17",
+            "home_team": "Chelsea",
+            "away_team": "Paris Saint-Germain",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862648"
+          },
+          {
+            "game_id": "740889",
+            "date": "Sat, Mar 14",
+            "home_team": "Chelsea",
+            "away_team": "Newcastle United",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740889"
+          },
+          {
+            "game_id": "401862646",
+            "date": "Wed, Mar 11",
+            "home_team": "Paris Saint-Germain",
+            "away_team": "Chelsea",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862646"
+          },
+          {
+            "game_id": "401861589",
+            "date": "Sat, Mar 7",
+            "home_team": "Wrexham",
+            "away_team": "Chelsea",
+            "score": "2 - 4",
+            "status": "AET",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401861589"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401862908",
+            "date": "Thu, Apr 30",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862908"
+          },
+          {
+            "game_id": "740933",
+            "date": "Fri, Apr 24",
+            "home_team": "Sunderland",
+            "away_team": "Nottingham Forest",
+            "score": "0 - 5",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740933"
+          },
+          {
+            "game_id": "740917",
+            "date": "Sun, Apr 19",
+            "home_team": "Nottingham Forest",
+            "away_team": "Burnley",
+            "score": "4 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740917"
+          },
+          {
+            "game_id": "401862905",
+            "date": "Thu, Apr 16",
+            "home_team": "Nottingham Forest",
+            "away_team": "FC Porto",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862905"
+          },
+          {
+            "game_id": "740914",
+            "date": "Sun, Apr 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "Aston Villa",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740914"
+          },
+          {
+            "game_id": "401862901",
+            "date": "Thu, Apr 9",
+            "home_team": "FC Porto",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862901"
+          },
+          {
+            "game_id": "740904",
+            "date": "Sun, Mar 22",
+            "home_team": "Tottenham Hotspur",
+            "away_team": "Nottingham Forest",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740904"
+          },
+          {
+            "game_id": "401862875",
+            "date": "Thu, Mar 19",
+            "home_team": "FC Midtjylland",
+            "away_team": "Nottingham Forest",
+            "score": "1 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862875"
+          },
+          {
+            "game_id": "740893",
+            "date": "Sun, Mar 15",
+            "home_team": "Nottingham Forest",
+            "away_team": "Fulham",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740893"
+          },
+          {
+            "game_id": "401862770",
+            "date": "Thu, Mar 12",
+            "home_team": "Nottingham Forest",
+            "away_team": "FC Midtjylland",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862770"
+          }
+        ],
+        "classement": {
+          "Chelsea": {
+            "position": 9,
+            "points": 48
+          },
+          "Nottingham Forest": {
+            "position": 16,
+            "points": 39
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Arsenal",
+            "points": 76
+          },
+          {
+            "position": 2,
+            "team": "Manchester City",
+            "points": 70
+          },
+          {
+            "position": 3,
+            "team": "Manchester United",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Liverpool",
+            "points": 58
+          },
+          {
+            "position": 5,
+            "team": "Aston Villa",
+            "points": 58
+          },
+          {
+            "position": 6,
+            "team": "AFC Bournemouth",
+            "points": 52
+          },
+          {
+            "position": 7,
+            "team": "Brentford",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "Brighton & Hove Albion",
+            "points": 50
+          },
+          {
+            "position": 9,
+            "team": "Chelsea",
+            "points": 48
+          },
+          {
+            "position": 10,
+            "team": "Fulham",
+            "points": 48
+          },
+          {
+            "position": 11,
+            "team": "Everton",
+            "points": 47
+          },
+          {
+            "position": 12,
+            "team": "Sunderland",
+            "points": 47
+          },
+          {
+            "position": 13,
+            "team": "Newcastle United",
+            "points": 45
+          },
+          {
+            "position": 14,
+            "team": "Leeds United",
+            "points": 43
+          },
+          {
+            "position": 15,
+            "team": "Crystal Palace",
+            "points": 43
+          },
+          {
+            "position": 16,
+            "team": "Nottingham Forest",
+            "points": 39
+          },
+          {
+            "position": 17,
+            "team": "Tottenham Hotspur",
+            "points": 37
+          },
+          {
+            "position": 18,
+            "team": "West Ham United",
+            "points": 36
+          },
+          {
+            "position": 19,
+            "team": "Burnley",
+            "points": 20
+          },
+          {
+            "position": 20,
+            "team": "Wolverhampton Wanderers",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704342",
+            "date": "Sunday, October 6, 2024",
+            "team1": "Chelsea",
+            "score": "1 - 1",
+            "team2": "Nottingham Forest",
+            "title": "Chelsea VS Nottingham Forest",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704342/nottingham-forest-chelsea",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "704655",
+            "date": "Sunday, May 25, 2025",
+            "team1": "Nottingham Forest",
+            "score": "0 - 1",
+            "team2": "Chelsea",
+            "title": "Nottingham Forest VS Chelsea",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704655/chelsea-nottingham-forest",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "740672",
+            "date": "Saturday, October 18, 2025",
+            "team1": "Nottingham Forest",
+            "score": "0 - 3",
+            "team2": "Chelsea",
+            "title": "Nottingham Forest VS Chelsea",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/740672/chelsea-nottingham-forest",
+            "source": "Premier League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/49.png",
+        "logo_away": "https://media.api-sports.io/football/teams/65.png",
+        "classement_home": 9,
+        "classement_away": 16,
+        "points_classement_home": 48,
+        "points_classement_away": 39,
+        "nom_classement_home": "Chelsea",
+        "nom_classement_away": "Nottingham Forest",
+        "country_fr": "England - Premier League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.1,
+            "lambda_away": 1.58,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 27.33,
+            "X": 24.86,
+            "V2": 47.8
+          },
+          "double_chance": {
+            "1X": 52.2,
+            "12": 75.14,
+            "X2": 72.67
+          },
+          "over_under": {
+            "plus_de_0.5": 93.24,
+            "moins_de_0.5": 6.76,
+            "plus_de_1.5": 75.1,
+            "moins_de_1.5": 24.9,
+            "plus_de_2.5": 50.5,
+            "moins_de_2.5": 49.5,
+            "plus_de_3.5": 28.28,
+            "moins_de_3.5": 71.73,
+            "plus_de_4.5": 13.64,
+            "moins_de_4.5": 86.36,
+            "plus_de_5.5": 5.63,
+            "moins_de_5.5": 94.37
+          },
+          "btts": {
+            "oui": 53.27,
+            "non": 46.72
+          },
+          "resultat_total": {
+            "V1et+0.5": 27.33,
+            "1Xet+0.5": 45.43,
+            "V2et+0.5": 47.8,
+            "X2et+0.5": 65.9,
+            "12et+0.5": 75.14,
+            "V1et+1.5": 19.52,
+            "1Xet+1.5": 37.62,
+            "V2et+1.5": 37.48,
+            "X2et+1.5": 55.58,
+            "12et+1.5": 57.0,
+            "V1et+2.5": 15.31,
+            "1Xet+2.5": 21.56,
+            "V2et+2.5": 28.94,
+            "X2et+2.5": 35.2,
+            "12et+2.5": 44.26,
+            "V1et+3.5": 7.05,
+            "1Xet+3.5": 13.3,
+            "V2et+3.5": 14.98,
+            "X2et+3.5": 21.22,
+            "12et+3.5": 22.02,
+            "V1et+4.5": 4.22,
+            "1Xet+4.5": 5.21,
+            "V2et+4.5": 8.43,
+            "X2et+4.5": 9.43,
+            "12et+4.5": 12.65,
+            "V1et+5.5": 1.3,
+            "1Xet+5.5": 2.29,
+            "V2et+5.5": 3.34,
+            "X2et+5.5": 4.34,
+            "12et+5.5": 4.64
+          },
+          "scores_probables": {
+            "1-1": 11.85,
+            "0-1": 10.33,
+            "1-2": 9.52,
+            "0-2": 8.53,
+            "1-0": 7.82,
+            "0-0": 6.76,
+            "2-1": 6.63,
+            "2-2": 5.26,
+            "1-3": 4.82,
+            "0-3": 4.44
+          },
+          "buts_moyens_simules": {
+            "home": 1.12,
+            "away": 1.58,
+            "total": 2.7
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Double chance X2 (nul ou victoire de Nottingham Forest)  \n**CONFIANCE** : 66 %  \n**SCORES PROBABLES** : 1‑1 ou 0‑1  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Chelsea (domicile)** : moyenne de buts marqués à domicile très basse (1,40) et moyenne de buts encaissés élevée (2,10). Leur défense est la plus perméable de la ligue à domicile (8 buts encaissés en 6 matchs). L’attaque n’est pas très prolifique non plus (8 buts à domicile).  \n- **Nottingham Forest (extérieur)** : moyenne de buts marqués à l’extérieur excellente (1,80) et moyenne de buts encaissés à l’extérieur parmi les plus faibles du championnat (0,50). Leur défense est solide (seulement 2 buts encaissés en 4 derniers déplacements).  \n\n**2. Impact du facteur domicile/extérieur**  \n- Chelsea bénéficie du facteur domicile mais son historique à domicile est très irrégulier (série W‑L‑L‑W‑L‑L).  \n- Forest montre une série à l’extérieur très positive (W‑D‑W‑W) et a déjà battu Chelsea à Stamford Bridge la saison précédente (0‑1).  \n\n**3. Forme récente**  \n- **Chelsea** : 6 derniers matchs → 1 victoire, 5 défaites (6 pts). Les deux dernières rencontres à domicile se sont soldées par des défaites 0‑1 (Man U) et 0‑3 (Man City).  \n- **Forest** : 6 derniers matchs → 4 victoires, 2 matchs nuls (14 pts). Les victoires récentes incluent 5‑0 contre Sunderland et 4‑1 contre Burnley, montrant une capacité à marquer plusieurs buts tout en restant très compact défensivement.  \n\n**4. Contexte du championnat**  \n- Chelsea occupe la 9ᵉ place (48 pts) – à mi‑saison, ils peinent à se qualifier pour les places européennes.  \n- Forest est 16ᵉ (39 pts) mais en lutte pour s’éloigner de la zone de relégation ; chaque point compte, d’où une motivation accrue à l’extérieur.  \n\n**5. Confrontations directes récentes**  \n- Saison 2024‑25 : 1‑1 à Stamford Bridge.  \n- Saison 2025‑26 : 0‑1 à Selhurst Park (Forest victoire).  \n- Saison 2025‑26 (début) : 0‑3 à domicile (Forest victoire).  \nCes trois rencontres récentes montrent que Forest a eu le dessus ou au moins tenu le match à l’extérieur.  \n\n**6. Analyse des cotes**  \n- Les bookmakers donnent une cote de 1,76 à la victoire de Chelsea, mais ils sous‑estiment la forme exceptionnelle de Forest à l’extérieur et la faiblesse défensive de Chelsea.  \n- Le total > 2,5 a une cote de 1,81, ce qui indique que le marché s’attend à un match avec au moins 3 buts, mais les statistiques de Forest (seulement 2 buts encaissés à l’extérieur) rendent cela moins certain.  \n\n**7. Tendances BTTS / Over‑Under**  \n- **BTTS** : Chelsea marque en moyenne 1,4 à domicile, Forest concède 0,5 à l’extérieur → probabilité que Chelsea marque ≈ 45 %. Forest marque en moyenne 1,8 à l’extérieur, Chelsea concède 2,1 à domicile → probabilité que Forest marque ≈ 70 %. La combinaison donne une probabilité BTTS « oui » d’environ 45 %.  \n- **Over 2,5** : Si le score le plus probable est 1‑1 (total 2) ou 0‑1 (total 1), le total reste sous 2,5. Le seul scénario qui pousserait le total au‑delà (2‑1 ou 2‑0) reste moins fréquent.  \n\n**8. Synthèse**  \n- La défense de Chelsea est la plus vulnérable de la ligue à domicile, tandis que Forest possède la meilleure défense à l’extérieur.  \n- Forest arrive en très bonne forme (4 victoires consécutives) et a déjà prouvé qu’il pouvait gagner ou tenir le match à Stamford Bridge.  \n- La probabilité d’un nul ou d’une victoire forestière est donc supérieure à celle d’une victoire claire de Chelsea, même si les cotes du bookmaker favorisent ce dernier.  \n\n**Conclusion** : Le pari le plus sûr est la **double chance X2** (nul ou victoire de Nottingham Forest), avec une confiance de **66 %**. Les scores les plus probables, basés sur les moyennes de buts et les tendances récentes, sont **1‑1** (match très serré) ou **0‑1** en faveur de Forest.",
+        "confiance_pourcentage": 66,
+        "prediction_principale": "Double chance X2 (nul ou victoire de Nottingham Forest)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "1‑1 ou 0‑1"
+      },
+      {
+        "id": 2,
+        "fixture_id": 1378207,
+        "HomeTeam": "Cremonese",
+        "AwayTeam": "Lazio",
+        "date": "4 mai 2026 à 16:30:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Cremonese": 3.12,
+            "Lazio": 2.62,
+            "Draw": 3.19
+          },
+          "totals": {
+            "Over": 2.23,
+            "Under": 1.76
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 0.5,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "L",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 4,
+          "total_points_10": 5,
+          "total_points": 4,
+          "serie_domicile": [
+            "D",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 2,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 3,
+          "buts_ext_encaisses": 10,
+          "total_marques": 5,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 1.1,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "L",
+            "D",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 16,
+          "total_points": 9,
+          "serie_exterieur": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 7,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 4,
+          "total_marques": 14,
+          "total_encaisses": 11
+        },
+        "last_matches_home": [
+          {
+            "game_id": "737116",
+            "date": "Fri, Apr 24",
+            "home_team": "Napoli",
+            "away_team": "Cremonese",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737116"
+          },
+          {
+            "game_id": "737104",
+            "date": "Sun, Apr 19",
+            "home_team": "Cremonese",
+            "away_team": "Torino",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737104"
+          },
+          {
+            "game_id": "737100",
+            "date": "Sat, Apr 11",
+            "home_team": "Cagliari",
+            "away_team": "Cremonese",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737100"
+          },
+          {
+            "game_id": "737092",
+            "date": "Sun, Apr 5",
+            "home_team": "Cremonese",
+            "away_team": "Bologna",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737092"
+          },
+          {
+            "game_id": "737075",
+            "date": "Sat, Mar 21",
+            "home_team": "Parma",
+            "away_team": "Cremonese",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737075"
+          },
+          {
+            "game_id": "737065",
+            "date": "Mon, Mar 16",
+            "home_team": "Cremonese",
+            "away_team": "Fiorentina",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737065"
+          },
+          {
+            "game_id": "737055",
+            "date": "Sun, Mar 8",
+            "home_team": "Lecce",
+            "away_team": "Cremonese",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737055"
+          },
+          {
+            "game_id": "737051",
+            "date": "Sun, Mar 1",
+            "home_team": "Cremonese",
+            "away_team": "AC Milan",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737051"
+          },
+          {
+            "game_id": "737035",
+            "date": "Sun, Feb 22",
+            "home_team": "AS Roma",
+            "away_team": "Cremonese",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737035"
+          },
+          {
+            "game_id": "737033",
+            "date": "Sun, Feb 15",
+            "home_team": "Cremonese",
+            "away_team": "Genoa",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737033"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "737123",
+            "date": "Mon, Apr 27",
+            "home_team": "Lazio",
+            "away_team": "Udinese",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737123"
+          },
+          {
+            "game_id": "762436",
+            "date": "Wed, Apr 22",
+            "home_team": "Atalanta",
+            "away_team": "Lazio",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762436"
+          },
+          {
+            "game_id": "737110",
+            "date": "Sat, Apr 18",
+            "home_team": "Napoli",
+            "away_team": "Lazio",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737110"
+          },
+          {
+            "game_id": "737098",
+            "date": "Mon, Apr 13",
+            "home_team": "Fiorentina",
+            "away_team": "Lazio",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737098"
+          },
+          {
+            "game_id": "737093",
+            "date": "Sat, Apr 4",
+            "home_team": "Lazio",
+            "away_team": "Parma",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737093"
+          },
+          {
+            "game_id": "737082",
+            "date": "Sun, Mar 22",
+            "home_team": "Bologna",
+            "away_team": "Lazio",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737082"
+          },
+          {
+            "game_id": "737071",
+            "date": "Sun, Mar 15",
+            "home_team": "Lazio",
+            "away_team": "AC Milan",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737071"
+          },
+          {
+            "game_id": "737056",
+            "date": "Mon, Mar 9",
+            "home_team": "Lazio",
+            "away_team": "Sassuolo",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737056"
+          },
+          {
+            "game_id": "762434",
+            "date": "Wed, Mar 4",
+            "home_team": "Lazio",
+            "away_team": "Atalanta",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/762434"
+          },
+          {
+            "game_id": "737044",
+            "date": "Sun, Mar 1",
+            "home_team": "Torino",
+            "away_team": "Lazio",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737044"
+          }
+        ],
+        "classement": {
+          "Cremonese": {
+            "position": 18,
+            "points": 28
+          },
+          "Lazio": {
+            "position": 10,
+            "points": 48
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 82
+          },
+          {
+            "position": 2,
+            "team": "Napoli",
+            "points": 70
+          },
+          {
+            "position": 3,
+            "team": "AC Milan",
+            "points": 67
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 65
+          },
+          {
+            "position": 5,
+            "team": "Como",
+            "points": 62
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 61
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 55
+          },
+          {
+            "position": 8,
+            "team": "Bologna",
+            "points": 49
+          },
+          {
+            "position": 9,
+            "team": "Sassuolo",
+            "points": 49
+          },
+          {
+            "position": 10,
+            "team": "Lazio",
+            "points": 48
+          },
+          {
+            "position": 11,
+            "team": "Udinese",
+            "points": 47
+          },
+          {
+            "position": 12,
+            "team": "Parma",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Torino",
+            "points": 41
+          },
+          {
+            "position": 14,
+            "team": "Genoa",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Fiorentina",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Cagliari",
+            "points": 37
+          },
+          {
+            "position": 17,
+            "team": "Lecce",
+            "points": 32
+          },
+          {
+            "position": 18,
+            "team": "Cremonese",
+            "points": 28
+          },
+          {
+            "position": 19,
+            "team": "Hellas Verona",
+            "points": 20
+          },
+          {
+            "position": 20,
+            "team": "Pisa",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "736938",
+            "date": "Saturday, December 20, 2025",
+            "team1": "Lazio",
+            "score": "0 - 0",
+            "team2": "Cremonese",
+            "title": "Lazio VS Cremonese",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/736938/cremonese-lazio",
+            "source": "Serie A",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/520.png",
+        "logo_away": "https://media.api-sports.io/football/teams/487.png",
+        "classement_home": 18,
+        "classement_away": 10,
+        "points_classement_home": 28,
+        "points_classement_away": 48,
+        "nom_classement_home": "Cremonese",
+        "nom_classement_away": "Lazio",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 0.986,
+            "lambda_away": 1.181,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 30.24,
+            "X": 29.56,
+            "V2": 40.2
+          },
+          "double_chance": {
+            "1X": 59.8,
+            "12": 70.45,
+            "X2": 69.76
+          },
+          "over_under": {
+            "plus_de_0.5": 88.2,
+            "moins_de_0.5": 11.8,
+            "plus_de_1.5": 63.82,
+            "moins_de_1.5": 36.18,
+            "plus_de_2.5": 36.82,
+            "moins_de_2.5": 63.18,
+            "plus_de_3.5": 17.14,
+            "moins_de_3.5": 82.86,
+            "plus_de_4.5": 6.83,
+            "moins_de_4.5": 93.16,
+            "plus_de_5.5": 2.54,
+            "moins_de_5.5": 97.46
+          },
+          "btts": {
+            "oui": 43.5,
+            "non": 56.5
+          },
+          "resultat_total": {
+            "V1et+0.5": 30.24,
+            "1Xet+0.5": 48.0,
+            "V2et+0.5": 40.2,
+            "X2et+0.5": 57.96,
+            "12et+0.5": 70.45,
+            "V1et+1.5": 19.36,
+            "1Xet+1.5": 37.12,
+            "V2et+1.5": 26.7,
+            "X2et+1.5": 44.46,
+            "12et+1.5": 46.07,
+            "V1et+2.5": 13.8,
+            "1Xet+2.5": 18.08,
+            "V2et+2.5": 18.74,
+            "X2et+2.5": 23.02,
+            "12et+2.5": 32.54,
+            "V1et+3.5": 5.19,
+            "1Xet+3.5": 9.47,
+            "V2et+3.5": 7.67,
+            "X2et+3.5": 11.95,
+            "12et+3.5": 12.86,
+            "V1et+4.5": 2.54,
+            "1Xet+4.5": 3.08,
+            "V2et+4.5": 3.75,
+            "X2et+4.5": 4.3,
+            "12et+4.5": 6.29,
+            "V1et+5.5": 0.8,
+            "1Xet+5.5": 1.34,
+            "V2et+5.5": 1.2,
+            "X2et+5.5": 1.74,
+            "12et+5.5": 2.0
+          },
+          "scores_probables": {
+            "0-1": 13.5,
+            "1-1": 13.48,
+            "0-0": 11.8,
+            "1-0": 10.88,
+            "0-2": 7.96,
+            "1-2": 7.89,
+            "2-1": 6.68,
+            "2-0": 5.56,
+            "2-2": 3.74,
+            "0-3": 3.18
+          },
+          "buts_moyens_simules": {
+            "home": 0.98,
+            "away": 1.18,
+            "total": 2.16
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Lazio)  \n**CONFIANCE** : 68 %  \n**SCORES PROBABLES** : 0‑1 ou 0‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Cremonese** : 18ᵉ avec 28 pts, moyenne de **0,50 buts marqués** et **1,80 buts encaissés**. En 10 matchs à domicile, ils n’ont inscrit que **2 buts** et en ont concédé **8**. Leur attaque est quasi inexistante à domicile, leur défense laisse passer presque 2 buts par match.  \n- **Lazio** : 10ᵉ avec 48 pts, moyenne de **1,40 buts marqués** et **1,10 buts encaissés**. En 10 déplacements, ils ont marqué **5 buts** et n’en ont encaissé que **4**. Leur équilibre offensif/défensif est nettement supérieur.\n\n**2. Impact du facteur domicile/extérieur**  \n- Le facteur domicile ne profite pas à Cremonese (série domicile D‑L‑L‑L‑D, seulement 2 buts marqués).  \n- Lazio montre une bonne constance à l’extérieur (série D‑W‑L‑W‑L) et a déjà battu des équipes du top‑10 en déplacement (ex. 2‑0 à Napoli, 2‑0 à Torino).\n\n**3. Forme récente**  \n- **Cremonese** (6 derniers) : L D L L W L → 4 pts, aucune victoire à domicile depuis plus de 6 matchs, seulement un nul 0‑0.  \n- **Lazio** (6 derniers) : D D W L D W → 9 pts, 4 victoires dont 3 en déplacement, 2 matchs avec plus d’un but marqué.\n\n**4. Tendances de buts**  \n- Sur les 10 derniers matchs à domicile de Cremonese, **2 buts marqués** et **8 encaissés** → moyenne de **0,2 buts marqués** à domicile.  \n- Sur les 10 derniers déplacements de Lazio, **5 buts marqués** et **4 encaissés** → moyenne de **0,5 buts marqués** à l’extérieur, mais avec une défense solide (0,4 buts encaissés par match).  \n\n**5. Contexte du championnat**  \n- Cremonese lutte contre la relégation (3 places au-dessus de la zone de chute). Leur priorité est de ne pas perdre, mais ils manquent d’armes offensives.  \n- Lazio, à mi‑tableau, vise les places européennes. Ils ont les effectifs et la motivation pour obtenir les trois points contre une équipe du bas du tableau.\n\n**6. Confrontations directes**  \n- Dernier face‑à‑face (2025) : 0‑0, un match très fermé mais sans but. Cela confirme la difficulté de Cremonese à marquer contre Lazio.\n\n**7. Analyse des cotes**  \n- Bookmaker 1xBet : Lazio 2.62 (favori), Cremonese 3.12, Draw 3.19.  \n- Total 2.5 buts : Over 2.23, Under 1.76 → le marché penche clairement vers **moins de 2,5 buts**, cohérent avec les faibles capacités offensives de Cremonese et la solidité défensive de Lazio.\n\n**8. Synthèse**  \n- Probabilité élevée que Lazio marque (plus de 70 % d’occurrence dans leurs 10 derniers déplacements).  \n- Probabilité très faible que Cremonese trouve le filet à domicile (0‑0 ou 0‑1 dans leurs 5 derniers matchs à domicile).  \n- Le total de buts attendu est donc inférieur à 2,5, avec une forte probabilité que le match se termine **0‑1** ou **0‑2** en faveur de Lazio.\n\n**Conclusion** : La combinaison de la faiblesse offensive de Cremonese, la solidité défensive et la forme offensive de Lazio à l’extérieur, ainsi que les tendances de marché, conduit à privilégier une victoire de Lazio avec un score très serré.",
+        "confiance_pourcentage": 68,
+        "prediction_principale": "Victoire extérieur (Lazio)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "0‑1 ou 0‑2"
+      },
+      {
+        "id": 3,
+        "fixture_id": 1378211,
+        "HomeTeam": "AS Roma",
+        "AwayTeam": "Fiorentina",
+        "date": "4 mai 2026 à 18:45:00 UTC",
+        "league": "Italy - Serie A",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "AS Roma": 1.62,
+            "Fiorentina": 6.04,
+            "Draw": 4.26
+          },
+          "totals": {
+            "Over": 1.92,
+            "Under": 2.02
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.8,
+          "form_6": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "D",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L"
+          ],
+          "total_points_6": 10,
+          "total_points_10": 12,
+          "total_points": 10,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 11,
+          "buts_dom_encaisses": 8,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 10,
+          "total_marques": 18,
+          "total_encaisses": 18
+        },
+        "stats_away": {
+          "moyenne_marques": 1.4,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "D",
+            "W",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 11,
+          "total_points_10": 21,
+          "total_points": 11,
+          "serie_exterieur": [
+            "D",
+            "L",
+            "W",
+            "W",
+            "W"
+          ],
+          "buts_dom_marques": 6,
+          "buts_dom_encaisses": 3,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 6,
+          "total_marques": 14,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "737114",
+            "date": "Sat, Apr 25",
+            "home_team": "Bologna",
+            "away_team": "AS Roma",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737114"
+          },
+          {
+            "game_id": "737108",
+            "date": "Sat, Apr 18",
+            "home_team": "AS Roma",
+            "away_team": "Atalanta",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737108"
+          },
+          {
+            "game_id": "737094",
+            "date": "Fri, Apr 10",
+            "home_team": "AS Roma",
+            "away_team": "Pisa",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737094"
+          },
+          {
+            "game_id": "737090",
+            "date": "Sun, Apr 5",
+            "home_team": "Internazionale",
+            "away_team": "AS Roma",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737090"
+          },
+          {
+            "game_id": "737078",
+            "date": "Sun, Mar 22",
+            "home_team": "AS Roma",
+            "away_team": "Lecce",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737078"
+          },
+          {
+            "game_id": "401862874",
+            "date": "Thu, Mar 19",
+            "home_team": "AS Roma",
+            "away_team": "Bologna",
+            "score": "3 - 4",
+            "status": "AET",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862874"
+          },
+          {
+            "game_id": "737064",
+            "date": "Sun, Mar 15",
+            "home_team": "Como",
+            "away_team": "AS Roma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737064"
+          },
+          {
+            "game_id": "401862871",
+            "date": "Thu, Mar 12",
+            "home_team": "Bologna",
+            "away_team": "AS Roma",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862871"
+          },
+          {
+            "game_id": "737058",
+            "date": "Sun, Mar 8",
+            "home_team": "Genoa",
+            "away_team": "AS Roma",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737058"
+          },
+          {
+            "game_id": "737046",
+            "date": "Sun, Mar 1",
+            "home_team": "AS Roma",
+            "away_team": "Juventus",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737046"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "737121",
+            "date": "Sun, Apr 26",
+            "home_team": "Fiorentina",
+            "away_team": "Sassuolo",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737121"
+          },
+          {
+            "game_id": "737111",
+            "date": "Mon, Apr 20",
+            "home_team": "Lecce",
+            "away_team": "Fiorentina",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737111"
+          },
+          {
+            "game_id": "401862921",
+            "date": "Thu, Apr 16",
+            "home_team": "Fiorentina",
+            "away_team": "Crystal Palace",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862921"
+          },
+          {
+            "game_id": "737098",
+            "date": "Mon, Apr 13",
+            "home_team": "Fiorentina",
+            "away_team": "Lazio",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737098"
+          },
+          {
+            "game_id": "401862917",
+            "date": "Thu, Apr 9",
+            "home_team": "Crystal Palace",
+            "away_team": "Fiorentina",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862917"
+          },
+          {
+            "game_id": "737091",
+            "date": "Sat, Apr 4",
+            "home_team": "Hellas Verona",
+            "away_team": "Fiorentina",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737091"
+          },
+          {
+            "game_id": "737079",
+            "date": "Sun, Mar 22",
+            "home_team": "Fiorentina",
+            "away_team": "Internazionale",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737079"
+          },
+          {
+            "game_id": "401862849",
+            "date": "Thu, Mar 19",
+            "home_team": "Raków Czestochowa",
+            "away_team": "Fiorentina",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862849"
+          },
+          {
+            "game_id": "737065",
+            "date": "Mon, Mar 16",
+            "home_team": "Cremonese",
+            "away_team": "Fiorentina",
+            "score": "1 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/737065"
+          },
+          {
+            "game_id": "401862846",
+            "date": "Thu, Mar 12",
+            "home_team": "Fiorentina",
+            "away_team": "Raków Czestochowa",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862846"
+          }
+        ],
+        "classement": {
+          "AS Roma": {
+            "position": 6,
+            "points": 61
+          },
+          "Fiorentina": {
+            "position": 15,
+            "points": 37
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Internazionale",
+            "points": 82
+          },
+          {
+            "position": 2,
+            "team": "Napoli",
+            "points": 70
+          },
+          {
+            "position": 3,
+            "team": "AC Milan",
+            "points": 67
+          },
+          {
+            "position": 4,
+            "team": "Juventus",
+            "points": 65
+          },
+          {
+            "position": 5,
+            "team": "Como",
+            "points": 62
+          },
+          {
+            "position": 6,
+            "team": "AS Roma",
+            "points": 61
+          },
+          {
+            "position": 7,
+            "team": "Atalanta",
+            "points": 55
+          },
+          {
+            "position": 8,
+            "team": "Bologna",
+            "points": 49
+          },
+          {
+            "position": 9,
+            "team": "Sassuolo",
+            "points": 49
+          },
+          {
+            "position": 10,
+            "team": "Lazio",
+            "points": 48
+          },
+          {
+            "position": 11,
+            "team": "Udinese",
+            "points": 47
+          },
+          {
+            "position": 12,
+            "team": "Parma",
+            "points": 42
+          },
+          {
+            "position": 13,
+            "team": "Torino",
+            "points": 41
+          },
+          {
+            "position": 14,
+            "team": "Genoa",
+            "points": 40
+          },
+          {
+            "position": 15,
+            "team": "Fiorentina",
+            "points": 37
+          },
+          {
+            "position": 16,
+            "team": "Cagliari",
+            "points": 37
+          },
+          {
+            "position": 17,
+            "team": "Lecce",
+            "points": 32
+          },
+          {
+            "position": 18,
+            "team": "Cremonese",
+            "points": 28
+          },
+          {
+            "position": 19,
+            "team": "Hellas Verona",
+            "points": 20
+          },
+          {
+            "position": 20,
+            "team": "Pisa",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "712198",
+            "date": "Sunday, October 27, 2024",
+            "team1": "Fiorentina",
+            "score": "5 - 1",
+            "team2": "AS Roma",
+            "title": "Fiorentina VS AS Roma",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712198/as-roma-fiorentina",
+            "source": "Serie A",
+            "stats": {}
+          },
+          {
+            "gameId": "712459",
+            "date": "Sunday, May 4, 2025",
+            "team1": "AS Roma",
+            "score": "1 - 0",
+            "team2": "Fiorentina",
+            "title": "AS Roma VS Fiorentina",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/712459/fiorentina-as-roma",
+            "source": "Serie A",
+            "stats": {}
+          },
+          {
+            "gameId": "736836",
+            "date": "Sunday, October 5, 2025",
+            "team1": "Fiorentina",
+            "score": "1 - 2",
+            "team2": "AS Roma",
+            "title": "Fiorentina VS AS Roma",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/736836/as-roma-fiorentina",
+            "source": "Serie A",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/497.png",
+        "logo_away": "https://media.api-sports.io/football/teams/502.png",
+        "classement_home": 6,
+        "classement_away": 15,
+        "points_classement_home": 61,
+        "points_classement_away": 37,
+        "nom_classement_home": "AS Roma",
+        "nom_classement_away": "Fiorentina",
+        "country_fr": "Italy - Serie A",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.57,
+            "lambda_away": 1.331,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 43.09,
+            "X": 24.34,
+            "V2": 32.57
+          },
+          "double_chance": {
+            "1X": 67.42,
+            "12": 75.67,
+            "X2": 56.91
+          },
+          "over_under": {
+            "plus_de_0.5": 94.44,
+            "moins_de_0.5": 5.56,
+            "plus_de_1.5": 78.39,
+            "moins_de_1.5": 21.61,
+            "plus_de_2.5": 55.81,
+            "moins_de_2.5": 44.2,
+            "plus_de_3.5": 33.18,
+            "moins_de_3.5": 66.82,
+            "plus_de_4.5": 16.94,
+            "moins_de_4.5": 83.06,
+            "plus_de_5.5": 7.58,
+            "moins_de_5.5": 92.42
+          },
+          "btts": {
+            "oui": 58.4,
+            "non": 41.6
+          },
+          "resultat_total": {
+            "V1et+0.5": 43.09,
+            "1Xet+0.5": 61.86,
+            "V2et+0.5": 32.57,
+            "X2et+0.5": 51.35,
+            "12et+0.5": 75.67,
+            "V1et+1.5": 34.23,
+            "1Xet+1.5": 53.0,
+            "V2et+1.5": 25.38,
+            "X2et+1.5": 44.16,
+            "12et+1.5": 59.61,
+            "V1et+2.5": 27.66,
+            "1Xet+2.5": 35.11,
+            "V2et+2.5": 20.7,
+            "X2et+2.5": 28.14,
+            "12et+2.5": 48.36,
+            "V1et+3.5": 14.96,
+            "1Xet+3.5": 22.41,
+            "V2et+3.5": 10.78,
+            "X2et+3.5": 18.22,
+            "12et+3.5": 25.74,
+            "V1et+4.5": 8.83,
+            "1Xet+4.5": 10.53,
+            "V2et+4.5": 6.42,
+            "X2et+4.5": 8.11,
+            "12et+4.5": 15.25,
+            "V1et+5.5": 3.43,
+            "1Xet+5.5": 5.12,
+            "V2et+5.5": 2.45,
+            "X2et+5.5": 4.15,
+            "12et+5.5": 5.88
+          },
+          "scores_probables": {
+            "1-1": 11.33,
+            "2-1": 9.14,
+            "1-0": 8.86,
+            "1-2": 7.7,
+            "0-1": 7.19,
+            "2-0": 6.56,
+            "2-2": 5.75,
+            "0-0": 5.56,
+            "3-1": 4.81,
+            "0-2": 4.69
+          },
+          "buts_moyens_simules": {
+            "home": 1.57,
+            "away": 1.34,
+            "total": 2.91
+          }
+        },
+        "analyse_ia": "❌ Échec définitif après 5 tentatives. Dernière erreur : 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+        "confiance_pourcentage": null,
+        "prediction_principale": null,
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": null
+      },
+      {
+        "id": 4,
+        "fixture_id": 1379314,
+        "HomeTeam": "Everton",
+        "AwayTeam": "Manchester City",
+        "date": "4 mai 2026 à 19:00:00 UTC",
+        "league": "England - Premier League",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Everton": 6.4,
+            "Manchester City": 1.53,
+            "Draw": 4.83
+          },
+          "totals": {
+            "Over": 1.67,
+            "Under": 2.41
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.5,
+          "moyenne_encaisses": 1.4,
+          "form_6": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "D",
+            "W",
+            "L",
+            "W"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 13,
+          "total_points": 7,
+          "serie_domicile": [
+            "L",
+            "W",
+            "W",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 8,
+          "buts_ext_encaisses": 9,
+          "total_marques": 15,
+          "total_encaisses": 14
+        },
+        "stats_away": {
+          "moyenne_marques": 1.9,
+          "moyenne_encaisses": 0.9,
+          "form_6": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "L",
+            "D",
+            "L",
+            "W"
+          ],
+          "recent_form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
+          ],
+          "total_points_6": 18,
+          "total_points_10": 22,
+          "total_points": 18,
+          "serie_exterieur": [
+            "W",
+            "W",
+            "W",
+            "D",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 10,
+          "buts_ext_encaisses": 5,
+          "total_marques": 19,
+          "total_encaisses": 9
+        },
+        "last_matches_home": [
+          {
+            "game_id": "740930",
+            "date": "Sat, Apr 25",
+            "home_team": "West Ham United",
+            "away_team": "Everton",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740930"
+          },
+          {
+            "game_id": "740925",
+            "date": "Sun, Apr 19",
+            "home_team": "Everton",
+            "away_team": "Liverpool",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740925"
+          },
+          {
+            "game_id": "740906",
+            "date": "Sat, Apr 11",
+            "home_team": "Brentford",
+            "away_team": "Everton",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740906"
+          },
+          {
+            "game_id": "740899",
+            "date": "Sat, Mar 21",
+            "home_team": "Everton",
+            "away_team": "Chelsea",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740899"
+          },
+          {
+            "game_id": "740886",
+            "date": "Sat, Mar 14",
+            "home_team": "Arsenal",
+            "away_team": "Everton",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740886"
+          },
+          {
+            "game_id": "740879",
+            "date": "Tue, Mar 3",
+            "home_team": "Everton",
+            "away_team": "Burnley",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740879"
+          },
+          {
+            "game_id": "740874",
+            "date": "Sat, Feb 28",
+            "home_team": "Newcastle United",
+            "away_team": "Everton",
+            "score": "2 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740874"
+          },
+          {
+            "game_id": "740856",
+            "date": "Mon, Feb 23",
+            "home_team": "Everton",
+            "away_team": "Manchester United",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740856"
+          },
+          {
+            "game_id": "740852",
+            "date": "Tue, Feb 10",
+            "home_team": "Everton",
+            "away_team": "AFC Bournemouth",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740852"
+          },
+          {
+            "game_id": "740842",
+            "date": "Sat, Feb 7",
+            "home_team": "Fulham",
+            "away_team": "Everton",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740842"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401867654",
+            "date": "Sat, Apr 25",
+            "home_team": "Manchester City",
+            "away_team": "Southampton",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401867654"
+          },
+          {
+            "game_id": "740929",
+            "date": "Wed, Apr 22",
+            "home_team": "Burnley",
+            "away_team": "Manchester City",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740929"
+          },
+          {
+            "game_id": "740916",
+            "date": "Sun, Apr 19",
+            "home_team": "Manchester City",
+            "away_team": "Arsenal",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740916"
+          },
+          {
+            "game_id": "740909",
+            "date": "Sun, Apr 12",
+            "home_team": "Chelsea",
+            "away_team": "Manchester City",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740909"
+          },
+          {
+            "game_id": "401864077",
+            "date": "Sat, Apr 4",
+            "home_team": "Manchester City",
+            "away_team": "Liverpool",
+            "score": "4 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401864077"
+          },
+          {
+            "game_id": "401859837",
+            "date": "Sun, Mar 22",
+            "home_team": "Arsenal",
+            "away_team": "Manchester City",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401859837"
+          },
+          {
+            "game_id": "401862647",
+            "date": "Tue, Mar 17",
+            "home_team": "Manchester City",
+            "away_team": "Real Madrid",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862647"
+          },
+          {
+            "game_id": "740895",
+            "date": "Sat, Mar 14",
+            "home_team": "West Ham United",
+            "away_team": "Manchester City",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/740895"
+          },
+          {
+            "game_id": "401862645",
+            "date": "Wed, Mar 11",
+            "home_team": "Real Madrid",
+            "away_team": "Manchester City",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862645"
+          },
+          {
+            "game_id": "401861586",
+            "date": "Sat, Mar 7",
+            "home_team": "Newcastle United",
+            "away_team": "Manchester City",
+            "score": "1 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401861586"
+          }
+        ],
+        "classement": {
+          "Everton": {
+            "position": 11,
+            "points": 47
+          },
+          "Manchester City": {
+            "position": 2,
+            "points": 70
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Arsenal",
+            "points": 76
+          },
+          {
+            "position": 2,
+            "team": "Manchester City",
+            "points": 70
+          },
+          {
+            "position": 3,
+            "team": "Manchester United",
+            "points": 64
+          },
+          {
+            "position": 4,
+            "team": "Liverpool",
+            "points": 58
+          },
+          {
+            "position": 5,
+            "team": "Aston Villa",
+            "points": 58
+          },
+          {
+            "position": 6,
+            "team": "AFC Bournemouth",
+            "points": 52
+          },
+          {
+            "position": 7,
+            "team": "Brentford",
+            "points": 51
+          },
+          {
+            "position": 8,
+            "team": "Brighton & Hove Albion",
+            "points": 50
+          },
+          {
+            "position": 9,
+            "team": "Chelsea",
+            "points": 48
+          },
+          {
+            "position": 10,
+            "team": "Fulham",
+            "points": 48
+          },
+          {
+            "position": 11,
+            "team": "Everton",
+            "points": 47
+          },
+          {
+            "position": 12,
+            "team": "Sunderland",
+            "points": 47
+          },
+          {
+            "position": 13,
+            "team": "Newcastle United",
+            "points": 45
+          },
+          {
+            "position": 14,
+            "team": "Leeds United",
+            "points": 43
+          },
+          {
+            "position": 15,
+            "team": "Crystal Palace",
+            "points": 43
+          },
+          {
+            "position": 16,
+            "team": "Nottingham Forest",
+            "points": 39
+          },
+          {
+            "position": 17,
+            "team": "Tottenham Hotspur",
+            "points": 37
+          },
+          {
+            "position": 18,
+            "team": "West Ham United",
+            "points": 36
+          },
+          {
+            "position": 19,
+            "team": "Burnley",
+            "points": 20
+          },
+          {
+            "position": 20,
+            "team": "Wolverhampton Wanderers",
+            "points": 18
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704451",
+            "date": "Thursday, December 26, 2024",
+            "team1": "Manchester City",
+            "score": "1 - 1",
+            "team2": "Everton",
+            "title": "Manchester City VS Everton",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704451/everton-manchester-city",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "704604",
+            "date": "Saturday, April 19, 2025",
+            "team1": "Everton",
+            "score": "0 - 2",
+            "team2": "Manchester City",
+            "title": "Everton VS Manchester City",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704604/manchester-city-everton",
+            "source": "Premier League",
+            "stats": {}
+          },
+          {
+            "gameId": "740671",
+            "date": "Saturday, October 18, 2025",
+            "team1": "Manchester City",
+            "score": "2 - 0",
+            "team2": "Everton",
+            "title": "Manchester City VS Everton",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/740671/everton-manchester-city",
+            "source": "Premier League",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/45.png",
+        "logo_away": "https://media.api-sports.io/football/teams/50.png",
+        "classement_home": 11,
+        "classement_away": 2,
+        "points_classement_home": 47,
+        "points_classement_away": 70,
+        "nom_classement_home": "Everton",
+        "nom_classement_away": "Manchester City",
+        "country_fr": "England - Premier League",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.306,
+            "lambda_away": 1.353,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 36.07,
+            "X": 26.2,
+            "V2": 37.73
+          },
+          "double_chance": {
+            "1X": 62.27,
+            "12": 73.8,
+            "X2": 63.93
+          },
+          "over_under": {
+            "plus_de_0.5": 92.96,
+            "moins_de_0.5": 7.04,
+            "plus_de_1.5": 74.24,
+            "moins_de_1.5": 25.76,
+            "plus_de_2.5": 49.39,
+            "moins_de_2.5": 50.61,
+            "plus_de_3.5": 27.16,
+            "moins_de_3.5": 72.84,
+            "plus_de_4.5": 13.06,
+            "moins_de_4.5": 86.94,
+            "plus_de_5.5": 5.47,
+            "moins_de_5.5": 94.53
+          },
+          "btts": {
+            "oui": 54.12,
+            "non": 45.88
+          },
+          "resultat_total": {
+            "V1et+0.5": 36.07,
+            "1Xet+0.5": 55.22,
+            "V2et+0.5": 37.73,
+            "X2et+0.5": 56.89,
+            "12et+0.5": 73.8,
+            "V1et+1.5": 26.78,
+            "1Xet+1.5": 45.93,
+            "V2et+1.5": 28.31,
+            "X2et+1.5": 47.47,
+            "12et+1.5": 55.08,
+            "V1et+2.5": 20.9,
+            "1Xet+2.5": 27.5,
+            "V2et+2.5": 21.9,
+            "X2et+2.5": 28.49,
+            "12et+2.5": 42.79,
+            "V1et+3.5": 9.9,
+            "1Xet+3.5": 16.5,
+            "V2et+3.5": 10.66,
+            "X2et+3.5": 17.26,
+            "12et+3.5": 20.56,
+            "V1et+4.5": 5.8,
+            "1Xet+4.5": 7.02,
+            "V2et+4.5": 6.03,
+            "X2et+4.5": 7.25,
+            "12et+4.5": 11.84,
+            "V1et+5.5": 2.05,
+            "1Xet+5.5": 3.28,
+            "V2et+5.5": 2.2,
+            "X2et+5.5": 3.42,
+            "12et+5.5": 4.25
+          },
+          "scores_probables": {
+            "1-1": 12.56,
+            "0-1": 9.42,
+            "1-0": 9.29,
+            "1-2": 8.46,
+            "2-1": 8.24,
+            "0-0": 7.04,
+            "0-2": 6.42,
+            "2-0": 5.88,
+            "2-2": 5.38,
+            "1-3": 3.68
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.35,
+            "total": 2.65
+          }
+        },
+        "analyse_ia": "**PRÉDICTION PRINCIPALE** : Victoire extérieur (Manchester City)  \n\n**CONFIANCE** : 78 %  \n\n**SCORES PROBABLES** : 2‑0 ou 3‑1  \n\n**JUSTIFICATION**  \n\n**1. Analyse comparative des forces/faiblesses**  \n- **Manchester City** : 2ᵉ du classement avec 70 pts, moyenne de 1,90 but marqué et seulement 0,90 but encaissé par match. Leur défense est l’une des plus solides du championnat (5 buts encaissés à l’extérieur sur 10 matchs). L’attaque est très efficace, surtout à l’extérieur (10 buts marqués).  \n- **Everton** : 11ᵉ avec 47 pts, moyenne de 1,50 but marqué et 1,40 encaissé. À domicile, ils n’ont inscrit que 7 buts et concédé 5 en 10 matchs, soit une production offensive très limitée et une défense qui laisse passer plus d’un but par match.\n\n**2. Impact du facteur domicile/extérieur**  \n- Everton montre une forme très irrégulière à domicile (série L‑W‑W‑L‑L) et n’a remporté que 2 victoires sur leurs 5 derniers matchs à Goodison Park.  \n- City, au contraire, est en pleine forme à l’extérieur (série W‑W‑W‑D‑L‑W) et a gagné 5 de leurs 6 derniers déplacements, dont une victoire 2‑1 contre Southampton il y a deux semaines.\n\n**3. Forme récente**  \n- **Everton** : 6 derniers matchs → L L D W L W (7 pts). Leur dernier succès (2‑0 contre Burnley) reste isolé ; ils ont concédé dans 4 de leurs 6 derniers matchs.  \n- **Manchester City** : 6 derniers matchs → W W W W W W (18 pts). Aucun but encaissé depuis le 22 avril (0‑1 contre Burnley) et ils marquent au moins 2 buts dans 5 de leurs 6 derniers matchs.\n\n**4. Contexte du championnat**  \n- City lutte pour le titre (2 pts derrière Arsenal) et ne peut se permettre de perdre contre une équipe du bas du tableau.  \n- Everton, à 11ᵉ, se bat pour sécuriser une place en milieu de tableau et n’a pas de motivation supplémentaire pour stopper City.\n\n**5. Confrontations directes**  \n- Les trois derniers affrontements (2024‑2025) se sont soldés par 1‑1, 0‑2 et 2‑0 en faveur de City. Aucun match n’a vu Everton marquer plus d’un but contre City à l’extérieur.  \n\n**6. Analyse des cotes**  \n- Le marché 1X2 propose 1,53 pour City, 6,4 pour Everton – un écart qui reflète la supériorité nette de City.  \n- Le total > 2,5 à 1,67 indique que les bookmakers anticipent au moins trois buts dans le match, ce qui concorde avec la capacité offensive de City et la tendance d’Everton à concéder.\n\n**7. Synthèse**  \n- **Offensive** : City > 2 buts attendus, Everton < 1,5.  \n- **Défensive** : City < 1 but encaissé, Everton > 1 but encaissé.  \n- **Tendance** : Victoire de City avec deux ou trois buts marqués, Everton peu susceptible de marquer plus d’un but.\n\n**Conclusion** : La combinaison de la forme exceptionnelle de Manchester City, de leur solidité défensive, de la faiblesse offensive d’Everton à domicile et des historiques de confrontations directes conduit à prédire une victoire de l’équipe visiteuse. Les scores les plus probables sont **2‑0** (résultat le plus fréquent dans les récents duels) ou **3‑1** (City marque souvent 2‑3 buts, Everton parvient parfois à trouver le filet).",
+        "confiance_pourcentage": 78,
+        "prediction_principale": "Victoire extérieur (Manchester City)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑0 ou 3‑1"
+      },
+      {
+        "id": 5,
+        "fixture_id": 1391156,
+        "HomeTeam": "Sevilla",
+        "AwayTeam": "Real Sociedad",
+        "date": "4 mai 2026 à 19:00:00 UTC",
+        "league": "Spain - La Liga",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": {
+          "bookmaker": "1xBet",
+          "h2h": {
+            "Real Sociedad": 3.07,
+            "Sevilla": 2.52,
+            "Draw": 3.42
+          },
+          "totals": {
+            "Over": 2.03,
+            "Under": 1.91
+          }
+        },
+        "stats_home": {
+          "moyenne_marques": 1.0,
+          "moyenne_encaisses": 1.7,
+          "form_6": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D",
+            "D",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L"
+          ],
+          "total_points_6": 3,
+          "total_points_10": 9,
+          "total_points": 3,
+          "serie_domicile": [
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 12,
+          "total_marques": 10,
+          "total_encaisses": 17
+        },
+        "stats_away": {
+          "moyenne_marques": 1.8,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "W",
+            "L",
+            "W",
+            "L",
+            "W",
+            "W"
+          ],
+          "recent_form": [
+            "D",
+            "L",
+            "D",
+            "D",
+            "W",
+            "L"
+          ],
+          "total_points_6": 6,
+          "total_points_10": 15,
+          "total_points": 6,
+          "serie_exterieur": [
+            "D",
+            "D",
+            "L",
+            "L",
+            "W"
+          ],
+          "buts_dom_marques": 9,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 9,
+          "buts_ext_encaisses": 11,
+          "total_marques": 18,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          {
+            "game_id": "748459",
+            "date": "Sun, Apr 26",
+            "home_team": "Osasuna",
+            "away_team": "Sevilla",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748459"
+          },
+          {
+            "game_id": "748473",
+            "date": "Thu, Apr 23",
+            "home_team": "Levante",
+            "away_team": "Sevilla",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748473"
+          },
+          {
+            "game_id": "748450",
+            "date": "Sat, Apr 11",
+            "home_team": "Sevilla",
+            "away_team": "Atlético Madrid",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748450"
+          },
+          {
+            "game_id": "748441",
+            "date": "Sun, Apr 5",
+            "home_team": "Real Oviedo",
+            "away_team": "Sevilla",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748441"
+          },
+          {
+            "game_id": "748428",
+            "date": "Sat, Mar 21",
+            "home_team": "Sevilla",
+            "away_team": "Valencia",
+            "score": "0 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748428"
+          },
+          {
+            "game_id": "748415",
+            "date": "Sun, Mar 15",
+            "home_team": "Barcelona",
+            "away_team": "Sevilla",
+            "score": "5 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748415"
+          },
+          {
+            "game_id": "748405",
+            "date": "Sun, Mar 8",
+            "home_team": "Sevilla",
+            "away_team": "Rayo Vallecano",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748405"
+          },
+          {
+            "game_id": "748396",
+            "date": "Sun, Mar 1",
+            "home_team": "Real Betis",
+            "away_team": "Sevilla",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748396"
+          },
+          {
+            "game_id": "748384",
+            "date": "Sun, Feb 22",
+            "home_team": "Getafe",
+            "away_team": "Sevilla",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748384"
+          },
+          {
+            "game_id": "748374",
+            "date": "Sat, Feb 14",
+            "home_team": "Sevilla",
+            "away_team": "Alavés",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748374"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748458",
+            "date": "Sun, Apr 26",
+            "home_team": "Rayo Vallecano",
+            "away_team": "Real Sociedad",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748458"
+          },
+          {
+            "game_id": "748472",
+            "date": "Wed, Apr 22",
+            "home_team": "Real Sociedad",
+            "away_team": "Getafe",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748472"
+          },
+          {
+            "game_id": "401859852",
+            "date": "Sat, Apr 18",
+            "home_team": "Atlético Madrid",
+            "away_team": "Real Sociedad",
+            "score": "2 - 2",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401859852"
+          },
+          {
+            "game_id": "748452",
+            "date": "Sat, Apr 11",
+            "home_team": "Real Sociedad",
+            "away_team": "Alavés",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748452"
+          },
+          {
+            "game_id": "748442",
+            "date": "Sat, Apr 4",
+            "home_team": "Real Sociedad",
+            "away_team": "Levante",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748442"
+          },
+          {
+            "game_id": "748429",
+            "date": "Fri, Mar 20",
+            "home_team": "Villarreal",
+            "away_team": "Real Sociedad",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748429"
+          },
+          {
+            "game_id": "748420",
+            "date": "Sun, Mar 15",
+            "home_team": "Real Sociedad",
+            "away_team": "Osasuna",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748420"
+          },
+          {
+            "game_id": "748410",
+            "date": "Sat, Mar 7",
+            "home_team": "Atlético Madrid",
+            "away_team": "Real Sociedad",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748410"
+          },
+          {
+            "game_id": "401859851",
+            "date": "Wed, Mar 4",
+            "home_team": "Real Sociedad",
+            "away_team": "Athletic Club",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401859851"
+          },
+          {
+            "game_id": "748403",
+            "date": "Sat, Feb 28",
+            "home_team": "Mallorca",
+            "away_team": "Real Sociedad",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748403"
+          }
+        ],
+        "classement": {
+          "Sevilla": {
+            "position": 18,
+            "points": 34
+          },
+          "Real Sociedad": {
+            "position": 9,
+            "points": 43
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Barcelona",
+            "points": 88
+          },
+          {
+            "position": 2,
+            "team": "Real Madrid",
+            "points": 77
+          },
+          {
+            "position": 3,
+            "team": "Villarreal",
+            "points": 68
+          },
+          {
+            "position": 4,
+            "team": "Atlético Madrid",
+            "points": 63
+          },
+          {
+            "position": 5,
+            "team": "Real Betis",
+            "points": 53
+          },
+          {
+            "position": 6,
+            "team": "Celta Vigo",
+            "points": 47
+          },
+          {
+            "position": 7,
+            "team": "Getafe",
+            "points": 44
+          },
+          {
+            "position": 8,
+            "team": "Athletic Club",
+            "points": 44
+          },
+          {
+            "position": 9,
+            "team": "Real Sociedad",
+            "points": 43
+          },
+          {
+            "position": 10,
+            "team": "Osasuna",
+            "points": 42
+          },
+          {
+            "position": 11,
+            "team": "Rayo Vallecano",
+            "points": 42
+          },
+          {
+            "position": 12,
+            "team": "Valencia",
+            "points": 39
+          },
+          {
+            "position": 13,
+            "team": "Espanyol",
+            "points": 39
+          },
+          {
+            "position": 14,
+            "team": "Elche",
+            "points": 38
+          },
+          {
+            "position": 15,
+            "team": "Mallorca",
+            "points": 38
+          },
+          {
+            "position": 16,
+            "team": "Girona",
+            "points": 38
+          },
+          {
+            "position": 17,
+            "team": "Alavés",
+            "points": 36
+          },
+          {
+            "position": 18,
+            "team": "Sevilla",
+            "points": 34
+          },
+          {
+            "position": 19,
+            "team": "Levante",
+            "points": 33
+          },
+          {
+            "position": 20,
+            "team": "Real Oviedo",
+            "points": 28
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "704772",
+            "date": "Sunday, November 3, 2024",
+            "team1": "Sevilla",
+            "score": "0 - 2",
+            "team2": "Real Sociedad",
+            "title": "Sevilla VS Real Sociedad",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704772/real-sociedad-sevilla",
+            "source": "La Liga",
+            "stats": {}
+          },
+          {
+            "gameId": "704927",
+            "date": "Sunday, March 9, 2025",
+            "team1": "Real Sociedad",
+            "score": "0 - 1",
+            "team2": "Sevilla",
+            "title": "Real Sociedad VS Sevilla",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/704927/sevilla-real-sociedad",
+            "source": "La Liga",
+            "stats": {}
+          },
+          {
+            "gameId": "748234",
+            "date": "Friday, October 24, 2025",
+            "team1": "Real Sociedad",
+            "score": "2 - 1",
+            "team2": "Sevilla",
+            "title": "Real Sociedad VS Sevilla",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/748234/sevilla-real-sociedad",
+            "source": "La Liga",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/536.png",
+        "logo_away": "https://media.api-sports.io/football/teams/548.png",
+        "classement_home": 18,
+        "classement_away": 9,
+        "points_classement_home": 34,
+        "points_classement_away": 43,
+        "nom_classement_home": "Sevilla",
+        "nom_classement_away": "Real Sociedad",
+        "country_fr": "Spain - La Liga",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.299,
+            "lambda_away": 1.445,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 34.09,
+            "X": 25.14,
+            "V2": 40.78
+          },
+          "double_chance": {
+            "1X": 59.23,
+            "12": 74.87,
+            "X2": 65.91
+          },
+          "over_under": {
+            "plus_de_0.5": 93.82,
+            "moins_de_0.5": 6.18,
+            "plus_de_1.5": 75.93,
+            "moins_de_1.5": 24.07,
+            "plus_de_2.5": 51.72,
+            "moins_de_2.5": 48.28,
+            "plus_de_3.5": 29.68,
+            "moins_de_3.5": 70.32,
+            "plus_de_4.5": 14.55,
+            "moins_de_4.5": 85.45,
+            "plus_de_5.5": 6.18,
+            "moins_de_5.5": 93.82
+          },
+          "btts": {
+            "oui": 55.71,
+            "non": 44.29
+          },
+          "resultat_total": {
+            "V1et+0.5": 34.09,
+            "1Xet+0.5": 53.05,
+            "V2et+0.5": 40.78,
+            "X2et+0.5": 59.74,
+            "12et+0.5": 74.87,
+            "V1et+1.5": 25.62,
+            "1Xet+1.5": 44.58,
+            "V2et+1.5": 31.34,
+            "X2et+1.5": 50.3,
+            "12et+1.5": 56.97,
+            "V1et+2.5": 20.29,
+            "1Xet+2.5": 27.05,
+            "V2et+2.5": 24.67,
+            "X2et+2.5": 31.42,
+            "12et+2.5": 44.96,
+            "V1et+3.5": 10.44,
+            "1Xet+3.5": 17.19,
+            "V2et+3.5": 12.5,
+            "X2et+3.5": 19.25,
+            "12et+3.5": 22.93,
+            "V1et+4.5": 6.18,
+            "1Xet+4.5": 7.48,
+            "V2et+4.5": 7.07,
+            "X2et+4.5": 8.38,
+            "12et+4.5": 13.25,
+            "V1et+5.5": 2.18,
+            "1Xet+5.5": 3.48,
+            "V2et+5.5": 2.69,
+            "X2et+5.5": 3.99,
+            "12et+5.5": 4.88
+          },
+          "scores_probables": {
+            "1-1": 12.2,
+            "0-1": 9.43,
+            "1-2": 8.74,
+            "1-0": 8.46,
+            "2-1": 7.56,
+            "0-2": 6.68,
+            "0-0": 6.18,
+            "2-2": 5.46,
+            "2-0": 5.33,
+            "1-3": 4.33
+          },
+          "buts_moyens_simules": {
+            "home": 1.3,
+            "away": 1.45,
+            "total": 2.75
+          }
+        },
+        "analyse_ia": "❌ Échec définitif après 5 tentatives. Dernière erreur : 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+        "confiance_pourcentage": null,
+        "prediction_principale": null,
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": null
+      },
+      {
+        "id": 6,
+        "fixture_id": 1520669,
+        "HomeTeam": "Vila Nova",
+        "AwayTeam": "Athletic Club",
+        "date": "4 mai 2026 à 22:00:00 UTC",
+        "league": "Brazil - Serie B",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.3333333333333333,
+          "moyenne_encaisses": 1.0,
+          "form_6": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "form_10": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D",
+            "D",
+            "D",
+            "D"
+          ],
+          "recent_form": [
+            "D",
+            "W",
+            "W",
+            "W",
+            "D",
+            "D"
+          ],
+          "total_points_6": 12,
+          "total_points_10": 15,
+          "total_points": 12,
+          "serie_domicile": [
+            "W",
+            "W",
+            "D",
+            "D",
+            "D"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 5,
+          "buts_ext_marques": 5,
+          "buts_ext_encaisses": 4,
+          "total_marques": 12,
+          "total_encaisses": 9
+        },
+        "stats_away": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 1.6,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "L",
+            "W"
+          ],
+          "total_points_6": 9,
+          "total_points_10": 10,
+          "total_points": 9,
+          "serie_exterieur": [
+            "W",
+            "L",
+            "L",
+            "L",
+            "L",
+            "D"
+          ],
+          "buts_dom_marques": 4,
+          "buts_dom_encaisses": 4,
+          "buts_ext_marques": 7,
+          "buts_ext_encaisses": 12,
+          "total_marques": 11,
+          "total_encaisses": 16
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401860119",
+            "date": "Sun, 26 Apr",
+            "home_team": "Ceará",
+            "away_team": "Vila Nova",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860119"
+          },
+          {
+            "game_id": "401860104",
+            "date": "Sat, 18 Apr",
+            "home_team": "Vila Nova",
+            "away_team": "Operário PR",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860104"
+          },
+          {
+            "game_id": "401860093",
+            "date": "Sat, 11 Apr",
+            "home_team": "Ponte Preta",
+            "away_team": "Vila Nova",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860093"
+          },
+          {
+            "game_id": "401860086",
+            "date": "Sun, 5 Apr",
+            "home_team": "Vila Nova",
+            "away_team": "Atlético Goianiense",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860086"
+          },
+          {
+            "game_id": "401860073",
+            "date": "Wed, 1 Apr",
+            "home_team": "Sport",
+            "away_team": "Vila Nova",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860073"
+          },
+          {
+            "game_id": "401860064",
+            "date": "Sat, 21 Mar",
+            "home_team": "Vila Nova",
+            "away_team": "CRB",
+            "score": "2 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401860064"
+          },
+          {
+            "game_id": "401864127",
+            "date": "Wed, 18 Mar",
+            "home_team": "Vila Nova",
+            "away_team": "Confiança",
+            "score": "0 - 0",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401864127"
+          },
+          {
+            "game_id": "401862684",
+            "date": "Thu, 12 Mar",
+            "home_team": "Vila Nova",
+            "away_team": "Operário MS",
+            "score": "1 - 1",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401862684"
+          },
+          {
+            "game_id": "401858649",
+            "date": "Wed, 4 Mar",
+            "home_team": "AE Velo Clube",
+            "away_team": "Vila Nova",
+            "score": "0 - 0",
+            "status": "FT-Pens",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401858649"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "748482",
+            "date": "Sat, May 2",
+            "home_team": "Alavés",
+            "away_team": "Athletic Club",
+            "score": "2 - 4",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748482"
+          },
+          {
+            "game_id": "748462",
+            "date": "Sat, Apr 25",
+            "home_team": "Atlético Madrid",
+            "away_team": "Athletic Club",
+            "score": "3 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748462"
+          },
+          {
+            "game_id": "748469",
+            "date": "Tue, Apr 21",
+            "home_team": "Athletic Club",
+            "away_team": "Osasuna",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748469"
+          },
+          {
+            "game_id": "748451",
+            "date": "Sun, Apr 12",
+            "home_team": "Athletic Club",
+            "away_team": "Villarreal",
+            "score": "1 - 2",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748451"
+          },
+          {
+            "game_id": "748435",
+            "date": "Sun, Apr 5",
+            "home_team": "Getafe",
+            "away_team": "Athletic Club",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748435"
+          },
+          {
+            "game_id": "748424",
+            "date": "Sun, Mar 22",
+            "home_team": "Athletic Club",
+            "away_team": "Real Betis",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748424"
+          },
+          {
+            "game_id": "748414",
+            "date": "Sat, Mar 14",
+            "home_team": "Girona",
+            "away_team": "Athletic Club",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748414"
+          },
+          {
+            "game_id": "748409",
+            "date": "Sat, Mar 7",
+            "home_team": "Athletic Club",
+            "away_team": "Barcelona",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748409"
+          },
+          {
+            "game_id": "401859851",
+            "date": "Wed, Mar 4",
+            "home_team": "Real Sociedad",
+            "away_team": "Athletic Club",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401859851"
+          },
+          {
+            "game_id": "748397",
+            "date": "Sat, Feb 28",
+            "home_team": "Rayo Vallecano",
+            "away_team": "Athletic Club",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/748397"
+          }
+        ],
+        "classement": {
+          "Vila Nova": {
+            "position": 5,
+            "points": 12
+          },
+          "Athletic Club": {
+            "position": 13,
+            "points": 8
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 1,
+            "team": "Fortaleza",
+            "points": 14
+          },
+          {
+            "position": 2,
+            "team": "São Bernardo",
+            "points": 13
+          },
+          {
+            "position": 3,
+            "team": "Sport",
+            "points": 13
+          },
+          {
+            "position": 4,
+            "team": "Operário PR",
+            "points": 12
+          },
+          {
+            "position": 5,
+            "team": "Vila Nova",
+            "points": 12
+          },
+          {
+            "position": 6,
+            "team": "Criciúma",
+            "points": 11
+          },
+          {
+            "position": 7,
+            "team": "Juventude",
+            "points": 11
+          },
+          {
+            "position": 8,
+            "team": "Náutico",
+            "points": 10
+          },
+          {
+            "position": 9,
+            "team": "Ceará",
+            "points": 10
+          },
+          {
+            "position": 10,
+            "team": "Botafogo-SP",
+            "points": 9
+          },
+          {
+            "position": 11,
+            "team": "Novorizontino",
+            "points": 9
+          },
+          {
+            "position": 12,
+            "team": "Avaí",
+            "points": 9
+          },
+          {
+            "position": 13,
+            "team": "Athletic",
+            "points": 8
+          },
+          {
+            "position": 14,
+            "team": "Atlético Goianiense",
+            "points": 8
+          },
+          {
+            "position": 15,
+            "team": "Cuiabá",
+            "points": 8
+          },
+          {
+            "position": 16,
+            "team": "Ponte Preta",
+            "points": 7
+          },
+          {
+            "position": 17,
+            "team": "Goiás",
+            "points": 7
+          },
+          {
+            "position": 18,
+            "team": "CRB",
+            "points": 5
+          },
+          {
+            "position": 19,
+            "team": "Londrina",
+            "points": 5
+          },
+          {
+            "position": 20,
+            "team": "América Mineiro",
+            "points": 2
+          }
+        ],
+        "confrontations_saison_derniere": [],
+        "logo_home": "https://media.api-sports.io/football/teams/142.png",
+        "logo_away": "https://media.api-sports.io/football/teams/13975.png",
+        "classement_home": 5,
+        "classement_away": 13,
+        "points_classement_home": 12,
+        "points_classement_away": 8,
+        "nom_classement_home": "Vila Nova",
+        "nom_classement_away": "Athletic",
+        "country_fr": "Brazil - Serie B",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.493,
+            "lambda_away": 1.115,
+            "ajustement_h2h": false
+          },
+          "1x2": {
+            "V1": 46.23,
+            "X": 25.48,
+            "V2": 28.3
+          },
+          "double_chance": {
+            "1X": 71.7,
+            "12": 74.52,
+            "X2": 53.77
+          },
+          "over_under": {
+            "plus_de_0.5": 92.86,
+            "moins_de_0.5": 7.14,
+            "plus_de_1.5": 73.2,
+            "moins_de_1.5": 26.8,
+            "plus_de_2.5": 48.02,
+            "moins_de_2.5": 51.99,
+            "plus_de_3.5": 26.28,
+            "moins_de_3.5": 73.72,
+            "plus_de_4.5": 11.86,
+            "moins_de_4.5": 88.14,
+            "plus_de_5.5": 4.88,
+            "moins_de_5.5": 95.12
+          },
+          "btts": {
+            "oui": 51.75,
+            "non": 48.25
+          },
+          "resultat_total": {
+            "V1et+0.5": 46.23,
+            "1Xet+0.5": 64.56,
+            "V2et+0.5": 28.3,
+            "X2et+0.5": 46.62,
+            "12et+0.5": 74.52,
+            "V1et+1.5": 34.99,
+            "1Xet+1.5": 53.32,
+            "V2et+1.5": 19.89,
+            "X2et+1.5": 38.21,
+            "12et+1.5": 54.87,
+            "V1et+2.5": 26.46,
+            "1Xet+2.5": 32.75,
+            "V2et+2.5": 15.27,
+            "X2et+2.5": 21.56,
+            "12et+2.5": 41.73,
+            "V1et+3.5": 13.04,
+            "1Xet+3.5": 19.32,
+            "V2et+3.5": 6.96,
+            "X2et+3.5": 13.24,
+            "12et+3.5": 19.99,
+            "V1et+4.5": 6.83,
+            "1Xet+4.5": 7.85,
+            "V2et+4.5": 4.0,
+            "X2et+4.5": 5.03,
+            "12et+4.5": 10.84,
+            "V1et+5.5": 2.64,
+            "1Xet+5.5": 3.66,
+            "V2et+5.5": 1.22,
+            "X2et+5.5": 2.24,
+            "12et+5.5": 3.86
+          },
+          "scores_probables": {
+            "1-1": 12.04,
+            "1-0": 11.24,
+            "2-1": 9.32,
+            "2-0": 8.53,
+            "0-1": 8.41,
+            "0-0": 7.14,
+            "1-2": 6.71,
+            "2-2": 5.26,
+            "3-1": 4.7,
+            "0-2": 4.61
+          },
+          "buts_moyens_simules": {
+            "home": 1.49,
+            "away": 1.11,
+            "total": 2.59
+          }
+        },
+        "analyse_ia": "- **PRÉDICTION PRINCIPALE** : BTTS oui (Both Teams To Score)  \n- **CONFIANCE** : 65 %  \n- **SCORES PROBABLES** : 2‑1 ou 2‑2  \n\n**JUSTIFICATION**\n\n**1. Analyse comparative des forces/faiblesses**  \n- **Vila Nova** (5ᵉ, 12 pts) possède une défense solide (moyenne 1,00 but encaissé) et une attaque modérée (1,33 buts/match). À domicile, ils ont inscrit 7 buts et n’en ont encaissé que 5, soit une moyenne de 1,4 buts marqués et 1,0 but concédé.  \n- **Athletic Club** (13ᵉ, 8 pts) montre des faiblesses défensives à l’extérieur (1,60 buts encaissés/match) et une attaque légèrement inférieure (1,10 buts/match). En déplacement, ils ont marqué 7 buts mais en ont laissé 12 passer.\n\n**2. Impact du facteur domicile/extérieur**  \n- Vila Nova est nettement meilleur à domicile que Athletic à l’extérieur. La différence de buts encaissés (1,0 vs 1,6) indique que l’équipe locale a plus de chances de garder le score serré, mais la capacité offensive de Vila Nova à domicile (5‑6 matchs avec les deux équipes marquant) montre qu’ils laissent souvent l’adversaire marquer.\n\n**3. Forme récente et tendances**  \n- **Vila Nova (6 derniers matchs)** : D W W W D D → 12 pts, dont 4 matchs avec les deux équipes marquant (3‑3, 2‑1, 2‑1, 2‑2). Seulement 1 défaite (0‑1).  \n- **Athletic Club (6 derniers matchs à l’extérieur)** : W L L L L D → 9 pts, avec 5 matchs où les deux équipes ont trouvé le filet (2‑4, 3‑2, 1‑2, 2‑1, 1‑1). Leur capacité à marquer à l’extérieur reste raisonnable (50 % des matchs), mais ils concèdent fréquemment.\n\n**4. Contexte du championnat**  \n- Vila Nova évolue dans le top 5 du classement, à 4 points du leader, tandis qu’Athletic lutte en zone basse (13ᵉ). La motivation de Vila Nova à consolider sa place est forte, alors qu’Athletic doit chercher des points pour éviter la zone de relégation, ce qui les pousse à jouer de façon plus ouverte, augmentant les chances de marquer.\n\n**5. Confrontations directes**  \n- Aucun H2H disponible, donc l’analyse repose uniquement sur les performances récentes et les statistiques de saison.\n\n**6. Analyse des statistiques détaillées (possessions, tirs, corners)**  \n- Bien que les données détaillées ne soient pas fournies, les scores observés (plusieurs matchs à plus de 2,5 buts) suggèrent des rencontres avec un nombre de tirs et de corners élevé, typiques des matchs où les deux équipes marquent.\n\n**7. Synthèse**  \n- Vila Nova a tendance à laisser l’adversaire marquer à domicile (5 départs sur 6 avec les deux équipes ayant trouvé le filet).  \n- Athletic, malgré une défense fragile à l’extérieur, marque dans la moitié de ses matchs à l’extérieur.  \n- La combinaison de ces deux tendances conduit à une probabilité élevée que les deux équipes marquent au moins une fois.\n\n**8. Pourquoi pas “Victoire domicile” ou “Plus de 2,5 buts” ?**  \n- La victoire à domicile de Vila Nova n’est pas clairement dominante (seulement 2 victoires sur leurs 6 derniers matchs à domicile).  \n- Le total de buts dépasse 2,5 dans environ 50 % des cas, moins fiable que le BTTS qui bénéficie d’une probabilité combinée d’environ 40‑45 % (Vila Nova ≈ 83 % de marquer, Athletic ≈ 50 % de marquer).  \n\n**Conclusion** : Le scénario le plus récurrent, soutenu par les données de forme et les tendances de scoring, est que **les deux équipes marqueront**. Les scores les plus plausibles sont **2‑1** (victoire serrée de Vila Nova) ou **2‑2** (match très ouvert).",
+        "confiance_pourcentage": 65,
+        "prediction_principale": "BTTS oui (Both Teams To Score)",
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": "2‑1 ou 2‑2"
+      },
+      {
+        "id": 7,
+        "fixture_id": 1498502,
+        "HomeTeam": "Quilmes",
+        "AwayTeam": "Chacarita Juniors",
+        "date": "4 mai 2026 à 23:00:00 UTC",
+        "league": "Argentina - Primera Nacional",
+        "type": "stats_brutes_avec_cotes_et_ia_avec_stats_detaillees_h2h_enrichi_tirs_confiance_scores_extraction_amelioree",
+        "odds": null,
+        "stats_home": {
+          "moyenne_marques": 1.1,
+          "moyenne_encaisses": 0.8,
+          "form_6": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "form_10": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ],
+          "recent_form": [
+            "L",
+            "D",
+            "D",
+            "W",
+            "W",
+            "L"
+          ],
+          "total_points_6": 8,
+          "total_points_10": 12,
+          "total_points": 8,
+          "serie_domicile": [
+            "D",
+            "W",
+            "W",
+            "D"
+          ],
+          "buts_dom_marques": 5,
+          "buts_dom_encaisses": 1,
+          "buts_ext_marques": 6,
+          "buts_ext_encaisses": 7,
+          "total_marques": 11,
+          "total_encaisses": 8
+        },
+        "stats_away": {
+          "moyenne_marques": 0.9,
+          "moyenne_encaisses": 1.2,
+          "form_6": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "form_10": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "D"
+          ],
+          "recent_form": [
+            "W",
+            "L",
+            "W",
+            "D",
+            "L",
+            "L"
+          ],
+          "total_points_6": 7,
+          "total_points_10": 11,
+          "total_points": 7,
+          "serie_exterieur": [
+            "L",
+            "D",
+            "L",
+            "L"
+          ],
+          "buts_dom_marques": 7,
+          "buts_dom_encaisses": 6,
+          "buts_ext_marques": 2,
+          "buts_ext_encaisses": 6,
+          "total_marques": 9,
+          "total_encaisses": 12
+        },
+        "last_matches_home": [
+          {
+            "game_id": "401843806",
+            "date": "Sat, 25 Apr",
+            "home_team": "San Martín (San Juan)",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843806"
+          },
+          {
+            "game_id": "401843788",
+            "date": "Sat, 18 Apr",
+            "home_team": "Quilmes",
+            "away_team": "Nueva Chicago",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843788"
+          },
+          {
+            "game_id": "401843775",
+            "date": "Sun, 12 Apr",
+            "home_team": "Temperley",
+            "away_team": "Quilmes",
+            "score": "3 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843775"
+          },
+          {
+            "game_id": "401843746",
+            "date": "Sun, 5 Apr",
+            "home_team": "Quilmes",
+            "away_team": "Deportivo Maipú",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843746"
+          },
+          {
+            "game_id": "401843724",
+            "date": "Sun, 29 Mar",
+            "home_team": "San Telmo",
+            "away_team": "Quilmes",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843724"
+          },
+          {
+            "game_id": "401843711",
+            "date": "Sat, 21 Mar",
+            "home_team": "Almagro",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843711"
+          },
+          {
+            "game_id": "401843700",
+            "date": "Sat, 14 Mar",
+            "home_team": "Quilmes",
+            "away_team": "Patronato",
+            "score": "3 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843700"
+          },
+          {
+            "game_id": "401843667",
+            "date": "Sun, 1 Mar",
+            "home_team": "Gimnasia y Esgrima (Jujuy)",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843667"
+          },
+          {
+            "game_id": "401843644",
+            "date": "Sat, 21 Feb",
+            "home_team": "Quilmes",
+            "away_team": "Midland",
+            "score": "0 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843644"
+          },
+          {
+            "game_id": "401843619",
+            "date": "Mon, 16 Feb",
+            "home_team": "Atlanta",
+            "away_team": "Quilmes",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843619"
+          }
+        ],
+        "last_matches_away": [
+          {
+            "game_id": "401843799",
+            "date": "Sun, 26 Apr",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Midland",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843799"
+          },
+          {
+            "game_id": "401843782",
+            "date": "Tue, 21 Apr",
+            "home_team": "Atlanta",
+            "away_team": "Chacarita Juniors",
+            "score": "1 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843782"
+          },
+          {
+            "game_id": "401843762",
+            "date": "Sun, 12 Apr",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Gimnasia y Tiro (Salta)",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843762"
+          },
+          {
+            "game_id": "401843748",
+            "date": "Sat, 4 Apr",
+            "home_team": "San Martín (Tucumán)",
+            "away_team": "Chacarita Juniors",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843748"
+          },
+          {
+            "game_id": "401843726",
+            "date": "Sun, 29 Mar",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Estudiantes (Buenos Aires)",
+            "score": "0 - 3",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843726"
+          },
+          {
+            "game_id": "401843709",
+            "date": "Sun, 22 Mar",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Atletico Rafaela",
+            "score": "0 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843709"
+          },
+          {
+            "game_id": "401843694",
+            "date": "Sun, 15 Mar",
+            "home_team": "Agropecuario",
+            "away_team": "Chacarita Juniors",
+            "score": "2 - 0",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843694"
+          },
+          {
+            "game_id": "401843664",
+            "date": "Sun, 1 Mar",
+            "home_team": "Güemes",
+            "away_team": "Chacarita Juniors",
+            "score": "2 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843664"
+          },
+          {
+            "game_id": "401843636",
+            "date": "Sun, 22 Feb",
+            "home_team": "Chacarita Juniors",
+            "away_team": "Gimnasia y Esgrima (Jujuy)",
+            "score": "3 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843636"
+          },
+          {
+            "game_id": "401843617",
+            "date": "Sun, 15 Feb",
+            "home_team": "Chacarita Juniors",
+            "away_team": "San Martín (San Juan)",
+            "score": "1 - 1",
+            "status": "FT",
+            "competition": "",
+            "stats": {},
+            "url": "https://africa.espn.com/football/match/_/gameId/401843617"
+          }
+        ],
+        "classement": {
+          "Quilmes": {
+            "position": 29,
+            "points": 13
+          },
+          "Chacarita Juniors": {
+            "position": 33,
+            "points": 12
+          }
+        },
+        "classement_complet": [
+          {
+            "position": 2,
+            "team": "Colón (Santa Fe)",
+            "points": 21
+          },
+          {
+            "position": 3,
+            "team": "Los Andes",
+            "points": 19
+          },
+          {
+            "position": 4,
+            "team": "Almirante Brown",
+            "points": 17
+          },
+          {
+            "position": 5,
+            "team": "Deportivo Madryn",
+            "points": 17
+          },
+          {
+            "position": 6,
+            "team": "Godoy Cruz Antonio Tomba",
+            "points": 16
+          },
+          {
+            "position": 7,
+            "team": "Ciudad de Bolívar",
+            "points": 16
+          },
+          {
+            "position": 8,
+            "team": "Ferro Carril Oeste",
+            "points": 16
+          },
+          {
+            "position": 9,
+            "team": "Defensores de Belgrano",
+            "points": 15
+          },
+          {
+            "position": 10,
+            "team": "Racing (Córdoba)",
+            "points": 15
+          },
+          {
+            "position": 11,
+            "team": "San Miguel",
+            "points": 15
+          },
+          {
+            "position": 12,
+            "team": "Estudiantes (Buenos Aires)",
+            "points": 14
+          },
+          {
+            "position": 13,
+            "team": "San Telmo",
+            "points": 14
+          },
+          {
+            "position": 14,
+            "team": "Mitre (Santiago del Estero)",
+            "points": 13
+          },
+          {
+            "position": 15,
+            "team": "All Boys",
+            "points": 12
+          },
+          {
+            "position": 16,
+            "team": "Central Norte",
+            "points": 11
+          },
+          {
+            "position": 17,
+            "team": "Acassuso",
+            "points": 10
+          },
+          {
+            "position": 18,
+            "team": "Chaco For Ever",
+            "points": 10
+          },
+          {
+            "position": 19,
+            "team": "Gimnasia y Esgrima (Jujuy)",
+            "points": 7
+          },
+          {
+            "position": 21,
+            "team": "Atlanta",
+            "points": 23
+          },
+          {
+            "position": 22,
+            "team": "San Martín (Tucumán)",
+            "points": 20
+          },
+          {
+            "position": 23,
+            "team": "Nueva Chicago",
+            "points": 19
+          },
+          {
+            "position": 24,
+            "team": "Atletico Rafaela",
+            "points": 18
+          },
+          {
+            "position": 25,
+            "team": "Midland",
+            "points": 17
+          },
+          {
+            "position": 26,
+            "team": "Temperley",
+            "points": 16
+          },
+          {
+            "position": 27,
+            "team": "San Martín (San Juan)",
+            "points": 16
+          },
+          {
+            "position": 28,
+            "team": "Patronato",
+            "points": 16
+          },
+          {
+            "position": 29,
+            "team": "Quilmes",
+            "points": 13
+          },
+          {
+            "position": 30,
+            "team": "Deportivo Maipú",
+            "points": 13
+          },
+          {
+            "position": 31,
+            "team": "Gimnasia y Tiro (Salta)",
+            "points": 12
+          },
+          {
+            "position": 32,
+            "team": "Colegiales",
+            "points": 12
+          },
+          {
+            "position": 33,
+            "team": "Chacarita Juniors",
+            "points": 12
+          },
+          {
+            "position": 34,
+            "team": "Agropecuario",
+            "points": 12
+          },
+          {
+            "position": 35,
+            "team": "Güemes",
+            "points": 11
+          },
+          {
+            "position": 36,
+            "team": "Almagro",
+            "points": 11
+          }
+        ],
+        "confrontations_saison_derniere": [
+          {
+            "gameId": "694890",
+            "date": "Sunday, February 25, 2024",
+            "team1": "Quilmes",
+            "score": "1 - 0",
+            "team2": "Chacarita Juniors",
+            "title": "Quilmes VS Chacarita Juniors",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/694890/chacarita-juniors-quilmes",
+            "source": "Primera Nacional",
+            "stats": {}
+          },
+          {
+            "gameId": "695247",
+            "date": "Saturday, July 13, 2024",
+            "team1": "Chacarita Juniors",
+            "score": "0 - 4",
+            "team2": "Quilmes",
+            "title": "Chacarita Juniors VS Quilmes",
+            "match_url": "https://www.espn.com/soccer/match/_/gameId/695247/quilmes-chacarita-juniors",
+            "source": "Primera Nacional",
+            "stats": {}
+          }
+        ],
+        "logo_home": "https://media.api-sports.io/football/teams/480.png",
+        "logo_away": "https://media.api-sports.io/football/teams/447.png",
+        "classement_home": 29,
+        "classement_away": 33,
+        "points_classement_home": 13,
+        "points_classement_away": 12,
+        "nom_classement_home": "Quilmes",
+        "nom_classement_away": "Chacarita Juniors",
+        "country_fr": "Argentina - Primera Nacional",
+        "Probabilites": {
+          "parametres_simulation": {
+            "iterations": 20000,
+            "lambda_home": 1.21,
+            "lambda_away": 1.163,
+            "ajustement_h2h": true
+          },
+          "1x2": {
+            "V1": 37.35,
+            "X": 28.24,
+            "V2": 34.41
+          },
+          "double_chance": {
+            "1X": 65.59,
+            "12": 71.76,
+            "X2": 62.65
+          },
+          "over_under": {
+            "plus_de_0.5": 90.41,
+            "moins_de_0.5": 9.59,
+            "plus_de_1.5": 68.54,
+            "moins_de_1.5": 31.46,
+            "plus_de_2.5": 42.14,
+            "moins_de_2.5": 57.86,
+            "plus_de_3.5": 21.61,
+            "moins_de_3.5": 78.39,
+            "plus_de_4.5": 9.18,
+            "moins_de_4.5": 90.82,
+            "plus_de_5.5": 3.46,
+            "moins_de_5.5": 96.54
+          },
+          "btts": {
+            "oui": 48.07,
+            "non": 51.93
+          },
+          "resultat_total": {
+            "V1et+0.5": 37.35,
+            "1Xet+0.5": 56.0,
+            "V2et+0.5": 34.41,
+            "X2et+0.5": 53.06,
+            "12et+0.5": 71.76,
+            "V1et+1.5": 26.02,
+            "1Xet+1.5": 44.67,
+            "V2et+1.5": 23.86,
+            "X2et+1.5": 42.52,
+            "12et+1.5": 49.89,
+            "V1et+2.5": 19.23,
+            "1Xet+2.5": 24.68,
+            "V2et+2.5": 17.47,
+            "X2et+2.5": 22.92,
+            "12et+2.5": 36.7,
+            "V1et+3.5": 8.64,
+            "1Xet+3.5": 14.08,
+            "V2et+3.5": 7.53,
+            "X2et+3.5": 12.98,
+            "12et+3.5": 16.16,
+            "V1et+4.5": 4.46,
+            "1Xet+4.5": 5.34,
+            "V2et+4.5": 3.85,
+            "X2et+4.5": 4.72,
+            "12et+4.5": 8.32,
+            "V1et+5.5": 1.34,
+            "1Xet+5.5": 2.22,
+            "V2et+5.5": 1.25,
+            "X2et+5.5": 2.12,
+            "12et+5.5": 2.6
+          },
+          "scores_probables": {
+            "1-1": 13.2,
+            "1-0": 11.33,
+            "0-1": 10.54,
+            "0-0": 9.59,
+            "2-1": 7.78,
+            "1-2": 7.56,
+            "2-0": 6.79,
+            "0-2": 6.4,
+            "2-2": 4.58,
+            "3-1": 3.18
+          },
+          "buts_moyens_simules": {
+            "home": 1.21,
+            "away": 1.15,
+            "total": 2.37
+          }
+        },
+        "analyse_ia": "❌ Échec définitif après 5 tentatives. Dernière erreur : 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+        "confiance_pourcentage": null,
+        "prediction_principale": null,
+        "corners_prevu": null,
+        "tirs_cadres_prevu": null,
+        "scores_probables": null
+      }
+    ]
+  }
+}
